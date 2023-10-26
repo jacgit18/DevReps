@@ -1,4 +1,4 @@
-import * as routes from '../routers/index.js';
+import * as routes from './routers/index.js';
 
 
 
