@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.smallest_subarray_with_given_sum = exports.logg = void 0;
-const logg = (level, preMessage = "", postMessage = "", ...context) => {
+export const logg = (level, preMessage = "", postMessage = "", ...context) => {
     const logMessage = `${preMessage} ${level.toUpperCase()} ${postMessage}`;
     context.forEach((item, index) => {
         console.log(`Context ${index + 1}:`);
@@ -9,8 +6,7 @@ const logg = (level, preMessage = "", postMessage = "", ...context) => {
     });
     console.log(logMessage);
 };
-exports.logg = logg;
-function smallest_subarray_with_given_sum(target, nums) {
+export function smallest_subarray_with_given_sum(target, nums) {
     let start = 0;
     let end = 0;
     let sum = nums[0];
@@ -38,6 +34,5 @@ function smallest_subarray_with_given_sum(target, nums) {
     }
     return minLength;
 }
-exports.smallest_subarray_with_given_sum = smallest_subarray_with_given_sum;
-(0, exports.logg)(`Smallest subarray length: ${smallest_subarray_with_given_sum(7, [2, 1, 5, 2, 3, 1])}`, "Hi", "bye", ["test", 3, 53, true], "test2");
+logg(`Smallest subarray length: ${smallest_subarray_with_given_sum(7, [2, 1, 5, 2, 3, 1])}`, "Hi", "bye", ["test", 3, 53, true], "test2");
 //# sourceMappingURL=lc209Alt.js.map

@@ -1,1 +1,1 @@
-{"version":3,"file":"OptimalRouter.js","sourceRoot":"","sources":["../../src/routers/OptimalRouter.ts"],"names":[],"mappings":";;;AAAA,mDAA+C;AAKtC,wFALA,kBAAO,OAKA"}
+{"version":3,"file":"OptimalRouter.js","sourceRoot":"","sources":["../../src/routers/OptimalRouter.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,OAAO,EAAE,MAAM,sBAAsB,CAAC;AAK/C,OAAO,EAAE,OAAO,EAAE,CAAC"}

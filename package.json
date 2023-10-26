@@ -2,6 +2,7 @@
   "name": "coding-challenges",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "app.js",
   "scripts": {
     "dev": "npm run clean && npm run compile-ts-watch-mode & npm run start",
