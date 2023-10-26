@@ -1,0 +1,6 @@
+{
+  "watch": ["src"],
+  "ext": "js",
+  "ignore": ["src/**/*.spec.ts"],
+  "exec": "npm run prettier-format && npm run lint && babel-node src/app.js --extensions \".js\""
+}
