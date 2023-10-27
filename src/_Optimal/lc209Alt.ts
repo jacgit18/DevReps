@@ -1,4 +1,3 @@
-import { logg } from "../util/logger.js";
 
 export function smallest_subarray_with_given_sum(target: number, nums: number[]): number {
     let start = 0;
