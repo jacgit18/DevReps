@@ -6,6 +6,8 @@ describe('smallest_subarray_with_given_sum', () => {
     // Test cases
     expect(app.Optimal(7, [2, 1, 5, 2, 3, 1])).toBe(3);
 
+    .toStrictEqual([[1]]);
+
   });
 });
 
