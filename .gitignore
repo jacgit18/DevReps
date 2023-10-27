@@ -1,7 +1,7 @@
 # Dependency directories
 node_modules
 package-lock.json
-
+build
 
 # Sqlite databases
 *.sqlite3

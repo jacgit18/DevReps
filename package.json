@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "type": "module",
-  "main": "app.js",
+  "main": "/src/app.ts",
   "scripts": {
     "dev": "npm run clean && npm run compile-ts-watch-mode & npm run start",
     "cbs": "npm run build && npm run start",
