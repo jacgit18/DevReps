@@ -3,7 +3,8 @@
 
 ## Syllabus
 
-Two pointer and Sliding window can be interchangeable solution but one would just be more efficient then the other depending on the what the problem solution demands typically pointer is used for comparison while window is used for other action like adding or doing some other action with the elements in the range of the window but not specifically compariosn
+- Extra
+  - [] Try Question with dirrent levels !()[src/Extra/try.nd]
 
 - Sliding Window
   - [] No-repeat Substring (hard): LC #3
