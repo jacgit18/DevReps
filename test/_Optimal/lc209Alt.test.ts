@@ -4,9 +4,11 @@ import app from "../../src/app";
 describe('smallest_subarray_with_given_sum', () => {
   it('should return the length of the smallest subarray with a sum >= target', () => {
     // Test cases
-    expect(app.Optimal(7, [2, 1, 5, 2, 3, 1])).toBe(3);
+    // expect(app.Optimal(7, [2, 1, 5, 2, 3, 1])).toBe(3);
 
-    .toStrictEqual([[1]]);
+    expect(app.Optimal(7, [2, 1, 5, 2, 3, 1])).toStrictEqual(3);
+
+    // .toStrictEqual([[1]]);
 
   });
 });
