@@ -17,14 +17,12 @@
     "pre-push": "npm test2",
     "test": "jest --watchAll",
     "test2": "npx jest"
-
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
 
   },
-
   "devDependencies": {
     "@babel/cli": "^7.23.0",
     "@babel/core": "^7.23.2",
@@ -60,6 +58,9 @@
       "eslint:recommended",
       "plugin:unicorn/recommended"
     ],
+    "jest": {
+      "configFile": "jest.config.cjs"
+    },
     "parserOptions": {
       "ecmaVersion": 2020,
       "sourceType": "module"
