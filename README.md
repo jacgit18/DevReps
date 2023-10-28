@@ -4,7 +4,7 @@
 ## Syllabus
 
 - Extra
-  - [] Try Question with dirrent levels [Location](src/Extra/try.nd)
+  - [] Try Question with dirrent levels [Location](src/Extra/try.md)
 
 - Sliding Window
   - [] No-repeat Substring (hard): LC #3
