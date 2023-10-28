@@ -6,42 +6,42 @@
 Two pointer and Sliding window can be interchangeable solution but one would just be more efficient then the other depending on the what the problem solution demands typically pointer is used for comparison while window is used for other action like adding or doing some other action with the elements in the range of the window but not specifically compariosn
 
 - Sliding Window
-  - [x] No-repeat Substring (hard): LC #3
+  - [] No-repeat Substring (hard): LC #3
   - [] Words Concatenation (hard): LC #30
-  - [x] Maximum Sum Subarray of Size K (easy) LC #53
+  - [] Maximum Sum Subarray of Size K (easy) LC #53
   - [] Smallest Window Containing Substring (hard): LC #76
-  - [x] Smallest Subarray with a given sum (easy): LC #209
-  - [x] Longest Substring with K Distinct Characters (medium): LC #340
-  - [x] Find String Anagrams (hard): LC #438
+  - [] Smallest Subarray with a given sum (easy): LC #209
+  - [] Longest Substring with K Distinct Characters (medium): LC #340
+  - [] Find String Anagrams (hard): LC #438
   - [] Find Permutation in string (hard): LC #567
-  - [x] Fruits into Baskets (medium): LC #904
+  - [] Fruits into Baskets (medium): LC #904
   - [] Max Consecutive Ones III (hard): LC #1004
   
 - Two Pointers
-  - [x] Pair with Target Sum (easy): LC #1
-  - [x] Triplet Sum Close to Target (medium): LC #16
+  - [] Pair with Target Sum (easy): LC #1
+  - [] Triplet Sum Close to Target (medium): LC #16
   - [] Triplet Sum to Zero (medium): LC #15
   - [] Quadruple Sum to Target (medium): LC #18
-  - [x] Remove Duplicates (easy): LC #26
+  - [] Remove Duplicates (easy): LC #26
   - [] Dutch National Flag Problem (medium): LC #75
   - [] Triplets with Smaller Sum (medium): LC #259
-  - [x] Longest Repeating Character Replacement (hard): LC #424
+  - [] Longest Repeating Character Replacement (hard): LC #424
   - [] Minimum Window Sort (medium): LC #581
-  - [x] Subarrays with Product Less than a Target (medium): LC #713
+  - [] Subarrays with Product Less than a Target (medium): LC #713
   - [] Comparing Strings containing Backspaces (medium): LC #844
-  - [x] Squaring a Sorted Array (easy): LC #977
+  - [] Squaring a Sorted Array (easy): LC #977
 
 - Merge Intervals
-  - [x] Merge Intervals (medium): LC #56
-  - [x] Insert Interval (medium): LC #57
-  - [x] Intervals Intersection (medium): LC #986
+  - [] Merge Intervals (medium): LC #56
+  - [] Insert Interval (medium): LC #57
+  - [] Intervals Intersection (medium): LC #986
   - [] Conflicting Appointments (medium): LC #252
   - [] Minimum Meeting Rooms (hard): LC #253
   - [] Maximum CPU Load(Task Scheduler) (hard): LC proably #621
   - [] Employee Free Time (hard): LC #759
 
 - Subsets/Backtracking
-  - [x] Subsets (easy): LC #78
+  - [] Subsets (easy): LC #78
   - [] Subsets With Duplicates (easy): LC #90
   - [] Permutations (medium): LC #46
   - [] String Permutations by changing case (medium): LC #784
@@ -52,9 +52,9 @@ Two pointer and Sliding window can be interchangeable solution but one would jus
   - [] Count of Structurally Unique Binary Search Trees (hard): LC #96(Binary Tree)
 
 - Cyclic Sort
-  - [x] Cyclic Sort (easy)
-  - [x] Find the Missing Number (easy): LC #268
-  - [x] Find All Numbers Disappeared in an Array (easy): LC #448
+  - [] Cyclic Sort (easy)
+  - [] Find the Missing Number (easy): LC #268
+  - [] Find All Numbers Disappeared in an Array (easy): LC #448
   - [] Find the Duplicate Number (easy): LC #287
   - [] Find all Duplicate Numbers (easy): LC #442
   - [] Find the Corrupt Pair (easy): LC #645
@@ -68,23 +68,23 @@ Two pointer and Sliding window can be interchangeable solution but one would jus
   - [] Problem Statement (hard): LC #832
 
 - Heaps
-  - [x] Find the Median of a Number Stream (medium): LC #295
+  - [] Find the Median of a Number Stream (medium): LC #295
   - [] Sliding Window Median (hard): LC #480
   - [] Maximize Capital (hard): LC #502
   - [] Next Interval (hard): LC #436
   
 - Fast & Slow Pointers
-  - [x] LinkedList Cycle (easy): LC #141
-  - [x] Happy Number (medium): LC #202
-  - [x] Start of LinkedList Cycle (medium): LC #142
+  - [] LinkedList Cycle (easy): LC #141
+  - [] Happy Number (medium): LC #202
+  - [] Start of LinkedList Cycle (medium): LC #142
   - [] Middle of the LinkedList (easy): LC #876
   - [] Palindrome LinkedList (medium): LC #234
   - [] Rearrange a LinkedList (medium): LC #143
   - [] Cycle in a Circular Array (hard): LC #457
   
 - In Place Reversal of a LL
-  - [x] Reverse a LinkedList (easy): LC #206
-  - [x] Reverse a Sub-list (medium): LC #92
+  - [] Reverse a LinkedList (easy): LC #206
+  - [] Reverse a Sub-list (medium): LC #92
   - [] Reverse every K-element Sub-list( Reverse Nodes in k-Group) (hard): LC #25
   - [] Rotate a LinkedList (medium): LC #61
 
@@ -99,22 +99,22 @@ Two pointer and Sliding window can be interchangeable solution but one would jus
 
 - Trees: BFS
   - [] Same Tree(easy) LC #100
-  - [x] Symmetric Tree (easy): LC #101
-  - [x] Binary Tree Level Order Traversal (easy): LC #102
+  - [] Symmetric Tree (easy): LC #101
+  - [] Binary Tree Level Order Traversal (easy): LC #102
   - [] Minimum Depth of a Binary Tree (easy): LC #111
-  - [x] Maximum Depth of a Binary Tree (easy): LC #104
-  - [x] Level Averages in a Binary Tree (easy): LC #637
+  - [] Maximum Depth of a Binary Tree (easy): LC #104
+  - [] Level Averages in a Binary Tree (easy): LC #637
   - [] Reverse Level Order Traversal II (easy): LC #107
   - [] Zigzag Traversal (medium): LC #103
-  - [x] Level Order Successor (easy): LC #
+  - [] Level Order Successor (easy): LC #
   - [] Connect Level Order Siblings (medium): LC #117
   - [] Connect All Level Order Siblings (medium): LC maybe #116
   - [] Right View of a Binary Tree (easy): LC #199  
   
 - Trees: DFS
-  - [x] Binary Tree Path Sum (easy): LC #112
-  - [x] Path Sum II (medium): LC #113
-  - [x] Binary Tree Paths (medium): LC #257
+  - [] Binary Tree Path Sum (easy): LC #112
+  - [] Path Sum II (medium): LC #113
+  - [] Binary Tree Paths (medium): LC #257
   - [] Sum of Path Numbers (medium): LC #129
   - [] Path With Given Sequence (medium): LC #1430
   - [] Count Paths for a Sum (medium): LC #437
@@ -122,9 +122,9 @@ Two pointer and Sliding window can be interchangeable solution but one would jus
   - [] Path with Maximum Sum (hard): LC #124
 
 - Modified Binary Search(Applies to Arrays)
-  - [x] Order-agnostic Binary Search (easy): LC #704
+  - [] Order-agnostic Binary Search (easy): LC #704
   - [] Ceiling of a Number (medium): LC #??
-  - [x] Next Letter (medium): LC #744
+  - [] Next Letter (medium): LC #744
   - [] Number Range (medium): LC #34
   - [] Search in a Sorted Infinite Array (medium): LC #702
   - [] Minimum Difference Element (medium): LC #658 (k == 1)
