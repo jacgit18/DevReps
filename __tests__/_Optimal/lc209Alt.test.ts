@@ -1,4 +1,4 @@
-import app from "../../src/app";
+import app from "../src/app";
 // import { toBe } from '@jest/globals';
 
 describe('smallest_subarray_with_given_sum', () => {
