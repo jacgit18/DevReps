@@ -7,6 +7,9 @@
    ------------------------
    Vairiable:
    
+
+
+   Encapusalation/closure
 */
 const myrob = () => {
     let cache={};
@@ -30,10 +33,23 @@ const myrob = () => {
 
 
 let price = [1,2,3,1];
+// acts a private method or vairiabe
 
-const myrobObj = myrob();
+const myrobObj = myrob(); 
 
-console.log(myrobObj(price,price.length -1))
+// if this function took a param it would look like this 
+
+// Closure is used here
+// const newFunction = myrob('out'); first param
+// console.log(newFunction);
+// console.log(newFunction(price,price.length -1)); return function second param
+
+
+
+console.log(myrobObj(price,price.length -1)) // using currying here 
+// newFunction('out')(price,price.length -1) // altertively you can curry like this
+
+
 // console.log(rob(price))
 
 console.log(`\n ------- Edge Case -------- `);
