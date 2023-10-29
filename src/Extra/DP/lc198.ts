@@ -1,16 +1,4 @@
-/**
- * 
- * Input:
- * Output:
- * 
- * Naive Approach 
-   ------------------------
-   Vairiable:
-   
 
-
-   Encapusalation/closure
-*/
 const myrob = () => {
     let cache={};
     return myrobDP = (nums,i) =>{
@@ -57,13 +45,3 @@ console.log(`\n ------- Edge Case -------- `);
 console.log(` Case 01  ${myrobObj(price,price.length -1)}`)
 
 
-
-/**
- * 
- * 
- * 
- * Optimal Approach 
-   ------------------------
-   Vairiable:
-   
-*/
