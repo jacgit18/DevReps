@@ -27,6 +27,4 @@ textEditor2_2(queries) = [
     "Hey you, don't ",
     "Hey you, don't let me down"
 ]
-```
 
-This formatting should make it even more accessible and readable.
