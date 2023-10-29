@@ -4,7 +4,7 @@
 ## Syllabus
 
 - Extra
-  - [] Try Question with different levels [Question here](src/Extra/try.md)
+  - [] Try Question with different levels [Question here](src/Extra/Challenge2_0.md)
 
 - Sliding Window
   - [] No-repeat Substring (hard): LC #3
