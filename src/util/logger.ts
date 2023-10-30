@@ -1,4 +1,4 @@
-export const logg = (level: string, preMessage: string = "", postMessage: string = "", ...context: any[]) => {
+export const logg = (level: string, preMessage: string = "", postMessage: string = "", ...context: any[]):void => {
     const logMessage = `${preMessage} ${level.toUpperCase()} ${postMessage}`;
 
     context.forEach((item, index) => {
