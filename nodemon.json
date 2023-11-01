@@ -1,6 +1,0 @@
-{
-  "watch": ["src"],
-  "ext": "ts",
-  "ignore": ["src/**/*.test.ts"],
-  "exec": "npm run prettier-format && npm run lint && babel-node src/app.ts --extensions \".ts\""
-}

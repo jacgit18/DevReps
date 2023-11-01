@@ -323,7 +323,6 @@ class MinHeap {
       }
 
       if (swap === null) break
-
       ;[this.heap[index], this.heap[swap]] = [this.heap[swap], this.heap[index]]
       index = swap
     }
@@ -392,7 +391,6 @@ class MaxHeap {
       }
 
       if (swap === null) break
-
       ;[this.heap[index], this.heap[swap]] = [this.heap[swap], this.heap[index]]
       index = swap
     }

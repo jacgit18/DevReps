@@ -85,8 +85,7 @@ class MinHeap {
         rightChildIndex = current * 2 + 1
       }
     } else if (this.heap.length === 2) {
-
-    /* If there are only two elements in the array, we directly splice out the first element */
+      /* If there are only two elements in the array, we directly splice out the first element */
       this.heap.splice(1, 1)
     } else {
       return null
