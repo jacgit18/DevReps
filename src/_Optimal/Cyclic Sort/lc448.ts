@@ -86,83 +86,82 @@ Control flow(Break, Continue) based on defined steps & edge cases
 
 */
 
-
-const log = (pre="", arg="", post="") => {console.log(`${pre} ${arg} ${post} `)}
-const info = (pre="", arg="", post="") => {console.info(`${pre} ${arg} ${post} `)}
-const warn = (pre="", arg="", post="") => {console.warn(`${pre} ${arg} ${post} `)}
-const error = (pre="", arg="", post="") => {console.error(`${pre} ${arg} ${post} `)}
-const table = (pre="", arg="", post="") => {console.table(`${pre} ${arg} ${post} `)}
+const log = (pre = "", arg = "", post = "") => {
+  console.log(`${pre} ${arg} ${post} `)
+}
+const info = (pre = "", arg = "", post = "") => {
+  console.info(`${pre} ${arg} ${post} `)
+}
+const warn = (pre = "", arg = "", post = "") => {
+  console.warn(`${pre} ${arg} ${post} `)
+}
+const error = (pre = "", arg = "", post = "") => {
+  console.error(`${pre} ${arg} ${post} `)
+}
+const table = (pre = "", arg = "", post = "") => {
+  console.table(`${pre} ${arg} ${post} `)
+}
 const runTimeStart = (arg) => console.time(arg)
 const runTimeEnd = (arg) => console.timeEnd(arg)
 
-const findDisappearedNumbers = function(nums) {
-  let index = 0;
-  const ArrayLength = nums.length;
+const findDisappearedNumbers = function (nums) {
+  let index = 0
+  const ArrayLength = nums.length
 
-while (index < ArrayLength){
-  const currentSubarray = nums[index];
-  const decrementedSubarray = currentSubarray -1; 
+  while (index < ArrayLength) {
+    const currentSubarray = nums[index]
+    const decrementedSubarray = currentSubarray - 1
 
-  if (currentSubarray != nums[decrementedSubarray]){
-    
-
-    [ nums[index], nums[decrementedSubarray]] = [nums[decrementedSubarray], nums[index]]; 
-
-  } else{
-
-    ++index;
-
+    if (currentSubarray != nums[decrementedSubarray]) {
+      ;[nums[index], nums[decrementedSubarray]] = [nums[decrementedSubarray], nums[index]]
+    } else {
+      ++index
+    }
   }
-
-}
-let result = []
+  let result = []
 
   for (index = 0; index < ArrayLength; index++) {
     if (nums[index] !== index + 1) {
-      result.push(index + 1);
+      result.push(index + 1)
     }
     // log(result);
   }
 
- return result
-
-
-};
+  return result
+}
 
 // runTimeStart("Runtime")
-log(findDisappearedNumbers([4,3,2,7,8,2,3,1])); // [5,6]
-log(findDisappearedNumbers([1, 1]));// [2]
+log(findDisappearedNumbers([4, 3, 2, 7, 8, 2, 3, 1])) // [5,6]
+log(findDisappearedNumbers([1, 1])) // [2]
 // runTimeEnd("Runtime")
-
 
 // Solution
 // -----
 function find_missing_numbers(nums) {
-  let i = 0;
+  let i = 0
   while (i < nums.length) {
-    const j = nums[i] - 1;
+    const j = nums[i] - 1
     if (nums[i] !== nums[j]) {
-      [nums[i], nums[j]] = [nums[j], nums[i]]; // swap
+      ;[nums[i], nums[j]] = [nums[j], nums[i]] // swap
     } else {
-      i += 1;
+      i += 1
     }
   }
-  missingNumbers = [];
+  missingNumbers = []
 
   for (i = 0; i < nums.length; i++) {
     if (nums[i] !== i + 1) {
-      missingNumbers.push(i + 1);
+      missingNumbers.push(i + 1)
     }
   }
 
-  return missingNumbers;
+  return missingNumbers
 }
 
 runTimeStart("Runtime")
-log(find_missing_numbers([4,3,2,7,8,2,3,1])); // [5,6]
-log(find_missing_numbers([1, 1]));// [2]
+log(find_missing_numbers([4, 3, 2, 7, 8, 2, 3, 1])) // [5,6]
+log(find_missing_numbers([1, 1])) // [2]
 runTimeEnd("Runtime")
-
 
 // -----
 

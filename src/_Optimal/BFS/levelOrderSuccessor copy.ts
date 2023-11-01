@@ -11,7 +11,6 @@
 // Given Node: 3
 // Level Order Successor: 4
 
-
 //             (  12  )
 //            /       \
 //       (  7  )    (  1  )
@@ -20,9 +19,6 @@
 
 // Given Node: 9
 // Level Order Successor: 10
-
-
-
 
 /**
  * 
@@ -61,8 +57,6 @@
  * 
  */
 
-
-
 /********************************************************
  * CODE INSTRUCTIONS:                                   *
  * 1) The method findInOrderSuccessor you're asked      *
@@ -74,66 +68,58 @@
  *    helper code is used to test findInOrderSuccessor. *
  ********************************************************/
 
-
 // Constructor to create a new Node
-const treeGrower = require('../../../_DataStructuresBuiltUpClasses/DataStrucFactoryInterview')
-const tree = new treeGrower();
+const treeGrower = require("../../../_DataStructuresBuiltUpClasses/DataStrucFactoryInterview")
+const tree = new treeGrower()
 
 function Node(key) {
-  this.key = key;
-  this.parent = null;
-  this.left = null;
-  this.right = null;
+  this.key = key
+  this.parent = null
+  this.left = null
+  this.right = null
 }
 
-findInOrderSuccessor = function(root) {
- if (root.right != null)  return findMinKeyWithinTree(root.right)
+findInOrderSuccessor = function (root) {
+  if (root.right != null) return findMinKeyWithinTree(root.right)
 
-let ancestor = root.parent;
-let child = root;
+  let ancestor = root.parent
+  let child = root
 
-while (ancestor != null && child == ancestor.right){
-  child = ancestor
-  ancestor = child.parent
+  while (ancestor != null && child == ancestor.right) {
+    child = ancestor
+    ancestor = child.parent
+  }
 
+  return ancestor
 }
 
-return ancestor
-
-}
-
-
-function findMinKeyWithinTree(inputNode){
-  while(inputNode.left != null){
+function findMinKeyWithinTree(inputNode) {
+  while (inputNode.left != null) {
     inputNode = inputNode.left
-
   }
 
   return inputNode
 }
 
+getNodeByKey = function (tree, keyTofind) {
+  var currentNode = tree
 
-getNodeByKey = function(tree, keyTofind) {
-  var currentNode = tree;
+  while (currentNode) {
+    if (keyTofind === currentNode.value) {
+      return currentNode
+    }
 
-  while(currentNode) {
-      if(keyTofind === currentNode.value) {
-          return currentNode;
-      }
-
-      if(keyTofind > currentNode.value) {
-          currentNode = currentNode.left;
-      }
-      else {
-          currentNode = currentNode.right;
-      }
+    if (keyTofind > currentNode.value) {
+      currentNode = currentNode.left
+    } else {
+      currentNode = currentNode.right
+    }
   }
 
-  return null;
+  return null
 }
 
-
-var bst = tree.ArrayBinaryTreeDeserialize([1,2,3,4,5,null,6])
+var bst = tree.ArrayBinaryTreeDeserialize([1, 2, 3, 4, 5, null, 6])
 
 // bst.insert(1);
 // bst.insert(2);
@@ -142,13 +128,13 @@ var bst = tree.ArrayBinaryTreeDeserialize([1,2,3,4,5,null,6])
 // bst.insert(5);
 // bst.insert(6);
 // console.log(bst.left.left.value);
-let search = bst.left.value;
+let search = bst.left.value
 // Get a reference to the node whose key is 9
 // var test = getNodeByKey(bst, search);
 // console.log(test)
 
 // Find the in order successor of test
-var succ = findInOrderSuccessor(bst) ;
+var succ = findInOrderSuccessor(bst)
 console.log(succ)
 
 // Print the key of the successor node

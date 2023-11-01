@@ -1,105 +1,93 @@
 // Problem Statement #
 
-// Given a binary tree, populate an array to represent its level-by-level traversal in reverse order, i.e., the lowest level comes first. 
+// Given a binary tree, populate an array to represent its level-by-level traversal in reverse order, i.e., the lowest level comes first.
 //You should populate the values of all nodes in each level from left to right in separate sub-arrays.
 
-
-
-  /**
-   * 
-   * Input: tree
-   * Output: last to root in array
-   *  
-   * Naive Approach
-   * --------------- 
-   * Variables: root, root. left, root.right, array to store the results 
-   * 
-   * 
-   */
+/**
+ *
+ * Input: tree
+ * Output: last to root in array
+ *
+ * Naive Approach
+ * ---------------
+ * Variables: root, root. left, root.right, array to store the results
+ *
+ *
+ */
 
 class TreeNode {
-
   constructor(value) {
-    this.value = value;
-    this.left = null;
-    this.right = null;
+    this.value = value
+    this.left = null
+    this.right = null
   }
-};
+}
 
-const traverse = (root) =>{
-    let result = [];
-    let queue = [root];
-    
-    while(queue.length) {
-        let levelSize = queue.length;
-        let currentLevel = [];
-        for (let i = 0; i < levelSize; i += 1) {
-            let currentNode = queue.shift();
-            if (currentNode.left) console.log(`Left push: ${queue.push(currentNode.left)}`)
-            // console.log(`queue Key Value pair checker ${queue.map((node) => {
-            //  return node.value
-            // })}`)
+const traverse = (root) => {
+  let result = []
+  let queue = [root]
 
-              console.log(`queue ${queue.length}`)
-            if (currentNode.right) console.log(`Right push: ${queue.push(currentNode.right)}`)
-            console.log(`queue Check  ${queue.length}`)
-            console.log(`queue Key Value pair checker ${queue.map((node) => {
-              return node.value
-             })}`)
+  while (queue.length) {
+    let levelSize = queue.length
+    let currentLevel = []
+    for (let i = 0; i < levelSize; i += 1) {
+      let currentNode = queue.shift()
+      if (currentNode.left) console.log(`Left push: ${queue.push(currentNode.left)}`)
+      // console.log(`queue Key Value pair checker ${queue.map((node) => {
+      //  return node.value
+      // })}`)
 
-              console.log(`currentNode : ${currentNode.value}`);
-             currentLevel.push([currentNode.value]);
-             console.log(`New Level ${currentLevel.length}`)
+      console.log(`queue ${queue.length}`)
+      if (currentNode.right) console.log(`Right push: ${queue.push(currentNode.right)}`)
+      console.log(`queue Check  ${queue.length}`)
+      console.log(
+        `queue Key Value pair checker ${queue.map((node) => {
+          return node.value
+        })}`,
+      )
 
-
-        }
-        console.log(`Checker : ${currentLevel}`);
-        console.log(`Result Check : ${result.unshift(currentLevel)}`);
-
-        // result.unshift(currentLevel);
+      console.log(`currentNode : ${currentNode.value}`)
+      currentLevel.push([currentNode.value])
+      console.log(`New Level ${currentLevel.length}`)
     }
-    return result;
+    console.log(`Checker : ${currentLevel}`)
+    console.log(`Result Check : ${result.unshift(currentLevel)}`)
 
-  
+    // result.unshift(currentLevel);
   }
+  return result
+}
 
-  const traverse2 = (root) =>{
-    let result = [];
-    let queue = [root];
-    
-    while(queue.length) {
-        let levelSize = queue.length;
-        let currentLevel = [];
-        for (let i = 0; i < levelSize; i += 1) {
-            let currentNode = queue.shift();
-            if (currentNode.left) queue.push(currentNode.left)
-        
+const traverse2 = (root) => {
+  let result = []
+  let queue = [root]
 
-            if (currentNode.right) queue.push(currentNode.right)
-            
+  while (queue.length) {
+    let levelSize = queue.length
+    let currentLevel = []
+    for (let i = 0; i < levelSize; i += 1) {
+      let currentNode = queue.shift()
+      if (currentNode.left) queue.push(currentNode.left)
 
-             currentLevel.push(currentNode.value);
+      if (currentNode.right) queue.push(currentNode.right)
 
-
-        }
-        result.unshift(currentLevel)
+      currentLevel.push(currentNode.value)
     }
-    return result;
-
-  
+    result.unshift(currentLevel)
   }
-
+  return result
+}
 
 var root = new TreeNode(3)
 root.left = new TreeNode(9)
 root.right = new TreeNode(20)
 root.right.left = new TreeNode(15)
 root.right.right = new TreeNode(7)
-console.time('doSomething')
+console.time("doSomething")
 console.log(`Reverse level order traversal: ${traverse2(root)}`)
-console.timeEnd('doSomething')
+console.timeEnd("doSomething")
 
-console.log(`\n ------- Edge Case -------- `);
+console.log(`\n ------- Edge Case -------- `)
 // console.log(`Reverse level order traversal: ${traverse(root)}`);
 
 // Solution

@@ -5,30 +5,28 @@
 // Open brackets must be closed by the same type of brackets.
 // Open brackets must be closed in the correct order.
 
-
-const isValid = (s) =>{
-  const stack = [];
+const isValid = (s) => {
+  const stack = []
   const map = {
-    '(': ')',
-    '[': ']',
-    '{': '}'
+    "(": ")",
+    "[": "]",
+    "{": "}",
   }
-  
-  for (let i = 0 ; i < s.length ; i++) {
-      let c = s[i];
-      if (map[c]) {
-        stack.push(map[c])
-      } else if (c !== stack.pop()) {
-        return false;
-      } 
+
+  for (let i = 0; i < s.length; i++) {
+    let c = s[i]
+    if (map[c]) {
+      stack.push(map[c])
+    } else if (c !== stack.pop()) {
+      return false
+    }
   }
-  
-  return !stack.length;
+
+  return !stack.length
 }
 
-
-console.log(isValid("(]"));
+console.log(isValid("(]"))
 
 try {
-  module.exports = isValid;
+  module.exports = isValid
 } catch (error) {}

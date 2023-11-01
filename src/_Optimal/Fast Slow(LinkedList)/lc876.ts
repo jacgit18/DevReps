@@ -5,17 +5,16 @@
 // If the total number of nodes in the LinkedList is even, return the second middle node.
 
 class Node {
-  constructor(value, next=null){
-    this.value = value;
-    this.next = next;
+  constructor(value, next = null) {
+    this.value = value
+    this.next = next
   }
 }
 
-const find_middle_of_linked_list = function(head) {
+const find_middle_of_linked_list = function (head) {
   // TODO: Write your code here
-  return head;
+  return head
 }
-
 
 head = new Node(1)
 head.next = new Node(2)
@@ -30,8 +29,6 @@ console.log(`Middle Node: ${find_middle_of_linked_list(head).value}`)
 
 head.next.next.next.next.next.next = new Node(7)
 console.log(`Middle Node: ${find_middle_of_linked_list(head).value}`)
-
-
 
 // Solution
 // -----

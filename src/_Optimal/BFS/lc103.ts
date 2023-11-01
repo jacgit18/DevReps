@@ -3,21 +3,18 @@
 // Given a binary tree, populate an array to represent its zigzag level order traversal. You should populate the values of all nodes of the first level from left to right, then right to left for the next level and keep alternating in the same manner for the following levels.
 
 class TreeNode {
-
   constructor(value) {
-    this.value = value;
-    this.left = null;
-    this.right = null;
+    this.value = value
+    this.left = null
+    this.right = null
   }
-};
+}
 
-
-const traverse = function(root) {
-  result = [];
+const traverse = function (root) {
+  result = []
   // TODO: Write your code here
-  return result;
-};
-
+  return result
+}
 
 var root = new TreeNode(12)
 root.left = new TreeNode(7)
@@ -28,8 +25,6 @@ root.right.right = new TreeNode(5)
 root.right.left.left = new TreeNode(20)
 root.right.left.right = new TreeNode(17)
 console.log(`Zigzag traversal: ${traverse(root)}`)
-
-
 
 // Solution
 // -----

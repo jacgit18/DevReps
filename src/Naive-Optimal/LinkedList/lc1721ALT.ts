@@ -1,78 +1,88 @@
 // 1. LinkedLists
 class ListNode {
-    constructor(value) {
-      this.value = value;
-      this.next = null;
-    }
+  constructor(value) {
+    this.value = value
+    this.next = null
   }
-  
-  // Generate a linked list from an array
-  function generateList(arr) {
-    if (arr.length === 0) { return null; }
-    
-    let head = new ListNode(arr[0]);
-  
-    let current = head;
-    for (let i = 1; i < arr.length; i++) {
-      current.next = new ListNode(arr[i]);
-      current = current.next;
-    }
-    
-    return head;
+}
+
+// Generate a linked list from an array
+function generateList(arr) {
+  if (arr.length === 0) {
+    return null
   }
-  
-  function swap(list, a, b) {
-  
-    function find(node, target) {
-  
-      if(!list || a===b) { return list; }
-      
-      let prev = null;
-      let current = node;
-      
-      while(current!==null) {
-        if(current.value === target) {
-          return [prev,current];
-        }
-        prev = current;
-        current = current.next;
+
+  let head = new ListNode(arr[0])
+
+  let current = head
+  for (let i = 1; i < arr.length; i++) {
+    current.next = new ListNode(arr[i])
+    current = current.next
+  }
+
+  return head
+}
+
+function swap(list, a, b) {
+  function find(node, target) {
+    if (!list || a === b) {
+      return list
+    }
+
+    let prev = null
+    let current = node
+
+    while (current !== null) {
+      if (current.value === target) {
+        return [prev, current]
       }
-      return [null,null]
+      prev = current
+      current = current.next
     }
-  
-    let [prev1, current1] = find(list,a);
-    let [prev2, current2] = find(list,b);
-  
-    if (!current1 || !current2) { return list; }
-    [current1.next, current2.next] = [current2.next, current1.next];
-    if(prev1) { prev1.next = current2; }
-    if(prev2) { prev2.next = current1; }
-  
-    if(prev1 === null) { return current2; }
-    if(prev2 === null) { return current1; }
-    
-    return list;
+    return [null, null]
   }
-  
-  let array = [1,5,7,10,12,15];
-  let list = generateList(array);
-  let a = 5;
-  let b = 12;
-  
-  let resultList = swap(list, a, b);
-  console.log("given list:", array);
-  
-  let resultArray = [];
-  while(resultList!==null) {
-    resultArray.push(resultList.value);
-    resultList = resultList.next;
+
+  let [prev1, current1] = find(list, a)
+  let [prev2, current2] = find(list, b)
+
+  if (!current1 || !current2) {
+    return list
   }
-  
-  console.log("swapped list:", resultArray);
+  ;[current1.next, current2.next] = [current2.next, current1.next]
+  if (prev1) {
+    prev1.next = current2
+  }
+  if (prev2) {
+    prev2.next = current1
+  }
 
+  if (prev1 === null) {
+    return current2
+  }
+  if (prev2 === null) {
+    return current1
+  }
 
+  return list
+}
 
-  /*
+let array = [1, 5, 7, 10, 12, 15]
+let list = generateList(array)
+let a = 5
+let b = 12
+
+let resultList = swap(list, a, b)
+console.log("given list:", array)
+
+let resultArray = []
+while (resultList !== null) {
+  resultArray.push(resultList.value)
+  resultList = resultList.next
+}
+
+console.log("swapped list:", resultArray)
+
+/*
 
 a = 5 
 

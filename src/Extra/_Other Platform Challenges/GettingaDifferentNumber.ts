@@ -14,25 +14,21 @@
 //     # would have been n+1 and not n.
 //     return n
 
+const getDifferentNumber = (arr) => {
+  let len = arr.length
+  let Unique = new Set()
 
-const getDifferentNumber =(arr) =>{
-    let len = arr.length;
-    let Unique = new Set()
+  for (let i = 0; i < len - 1; ++i) {
+    Unique.add([arr[i]])
+  }
 
-    for(let i=0; i<len -1; ++i){
-        Unique.add([arr[i]]);
+  for (let j = 0; j < len - 1; ++j) {
+    if (!Unique.has(arr[j]) === false) {
+      return j
     }
+  }
 
-    for(let j=0; j<len -1; ++j){
-        if(!Unique.has(arr[j]) === false){
-            return j
-        }
-    }
-
-    return len
+  return len
 }
 
-
 console.log(getDifferentNumber([0, 1, 2, 3]))
-
-

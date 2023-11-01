@@ -54,36 +54,36 @@ if equal to target push
 
 
 */
-const combinationSum = (candidates, target) =>{
-  let sum = 0;
-  let diff = 0;
-  let combo = [];
+const combinationSum = (candidates, target) => {
+  let sum = 0
+  let diff = 0
+  let combo = []
 
   for (let i = 0; i < candidates.length; ++i) {
-    let testcaseZero = candidates[i] === target;
+    let testcaseZero = candidates[i] === target
     if (testcaseZero) {
-      combo.push([candidates[i]]);
+      combo.push([candidates[i]])
     }
-    let testcaseOne = sum !== target;
+    let testcaseOne = sum !== target
     //   console.log(testcaseOne)
-    let testcaseTwo = candidates.length < 1;
+    let testcaseTwo = candidates.length < 1
     if (testcaseTwo) {
-      return [];
+      return []
     }
     if (testcaseOne) {
-      sum += candidates[i] + candidates[i];
+      sum += candidates[i] + candidates[i]
       if (sum < target) {
-        combo.push([candidates[i], candidates[i]]);
+        combo.push([candidates[i], candidates[i]])
       }
 
       if (testcaseOne) {
-        diff = target - sum;
+        diff = target - sum
         if (diff === candidates[i]) {
-          combo.push([candidates[i]]);
-          console.log(combo);
+          combo.push([candidates[i]])
+          console.log(combo)
         } else if (candidates[i + 1] === diff) {
-          combo[i].push(diff);
-          console.log(combo);
+          combo[i].push(diff)
+          console.log(combo)
         }
       }
     }
@@ -94,8 +94,8 @@ const combinationSum = (candidates, target) =>{
     // console.log(candidates[i])
   }
 
-  return combo;
-};
+  return combo
+}
 
 // const comboMath = (sum) => {
 //     // console.log(sum)
@@ -103,10 +103,10 @@ const combinationSum = (candidates, target) =>{
 
 // }
 
-console.log(combinationSum([2,3,6,7], 7))
+console.log(combinationSum([2, 3, 6, 7], 7))
 console.log()
 
-console.log(combinationSum([2,3,5], 8))
+console.log(combinationSum([2, 3, 5], 8))
 console.log()
 
-console.log(combinationSum([2], 1));
+console.log(combinationSum([2], 1))

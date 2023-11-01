@@ -158,5 +158,5 @@ Control flow(Break, Continue) based on defined steps & edge cases
 */
 
 function getNumberOfIslands(binaryMatrix) {
-    // your code goes here
-  }
+  // your code goes here
+}

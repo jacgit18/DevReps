@@ -5,29 +5,26 @@
 // If, in the end, you are left with a sub-list with less than ‘k’ elements, reverse it too.
 
 class Node {
-  constructor(value, next=null){
-    this.value = value;
-    this.next = next;
+  constructor(value, next = null) {
+    this.value = value
+    this.next = next
   }
 
   get_list() {
-    result = "";
-    temp = this;
+    result = ""
+    temp = this
     while (temp !== null) {
-      result += temp.value + " ";
-      temp = temp.next;
+      result += temp.value + " "
+      temp = temp.next
     }
-    return result;
+    return result
   }
-};
-
-
-
-const reverse_every_k_elements = function(head, k) {
-  // TODO: Write your code here
-  return head;
 }
 
+const reverse_every_k_elements = function (head, k) {
+  // TODO: Write your code here
+  return head
+}
 
 head = new Node(1)
 head.next = new Node(2)

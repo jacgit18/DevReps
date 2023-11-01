@@ -1,71 +1,66 @@
-const LinkedList = require("../../../_DataStructuresBuiltUpClasses/DataStrucFactoryInterview");
-const myLK = new LinkedList();
+const LinkedList = require("../../../_DataStructuresBuiltUpClasses/DataStrucFactoryInterview")
+const myLK = new LinkedList()
 
-let LinkListArray = [3,2,0,-4];
+let LinkListArray = [3, 2, 0, -4]
 // let head = myLK.ArrayLinkListDeserialize(LinkListArray);
 // Problem Statement #
 
 // Given the head of a Singly LinkedList that contains a cycle, write a function to find the starting node of the cycle.
 
 class Node {
-  constructor(value, next=null){
-    this.value = value;
-    this.next = next;
+  constructor(value, next = null) {
+    this.value = value
+    this.next = next
   }
 }
 const ArrayCyclicLinkListDeserialize = (arr) => {
-  if (arr.length === 0) { return null; }
-  let head = new Node(arr[0]);
-  let current = head;
+  if (arr.length === 0) {
+    return null
+  }
+  let head = new Node(arr[0])
+  let current = head
   for (let i = 1; i < arr.length; i++) {
-    current.next = new Node(arr[i]);
-    current = current.next;
+    current.next = new Node(arr[i])
+    current = current.next
     // see if works with lc Question
-    if(current.next === null){
-      current.next = head;
+    if (current.next === null) {
+      current.next = head
     }
   }
-  return head;
+  return head
 }
 
-let head = ArrayCyclicLinkListDeserialize([3,2,0,-4])
-let headTwo = ArrayCyclicLinkListDeserialize([1,2])
+let head = ArrayCyclicLinkListDeserialize([3, 2, 0, -4])
+let headTwo = ArrayCyclicLinkListDeserialize([1, 2])
 let headThree = ArrayCyclicLinkListDeserialize([1])
 
-
-
-const find_cycle_start = (head) =>{
-
+const find_cycle_start = (head) => {
   let slow = head,
-  fast = head;
+    fast = head
 
-while(fast && fast.next) {
-  slow = slow.next;
-  fast = fast.next.next;
+  while (fast && fast.next) {
+    slow = slow.next
+    fast = fast.next.next
 
-  if(slow === fast) {
-      break;
+    if (slow === fast) {
+      break
+    }
   }
-}
 
-if(!fast || !fast.next) {
-  return "no cycle";
+  if (!fast || !fast.next) {
+    return "no cycle"
+  }
+  let curr = head
+  while (curr !== fast) {
+    curr = curr.next
+    fast = fast.next
+  }
+  return curr
 }
-let curr = head;
-while(curr !== fast) {
-  curr = curr.next;
-  fast = fast.next;
-}
-return curr;
-
-};
 console.log()
-  console.log(  find_cycle_start(head))
-  console.log(  find_cycle_start(headTwo))
-  console.log(  find_cycle_start(headThree))
-
-
-
+console.log(find_cycle_start(head))
+console.log(find_cycle_start(headTwo))
+console.log(find_cycle_start(headThree))
 
 // head = new Node(1)
 // head.next = new Node(2)
@@ -81,8 +76,6 @@ console.log()
 // console.log(`LinkedList cycle start: ${find_cycle_start(head).value}`)
 
 // head.next.next.next.next.next.next = head
-
-
 
 // Solution
 // -----
@@ -102,7 +95,6 @@ console.log()
 //   return find_start(head, cycle_length);
 // }
 
-
 // function calculate_cycle_length(slow) {
 //   let current = slow,
 //     cycle_length = 0;
@@ -115,7 +107,6 @@ console.log()
 //   }
 //   return cycle_length;
 // }
-
 
 // function find_start(head, cycle_length) {
 //   let pointer1 = head,

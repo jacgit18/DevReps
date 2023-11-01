@@ -90,21 +90,28 @@ Control flow(Break, Continue) based on defined steps & edge cases
 
 */
 
-
-const log = (pre="", arg="", post="") => {console.log(`${pre} ${arg} ${post} `)}
-const info = (pre="", arg="", post="") => {console.info(`${pre} ${arg} ${post} `)}
-const warn = (pre="", arg="", post="") => {console.warn(`${pre} ${arg} ${post} `)}
-const error = (pre="", arg="", post="") => {console.error(`${pre} ${arg} ${post} `)}
-const table = (pre="", arg="", post="") => {console.table(`${pre} ${arg} ${post} `)}
+const log = (pre = "", arg = "", post = "") => {
+  console.log(`${pre} ${arg} ${post} `)
+}
+const info = (pre = "", arg = "", post = "") => {
+  console.info(`${pre} ${arg} ${post} `)
+}
+const warn = (pre = "", arg = "", post = "") => {
+  console.warn(`${pre} ${arg} ${post} `)
+}
+const error = (pre = "", arg = "", post = "") => {
+  console.error(`${pre} ${arg} ${post} `)
+}
+const table = (pre = "", arg = "", post = "") => {
+  console.table(`${pre} ${arg} ${post} `)
+}
 const runTimeStart = (arg) => console.time(arg)
 const runTimeEnd = (arg) => console.timeEnd(arg)
 
-const firstMissingPositive = function(nums) {
- 
-};
+const firstMissingPositive = function (nums) {}
 
 runTimeStart("Runtime")
-log(firstMissingPositive([1,2,0])); // 3
-log(firstMissingPositive([3, 4, -1, 1])); // 2
-log(firstMissingPositive([7,8,9,11,12])); // 1
+log(firstMissingPositive([1, 2, 0])) // 3
+log(firstMissingPositive([3, 4, -1, 1])) // 2
+log(firstMissingPositive([7, 8, 9, 11, 12])) // 1
 runTimeEnd("Runtime")

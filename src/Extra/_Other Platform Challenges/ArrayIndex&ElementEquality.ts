@@ -81,62 +81,45 @@ Control flow(Break, Continue) based on defined steps & edge cases
 
 // binary search
 function indexEqualsValueSearch(arr) {
-  
-    let low = 0
-    let high = arr.length - 1
-    
-    while(low <= high){
-      
-        let mid = Math.floor(low + high/ 2);
-      
-      
-      if(arr[mid] === mid){
-         return mid
-         }
-  
-      
-          if(arr[mid] !== mid){
-      
-             low++
-          }
-      
-      // [-8, 0, 2, 5]
-      //      ^     ^
-      //   0, 1, 2, 3 
-      //      ^     ^
-  
-      
+  let low = 0
+  let high = arr.length - 1
+
+  while (low <= high) {
+    let mid = Math.floor(low + high / 2)
+
+    if (arr[mid] === mid) {
+      return mid
     }
-   
-    return -1
-    
-    
+
+    if (arr[mid] !== mid) {
+      low++
+    }
+
+    // [-8, 0, 2, 5]
+    //      ^     ^
+    //   0, 1, 2, 3
+    //      ^     ^
   }
-  
-  let arr = [-8,0,2,5]
-  
-  console.log(indexEqualsValueSearch(arr))
 
+  return -1
+}
 
-  function indexEqualsValueLinearSearch(arr) {
-  
-    let low = 0
-    let high = arr.length
-    let mid = arr.length / 2;
-    let min = Infinity;
-    
-      for(let start = 0; start < high; ++start )  {
-        
-        if(arr[start] === start){
-          min = Math.min(min, arr[start] )
-          
-        }
-        
-      
-        
-      }
-    
-    return min === Infinity ? -1 : min
-    
+let arr = [-8, 0, 2, 5]
+
+console.log(indexEqualsValueSearch(arr))
+
+function indexEqualsValueLinearSearch(arr) {
+  let low = 0
+  let high = arr.length
+  let mid = arr.length / 2
+  let min = Infinity
+
+  for (let start = 0; start < high; ++start) {
+    if (arr[start] === start) {
+      min = Math.min(min, arr[start])
     }
-   console.log(indexEqualsValueLinearSearch([-1,0,3,6]))
+  }
+
+  return min === Infinity ? -1 : min
+}
+console.log(indexEqualsValueLinearSearch([-1, 0, 3, 6]))

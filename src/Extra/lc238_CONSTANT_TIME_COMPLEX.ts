@@ -1,4 +1,4 @@
-let Thenums = [1, 2, 3, 4];
+let Thenums = [1, 2, 3, 4]
 
 // const ProductofArray = (nums) => {
 //   let MyN = nums.length;
@@ -31,52 +31,43 @@ let Thenums = [1, 2, 3, 4];
 // var squareNumbers = numberArray.map(number => number*number);
 // console.log(squareNumbers);
 
+const ProductofArray2 = (nums) => {
+  let MyN = nums.length
+  let Myleft = new Array(MyN)
 
+  let Myright = new Array(MyN)
+  let MyOutput = new Array(MyN)
 
-const ProductofArray2  = (nums) => {
-    let MyN = nums.length;
-    let Myleft = new Array(MyN);
+  Myleft[0] = 1
+  Myright[MyN - 1] = 1
+  console.log("Forward ")
 
-    let Myright = new Array(MyN);
-    let MyOutput = new Array(MyN);
-
-    Myleft[0] = 1;
-    Myright[MyN -1] = 1;
-console.log("Forward ");
-
-let index = 1;
+  let index = 1
   nums.map((left, index, myN) => {
-    
-    left[index] = nums[index -1] * left[index -1];
-    console.log(left);
-
-    
+    left[index] = nums[index - 1] * left[index - 1]
+    console.log(left)
   })
 
+  // for (let i = 1; i < MyN; i++){
+  //     Myleft[i] = nums[i-1] * Myleft[i-1];
+  //     console.log(Myleft)
+  // }
 
-// for (let i = 1; i < MyN; i++){
-//     Myleft[i] = nums[i-1] * Myleft[i-1];
-//     console.log(Myleft)
-// }
+  // console.log("Backwards ");
 
+  // for (let i = MyN - 2; i >= 0; i--){
+  //     Myright[i] = nums[i+1] * Myright[i+1];
+  //     console.log(Myright)
+  // }
 
-// console.log("Backwards ");
+  // for (let i = 0; i < MyN; i++){
 
-// for (let i = MyN - 2; i >= 0; i--){
-//     Myright[i] = nums[i+1] * Myright[i+1];
-//     console.log(Myright)
-// }
+  //         MyOutput[i] = Myleft[i] * Myright[i];
 
+  // }
+  console.log(" ")
 
-// for (let i = 0; i < MyN; i++){
-
-//         MyOutput[i] = Myleft[i] * Myright[i];
-    
-// }
-console.log(" ");
-
-console.log(MyOutput);
-
+  console.log(MyOutput)
 }
 
-ProductofArray2(Thenums);
+ProductofArray2(Thenums)

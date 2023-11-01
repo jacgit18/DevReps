@@ -12,15 +12,12 @@
 
 // Example 1:
 
-
 // Input: board = [[0,1,0],[0,0,1],[1,1,1],[0,0,0]]
 // Output: [[0,0,0],[1,0,1],[0,1,1],[0,1,0]]
 // Example 2:
 
-
 // Input: board = [[1,1],[1,0]]
 // Output: [[1,1],[1,1]]
- 
 
 // Constraints:
 
@@ -28,14 +25,8 @@
 // n == board[i].length
 // 1 <= m, n <= 25
 // board[i][j] is 0 or 1.
- 
 
-
-
-
-const gameOfLife = (board) =>{
-    
-};
+const gameOfLife = (board) => {}
 
 gameOfLife()
 gameOfLife()

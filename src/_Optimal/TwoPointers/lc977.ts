@@ -1,42 +1,38 @@
 // Problem Statement #
 // Given a sorted array, create a new array containing squares of all the numbers of the input array in the sorted order.
 
-const make_squares = (arr) =>{
-  let result = [];
-  let left = 0;
-  let right = arr.length - 1;
-  let i = right;
-  let num1; 
-  let num2;
-//   while(left < right){
-    while(left <= right){
-
-      num1 = Math.pow(arr[left], 2)
-      num2 = Math.pow(arr[right], 2) 
-      if(num1 > num2){
-        //   arr[left] = num1
-          result[i] = num1
-          left++
-      } else {
-        //   arr[i] = num2
-          result[i] = num2
-          right--
-      }
-      i--
+const make_squares = (arr) => {
+  let result = []
+  let left = 0
+  let right = arr.length - 1
+  let i = right
+  let num1
+  let num2
+  //   while(left < right){
+  while (left <= right) {
+    num1 = Math.pow(arr[left], 2)
+    num2 = Math.pow(arr[right], 2)
+    if (num1 > num2) {
+      //   arr[left] = num1
+      result[i] = num1
+      left++
+    } else {
+      //   arr[i] = num2
+      result[i] = num2
+      right--
+    }
+    i--
   }
-//   return arr;
-//   return arr.sort();
-  return result;
-
+  //   return arr;
+  //   return arr.sort();
+  return result
 }
 
 // Squares: 0,1,4,4,9
 // Squares: 0,1,0,4,9
 
-
-
-console.log(`Squares: ${make_squares([-2, -1, 0, 2, 3])}`);
-console.log(`Squares: ${make_squares([-3, -1, 0, 1, 2])}`);
+console.log(`Squares: ${make_squares([-2, -1, 0, 2, 3])}`)
+console.log(`Squares: ${make_squares([-3, -1, 0, 1, 2])}`)
 
 // Solution
 // -----

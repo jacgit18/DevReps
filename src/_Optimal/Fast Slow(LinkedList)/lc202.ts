@@ -1,9 +1,8 @@
 // Problem Statement #
 
-// Any number will be called a happy number if, after repeatedly replacing it with a number equal to the sum of the 
-// square of all of its digits, leads us to number ‘1’. All other (not-happy) numbers will never reach ‘1’. Instead, they 
+// Any number will be called a happy number if, after repeatedly replacing it with a number equal to the sum of the
+// square of all of its digits, leads us to number ‘1’. All other (not-happy) numbers will never reach ‘1’. Instead, they
 // will be stuck in a cycle of numbers which does not include ‘1’.
-
 
 /**
  * Input: Any number
@@ -31,27 +30,26 @@
 
 const find_happy_number = (num) => {
   let slow = num,
-      fast = num;
+    fast = num
   while (true) {
-      slow = find_square_sum(slow); // intial step
-      fast = find_square_sum(find_square_sum(fast)); // two steps use recursion
-      if (slow === fast) { 
-          break;
-      }
+    slow = find_square_sum(slow) // intial step
+    fast = find_square_sum(find_square_sum(fast)) // two steps use recursion
+    if (slow === fast) {
+      break
+    }
   }
-  return slow === 1; // see if the cycle is stuck on the number '1'
+  return slow === 1 // see if the cycle is stuck on the number '1'
 }
 
 const find_square_sum = (num) => {
-  let sum = 0;
+  let sum = 0
   while (num > 0) {
-      digit = num % 10;
-      sum += digit * digit;
-      num = Math.floor(num / 10);
+    digit = num % 10
+    sum += digit * digit
+    num = Math.floor(num / 10)
   }
-  return sum;
+  return sum
 }
-
 
 // console.log(`${find_happy_number(1)}`)
 
@@ -61,18 +59,6 @@ console.log(`${find_happy_number(3023)}`)
 
 console.log(`${find_happy_number(23)}`)
 console.log(`${find_happy_number(12)}`)
-
-
-
-
-
-
-
-
-
-
-
-
 
 // Solution
 // -----

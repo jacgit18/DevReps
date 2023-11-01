@@ -14,22 +14,17 @@
 //        2  9
 
 class TreeNode {
-
   constructor(value) {
-    this.value = value;
-    this.left = null;
-    this.right = null;
+    this.value = value
+    this.left = null
+    this.right = null
   }
-};
+}
 
-
-
-const find_path = function(root, sequence) {
+const find_path = function (root, sequence) {
   // TODO: Write your code here
-  return false;
-};
-
-
+  return false
+}
 
 var root = new TreeNode(1)
 root.left = new TreeNode(0)

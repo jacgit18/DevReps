@@ -2,14 +2,12 @@
 // in our supplier inventory table. We want to have an automated job, scheduled daily, that processes each supplier
 // file from a common directory and inserts into/updates table SUPPLIER_PRODUCT.
 
-
-// Table  SUPPLIER_PRODUCT  
+// Table  SUPPLIER_PRODUCT
 
 //     Column             Notes
-//     SUPPLIER_ID *      Primary key is (SUPPLIER_ID, PRODUCT_ID) 
+//     SUPPLIER_ID *      Primary key is (SUPPLIER_ID, PRODUCT_ID)
 //     PRODUCT_ID *
 //     QUANTITY
-
 
 // The feeds are different for each supplier, and the type can be either tab-delimited text, CSV, or Excel files. They are
 // transferred to the same directory on our server with standardized names (<supplierID>.extension). Some
@@ -25,15 +23,12 @@
 // ABC,10.30,15,2014-11-26
 // HIJ,152.45,53,2014-02-17
 
-
 // - Supplier B (tab-delimited):
 // row_number product brand inventory
 // 1 KLMN Honeywell 34
 // 2 HIJ Taco 452
 // 3 OPQ Panasonic 77
 // 4 ABC Taco 10
-
-
 
 // Design the Java classes, their member variables and methods signatures to support this automation project, with a
 // focus on how to handle different file types and formats. Feel free to use supporting database tables if necessary

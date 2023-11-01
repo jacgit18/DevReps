@@ -25,53 +25,43 @@ function longest_substring_with_k_distinct(str, k) {
   // console.log(`------ Test Cases ------`)
   let windowStart = 0,
     maxLength = 0,
-    charFrequency = {};
+    charFrequency = {}
 
   for (let windowEnd = 0; windowEnd < str.length; windowEnd++) {
-
-
-    const rightChar = str[windowEnd];
+    const rightChar = str[windowEnd]
     // notes
-    const a = 3;
-    const b = -2;
-    
+    const a = 3
+    const b = -2
+
     // console.log(!(a > 0 || b > 0));
     // expected output: false
 
     // without Grouping operator ( ) only rightchar would be negated
     // not the boolean result of rightChar n charFrequency
     if (!(rightChar in charFrequency)) {
-
-      charFrequency[rightChar] = 0; // appending array index current value to the object as a property with a intial value of 0
-      // arrays are basically  at type of object where the index is like the property name and subarray is the key 
-
+      charFrequency[rightChar] = 0 // appending array index current value to the object as a property with a intial value of 0
+      // arrays are basically  at type of object where the index is like the property name and subarray is the key
     }
 
-    
-    charFrequency[rightChar] += 1;
+    charFrequency[rightChar] += 1
 
     while (Object.keys(charFrequency).length > k) {
-      const leftChar = str[windowStart];
-      charFrequency[leftChar] -= 1;
+      const leftChar = str[windowStart]
+      charFrequency[leftChar] -= 1
       if (charFrequency[leftChar] === 0) {
-        delete charFrequency[leftChar];
+        delete charFrequency[leftChar]
       }
 
-      windowStart += 1; 
-    
-
+      windowStart += 1
     }
 
-    maxLength = Math.max(maxLength, windowEnd - windowStart + 1);
-  
-
+    maxLength = Math.max(maxLength, windowEnd - windowStart + 1)
   }
 
-  return maxLength;
+  return maxLength
 }
 
-module.exports = longest_substring_with_k_distinct;
-
+module.exports = longest_substring_with_k_distinct
 
 // console.log(
 //   `Length of the longest substring: ${longest_substring_with_k_distinct(
@@ -80,10 +70,7 @@ module.exports = longest_substring_with_k_distinct;
 //   )}`
 // );
 
-
 // console.log(longest_substring_with_k_distinct("araaci",2))
-
-
 
 // console.log(
 //   `Length of the longest substring: ${longest_substring_with_k_distinct(
@@ -97,8 +84,6 @@ module.exports = longest_substring_with_k_distinct;
 //     3
 //   )}`
 // );
-
-
 
 // Solution
 // -----

@@ -45,13 +45,10 @@ class LinkedList {
     this.length--
   }
 
-  removeDuplicates(index) {
-  
-    
-  }
+  removeDuplicates(index) {}
 
   print() {
-    let output = ''
+    let output = ""
     let current = this.head
     while (current) {
       output = `${output}${current.value} -> `
@@ -69,7 +66,7 @@ class LinkedListNode {
 }
 
 // dont know
-LinkedList.fromValues = function(...values) {
+LinkedList.fromValues = function (...values) {
   const ll = new LinkedList()
   for (let i = values.length - 1; i >= 0; i--) {
     ll.insertAtHead(values[i])

@@ -89,58 +89,46 @@ Control flow(Break, Continue) based on defined steps & edge cases
 
 */
 
-
-const log = (pre="", arg="", post="") => {console.log(`${pre} ${arg} ${post} `)}
-const info = (pre="", arg="", post="") => {console.info(`${pre} ${arg} ${post} `)}
-const warn = (pre="", arg="", post="") => {console.warn(`${pre} ${arg} ${post} `)}
-const error = (pre="", arg="", post="") => {console.error(`${pre} ${arg} ${post} `)}
-const table = (pre="", arg="", post="") => {console.table(`${pre} ${arg} ${post} `)}
+const log = (pre = "", arg = "", post = "") => {
+  console.log(`${pre} ${arg} ${post} `)
+}
+const info = (pre = "", arg = "", post = "") => {
+  console.info(`${pre} ${arg} ${post} `)
+}
+const warn = (pre = "", arg = "", post = "") => {
+  console.warn(`${pre} ${arg} ${post} `)
+}
+const error = (pre = "", arg = "", post = "") => {
+  console.error(`${pre} ${arg} ${post} `)
+}
+const table = (pre = "", arg = "", post = "") => {
+  console.table(`${pre} ${arg} ${post} `)
+}
 const runTimeStart = (arg) => console.time(arg)
 const runTimeEnd = (arg) => console.timeEnd(arg)
 
+const find_duplicate = function (nums) {
+  let index = 0
+  const ArrayLength = nums.length
 
+  while (index < ArrayLength) {
+    const currentSubarray = nums[index]
+    const decrementedSubarray = currentSubarray - 1
 
-const find_duplicate = function(nums) {
-
-  let index = 0;
-  const ArrayLength = nums.length;
-  
-  while (index < ArrayLength){
-    const currentSubarray = nums[index];
-    const decrementedSubarray = currentSubarray -1; 
-  
-  
-      if (currentSubarray != nums[decrementedSubarray]){
-  
-  
-      
-      [ nums[decrementedSubarray], nums[index]] = [nums[index], nums[decrementedSubarray]]; 
-  
-  
-  
-    } else{
-  
-      ++index;
-  
+    if (currentSubarray != nums[decrementedSubarray]) {
+      ;[nums[decrementedSubarray], nums[index]] = [nums[index], nums[decrementedSubarray]]
+    } else {
+      ++index
     }
-    
   }
 
-  
-   
-  
-    return nums;
-
-
-
-};
-
+  return nums
+}
 
 runTimeStart("Runtime")
-log(find_duplicate([1,3,4,2,2]));// 2
-log(find_duplicate([3,1,3,4,2]));// 3
+log(find_duplicate([1, 3, 4, 2, 2])) // 2
+log(find_duplicate([3, 1, 3, 4, 2])) // 3
 runTimeEnd("Runtime")
-
 
 // Solution
 // -----

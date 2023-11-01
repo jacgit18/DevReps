@@ -3,29 +3,21 @@
 // Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...]
 // (si < ei), determine if a person could attend all meetings.
 
-const can_attend_all_appointments = (intervals) => {
-  
-};
+const can_attend_all_appointments = (intervals) => {}
 
 let testCaseOne = [
   [0, 30],
   [5, 10],
   [15, 20],
-]; // false
+] // false
 let testCaseTwo = [
   [7, 10],
   [2, 4],
-]; // true
+] // true
 
+console.log(`Can attend all appointments: ${can_attend_all_appointments(testCaseOne)}`)
 
-
-console.log(
-  `Can attend all appointments: ${can_attend_all_appointments(testCaseOne)}`
-);
-
-console.log(
-  `Can attend all appointments: ${can_attend_all_appointments(testCaseTwo)}`
-);
+console.log(`Can attend all appointments: ${can_attend_all_appointments(testCaseTwo)}`)
 
 // Solution
 // -----
@@ -60,9 +52,6 @@ console.log(
 
 //   i++;
 // }
-
-
-
 
 // const can_attend_all_appointments = (intervals) => {
 //   // console.log(intervals)

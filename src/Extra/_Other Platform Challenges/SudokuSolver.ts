@@ -93,66 +93,61 @@ Control flow(Break, Continue) based on defined steps & edge cases
 
 */
 
-const log = (pre="", arg="", post="") => {console.log(`${pre} ${arg} ${post} `)}
+const log = (pre = "", arg = "", post = "") => {
+  console.log(`${pre} ${arg} ${post} `)
+}
 
-const info = (pre="", arg="", post="") => {console.info(`${pre} ${arg} ${post} `)}
+const info = (pre = "", arg = "", post = "") => {
+  console.info(`${pre} ${arg} ${post} `)
+}
 
-const table = (pre="", arg="", post="") => {console.table(`${pre} ${arg} ${post} `)}
+const table = (pre = "", arg = "", post = "") => {
+  console.table(`${pre} ${arg} ${post} `)
+}
 
 const runTimeStart = (arg) => console.time(arg)
 const runTimeEnd = (arg) => console.timeEnd(arg)
 
+const sudokuSolve = (board) => {
+  //log(board)
 
-const sudokuSolve = (board) =>{
- //log(board)
-  
   //[row][col]
-  
-  for(let start = 0 ; start < board.length; ++start){
+
+  for (let start = 0; start < board.length; ++start) {
     // log(board[0])
-    let set = new Set();
-    
-    
-   for(let c of board[0]){
-     if(c === "."){
-       break
-       
-     
-    if (set.has(c)) {
-      return false;
-    }  
-    set.add(c)
-   }
+    let set = new Set()
 
-  }
-    
-  table(set)
+    for (let c of board[0]) {
+      if (c === ".") {
+        break
 
+        if (set.has(c)) {
+          return false
+        }
+        set.add(c)
+      }
+    }
+
+    table(set)
   }
- 
 
   //return board
-  }
+}
 
-
-
-let Board =  
-[[".",".",".","7",".",".","3",".","1"],["3",".",".","9",".",".",".",".","."],[".","4",".","3","1",".","2",".","."],[".","6",".","6",".",".","5",".","."],[".",".",".",".",".",".",".",".","."],[".",".","1",".",".","8",".","4","."],[".",".","6",".","2","1",".","5","."],[".",".",".",".",".","9",".",".","8"],["8",".","5",".",".","4",".",".","."]]
-
-
-  
+let Board = [
+  [".", ".", ".", "7", ".", ".", "3", ".", "1"],
+  ["3", ".", ".", "9", ".", ".", ".", ".", "."],
+  [".", "4", ".", "3", "1", ".", "2", ".", "."],
+  [".", "6", ".", "6", ".", ".", "5", ".", "."],
+  [".", ".", ".", ".", ".", ".", ".", ".", "."],
+  [".", ".", "1", ".", ".", "8", ".", "4", "."],
+  [".", ".", "6", ".", "2", "1", ".", "5", "."],
+  [".", ".", ".", ".", ".", "9", ".", ".", "8"],
+  ["8", ".", "5", ".", ".", "4", ".", ".", "."],
+]
 
 runTimeStart("Runtime")
-log("Edge case one", sudokuSolve(Board)) // Expected I/O: 
-//log("Edge case two", sudokuSolve("")) // Expected I/O: 
-//log("Edge case three", sudokuSolve("")) // Expected I/O: 
+log("Edge case one", sudokuSolve(Board)) // Expected I/O:
+//log("Edge case two", sudokuSolve("")) // Expected I/O:
+//log("Edge case three", sudokuSolve("")) // Expected I/O:
 runTimeEnd("Runtime")
-
-
-
-
-
-
-
-
-

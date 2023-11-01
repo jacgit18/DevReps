@@ -11,7 +11,7 @@
 
 // A map is created like this.
 
-const myMap = new Map();
+const myMap = new Map()
 
 // And the difference between a map and an object is the fact that a map allows you to save any data type as the key.
 
@@ -20,45 +20,45 @@ const myMap = new Map();
 
 // Hashmap is a type of hashtable
 
-const mySet = new Set(); // stores the keys
-console.log(myMap.set("grapes", 1000));
-console.log(myMap.get("grapes"));
+const mySet = new Set() // stores the keys
+console.log(myMap.set("grapes", 1000))
+console.log(myMap.get("grapes"))
 
 class HashTable {
   constructor(size) {
-    this.data = new Array(size);
+    this.data = new Array(size)
     // this.data = [];
   }
 
   // hash function allocates were key is in memory
   _hash(key) {
-    let hash = 0;
+    let hash = 0
     for (let i = 0; i < key.length; i++) {
-      hash = (hash + key.charCodeAt(i) * i) % this.data.length;
+      hash = (hash + key.charCodeAt(i) * i) % this.data.length
     }
-    return hash;
+    return hash
   }
 
   set(key, value) {
-    let address = this._hash(key);
+    let address = this._hash(key)
     if (!this.data[address]) {
-      this.data[address] = [];
+      this.data[address] = []
     }
-    this.data[address].push([key, value]);
-    return this.data;
+    this.data[address].push([key, value])
+    return this.data
   }
 
   get(key) {
-    const address = this._hash(key);
-    const currentBucket = this.data[address];
+    const address = this._hash(key)
+    const currentBucket = this.data[address]
     if (currentBucket) {
       for (let i = 0; i < currentBucket.length; i++) {
         if (currentBucket[i][0] === key) {
-          return currentBucket[i][1];
+          return currentBucket[i][1]
         }
       }
     }
-    return undefined;
+    return undefined
   }
 
   //   keys(){
@@ -75,9 +75,9 @@ class HashTable {
   // collision version
   keys() {
     if (!this.data.length) {
-      return undefined;
+      return undefined
     }
-    let result = [];
+    let result = []
     // loop through all the elements
     for (let i = 0; i < this.data.length; i++) {
       // if it's not an empty memory cell
@@ -85,26 +85,26 @@ class HashTable {
         // but also loop through all the potential collisions
         if (this.data.length > 1) {
           for (let j = 0; j < this.data[i].length; j++) {
-            result.push(this.data[i][j][0]);
+            result.push(this.data[i][j][0])
           }
         } else {
-          result.push(this.data[i][0]);
+          result.push(this.data[i][0])
         }
       }
     }
-    return result;
+    return result
   }
 }
-// passing 25 to constructor with array 
-const myHashTable = new HashTable(25);
-console.log(myHashTable.set("grapes", 10000));
-console.log(myHashTable.set("pear", 4));
+// passing 25 to constructor with array
+const myHashTable = new HashTable(25)
+console.log(myHashTable.set("grapes", 10000))
+console.log(myHashTable.set("pear", 4))
 
-console.log(myHashTable.get("grapes"));
+console.log(myHashTable.get("grapes"))
 
-console.log(myHashTable.set("apples", 9));
-console.log(myHashTable.get("apples"));
+console.log(myHashTable.set("apples", 9))
+console.log(myHashTable.get("apples"))
 
-console.log(myHashTable.keys());
+console.log(myHashTable.keys())
 
 // with hashtable you have loop through unsorted memory

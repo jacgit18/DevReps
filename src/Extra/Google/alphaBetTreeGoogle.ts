@@ -1,8 +1,8 @@
 // Root just have total length
 // leaf have length and value : Section of Alphabet
-    // preOrder
+// preOrder
 
-    /**
+/**
  *     length 9
  *   /    \
  *  abc    len:6
@@ -21,77 +21,69 @@ return index 7 in alphabet
 
 */
 
-
-    class TreeNode {
-        constructor(value) {
-          this.value = value;
-          this.left = null;
-          this.right = null;
-          this.length = 0;// pull length from descendants
-        }
-      };
+class TreeNode {
+  constructor(value) {
+    this.value = value
+    this.left = null
+    this.right = null
+    this.length = 0 // pull length from descendants
+  }
+}
 // convert binary search tree
-      const ArrayBinaryTreeDeserialize = (arr) =>{
-        if (arr.length === 0) { return null; }
-        // could get mid and put it as root 
-        let root = new TreeNode(arr[0]); // BFS levelOrder Push
-        let queue = [root];
-        for(let i = 1; i < arr.length; i += 2) {
-          let current = queue.shift();
-    
-          // should do recursive
-          if (arr[i] !== null) {
-            // if val less then root then parent node or one node up
-            current.left = new TreeNode(arr[i]);
-            queue.push(current.left);
-          }
-    
-          if (arr[i + 1] !== null && arr[i + 1] !== undefined) {
-                    // if val greater then root then parent node or one node up
-            current.right = new TreeNode(arr[i + 1]);
-            queue.push(current.right);
-          }
-    
-        }
-        return root;
-      }
+const ArrayBinaryTreeDeserialize = (arr) => {
+  if (arr.length === 0) {
+    return null
+  }
+  // could get mid and put it as root
+  let root = new TreeNode(arr[0]) // BFS levelOrder Push
+  let queue = [root]
+  for (let i = 1; i < arr.length; i += 2) {
+    let current = queue.shift()
 
+    // should do recursive
+    if (arr[i] !== null) {
+      // if val less then root then parent node or one node up
+      current.left = new TreeNode(arr[i])
+      queue.push(current.left)
+    }
 
-      function maxHeight(node) {
-        if (node == null) {
-          return 0;
-        }
-      
-        return Math.max(maxHeight(node.left), maxHeight(node.right)) + 1;
-      }
-    
-      function minHeight(node) {
-        if (node == null) {
-          return 0;
-        }
-      
-        return Math.min(minHeight(node.left), minHeight(node.right)) + 1;
-      }
-    
+    if (arr[i + 1] !== null && arr[i + 1] !== undefined) {
+      // if val greater then root then parent node or one node up
+      current.right = new TreeNode(arr[i + 1])
+      queue.push(current.right)
+    }
+  }
+  return root
+}
 
+function maxHeight(node) {
+  if (node == null) {
+    return 0
+  }
 
+  return Math.max(maxHeight(node.left), maxHeight(node.right)) + 1
+}
 
-    const find = (tree, index) => {
+function minHeight(node) {
+  if (node == null) {
+    return 0
+  }
 
-         if(tree.value) {
-           return tree.value[index] 
-         }
-         
-         if(index < tree.left.lenth) {
-             return find(tree,left, index)
-         }
-         
-         return find(tree.right, index - tree.left.len)
-        
-       }
+  return Math.min(minHeight(node.left), minHeight(node.right)) + 1
+}
 
+const find = (tree, index) => {
+  if (tree.value) {
+    return tree.value[index]
+  }
 
-       let root = []
+  if (index < tree.left.lenth) {
+    return find(tree, left, index)
+  }
 
+  return find(tree.right, index - tree.left.len)
+}
 
-console.log(find(ArrayBinaryTreeDeserialize(root), index) )
+let root = []
+
+console.log(find(ArrayBinaryTreeDeserialize(root), index))

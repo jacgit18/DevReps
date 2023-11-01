@@ -2,67 +2,56 @@
 
 // Given a binary tree, populate an array to represent the averages of all of its levels.
 
-
-
 class TreeNode {
-
   constructor(value) {
-    this.value = value;
-    this.left = null;
-    this.right = null;
+    this.value = value
+    this.left = null
+    this.right = null
   }
-};
+}
 
 /**
  * Input: binary tree with 3 or 4 levels
  * Output: average of the sum each level
- * 
+ *
  * Properties: nodes, left and right
- * 
+ *
  * Pre-Condition: if tree node is empty or null
- * 
+ *
  * Conditions: account for number of nodes increased
- * 
- * 
+ *
+ *
  *
  */
 
-const find_level_averages = function(root) {
-  if (!root ) return 0; 
+const find_level_averages = function (root) {
+  if (!root) return 0
 
-  let result = [];
-  let queue = [root];
+  let result = []
+  let queue = [root]
 
-  while (queue.length){
-
-    let sum = 0;
-    let currentSize = queue.length;
-    for (let i = 0; i < currentSize; i++){
-      let currentNode = queue.shift();
+  while (queue.length) {
+    let sum = 0
+    let currentSize = queue.length
+    for (let i = 0; i < currentSize; i++) {
+      let currentNode = queue.shift()
       // console.log(` this is queue shift ${currentNode.value}`)
-      sum += currentNode.value;
+      sum += currentNode.value
       // console.log(` this is Sum ${sum}`)
 
-      if (currentNode.left !== null) queue.push(currentNode.left);
+      if (currentNode.left !== null) queue.push(currentNode.left)
       // console.log(` this is current node left ${currentNode.left.value}`);
 
-      if (currentNode.right !== null) queue.push(currentNode.right);
+      if (currentNode.right !== null) queue.push(currentNode.right)
       // console.log(` this is current node right ${currentNode.right.value}`);
-
     }
     // console.log(` this is results ${result}`);
 
-    result.push(sum/currentSize);
-
-
-
-
+    result.push(sum / currentSize)
   }
 
-
-  return result;
-};
-
+  return result
+}
 
 var root = new TreeNode(12)
 root.left = new TreeNode(7)

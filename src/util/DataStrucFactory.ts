@@ -1,481 +1,458 @@
 // Define your data structure classes and functions
 class Stack {
-    private stack: any[];
-  
-    constructor(stackOfPlates: any[]) {
-      this.stack = stackOfPlates.slice();
-    }
-  
-    push(item: any) {
-      this.stack.push(item);
-    }
-  
-    pop(): any {
-      return this.stack.pop();
-    }
-    // Add other methods as needed
+  private stack: any[]
+
+  constructor(stackOfPlates: any[]) {
+    this.stack = stackOfPlates.slice()
   }
 
+  push(item: any) {
+    this.stack.push(item)
+  }
 
-  class StackLinkedList<T> {
-    private top: ListNode<T> | null;
-    private size: number;
-  
-    constructor(initialValue: T | null = null) {
-        this.top = initialValue ? new ListNode(initialValue) : null;
-        this.size = initialValue ? 1 : 0;
-    }
+  pop(): any {
+    return this.stack.pop()
+  }
+  // Add other methods as needed
+}
 
-    push(item: T) {
-      const newNode = new ListNode(item);
-      newNode.next = this.top;
-      this.top = newNode;
-      this.size++;
-    }
+class StackLinkedList<T> {
+  private top: ListNode<T> | null
+  private size: number
 
-    pushMany(items: T[]) {
-        for (const item of items) {
-            this.push(item);
-        }
-    }
-  
-    pop(): T | null {
-      if (!this.top) {
-        return null; // Stack is empty
-      }
-  
-      const poppedItem = this.top.value;
-      this.top = this.top.next;
-      this.size--;
-  
-      return poppedItem;
-    }
-  
-    peek(): T | null {
-      return this.top ? this.top.value : null;
-    }
-  
-    isEmpty(): boolean {
-      return this.size === 0;
-    }
-  
-    getSize(): number {
-      return this.size;
+  constructor(initialValue: T | null = null) {
+    this.top = initialValue ? new ListNode(initialValue) : null
+    this.size = initialValue ? 1 : 0
+  }
+
+  push(item: T) {
+    const newNode = new ListNode(item)
+    newNode.next = this.top
+    this.top = newNode
+    this.size++
+  }
+
+  pushMany(items: T[]) {
+    for (const item of items) {
+      this.push(item)
     }
   }
 
-  
-  class Queue<T> {
-    private front: ListNode<T> | null;
-    private rear: ListNode<T> | null;
-  
-    constructor(initialValue: T | null = null) {
-        this.front = initialValue ? new ListNode(initialValue) : null;
-        this.rear = initialValue ? this.front : null;
-    }
-  
-    enqueue(item: T) {
-      const newNode = new ListNode(item);
-  
-      if (!this.front) {
-        this.front = newNode;
-        this.rear = newNode;
-      } else {
-        this.rear!.next = newNode;
-        this.rear = newNode;
-      }
+  pop(): T | null {
+    if (!this.top) {
+      return null // Stack is empty
     }
 
-    enqueueMany(items: T[]) {
-        for (const item of items) {
-            this.enqueue(item);
-        }
-    }
-  
-    dequeue(): T | null {
-      if (!this.front) {
-        return null; // Queue is empty
-      }
-  
-      const dequeuedItem = this.front.value;
-      this.front = this.front.next;
-  
-      if (!this.front) {
-        this.rear = null; // Queue is now empty
-      }
-  
-      return dequeuedItem;
-    }
-  
-    isEmpty(): boolean {
-      return !this.front;
-    }
-  }
-  
-  
-  class ListNode<T> {
-    value: T;
-    next: ListNode<T> | null;
-  
-    constructor(value: T) {
-      this.value = value;
-      this.next = null;
-    }
-  }
-  
-  class DoubleLLNode<T> {
-    data: T;
-    previous: DoubleLLNode<T> | null;
-    next: DoubleLLNode<T> | null;
-  
-    constructor(data: T, previous: DoubleLLNode<T> | null = null, next: DoubleLLNode<T> | null = null) {
-      this.data = data;
-      this.previous = previous;
-      this.next = next;
-    }
-  }
-  
+    const poppedItem = this.top.value
+    this.top = this.top.next
+    this.size--
 
-  class CyclicLinkedList<T> {
-    head: ListNode<T> | null;
-  
-    constructor(values: T[]) {
-      this.head = this.createCyclicLinkedList(values);
+    return poppedItem
+  }
+
+  peek(): T | null {
+    return this.top ? this.top.value : null
+  }
+
+  isEmpty(): boolean {
+    return this.size === 0
+  }
+
+  getSize(): number {
+    return this.size
+  }
+}
+
+class Queue<T> {
+  private front: ListNode<T> | null
+  private rear: ListNode<T> | null
+
+  constructor(initialValue: T | null = null) {
+    this.front = initialValue ? new ListNode(initialValue) : null
+    this.rear = initialValue ? this.front : null
+  }
+
+  enqueue(item: T) {
+    const newNode = new ListNode(item)
+
+    if (!this.front) {
+      this.front = newNode
+      this.rear = newNode
+    } else {
+      this.rear!.next = newNode
+      this.rear = newNode
     }
-  
-    private createCyclicLinkedList(values: T[]): ListNode<T> | null {
-      if (values.length === 0) {
-        return null;
-      }
-  
-      let head: ListNode<T> | null = new ListNode(values[0]);
-      let current: ListNode<T> | null = head;
-  
-      for (let i = 1; i < values.length; i++) {
-        const newNode: ListNode<T> = new ListNode(values[i]);
-        current!.next = newNode;
-        current = newNode;
-      }
-  
-      // Make it cyclic by connecting the last node to the head
-      if (head) {
-        current!.next = head;
-      }
-  
-      return head;
+  }
+
+  enqueueMany(items: T[]) {
+    for (const item of items) {
+      this.enqueue(item)
+    }
+  }
+
+  dequeue(): T | null {
+    if (!this.front) {
+      return null // Queue is empty
     }
 
-    
-  }
-  
-  
-  class DoublyCyclicLinkedList<T> {
-    head: DoubleLLNode<T> | null;
-  
-    constructor(values: T[]) {
-      this.head = this.createDoublyCyclicLinkedList(values);
-    }
-  
-    private createDoublyCyclicLinkedList(values: T[]): DoubleLLNode<T> | null {
-      if (values.length === 0) {
-        return null;
-      }
-  
-      let head: DoubleLLNode<T> | null = new DoubleLLNode(values[0]);
-      let current: DoubleLLNode<T> | null = head;
-      let prev: DoubleLLNode<T> | null = null;
-  
-      for (let i = 1; i < values.length; i++) {
-        const newNode: DoubleLLNode<T> = new DoubleLLNode(values[i]);
-        current!.next = newNode;
-        newNode.previous = current;
-        current = newNode;
-      }
-  
-      // Make it doubly cyclic by connecting the last node to the head and the head's previous to the last node
-      if (head) {
-        current!.next = head;
-        head.previous = current;
-      }
-  
-      return head;
-    }
-  }
-  
+    const dequeuedItem = this.front.value
+    this.front = this.front.next
 
-  class TreeNode {
-    value: any;
-    left: TreeNode | null;
-    right: TreeNode | null;
-  
-    constructor(value: any) {
-      this.value = value;
-      this.left = null;
-      this.right = null;
+    if (!this.front) {
+      this.rear = null // Queue is now empty
     }
-  }
-  
-  class GraphNode {
-    id: any;
-    edges: GraphNode[];
-  
-    constructor(id: any) {
-      this.id = id !== undefined ? id : null;
-      this.edges = [];
-    }
-  }
-  
-  // Define your tree and graph classes
-  class BinarySearchTree {
-    root: TreeNode | null;
-  
-    constructor(rootValue: any) {
-      this.root = new TreeNode(rootValue);
-    }
-  
-    // Add methods for tree operations
-  }
-  
-  class Graph {
 
-    nodes: { [key: string]: GraphNode };
-  
-   constructor(initialNodes: string[] = [], initialEdges: [string, string][] = []) {
-    this.nodes = {};
+    return dequeuedItem
+  }
+
+  isEmpty(): boolean {
+    return !this.front
+  }
+}
+
+class ListNode<T> {
+  value: T
+  next: ListNode<T> | null
+
+  constructor(value: T) {
+    this.value = value
+    this.next = null
+  }
+}
+
+class DoubleLLNode<T> {
+  data: T
+  previous: DoubleLLNode<T> | null
+  next: DoubleLLNode<T> | null
+
+  constructor(
+    data: T,
+    previous: DoubleLLNode<T> | null = null,
+    next: DoubleLLNode<T> | null = null,
+  ) {
+    this.data = data
+    this.previous = previous
+    this.next = next
+  }
+}
+
+class CyclicLinkedList<T> {
+  head: ListNode<T> | null
+
+  constructor(values: T[]) {
+    this.head = this.createCyclicLinkedList(values)
+  }
+
+  private createCyclicLinkedList(values: T[]): ListNode<T> | null {
+    if (values.length === 0) {
+      return null
+    }
+
+    let head: ListNode<T> | null = new ListNode(values[0])
+    let current: ListNode<T> | null = head
+
+    for (let i = 1; i < values.length; i++) {
+      const newNode: ListNode<T> = new ListNode(values[i])
+      current!.next = newNode
+      current = newNode
+    }
+
+    // Make it cyclic by connecting the last node to the head
+    if (head) {
+      current!.next = head
+    }
+
+    return head
+  }
+}
+
+class DoublyCyclicLinkedList<T> {
+  head: DoubleLLNode<T> | null
+
+  constructor(values: T[]) {
+    this.head = this.createDoublyCyclicLinkedList(values)
+  }
+
+  private createDoublyCyclicLinkedList(values: T[]): DoubleLLNode<T> | null {
+    if (values.length === 0) {
+      return null
+    }
+
+    let head: DoubleLLNode<T> | null = new DoubleLLNode(values[0])
+    let current: DoubleLLNode<T> | null = head
+    let prev: DoubleLLNode<T> | null = null
+
+    for (let i = 1; i < values.length; i++) {
+      const newNode: DoubleLLNode<T> = new DoubleLLNode(values[i])
+      current!.next = newNode
+      newNode.previous = current
+      current = newNode
+    }
+
+    // Make it doubly cyclic by connecting the last node to the head and the head's previous to the last node
+    if (head) {
+      current!.next = head
+      head.previous = current
+    }
+
+    return head
+  }
+}
+
+class TreeNode {
+  value: any
+  left: TreeNode | null
+  right: TreeNode | null
+
+  constructor(value: any) {
+    this.value = value
+    this.left = null
+    this.right = null
+  }
+}
+
+class GraphNode {
+  id: any
+  edges: GraphNode[]
+
+  constructor(id: any) {
+    this.id = id !== undefined ? id : null
+    this.edges = []
+  }
+}
+
+// Define your tree and graph classes
+class BinarySearchTree {
+  root: TreeNode | null
+
+  constructor(rootValue: any) {
+    this.root = new TreeNode(rootValue)
+  }
+
+  // Add methods for tree operations
+}
+
+class Graph {
+  nodes: { [key: string]: GraphNode }
+
+  constructor(initialNodes: string[] = [], initialEdges: [string, string][] = []) {
+    this.nodes = {}
 
     // Add initial nodes
     for (const id of initialNodes) {
-      this.addNode(id);
+      this.addNode(id)
     }
 
     // Add initial edges
     for (const [node1, node2] of initialEdges) {
-      this.addEdge(node1, node2);
+      this.addEdge(node1, node2)
     }
   }
 
-  
-    addNode(id: string) {
-      this.nodes[id] = new GraphNode(id);
-    }
-  
-    addEdge(node1: string, node2: string) {
-      this.nodes[node1].edges.push(this.nodes[node2]);
-      this.nodes[node2].edges.push(this.nodes[node1]);
-    }
-  
-    // Add methods for graph operations
+  addNode(id: string) {
+    this.nodes[id] = new GraphNode(id)
   }
-  
 
-  class MinHeap {
-    heap: number[];
+  addEdge(node1: string, node2: string) {
+    this.nodes[node1].edges.push(this.nodes[node2])
+    this.nodes[node2].edges.push(this.nodes[node1])
+  }
 
-    constructor(isMaxHeap = false) {
-        this.heap = [];
-    }
-
-    insert(value: number) {
-        this.heap.push(value);
-        this.bubbleUp();
-    }
-
-    extract(): number | undefined {
-        if (this.heap.length === 0) {
-            return undefined;
-        }
-
-        if (this.heap.length === 1) {
-            const top = this.heap.pop()!;
-            return top;
-        }
-
-        const top = this.heap[0];
-        this.heap[0] = this.heap.pop()!;
-        this.bubbleDown();
-
-        return top;
-    }
-
-    private bubbleUp() {
-        let index = this.heap.length - 1;
-        while (index > 0) {
-            const parentIndex = Math.floor((index - 1) / 2);
-            if (this.heap[index] >= this.heap[parentIndex]) {
-                break;
-            }
-
-            [this.heap[index], this.heap[parentIndex]] = [this.heap[parentIndex], this.heap[index]];
-            index = parentIndex;
-        }
-    }
-
-    private bubbleDown() {
-        let index = 0;
-        const length = this.heap.length;
-        while (true) {
-            const leftChildIdx = 2 * index + 1;
-            const rightChildIdx = 2 * index + 2;
-            let swap = null;
-
-            if (leftChildIdx < length && this.heap[leftChildIdx] < this.heap[index]) {
-                swap = leftChildIdx;
-            }
-
-            if (rightChildIdx < length && (swap === null || this.heap[rightChildIdx] < this.heap[leftChildIdx])) {
-                swap = rightChildIdx;
-            }
-
-            if (swap === null) break;
-
-            [this.heap[index], this.heap[swap]] = [this.heap[swap], this.heap[index]];
-            index = swap;
-        }
-    }
+  // Add methods for graph operations
 }
 
-class MaxHeap {
-  heap: number[];
+class MinHeap {
+  heap: number[]
 
-  constructor(isMaxHeap = true) {
-      this.heap = [];
+  constructor(isMaxHeap = false) {
+    this.heap = []
   }
 
   insert(value: number) {
-      this.heap.push(value);
-      this.bubbleUp();
+    this.heap.push(value)
+    this.bubbleUp()
   }
 
   extract(): number | undefined {
-      if (this.heap.length === 0) {
-          return undefined;
-      }
+    if (this.heap.length === 0) {
+      return undefined
+    }
 
-      if (this.heap.length === 1) {
-          const top = this.heap.pop()!;
-          return top;
-      }
+    if (this.heap.length === 1) {
+      const top = this.heap.pop()!
+      return top
+    }
 
-      const top = this.heap[0];
-      this.heap[0] = this.heap.pop()!;
-      this.bubbleDown();
+    const top = this.heap[0]
+    this.heap[0] = this.heap.pop()!
+    this.bubbleDown()
 
-      return top;
+    return top
   }
 
   private bubbleUp() {
-      let index = this.heap.length - 1;
-      while (index > 0) {
-          const parentIndex = Math.floor((index - 1) / 2);
-          if (this.heap[index] <= this.heap[parentIndex]) {
-              break;
-          }
-
-          [this.heap[index], this.heap[parentIndex]] = [this.heap[parentIndex], this.heap[index]];
-          index = parentIndex;
+    let index = this.heap.length - 1
+    while (index > 0) {
+      const parentIndex = Math.floor((index - 1) / 2)
+      if (this.heap[index] >= this.heap[parentIndex]) {
+        break
       }
+
+      ;[this.heap[index], this.heap[parentIndex]] = [this.heap[parentIndex], this.heap[index]]
+      index = parentIndex
+    }
   }
 
   private bubbleDown() {
-      let index = 0;
-      const length = this.heap.length;
-      while (true) {
-          const leftChildIdx = 2 * index + 1;
-          const rightChildIdx = 2 * index + 2;
-          let swap = null;
+    let index = 0
+    const length = this.heap.length
+    while (true) {
+      const leftChildIdx = 2 * index + 1
+      const rightChildIdx = 2 * index + 2
+      let swap = null
 
-          if (leftChildIdx < length && this.heap[leftChildIdx] > this.heap[index]) {
-              swap = leftChildIdx;
-          }
-
-          if (rightChildIdx < length && (swap === null || this.heap[rightChildIdx] > this.heap[leftChildIdx])) {
-              swap = rightChildIdx;
-          }
-
-          if (swap === null) break;
-
-          [this.heap[index], this.heap[swap]] = [this.heap[swap], this.heap[index]];
-          index = swap;
+      if (leftChildIdx < length && this.heap[leftChildIdx] < this.heap[index]) {
+        swap = leftChildIdx
       }
+
+      if (
+        rightChildIdx < length &&
+        (swap === null || this.heap[rightChildIdx] < this.heap[leftChildIdx])
+      ) {
+        swap = rightChildIdx
+      }
+
+      if (swap === null) break
+
+      ;[this.heap[index], this.heap[swap]] = [this.heap[swap], this.heap[index]]
+      index = swap
+    }
   }
 }
 
-  
-  // Organize your functions for creating and working with these data structures
-  class DataStructureFactory {
-    static createStack(stackOfPlates: any[]) {
-      return new Stack(stackOfPlates);
+class MaxHeap {
+  heap: number[]
+
+  constructor(isMaxHeap = true) {
+    this.heap = []
+  }
+
+  insert(value: number) {
+    this.heap.push(value)
+    this.bubbleUp()
+  }
+
+  extract(): number | undefined {
+    if (this.heap.length === 0) {
+      return undefined
     }
 
-    static createStackLinkedList(initialValue: any | null = null) {
-        return new StackLinkedList(initialValue);
-      }
-  
-      static createQueue(waitingLine: any[]) {
-        return new Queue(waitingLine);
-      }
-
-  
-    static createListNode(value: any) {
-      return new ListNode(value);
-    }
-  
-    static createDoubleLLNode(data: any) {
-      return new DoubleLLNode(data);
+    if (this.heap.length === 1) {
+      const top = this.heap.pop()!
+      return top
     }
 
-    static createDoublyCyclicLinkedList<T>(values: T[]) {
-        return new DoublyCyclicLinkedList(values);
-      }
-    
-    static createCyclicLinkedList<T>(values: T[]) {
-        return new CyclicLinkedList(values);
-      }
-  
-      static createBinarySearchTree(rootValue: any) {
-        return new BinarySearchTree(rootValue);
-      }
-    
-      static createGraph(initialNodes: string[] = [], initialEdges: [string, string][] = []) {
-        return new Graph(initialNodes, initialEdges);
+    const top = this.heap[0]
+    this.heap[0] = this.heap.pop()!
+    this.bubbleDown()
+
+    return top
+  }
+
+  private bubbleUp() {
+    let index = this.heap.length - 1
+    while (index > 0) {
+      const parentIndex = Math.floor((index - 1) / 2)
+      if (this.heap[index] <= this.heap[parentIndex]) {
+        break
       }
 
-      static createMaxHeap(): MaxHeap {
-        return new MaxHeap();
+      ;[this.heap[index], this.heap[parentIndex]] = [this.heap[parentIndex], this.heap[index]]
+      index = parentIndex
     }
-    
-    static createMinHeap(): MinHeap {
-        return new MinHeap();
+  }
+
+  private bubbleDown() {
+    let index = 0
+    const length = this.heap.length
+    while (true) {
+      const leftChildIdx = 2 * index + 1
+      const rightChildIdx = 2 * index + 2
+      let swap = null
+
+      if (leftChildIdx < length && this.heap[leftChildIdx] > this.heap[index]) {
+        swap = leftChildIdx
+      }
+
+      if (
+        rightChildIdx < length &&
+        (swap === null || this.heap[rightChildIdx] > this.heap[leftChildIdx])
+      ) {
+        swap = rightChildIdx
+      }
+
+      if (swap === null) break
+
+      ;[this.heap[index], this.heap[swap]] = [this.heap[swap], this.heap[index]]
+      index = swap
     }
-    
-    }
-  
-  // Export the relevant classes or functions
+  }
+}
 
-  export { DataStructureFactory };
+// Organize your functions for creating and working with these data structures
+class DataStructureFactory {
+  static createStack(stackOfPlates: any[]) {
+    return new Stack(stackOfPlates)
+  }
 
+  static createStackLinkedList(initialValue: any | null = null) {
+    return new StackLinkedList(initialValue)
+  }
 
-  export {
-    Stack,
-    StackLinkedList,
-    Queue,
-    BinarySearchTree,
-    Graph,
-    MaxHeap,
-    MinHeap
-  };
+  static createQueue(waitingLine: any[]) {
+    return new Queue(waitingLine)
+  }
 
- 
-  
+  static createListNode(value: any) {
+    return new ListNode(value)
+  }
 
-  export {
-    ListNode,
-    DoubleLLNode,
-    TreeNode,
-    GraphNode,
-  };
+  static createDoubleLLNode(data: any) {
+    return new DoubleLLNode(data)
+  }
 
+  static createDoublyCyclicLinkedList<T>(values: T[]) {
+    return new DoublyCyclicLinkedList(values)
+  }
 
+  static createCyclicLinkedList<T>(values: T[]) {
+    return new CyclicLinkedList(values)
+  }
+
+  static createBinarySearchTree(rootValue: any) {
+    return new BinarySearchTree(rootValue)
+  }
+
+  static createGraph(initialNodes: string[] = [], initialEdges: [string, string][] = []) {
+    return new Graph(initialNodes, initialEdges)
+  }
+
+  static createMaxHeap(): MaxHeap {
+    return new MaxHeap()
+  }
+
+  static createMinHeap(): MinHeap {
+    return new MinHeap()
+  }
+}
+
+// Export the relevant classes or functions
+
+export { DataStructureFactory }
+
+export { Stack, StackLinkedList, Queue, BinarySearchTree, Graph, MaxHeap, MinHeap }
+
+export { ListNode, DoubleLLNode, TreeNode, GraphNode }
 
 //   import * as DataStructures from './your-module';
 
@@ -484,7 +461,6 @@ class MaxHeap {
 // const queue = new DataStructures.Queue();
 // const set = new DataStructures.Set();
 // const factory = new DataStructures.DataStructureFactory();
-
 
 // // Import specific items
 // import { Stack, Queue, Set, DataStructureFactory } from './your-module';
@@ -495,8 +471,6 @@ class MaxHeap {
 // const set = new Set();
 // const factory = new DataStructureFactory();
 
-
-
 // const stackLinkedList = DataStructureFactory.createStackLinkedList();
 // stackLinkedList.pushMany([10, 20, 30]); // Push multiple items
 // console.log("Stack (LinkedList):", stackLinkedList);
@@ -504,5 +478,3 @@ class MaxHeap {
 // const queue = DataStructureFactory.createQueue();
 // queue.enqueueMany([10, 20, 30]); // Enqueue multiple items
 // console.log("Queue:", queue);
-
-

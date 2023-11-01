@@ -1,4 +1,3 @@
-
 /*
 Identify Built in Functions(Array, String, Math) & Data Structure or Sorting Algorithms that can be Leveraged or ruled out as you render down problem
 
@@ -105,61 +104,44 @@ Control flow(Break, Continue) based on defined steps & edge cases
 
 */
 
-
-
-
 function findBusiestPeriod(data) {
-    // your code goes here
-   let Vistor = 0;
-    //console.log(data.length)
-    //data[0].length
-    let move = 0
-    
-    for(let start = 0; start < data.length; ++start ){
-  
-      
-      
-      if(data[start][move + 1]){
-            ++move
-        
-        console.log(`num of vistors ${data[start][2]}` )
-        if(data[start][2] === 1){
-          
-          Vistor += data[start][1]
-                console.log(`vistors True ${Vistor}` )
-  
-        }
-        continue
-  
-          if(data[start][2] === 0){
-          
-          Vistor -= data[start][1]
-                console.log(`vistors False ${Vistor}` )
-  
-        }
-  
-        
-                //console.log(data[start][move])
-  
+  // your code goes here
+  let Vistor = 0
+  //console.log(data.length)
+  //data[0].length
+  let move = 0
+
+  for (let start = 0; start < data.length; ++start) {
+    if (data[start][move + 1]) {
+      ++move
+
+      console.log(`num of vistors ${data[start][2]}`)
+      if (data[start][2] === 1) {
+        Vistor += data[start][1]
+        console.log(`vistors True ${Vistor}`)
       }
-      
-      
+      continue
+
+      if (data[start][2] === 0) {
+        Vistor -= data[start][1]
+        console.log(`vistors False ${Vistor}`)
+      }
+
+      //console.log(data[start][move])
     }
-    
-    
   }
-  
-  
-  let data =     [ [1487799425, 14, 1],  // 14
-                   [1487799425, 4,  0], // 10
-                   [1487799425, 2,  0], // 8
-                   [1487800378, 10, 1], // 18
-                   [1487801478, 18, 0], // 0
-                   [1487801478, 18, 1], // 18
-                   [1487901013, 1,  0], 
-                   [1487901211, 7,  1],
-                   [1487901211, 7,  0] ]
-  
-   findBusiestPeriod(data)
-  
-  
+}
+
+let data = [
+  [1487799425, 14, 1], // 14
+  [1487799425, 4, 0], // 10
+  [1487799425, 2, 0], // 8
+  [1487800378, 10, 1], // 18
+  [1487801478, 18, 0], // 0
+  [1487801478, 18, 1], // 18
+  [1487901013, 1, 0],
+  [1487901211, 7, 1],
+  [1487901211, 7, 0],
+]
+
+findBusiestPeriod(data)

@@ -13,21 +13,17 @@
 //        2  9
 
 class TreeNode {
-
   constructor(value) {
-    this.value = value;
-    this.left = null;
-    this.right = null;
+    this.value = value
+    this.left = null
+    this.right = null
   }
-};
+}
 
-
-const find_sum_of_path_numbers = function(root) {
+const find_sum_of_path_numbers = function (root) {
   // TODO: Write your code here
-  return -1;
-};
-
-
+  return -1
+}
 
 var root = new TreeNode(1)
 root.left = new TreeNode(0)

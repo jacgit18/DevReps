@@ -14,20 +14,17 @@
 // 6  5   2  3
 
 class TreeNode {
-
   constructor(value) {
-    this.value = value;
-    this.left = null;
-    this.right = null;
+    this.value = value
+    this.left = null
+    this.right = null
   }
-};
+}
 
-
-const count_paths = function(root, S) {
+const count_paths = function (root, S) {
   // TODO: Write your code here
   return -1
-};
-
+}
 
 var root = new TreeNode(12)
 root.left = new TreeNode(7)

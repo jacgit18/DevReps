@@ -1,7 +1,3 @@
+import { Optimal } from "../_Optimal/index.js"
 
-import { Optimal } from '../_Optimal/index.js';
-
-
- 
-
-export { Optimal };
+export { Optimal }

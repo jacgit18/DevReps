@@ -75,48 +75,62 @@ Identify Control flow(Break, Continue) based on defined steps
 }      
 */
 
-
-
 function meetingPlanner(slotsA, slotsB, MeetingDuration) {
-    const result = [];
-    
-    let [PersonOneCurrentBlockIdx, PersonTwoCurrentBlockIdx] = [0, 0]
-    let [PersonOneTimeBlockLength, PersonTwoTimeBlockLength] = [slotsA.length, slotsB.length]
+  const result = []
 
-    
-    while(PersonOneCurrentBlockIdx < PersonOneTimeBlockLength && PersonTwoCurrentBlockIdx < PersonTwoTimeBlockLength) {
-        const [PersonOneStartTime, PersonOneEndTime] = slotsA[PersonOneCurrentBlockIdx];
-      const [PersonTwoStartTime, PersonTwoEndTime] = slotsB[PersonTwoCurrentBlockIdx];
-      let firstCompare =  (PersonOneStartTime >= PersonTwoStartTime && PersonOneStartTime <= PersonTwoEndTime);
-      let secondCompare = (PersonTwoStartTime >= PersonOneStartTime && PersonTwoStartTime <= PersonOneEndTime);
+  let [PersonOneCurrentBlockIdx, PersonTwoCurrentBlockIdx] = [0, 0]
+  let [PersonOneTimeBlockLength, PersonTwoTimeBlockLength] = [slotsA.length, slotsB.length]
 
-      // if first list's ith and second list's jth intervals intersect, add the intersection to the result
-      if( firstCompare || secondCompare ) {
-        result.push([Math.max(PersonOneStartTime, PersonTwoStartTime),Math.min(PersonOneEndTime, PersonTwoEndTime)]);
+  while (
+    PersonOneCurrentBlockIdx < PersonOneTimeBlockLength &&
+    PersonTwoCurrentBlockIdx < PersonTwoTimeBlockLength
+  ) {
+    const [PersonOneStartTime, PersonOneEndTime] = slotsA[PersonOneCurrentBlockIdx]
+    const [PersonTwoStartTime, PersonTwoEndTime] = slotsB[PersonTwoCurrentBlockIdx]
+    let firstCompare =
+      PersonOneStartTime >= PersonTwoStartTime && PersonOneStartTime <= PersonTwoEndTime
+    let secondCompare =
+      PersonTwoStartTime >= PersonOneStartTime && PersonTwoStartTime <= PersonOneEndTime
+
+    // if first list's ith and second list's jth intervals intersect, add the intersection to the result
+    if (firstCompare || secondCompare) {
+      result.push([
+        Math.max(PersonOneStartTime, PersonTwoStartTime),
+        Math.min(PersonOneEndTime, PersonTwoEndTime),
+      ])
     }
-// if first interval is ended before second interval, move to the next interval of the first list
-    if(PersonOneEndTime < PersonTwoEndTime) {
-        ++PersonOneCurrentBlockIdx;
-    } else {    // if the second interval is ended before the first interval, move to the next interval of the second list
-        ++PersonTwoCurrentBlockIdx;
+    // if first interval is ended before second interval, move to the next interval of the first list
+    if (PersonOneEndTime < PersonTwoEndTime) {
+      ++PersonOneCurrentBlockIdx
+    } else {
+      // if the second interval is ended before the first interval, move to the next interval of the second list
+      ++PersonTwoCurrentBlockIdx
     }
-
-    }
-
-
-    return result
-    
   }
 
+  return result
+}
 
-  let slotsA = [[10, 50], [60, 120], [140, 210]];
-  let slotsB = [[0, 15], [60, 70]]
-  let dur = 8
+let slotsA = [
+  [10, 50],
+  [60, 120],
+  [140, 210],
+]
+let slotsB = [
+  [0, 15],
+  [60, 70],
+]
+let dur = 8
 
-  let slotsC = [[10, 50], [60, 120], [140, 210]];
-  let slotsD = [[0, 15], [60, 70]]
-  let dur2 = 12
-  console.log(meetingPlanner(slotsA, slotsB, dur) )
-  console.log(meetingPlanner(slotsC, slotsD, dur2) )
-
-  
+let slotsC = [
+  [10, 50],
+  [60, 120],
+  [140, 210],
+]
+let slotsD = [
+  [0, 15],
+  [60, 70],
+]
+let dur2 = 12
+console.log(meetingPlanner(slotsA, slotsB, dur))
+console.log(meetingPlanner(slotsC, slotsD, dur2))

@@ -4,12 +4,6 @@
 
 // A set x is a subset of a set y if all elements of x are also elements of y.
 
+const findMaxForm = (strs, m, n) => {}
 
-
-
-
-const findMaxForm = (strs, m, n) =>{
-    
-};
-
-console.log(findMaxForm(["10","0001","111001","1","0"], 5, 3)); 
+console.log(findMaxForm(["10", "0001", "111001", "1", "0"], 5, 3))
