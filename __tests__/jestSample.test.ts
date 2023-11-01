@@ -5,34 +5,36 @@
   //   than inside the describe blocks. Once the describe blocks are complete, by default Jest
   //   runs all the tests serially in the order they were encountered in the collection phase,
   //   waiting for each to finish and be tidied up before moving on.
-describe('outer', () => {
-    console.log('describe outer-a');
 
-    describe('describe inner 1', () => {
-      console.log('describe inner 1');
-      test('test 1', () => {
-        console.log('test for describe inner 1');
-        expect(true).toEqual(true);
-      });
-    });
+  
+// describe('outer', () => {
+//     console.log('describe outer-a');
 
-    console.log('describe outer-b');
+//     describe('describe inner 1', () => {
+//       console.log('describe inner 1');
+//       test('test 1', () => {
+//         console.log('test for describe inner 1');
+//         expect(true).toEqual(true);
+//       });
+//     });
 
-    test('test 1', () => {
-      console.log('test for describe outer');
-      expect(true).toEqual(true);
-    });
+//     console.log('describe outer-b');
 
-    describe('describe inner 2', () => {
-      console.log('describe inner 2');
-      test('test for describe inner 2', () => {
-        console.log('test for describe inner 2');
-        expect(true).toEqual(true);
-      });
-    });
+//     test('test 1', () => {
+//       console.log('test for describe outer');
+//       expect(true).toEqual(true);
+//     });
 
-    console.log('describe outer-c');
-  });
+//     describe('describe inner 2', () => {
+//       console.log('describe inner 2');
+//       test('test for describe inner 2', () => {
+//         console.log('test for describe inner 2');
+//         expect(true).toEqual(true);
+//       });
+//     });
+
+//     console.log('describe outer-c');
+//   });
 
 
 //   If a test is failing, one of the first things to check should be

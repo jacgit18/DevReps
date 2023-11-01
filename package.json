@@ -21,7 +21,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-
+    "resolve-cwd": "^3.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.23.0",

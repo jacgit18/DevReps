@@ -266,83 +266,140 @@ class Stack {
   
     // Add methods for graph operations
   }
+  
 
-
-  class Heap {
+  class MinHeap {
     heap: number[];
-    isMaxHeap: boolean;
-  
-    constructor(isMaxHeap = true) {
-      this.heap = [];
-      this.isMaxHeap = isMaxHeap;
+
+    constructor(isMaxHeap = false) {
+        this.heap = [];
     }
-  
+
     insert(value: number) {
+        this.heap.push(value);
+        this.bubbleUp();
+    }
+
+    extract(): number | undefined {
+        if (this.heap.length === 0) {
+            return undefined;
+        }
+
+        if (this.heap.length === 1) {
+            const top = this.heap.pop()!;
+            return top;
+        }
+
+        const top = this.heap[0];
+        this.heap[0] = this.heap.pop()!;
+        this.bubbleDown();
+
+        return top;
+    }
+
+    private bubbleUp() {
+        let index = this.heap.length - 1;
+        while (index > 0) {
+            const parentIndex = Math.floor((index - 1) / 2);
+            if (this.heap[index] >= this.heap[parentIndex]) {
+                break;
+            }
+
+            [this.heap[index], this.heap[parentIndex]] = [this.heap[parentIndex], this.heap[index]];
+            index = parentIndex;
+        }
+    }
+
+    private bubbleDown() {
+        let index = 0;
+        const length = this.heap.length;
+        while (true) {
+            const leftChildIdx = 2 * index + 1;
+            const rightChildIdx = 2 * index + 2;
+            let swap = null;
+
+            if (leftChildIdx < length && this.heap[leftChildIdx] < this.heap[index]) {
+                swap = leftChildIdx;
+            }
+
+            if (rightChildIdx < length && (swap === null || this.heap[rightChildIdx] < this.heap[leftChildIdx])) {
+                swap = rightChildIdx;
+            }
+
+            if (swap === null) break;
+
+            [this.heap[index], this.heap[swap]] = [this.heap[swap], this.heap[index]];
+            index = swap;
+        }
+    }
+}
+
+class MaxHeap {
+  heap: number[];
+
+  constructor(isMaxHeap = true) {
+      this.heap = [];
+  }
+
+  insert(value: number) {
       this.heap.push(value);
       this.bubbleUp();
-    }
-  
-    extract(): number | undefined {
+  }
+
+  extract(): number | undefined {
       if (this.heap.length === 0) {
-        return undefined;
+          return undefined;
       }
-  
+
       if (this.heap.length === 1) {
-        return this.heap.pop();
+          const top = this.heap.pop()!;
+          return top;
       }
-  
+
       const top = this.heap[0];
       this.heap[0] = this.heap.pop()!;
       this.bubbleDown();
-  
+
       return top;
-    }
-  
-    private bubbleUp() {
+  }
+
+  private bubbleUp() {
       let index = this.heap.length - 1;
-      const compareFn = this.isMaxHeap ? (a: number, b: number) => a > b : (a: number, b: number) => a < b;
-      
       while (index > 0) {
-        const parentIndex = Math.floor((index - 1) / 2);
-        if (compareFn(this.heap[index], this.heap[parentIndex])) {
-          break;
-        }
-  
-        [this.heap[index], this.heap[parentIndex]] = [this.heap[parentIndex], this.heap[index]];
-        index = parentIndex;
+          const parentIndex = Math.floor((index - 1) / 2);
+          if (this.heap[index] <= this.heap[parentIndex]) {
+              break;
+          }
+
+          [this.heap[index], this.heap[parentIndex]] = [this.heap[parentIndex], this.heap[index]];
+          index = parentIndex;
       }
-    }
-  
-    private bubbleDown() {
+  }
+
+  private bubbleDown() {
       let index = 0;
       const length = this.heap.length;
-      const compareFn = this.isMaxHeap ? (a: number, b: number) => a < b : (a: number, b: number) => a > b;
-  
       while (true) {
-        const leftChildIdx = 2 * index + 1;
-        const rightChildIdx = 2 * index + 2;
-        let swap = null;
-        if (leftChildIdx < length) {
-          if (compareFn(this.heap[leftChildIdx], this.heap[index])) {
-            swap = leftChildIdx;
+          const leftChildIdx = 2 * index + 1;
+          const rightChildIdx = 2 * index + 2;
+          let swap = null;
+
+          if (leftChildIdx < length && this.heap[leftChildIdx] > this.heap[index]) {
+              swap = leftChildIdx;
           }
-        }
-        if (rightChildIdx < length) {
-          if (
-            (swap === null && compareFn(this.heap[rightChildIdx], this.heap[index])) ||
-            (swap !== null && compareFn(this.heap[rightChildIdx], this.heap[leftChildIdx]))
-          ) {
-            swap = rightChildIdx;
+
+          if (rightChildIdx < length && (swap === null || this.heap[rightChildIdx] > this.heap[leftChildIdx])) {
+              swap = rightChildIdx;
           }
-        }
-        if (swap === null) break;
-  
-        [this.heap[index], this.heap[swap]] = [this.heap[swap], this.heap[index]];
-        index = swap;
+
+          if (swap === null) break;
+
+          [this.heap[index], this.heap[swap]] = [this.heap[swap], this.heap[index]];
+          index = swap;
       }
-    }
   }
-  
+}
+
   
   // Organize your functions for creating and working with these data structures
   class DataStructureFactory {
@@ -383,13 +440,13 @@ class Stack {
         return new Graph(initialNodes, initialEdges);
       }
 
-      static createMaxHeap(): Heap {
-        return new Heap(true);
-      }
+      static createMaxHeap(): MaxHeap {
+        return new MaxHeap();
+    }
     
-      static createMinHeap(): Heap {
-        return new Heap(false);
-      }
+    static createMinHeap(): MinHeap {
+        return new MinHeap();
+    }
     
     }
   
@@ -404,12 +461,11 @@ class Stack {
     Queue,
     BinarySearchTree,
     Graph,
-    Heap as MaxHeap
+    MaxHeap,
+    MinHeap
   };
 
-  export {  
-    Heap as MinHeap
-  }
+ 
   
 
   export {
