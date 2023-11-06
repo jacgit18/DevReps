@@ -1,5 +1,5 @@
-import {lc209Alt} from "../../src/_Optimal/lc209Alt";
 // import { toBe } from '@jest/globals';
+import { lc209Alt } from "../../../../src/routers/OptimalSlidingWindSolution";
 
 describe('smallest_subarray_with_given_sum', () => {
   it('should return the length of the smallest subarray with a sum >= target', () => {
