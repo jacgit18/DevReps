@@ -1,6 +1,6 @@
 // import { toBe } from '@jest/globals';
 import * as Benchmark from 'benchmark';
-import { OptimalSlidingWindSolution } from "../../../../src/routers/OptimalSlidingWindSolution";
+import { OptimalSlidingWindSolution } from "../../../../src/routers/OptimalSolution";
 
 describe('smallest_subarray_with_given_sum', () => {
   let lc209: (s: number, arr: number[]) => number;
@@ -14,7 +14,7 @@ describe('smallest_subarray_with_given_sum', () => {
   it('should compare the speed of lc209 and lc209Alt', (done) => {
     // Define a benchmark suite
     const suite = new Benchmark.Suite();
-  // Dont need to bench mark all the time
+  // Dont need to bench mark all the time only doing it for files with multiple approaches
     suite
       .add('lc209', () => {
         lc209(7, [2, 1, 5, 2, 3, 1]);
@@ -22,12 +22,12 @@ describe('smallest_subarray_with_given_sum', () => {
       .add('lc209Alt', () => {
         lc209Alt(7, [2, 1, 5, 2, 3, 1]);
       })
-      .add('lc209_LargeArray', () => {
-        lc209(10, Array.from({ length: 5 }, () => Math.floor(Math.random())));
-      })
-      .add('lc209Alt_LargeArray', () => {
-        lc209Alt(10, Array.from({ length: 5 }, () => Math.floor(Math.random() * 10)));
-      })
+      // .add('lc209_LargeArray', () => {
+      //   lc209(10, Array.from({ length: 5 }, () => Math.floor(Math.random())));
+      // })
+      // .add('lc209Alt_LargeArray', () => {
+      //   lc209Alt(10, Array.from({ length: 5 }, () => Math.floor(Math.random() * 10)));
+      // })
       .on('cycle', (event: Benchmark.Event) => {
         console.log(String(event.target)); // Print benchmark results
       })

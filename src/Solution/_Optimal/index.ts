@@ -1,5 +1,5 @@
 import { smallestSubarrayWithGivenSum, smallest_subarray_with_given_sumAlt } from "./SlidingWindow/lc209";
-import { characterReplacementTwoPointer, } from "./TwoPointers/lc424";
+import { characterReplacementSlidingWindow, characterReplacementTwoPointer } from "./TwoPointers/lc424";
 // import { name,  } from "./Modified Binary Search/";
 // import { name,  } from "./";
 // import { name,  } from "./";
@@ -18,7 +18,7 @@ const OptimalSlidingWindSolution = {
 
 const OptimalTwoPointerSolution = {
     lc424:characterReplacementTwoPointer ,
-    // lc424alt: 
+    lc424alt: characterReplacementSlidingWindow
   };
 
 
