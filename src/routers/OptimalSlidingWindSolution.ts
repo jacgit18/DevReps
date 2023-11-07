@@ -1,2 +1,2 @@
-export { lc209Alt } from "../Solution/_Optimal/index";
+export { OptimalSlidingWindSolution } from "../Solution/_Optimal/index";
 

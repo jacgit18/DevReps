@@ -9,6 +9,7 @@
     "moduleResolution": "node",      // Module resolution strategy (Node.js style)
     "allowSyntheticDefaultImports": true, // Allow default imports for CommonJS modules
   },
+  "types": ["@types/jest", "benchmark"],
   "include": [
     "src/**/*.ts"                    // The path to your TypeScript source files
   ],
