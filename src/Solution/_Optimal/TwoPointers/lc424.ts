@@ -24,10 +24,45 @@ function characterReplacementTwoPointer(s: string, k: number): number {
 }
 
 
+const characterReplacementSlidingWindow = (s: string, k: number): number => {
+  let [windowStart, windowEnd] = [0, 0];
+  let [currentLetter, nextLetter] = [s[windowStart], s[windowStart + 1]];
+  let maxRepeatStringLength = 0;
+  let repeatString = "";
+
+  if (s.length === 0 || k < 1) return 0;
+  let count = 0;
+  while (windowStart < s.length) {
+    if (k === 0) {
+      return maxRepeatStringLength;
+    }
+
+    if (currentLetter === nextLetter) {
+      repeatString += currentLetter;
+      maxRepeatStringLength = Math.max(maxRepeatStringLength, repeatString.length);
+      windowStart++;
+    }
+
+    if (currentLetter !== nextLetter) {
+      currentLetter = nextLetter;
+      k--;
+      windowEnd++;
+    }
+  }
+  return maxRepeatStringLength
+};
 
 
 
 
-export { characterReplacementTwoPointer };
 
-console.log(characterReplacementTwoPointer("AABABBA", 1)); // Output: 4
+
+
+export { characterReplacementSlidingWindow, characterReplacementTwoPointer };
+
+// console.log(length_of_longest_substring("ABAB", 2)) // 4
+// console.log(length_of_longest_substring("AABABBA", 1)) // 4
+// console.log(length_of_longest_substring("ABCDE", 1)) // 2
+// console.log(length_of_longest_substring("AAAA", 2)) // 4
+// console.log(length_of_longest_substring("AAAB", 0)) // 3
+// console.log(length_of_longest_substring("AABA", 0)) // 2
