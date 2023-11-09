@@ -12,13 +12,6 @@ import { OptimalTwoPointerSolution } from "../../../../src/routers/OptimalSoluti
     });
   
     it('should run test cases', () => {
-      // const result1 = lc424Attempt("", 2);
-      // Call lc209Alt here if needed
-  
-      // Add assertions to compare the results of lc209 and lc209Alt
-      // expect(result1).toBe(2);
-      // Add more assertions as needed
-  
       // Additional test cases using the given parameters
       const testCases = [
         { input: "ABAB", k: 2, expected: 4 },
