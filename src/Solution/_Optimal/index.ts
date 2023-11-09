@@ -34,8 +34,13 @@ const OptimalTwoPointerSolution = {
   };
 
 
+  export const combinedSolutionExports = {
+    OptimalModifiedBinarySearchSolution,
+    OptimalNameSolution,
+    OptimalSlidingWindSolution,
+    OptimalTwoPointerSolution
+};
 
 
 
-  export { OptimalModifiedBinarySearchSolution, OptimalNameSolution, OptimalSlidingWindSolution, OptimalTwoPointerSolution };
 

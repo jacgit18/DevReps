@@ -1,3 +1,3 @@
-export { OptimalSlidingWindSolution, OptimalTwoPointerSolution } from "../Solution/_Optimal/index";
+export { combinedSolutionExports } from "../Solution/_Optimal/index";
 
 

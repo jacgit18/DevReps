@@ -1,6 +1,4 @@
 import { smallestSubarrayWithGivenSum } from "./SlidingWindow/lc209";
-
-
 import { characterReplacementTwoPointer } from "./TwoPointers/lc424";
 
 
@@ -20,9 +18,12 @@ const OptimalTwoPointerAttempt = {
 
 
 
+  export const combinedAttemptExports = {
+    OptimalSlidingWindAttempt,
+    OptimalTwoPointerAttempt,
+};
 
 
-  export { OptimalSlidingWindAttempt, OptimalTwoPointerAttempt };
 
 
 

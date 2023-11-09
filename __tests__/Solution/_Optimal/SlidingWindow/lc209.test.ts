@@ -1,7 +1,7 @@
 // import { toBe } from '@jest/globals';
 import * as Benchmark from 'benchmark';
-import { OptimalSlidingWindAttempt } from "../../../../src/routers/OptimalAttempt";
-import { OptimalSlidingWindSolution } from "../../../../src/routers/OptimalSolution";
+import { combinedAttemptExports } from "../../../../src/routers/OptimalAttempt";
+import { combinedSolutionExports } from "../../../../src/routers/OptimalSolution";
 
 
 describe('smallest_subarray_with_given_sum', () => {
@@ -9,8 +9,8 @@ describe('smallest_subarray_with_given_sum', () => {
   let lc209Alt: (s: number, arr: number[]) => number;
 
   beforeEach(() => {
-    lc209 = OptimalSlidingWindSolution.lc209;
-    lc209Alt = OptimalSlidingWindSolution.lc209alt;
+    lc209 = combinedSolutionExports.OptimalSlidingWindSolution.lc209;
+    lc209Alt = combinedSolutionExports.OptimalSlidingWindSolution.lc209alt;
   });
 
   it('should compare the speed of lc209 and lc209Alt', (done) => {
@@ -72,7 +72,7 @@ describe('smallest_subarray_with_given_sum Attempt', () => {
   let lc209Attempt: (s: number, arr: number[]) => number;
 
   beforeEach(() => {
-    lc209Attempt = OptimalSlidingWindAttempt.lc209;
+    lc209Attempt = combinedAttemptExports.OptimalSlidingWindAttempt.lc209;
   });
 
   it('should compare the output 2', () => {

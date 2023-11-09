@@ -1,5 +1,5 @@
-import { OptimalTwoPointerAttempt } from "../../../../src/routers/OptimalAttempt";
-import { OptimalTwoPointerSolution } from "../../../../src/routers/OptimalSolution";
+import { combinedAttemptExports } from "../../../../src/routers/OptimalAttempt";
+import { combinedSolutionExports } from "../../../../src/routers/OptimalSolution";
 
   
   describe('smallest_subarray_with_given_sum', () => {
@@ -7,8 +7,8 @@ import { OptimalTwoPointerSolution } from "../../../../src/routers/OptimalSoluti
     let lc424Attempt: (s: string, arr: number) => number;
   
     beforeEach(() => {
-      lc424Solution = OptimalTwoPointerSolution.lc424;
-      lc424Attempt = OptimalTwoPointerAttempt.lc424;
+      lc424Solution = combinedSolutionExports.OptimalTwoPointerSolution.lc424;
+      lc424Attempt = combinedAttemptExports.OptimalTwoPointerAttempt.lc424;
     });
   
     it('should run test cases', () => {
