@@ -45,42 +45,53 @@ describe('smallest_subarray_with_given_sum', () => {
 
 
 
-// describe('smallest_subarray_with_given_sum', () => {
-//   let lc209: (s: number, arr: number[]) => number;
-//   let lc209Alt: (s: number, arr: number[]) => number;
-
-//   beforeEach(() => {
-//     lc209 = OptimalSlidingWindSolution.lc209;
-//     lc209Alt = OptimalSlidingWindSolution.lc209alt;
-//   });
-
-//   it('should compare the speed of lc209 and lc209Alt', () => {
-//     // Benchmarking lc209
-//     console.time('lc209');
-//     lc209(7, [2, 1, 5, 2, 3, 1]);
-//     console.timeEnd('lc209');
-
-//     // Benchmarking lc209Alt
-//     console.time('lc209Alt');
-//     lc209Alt(7, [2, 1, 5, 2, 3, 1]);
-//     console.timeEnd('lc209Alt');
-//   });
-// });
-
-
 describe('smallest_subarray_with_given_sum Attempt', () => {
   let lc209Attempt: (s: number, arr: number[]) => number;
+  let lc209: (s: number, arr: number[]) => number;
+  let lc209Alt: (s: number, arr: number[]) => number;
+
 
   beforeEach(() => {
     lc209Attempt = combinedAttemptExports.OptimalSlidingWindAttempt.lc209;
+    lc209 = combinedSolutionExports.OptimalSlidingWindSolution.lc209;
+    lc209Alt = combinedSolutionExports.OptimalSlidingWindSolution.lc209alt;
+
+    // Update cases
+    const testCases = [
+      { input: "ABAB", k: 2, expected: 4 },
+      { input: "AABABBA", k: 1, expected: 4 },
+      { input: "ABCDE", k: 1, expected: 2 },
+      { input: "AAAA", k: 2, expected: 4 },
+      { input: "AAAB", k: 0, expected: 3 },
+      { input: "AABA", k: 0, expected: 2 },
+    ];
+
   });
 
-  it('should compare the output 2', () => {
+  it('should output first param passed for empty attempt', () => {
+
+
     const result1 = lc209Attempt(7, [2, 1, 5, 2, 3, 1]);
-    // Call lc209Alt here if needed
+    console.time('lc209 Attempt');
+    expect(result1).toBe(7);
+    console.timeEnd('lc209 Attempt');
 
-    // Add assertions to compare the results of lc209 and lc209Alt
-    expect(result1).toBe(7); // passing first element since just returning but solution to be 2
-    // Add more assertions as needed
   });
+
+  it('Init Approach should output 2', () => {
+    const result12 = lc209(7, [2, 1, 5, 2, 3, 1]);
+    console.time('lc209');
+    expect(result12).toBe(2);
+    console.timeEnd('lc209');
+
+  });
+
+  it('Alt Approach should output 2', () => {
+    const result123 = lc209Alt(7, [2, 1, 5, 2, 3, 1]);
+    console.time('lc209Alt');
+    expect(result123).toBe(2); 
+    console.timeEnd('lc209Alt');
+
+  });
+
 });
