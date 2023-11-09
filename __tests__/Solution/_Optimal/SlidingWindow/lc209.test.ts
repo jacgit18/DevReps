@@ -29,6 +29,10 @@ const generateTestCases = (
 const runTestCases = () => {
   const testCases = [
     { input: 7, arr: [2, 1, 5, 2, 3, 1], expect: 2 },
+    { input: 7, arr: [2, 3, 1, 2, 4, 3], expect: 2 },
+    { input: 4, arr: [1, 4, 4], expect: 1 },
+    { input: 11, arr: [1,1,1,1,1,1,1,1], expect: 0 },
+
     
     // Add more test cases here
   ];
