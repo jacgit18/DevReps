@@ -2,10 +2,10 @@
 import Benchmark from 'benchmark';
 
 class BenchmarkHelper {
-  static benchmarkFunction(func: (s: number, arr: number[]) => number, input: number[]) {
+  static benchmarkFunction(func: (...args: any[]) => any, ...input: any[]) {
     const suite = new Benchmark.Suite();
     suite.add('Function', () => {
-      func(7, input);
+      func(...input);
     });
     suite.on('cycle', (event: Benchmark.Event) => {
       console.log(String(event.target));
