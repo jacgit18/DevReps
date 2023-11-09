@@ -1,46 +1,42 @@
 import { combinedAttemptExports } from "../../../../src/routers/OptimalAttempt";
 import { combinedSolutionExports } from "../../../../src/routers/OptimalSolution";
 
-  
-  describe('smallest_subarray_with_given_sum', () => {
-    let lc424Solution: (s: string, num: number) => number;
-    let lc424Attempt: (s: string, arr: number) => number;
+type TestFunction = (s: string, num: number) => number;
 
-    let testCases: { input: string, k: number, expected: number }[];
-  
-    beforeEach(() => {
-      lc424Solution = combinedSolutionExports.OptimalTwoPointerSolution.lc424;
-      lc424Attempt = combinedAttemptExports.OptimalTwoPointerAttempt.lc424;
+const generateTestCases = (
+  lcFunction: TestFunction,
+  testCases: { input: string, k: number, expected: number }[],
+  testName: string
+) => {
+  describe(testName, () => {
+    testCases.forEach((testCase, index) => {
+      const { input, k, expected } = testCase;
 
-       testCases = [
-        { input: "ABAB", k: 2, expected: 4 },
-        { input: "AABABBA", k: 1, expected: 4 },
-        { input: "ABCDE", k: 1, expected: 2 },
-        { input: "AAAA", k: 2, expected: 4 },
-        { input: "AAAB", k: 0, expected: 3 },
-        { input: "AABA", k: 0, expected: 2 },
-      ];
-    });
-  
-    it('should run Attempt test cases', () => {
-      testCases.forEach((testCase) => {
-        const { input, k, expected } = testCase;
-        const AttemptResult = lc424Attempt(input, k);
-        expect(AttemptResult).toBe(k);// Passed param instead of expected value 
-      });
-    });
-
-    it('should run Solution test cases', () => {
-      testCases.forEach((testCase) => {
-        const { input, k, expected } = testCase;
-        const SolutionResult = lc424Solution(input, k);
-        console.time('lc424');
-        expect(SolutionResult).toBe(expected);
-        console.timeEnd('lc424');
+      it(`Test Case ${index + 1}`, () => {
+        const result = lcFunction(input, k);
+        console.time("lc424")
+        expect(result).toBe(expected); // should fail by default since returning only param
+        console.timeEnd("lc424")
 
       });
     });
-
-
   });
-  
+};
+
+const runTestCases = () => {
+  const testCases: { input: string, k: number, expected: number }[] = [
+    { input: "ABAB", k: 2, expected: 4 },
+    { input: "AABABBA", k: 1, expected: 4 },
+    { input: "ABCDE", k: 1, expected: 2 },
+    { input: "AAAA", k: 2, expected: 4 },
+    { input: "AAAB", k: 0, expected: 3 },
+    { input: "AABA", k: 0, expected: 2 },
+  ];
+
+  // generateTestCases(combinedAttemptExports.OptimalTwoPointerAttempt.lc424, testCases, 'Attempt');
+  generateTestCases(combinedSolutionExports.OptimalTwoPointerSolution.lc424, testCases, 'Solution');
+  // You can also generate test cases for combinedAttemptExports if needed
+};
+
+runTestCases();
+
