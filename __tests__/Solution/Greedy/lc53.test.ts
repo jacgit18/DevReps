@@ -1,5 +1,5 @@
-import { combinedAttemptExports } from "../../../../src/routers/OptimalAttempt";
-import { combinedSolutionExports } from "../../../../src/routers/OptimalSolution";
+import { combinedAttemptExports } from "../../../src/routers/OptimalAttempt";
+import { combinedSolutionExports } from "../../../src/routers/OptimalSolution";
 
 
 type TestFunction = (k: number, arr: number[]) => number;
