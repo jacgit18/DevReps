@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "npm run clean && npm run compile-ts-watch-mode & npm run start",
     "cbs": "npm run build && npm run start",
-    "start": "node ./build/src/app.ts",
+    "start": "node ./build/src/app.js",
     "clean": "rm -rf build",
     "build": "npm run clean && npm run compile-ts",
     "compile-ts": "tsc --project ./",
@@ -40,6 +40,7 @@
     "jest": "^29.7.0",
     "jest-cli": "^29.7.0",
     "jest-extended": "^4.0.2",
+    "node": "^21.1.0",
     "nodemon": "^3.0.1",
     "prettier": "^3.0.3",
     "resolve-cwd": "^3.0.0",

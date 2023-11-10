@@ -1,80 +1,85 @@
 class TrieNode {
+  value: any;
+  isEnd: boolean;
+  arr: (TrieNode | null)[];
+
   constructor() {
-    this.value = undefined
-    this.isEnd = false
-    this.arr = new Array(26).fill(null)
+    this.value = undefined;
+    this.isEnd = false;
+    this.arr = new Array(26).fill(null);
   }
 }
 
 class TrieTree {
+  root: TrieNode;
+
   constructor() {
-    this.root = new TrieNode()
+    this.root = new TrieNode();
   }
 
-  insert(word, value) {
-    let node = this.root
+  insert(word: string, value: any): void {
+    let node = this.root;
     for (let i = 0; i < word.length; i++) {
-      const index = parseInt(word[i], 36) - 10
+      const index = parseInt(word[i], 36) - 10;
 
       if (node.arr[index] === null) {
-        const temp = new TrieNode()
-        node.arr[index] = temp
-        node = temp
+        const temp = new TrieNode();
+        node.arr[index] = temp;
+        node = temp;
       } else {
-        node = node.arr[index]
+        node = node.arr[index] as TrieNode;
       }
     }
-    node.isEnd = true
-    node.value = value
+    node.isEnd = true;
+    node.value = value;
   }
 
-  getRoot() {
-    return this.root
+  getRoot(): TrieNode {
+    return this.root;
   }
 
-  startsWith(prefix) {
-    const node = this.searchNode(prefix)
-    if (node == null) {
-      return false
+  startsWith(prefix: string): void {
+    const node = this.searchNode(prefix);
+    if (node === null) {
+      console.log(false);
     } else {
-      this.printStrings(node, "")
-      return true
+      this.printStrings(node, "");
+      console.log(true);
     }
   }
 
-  printStrings(node, prefix) {
-    if (node.isEnd) console.log(prefix)
+  printStrings(node: TrieNode, prefix: string): void {
+    if (node.isEnd) console.log(prefix);
     for (let i = 0; i < node.arr.length; i++) {
       if (node.arr[i] !== null) {
-        const character = String.fromCharCode("a".charCodeAt() + i)
-        this.printStrings(node.arr[i], prefix + "" + character)
+        const character = String.fromCharCode("a".charCodeAt(0) + i);
+        this.printStrings(node.arr[i] as TrieNode, prefix + character);
       }
     }
   }
 
-  searchNode(str) {
-    let node = this.root
+  searchNode(str: string): TrieNode | null {
+    let node = this.root;
     for (let i = 0; i < str.length; i++) {
-      const index = parseInt(str[i], 36) - 10
+      const index = parseInt(str[i], 36) - 10;
       if (node.arr[index] !== null) {
-        node = node.arr[index]
+        node = node.arr[index] as TrieNode;
       } else {
-        return null
+        return null;
       }
     }
 
-    if (node === this.root) return null
+    if (node === this.root) return null;
 
-    return node
+    return node;
   }
 }
 
-const trieTree = new TrieTree()
-trieTree.insert("asdfasdf", 5)
-trieTree.insert("cdfasdfas", 23)
-trieTree.insert("cdfzsvljsdf", 42)
+const trieTree = new TrieTree();
+trieTree.insert("asdfasdf", 5);
+trieTree.insert("cdfasdfas", 23);
+trieTree.insert("cdfzsvljsdf", 42);
 
-let answer = trieTree.searchNode("asdfasdf")
-console.log(answer.value) //5
-answer = trieTree.startsWith("cdf")
-console.log(answer)
+let answer = trieTree.searchNode("asdfasdf");
+console.log(answer?.value); // 5
+trieTree.startsWith("cdf");
