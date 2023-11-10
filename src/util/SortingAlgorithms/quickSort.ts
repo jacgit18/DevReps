@@ -1,6 +1,6 @@
 const numbersToSort: number[] = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0]
 
-function quickSort(array: number[], left: number, right: number): number[] {
+export function quickSort(array: number[], left: number, right: number): number[] {
   const len: number = array.length
   let pivot: number
   let partitionIndex: number

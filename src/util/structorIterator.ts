@@ -1,4 +1,4 @@
-function logAllValues(data: any, depth: number = 0) {
+export function logAllValues(data: any, depth: number = 0) {
     const indent = "  ".repeat(depth); // Indentation for nested structures
   
     if (Array.isArray(data)) {

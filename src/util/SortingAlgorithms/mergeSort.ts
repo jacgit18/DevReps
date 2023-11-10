@@ -1,6 +1,6 @@
 const numbersortMerge: number[] = [99, 44, 6, 2, 1, 5, 63, 87, 283]
 
-function mergeSort(array: number[]): number[] {
+export function mergeSort(array: number[]): number[] {
   if (array.length === 1) {
     return array
   }
