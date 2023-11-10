@@ -1,3 +1,4 @@
+// Sliding Window
 import { smallestSubarrayWithGivenSum, smallest_subarray_with_given_sumAlt } from "./SlidingWindow/lc209";
 import { longest_substring_with_k_distinct } from "./SlidingWindow/lc340";
 import { max_subarray_size_k } from "./SlidingWindow/lc53"
@@ -5,6 +6,8 @@ import { fruits_into_baskets } from "./SlidingWindow/lc904";
 import { minWindow } from "./SlidingWindow/lc76"
 import { lengthOfLongestSubstring } from "./SlidingWindow/lc3";
 
+
+// Two Pointer 
 import { characterReplacementTwoPointer } from "./TwoPointers/lc424";
 import { palVaidaor } from "./TwoPointers/lc125";
 // import { name,  } from "./Modified Binary Search/";
