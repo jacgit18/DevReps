@@ -3,6 +3,7 @@ import { longest_substring_with_k_distinct } from "./SlidingWindow/lc340";
 import { max_subarray_size_k } from "./SlidingWindow/lc53"
 import { fruits_into_baskets } from "./SlidingWindow/lc904";
 import { minWindow } from "./SlidingWindow/lc76"
+import { lengthOfLongestSubstring } from "./SlidingWindow/lc3";
 
 import { characterReplacementTwoPointer } from "./TwoPointers/lc424";
 import { palVaidaor } from "./TwoPointers/lc125";
@@ -13,6 +14,7 @@ import { palVaidaor } from "./TwoPointers/lc125";
 
 
 const OptimalSlidingWindSolution = {
+    lc3:lengthOfLongestSubstring,
     lc53: max_subarray_size_k,
     lc76: minWindow,
     lc209: smallestSubarrayWithGivenSum,
