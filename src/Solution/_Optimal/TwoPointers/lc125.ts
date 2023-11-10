@@ -1,6 +1,6 @@
-let Sentence = "A man, a plan, a canal: Panama"
+let Sentence: String = "A man, a plan, a canal: Panama"
 
-const palVaidaor = (sen) => {
+export const palVaidaor = (sen: String) => {
   // use a reguar expression remove anything that is not a word
   sen = sen.replace(/\W/g, "").toLowerCase()
   for (let i = 0; i < sen.length / 2; i++) {
@@ -11,8 +11,4 @@ const palVaidaor = (sen) => {
   return true
 }
 
-console.log(palVaidaor(Sentence))
 
-try {
-  module.exports = palVaidaor
-} catch (error) {}

@@ -2,6 +2,7 @@ import { smallestSubarrayWithGivenSum, smallest_subarray_with_given_sumAlt } fro
 
 
 import { characterReplacementTwoPointer } from "./TwoPointers/lc424";
+import { palVaidaor } from "./TwoPointers/lc125";
 // import { name,  } from "./Modified Binary Search/";
 // import { name,  } from "./";
 // import { name,  } from "./";
@@ -20,6 +21,7 @@ const OptimalSlidingWindSolution = {
 
 const OptimalTwoPointerSolution = {
     lc424:characterReplacementTwoPointer ,
+    lc125: palVaidaor,
   };
 
 
