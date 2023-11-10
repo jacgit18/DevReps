@@ -6,6 +6,9 @@ build
 # Sqlite databases
 *.sqlite3
 
+
+coverage
+
 # misc
 .DS_Store
 .env
