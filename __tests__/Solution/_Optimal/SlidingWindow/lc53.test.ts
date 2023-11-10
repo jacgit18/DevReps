@@ -1,31 +1,58 @@
-// const MaximumSumOfSubarray = require('../../_Grokking_Algo & Leetcode/Sliding Window/Javascript/lc53');
+import { combinedAttemptExports } from "../../../../src/routers/OptimalAttempt";
+import { combinedSolutionExports } from "../../../../src/routers/OptimalSolution";
 
-//   describe('Test suite maximum sum of any contiguous subarray of size ‘k’ ', () => {
-  
-//     let maximumSumOfSubarray; // good practice tp avoid change in state
-//     beforeEach(() =>{ 
-//       maximumSumOfSubarray = MaximumSumOfSubarray;
-//     });
 
-//     test('Sliding Window', () => {
-//       const edgecase1 = maximumSumOfSubarray(3, [2, 1, 5, 1, 3, 2]);
-      
-//       console.time("answer time");
-//       expect(edgecase1).toBe(9);
-//   // console.timeLog("answer time"); // time in middle
-//       // expect(edgecase3).toEqual(3);
-//       // expect(edgecase4).toEqual(0);
-//       console.timeEnd("answer time");
+type TestFunction = (k: number, arr: number[]) => number;
 
-//     });
-  
-//     test('Sliding Window Test Case 2', () => {
-//       const edgecase2 = maximumSumOfSubarray(2, [2, 3, 4, 1, 5]);
-      
-//       expect(edgecase2).toBe(7);
-    
+const generateTestCases = (
+  maxSubarrayFunction: TestFunction,
+  k: number,
+  arr: number[],
+  testName: string,
+  expected: number
+) => {
+  describe(`max_subarray_size_k ${testName}`, () => {
+    let maxSubFn: TestFunction;
 
-//     });
+    beforeEach(() => {
+      maxSubFn = maxSubarrayFunction;
+    });
 
-//   });
- 
+    it(`should return ${expected} for k = ${k} and arr = [${arr}]`, () => {
+      const result = maxSubFn(k, arr);
+      console.time(`maxSubarray${testName}`);
+      expect(result).toBe(expected);
+      console.timeEnd(`maxSubarray${testName}`);
+    });
+  });
+};
+
+const runTestCases = () => {
+  const testCases = [
+    { k: 3, arr: [2, 3, 4, 1, 5], expect: 10 },
+
+    // Add more test cases here
+  ];
+
+  testCases.forEach((testCase, index) => {
+//     generateTestCases(
+//         combinedAttemptExports,
+//       testCase.k,
+//       testCase.arr,
+//       `Test Case ${index + 1}`,
+//       testCase.expect
+//     );
+
+    generateTestCases(
+      combinedSolutionExports.OptimalSlidingWindSolution.lc53,
+      testCase.k,
+      testCase.arr,
+      `Test Case ${index + 1}`,
+      testCase.expect
+    );
+  });
+
+
+};
+
+runTestCases();

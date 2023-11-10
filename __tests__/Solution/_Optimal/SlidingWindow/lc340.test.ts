@@ -1,36 +1,59 @@
-// const longest_substring_with_k_distinct = require('../../_Grokking_Algo & Leetcode/Sliding Window/Javascript/lc340');
+import { combinedAttemptExports } from "../../../../src/routers/OptimalAttempt";
+import { combinedSolutionExports } from "../../../../src/routers/OptimalSolution";
 
-//   describe('Test suite longest substring with k distinct characters ', () => {
-  
-//     let longestSubstringDistinct; // good practice tp avoid change in state
-//     beforeEach(() =>{ 
-//       longestSubstringDistinct = longest_substring_with_k_distinct;
-//     });
+type TestFunction = (str: string, k: number) => number;
 
-//     test('Sliding Window', () => {
-//       const edgecase1 = longestSubstringDistinct("araaci",2);
-     
-//       console.time("answer time");
+const generateTestCases = (
+  substringFunction: TestFunction,
+  str: string,
+  k: number,
+  testName: string,
+  expected: number
+) => {
+  describe(`longest_substring_with_k_distinct ${testName}`, () => {
+    let subFn: TestFunction;
 
-//       expect(edgecase1).toBe(4);
-//       console.timeEnd("answer time");
+    beforeEach(() => {
+      subFn = substringFunction;
+    });
 
-//     });
-  
-//     test('Sliding Window', () => {
-//       const edgecase2 = longestSubstringDistinct("araaci",1);
-     
+    it(`should return ${expected} for input: "${str}" and k = ${k}`, () => {
+      const result = subFn(str, k);
+      console.time(`substring${testName}`);
+      expect(result).toBe(expected);
+      console.timeEnd(`substring${testName}`);
+    });
+  });
+};
 
-//       expect(edgecase2).toBe(2);
+const runTestCases = () => {
+  const testCases = [
+    { str: "araaci", k: 2, expect: 4 },
+    { str: "araaci", k: 2, expect: 4 },
+    { str: "araaci", k: 1, expect: 2 },
+    { str: "cbbebi", k: 3, expect: 5 },
+    // Add more test cases here
+  ];
 
-//     });
+  testCases.forEach((testCase, index) => {
+    // generateTestCases(
+    //   combinedAttemptExports.OptimalSlidingWindAttempt.,
+    //   testCase.str,
+    //   testCase.k,
+    //   `Test Case ${index + 1}`,
+    //   testCase.expect
+    // );
 
-//     test('Sliding Window', () => {
-//       const edgecase3 = longestSubstringDistinct("cbbebi",3);
+    generateTestCases(
+        combinedSolutionExports.OptimalSlidingWindSolution.lc340,
+        testCase.str,
+        testCase.k,
+        `Test Case ${index + 1}`,
+        testCase.expect
+      );
 
-//       expect(edgecase3).toBe(5);
 
-//     });
+  });
+};
 
-//   });
- 
+runTestCases();

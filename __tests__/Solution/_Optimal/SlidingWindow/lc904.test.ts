@@ -1,30 +1,54 @@
-// const FruitsIntoBaskets = require('../../_Grokking_Algo & Leetcode/Sliding Window/Javascript/lc904');
-
-//   describe('Test suite fruit tree ', () => {
-  
-//     let fruitsIntoBaskets; // good practice tp avoid change in state
-//     beforeEach(() =>{ 
-//       fruitsIntoBaskets = FruitsIntoBaskets;
-//     });
-
-//     test('Sliding Window', () => {
-//       const edgecase1 = fruitsIntoBaskets(['A', 'B', 'C', 'A', 'C']);
-     
-//       console.time("answer time");
-
-//       expect(edgecase1).toBe(3);
-//       console.timeEnd("answer time");
-
-//     });
-  
-//     test('Sliding Window', () => {
-//       const edgecase1 = fruitsIntoBaskets(['A', 'B', 'C', 'B', 'B', 'B']);
-     
-
-//       expect(edgecase1).toBe(5);
-
-//     });
+import { combinedAttemptExports } from "../../../../src/routers/OptimalAttempt";
+import { combinedSolutionExports } from "../../../../src/routers/OptimalSolution";
 
 
-//   });
- 
+
+type TestFunction = (fruits: string[]) => number;
+
+const generateTestCases = (
+  fruitsFunction: TestFunction,
+  fruits: string[],
+  testName: string,
+  expected: number
+) => {
+  describe(`fruits_into_baskets ${testName}`, () => {
+    let fruitsFn: TestFunction;
+
+    beforeEach(() => {
+      fruitsFn = fruitsFunction;
+    });
+
+    it(`should return ${expected} for fruits: [${fruits}]`, () => {
+      const result = fruitsFn(fruits);
+      console.time(`fruits${testName}`);
+      expect(result).toBe(expected);
+      console.timeEnd(`fruits${testName}`);
+    });
+  });
+};
+
+const runTestCases = () => {
+  const testCases = [
+    { fruits: ["A", "B", "C", "A", "C"], expect: 3 },
+    { fruits: ["A", "B", "X", "Y", "C", "A", "A", "A"], expect: 4 },
+    { fruits: ["A", "B", "C", "B", "B", "C"], expect: 5 },
+    // Add more test cases here
+  ];
+
+  testCases.forEach((testCase, index) => {
+    // generateTestCases(
+    //     combinedAttemptExports,
+    //   testCase.fruits,
+    //   `Test Case ${index + 1}`,
+    //   testCase.expect
+    // );
+    generateTestCases(
+        combinedSolutionExports.OptimalSlidingWindSolution.lc904,
+      testCase.fruits,
+      `Test Case ${index + 1}`,
+      testCase.expect
+    );
+  });
+};
+
+runTestCases();

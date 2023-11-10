@@ -27,7 +27,7 @@
  * Sliding Window
  *
  */
-function max_subarray_size_k(k, arr) {
+export const max_subarray_size_k = (k: number, arr:number[]):number => {
   // console.log(`------ Test Cases ------`)
   // Properties: head, next pointer, Node value, null, current position, next position, last position
 
@@ -35,11 +35,11 @@ function max_subarray_size_k(k, arr) {
   //
   // Conditions: while current head not equal to null
 
-  let maxSum = 0,
+  let maxSum: number = 0,
     windowSum = 0,
     windowStart = 0
 
-  for (let window_end = 0; window_end < arr.length; window_end++) {
+  for (let window_end:number = 0; window_end < arr.length; window_end++) {
     // add the next element
     windowSum += arr[window_end]
     // slide the window, we don't need to slide if we've not hit the required window size of 'k'
@@ -60,4 +60,3 @@ function max_subarray_size_k(k, arr) {
 console.log(`Maximum sum of a subarray of size K: ${max_subarray_size_k(3, [2, 1, 5, 1, 3, 2])}`)
 // console.timeEnd("answer time");
 
-module.exports = max_subarray_size_k
