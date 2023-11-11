@@ -1,152 +1,78 @@
-// Construct Single Node
-class Node {
-  /**
-   *
-   * @param {*} data
-   * @param {*} next
-   */
-  constructor(data, next = null) {
-    this.data = data
-    this.next = next
+class LinkedListNode {
+  value: any;
+  next: LinkedListNode | null;
+
+  constructor(value: any, next: LinkedListNode | null) {
+    this.value = value;
+    this.next = next;
   }
 }
 
-// Create/Get/Remove Nodes From Linked List
 class LinkedList {
+  head: LinkedListNode | null;
+  length: number;
+
   constructor() {
-    this.head = null
-    this.size = 0
+    this.head = null;
+    this.length = 0;
   }
 
-  // Insert first node
-  insertFirst(data) {
-    this.head = new Node(data, this.head)
-    this.size++
+  insertAtHead(data: any): void {
+    const newNode = new LinkedListNode(data, this.head);
+    this.head = newNode;
+    this.length++;
   }
 
-  // Insert last node
-  insertLast(data) {
-    let node = new Node(data)
-    let current
+  getByIndex(index: number): LinkedListNode | null {
+    if (index < 0 || index >= this.length) return null;
 
-    // If empty, make head
-    if (!this.head) {
-      this.head = node
-    } else {
-      current = this.head
-
-      while (current.next) {
-        current = current.next
-      }
-
-      current.next = node
+    let current = this.head;
+    for (let i = 0; i < index; i++) {
+      current = current!.next;
     }
-
-    this.size++
+    return current;
   }
 
-  // Insert at index
-  insertAt(data, index) {
-    //  If index is out of range
-    if (index > 0 && index > this.size) {
-      return
-    }
-
-    // If first index
-    if (index === 0) {
-      this.insertFirst(data)
-      return
-    }
-
-    const node = new Node(data)
-    let current, previous
-
-    // Set current to first
-    current = this.head
-    let count = 0
-
-    while (count < index) {
-      previous = current // Node before index
-      count++
-      current = current.next // Node after index
-    }
-
-    node.next = current
-    previous.next = node
-
-    this.size++
+  removeHead(): void {
+    this.head = this.head!.next;
+    this.length--;
   }
 
-  // Get at index
-  getAt(index) {
-    let current = this.head
-    let count = 0
+  insertAtIndex(index: number, value: any): void {
+    if (index === 0) return this.insertAtHead(value);
 
+    const prev = this.getByIndex(index - 1);
+    if (prev === null) return;
+
+    prev.next = new LinkedListNode(value, prev.next);
+    this.length++;
+  }
+
+  removeAtIndex(index: number): void {
+    if (index === 0) return this.removeHead();
+
+    const prev = this.getByIndex(index - 1);
+    if (prev === null) return;
+
+    prev.next = prev.next!.next;
+    this.length--;
+  }
+
+  removeDuplicates(index: number): void {
+    // Implement your removeDuplicates logic here
+  }
+
+  print(): void {
+    let output = "";
+    let current = this.head;
     while (current) {
-      if (count == index) {
-        console.log(current.data)
-      }
-      count++
-      current = current.next
+      output = `${output}${current.value} -> `;
+      current = current.next;
     }
-
-    return null
-  }
-
-  // Remove at index
-  removeAt(index) {
-    if (index > 0 && index > this.size) {
-      return
-    }
-
-    let current = this.head
-    let previous
-    let count = 0
-
-    // Remove first
-    if (index === 0) {
-      this.head = current.next
-    } else {
-      while (count < index) {
-        count++
-        previous = current
-        current = current.next
-      }
-
-      previous.next = current.next
-    }
-
-    this.size--
-  }
-
-  // Clear list
-  clearList() {
-    this.head = null
-    this.size = 0
-  }
-
-  // Print list data
-  printListData() {
-    let current = this.head
-
-    while (current) {
-      console.log(current.data)
-      current = current.next
-    }
+    console.log(`${output}null`);
   }
 }
 
-const ll = new LinkedList()
+// Don't know how to translate LinkedList.fromValues into TypeScript
 
-ll.insertFirst(100)
-ll.insertFirst(200)
-ll.insertFirst(300)
-ll.insertLast(400)
-ll.insertAt(500, 3)
-
-// ll.clearList();
-ll.getAt(3)
-
-ll.printListData()
-
-console.log(ll)
+export default LinkedList;

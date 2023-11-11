@@ -1,94 +1,89 @@
-var front, back
-
 // Linked List Node
-class Node {
+
+class Noderrr {
+  info: number;
+  priority: number;
+  prev: Noderrr | null;
+  next: Noderrr | null;
+
   constructor() {
-    this.info = 0
-    this.priority = 0
-    this.prev = null
-    this.next = null
+    this.info = 0;
+    this.priority = 0;
+    this.prev = null;
+    this.next = null;
   }
 }
 
-// Function to insert a new Node
-function push(fr, rr, n, p) {
-  var news = new Node()
-  news.info = n
-  news.priority = p
+let front: Noderrr | null;
+let back: Noderrr | null;
 
-  // If linked list is empty
-  if (fr == null) {
-    fr = news
-    rr = news
-    news.next = null
+function push(fr: Noderrr | null, rr: Noderrr | null, n: number, p: number): void {
+  const news = new Noderrr();
+  news.info = n;
+  news.priority = p;
+
+  if (fr === null) {
+    fr = news;
+    rr = news;
+    news.next = null;
   } else {
-    // If p is less than or equal front
-    // node's priority, then insert at
-    // the front.
-    if (p <= fr.priority) {
-      news.next = fr
-      fr.prev = news.next
-      fr = news
-    }
-
-    // If p is more back node's priority,
-    // then insert after the back.
-    else if (p > rr.priority) {
-      news.next = null
-      rr.next = news
-      news.prev = rr.next
-      rr = news
-    }
-
-    // Handle other cases
-    else {
-      // Find position where we need to
-      // insert.
-      var start = fr.next
-      while (start.priority > p) start = start.next
-      start.prev.next = news
-      news.next = start.prev
-      news.prev = start.prev.next
-      start.prev = news.next
+    if (p <= (fr as Noderrr).priority) {
+      news.next = fr;
+      fr.prev = news.next;
+      fr = news;
+    } else if (p > (rr as Noderrr).priority) {
+      news.next = null;
+      (rr as Noderrr).next = news;
+      news.prev = (rr as Noderrr).next;
+      rr = news;
+    } else {
+      let start = (fr as Noderrr).next;
+      while (start && start.priority > p) {
+        start = start.next;
+      }
+      if (start) {
+        start.prev!.next = news;
+        news.next = start.prev!;
+        news.prev = start.prev!.next;
+        start.prev = news.next;
+      }
     }
   }
-  front = fr
-  back = rr
+  front = fr;
+  back = rr;
 }
 
-// Return the value at back
-function peek(fr) {
-  return fr.info
+function peek(fr: Noderrr | null): number {
+  return fr ? fr.info : 0;
 }
 
-function isEmpty(fr) {
-  return fr == null
+function isEmpty(fr: Noderrr | null): boolean {
+  return fr === null;
 }
 
-// Removes the element with the
-// least priority value form the list
-function pop(fr, rr) {
-  var temp = fr
-  var res = temp.info
-  fr = fr.next
-  if (fr == null) rr = null
+function pop(fr: Noderrr | null, rr: Noderrr | null): number | undefined {
+  const temp = fr;
+  const res = temp ? temp.info : undefined;
+  fr = temp ? temp.next : null;
+  if (fr === null) rr = null;
 
-  front = fr
-  back = rr
-  return res
+  front = fr;
+  back = rr;
+  return res;
 }
 
 // Driver code
+front = null;
+back = null;
 
-push(front, back, 2, 3)
-push(front, back, 3, 4)
-push(front, back, 4, 5)
-push(front, back, 5, 6)
-push(front, back, 6, 7)
-push(front, back, 1, 2)
+push(front, back, 2, 3);
+push(front, back, 3, 4);
+push(front, back, 4, 5);
+push(front, back, 5, 6);
+push(front, back, 6, 7);
+push(front, back, 1, 2);
 
-// document.write(pop(front, back) + "<br/>");
-// console.log(pop(front, back) )
-// console.log(peek(front))
-console.log(front)
-console.log(back)
+console.log(front);
+console.log(back);
+console.log(pop(front, back));
+console.log(peek(front));

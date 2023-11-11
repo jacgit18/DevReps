@@ -1,117 +1,109 @@
 class MaxBinaryHeap {
+  private values: number[];
+
   constructor() {
-    this.values = []
+    this.values = [];
   }
-  //helper method that swaps the values and two indexes of an array
-  swap(index1, index2) {
-    let temp = this.values[index1]
-    this.values[index1] = this.values[index2]
-    this.values[index2] = temp
-    return this.values
+
+  // Helper method that swaps the values at two indexes of an array
+   swap(index1: number, index2: number): void {
+    const temp = this.values[index1];
+    this.values[index1] = this.values[index2];
+    this.values[index2] = temp;
   }
-  //helper methods that bubbles up values from end
-  bubbleUp() {
-    //get index of inserted element
-    let index = this.values.length - 1
-    //loop while index is not 0 or element no longer needs to bubble
+
+  // Helper method that bubbles up values from the end
+   bubbleUp(): void {
+    let index = this.values.length - 1;
+
     while (index > 0) {
-      //get parent index via formula
-      let parentIndex = Math.floor((index - 1) / 2)
-      //if values is greater than parent, swap the two
+      const parentIndex = Math.floor((index - 1) / 2);
+
       if (this.values[parentIndex] < this.values[index]) {
-        //swap with helper method
-        this.swap(index, parentIndex)
-        //change current index to parent index
-        index = parentIndex
+        this.swap(index, parentIndex);
+        index = parentIndex;
       } else {
-        break
+        break;
       }
     }
-    return 0
   }
 
-  // method that pushes new value onto the end and calls the bubble helper
-  insert(value) {
-    this.values.push(value)
-    this.bubbleUp()
-    return this.values
+  // Method that pushes a new value onto the end and calls the bubbleUp helper
+  insert(value: number): number[] {
+    this.values.push(value);
+    this.bubbleUp();
+    return this.values;
   }
 
-  //bubble down elements to readjust heap after removing max element
-  bubbleDown() {
-    let parentIndex = 0
-    const length = this.values.length
-    const element = this.values[0]
-    //loop breaks if no swaps are needed
+  // Bubble down elements to readjust the heap after removing the max element
+   bubbleDown(): void {
+    let parentIndex = 0;
+    const length = this.values.length;
+    const element = this.values[0];
+
     while (true) {
-      //get indexes of child elements by following formula
-      let leftChildIndex = 2 * parentIndex + 1
-      let rightChildIndex = 2 * parentIndex + 2
-      let leftChild, rightChild
-      let indexToSwap = null
-      // if left child exists, and is greater than the element, plan to swap with the left child index
-      if (leftChildIndex < length) {
-        leftChild = this.values[leftChildIndex]
-        if (leftChild > element) {
-          indexToSwap = leftChildIndex
-        }
-      }
-      //if right child exists
-      if (rightChildIndex < length) {
-        rightChild = this.values[rightChildIndex]
+      const leftChildIndex = 2 * parentIndex + 1;
+      const rightChildIndex = 2 * parentIndex + 2;
+      let leftChild = 0;
+      let rightChild = 0;
 
-        if (
-          //if right child is greater than element and there are no plans to swap
-          (rightChild > element && indexToSwap === null) ||
-          //OR if right child is greater than left child and there ARE plans to swap
-          (rightChild > leftChild && indexToSwap !== null)
-        ) {
-          //plan to swap with the right child
-          indexToSwap = rightChildIndex
+      let indexToSwap = null;
+
+      if (leftChildIndex < length) {
+        leftChild = this.values[leftChildIndex];
+        if (leftChild > element) {
+          indexToSwap = leftChildIndex;
         }
       }
-      //if there are no plans to swap, break out of the loop
-      if (indexToSwap === null) {
-        break
+
+      if (rightChildIndex < length) {
+        rightChild = this.values[rightChildIndex];
+
+        if ((rightChild > element && indexToSwap === null) || (rightChild > leftChild && indexToSwap !== null)) {
+          indexToSwap = rightChildIndex;
+        }
       }
-      //swap with planned element
-      this.swap(parentIndex, indexToSwap)
-      //starting index is now index that we swapped with
-      parentIndex = indexToSwap
+
+      if (indexToSwap === null) {
+        break;
+      }
+
+      this.swap(parentIndex, indexToSwap);
+      parentIndex = indexToSwap;
     }
   }
 
-  removeMax() {
-    //swap first and last element
-    this.swap(0, this.values.length - 1)
-    //pop max value off of values
-    let poppedValue = this.values.pop()
-    //re-adjust heap if length is greater than 1
-    if (this.values.length > 1) {
-      this.bubbleDown()
+  removeMax(): number | undefined {
+    if (this.values.length === 0) {
+      return undefined;
     }
 
-    return poppedValue
+    this.swap(0, this.values.length - 1);
+    const poppedValue = this.values.pop();
+
+    if (this.values.length > 1) {
+      this.bubbleDown();
+    }
+
+    return poppedValue;
   }
 }
 
-const hp = new MaxBinaryHeap()
+const hpTwo = new MaxBinaryHeap();
 
-hp.insert(652)
-hp.insert(335)
-hp.insert(466)
-hp.insert(532)
-hp.insert(2330)
-hp.insert(324)
-hp.insert(222)
-hp.insert(4654)
-hp.insert(343212)
-hp.insert(43)
+hpTwo.insert(652);
+hpTwo.insert(335);
+hpTwo.insert(466);
+hpTwo.insert(532);
+hpTwo.insert(2330);
+hpTwo.insert(324);
+hpTwo.insert(222);
+hpTwo.insert(4654);
+hpTwo.insert(343212);
+hpTwo.insert(43);
 
-// hp.bubbleDown()
+console.log(hpTwo);
 
-console.log(hp)
-
-console.log(hp.removeMax())
-hp.bubbleDown()
-console.log(hp)
+console.log(hpTwo.removeMax());
+hpTwo.bubbleDown();
+console.log(hpTwo);
