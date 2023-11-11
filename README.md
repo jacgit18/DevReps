@@ -6,18 +6,6 @@ When tackling a coding challenge, especially when learning and implementing adva
 - Extra
   - [] Try Question with different levels [Question here](src/Extra/Challenge2_0.md)
 
-- Sliding Window
-  - [] No-repeat Substring (hard): LC #3
-  - [] Words Concatenation (hard): LC #30
-  - [] Maximum Sum Subarray of Size K (easy) LC #53
-  - [] Smallest Window Containing Substring (hard): LC #76
-  - [] Smallest Subarray with a given sum (easy): LC #209
-  - [] Longest Substring with K Distinct Characters (medium): LC #340
-  - [] Find String Anagrams (hard): LC #438
-  - [] Find Permutation in string (hard): LC #567
-  - [] Fruits into Baskets (medium): LC #904
-  - [] Max Consecutive Ones III (hard): LC #1004
-  
 - Two Pointers
   - [] Pair with Target Sum (easy): LC #1
   - [] Triplet Sum Close to Target (medium): LC #16
@@ -31,6 +19,18 @@ When tackling a coding challenge, especially when learning and implementing adva
   - [] Subarrays with Product Less than a Target (medium): LC #713
   - [] Comparing Strings containing Backspaces (medium): LC #844
   - [] Squaring a Sorted Array (easy): LC #977
+
+  - Sliding Window
+  - [] No-repeat Substring (hard): LC #3
+  - [] Words Concatenation (hard): LC #30
+  - [] Maximum Sum Subarray of Size K (easy) LC #53
+  - [] Smallest Window Containing Substring (hard): LC #76
+  - [] Smallest Subarray with a given sum (easy): LC #209
+  - [] Longest Substring with K Distinct Characters (medium): LC #340
+  - [] Find String Anagrams (hard): LC #438
+  - [] Find Permutation in string (hard): LC #567
+  - [] Fruits into Baskets (medium): LC #904
+  - [] Max Consecutive Ones III (hard): LC #1004
 
 - Merge Intervals
   - [] Merge Intervals (medium): LC #56

@@ -16,17 +16,18 @@
 
 
  */
-function remove_element(arr, key) {
-  let nextElement = 0 // index of the next element which is not 'key'
-  for (index = 0; index < arr.length; index++) {
+export const remove_element=(arr: number[], key: number): number =>{
+  let nextElement = 0;
+
+  for (let index = 0; index < arr.length; index++) {
     if (arr[index] !== key) {
-      arr[nextElement] = arr[index]
-      nextElement += 1
+      arr[nextElement] = arr[index];
+      nextElement += 1;
     }
-    // console.log(arr[nextElement])
   }
-  return nextElement
+
+  return nextElement;
 }
 
-console.log(`Array new length: ${remove_element([3, 2, 3, 6, 3, 10, 9, 3], 3)}`)
-console.log(`Array new length: ${remove_element([2, 11, 2, 2, 1], 2)}`)
+console.log(`Array new length: ${remove_element([3, 2, 3, 6, 3, 10, 9, 3], 3)}`);
+console.log(`Array new length: ${remove_element([2, 11, 2, 2, 1], 2)}`);

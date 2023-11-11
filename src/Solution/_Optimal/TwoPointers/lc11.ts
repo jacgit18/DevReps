@@ -8,7 +8,7 @@
 
 // Notice that you may not slant the container.
 
-const maxArea = (height: number[]): number => {
+export const maxArea = (height: number[]): number => {
   let [result, leftIndex, rightIndex] = [0, 0, height.length - 1]
 
   while (leftIndex < rightIndex) {

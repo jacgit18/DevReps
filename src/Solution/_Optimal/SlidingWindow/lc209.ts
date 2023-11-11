@@ -63,8 +63,7 @@ function smallestSubarrayWithGivenSum(s: number, arr: number[]): number {
 
 
 
-  
-
+console.log(smallestSubarrayWithGivenSum(3,[4,6,6,8]));
 
   
     

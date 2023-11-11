@@ -6,10 +6,12 @@
 // [nums[i], nums[j], nums[k]] such that i != j, i != k,
 // and j != k, and nums[i] + nums[j] + nums[k] == 0.
 
-function search_triplets(arr) {
-  triplets = []
-  // TODO: Write your code here
-  return triplets
+// const search_triplets = (arr: number[]): number[][] => {
+
+export const search_triplets = (arr: number[]): void => {
+  let triplets: number[][];
+
+  
 }
 
 console.log(search_triplets([-3, 0, 1, 2, -1, 1, -2]))

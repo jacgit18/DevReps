@@ -1,4 +1,4 @@
-function characterReplacementTwoPointer(s: string, k: number): number {
+const characterReplacementTwoPointer = (s: string, k: number): number =>{
   const charFreq: number[] = new Array(26).fill(0);
   let maxLen = 0;
   let maxCharFreq = 0;
