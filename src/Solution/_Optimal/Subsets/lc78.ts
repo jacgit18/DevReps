@@ -1,21 +1,48 @@
-// Problem Statement #
+// Given an integer array nums of unique elements, return all possible 
+// subsets
+//  (the power set).
 
-// Given a set with distinct elements, find all of its distinct subsets.
+// The solution set must not contain duplicate subsets. Return the solution in any order.
 
-const find_subsets = function (nums) {
-  const powerset = []
-  generatePowerset([], 0)
+ 
 
-  function generatePowerset(path, index) {
-    powerset.push(path)
-    console.log(powerset) // weird behavior before 3
-    for (let i = index; i < nums.length; i++) {
-      generatePowerset([...path, nums[i]], i + 1)
+// Example 1:
+
+// Input: nums = [1,2,3]
+// Output: [[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]
+// Example 2:
+
+// Input: nums = [0]
+// Output: [[],[0]]
+ 
+
+// Constraints:
+
+// 1 <= nums.length <= 10
+// -10 <= nums[i] <= 10
+// All the numbers of nums are unique.
+
+export const subsets = (nums: number[]): number[][] =>{
+  const result: number[][] = [];
+
+  const backtrack = (start: number, currentSubset: number[]) => {
+    result.push([...currentSubset]);
+
+    for (let i = start; i < nums.length; i++) {
+      currentSubset.push(nums[i]);
+      backtrack(i + 1, currentSubset);
+      currentSubset.pop();
     }
-  }
+  };
 
-  return powerset
+  backtrack(0, []);
+
+  return result;
 }
 
-console.log(`Here is the list of subsets: ${find_subsets([1, 3])}`)
-console.log(`Here is the list of subsets: ${find_subsets([1, 5, 3])}`)
+// Example usage:
+const example1 = subsets([1, 2, 3]);
+console.log(example1);
+
+const example2 = subsets([0]);
+console.log(example2);

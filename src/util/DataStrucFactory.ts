@@ -273,9 +273,9 @@ class MinHeap {
     this.bubbleUp()
   }
 
-  extract(): number | undefined {
+  extract(): number {
     if (this.heap.length === 0) {
-      return undefined
+      return 0
     }
 
     if (this.heap.length === 1) {
@@ -288,6 +288,10 @@ class MinHeap {
     this.bubbleDown()
 
     return top
+  }
+
+  size(): number {
+    return this.heap.length
   }
 
   private bubbleUp() {

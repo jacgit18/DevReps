@@ -38,25 +38,29 @@ import { leastInterval } from "./Merge Intervals/lc621";
 import { intervalIntersection } from "./Merge Intervals/lc986";
 
 
-// Subset
-// import {  } from "./Subsets/";
-// import {  } from "./Subsets/";
-// import {  } from "./Subsets/";
-// import {  } from "./Subsets/";
-// import {  } from "./Subsets/";
-// import {  } from "./Subsets/";
-// import {  } from "./Subsets/";
-// import {  } from "./Subsets/";
-// import {  } from "./Subsets/";
+// Subset/ Backtracking pattern
+import { robotPaths } from "./Subsets/BacktrackMatrix";
+import { matrix } from "./Subsets/MockIntMatrix";
+import { letterCombinationsBackTrack } from "./Subsets/lc17";
+import { permute } from "./Subsets/lc46";
+import { subsets } from "./Subsets/lc78";
+import {  subsetsWithDup } from "./Subsets/lc90";
+import { diffWaysToCompute } from "./Subsets/lc241";
+import { findDuplicatesBackTrack, findDuplicatesCyclic } from "./Subsets/lc442";
+import { letterCasePermutation } from "./Subsets/lc784";
 
 
 // Modified Binary Search
-// import {  } from "./Modified Binary Search/";
-// import {  } from "./Modified Binary Search/";
-// import {  } from "./Modified Binary Search/";
-// import {  } from "./Modified Binary Search/";
-// import {  } from "./Modified Binary Search/";
-// import {  } from "./Modified Binary Search/";
+import { searchRanger  } from "./Modified Binary Search/lc33";
+import { searchRange } from "./Modified Binary Search/lc34";
+import { searchInsert } from "./Modified Binary Search/lc35";
+import { search } from "./Modified Binary Search/lc81";
+import { findMin } from "./Modified Binary Search/lc153";
+import { findClosestElements } from "./Modified Binary Search/lc658";
+import { searchtargetinnums } from "./Modified Binary Search/lc702";
+import {  } from "./Modified Binary Search/lc704";
+import {  } from "./Modified Binary Search/lc744";
+import {  } from "./Modified Binary Search/lc1671";
 
 
 
@@ -128,9 +132,10 @@ import { intervalIntersection } from "./Merge Intervals/lc986";
 
 
 
+export const combinedSolutionExports = {
 
 
-const OptimalTwoPointerSolution = {
+ OptimalTwoPointerSolution: {
   lc1: pair_with_target_sum_Two_Pointer,
   lc1Alt: pair_with_target_sum_map,
   lc11: maxArea,
@@ -146,11 +151,11 @@ const OptimalTwoPointerSolution = {
   lc713: numSubarrayProductLessThanK,
   lc844: backspaceCompare,
   lc977: make_squares,
-};
+},
 
 
 
-const OptimalSlidingWindSolution = {
+ OptimalSlidingWindSolution: {
     lc3:lengthOfLongestSubstring,
     lc30:findSubstring,
     lc53: max_subarray_size_k,
@@ -162,9 +167,9 @@ const OptimalSlidingWindSolution = {
     ls567: checkInclusion,
     lc904: fruits_into_baskets,
     lc1004: longestOnes
-  };
+  },
 
-  const MergeIntervalSolution = {
+   MergeIntervalSolution: {
     lc56: merge,
     lc57: insertInterval,
     lc252: canAttendMeetings,
@@ -172,38 +177,39 @@ const OptimalSlidingWindSolution = {
     lc621: leastInterval,
     lc986: intervalIntersection,
 
-  };
+  },
+
+
+  OptimalSubsetSolution: {
+    backtrackOne: matrix,
+    backtrackTwo:robotPaths,
+    lc17: letterCombinationsBackTrack,
+    lc46: permute,
+    lc78: subsets,
+    lc90: subsetsWithDup,
+    lc241: diffWaysToCompute,
+    lc442: findDuplicatesBackTrack,
+    lc442Alt: findDuplicatesCyclic,
+    lc784: letterCasePermutation,
+
+  },
+
+  OptimalModifiedBinarySearch: {
+    lc33: searchRanger,
+    lc34: searchRange,
+    lc35: searchInsert,
+    lc81: search,
+    lc153: findMin,
+    lc658: findClosestElements,
+    lc702: searchtargetinnums,
 
 
 
-
-
-
-
-
-  export const combinedSolutionExports = {
-    OptimalTwoPointerSolution,
-    OptimalSlidingWindSolution,
-    MergeIntervalSolution,
+  }
 
 };
 
 
 
 
-// export const combinedSolutionExports = {
-//   // ... (previous exports)
-//   SubsetsBacktracking: {
-//     subsets,
-//     subsetsWithDuplicates,
-//     permutations,
-//     stringPermutationsChangingCase,
-//     balancedParentheses,
-//     uniqueGeneralizedAbbreviations,
-//     evaluateExpression,
-//     structurallyUniqueBST,
-//     countStructurallyUniqueBST,
-//   },
-
-// }
 

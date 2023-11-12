@@ -1,67 +1,46 @@
-// 1 1 0 0           2
-// 0 0 1 0           1
-// 1 1 0 0           3
-// 1 0 0 0
+export const matrix = (matrix: number[][]): void => {
+  // Object to store counts of each value in the matrix
+  let counts: { [key: number]: number } = {};
 
-// 3
-
-const matrix = (matrix) => {
-  // let counter= {};
-
-  let counts = {}
-
+  // Iterate through each row in the matrix
   for (let outerIndex = 0; outerIndex < matrix.length; outerIndex++) {
-    // console.log(matrix[0]);
-    // let innerIndex = 0;
-    // row scope
-    // for(let i = 0; i<matrix.length; i++) {
-    //   counts = matrix[i];
-    // }
+    // Iterate through each element in the row
+    for (let innerIndex = 0; innerIndex < matrix[outerIndex].length; innerIndex++) {
+      const currentPosition = matrix[outerIndex][innerIndex];
 
-    for (let innerIndex = 0; innerIndex < matrix.length; innerIndex++) {
-      // console.log(matrix[outerIndex][innerIndex] === matrix[outerIndex + 1][innerIndex + 1]);
+      // Get the next row and column positions
+      const nextRowPosition = outerIndex + 1 < matrix.length ? matrix[outerIndex + 1][innerIndex] : undefined;
+      const nextColPosition = innerIndex + 1 < matrix[outerIndex].length ? matrix[outerIndex][innerIndex + 1] : undefined;
 
-      const currentPosition = matrix[outerIndex][innerIndex]
-      const nextRowPosition = matrix[outerIndex + 1]
-      const nextColPosition = matrix[innerIndex + 1]
-
-      console.log(nextRowPosition)
-      console.log(nextColPosition)
-
+      // If the current position is not in counts, add it with an initial count of 0
       if (!(currentPosition in counts)) {
-        counts[currentPosition] = 0 // appending array index current value to the object as a property with a intial value of 0
-        // arrays are basically  at type of object where the index is like the property name and subarray is the key
-        // console.log(charFrequency)
+        counts[currentPosition] = 0;
       }
 
-      counts[currentPosition] += 1
+      // Increment the count for the current position
+      counts[currentPosition] += 1;
 
-      // console.log(counts)
-
+      // Your logic for comparing positions goes here
+      // For example:
       if (outerIndex + 1 === matrix.length) {
-        break
+        break;
       } else {
-        if (matrix[outerIndex][innerIndex] === matrix[outerIndex + 1][innerIndex + 1]) {
-          // let maxCluster = math.max()
+        if (currentPosition === nextRowPosition) {
+          // Your logic for handling equality between positions
+          // let maxCluster = Math.max();
         }
       }
-      // column scope
-
-      //     counter= {
-      //     row(0), col(0)
-
-      //     }
-      // console.log(matrix[1][0]);
     }
   }
-}
+};
 
-let matrixVal = [
+// Example matrix
+let matrixVal: number[][] = [
   [1, 1, 0, 0],
   [0, 0, 1, 0],
   [1, 1, 0, 0],
   [1, 0, 0, 0],
-]
+];
 
-console.log(matrix(matrixVal))
-// matrix(matrixVal);
+// Call the matrix function
+matrix(matrixVal);

@@ -54,12 +54,11 @@ When tackling a coding challenge, especially when learning and implementing adva
 
   - Modified Binary Search
   - [] Order-agnostic Binary Search (easy): LC #704
-  - [] Ceiling of a Number (medium): LC #??
+  - [] Ceiling of a Number (easy): LC #35
   - [] Next Letter (medium): LC #744
   - [] Number Range (medium): LC #34
   - [] Search in a Sorted Infinite Array (medium): LC #702
   - [] Minimum Difference Element (medium): LC #658 (k == 1)
-  - [] Bitonic Array Maximum (easy): LC #1671 or #162
   - [] Search Bitonic Array (medium): LC #
   - [] Search in Rotated Array (medium): LC #33
   - [] Search in Rotated Array II (medium): LC #81

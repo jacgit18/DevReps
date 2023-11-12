@@ -13,7 +13,6 @@
  *
  *            robotPaths(matrix) = 38
  *
- *
  *            matrix = [[0,0,0],
  *                      [0,0,0]]
  *
@@ -24,50 +23,49 @@
  *            from the top left corner to the bottom right corner, does not go
  *            off of the matrix, and does not travel back on itself
  */
-// dont see any terminating condition
-let matrix1 = [
-  [0, 0, 0],
-  [0, 0, 0],
-]
 
-let matrix2 = [
+
+let matrix1: number[][] = [
+  [0, 0, 0],
+  [0, 0, 0],
+];
+
+let matrix2: number[][] = [
   [0, 0, 0, 0],
   [0, 0, 0, 0],
   [0, 0, 0, 0],
-]
+];
 
-let matrix3 = [
+let matrix3: number[][] = [
   [0, 0, 0],
   [0, 0, 0],
   [0, 0, 0],
-]
+];
 
-function robotPaths(matrix) {
-  return (traverse = (Row = 0, Col = 0) => {
-    //BC: Out of Bounds
-    // matrix[0].length proably num of rows and matrix.length is column num
-
-    let maxRowLength = matrix[0].length
-    let maxColLength = matrix.length
-    let OutofBoundsCheck = Row < 0 || Col < 0 || Row >= matrix[0].length || Col >= matrix.length
-    // const AlreadyVisitedCoordinate = (matrix[Col][Row] === 1);
-    let TargetReached = Row === maxRowLength - 1 && Col === maxColLength - 1
+export function robotPaths(matrix: number[][]): number {
+  const traverse = (Row: number = 0, Col: number = 0): number => {
+    // BC: Out of Bounds
+    let maxRowLength: number = matrix[0].length;
+    let maxColLength: number = matrix.length;
+    let OutofBoundsCheck: boolean =
+      Row < 0 || Col < 0 || Row >= matrix[0].length || Col >= matrix.length;
 
     if (OutofBoundsCheck) {
-      return 0
+      return 0;
     }
 
-    //BC: Already visited coordinate
+    // BC: Already visited coordinate
     else if (matrix[Col][Row] === 1) {
-      return 0
+      return 0;
     }
 
-    //BC: Reached Target
-    else if (TargetReached) {
-      return 1
+
+    // BC: Reached Target
+    else if (Row === maxRowLength - 1 && Col === maxColLength - 1) {
+      return 1;
     }
 
-    /** when hit recursive calls we always check right first until we hit end of row then we go out
+/** when hit recursive calls we always check right first until we hit end of row then we go out
  *  of bounds check left hit base case until we hit unvisted position and check previous position before starting with left then right, down, up
  * 
  * all uniuqe paths from left root, then right root, then down root, then up root
@@ -93,27 +91,31 @@ function robotPaths(matrix) {
  *                       [0,0,0,0]]
  * 
  */
-    //Mark coordintate as visited
-    // matrix[Row][Col] = 1;
-    matrix[Col][Row] = 1
+    // Mark coordinate as visited
+    matrix[Col][Row] = 1;
 
-    //Initialize sum of all paths
-    let sumPaths = 0
+    // Initialize sum of all paths
+    let sumPaths: number = 0;
 
-    sumPaths += traverse(Row + 1, Col) //right // 10 paths
-    sumPaths += traverse(Row - 1, Col) //left  // 9 paths
-    sumPaths += traverse(Row, Col + 1) //down  // 10 paths
-    sumPaths += traverse(Row, Col - 1) //up  // 9 paths
+    sumPaths += traverse(Row + 1, Col); // right
+    sumPaths += traverse(Row - 1, Col); // left
+    sumPaths += traverse(Row, Col + 1); // down
+    sumPaths += traverse(Row, Col - 1); // up
 
-    //Mark coordinate as unvisited
-    matrix[Col][Row] = 0
+    // Mark coordinate as unvisited
+    matrix[Col][Row] = 0;
 
-    return sumPaths
-  })
+    return sumPaths;
+  };
 
-  // return traverse(0,0);
+  return traverse();
 }
 
-let gatecall = robotPaths(matrix2)
+let gatecall: number = robotPaths(matrix2);
 
-console.log(gatecall())
+console.log(gatecall);
+
+
+
+
+
