@@ -75,12 +75,6 @@ When tackling a coding challenge, especially when learning and implementing adva
   - [] Find the Smallest Missing Positive Number (medium): LC #41
   - [] Find the First K Missing Positive Numbers (hard): LC proably #1539
 
-- In Place Reversal of a LL
-  - [] Reverse a LinkedList (easy): LC #206
-  - [] Reverse a Sub-list (medium): LC #92
-  - [] Reverse every K-element Sub-list( Reverse Nodes in k-Group) (hard): LC #25
-  - [] Rotate a LinkedList (medium): LC #61
-
 - Fast & Slow Pointers
   - [] LinkedList Cycle (easy): LC #141
   - [] Happy Number (medium): LC #202
@@ -89,6 +83,12 @@ When tackling a coding challenge, especially when learning and implementing adva
   - [] Palindrome LinkedList (medium): LC #234
   - [] Rearrange a LinkedList (medium): LC #143
   - [] Cycle in a Circular Array (hard): LC #457
+
+- In Place Reversal of a LL
+  - [] Reverse a LinkedList (easy): LC #206
+  - [] Reverse a Sub-list (medium): LC #92
+  - [] Reverse every K-element Sub-list( Reverse Nodes in k-Group) (hard): LC #25
+  - [] Rotate a LinkedList (medium): LC #61
 
 - Doubly-Linked List(PERSONAl Review)
   - [] LRU Cache (medium): LC #146

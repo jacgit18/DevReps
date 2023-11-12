@@ -75,9 +75,7 @@ import { findErrorNums } from "./Cyclic Sort/lc645";
 // Fast Slow  Pointer
 import { hasCycle } from "./Fast Slow(LinkedList)/lc141CyclicLL";
 import { isDoublyCyclic } from "./Fast Slow(LinkedList)/lc141DoubleVer";
-// import {  } from "./Fast Slow(LinkedList)/";
-// import {  } from "./Fast Slow(LinkedList)/";
-// import {  } from "./Fast Slow(LinkedList)/";
+import { isHappy } from "./Fast Slow(LinkedList)/lc202";
 
 
 // BFS
@@ -97,34 +95,21 @@ import { isDoublyCyclic } from "./Fast Slow(LinkedList)/lc141DoubleVer";
 
 
 // Topological Sort
-// import { } from "./Topological Sort Graphs/"
-// import { } from "./Topological Sort Graphs/"
-// import { } from "./Topological Sort Graphs/"
-// import { } from "./Topological Sort Graphs/"
-// import { } from "./Topological Sort Graphs/"
+import { cloneGrapher } from "./Topological Sort Graphs/lc133";
 
 
 // Top K Elements
-// import {  } from "./Top K Elements/";
-// import {  } from "./Top K Elements/";
-// import {  } from "./Top K Elements/";
-// import {  } from "./Top K Elements/";
-// import {  } from "./Top K Elements/";
+import { findKthLargest } from "./Top K Elements/lc215";
+
 
 
 // K-way Merge
-// import {  } from "./K-way Merge Dynamic Programing/";
-// import {  } from "./K-way Merge Dynamic Programing/";
-// import {  } from "./K-way Merge Dynamic Programing/";
-// import {  } from "./K-way Merge Dynamic Programing/";
-// import {  } from "./K-way Merge Dynamic Programing/";
+// import { findKthLargest } from "./K-way Merge Dynamic Programing/lc23";
+
 
 // Knapsack
-// import {  } from "./Knapsack Dynamic Programing/";
-// import {  } from "./Knapsack Dynamic Programing/";
-// import {  } from "./Knapsack Dynamic Programing/";
-// import {  } from "./Knapsack Dynamic Programing/";
-// import {  } from "./Knapsack Dynamic Programing/";
+import { findMaxForm } from "./Knapsack Dynamic Programing/lc474";
+
 
 
 
@@ -218,9 +203,51 @@ export const combinedSolutionExports = {
   OptimalFastSlowPointers:{
     lc141: hasCycle,
     lc141Double: isDoublyCyclic,
+    lc202: isHappy,
 
  
   },
+
+
+  // OptimalBFS:{
+  //   lc141: hasCycle,
+  
+
+ 
+  // },
+
+  // OptimalDFS:{
+  //   lc141: hasCycle,
+
+ 
+  // },
+
+  OptimalTopologicalSort:{
+    lc133: cloneGrapher,
+   
+
+ 
+  },
+
+  OptimalTop_K_Elements:{
+    lc215: findKthLargest,
+   
+
+ 
+  },
+
+
+  // Optimal_KwayMerge:{
+  //   lc23: findKthLargest,
+
+
+  // },
+
+  OptimalKnapSack:{
+    lc474: findMaxForm,
+
+
+  }
 
 
 
