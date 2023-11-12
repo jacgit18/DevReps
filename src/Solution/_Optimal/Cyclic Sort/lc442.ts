@@ -1,166 +1,58 @@
-/*
+// Given an integer array nums of length n where all the integers of nums are in the range [1, n] and each integer appears once or twice, return an array of all the integers that appears twice.
 
-Problem Statement #
+// You must write an algorithm that runs in O(n) time and uses only constant extra space.
 
-Given an integer array nums of length n where all the
-integers of nums are in the range [1, n] and each 
-integer appears once or twice, return an array of 
-all the integers that appears twice.
+ 
 
-You must write an algorithm that runs in O(n) time and 
-uses only constant extra space.
+// Example 1:
 
+// Input: nums = [4,3,2,7,8,2,3,1]
+// Output: [2,3]
+// Example 2:
 
+// Input: nums = [1,1,2]
+// Output: [1]
+// Example 3:
 
-Identify Built in Functions(Array, String, Math) & Data Structure or Sorting Algorithms that can be Leveraged or ruled out as you render down problem
+// Input: nums = [1]
+// Output: []
+ 
 
+// Constraints:
 
-|  
-V Identify I/O & Break down problem into English & Identify Constraints 10 min or less:
-
-Initial Edgecase Param()
-
-
-
-
-
-Return
-
-|
-V IDENTIFY EDGE to Identify TEST CASES in 10 min or less
-
-Properties of Edgecase:
+// n == nums.length
+// 1 <= n <= 105
+// 1 <= nums[i] <= n
+// Each element in nums appears once or twice.
 
 
+export const findDuplicates = (nums: number[]): number[] => {
+  const duplicates: number[] = [];
 
+  let index = 0;
+  const n = nums.length;
 
+  while (index < n) {
+    const currentNum = nums[index];
+    const correctIndex = currentNum - 1;
 
-Alt EdgeCase & similarities:
-
-		
-
-
-|
-V Define Naïve-Approach/Psuedocode on whiteboard under 20 min or less:
-
-List out properties of problem you have gotten so far with order in mind:
-
-Define Variables(to store reference manipulate) & Identify CRUD:
-
-
-Identify Test Case with Control Flow in mind:
-
-
-|
-V Code if stuck check past steps & Identify Runtime & Optimizations 15 min or less
-
-
-
-
-Control flow(Break, Continue) based on defined steps & edge cases
-
-    Simple Test case: Rules:
-     ---------------------------------------------
-      new customer -> 15% off
-      repeat customer -> 10% off
-      coupon customer -> 30% off
-
-     num of test case = num of rules = 2^num of conditions = 2^3 = 8 rules
-
-     n = not likely p = probably
-     Identify commonalities between test case
-     Follow Discrete math De-Morgan's Law
-     new cus T T T T F F F F
-     repeat cus T T F F T T F F
-     coupon cus T F T F T F T F
-     result N N P P P N N
-
-         TestCase: {
-
-          Pre-Condition:
-
-         Conditions:
-
-         Termination-Conditions:
-
-         Post-Conditions:
-
-
-         Switch case()
-
-}
-
-*/
-
-const log = (pre = "", arg = "", post = "") => {
-  console.log(`${pre} ${arg} ${post} `)
-}
-const info = (pre = "", arg = "", post = "") => {
-  console.info(`${pre} ${arg} ${post} `)
-}
-const warn = (pre = "", arg = "", post = "") => {
-  console.warn(`${pre} ${arg} ${post} `)
-}
-const error = (pre = "", arg = "", post = "") => {
-  console.error(`${pre} ${arg} ${post} `)
-}
-const table = (pre = "", arg = "", post = "") => {
-  console.table(`${pre} ${arg} ${post} `)
-}
-const runTimeStart = (arg) => console.time(arg)
-const runTimeEnd = (arg) => console.timeEnd(arg)
-
-const find_all_duplicates = function (nums) {
-  let index = 0
-  const ArrayLength = nums.length
-
-  while (index < ArrayLength) {
-    const currentSubarray = nums[index]
-    const decrementedSubarray = currentSubarray - 1
-
-    if (currentSubarray != nums[decrementedSubarray]) {
-      ;[nums[decrementedSubarray], nums[index]] = [nums[index], nums[decrementedSubarray]]
+    if (nums[index] !== nums[correctIndex]) {
+      [nums[index], nums[correctIndex]] = [nums[correctIndex], nums[index]]; // swap indices
     } else {
-      ++index
+      index++;
     }
   }
 
-  return nums
-}
+  for (let i = 0; i < n; i++) {
+    if (nums[i] !== i + 1) {
+      duplicates.push(nums[i]);
+    }
+  }
 
-runTimeStart("Runtime")
-log(find_all_duplicates([4, 3, 2, 7, 8, 2, 3, 1])) // [2,3] missing num in range
-log(find_all_duplicates([1, 1, 2])) // [1]
-log(find_all_duplicates([1])) // []
-runTimeEnd("Runtime")
+  return duplicates;
+};
 
-// Solution
-// -----
-// function find_all_duplicates(nums) {
-//   let i = 0;
-//   while (i < nums.length) {
-//     j = nums[i] - 1;
-//     if (nums[i] != nums[j]) {
-//       [nums[i], nums[j]] = [nums[j], nums[i]]; // swap
-//     } else {
-//       i++;
-//     }
-//   }
-
-//   duplicateNumbers = [];
-//   for (i = 0; i < nums.length; i++) {
-//     if (nums[i] !== i + 1) {
-//       duplicateNumbers.push(nums[i]);
-//     }
-//   }
-
-//   return duplicateNumbers;
-// }
-
-// -----
-
-// Time complexity #
-// The time complexity of the above algorithm is O(n).
-
-// Space complexity #
-// Ignoring the space required for storing the duplicates, the algorithm runs in constant space O(1).
+// Example usage:
+console.log(findDuplicates([4, 3, 2, 7, 8, 2, 3, 1])); // Output: [2, 3]
+console.log(findDuplicates([1, 1, 2])); // Output: [1]
+console.log(findDuplicates([1])); // Output: []

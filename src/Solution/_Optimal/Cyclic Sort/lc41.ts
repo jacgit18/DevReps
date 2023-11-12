@@ -1,117 +1,57 @@
-/*
+// Given an unsorted integer array nums, return the smallest missing positive integer.
 
-Problem Statement #
+// You must implement an algorithm that runs in O(n) time and uses O(1) auxiliary space.
 
-Given an unsorted integer array nums, return the smallest 
-missing positive integer.
+ 
 
-You must implement an algorithm that runs in O(n) time and 
-uses constant extra space.
+// Example 1:
 
+// Input: nums = [1,2,0]
+// Output: 3
+// Explanation: The numbers in the range [1,2] are all in the array.
+// Example 2:
 
+// Input: nums = [3,4,-1,1]
+// Output: 2
+// Explanation: 1 is in the array but 2 is missing.
+// Example 3:
 
-Identify Built in Functions(Array, String, Math) & Data Structure or Sorting Algorithms that can be Leveraged or ruled out as you render down problem
+// Input: nums = [7,8,9,11,12]
+// Output: 1
+// Explanation: The smallest positive integer 1 is missing.
+ 
 
+// Constraints:
 
-|  
-V Identify I/O & Break down problem into English & Identify Constraints 10 min or less:
-
-Initial Edgecase Param()
-
-
-
-
-
-Return
-
-|
-V IDENTIFY EDGE to Identify TEST CASES in 10 min or less
-
-Properties of Edgecase:
+// 1 <= nums.length <= 105
+// -231 <= nums[i] <= 231 - 1
 
 
 
+export const firstMissingPositive = (nums: number[]): number => {
+  const n = nums.length;
 
+  for (let i = 0; i < n; i++) {
+    while (nums[i] > 0 && nums[i] <= n && nums[nums[i] - 1] !== nums[i]) {
+      // Swap elements to their correct positions
+      const temp = nums[nums[i] - 1];
+      nums[nums[i] - 1] = nums[i];
+      nums[i] = temp;
+    }
+  }
 
-Alt EdgeCase & similarities:
+  // Find the first index where the element doesn't match its position
+  for (let i = 0; i < n; i++) {
+    if (nums[i] !== i + 1) {
+      return i + 1;
+    }
+  }
 
-		
+  // If all elements are in their correct positions, return the next positive integer
+  return n + 1;
+};
 
-
-|
-V Define Naïve-Approach/Psuedocode on whiteboard under 20 min or less:
-
-List out properties of problem you have gotten so far with order in mind:
-
-Define Variables(to store reference manipulate) & Identify CRUD:
-
-
-Identify Test Case with Control Flow in mind:
-
-
-|
-V Code if stuck check past steps & Identify Runtime & Optimizations 15 min or less
-
-
-
-
-Control flow(Break, Continue) based on defined steps & edge cases
-
-    Simple Test case: Rules:
-     ---------------------------------------------
-      new customer -> 15% off
-      repeat customer -> 10% off
-      coupon customer -> 30% off
-
-     num of test case = num of rules = 2^num of conditions = 2^3 = 8 rules
-
-     n = not likely p = probably
-     Identify commonalities between test case
-     Follow Discrete math De-Morgan's Law
-     new cus T T T T F F F F
-     repeat cus T T F F T T F F
-     coupon cus T F T F T F T F
-     result N N P P P N N
-
-         TestCase: {
-
-          Pre-Condition:
-
-         Conditions:
-
-         Termination-Conditions:
-
-         Post-Conditions:
-
-
-         Switch case()
-
-}
-
-*/
-
-const log = (pre = "", arg = "", post = "") => {
-  console.log(`${pre} ${arg} ${post} `)
-}
-const info = (pre = "", arg = "", post = "") => {
-  console.info(`${pre} ${arg} ${post} `)
-}
-const warn = (pre = "", arg = "", post = "") => {
-  console.warn(`${pre} ${arg} ${post} `)
-}
-const error = (pre = "", arg = "", post = "") => {
-  console.error(`${pre} ${arg} ${post} `)
-}
-const table = (pre = "", arg = "", post = "") => {
-  console.table(`${pre} ${arg} ${post} `)
-}
-const runTimeStart = (arg) => console.time(arg)
-const runTimeEnd = (arg) => console.timeEnd(arg)
-
-const firstMissingPositive = function (nums) {}
-
-runTimeStart("Runtime")
-log(firstMissingPositive([1, 2, 0])) // 3
-log(firstMissingPositive([3, 4, -1, 1])) // 2
-log(firstMissingPositive([7, 8, 9, 11, 12])) // 1
-runTimeEnd("Runtime")
+// Example usage:
+console.log(firstMissingPositive([1, 2, 0])); // Output: 3
+console.log(firstMissingPositive([3, 4, -1, 1])); // Output: 2
+console.log(firstMissingPositive([7, 8, 9, 11, 12])); // Output: 1

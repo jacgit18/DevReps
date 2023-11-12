@@ -1,9 +1,27 @@
-// Given a characters array letters that is sorted in non-decreasing order and a character target,
-//  return the smallest character in the array that is larger than target.
+// You are given an array of characters letters that is sorted in non-decreasing order, and a character target. There are at least two different characters in letters.
 
-// Note that the letters wrap around.
+// Return the smallest character in letters that is lexicographically greater than target. If such a character does not exist, return the first character in letters.
 
-// For example, if target == 'z' and letters == ['a', 'b'], the answer is 'a'.
+ 
+
+// Example 1:
+
+// Input: letters = ["c","f","j"], target = "a"
+// Output: "c"
+// Explanation: The smallest character that is lexicographically greater than 'a' in letters is 'c'.
+// Example 2:
+
+// Input: letters = ["c","f","j"], target = "c"
+// Output: "f"
+// Explanation: The smallest character that is lexicographically greater than 'c' in letters is 'f'.
+// Example 3:
+
+// Input: letters = ["x","x","y","y"], target = "z"
+// Output: "x"
+// Explanation: There are no characters in letters that is lexicographically greater than 'z' so we return letters[0].
+ 
+
+// Constraints:
 
 // 2 <= letters.length <= 104
 // letters[i] is a lowercase English letter.
@@ -11,44 +29,8 @@
 // letters contains at least two different characters.
 // target is a lowercase English letter.
 
-const nextGreatestLetterBin = (letters, target) => {
-  if (letters[0] > target || target >= letters[letters.length - 1]) return letters[0]
 
-  let left = 0,
-    right = letters.length - 1
-
-  while (left < right) {
-    const mid = left + Math.floor((right - left) / 2)
-    if (letters[mid] <= target) left = mid + 1
-    else if (letters[mid] > target) right = mid
-  }
-
-  return letters[left]
-}
-
-const nextGreatestLetter = (letters, target) => {
-  // console.log(target.charCodeAt())
-  // console.log(letters[letters.length - 1])
-
-  if (letters[0] > target || target >= letters[letters.length - 1]) return letters[0]
-
-  for (let start = 0; start < letters.length; ++start) {
-    // console.log(letters[start].charCodeAt()) can be done without charCodeAt but runs a little less efficient
-    if (letters[start].charCodeAt() > target.charCodeAt()) {
-      return letters[start]
-    }
-  }
-}
-
-console.time("bin")
-console.log(nextGreatestLetterBin(["c", "f", "j"], "d")) // f
-console.timeEnd("bin")
-
-console.time("reg")
-console.log(nextGreatestLetter(["c", "f", "j"], "d")) // f
-console.timeEnd("reg")
-
-// console.log(nextGreatestLetter(["c", "f", "j"], "a")); // c
-// console.log(nextGreatestLetter(["c","f","j"], "c")) // f
-// console.log(nextGreatestLetter(["c","f","j"], "d")) // f
-// console.log(nextGreatestLetter(["c","f","j"], "j")) // c
+export const nextGreatestLetter = (letters: string[], target: string): string =>{
+  
+return ""    
+};

@@ -40,69 +40,58 @@
  * output: and return true if the match else false
  */
 
-class Node {
-  constructor(value, next = null) {
-    this.value = value
-    this.next = next
+
+import { LinkedListNode } from "../../../util/LinkedListMaker";
+
+
+
+export const hasCycle = (head: LinkedListNode | null): boolean =>{
+  if (!head || !head.next) {
+    return false;
   }
-}
-const ArrayCyclicLinkListDeserialize = (arr) => {
-  if (arr.length === 0) {
-    return null
-  }
-  let head = new Node(arr[0])
-  let current = head
-  for (let i = 1; i < arr.length; i++) {
-    current.next = new Node(arr[i])
-    current = current.next
-    // see if works with lc Question
-    if (current.next === null) {
-      current.next = head
-      // current.next = head.next;
+
+  let slow: LinkedListNode | null = head;
+  let fast: LinkedListNode | null = head;
+
+  while (fast !== null && fast.next !== null) {
+    slow = slow!.next;
+    fast = fast.next.next;
+
+    if (slow === fast) {
+      return true; // Cycle detected
     }
   }
-  return head
+
+  return false; // No cycle found
 }
 
-const has_cycle = (head) => {
-  if (!head) return false
-  slowPointer = head
-  fastPointer = head.next
-  while (Infinity) {
-    if (!fastPointer || !fastPointer.next) return false
-    if (slowPointer == fastPointer || slowPointer == fastPointer.next) return true
-    slowPointer = slowPointer.next
-    fastPointer = fastPointer.next.next
-  }
-}
+// Example usage:
+const example1 = new LinkedListNode(3);
+example1.next = new LinkedListNode(2);
+example1.next.next = new LinkedListNode(0);
+example1.next.next.next = new LinkedListNode(-4);
+example1.next.next.next.next = example1.next; // creating a cycle
 
-let head = ArrayCyclicLinkListDeserialize([3, 2, 0, -4])
-// console.log(head.next.next.next)
-// cyclic linked list
-// head = new Node(3) // adding intial node true
-// head.next = new Node(2)
-// head.next.next = new Node(0)
-// head.next.next.next = new Node(-4)
-// head.next.next.next.next = head.next
+console.log(hasCycle(example1)); // Output: true
 
-let headTwo = ArrayCyclicLinkListDeserialize([1, 2])
-// head = new Node(1)  true
-// head.next = new Node(2)
-// head.next = head
-// console.log(head)
 
-let headThree = ArrayCyclicLinkListDeserialize([1])
-// head = new Node(1)  false
 
-console.log(`LinkedList has cycle: ${has_cycle(head)}`)
-console.log(`LinkedList has cycle: ${has_cycle(headTwo)}`)
-console.log(`LinkedList has cycle: ${has_cycle(headThree)}`)
+const example2 = new LinkedListNode(1);
+example2.next = new LinkedListNode(2);
+example2.next.next = example2; // creating a cycle
 
-// head.next.next.next.next.next.next = head.next.next.next
-// console.log(`LinkedList has cycle: ${has_cycle(head)}`)
+console.log(hasCycle(example2)); // Output: true
 
-// Time Complexity #
-// As we have concluded above, once the slow pointer enters the cycle, the fast pointer will meet the slow pointer in the same loop. Therefore, the time complexity of our algorithm will be O(N) where ‘N’ is the total number of nodes in the LinkedList.
 
-// Space Complexity #
-// The algorithm runs in constant space O(1).
+
+
+const example3 = new LinkedListNode(1);
+
+console.log(hasCycle(example3)); // Output: false
+
+// actual linked list
+const example4 = new LinkedListNode(3);
+example4.next = new LinkedListNode(2);
+example4.next.next = new LinkedListNode(0);
+example4.next.next.next = new LinkedListNode(-4);
+console.log(hasCycle(example4)); // Output: false

@@ -118,6 +118,24 @@ class ListNode<T> {
     this.value = value
     this.next = null
   }
+
+   arrayToLinkedList <T>(arr: T[]): ListNode<T> | null {
+  if (arr.length === 0) {
+    return null;
+  }
+
+  const head = new ListNode(arr[0]);
+  let current = head;
+
+  for (let i = 1; i < arr.length; i++) {
+    current.next = new ListNode(arr[i]);
+    current = current.next;
+  }
+
+  return head;
+
+}
+
 }
 
 class DoubleLLNode<T> {
@@ -452,9 +470,9 @@ class DataStructureFactory {
 
 export { DataStructureFactory }
 
-export { Stack, StackLinkedList, Queue, BinarySearchTree, Graph, MaxHeap, MinHeap }
+export { BinarySearchTree, Graph, MaxHeap, MinHeap, Queue, Stack, StackLinkedList }
 
-export { ListNode, DoubleLLNode, TreeNode, GraphNode }
+export { DoubleLLNode, GraphNode, ListNode, TreeNode }
 
 //   import * as DataStructures from './your-module';
 
