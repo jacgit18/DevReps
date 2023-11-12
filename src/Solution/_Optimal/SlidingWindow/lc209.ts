@@ -1,4 +1,4 @@
-function smallest_subarray_with_given_sumAlt(target: number, nums: number[]): number {
+export const smallest_subarray_with_given_sumAlt = (target: number, nums: number[]): number => {
     let start = 0;
     let end = 0;
     let sum = nums[0];
@@ -31,7 +31,7 @@ function smallest_subarray_with_given_sumAlt(target: number, nums: number[]): nu
 
 
 
-function smallestSubarrayWithGivenSum(s: number, arr: number[]): number {
+  export const smallestSubarrayWithGivenSum = (s: number, arr: number[]): number =>{
 
   let winSum = 0;
   let minLength = Infinity;
@@ -62,13 +62,10 @@ function smallestSubarrayWithGivenSum(s: number, arr: number[]): number {
 
 
 
-
 console.log(smallestSubarrayWithGivenSum(3,[4,6,6,8]));
 
   
     
-  
-export { smallestSubarrayWithGivenSum, smallest_subarray_with_given_sumAlt };
 
 
 

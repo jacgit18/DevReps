@@ -52,28 +52,26 @@ When tackling a coding challenge, especially when learning and implementing adva
   - [] Structurally Unique Binary Search Trees (hard): LC #95(Binary Tree)
   - [] Count of Structurally Unique Binary Search Trees (hard): LC #96(Binary Tree)
 
-- Cyclic Sort
-  - [] Cyclic Sort (easy)
-  - [] Find the Missing Number (easy): LC #268
-  - [] Find All Numbers Disappeared in an Array (easy): LC #448
-  - [] Find the Duplicate Number (easy): LC #287
-  - [] Find all Duplicate Numbers (easy): LC #442
-  - [] Find the Corrupt Pair (easy): LC #645
-  - [] Find the Smallest Missing Positive Number (medium): LC #41
-  - [] Find the First K Missing Positive Numbers (hard): LC proably #1539
+  - Modified Binary Search
+  - [] Order-agnostic Binary Search (easy): LC #704
+  - [] Ceiling of a Number (medium): LC #??
+  - [] Next Letter (medium): LC #744
+  - [] Number Range (medium): LC #34
+  - [] Search in a Sorted Infinite Array (medium): LC #702
+  - [] Minimum Difference Element (medium): LC #658 (k == 1)
+  - [] Bitonic Array Maximum (easy): LC #1671 or #162
+  - [] Search Bitonic Array (medium): LC #
+  - [] Search in Rotated Array (medium): LC #33
+  - [] Search in Rotated Array II (medium): LC #81
+  - [] Find Minimum in Rotated Sorted Array (medium): LC #153
+  - [] Find Minimum in Rotated Sorted Array II (medium): LC #154
 
-- Bitwise XOR
-  - [] Single Number (easy): LC #136
-  - [] Two Single Numbers (medium): LC #260
-  - [] Complement of Base 10 Number (medium): LC #476
-  - [] Problem Statement (hard): LC #832
+- In Place Reversal of a LL
+  - [] Reverse a LinkedList (easy): LC #206
+  - [] Reverse a Sub-list (medium): LC #92
+  - [] Reverse every K-element Sub-list( Reverse Nodes in k-Group) (hard): LC #25
+  - [] Rotate a LinkedList (medium): LC #61
 
-- Heaps
-  - [] Find the Median of a Number Stream (medium): LC #295
-  - [] Sliding Window Median (hard): LC #480
-  - [] Maximize Capital (hard): LC #502
-  - [] Next Interval (hard): LC #436
-  
 - Fast & Slow Pointers
   - [] LinkedList Cycle (easy): LC #141
   - [] Happy Number (medium): LC #202
@@ -83,12 +81,6 @@ When tackling a coding challenge, especially when learning and implementing adva
   - [] Rearrange a LinkedList (medium): LC #143
   - [] Cycle in a Circular Array (hard): LC #457
   
-- In Place Reversal of a LL
-  - [] Reverse a LinkedList (easy): LC #206
-  - [] Reverse a Sub-list (medium): LC #92
-  - [] Reverse every K-element Sub-list( Reverse Nodes in k-Group) (hard): LC #25
-  - [] Rotate a LinkedList (medium): LC #61
-
 - Doubly-Linked List(PERSONAl Review)
   - [] LRU Cache (medium): LC #146
   - [] All O`one Data Structure (Hard): LC #432
@@ -97,6 +89,16 @@ When tackling a coding challenge, especially when learning and implementing adva
   - [] Convert Binary Search Tree to Sorted Doubly Linked List(medium): LC #426
   - [] Flatten a Multilevel Doubly Linked List (medium): LC #430
   - [] Design Browser History (medium): LC #1472
+
+  - Cyclic Sort
+  - [] Cyclic Sort (easy)
+  - [] Find the Missing Number (easy): LC #268
+  - [] Find All Numbers Disappeared in an Array (easy): LC #448
+  - [] Find the Duplicate Number (easy): LC #287
+  - [] Find all Duplicate Numbers (easy): LC #442
+  - [] Find the Corrupt Pair (easy): LC #645
+  - [] Find the Smallest Missing Positive Number (medium): LC #41
+  - [] Find the First K Missing Positive Numbers (hard): LC proably #1539
 
 - Trees: BFS
   - [] Same Tree(easy) LC #100
@@ -121,20 +123,6 @@ When tackling a coding challenge, especially when learning and implementing adva
   - [] Count Paths for a Sum (medium): LC #437
   - [] Tree Diameter (medium): LC #543
   - [] Path with Maximum Sum (hard): LC #124
-
-- Modified Binary Search(Applies to Arrays)
-  - [] Order-agnostic Binary Search (easy): LC #704
-  - [] Ceiling of a Number (medium): LC #??
-  - [] Next Letter (medium): LC #744
-  - [] Number Range (medium): LC #34
-  - [] Search in a Sorted Infinite Array (medium): LC #702
-  - [] Minimum Difference Element (medium): LC #658 (k == 1)
-  - [] Bitonic Array Maximum (easy): LC #1671 or #162
-  - [] Search Bitonic Array (medium): LC #
-  - [] Search in Rotated Array (medium): LC #33
-  - [] Search in Rotated Array II (medium): LC #81
-  - [] Find Minimum in Rotated Sorted Array (medium): LC #153
-  - [] Find Minimum in Rotated Sorted Array II (medium): LC #154
 
 - Topological Sort (Graphs)
   - [] Topological Sort (medium)
@@ -178,6 +166,21 @@ When tackling a coding challenge, especially when learning and implementing adva
   - [] Coin Change (medium): LC #322
   - [] Coin Change 2 (medium): LC #518
   - [] Minimum Cost For Tickets (medium): LC #983
+
+
+  - Heaps
+  - [] Find the Median of a Number Stream (medium): LC #295
+  - [] Sliding Window Median (hard): LC #480
+  - [] Maximize Capital (hard): LC #502
+  - [] Next Interval (hard): LC #436
+
+
+- Bitwise XOR
+  - [] Single Number (easy): LC #136
+  - [] Two Single Numbers (medium): LC #260
+  - [] Complement of Base 10 Number (medium): LC #476
+  - [] Problem Statement (hard): LC #832
+
 
 - Other Dynamic Programming & Binary Search
   - [] Super Egg Drop(hard): LC #887

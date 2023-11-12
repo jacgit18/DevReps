@@ -1,72 +1,17 @@
-// Given two strings s and p, return an array of all the start indices of p's
-// anagrams in s. You may return the answer in any order.
+// Given two strings s and p, return an array of all the start indices of p's anagrams in s. You may return the answer in any order.
 
-// An Anagram is a word or phrase formed by rearranging the letters of a
-// different word or phrase, typically using all the original letters exactly once.
+// An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
 
-/**
- *
- * @param {* long string} s
- * @param {* short string} p
- * @returns [all start indices of short string anagram in long string ]
- * anagram a word or sequence of letters Rearrange in different order but contains same letters index returned order doesnt matter
- */
-const findAnagramsOG = (s, p) => {
-  // let [longString, shortString] = [s, p];
-  let [longString, shortString] = [new Array(26).fill(0), new Array(26).fill(0)]
-  let [windowStart, windowEnd] = [0, 0]
-  let sequence = []
-  let [longSequenceLength, shortSequenceLength] = [longString.length, shortString.length]
-  let Count = 0
+ 
 
-  if (longSequenceLength === 0 || shortSequenceLength === 0) {
-    return [stringOneSequenceLength, stringTwoSequenceLength]
-  }
+// Example 1:
 
-  while (windowEnd < longSequenceLength) {
-    // let shortStringRange = shortString.charCodeAt(windowEnd) - 'c'.charCodeAt(0); // 97-99
-
-    // if(windowEnd <= shortSequenceLength){
-    //   // longString[windowEnd]
-    //   console.log(shortString[windowEnd])
-
-    //   ++windowStart;
-    // }
-
-    // let caset = longString[windowStart].charCodeAt(windowStart) === shortString.charCodeAt(windowEnd);
-
-    if (
-      longString.substring(windowStart, windowEnd).length === shortSequenceLength &&
-      longString.charCodeAt(windowStart)
-    ) {
-      sequence.push(windowStart)
-      // console.log(sequence);
-      ++windowStart
-    }
-
-    // console.log(caset, caset.length)
-    // if(caset){
-    //        return [windowEnd]
-
-    // }
-
-    ++windowEnd
-  }
-
-  // console.log(sequence)
-  return [sequence[windowEnd]]
-  // return sequence
-
-  // return sequence.indexOf(sequence[sequence.length - 1])
-}
-
-//
-
-// console.log(findAnagramsOG("cbaebabacd","abc")); //  [0,6]
-// console.log(findAnagramsOG("abab","ab")); //  [0,1,2]
-
+// Input: s = "cbaebabacd", p = "abc"
+// Output: [0,6]
+// Explanation:
 // The substring with start index = 0 is "cba", which is an anagram of "abc".
 // The substring with start index = 6 is "bac", which is an anagram of "abc".
+// Example 2:
 
 // Input: s = "abab", p = "ab"
 // Output: [0,1,2]
@@ -74,57 +19,56 @@ const findAnagramsOG = (s, p) => {
 // The substring with start index = 0 is "ab", which is an anagram of "ab".
 // The substring with start index = 1 is "ba", which is an anagram of "ab".
 // The substring with start index = 2 is "ab", which is an anagram of "ab".
+ 
 
-const findAnagrams = (s, p) => {
-  let [longStringAlpha, shortStringAlpha] = [new Array(26).fill(0), new Array(26).fill(0)]
-  let [winEnd, ch] = [0]
-  let [longString, shortString] = [s, p]
-  let [longSequenceLength, shortSequenceLength] = [s.length, p.length]
+// Constraints:
 
-  for (let start = 0; start < shortSequenceLength; ++start) {
-    let index = shortString[start].charCodeAt(0) - 97
-    ++shortStringAlpha[index]
+// 1 <= s.length, p.length <= 3 * 104
+// s and p consist of lowercase English letters.
+
+
+
+export const findAnagrams = (s: string, p: string): number[] => {
+  const result: number[] = [];
+  const sMap: Record<string, number> = {};
+  const pMap: Record<string, number> = {};
+
+  // Initialize frequency maps for pattern and current window in string s
+  for (const char of p) {
+      pMap[char] = (pMap[char] || 0) + 1;
   }
 
-  let result = []
+  let left = 0;
+  let right = 0;
 
-  for (let start = 0; start < longSequenceLength; ++start) {
-    let index = longString[start].charCodeAt(0) - 97
-    ++longStringAlpha[index]
+  while (right < s.length) {
+      // Expand the window
+      sMap[s[right]] = (sMap[s[right]] || 0) + 1;
+      right++;
 
-    if (start - winEnd >= shortSequenceLength) {
-      ch = longString.charAt(winEnd).charCodeAt(0) - 97
-      if (longStringAlpha[ch] === 1) {
-        longStringAlpha[ch] = 0
-      } else {
-        --longStringAlpha[ch]
+      // Check if the window size is equal to the pattern size
+      if (right - left === p.length) {
+          // Compare the frequency maps for the current window and pattern
+          if (JSON.stringify(sMap) === JSON.stringify(pMap)) {
+              result.push(left);
+          }
+
+          // Move the window by removing the leftmost character
+          sMap[s[left]]--;
+          if (sMap[s[left]] === 0) {
+              delete sMap[s[left]];
+          }
+          left++;
       }
-      ++winEnd
-    }
-
-    if (areArrayEqual(longStringAlpha, shortStringAlpha)) {
-      result.push(start - shortSequenceLength + 1)
-    }
   }
 
-  return result
+  return result;
 }
 
-const areArrayEqual = (arr1, arr2) => {
-  if (arr1.length !== arr2.length) return false
-  let parallelStart = 0
-  let bool = true
-  for (let start = 0; start < arr1.length; ++start) {
-    if (arr1[start] !== arr2[parallelStart]) {
-      bool = false
-    }
-    ++parallelStart
-  }
-  return bool
-}
+// Example usage:
+const example1 = findAnagrams("cbaebabacd", "abc");
+console.log(example1); // Output: [0, 6]
 
-console.log(findAnagrams("cbaebabacd", "abc")) //  [0,6]
+const example2 = findAnagrams("abab", "ab");
+console.log(example2); // Output: [0, 1, 2]
 
-try {
-  module.exports = findAnagrams
-} catch (error) {}

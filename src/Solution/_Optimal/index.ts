@@ -17,17 +17,117 @@ import { make_squares } from "./TwoPointers/lc977";
 
 
 // Sliding Window
+import { longestOnes } from "./SlidingWindow/lc1004";
 import { smallestSubarrayWithGivenSum, smallest_subarray_with_given_sumAlt } from "./SlidingWindow/lc209";
 import { lengthOfLongestSubstring } from "./SlidingWindow/lc3";
+import { findSubstring } from "./SlidingWindow/lc30";
 import { longest_substring_with_k_distinct } from "./SlidingWindow/lc340";
+import { findAnagrams } from "./SlidingWindow/lc438";
 import { max_subarray_size_k } from "./SlidingWindow/lc53";
+import { checkInclusion } from "./SlidingWindow/lc567";
 import { minWindow } from "./SlidingWindow/lc76";
-
 import { fruits_into_baskets } from "./SlidingWindow/lc904";
 
 
+// Merge Interval
+import { canAttendMeetings } from "./Merge Intervals/lc252";
+import { minMeetingRooms } from "./Merge Intervals/lc253";
+import { merge } from "./Merge Intervals/lc56";
+import { insertInterval } from "./Merge Intervals/lc57";
+import { leastInterval } from "./Merge Intervals/lc621";
+import { intervalIntersection } from "./Merge Intervals/lc986";
 
-// import { name,  } from "./Modified Binary Search/";
+
+// Subset
+// import {  } from "./Subsets/";
+// import {  } from "./Subsets/";
+// import {  } from "./Subsets/";
+// import {  } from "./Subsets/";
+// import {  } from "./Subsets/";
+// import {  } from "./Subsets/";
+// import {  } from "./Subsets/";
+// import {  } from "./Subsets/";
+// import {  } from "./Subsets/";
+
+
+// Modified Binary Search
+// import {  } from "./Modified Binary Search/";
+// import {  } from "./Modified Binary Search/";
+// import {  } from "./Modified Binary Search/";
+// import {  } from "./Modified Binary Search/";
+// import {  } from "./Modified Binary Search/";
+// import {  } from "./Modified Binary Search/";
+
+
+
+// Fast Slow  Pointer
+// import {  } from "./Fast Slow(LinkedList)/";
+// import {  } from "./Fast Slow(LinkedList)/";
+// import {  } from "./Fast Slow(LinkedList)/";
+// import {  } from "./Fast Slow(LinkedList)/";
+// import {  } from "./Fast Slow(LinkedList)/";
+
+
+// Cyclic Sort
+// import {  } from "./Cyclic Sort/";
+// import {  } from "./Cyclic Sort/";
+// import {  } from "./Cyclic Sort/";
+// import {  } from "./Cyclic Sort/";
+// import {  } from "./Cyclic Sort/";
+// import {  } from "./Cyclic Sort/";
+// import {  } from "./Cyclic Sort/";
+// import {  } from "./Cyclic Sort/";
+
+
+// BFS
+// import {  } from "./BFS";
+// import {  } from "./BFS";
+// import {  } from "./BFS";
+// import {  } from "./BFS";
+// import {  } from "./BFS";
+
+// DFS
+// import {  } from "./DFS";
+// import {  } from "./DFS";
+// import {  } from "./DFS";
+// import {  } from "./DFS";
+// import {  } from "./DFS";
+// import {  } from "./DFS";
+
+
+// Topological Sort
+// import { } from "./Topological Sort Graphs/"
+// import { } from "./Topological Sort Graphs/"
+// import { } from "./Topological Sort Graphs/"
+// import { } from "./Topological Sort Graphs/"
+// import { } from "./Topological Sort Graphs/"
+
+
+// Top K Elements
+// import {  } from "./Top K Elements/";
+// import {  } from "./Top K Elements/";
+// import {  } from "./Top K Elements/";
+// import {  } from "./Top K Elements/";
+// import {  } from "./Top K Elements/";
+
+
+// K-way Merge
+// import {  } from "./K-way Merge Dynamic Programing/";
+// import {  } from "./K-way Merge Dynamic Programing/";
+// import {  } from "./K-way Merge Dynamic Programing/";
+// import {  } from "./K-way Merge Dynamic Programing/";
+// import {  } from "./K-way Merge Dynamic Programing/";
+
+// Knapsack
+// import {  } from "./Knapsack Dynamic Programing/";
+// import {  } from "./Knapsack Dynamic Programing/";
+// import {  } from "./Knapsack Dynamic Programing/";
+// import {  } from "./Knapsack Dynamic Programing/";
+// import {  } from "./Knapsack Dynamic Programing/";
+
+
+
+
 
 
 const OptimalTwoPointerSolution = {
@@ -52,12 +152,26 @@ const OptimalTwoPointerSolution = {
 
 const OptimalSlidingWindSolution = {
     lc3:lengthOfLongestSubstring,
+    lc30:findSubstring,
     lc53: max_subarray_size_k,
     lc76: minWindow,
     lc209: smallestSubarrayWithGivenSum,
     lc209alt: smallest_subarray_with_given_sumAlt,
     lc340: longest_substring_with_k_distinct,
-    lc904: fruits_into_baskets
+    lc438: findAnagrams,
+    ls567: checkInclusion,
+    lc904: fruits_into_baskets,
+    lc1004: longestOnes
+  };
+
+  const MergeIntervalSolution = {
+    lc56: merge,
+    lc57: insertInterval,
+    lc252: canAttendMeetings,
+    lc253: minMeetingRooms,
+    lc621: leastInterval,
+    lc986: intervalIntersection,
+
   };
 
 
@@ -65,24 +179,31 @@ const OptimalSlidingWindSolution = {
 
 
 
-  const OptimalModifiedBinarySearchSolution = {
-    // lc: ,
-    // lcalt: 
-  };
-
-  const OptimalNameSolution = {
-    // lc: ,
-    // lcalt: 
-  };
 
 
   export const combinedSolutionExports = {
-    OptimalModifiedBinarySearchSolution,
-    OptimalNameSolution,
+    OptimalTwoPointerSolution,
     OptimalSlidingWindSolution,
-    OptimalTwoPointerSolution
+    MergeIntervalSolution,
+
 };
 
 
 
+
+// export const combinedSolutionExports = {
+//   // ... (previous exports)
+//   SubsetsBacktracking: {
+//     subsets,
+//     subsetsWithDuplicates,
+//     permutations,
+//     stringPermutationsChangingCase,
+//     balancedParentheses,
+//     uniqueGeneralizedAbbreviations,
+//     evaluateExpression,
+//     structurallyUniqueBST,
+//     countStructurallyUniqueBST,
+//   },
+
+// }
 

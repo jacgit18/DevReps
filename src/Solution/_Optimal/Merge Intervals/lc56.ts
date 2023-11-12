@@ -1,203 +1,55 @@
-// Problem Statement #
+// Given an array of intervals where intervals[i] = [starti, endi], merge all overlapping intervals, and return an array of the non-overlapping intervals that cover all the intervals in the input.
 
-// Given a list of intervals, merge all the overlapping intervals to produce a
-// list that has only mutually exclusive intervals.
+ 
 
-/**
- * Input: take in a array of objects 
- * 
- * before you loop sort the values 
- * 
- * loop through array of objects and check value range and compare
- * to other index to see if ranges overlap and merge together 
- * to create a new range
- * 
- * so for the first pair check which number is the lowest and highest
- * and set them to start and end and as we iterate update the start and end
- * if the lowest and highest value change
- * 
- * whats considered overlapping
- Something like [1,4] and [4,5] are considered overlapping since 4 = 4
- *  
- * Output: return the new array with the merged range
- */
+// Example 1:
 
-class Interval {
-  constructor(start, end) {
-    this.start = start
-    this.end = end
+// Input: intervals = [[1,3],[2,6],[8,10],[15,18]]
+// Output: [[1,6],[8,10],[15,18]]
+// Explanation: Since intervals [1,3] and [2,6] overlap, merge them into [1,6].
+// Example 2:
+
+// Input: intervals = [[1,4],[4,5]]
+// Output: [[1,5]]
+// Explanation: Intervals [1,4] and [4,5] are considered overlapping.
+ 
+
+// Constraints:
+
+// 1 <= intervals.length <= 104
+// intervals[i].length == 2
+// 0 <= starti <= endi <= 104
+
+
+
+export const merge = (intervals: number[][]): number[][] => {
+  if (intervals.length <= 1) {
+      return intervals;
   }
 
-  get_interval() {
-    return "[" + this.start + ", " + this.end + "]"
+  // Sort intervals based on their start times
+  intervals.sort((a, b) => a[0] - b[0]);
+
+  const mergedIntervals: number[][] = [intervals[0]];
+
+  for (let i = 1; i < intervals.length; i++) {
+      const currentInterval = intervals[i];
+      const lastMergedInterval = mergedIntervals[mergedIntervals.length - 1];
+
+      // Check for overlap and merge intervals
+      if (currentInterval[0] <= lastMergedInterval[1]) {
+          lastMergedInterval[1] = Math.max(lastMergedInterval[1], currentInterval[1]);
+      } else {
+          mergedIntervals.push(currentInterval);
+      }
   }
+
+  return mergedIntervals;
 }
 
-const merge = function (intervals) {
-  //pre condition
-  if (intervals.length < 2) {
-    return intervals
-  }
-  // ?
-  intervals.sort((a, b) => {
-    // a.start - b.start
-    a[0] - b[0]
-  })
+// Example usage:
+const example1 = merge([[1, 3], [2, 6], [8, 10], [15, 18]]);
+console.log(example1); // Output: [[1, 6], [8, 10], [15, 18]]
 
-  const mergedIntervals = []
-
-  // let start = intervals[0].start;
-  // let end =intervals[0].end ;
-  // let [intervalOneIdx ,intervalTwoIdx] =[ 0, 0];
-
-  // let start, end;
-  let start = intervals[0][0]
-
-  for (i = 0; i < intervals.length; i++) {
-    // const interval = intervals[i];
-    // const [start, end] = firstList[i];
-    let end = intervals[i][1]
-
-    // overlapping intervals, adjust the 'end
-    if (start <= end) {
-      end = Math.max(end, end)
-    }
-    // non-overlapping interval, add the previous interval and reset
-    else {
-      mergedIntervals.push(start, end)
-      start = start
-      end = end
-    }
-  }
-
-  // add the last interval
-  mergedIntervals.push(start, end)
-
-  return mergedIntervals
-}
-
-// merged_intervals = merge([new Interval(1, 4), new Interval(2, 5), new Interval(7, 9)]);
-// console.log([new Interval(1, 4), new Interval(2, 5), new Interval(7, 9)]); // array of objects
-// result = "";
-
-// for(i=0; i < merged_intervals.length; i++) {
-//   result += merged_intervals[i].get_interval() + " ";
-// }
-// console.log(`Merged intervals: ${result}`)
-
-// let merged_intervals = merge([new Interval(1, 3), new Interval(2, 6), new Interval(8, 10), new Interval(15, 18)]);
-// let merged_intervals2 = merge([new Interval(1, 4), new Interval(4, 5)]);
-
-// let merged_intervals = merge([[1,3],[2,6],[8,10],[15,18]]);
-
-// result = "";
-// for(i=0; i < merged_intervals.length; i++) {
-//   result += merged_intervals[i].get_interval() + " ";
-// }
-// console.log(`Merged intervals: ${result}`)
-
-// merged_intervals = merge([new Interval(1, 4), new Interval(2, 6), new Interval(3, 5)]);
-// result = "";
-// for(i=0; i < merged_intervals.length; i++) {
-//   result += merged_intervals[i].get_interval() + " ";
-// }
-// console.log(`Merged intervals: ${result}`)
-
-// console.log(merged_intervals)
-
-// Time complexity #
-// The time complexity of the above algorithm is O(N * logN), where ‘N’ is the total number of intervals. We are iterating the intervals only once which will take O(N), in the beginning though, since we need to sort the intervals, our algorithm will take O(N * logN).
-
-// Space complexity #
-// The space complexity of the above algorithm will be O(N) as we need to return a list containing all the merged intervals. We will also need O(N) space for sorting. For Java, depending on its version, Collections.sort() either uses Merge sort or Timsort, and both these algorithms need O(N) space. Overall, our algorithm has a space complexity of O(N).
-
-const mergeArray = function (intervals) {
-  if (!intervals.length) return intervals
-  // console.log(intervals)
-  intervals.sort((a, b) => (a[0] !== b[0] ? a[0] - b[0] : a[1] - b[1]))
-
-  /**[[2,6],[1,3],[8,10],[15,18]]
-   *
-   * a: [1,3] > [8,10] > [8,10] > [15,18] > [15,18]
-   *      3        7      4         12         8
-   * b: [2, 6] > [1,3] > [2, 6] > [2,6] >  [8,10]
-   */
-
-  // intervals.sort((a, b) => {
-  //   if(a[0] !== b[0]){
-  //     a[0] - b[0]
-  //   }
-  //     a[1] - b[1]
-
-  // })
-
-  var end = intervals[0]
-  var res = [end]
-  for (var start of intervals) {
-    if (start[0] <= end[1]) {
-      end[1] = Math.max(end[1], start[1])
-    } else {
-      res.push(start)
-      end = start
-    }
-  }
-  return res
-}
-
-let merged_intervalsArray = mergeArray([
-  [1, 3],
-  [2, 6],
-  [8, 10],
-  [15, 18],
-])
-// let merged_intervalsArray = mergeArray([[2,6],[1,3],[8,10],[15,18]]);
-
-let merged_intervalsArray2 = mergeArray([
-  [1, 4],
-  [4, 5],
-])
-
-// console.log(merged_intervalsArray)
-// console.log(merged_intervalsArray2)
-
-// console.log(merged_intervals)
-// console.log(merged_intervals2)
-
-var mergeONE = function (intervals) {
-  if (intervals.length <= 1) return intervals
-
-  intervals.sort((a, b) => a[0] - b[0])
-
-  for (let i = 0; i < intervals.length; i++) {
-    const current = intervals[i]
-    const next = intervals[i + 1]
-
-    if (i !== intervals.length - 1 && current[1] >= next[0]) {
-      current[1] = Math.max(current[1], next[1])
-      intervals.splice(i, 2, current)
-      i--
-    }
-  }
-
-  return intervals
-}
-
-console.log(
-  "test",
-  mergeONE([
-    [1, 3],
-    [2, 6],
-    [8, 10],
-    [15, 18],
-  ]),
-)
-console.log(
-  "test",
-  mergeONE([
-    [1, 4],
-    [4, 5],
-  ]),
-)
-
-// console.log('test2',merge([[1,3],[2,6],[8,10],[15,18]]))
-// console.log('test2',merge([[1,4],[4,5]]))
+const example2 = merge([[1, 4], [4, 5]]);
+console.log(example2); // Output: [[1, 5]]
