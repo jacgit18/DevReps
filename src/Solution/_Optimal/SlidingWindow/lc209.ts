@@ -58,6 +58,7 @@ export const smallest_subarray_with_given_sumAlt = (target: number, nums: number
     return 0;
   }
   return minLength;
+  // return 0;
 }
 
 
