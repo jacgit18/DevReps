@@ -1,25 +1,14 @@
-// const EncodeDecodeStrings  = require('../../_Grokking_Algo & Leetcode/_Extra todo/Array or String/lc271');
+// const ContainsDup = require('../../_Grokking_Algo & Leetcode/_Extra todo/Array or String/lc217');
 
-// // Input: ["lint","code","love","you"]
-// // Output: ["lint","code","love","you"]
-// // Explanation:
-// // One possible encode method is: "lint:;code:;love:;you"
-
-
-// // Input: ["we", "say", ":", "yes"]
-// // Output: ["we", "say", ":", "yes"]
-// // Explanation:
-// // One possible encode method is: "we:;say:;:::;yes"
-
-//   describe('Test suite for checking palindrome ', () => {
+//   describe('Test suite for duplicates ', () => {
   
-//     let encodeDecodeStrings; // good practice tp avoid change in state
+//     let containsDup; // good practice tp avoid change in state
 //     beforeEach(() =>{ 
-//         encodeDecodeStrings = EncodeDecodeStrings;
+//       containsDup = ContainsDup;
 //     });
 
 //     test('Edge Case 1', () => {
-//       const edgecase1 = encodeDecodeStrings("A man, a plan, a canal: Panama");
+//       const edgecase1 = containsDup([1,2,3,1]);
      
 //       console.time("answer time");
 
@@ -29,13 +18,20 @@
 //     });
 
 //     test('Edge Case 2', () => {
-//       const edgecase2 = validPalindrome("race a car");
+//       const edgecase2 = containsDup([1,2,3,4]);
      
 
 //       expect(edgecase2).toBe(false);
 
 //     });
 
+//     test('Edge Case 3', () => {
+//       const edgecase3 = containsDup([1,1,1,3,3,4,3,2,4,2]);
+     
+
+//       expect(edgecase3).toBe(true);
+
+//     });
 
 
 //   });
@@ -43,8 +39,8 @@
 
 
 // Update to problem solution
-import { combinedAttemptExports } from "../../../../src/routers/OptimalAttempt";
-import { combinedSolutionExports } from "../../../../src/routers/OptimalSolution";
+// import { combinedAttemptExports } from "../../../src/routers/OptimalAttempt";
+import { combinedSolutionExports } from "../../../src/routers/OptimalSolution";
 
 
 type TestFunction = (k: number, arr: number[]) => number;

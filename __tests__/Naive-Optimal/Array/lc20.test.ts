@@ -1,53 +1,47 @@
-// const RemoveElements  = require('../../_Grokking_Algo & Leetcode/_Extra todo/LinkedList/lc203');
-// const LinkedList = require("../../_DataStructuresBuiltUpClasses/DataStrucFactoryInterview");
+// const ValidParentheses = require('../../_Grokking_Algo & Leetcode/_Extra todo/Array or String/lc20');
 
-// // Input: ["lint","code","love","you"]
-// // Output: ["lint","code","love","you"]
-// // Explanation:
-// // One possible encode method is: "lint:;code:;love:;you"
-
-
-// // Input: ["we", "say", ":", "yes"]
-// // Output: ["we", "say", ":", "yes"]
-// // Explanation:
-// // One possible encode method is: "we:;say:;:::;yes"
-
-//   describe('Test suite for RemoveElements ', () => {
+//   describe('Test suite for valid parenheses ', () => {
   
-//     let removeElements; // good practice tp avoid change in state
-//     let myLK;
-//     let head;
-//     let nodeVal;
-//     let LinkListArray = [1,2,6,3,4,5,6];
-
-
+//     let validParentheses; // good practice tp avoid change in state
 //     beforeEach(() =>{ 
-//       removeElements = RemoveElements;
-//       MyLK = new LinkedList();
-//        head = MyLK.ArrayLinkListDeserialize(LinkListArray);
-//        nodeVal = head.next.next.value
-
-
+//       validParentheses = ValidParentheses;
 //     });
 
 //     test('Edge Case 1', () => {
-//       const edgecase1 = removeElements(head, nodeVal);
+//       const edgecase1 = validParentheses("()");
      
+//       console.time("answer time");
 
-//       expect(edgecase1).toBe(head);
+//       expect(edgecase1).toBe(true);
+//       console.timeEnd("answer time");
 
 //     });
 
-  
+//     test('Edge Case 2', () => {
+//       const edgecase2 = validParentheses("()[]{}");
+     
 
+//       expect(edgecase2).toBe(true);
+
+//     });
+
+//     test('Edge Case 3', () => {
+//       const edgecase3 = validParentheses("(]");
+     
+
+//       expect(edgecase3).toBe(false);
+
+//     });
 
 
 //   });
+ 
+
 
 
 // Update to problem solution
-import { combinedAttemptExports } from "../../../../src/routers/OptimalAttempt";
-import { combinedSolutionExports } from "../../../../src/routers/OptimalSolution";
+// import { combinedAttemptExports } from "../../../src/routers/OptimalAttempt";
+import { combinedSolutionExports } from "../../../src/routers/OptimalSolution";
 
 
 type TestFunction = (k: number, arr: number[]) => number;
