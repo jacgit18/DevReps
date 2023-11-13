@@ -1,126 +1,111 @@
-// function minimumStepsToOne(num) {
-//     //
-
-//     num === 1 ? console.log(num)
-//     : num < Math.min(num) ? console.log( num - 1) : minimumStepsToOne(num -1);
-
-// }
-
-// Math.min(minimumStepsToOne(5));
-
-function minStepsToOne(n) {
-  function recurse(curr) {
-    // Base case
-    if (curr == 1) {
-      return 0
-    }
-
-    // Recursive relations
-    // sub1
-    let steps = recurse(curr - 1)
-
-    // divby2
-    if (curr % 2 == 0) {
-      let divby2 = recurse(curr / 2)
-      steps = Math.min(steps, divby2)
-    }
-
-    // divby3
-    if (curr % 3 == 0) {
-      let divby3 = recurse(curr / 3)
-      steps = Math.min(steps, divby3)
-    }
-
-    // return min # steps to 1 from `curr`
-    return 1 + steps
+export const minStepsToOne = (n: number): number =>{
+  if (n <= 0 || !Number.isInteger(n)) {
+    throw new Error("Input must be a positive integer");
   }
 
-  let res = recurse(n)
-  return res
+  function recurse(curr: number): number {
+    if (curr === 1) {
+      return 0;
+    }
+
+    let steps = recurse(curr - 1);
+
+    if (curr % 2 === 0) {
+      let divby2 = recurse(curr / 2);
+      steps = Math.min(steps, divby2);
+    }
+
+    if (curr % 3 === 0) {
+      let divby3 = recurse(curr / 3);
+      steps = Math.min(steps, divby3);
+    }
+
+    return 1 + steps;
+  }
+
+  let res = recurse(n);
+  return res;
 }
 
-function minStepsToOneMemo(n) {
-  let cache = {}
 
-  function recurse(curr) {
-    // Base case
-    if (curr == 1) {
-      return 0
+
+
+export const minStepsToOneMemo = (n: number): number =>{
+  if (n <= 0 || !Number.isInteger(n)) {
+    throw new Error("Input must be a positive integer");
+  }
+
+  let cache: { [key: number]: number } = {};
+
+  function recurse(curr: number): number {
+    if (curr === 1) {
+      return 0;
     }
-    // Cache check
+
     if (curr in cache) {
-      return cache[curr]
+      return cache[curr];
     }
 
-    // Recursive relations
-    // sub1
-    let steps = recurse(curr - 1)
+    let steps = recurse(curr - 1);
 
-    // divby2
-    if (curr % 2 == 0) {
-      let divby2 = recurse(curr / 2)
-      steps = Math.min(steps, divby2)
+    if (curr % 2 === 0) {
+      let divby2 = recurse(curr / 2);
+      steps = Math.min(steps, divby2);
     }
 
-    // divby3
-    if (curr % 3 == 0) {
-      let divby3 = recurse(curr / 3)
-      steps = Math.min(steps, divby3)
+    if (curr % 3 === 0) {
+      let divby3 = recurse(curr / 3);
+      steps = Math.min(steps, divby3);
     }
 
-    // return min # steps to 1 from `curr`
-    let result = 1 + steps
-    // Store result in cache
-    cache[curr] = result
-    return result
+    let result = 1 + steps;
+    cache[curr] = result;
+    return result;
   }
 
-  let res = recurse(n)
-  // console.log(cache);
-  return res
+  let res = recurse(n);
+  return res;
 }
 
-function minStepsToOneTab(n) {
-  // init array n+1 size
-  let tab = new Array(n + 1)
 
-  // apply base case to table
-  tab[1] = 0
 
-  // loop table filling in subproblem solutions
+
+export const minStepsToOneTab =(n: number): number =>{
+  if (n <= 0 || !Number.isInteger(n)) {
+    throw new Error("Input must be a positive integer");
+  }
+
+  let tab = new Array(n + 1);
+  tab[1] = 0;
+
   for (let curr = 2; curr <= n; curr++) {
-    // sub1
-    let steps = tab[curr - 1]
+    let steps = tab[curr - 1];
 
-    // divby2
-    if (curr % 2 == 0) {
-      let divby2 = tab[curr / 2]
-      steps = Math.min(steps, divby2)
+    if (curr % 2 === 0) {
+      let divby2 = tab[curr / 2];
+      steps = Math.min(steps, divby2);
     }
 
-    // divby3
-    if (curr % 3 == 0) {
-      let divby3 = tab[curr / 3]
-      steps = Math.min(steps, divby3)
+    if (curr % 3 === 0) {
+      let divby3 = tab[curr / 3];
+      steps = Math.min(steps, divby3);
     }
 
-    // return min # steps to 1 from `curr`
-    let result = 1 + steps
-    // Store result in cache
-    tab[curr] = result
+    let result = 1 + steps;
+    tab[curr] = result;
   }
 
-  return tab[n]
+  return tab[n];
 }
 
-// console.time("Brute Force Recursion: ");
-// console.log(minStepsToOne(10));
-// console.timeEnd("Brute Force Recursion: ");
+console.time("Brute Force Recursion: ");
+console.log(minStepsToOne(10));
+console.timeEnd("Brute Force Recursion: ");
 
-console.time("Memoization: ")
-console.log(minStepsToOneMemo(5678))
-console.timeEnd("Memoization: ")
+console.time("Memoization: ");
+console.log(minStepsToOneMemo(5678));
+console.timeEnd("Memoization: ");
 
-console.time("Tabulation: ")
-console.log(minStepsToOneTab(5678))
-console.timeEnd("Tabulation: ")
+console.time("Tabulation: ");
+console.log(minStepsToOneTab(5678));
+console.timeEnd("Tabulation: ");

@@ -34,7 +34,7 @@ function getCandidates(board: string[][], row: number, col: number): number[] {
   return candidates
 }
 
-function sudokuSolver(board: string[][]): boolean {
+export const sudokuSolver = (board: string[][]): boolean =>{
   // # For each empty cell, consider 'newCandidates', the
   // # set of possible candidate values that can
   // # be placed into that cell.
@@ -73,7 +73,7 @@ function sudokuSolver(board: string[][]): boolean {
   for (let val of candidates) {
     board[row][col] = val.toString()
 
-    if (sudokuSolve(board)) return true
+    if (sudokuSolver(board)) return true
 
     board[row][col] = "."
   }
@@ -95,8 +95,4 @@ const currentBoard: string[][] = [
   ["8", ".", "5", ".", ".", "4", ".", ".", "."],
 ]
 
-runTimeStart("Runtime")
 console.log("Edge case one", sudokuSolver(currentBoard))
-//log("Edge case two", sudokuSolver("")) // Expected I/O:
-//log("Edge case three", sudokuSolver("")) // Expected I/O:
-runTimeEnd("Runtime")

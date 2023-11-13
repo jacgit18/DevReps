@@ -36,3 +36,57 @@
 // The sum of lists[i].length will not exceed 104.
 
 
+class ListNode {
+    val: number;
+    next: ListNode | null;
+    constructor(val?: number, next?: ListNode | null) {
+        this.val = (val === undefined ? 0 : val);
+        this.next = (next === undefined ? null : next);
+    }
+}
+
+export const mergeKLists = (lists: Array<ListNode | null>): ListNode | null =>{
+    const mergeTwoLists = (l1: ListNode | null, l2: ListNode | null): ListNode | null => {
+        const dummy = new ListNode();
+        let current = dummy;
+
+        while (l1 !== null && l2 !== null) {
+            if (l1.val < l2.val) {
+                current.next = l1;
+                l1 = l1.next;
+            } else {
+                current.next = l2;
+                l2 = l2.next;
+            }
+            current = current.next;
+        }
+
+        current.next = l1 !== null ? l1 : l2;
+        return dummy.next;
+    };
+
+    const mergeKListsHelper = (lists: Array<ListNode | null>, start: number, end: number): ListNode | null => {
+        if (start === end) {
+            return lists[start];
+        }
+
+        const mid = Math.floor((start + end) / 2);
+        const left = mergeKListsHelper(lists, start, mid);
+        const right = mergeKListsHelper(lists, mid + 1, end);
+
+        return mergeTwoLists(left, right);
+    };
+
+    return mergeKListsHelper(lists, 0, lists.length - 1);
+}
+
+
+
+// Example usage:
+const lists1 = [
+    new ListNode(1, new ListNode(4, new ListNode(5))),
+    new ListNode(1, new ListNode(3, new ListNode(4))),
+    new ListNode(2, new ListNode(6)),
+];
+
+console.log(mergeKLists(lists1));

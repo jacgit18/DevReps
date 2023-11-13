@@ -1,8 +1,12 @@
-class TreeNode {
-  constructor(value) {
-    this.value = value
-    this.left = null
-    this.right = null
+class TreeNoder {
+  value: number;
+  left: TreeNoder | null;
+  right: TreeNoder | null;
+
+  constructor(value: number) {
+    this.value = value;
+    this.left = null;
+    this.right = null;
   }
 }
 
@@ -11,61 +15,26 @@ class TreeNode {
 // the largest key in the tree that is smaller than num. If such a number
 // doesn’t exist, return -1. Assume that all keys in the tree are nonnegative.
 
-/*  
- |
- |  Problem Broken down to English: find the node that is the highest value that is less then num in this case 17
- |
- |   Identify I/O: tree / return node value 
- |
- |
- |   Identify Constraints: and the value we are returning should be one less then the num or lesser
- |   
- |
- |    
- V Define Naïve-Approach:
- |   Visualize on Whiteboard
- |   Variables:
- |
- V Psuedocode & convert into actionable steps  with order in mind and 
- | what Built in Functions(Array, String, Math) & Data Structure or Sorting 
- | Algorithms that can be Leveraged or ruled out & Identify Control flow 
- |
- |
- | 
- V Code
 
 
-Control flow
-         TestCase: {
 
-          Pre-Condition:
+export const findLargestSmallerKey = (root: TreeNoder | null, num: number): number =>{
+  let result = -1;
 
-         Conditions:
-
-         Termination-Conditions:
-
-         Post-Conditions:
-
-         Switch case()
-
-}      
-
- 
-*/
-
-const findLargestSmallerKey = (rootNode, num) => {
-  let result = -1
-  while (rootNode !== null) {
-    if (rootNode.value < num) {
-      result = rootNode.value
-      rootNode = rootNode.right
+  while (root !== null) {
+    if (root.value < num) {
+      // Update result and move to the right subtree
+      result = root.value;
+      root = root.right;
     } else {
-      rootNode = rootNode.left
+      // Move to the left subtree
+      root = root.left;
     }
   }
 
-  return result
+  return result;
 }
+
 /* 
       20
     9    25
@@ -73,17 +42,13 @@ const findLargestSmallerKey = (rootNode, num) => {
     11 14
 */
 
-let root = new TreeNode(20)
-root.left = new TreeNode(9)
-root.right = new TreeNode(25)
+const rooT = new TreeNoder(20);
+rooT.left = new TreeNoder(9);
+rooT.right = new TreeNoder(25);
+rooT.left.left = new TreeNoder(5);
+rooT.left.right = new TreeNoder(12);
+rooT.left.right.left = new TreeNoder(11);
+rooT.left.right.right = new TreeNoder(14);
 
-root.left.left = new TreeNode(5)
-
-root.left.right = new TreeNode(12)
-
-root.left.right.left = new TreeNode(11)
-
-root.left.right.right = new TreeNode(14)
-// console.log(root.left.right)
-
-console.log(findLargestSmallerKey(root, 17)) // 14
+const numToFind = 15;
+console.log(findLargestSmallerKey(rooT, numToFind)); // Output: 14

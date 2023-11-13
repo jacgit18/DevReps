@@ -1,3 +1,10 @@
+
+
+
+// console.log([1]?.length ? true : false);
+
+
+
 const longestPalindrome = (s) => {
   // Return immediately for single characters
   if (s.length < 2) {

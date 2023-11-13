@@ -17,146 +17,53 @@ input:  binaryMatrix = [ [0,    1,    0,    1,    0],
 output: 6 # since this is the number of islands in binaryMatrix.
           # See all 6 islands color-coded below.
 
-Identify Built in Functions(Array, String, Math) & Data Structure or Sorting Algorithms that can be Leveraged or ruled out as you render down problem and Prioritize VISUAL THINKING OVERALL especially before writing
-
-
-|  
-V Identify I/O & Break down problem into English & Identify Constraints 10 min or less:
-
-Initial Edgecase Param()
-
-[ 
-[0,    1,    0,    1,    0],
-[0,    0,    1,    1,    1],
-[1,    0,    0,    1,    0],
-[0,    1,    1,    0,    0],
-[1,    0,    1,    0,    1] 
-
-]
-
-// count
-// mark the spot
-    0
-    |
-0 - 0 - 0 - 0
-    |
-    0
-    
-
-1 = island
-1, 1 = island
-
-   3
-  [1]
-   3  
-[1,1,1]
-   3
-  [1]
-  
-  map = {
-  
-  1: [1]: 
-  
-  2: [
-      [1,1],
-      [0,1]
-      ] 
-  
-  3: [
-        [0,1,0],
-      [0,1,1,1,0]
-        [0,1,0]
-      ] 
-  }
-
- 
-
-Return
-
-binaryMatrix[-1].Length 
-binaryMatrix[binaryMatrix-1].Length 
-binaryMatrix[-1][0].Length 
-binaryMatrix[0][-1].Length 
-
-if exceed length of row which is 5 
-if exceed length of row, col which is 5 
-
-
-
-(binaryMatrix[-1][0]) leftBound
-(binaryMatrix[-1]) 
-(binaryMatrix[0]) 
-
-(binaryMatrix[0][-1]) rightBOund
-
-
-
-|
-V Define Naïve-Approach/Psuedocode on whiteboard under 20 min or less:
-
-List out properties of problem you have gotten so far with order in mind:
-
-Define Variables(to store reference manipulate) & Identify CRUD:
-
-
-Identify Test Case with Control Flow in mind:
-
-
-|
-V IDENTIFY EDGE to Identify TEST CASES in 10 min or less
-
-Properties of Edgecase:
-
-
-
-
-
-Alt EdgeCase & similarities:
-
-		
-
-
-|
-V Code if stuck check past steps & Identify Runtime & Optimizations 15 min or less
-
-
-
-
-Control flow(Break, Continue) based on defined steps & edge cases
-
-    Simple Test case: Rules:
-     ---------------------------------------------
-      new customer -> 15% off
-      repeat customer -> 10% off
-      coupon customer -> 30% off
-
-     num of test case = num of rules = 2^num of conditions = 2^3 = 8 rules
-
-     n = not likely p = probably
-     Identify commonalities between test case
-     Follow Discrete math De-Morgan's Law
-     new cus T T T T F F F F
-     repeat cus T T F F T T F F
-     coupon cus T F T F T F T F
-     result N N P P P N N
-
-         TestCase: {
-
-          Pre-Condition:
-
-         Conditions:
-
-         Termination-Conditions:
-
-         Post-Conditions:
-
-
-         Switch case()
-
-}
 
 */
 
-function getNumberOfIslands(binaryMatrix) {
-  // your code goes here
+
+
+export const getNumberOfIslands = (binaryMatrix: number[][]): number =>{
+  if (!binaryMatrix || binaryMatrix.length === 0 || binaryMatrix[0].length === 0) {
+    return 0;
+  }
+
+  const rows = binaryMatrix.length;
+  const cols = binaryMatrix[0].length;
+  let islandsCount = 0;
+
+  function dfs(row: number, col: number): void {
+    if (row < 0 || row >= rows || col < 0 || col >= cols || binaryMatrix[row][col] === 0) {
+      return;
+    }
+
+    binaryMatrix[row][col] = 0; // Mark the cell as visited
+
+    // Explore neighbors in all four directions
+    dfs(row + 1, col); // Down
+    dfs(row - 1, col); // Up
+    dfs(row, col + 1); // Right
+    dfs(row, col - 1); // Left
+  }
+
+  for (let row = 0; row < rows; row++) {
+    for (let col = 0; col < cols; col++) {
+      if (binaryMatrix[row][col] === 1) {
+        islandsCount++;
+        dfs(row, col); // Explore the island and mark its cells as visited
+      }
+    }
+  }
+
+  return islandsCount;
 }
+
+// Example usage:
+const binaryMatrix = [
+  [0, 1, 0, 1, 0],
+  [0, 0, 1, 1, 1],
+  [1, 0, 0, 1, 0],
+  [0, 1, 1, 0, 0],
+  [1, 0, 1, 0, 1],
+];
+
+console.log(getNumberOfIslands(binaryMatrix)); // Output: 6
