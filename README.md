@@ -1,6 +1,8 @@
 # DevReps
 When tackling a coding challenge, especially when learning and implementing advanced patterns, it's essential to refrain from automatically defaulting to a specific pattern. Instead, take the time to thoroughly analyze the problem. For instance, when faced with a string-related question, it's best not to jump to conclusions like immediately opting for a two-pointer or sliding window approach. Doing so can restrict your thought process, causing you hyper-focus on a single method without proper consideration of the specific details.
 
+Also the Optimal approach isnt always one these patterns It depends on the problem your doing like it be something very simple at times.
+
 ## Syllabus
 
 - Extra

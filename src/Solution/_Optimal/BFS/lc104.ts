@@ -1,72 +1,42 @@
-// Problem#
+// Given the root of a binary tree, return its maximum depth.
 
-// Given a binary tree, find its maximum depth (or height).
+// A binary tree's maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
 
-class TreeNode {
-  constructor(val) {
-    this.val = val
-    this.left = null
-    this.right = null
+ 
+
+// Example 1:
+
+
+// Input: root = [3,9,20,null,null,15,7]
+// Output: 3
+// Example 2:
+
+// Input: root = [1,null,2]
+// Output: 2
+ 
+
+// Constraints:
+
+// The number of nodes in the tree is in the range [0, 104].
+// -100 <= Node.val <= 100
+
+import { TreeNode } from "../../../util/BinaryTreeMaker";
+
+
+export const maxDepth =(root: TreeNode | null): number =>{
+  if (root === null) {
+      return 0;
   }
+
+  const leftDepth = maxDepth(root.left);
+  const rightDepth = maxDepth(root.right);
+
+  return Math.max(leftDepth, rightDepth) + 1;
 }
 
-/**
- *
- * Input: tree
- * Output: the maximum depth level
- *
- *
- * Brute force Approach
- * ---------------
- * Variables: root, root. left, root.right, index, array to store the root
- *
- *
- */
+// Example usage:
+const root1 = new TreeNode(3, new TreeNode(9), new TreeNode(20, new TreeNode(15), new TreeNode(7)));
+console.log(maxDepth(root1)); // Output: 3
 
-/**
- *  Optimal Approach
- * -----------------
- *  Variables:
- *
- *
- */
-
-// were using bfs were a dfs would be better depending on depth
-function find_maximum_depth(root) {
-  // Pre-Condition: check if empty
-
-  // Conditions:
-
-  // Termination-Conditions: if there is only a root node return level
-
-  // Post-Conditions:
-
-  // there is only really a pre condition since were only going to lowest level
-
-  if (!root) return 0
-  let queue = [root]
-  let max = 0
-  while (queue.length > 0) {
-    let len = queue.length
-    max++
-    for (let i = 0; i < len; i++) {
-      let node = queue.shift()
-      if (node.left) queue.push(node.left)
-      if (node.right) queue.push(node.right)
-    }
-  }
-  return max
-}
-
-const root = new TreeNode(12)
-root.left = new TreeNode(7)
-root.right = new TreeNode(1)
-root.right.left = new TreeNode(10)
-root.right.right = new TreeNode(5)
-console.log(`Tree Maximum Depth: ${find_maximum_depth(root)}`)
-root.left.left = new TreeNode(9)
-root.right.left.left = new TreeNode(11)
-console.log(`Tree Maximum Depth: ${find_maximum_depth(root)}`)
-
-console.log(`\n ------- Edge Case -------- `)
-// console.log(`Tree has path: ${has_path(root, 16)}`);
+const root2 = new TreeNode(1, null, new TreeNode(2));
+console.log(maxDepth(root2)); // Output: 2

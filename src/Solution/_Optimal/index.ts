@@ -1,5 +1,10 @@
 // Two Pointer
+// Dynamic Importing: Instead of importing all functions at once, 
+// you can dynamically import only the functions you need at runtime. 
+// This can reduce the initial loading time.
+// const { pair_with_target_sum_Two_Pointer, pair_with_target_sum_map } = await import("./TwoPointers/lc1");
 import { pair_with_target_sum_Two_Pointer, pair_with_target_sum_map } from "./TwoPointers/lc1";
+
 import { maxArea } from "./TwoPointers/lc11";
 import { palVaidaor } from "./TwoPointers/lc125";
 import { search_triplets } from "./TwoPointers/lc15";
@@ -79,18 +84,25 @@ import { isHappy } from "./Fast Slow(LinkedList)/lc202";
 
 
 // BFS
-import { RecursiveBFSFunc } from "./BFS/bfsRecursive";
 import { isSameTree } from "./BFS/lc100";
 import { isSymmetric } from "./BFS/lc101";
 import { levelOrderTraversal, levelOrderTraversalRec } from "./BFS/lc102VistAllLevelPureBFS";
+import { zigzagLevelOrder } from "./BFS/lc103";
+import { maxDepth } from "./BFS/lc104";
+import { RecursiveBFSFunc } from "./BFS/lc107";
+import { minDepth } from "./BFS/lc111";
+import { connect } from "./BFS/lc117";
+import { averageOfLevels } from "./BFS/lc637";
 
 // DFS
-// import {  } from "./DFS";
-// import {  } from "./DFS";
-// import {  } from "./DFS";
-// import {  } from "./DFS";
-// import {  } from "./DFS";
-// import {  } from "./DFS";
+import { binaryTreePaths } from "./DFS/LC257";
+import { hasPathSum } from "./DFS/lc112";
+import { pathSumTwo } from "./DFS/lc113";
+import { sumNumbers } from "./DFS/lc129";
+import { isValidSequence } from "./DFS/lc1430";
+import { inorderSuccessor } from "./DFS/lc285";
+import { pathSum } from "./DFS/lc437";
+
 
 
 // Topological Sort
@@ -206,28 +218,29 @@ const OptimalFastSlowPointers ={
 
 
 const OptimalBFS = {
-    bfsRecDephCheck: RecursiveBFSFunc.levelOrderBottom,
-    RecBalCheck: RecursiveBFSFunc.isBalanced,
-    RecMaxHeightCheck: RecursiveBFSFunc.maxHeight,
-    RecMinHeightCheck: RecursiveBFSFunc.minHeight,
     lc100: isSameTree,
     lc101: isSymmetric,
     lc102Iter: levelOrderTraversal,
     lc102Rec: levelOrderTraversalRec,
-
-    lc103: isSymmetric,
-    lc104: isSymmetric,
-    lc107: isSymmetric,
-    lc111: isSymmetric,
-    lc117: isSymmetric,
-    lc637: isSymmetric, 
+    lc103: zigzagLevelOrder,
+    lc104: maxDepth,
+    lc107: RecursiveBFSFunc.levelOrderBottom,
+    lc111: minDepth,
+    lc117: connect,
+    lc637: averageOfLevels,
   };
 
-// const OptimalDFS ={
-  //   lc141: hasCycle,
-
+const OptimalDFS ={
+    // lc: hasCycle,
+    lc112: hasPathSum,
+    lc113: pathSumTwo,
+    lc129: sumNumbers,
+    lc257: binaryTreePaths,
+    lc285: inorderSuccessor,
+    lc437: pathSum,
+    lc1430: isValidSequence,
  
-  // };
+  };
 
 const OptimalTopologicalSort ={
     lc133: cloneGrapher,
@@ -266,12 +279,12 @@ export const combinedSolutionExports = {
     OptimalModifiedBinarySearch,
     OptimalCycSort,
     OptimalFastSlowPointers,
-      OptimalBFS,
-      // OptimalDFS,
-     OptimalTopologicalSort,
-     OptimalTop_K_Elements,
-     Optimal_KwayMerge,
-     OptimalKnapSack
+    OptimalBFS,
+    OptimalDFS,
+    OptimalTopologicalSort,
+    OptimalTop_K_Elements,
+    Optimal_KwayMerge,
+    OptimalKnapSack
   }
 
 

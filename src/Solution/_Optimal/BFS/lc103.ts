@@ -1,75 +1,68 @@
-// Problem Statement #
+// Given the root of a binary tree, return the zigzag level order traversal of its nodes' values. (i.e., from left to right, then right to left for the next level and alternate between).
 
-// Given a binary tree, populate an array to represent its zigzag level order traversal. You should populate the values of all nodes of the first level from left to right, then right to left for the next level and keep alternating in the same manner for the following levels.
+ 
 
-class TreeNode {
-  constructor(value) {
-    this.value = value
-    this.left = null
-    this.right = null
+// Example 1:
+
+
+// Input: root = [3,9,20,null,null,15,7]
+// Output: [[3],[20,9],[15,7]]
+// Example 2:
+
+// Input: root = [1]
+// Output: [[1]]
+// Example 3:
+
+// Input: root = []
+// Output: []
+ 
+
+// Constraints:
+
+// The number of nodes in the tree is in the range [0, 2000].
+// -100 <= Node.val <= 100
+
+
+import { TreeNode } from "../../../util/BinaryTreeMaker";
+
+export const zigzagLevelOrder = (root: TreeNode | null): number[][] =>{
+  if (!root) return [];
+
+  const result: number[][] = [];
+  let level: number[] = [];
+  let queue: TreeNode[] = [root];
+  let reverseOrder = false;
+
+  while (queue.length > 0) {
+      const levelSize = queue.length;
+
+      for (let i = 0; i < levelSize; i++) {
+          const currentNode = queue.shift()!;
+
+          if (reverseOrder) {
+              level.unshift(currentNode.value);
+          } else {
+              level.push(currentNode.value);
+          }
+
+          if (currentNode.left) queue.push(currentNode.left);
+          if (currentNode.right) queue.push(currentNode.right);
+      }
+
+      result.push(level);
+      level = [];
+      reverseOrder = !reverseOrder;
   }
+
+  return result;
 }
 
-const traverse = function (root) {
-  result = []
-  // TODO: Write your code here
-  return result
-}
+// Example usage:
+const root1 = new TreeNode(3, new TreeNode(9), new TreeNode(20, new TreeNode(15), new TreeNode(7)));
+console.log(zigzagLevelOrder(root1)); // Output: [[3], [20, 9], [15, 7]]
 
-var root = new TreeNode(12)
-root.left = new TreeNode(7)
-root.right = new TreeNode(1)
-root.left.left = new TreeNode(9)
-root.right.left = new TreeNode(10)
-root.right.right = new TreeNode(5)
-root.right.left.left = new TreeNode(20)
-root.right.left.right = new TreeNode(17)
-console.log(`Zigzag traversal: ${traverse(root)}`)
+const root2 = new TreeNode(1);
+console.log(zigzagLevelOrder(root2)); // Output: [[1]]
 
-// Solution
-// -----
-// function traverse(root) {
-//   result = [];
-//   if (root === null) {
-//     return result;
-//   }
-
-//   const queue = [];
-//   queue.push(root);
-//   leftToRight = true;
-//   while (queue.length > 0) {
-//     levelSize = queue.length;
-//     currentLevel = [];
-//     for (i = 0; i < levelSize; i++) {
-//       currentNode = queue.shift();
-
-//       // add the node to the current level based on the traverse direction
-//       if (leftToRight) {
-//         currentLevel.push(currentNode.val);
-//       } else {
-//         currentLevel.unshift(currentNode.val);
-//       }
-
-//       // insert the children of current node in the queue
-//       if (currentNode.left !== null) {
-//         queue.push(currentNode.left);
-//       }
-//       if (currentNode.right !== null) {
-//         queue.push(currentNode.right);
-//       }
-//     }
-//     result.push(currentLevel.toArray());
-//     // reverse the traversal direction
-//     leftToRight = !leftToRight;
-//   }
-
-//   return result;
-// }
-
-// -----
-
-// Time complexity #
-// The time complexity of the above algorithm is O(N), where ‘N’ is the total number of nodes in the tree. This is due to the fact that we traverse each node once.
-
-// Space complexity #
-// The space complexity of the above algorithm will be O(N) as we need to return a list containing the level order traversal. We will also need O(N) space for the queue. Since we can have a maximum of N/2 nodes at any level (this could happen only at the lowest level), therefore we will need O(N) space to store them in the queue.
+const root3 = null;
+console.log(zigzagLevelOrder(root3)); // Output: []

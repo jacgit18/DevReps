@@ -1,4 +1,4 @@
-import { combinedAttemptExports } from "../../src/routers/OptimalAttempt";
+// import { combinedAttemptExports } from "../../src/routers/OptimalAttempt";
 import { combinedSolutionExports } from "../../src/routers/OptimalSolution";
 import BenchmarkHelper from '../../src/util/benchmark-helper';
 
@@ -30,12 +30,12 @@ const generateTestCases = (
 
   describe('Performance Tests', () => {
     let lc1: (nums: number[], target: number) =>  number[];
-    let lc1Attempt: (nums: number[], target: number) =>  number[];
+    // let lc1Attempt: (nums: number[], target: number) =>  number[];
     let lc1Alt: (nums: number[], target: number) =>  number[];
   
     beforeEach(() => {
       lc1 = combinedSolutionExports.OptimalTwoPointerSolution.lc1;
-      lc1Attempt = combinedAttemptExports.OptimalSlidingWindAttempt.lc1;
+      // lc1Attempt = combinedAttemptExports.OptimalSlidingWindAttempt.lc1;
       lc1Alt = combinedSolutionExports.OptimalTwoPointerSolution.lc1Alt;
     });
   
@@ -49,9 +49,9 @@ const generateTestCases = (
         BenchmarkHelper.benchmarkFunction(lc1, testCase.nums, testCase.target);
       });
 
-      it(`lc209 Speed test - Test Case ${index + 1}`, () => {
-        BenchmarkHelper.benchmarkFunction(lc1Attempt, testCase.nums, testCase.target);
-      });
+      // it(`lc209 Speed test - Test Case ${index + 1}`, () => {
+      //   BenchmarkHelper.benchmarkFunction(lc1Attempt, testCase.nums, testCase.target);
+      // });
   
       it(`lc209Alt Speed test - Test Case ${index + 1}`, () => {
         BenchmarkHelper.benchmarkFunction(lc1Alt, testCase.nums, testCase.target);

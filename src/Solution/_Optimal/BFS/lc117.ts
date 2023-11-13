@@ -1,48 +1,86 @@
-// Problem Statement #
+// Given a binary tree
 
-// Given a binary tree, connect each node with its level order successor. The last node of each level should point to a null node.
+// struct Node {
+//   int val;
+//   Node *left;
+//   Node *right;
+//   Node *next;
+// }
+// Populate each next pointer to point to its next right node. If there is no next right node, the next pointer should be set to NULL.
 
-class TreeNode {
-  constructor(val) {
-    this.val = val
-    this.left = null
-    this.right = null
-    this.next = null
+// Initially, all next pointers are set to NULL.
+
+ 
+
+// Example 1:
+
+
+// Input: root = [1,2,3,4,5,null,7]
+// Output: [1,#,2,3,#,4,5,7,#]
+// Explanation: Given the above binary tree (Figure A), your function should populate each next pointer to point to its next right node, just like in Figure B. The serialized output is in level order as connected by the next pointers, with '#' signifying the end of each level.
+// Example 2:
+
+// Input: root = []
+// Output: []
+ 
+
+// Constraints:
+
+// The number of nodes in the tree is in the range [0, 6000].
+// -100 <= Node.val <= 100
+
+
+
+class NodeDiff {
+  val: number;
+  left: NodeDiff | null;
+  right: NodeDiff | null;
+  next: NodeDiff | null;
+
+  constructor(val: number, left: NodeDiff | null = null, right: NodeDiff | null = null, next: NodeDiff | null = null) {
+    this.val = val;
+    this.left = left;
+    this.right = right;
+    this.next = next;
+  }
+}
+
+export const connect = (root: NodeDiff | null): NodeDiff | null =>{
+  if (!root) {
+    return null;
   }
 
-  // level order traversal using 'next' pointer
-  print_level_order() {
-    console.log("Level order traversal using 'next' pointer: ")
-    let nextLevelRoot = this
-    while (nextLevelRoot !== null) {
-      let current = nextLevelRoot
-      nextLevelRoot = null
-      while (current != null) {
-        process.stdout.write(`${current.val} `)
-        if (nextLevelRoot === null) {
-          if (current.left !== null) {
-            nextLevelRoot = current.left
-          } else if (current.right !== null) {
-            nextLevelRoot = current.right
-          }
-        }
-        current = current.next
+  let queue: NodeDiff[] = [root];
+
+  while (queue.length > 0) {
+    let levelSize = queue.length;
+
+    for (let i = 0; i < levelSize; i++) {
+      let current = queue.shift()!;
+      
+      if (i < levelSize - 1) {
+        current.next = queue[0];
       }
-      console.log()
+
+      if (current.left) {
+        queue.push(current.left);
+      }
+
+      if (current.right) {
+        queue.push(current.right);
+      }
     }
   }
+
+  return root;
 }
 
-const connect_level_order_siblings = function (root) {
-  // TODO: Write your code here
-}
+// Example usage:
+const rootNEW = new NodeDiff(1,
+  new NodeDiff(2, new NodeDiff(4), new NodeDiff(5)),
+  new NodeDiff(3, null, new NodeDiff(7))
+);
 
-var root = new TreeNode(12)
-root.left = new TreeNode(7)
-root.right = new TreeNode(1)
-root.left.left = new TreeNode(9)
-root.right.left = new TreeNode(10)
-root.right.right = new TreeNode(5)
-connect_level_order_siblings(root)
+const connectedRoot = connect(rootNEW);
 
-root.print_level_order()
+// Access connected nodes through the 'next' pointers.

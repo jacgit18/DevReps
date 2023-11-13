@@ -1,122 +1,114 @@
-// Problem Statement #
+// Given the root of a binary tree, return the bottom-up level order traversal of its nodes' values. (i.e., from left to right, level by level from leaf to root).
 
-// Given a binary tree, populate an array to represent its level-by-level traversal in reverse order, i.e., the lowest level comes first.
-//You should populate the values of all nodes in each level from left to right in separate sub-arrays.
+ 
+
+// Example 1:
+
+
+// Input: root = [3,9,20,null,null,15,7]
+// Output: [[15,7],[9,20],[3]]
+// Example 2:
+
+// Input: root = [1]
+// Output: [[1]]
+// Example 3:
+
+// Input: root = []
+// Output: []
+ 
+
+// Constraints:
+
+// The number of nodes in the tree is in the range [0, 2000].
+// -1000 <= Node.val <= 1000
+
 
 /**
- *
- * Input: tree
- * Output: last to root in array
- *
- * Naive Approach
- * ---------------
- * Variables: root, root. left, root.right, array to store the results
- *
- *
- */
+ *     12 bfs vist each level
+ *   /    \
+ *  7       1
+ * / \     / \
+  9  null 10  5 
+ / \      / \ / \
+0   null--------null
+Input: root = [12,7,1,9,null,10,5]
+Output: [[12],[7,1],[9,10,5]]
 
-class TreeNode {
-  constructor(value) {
-    this.value = value
-    this.left = null
-    this.right = null
+dfs vist each side completley before other side
+
+
+*/
+import { TreeNode } from "../../../util/BinaryTreeMaker";
+
+
+// depth tracking
+const levelOrderBottom = (root: TreeNode | null): number[][] => {
+  if (root === null) {
+    return [];
   }
+  let h = maxHeight(root);
+  let results: number[][] = [];
+  let depth = 1;
+  for (depth; depth <= h; depth++) {
+    results.push(levelOrder(root, depth));
+  }
+
+  return results;
+};
+
+ const levelOrder = (node: TreeNode | null, d: number, level: number[] = []): number[] =>{
+  if (node === null) {
+    return level;
+  }
+  if (d === 1) {
+    level.push(node.value);
+  } else if (d > 1) {
+    levelOrder(node.left, d - 1, level);
+    levelOrder(node.right, d - 1, level);
+  }
+  return level;
 }
 
-const traverse = (root) => {
-  let result = []
-  let queue = [root]
 
-  while (queue.length) {
-    let levelSize = queue.length
-    let currentLevel = []
-    for (let i = 0; i < levelSize; i += 1) {
-      let currentNode = queue.shift()
-      if (currentNode.left) console.log(`Left push: ${queue.push(currentNode.left)}`)
-      // console.log(`queue Key Value pair checker ${queue.map((node) => {
-      //  return node.value
-      // })}`)
 
-      console.log(`queue ${queue.length}`)
-      if (currentNode.right) console.log(`Right push: ${queue.push(currentNode.right)}`)
-      console.log(`queue Check  ${queue.length}`)
-      console.log(
-        `queue Key Value pair checker ${queue.map((node) => {
-          return node.value
-        })}`,
-      )
 
-      console.log(`currentNode : ${currentNode.value}`)
-      currentLevel.push([currentNode.value])
-      console.log(`New Level ${currentLevel.length}`)
-    }
-    console.log(`Checker : ${currentLevel}`)
-    console.log(`Result Check : ${result.unshift(currentLevel)}`)
+ const isBalanced = (tree: TreeNode | null): boolean => {
+  return minHeight(tree) >= maxHeight(tree) - 1 ? true : false;
+};
 
-    // result.unshift(currentLevel);
+
+
+ function maxHeight(node: TreeNode | null): number {
+  if (node === null) {
+    return 0;
   }
-  return result
+  return Math.max(maxHeight(node.left), maxHeight(node.right)) + 1;
 }
 
-const traverse2 = (root) => {
-  let result = []
-  let queue = [root]
 
-  while (queue.length) {
-    let levelSize = queue.length
-    let currentLevel = []
-    for (let i = 0; i < levelSize; i += 1) {
-      let currentNode = queue.shift()
-      if (currentNode.left) queue.push(currentNode.left)
 
-      if (currentNode.right) queue.push(currentNode.right)
-
-      currentLevel.push(currentNode.value)
-    }
-    result.unshift(currentLevel)
+ function minHeight(node: TreeNode | null): number {
+  if (node === null) {
+    return 0;
   }
-  return result
+  return Math.min(minHeight(node.left), minHeight(node.right)) + 1;
 }
 
-var root = new TreeNode(3)
-root.left = new TreeNode(9)
-root.right = new TreeNode(20)
-root.right.left = new TreeNode(15)
-root.right.right = new TreeNode(7)
-console.time("doSomething")
-console.log(`Reverse level order traversal: ${traverse2(root)}`)
-console.timeEnd("doSomething")
 
-console.log(`\n ------- Edge Case -------- `)
-// console.log(`Reverse level order traversal: ${traverse(root)}`);
+export const RecursiveBFSFunc = {
+  levelOrderBottom, 
+  isBalanced, 
+  maxHeight, 
+  minHeight
+}
 
-// Solution
-// -----
-// const traverse = function(root) {
-//   const queue = [root];
-//   const result = [];
-//   if (!root) return result;
 
-//   while (queue.length) {
-//     const currLevel = [];
-//     const levelSize = q.length;
-//     for (let i = 0; i < levelSize; i++) {
-//       const node = queue.shift();
 
-//       currLevel.push(node.value);
-//       if (node.left) queue.push(node.left);
-//       if (node.right) queue.push(node.right);
-//     }
-//     result.unshift(currLevel);
-//   }
+let root = new TreeNode(12);
+root.left = new TreeNode(7);
+root.left.left = new TreeNode(9);
+root.right = new TreeNode(1);
+root.right.left = new TreeNode(10);
+root.right.right = new TreeNode(5);
 
-//   return result;
-// };
-
-// -----
-
-// Time complexity #
-// The time complexity of the above algorithm is O(N), where ‘N’ is the total number of nodes in the tree. This is due to the fact that we traverse each node once.
-
-// Space complexity #
-// The space complexity of the above algorithm will be O(N) as we need to return a list containing the level order traversal. We will also need O(N) space for the queue. Since we can have a maximum of N/2 nodes at any level (this could happen only at the lowest level), therefore we will need O(N) space to store them in the queue.
+console.log(levelOrderBottom(root));

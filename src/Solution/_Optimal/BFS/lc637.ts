@@ -1,65 +1,65 @@
-// Problem Statement #
+// Given the root of a binary tree, return the average value of the nodes on each level in the form of an array. Answers within 10-5 of the actual answer will be accepted.
+ 
 
-// Given a binary tree, populate an array to represent the averages of all of its levels.
+// Example 1:
 
-class TreeNode {
-  constructor(value) {
-    this.value = value
-    this.left = null
-    this.right = null
+// Input: root = [3,9,20,null,null,15,7]
+// Output: [3.00000,14.50000,11.00000]
+// Explanation: The average value of nodes on level 0 is 3, on level 1 is 14.5, and on level 2 is 11.
+// Hence return [3, 14.5, 11].
+
+
+
+// Example 2:
+
+// Input: root = [3,9,20,15,7]
+// Output: [3.00000,14.50000,11.00000]
+ 
+
+// Constraints:
+
+// The number of nodes in the tree is in the range [1, 104].
+// -231 <= Node.val <= 231 - 1
+
+
+import { TreeNode } from "../../../util/BinaryTreeMaker";
+
+export const averageOfLevels = (root: TreeNode | null): number[] =>{
+  if (!root) {
+    return [];
   }
-}
 
-/**
- * Input: binary tree with 3 or 4 levels
- * Output: average of the sum each level
- *
- * Properties: nodes, left and right
- *
- * Pre-Condition: if tree node is empty or null
- *
- * Conditions: account for number of nodes increased
- *
- *
- *
- */
+  let result: number[] = [];
+  let queue: TreeNode[] = [root];
 
-const find_level_averages = function (root) {
-  if (!root) return 0
+  while (queue.length > 0) {
+    let levelSize = queue.length;
+    let levelSum = 0;
 
-  let result = []
-  let queue = [root]
+    for (let i = 0; i < levelSize; i++) {
+      let current = queue.shift()!;
+      levelSum += current.value;
 
-  while (queue.length) {
-    let sum = 0
-    let currentSize = queue.length
-    for (let i = 0; i < currentSize; i++) {
-      let currentNode = queue.shift()
-      // console.log(` this is queue shift ${currentNode.value}`)
-      sum += currentNode.value
-      // console.log(` this is Sum ${sum}`)
+      if (current.left) {
+        queue.push(current.left);
+      }
 
-      if (currentNode.left !== null) queue.push(currentNode.left)
-      // console.log(` this is current node left ${currentNode.left.value}`);
-
-      if (currentNode.right !== null) queue.push(currentNode.right)
-      // console.log(` this is current node right ${currentNode.right.value}`);
+      if (current.right) {
+        queue.push(current.right);
+      }
     }
-    // console.log(` this is results ${result}`);
 
-    result.push(sum / currentSize)
+    result.push(levelSum / levelSize);
   }
 
-  return result
+  return result;
 }
 
-var root = new TreeNode(12)
-root.left = new TreeNode(7)
-root.right = new TreeNode(1)
-root.left.left = new TreeNode(9)
-root.left.right = new TreeNode(2)
-root.right.left = new TreeNode(10)
-root.right.right = new TreeNode(5)
+// Example usage:
+const root = new TreeNode(3,
+  new TreeNode(9),
+  new TreeNode(20, new TreeNode(15), new TreeNode(7))
+);
 
-console.log(`Level averages are: ${find_level_averages(root)}`)
-// find_level_averages(root);
+const averages = averageOfLevels(root);
+// averages will be [3, 14.5, 11]

@@ -1,6 +1,43 @@
 // Problem Statement #
 
-// Given a binary tree where each node can only have a digit (0-9) value, each root-to-leaf path will represent a number. Find the total sum of all the numbers represented by all paths.
+// You are given the root of a binary tree containing digits from 0 to 9 only.
+
+// Each root-to-leaf path in the tree represents a number.
+
+// For example, the root-to-leaf path 1 -> 2 -> 3 represents the number 123.
+// Return the total sum of all root-to-leaf numbers. Test cases are generated so that the answer will fit in a 32-bit integer.
+
+// A leaf node is a node with no children.
+
+ 
+
+// Example 1:
+
+// Input: root = [1,2,3]
+// Output: 25
+// Explanation:
+// The root-to-leaf path 1->2 represents the number 12.
+// The root-to-leaf path 1->3 represents the number 13.
+// Therefore, sum = 12 + 13 = 25.
+
+
+// Example 2:
+
+
+// Input: root = [4,9,0,5,1]
+// Output: 1026
+// Explanation:
+// The root-to-leaf path 4->9->5 represents the number 495.
+// The root-to-leaf path 4->9->1 represents the number 491.
+// The root-to-leaf path 4->0 represents the number 40.
+// Therefore, sum = 495 + 491 + 40 = 1026.
+ 
+
+// Constraints:
+
+// The number of nodes in the tree is in the range [1, 1000].
+// 0 <= Node.val <= 9
+// The depth of the tree will not exceed 10.
 
 // Example
 // -----
@@ -12,23 +49,36 @@
 //        | \
 //        2  9
 
-class TreeNode {
-  constructor(value) {
-    this.value = value
-    this.left = null
-    this.right = null
+import { TreeNode } from "../../../util/BinaryTreeMaker";
+
+export const sumNumbers = (root: TreeNode | null): number =>{
+  let totalSum = 0;
+
+  function dfs(node: TreeNode | null, currentSum: number) {
+    if (!node) {
+      return;
+    }
+
+    currentSum = currentSum * 10 + node.value;
+
+    if (!node.left && !node.right) {
+      // If leaf node, add the current sum to the total sum
+      totalSum += currentSum;
+      return;
+    }
+
+    // Recursively explore left and right subtrees
+    dfs(node.left, currentSum);
+    dfs(node.right, currentSum);
   }
+
+  dfs(root, 0);
+  return totalSum;
 }
 
-const find_sum_of_path_numbers = function (root) {
-  // TODO: Write your code here
-  return -1
-}
+// Example usage:
+const root1 = new TreeNode(1, new TreeNode(2), new TreeNode(3));
+const root2 = new TreeNode(4, new TreeNode(9, new TreeNode(5), new TreeNode(1)), new TreeNode(0));
 
-var root = new TreeNode(1)
-root.left = new TreeNode(0)
-root.right = new TreeNode(1)
-root.left.left = new TreeNode(1)
-root.right.left = new TreeNode(6)
-root.right.right = new TreeNode(5)
-console.log(`Total Sum of Path Numbers: ${find_sum_of_path_numbers(root)}`)
+console.log(sumNumbers(root1)); // Output: 25
+console.log(sumNumbers(root2)); // Output: 1026

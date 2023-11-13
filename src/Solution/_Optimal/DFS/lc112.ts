@@ -1,67 +1,67 @@
-// Problem Statement #
+// Given the root of a binary tree and an integer targetSum, return true if the tree has a root-to-leaf path such that adding up all the values along the path equals targetSum.
 
-// Given a binary tree and a number ‘S’, find if the tree has a path from root-to-leaf such that the sum
-// of all the node values of that path equals ‘S’.
+// A leaf is a node with no children.
 
-class TreeNode {
-  constructor(value) {
-    this.value = value
-    this.left = null
-    this.right = null
+ 
+
+// Example 1:
+
+
+// Input: root = [5,4,8,11,null,13,4,7,2,null,null,null,1], targetSum = 22
+// Output: true
+// Explanation: The root-to-leaf path with the target sum is shown.
+
+
+// Example 2:
+
+
+// Input: root = [1,2,3], targetSum = 5
+// Output: false
+// Explanation: There two root-to-leaf paths in the tree:
+// (1 --> 2): The sum is 3.
+// (1 --> 3): The sum is 4.
+// There is no root-to-leaf path with sum = 5.
+
+
+// Example 3:
+
+// Input: root = [], targetSum = 0
+// Output: false
+// Explanation: Since the tree is empty, there are no root-to-leaf paths.
+ 
+
+// Constraints:
+
+// The number of nodes in the tree is in the range [0, 5000].
+// -1000 <= Node.val <= 1000
+// -1000 <= targetSum <= 1000
+
+import { TreeNode } from "../../../util/BinaryTreeMaker";
+
+export const hasPathSum = (root: TreeNode | null, targetSum: number): boolean =>{
+  if (!root) {
+    return false;
   }
+
+  // Check if the current node is a leaf node and if the sum is equal to the target
+  if (!root.left && !root.right && root.value === targetSum) {
+    return true;
+  }
+
+  // Recursively check the left and right subtrees with the updated target sum
+  return hasPathSum(root.left, targetSum - root.value) || hasPathSum(root.right, targetSum - root.value);
 }
 
-/**
- *
- * Input: tree
- * Output: Boolean value weather the totalSum of a path equals the targetSum
- *
- * Brute force Approach
- * ---------------
- * Variables: root, root. left, root.right, index, array to store the root essentially a stack, TotalSum
- *
- * dfs and preorder
- *
- */
+// Example usage:
+const root = new TreeNode(5,
+  new TreeNode(4, new TreeNode(11, new TreeNode(7), new TreeNode(2))),
+  new TreeNode(8, new TreeNode(13), new TreeNode(4, null, new TreeNode(1)))
+);
 
-/**
- *  Optimal Approach
- * -----------------
- *  Variables: root, root. left, root.right, index, array to store the root essentially a stack, TotalSum
- *
- *
- */
+const targetSum1 = 22;
+const targetSum2 = 5;
+const targetSum3 = 0;
 
-// closure version which is used for data encapulation and uses more memory
-// recursition proably makes more sense then iterative since were dealing with tree data structure
-// in this case for dfs we wouldnt need to use a stack
-const has_path = (root, targetSum) => {
-  // Pre-Condition: check if empty && if root.value = targetSum
-  if (!root) return false
-  if (root.value === targetSum) return true
-
-  let truthChecker = false // storing state
-  const dfs = (node, sum = 0) => {
-    sum += node.value
-    if (!node.left && !node.right && sum === targetSum) truthChecker = true // base Case
-    // Termination-Conditions: check left and right are path sum
-    node.left && dfs(node.left, sum) // traverse left side ?
-    node.right && dfs(node.right, sum)
-  }
-  dfs(root)
-
-  return truthChecker
-}
-
-let root = new TreeNode(12)
-root.left = new TreeNode(7)
-root.right = new TreeNode(1)
-root.left.left = new TreeNode(9)
-root.right.left = new TreeNode(10)
-root.right.right = new TreeNode(5)
-console.log(`Tree has path: ${has_path(root, 23)}`)
-console.log(`Tree has path: ${has_path(root, 16)}`)
-
-console.log(`\n ------- Edge Case -------- `)
-console.log(`Tree has path: ${has_path(root, 0)}`)
-console.log(`Tree has path: ${has_path(root, root.value)}`)
+console.log(hasPathSum(root, targetSum1)); // Output: true
+console.log(hasPathSum(root, targetSum2)); // Output: false
+console.log(hasPathSum(null, targetSum3)); // Output: false
