@@ -79,11 +79,10 @@ import { isHappy } from "./Fast Slow(LinkedList)/lc202";
 
 
 // BFS
-// import {  } from "./BFS";
-// import {  } from "./BFS";
-// import {  } from "./BFS";
-// import {  } from "./BFS";
-// import {  } from "./BFS";
+import { RecursiveBFSFunc } from "./BFS/bfsRecursive";
+import { isSameTree } from "./BFS/lc100";
+import { isSymmetric } from "./BFS/lc101";
+import { levelOrderTraversal, levelOrderTraversalRec } from "./BFS/lc102VistAllLevelPureBFS";
 
 // DFS
 // import {  } from "./DFS";
@@ -206,12 +205,23 @@ const OptimalFastSlowPointers ={
   };
 
 
-// const OptimalBFS = {
-  //   lc141: hasCycle,
-  
+const OptimalBFS = {
+    bfsRecDephCheck: RecursiveBFSFunc.levelOrderBottom,
+    RecBalCheck: RecursiveBFSFunc.isBalanced,
+    RecMaxHeightCheck: RecursiveBFSFunc.maxHeight,
+    RecMinHeightCheck: RecursiveBFSFunc.minHeight,
+    lc100: isSameTree,
+    lc101: isSymmetric,
+    lc102Iter: levelOrderTraversal,
+    lc102Rec: levelOrderTraversalRec,
 
- 
-  // };
+    lc103: isSymmetric,
+    lc104: isSymmetric,
+    lc107: isSymmetric,
+    lc111: isSymmetric,
+    lc117: isSymmetric,
+    lc637: isSymmetric, 
+  };
 
 // const OptimalDFS ={
   //   lc141: hasCycle,
@@ -256,7 +266,7 @@ export const combinedSolutionExports = {
     OptimalModifiedBinarySearch,
     OptimalCycSort,
     OptimalFastSlowPointers,
-      // OptimalBFS,
+      OptimalBFS,
       // OptimalDFS,
      OptimalTopologicalSort,
      OptimalTop_K_Elements,

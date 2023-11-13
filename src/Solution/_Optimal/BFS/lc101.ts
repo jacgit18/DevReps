@@ -1,89 +1,61 @@
-const treeGrower = require("../../../_DataStructuresBuiltUpClasses/DataStrucFactoryInterview")
-const tree = new treeGrower()
-
 // Given the root of a binary tree, check whether it is a mirror of itself (i.e., symmetric around its center).
 
-// comparing pairs of subtrees
-// const BT = require("../../_DataStructuresClasses/BinaryTree");
-// const BinarySearchTree = require("../../_DataStructuresClasses/BinarySearchTree");
+ 
 
-// const myBT = new BT();
-// const myBST = new BinarySearchTree();
+// Example 1:
 
-// bfs mor efficient
 
-var isSymmetric = function (root) {
-  if (root == null) return true
+// Input: root = [1,2,2,3,4,4,3]
+// Output: true
+// Example 2:
 
-  return subTreeSymmetryChecker(root.left, root.right)
+
+// Input: root = [1,2,2,null,3,null,3]
+// Output: false
+ 
+
+// Constraints:
+
+// The number of nodes in the tree is in the range [1, 1000].
+// -100 <= Node.val <= 100
+
+import { TreeNode } from "../../../util/BinaryTreeMaker";
+
+export const isSymmetric = (root: TreeNode | null): boolean =>{
+  if (!root) {
+      return true;
+  }
+
+  const isMirror = (left: TreeNode | null, right: TreeNode | null): boolean => {
+      if (!left && !right) {
+          return true;
+      }
+
+      if (!left || !right || left.value !== right.value) {
+          return false;
+      }
+
+      return isMirror(left.left, right.right) && isMirror(left.right, right.left);
+  };
+
+  return isMirror(root.left, root.right);
 }
 
-function subTreeSymmetryChecker(left, right) {
-  if (left == null && right == null) return true // If both sub trees are empty
-  if (left == null || right == null) return false // If only one of the sub trees are empty
-  if (left.val !== right.val) return false // If the values dont match up
+// Example usage:
+const tree1 = new TreeNode(1);
+tree1.left = new TreeNode(2);
+tree1.right = new TreeNode(2);
+tree1.left.left = new TreeNode(3);
+tree1.left.right = new TreeNode(4);
+tree1.right.left = new TreeNode(4);
+tree1.right.right = new TreeNode(3);
 
-  // Check both subtrees but travelled in a mirrored/symmetric fashion
-  // (one goes left, other goes right)  and make sure they're both symmetric
-  return (
-    subTreeSymmetryChecker(left.left, right.right) && subTreeSymmetryChecker(left.right, right.left)
-  )
-}
+console.log(isSymmetric(tree1)); // Output: true
 
-// let leaf = tree.ArrayTreeDeserialize([1,2,2,3,4,4,3]);
-// let leaf = tree.ArrayTreeDeserialize([1,2,2,null,3,null,3]);
+const tree2 = new TreeNode(1);
+tree2.left = new TreeNode(2);
+tree2.right = new TreeNode(2);
+tree2.left.right = new TreeNode(3);
+tree2.right.right = new TreeNode(3);
 
-let leaf = tree.ArrayBinaryTreeDeserialize([1, 2, 2, 3, 4, 4, 3])
-let leaf2 = tree.ArrayBinaryTreeDeserialize([1, 2, 2, null, 3, null, 3])
-
-console.log(isSymmetric(leaf))
-console.log(isSymmetric(leaf2))
-
-// console.log(isSymmetric([1,2,2,3,4,4,3]));
-
-// [1,2,2,3,4,4,3]
-// [1,2,2,null,3,null,3]
-
-// ArrayBinaryTreeDeserialize
-
-// myBT.add(1);
-// myBT.add(2);
-// myBT.add(2);
-// myBT.add(3);
-// myBT.add(4);
-// myBT.add(4);
-// myBT.add(3);
-// console.log(myBT.isBalanced());
-// console.log(myBT.inOrder());
-// console.log(myBT);
-
-// myBST.insert(1);
-// myBST.insert(2);
-// myBST.insert(2);
-// myBST.insert(3);
-// myBST.insert(4);
-// myBST.insert(4);
-// myBST.insert(3);
-// console.log(myBST.root.right)
-
-// var isSymmetric = function(root) {
-//     if(root == null){
-//         return true;
-//     }
-
-//     return isMirror(root.left, root.right)
-
-// };
-
-// let isMirror = (subtreeOne, subtreeTwo) =>{
-//     if (subtreeOne === null || subtreeTwo === null) {
-//         return subtreeOne === subtreeTwo;
-//     }
-
-//     if (subtreeOne.val !== subtreeTwo.val) {
-//         return false;
-//     }
-
-//     return isMirror(subtreeOne.left, subtreeTwo.right) && isMirror(subtreeOne.right, subtreeTwo.left);
-
-// }
+console.log(isSymmetric(tree2)); // Output: false

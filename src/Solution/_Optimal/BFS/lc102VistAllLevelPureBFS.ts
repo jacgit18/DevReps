@@ -1,70 +1,96 @@
-// Problem Statement #
+// Given the root of a binary tree, return the level order traversal of its nodes' values. (i.e., from left to right, level by level).
 
-// Given a binary tree, populate an array to represent its
-// level-by-level traversal.
-// You should populate the values of all nodes of each
-// level from left to right in separate sub-arrays.
+ 
 
-class TreeNode {
-  constructor(value) {
-    this.value = value
-    this.left = null
-    this.right = null
+// Example 1:
+
+
+// Input: root = [3,9,20,null,null,15,7]
+// Output: [[3],[9,20],[15,7]]
+
+
+// Example 2:
+
+// Input: root = [1]
+// Output: [[1]]
+// Example 3:
+
+// Input: root = []
+// Output: []
+ 
+
+// Constraints:
+
+// The number of nodes in the tree is in the range [0, 2000].
+// -1000 <= Node.val <= 1000
+
+
+import { TreeNode } from "../../../util/BinaryTreeMaker";
+
+export const levelOrderTraversal = (root: TreeNode | null): number[][] =>{
+  if (!root) {
+      return [];
   }
-}
 
-/**
- *     12 bfs vist each level
- *   /    \
- *  7       1
- * / \     / \
-  9  null 10  5 
- / \      / \ / \
- null--------null
-Input: root = [12,7,1,9,null,10,5]
-Output: [[12],[7,1],[9,10,5]]
+  const result: number[][] = [];
+  const queue: TreeNode[] = [root];
 
-dfs vist each side completley before other side
-
-
-*/
-
-// simpler
-function bfs(node) {
-  let queue = [node]
-  let current
-  let result = []
   while (queue.length > 0) {
-    current = queue.shift()
-    if (current.left !== null) queue.push(current.left)
+      const currentLevelSize = queue.length;
+      const currentLevelValues: number[] = [];
 
-    if (current.right !== null) queue.push(current.right)
+      for (let i = 0; i < currentLevelSize; i++) {
+          const currentNode = queue.shift()!;
+          currentLevelValues.push(currentNode.value);
 
-    result.push(current.value)
+          if (currentNode.left) {
+              queue.push(currentNode.left);
+          }
+
+          if (currentNode.right) {
+              queue.push(currentNode.right);
+          }
+      }
+
+      result.push(currentLevelValues);
   }
-  return result
+
+  return result;
 }
 
-let root = new TreeNode(12)
-root.left = new TreeNode(7)
-root.right = new TreeNode(1)
-root.left.left = new TreeNode(9)
-root.right.left = new TreeNode(10)
-root.right.right = new TreeNode(5)
-// let root = new TreeNode(4);
-// root.left = new TreeNode(2);
-// root.right = new TreeNode(5);
-// root.left.left = new TreeNode(1);
-// root.right.left = new TreeNode(3);
-// root.right.right = new TreeNode(7);
-// root.right.right.left = new TreeNode(6);
-// root.right.right.right = new TreeNode(8);
 
-// console.log(root)
-console.log(`Level order traversal: ${bfs(root)}`)
 
-// Time complexity #
-// The time complexity of the above algorithm is O(N), where ‘N’ is the total number of nodes in the tree. This is due to the fact that we traverse each node once.
+export const levelOrderTraversalRec = (root: TreeNode | null): number[][] =>{
+  const result: number[][] = [];
 
-// Space complexity #
-// The space complexity of the above algorithm will be O(N) as we need to return a list containing the level order traversal. We will also need O(N) space for the queue. Since we can have a maximum of N/2 nodes at any level (this could happen only at the lowest level), therefore we will need O(N) space to store them in the queue.
+  const traverse = (node: TreeNode | null, level: number): void => {
+      if (!node) {
+          return;
+      }
+
+      if (result.length <= level) {
+          result.push([]);
+      }
+
+      result[level].push(node.value);
+
+      traverse(node.left, level + 1);
+      traverse(node.right, level + 1);
+  };
+
+  traverse(root, 0);
+
+  return result;
+}
+
+
+
+// Example usage:
+const tree = new TreeNode(3);
+tree.left = new TreeNode(9);
+tree.right = new TreeNode(20);
+tree.right.left = new TreeNode(15);
+tree.right.right = new TreeNode(7);
+
+console.log(levelOrderTraversal(tree)); // Output: [[3],[9,20],[15,7]]
+console.log(levelOrderTraversalRec(tree)); // Output: [[3],[9,20],[15,7]]
