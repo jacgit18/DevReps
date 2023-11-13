@@ -1,4 +1,4 @@
-// Two Pointer 
+// Two Pointer
 import { pair_with_target_sum_Two_Pointer, pair_with_target_sum_map } from "./TwoPointers/lc1";
 import { maxArea } from "./TwoPointers/lc11";
 import { palVaidaor } from "./TwoPointers/lc125";
@@ -104,7 +104,7 @@ import { findKthLargest } from "./Top K Elements/lc215";
 
 
 // K-way Merge
-// import { findKthLargest } from "./K-way Merge Dynamic Programing/lc23";
+import { mergeKLists } from "./K-way Merge Dynamic Programing/lc23";
 
 
 // Knapsack
@@ -114,10 +114,7 @@ import { findMaxForm } from "./Knapsack Dynamic Programing/lc474";
 
 
 
-export const combinedSolutionExports = {
-
-
- OptimalTwoPointerSolution: {
+const OptimalTwoPointerSolution = {
   lc1: pair_with_target_sum_Two_Pointer,
   lc1Alt: pair_with_target_sum_map,
   lc11: maxArea,
@@ -133,11 +130,11 @@ export const combinedSolutionExports = {
   lc713: numSubarrayProductLessThanK,
   lc844: backspaceCompare,
   lc977: make_squares,
-},
+};
 
 
 
- OptimalSlidingWindSolution: {
+const OptimalSlidingWindSolution = {
     lc3:lengthOfLongestSubstring,
     lc30:findSubstring,
     lc53: max_subarray_size_k,
@@ -149,9 +146,9 @@ export const combinedSolutionExports = {
     ls567: checkInclusion,
     lc904: fruits_into_baskets,
     lc1004: longestOnes
-  },
+  };
 
-   MergeIntervalSolution: {
+const MergeIntervalSolution = {
     lc56: merge,
     lc57: insertInterval,
     lc252: canAttendMeetings,
@@ -159,10 +156,10 @@ export const combinedSolutionExports = {
     lc621: leastInterval,
     lc986: intervalIntersection,
 
-  },
+  };
 
 
-  OptimalSubsetSolution: {
+const OptimalSubsetSolution = {
     backtrackOne: matrix,
     backtrackTwo:robotPaths,
     lc17: letterCombinationsBackTrack,
@@ -174,9 +171,9 @@ export const combinedSolutionExports = {
     lc442Alt: findDuplicatesCyclic,
     lc784: letterCasePermutation,
 
-  },
+  };
 
-  OptimalModifiedBinarySearch: {
+const OptimalModifiedBinarySearch = {
     lc33: searchRanger,
     lc34: searchRange,
     lc35: searchInsert,
@@ -186,9 +183,9 @@ export const combinedSolutionExports = {
     lc702: searchtargetinnums,
     lc704: searchBin,
     lc744: nextGreatestLetter,
-  },
+  };
 
-  OptimalCycSort:{
+const OptimalCycSort ={
     sort: cyclic_sort,
     lc41: firstMissingPositive,
     lc268: find_missing_number,
@@ -197,65 +194,104 @@ export const combinedSolutionExports = {
     lc448: findDisappearedNumbers,
     lc645: findErrorNums,
     lc1539: findKthPositive,
-  },
+  };
 
 
-  OptimalFastSlowPointers:{
+const OptimalFastSlowPointers ={
     lc141: hasCycle,
     lc141Double: isDoublyCyclic,
     lc202: isHappy,
 
  
-  },
+  };
 
 
-  // OptimalBFS:{
+// const OptimalBFS = {
   //   lc141: hasCycle,
   
 
  
-  // },
+  // };
 
-  // OptimalDFS:{
+// const OptimalDFS ={
   //   lc141: hasCycle,
 
  
-  // },
+  // };
 
-  OptimalTopologicalSort:{
+const OptimalTopologicalSort ={
     lc133: cloneGrapher,
    
 
  
-  },
+  };
 
-  OptimalTop_K_Elements:{
+const OptimalTop_K_Elements ={
     lc215: findKthLargest,
-   
 
- 
-  },
+  };
 
 
-  // Optimal_KwayMerge:{
-  //   lc23: findKthLargest,
+const Optimal_KwayMerge ={
+    lc23: mergeKLists,
 
 
-  // },
+  };
 
-  OptimalKnapSack:{
+const OptimalKnapSack ={
     lc474: findMaxForm,
 
 
+  };
+
+
+
+
+
+export const combinedSolutionExports = {
+    OptimalTwoPointerSolution,
+    OptimalSlidingWindSolution,
+    MergeIntervalSolution,
+    OptimalSubsetSolution,
+    OptimalModifiedBinarySearch,
+    OptimalCycSort,
+    OptimalFastSlowPointers,
+      // OptimalBFS,
+      // OptimalDFS,
+     OptimalTopologicalSort,
+     OptimalTop_K_Elements,
+     Optimal_KwayMerge,
+     OptimalKnapSack
   }
 
 
 
 
-
-};
-
-
-
-
-
+  // import { smallestSubarrayWithGivenSum } from "./SlidingWindow/lc209";
+  // import { characterReplacementTwoPointer } from "./TwoPointers/lc424";
+  
+  // import { pair_with_target_sum_Two_Pointer } from "./SlidingWindow/lc1";
+  
+  
+  
+  
+  // const OptimalSlidingWindAttempt = {
+  //     lc1: pair_with_target_sum_Two_Pointer,
+  //     lc209: smallestSubarrayWithGivenSum,
+  //   };
+  
+  
+  
+  
+  // const OptimalTwoPointerAttempt = {
+  //     lc424:characterReplacementTwoPointer,
+  //   };
+  
+  
+  
+  //   export const combinedAttemptExports = {
+  //     OptimalSlidingWindAttempt,
+  //     OptimalTwoPointerAttempt,
+  // };
+  
+  
