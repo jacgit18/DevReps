@@ -6,18 +6,18 @@
 import { pair_with_target_sum_Two_Pointer, pair_with_target_sum_map } from "./TwoPointers/lc1";
 
 import { maxArea } from "./TwoPointers/lc11";
-import { palVaidaor } from "./TwoPointers/lc125";
-import { search_triplets } from "./TwoPointers/lc15";
-import { triplet_sum_close_to_target } from "./TwoPointers/lc16";
+import { isPalindrome } from "./TwoPointers/lc125";
+import { threeSum } from "./TwoPointers/lc15";
+import { threeSumClosest } from "./TwoPointers/lc16";
 import { fourSum } from "./TwoPointers/lc18";
-import { triplet_with_smaller_sum } from "./TwoPointers/lc259";
-import { remove_element } from "./TwoPointers/lc26";
-import { characterReplacementTwoPointer } from "./TwoPointers/lc424";
+import { threeSumSmaller } from "./TwoPointers/lc259";
+import { removeDuplicates } from "./TwoPointers/lc26";
+import { characterReplacement } from "./TwoPointers/lc424";
 import { findUnsortedSubarray } from "./TwoPointers/lc581";
 import { numSubarrayProductLessThanK } from "./TwoPointers/lc713";
 import { sortColors } from "./TwoPointers/lc75";
 import { backspaceCompare } from "./TwoPointers/lc844";
-import { make_squares } from "./TwoPointers/lc977";
+import { sortedSquares } from "./TwoPointers/lc977";
 
 
 // Sliding Window
@@ -26,11 +26,11 @@ import { smallestSubarrayWithGivenSum, smallest_subarray_with_given_sumAlt } fro
 import { lengthOfLongestSubstring } from "./SlidingWindow/lc3";
 import { findSubstring } from "./SlidingWindow/lc30";
 import { longest_substring_with_k_distinct } from "./SlidingWindow/lc340";
-import { findAnagrams } from "./SlidingWindow/lc438";
-import { max_subarray_size_k } from "./SlidingWindow/lc53";
+import { findAnagramsTwoPointer, findAnagrams } from "./SlidingWindow/lc438";
+import { maxSubArray } from "./SlidingWindow/lc53";
 import { checkInclusion } from "./SlidingWindow/lc567";
 import { minWindow } from "./SlidingWindow/lc76";
-import { fruits_into_baskets } from "./SlidingWindow/lc904";
+import { totalFruit } from "./SlidingWindow/lc904";
 
 
 // Merge Interval
@@ -129,18 +129,18 @@ const OptimalTwoPointerSolution = {
   lc1: pair_with_target_sum_Two_Pointer,
   lc1Alt: pair_with_target_sum_map,
   lc11: maxArea,
-  lc15: search_triplets,
-  lc16: triplet_sum_close_to_target,
+  lc15: threeSum,
+  lc16: threeSumClosest,
   lc18: fourSum,
-  lc26: remove_element,
+  lc26: removeDuplicates,
   lc75: sortColors,
-  lc125: palVaidaor,
-  lc259: triplet_with_smaller_sum,
-  lc424: characterReplacementTwoPointer,
+  lc125: isPalindrome,
+  lc259: threeSumSmaller,
+  lc424: characterReplacement,
   lc581: findUnsortedSubarray,
   lc713: numSubarrayProductLessThanK,
   lc844: backspaceCompare,
-  lc977: make_squares,
+  lc977: sortedSquares,
 };
 
 
@@ -148,14 +148,15 @@ const OptimalTwoPointerSolution = {
 const OptimalSlidingWindSolution = {
     lc3:lengthOfLongestSubstring,
     lc30:findSubstring,
-    lc53: max_subarray_size_k,
+    lc53: maxSubArray,
     lc76: minWindow,
     lc209: smallestSubarrayWithGivenSum,
     lc209alt: smallest_subarray_with_given_sumAlt,
     lc340: longest_substring_with_k_distinct,
-    lc438: findAnagrams,
+    lc438: findAnagramsTwoPointer,
+    lc438Alt: findAnagrams,
     ls567: checkInclusion,
-    lc904: fruits_into_baskets,
+    lc904: totalFruit,
     lc1004: longestOnes
   };
 
@@ -181,7 +182,6 @@ const OptimalSubsetSolution = {
     lc442: findDuplicatesBackTrack,
     lc442Alt: findDuplicatesCyclic,
     lc784: letterCasePermutation,
-
   };
 
 const OptimalModifiedBinarySearch = {
@@ -231,7 +231,6 @@ const OptimalBFS = {
   };
 
 const OptimalDFS ={
-    // lc: hasCycle,
     lc112: hasPathSum,
     lc113: pathSumTwo,
     lc129: sumNumbers,

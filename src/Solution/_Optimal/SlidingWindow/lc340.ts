@@ -48,6 +48,9 @@ export const longest_substring_with_k_distinct = (str: string, k: number): numbe
 //   )}`
 // );
 
+// eceba, 2 output 3
+// aa, 1 output 2
+
 // console.log(longest_substring_with_k_distinct("araaci",2))
 
 // console.log(

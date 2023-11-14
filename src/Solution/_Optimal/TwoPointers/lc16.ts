@@ -1,50 +1,65 @@
-// Problem Statement #
-// Given an array of unsorted numbers and a target number, find a triplet in the array
-// whose sum is as close to the target number as possible, return the sum of the triplet.
-// If there are more than one such triplet, return the sum of the triplet with the smallest sum.
+// Given an integer array nums of length n and an integer target, find three integers in nums such that the sum is closest to target.
+
+// Return the sum of the three integers.
+
+// You may assume that each input would have exactly one solution.
+
+ 
+
+// Example 1:
+
+// Input: nums = [-1,2,1,-4], target = 1
+// Output: 2
+// Explanation: The sum that is closest to the target is 2. (-1 + 2 + 1 = 2).
 
 
-export const triplet_sum_close_to_target = (arr: number[], targetSum: number): number => {
-  // console.log(arr)
+// Example 2:
 
-  arr.sort((a, b) => a - b
+// Input: nums = [0,0,0], target = 1
+// Output: 0
+// Explanation: The sum that is closest to the target is 0. (0 + 0 + 0 = 0).
+ 
 
-    // console.log(`Sort  ${a - b}`)
-    // console.log(a,b)
-    // console.log(arr)
-  )
+// Constraints:
 
-  // console.log(" ")
+// 3 <= nums.length <= 500
+// -1000 <= nums[i] <= 1000
+// -104 <= target <= 104
 
-  let closest_difference = Infinity;
 
-  for (let i = 0; i < arr.length - 2; i++) {
-    let left = i + 1;
-    let right = arr.length - 1;
 
-    while (left < right) {
-      const target_diff = targetSum - arr[i] - arr[left] - arr[right];
+export const threeSumClosest = (nums: number[], target: number): number =>{
+  nums.sort((a, b) => a - b);
+  let closestSum = nums[0] + nums[1] + nums[2];
 
-      if (target_diff === 0) {
-        return targetSum - target_diff;
+  for (let i = 0; i < nums.length - 2; i++) {
+      let left = i + 1;
+      let right = nums.length - 1;
+
+      while (left < right) {
+          const currentSum = nums[i] + nums[left] + nums[right];
+          if (Math.abs(currentSum - target) < Math.abs(closestSum - target)) {
+              closestSum = currentSum;
+          }
+
+          if (currentSum < target) {
+              left++;
+          } else {
+              right--;
+          }
       }
-
-      if (Math.abs(target_diff) < Math.abs(closest_difference) ||
-        (Math.abs(target_diff) === Math.abs(closest_difference) && target_diff > closest_difference)) {
-        closest_difference = target_diff;
-      }
-
-      if (target_diff > 0) {
-        left += 1;
-      } else {
-        right -= 1;
-      }
-    }
   }
-  return targetSum - closest_difference;
-};
 
-console.log(triplet_sum_close_to_target([-2, 0, 1, 2], 2));
-// Uncomment for edge cases
-// console.log(triplet_sum_close_to_target([-3, -1, 1, 2], 1));
-// console.log(triplet_sum_close_to_target([1, 0, 1, 1], 100));
+  return closestSum;
+}
+
+// Example usage:
+const nums1 = [-1, 2, 1, -4];
+const target1 = 1;
+const result1 = threeSumClosest(nums1, target1);
+console.log(result1);
+
+const nums2 = [0, 0, 0];
+const target2 = 1;
+const result2 = threeSumClosest(nums2, target2);
+console.log(result2);

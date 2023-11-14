@@ -27,6 +27,59 @@
 // s and p consist of lowercase English letters.
 
 
+export const findAnagramsTwoPointer = (s: string, p: string): number[] => {
+        const result: number[] = [];
+        const targetMap: Map<string, number> = new Map();
+        const windowMap: Map<string, number> = new Map();
+    
+        for (const char of p) {
+            targetMap.set(char, (targetMap.get(char) || 0) + 1);
+        }
+    
+        let left = 0;
+        let right = 0;
+    
+        while (right < s.length) {
+            const charRight = s[right];
+            windowMap.set(charRight, (windowMap.get(charRight) || 0) + 1);
+    
+            if (right - left + 1 === p.length) {
+                if (mapsAreEqual(targetMap, windowMap)) {
+                    result.push(left);
+                }
+    
+                const charLeft = s[left];
+                windowMap.set(charLeft, windowMap.get(charLeft)! - 1);
+                if (windowMap.get(charLeft) === 0) {
+                    windowMap.delete(charLeft);
+                }
+    
+                left++;
+            }
+    
+            right++;
+        }
+    
+        return result;
+    }
+    
+    function mapsAreEqual(map1: Map<string, number>, map2: Map<string, number>): boolean {
+        if (map1.size !== map2.size) {
+            return false;
+        }
+    
+        for (const [key, value] of map1) {
+            if (map2.get(key) !== value) {
+                return false;
+            }
+        }
+    
+        return true;
+    }
+    
+   
+    
+
 
 export const findAnagrams = (s: string, p: string): number[] => {
   const result: number[] = [];
@@ -71,4 +124,13 @@ console.log(example1); // Output: [0, 6]
 
 const example2 = findAnagrams("abab", "ab");
 console.log(example2); // Output: [0, 1, 2]
+
+
+ const s1 = "cbaebabacd";
+ const p1 = "abc";
+ console.log(findAnagramsTwoPointer(s1, p1)); // Output: [0, 6]
+ 
+ const s2 = "abab";
+ const p2 = "ab";
+ console.log(findAnagramsTwoPointer(s2, p2)); // Output: [0, 1, 2]
 

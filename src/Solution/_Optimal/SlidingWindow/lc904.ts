@@ -1,76 +1,74 @@
-// Problem Statement #
+// You are visiting a farm that has a single row of fruit trees arranged from left to right. The trees are represented by an integer array fruits where fruits[i] is the type of fruit the ith tree produces.
 
-// Given an array of characters where each character represents a fruit tree,
-//  you are given two baskets, and your goal is to put maximum number of fruits
-//  in each basket. The only restriction is that each basket can have only one
-//  type of fruit. You can start with any tree, but you can’t skip a tree once
-//  you have started. You will pick one fruit from each tree until you cannot,
-// i.e., you will stop when you have to pick from a third fruit type.
-// Write a function to return the maximum number of fruits in both baskets.
+// You want to collect as much fruit as possible. However, the owner has some strict rules that you must follow:
 
-/**
- *
- * Input: array of characters where each character represents a fruit tree.
- *
- * we have two baskets and we must put the maximum number of fruit in each baskets.
- * You can start with any tree, butyou can’t skip a tree once you have started.
- * You will pick one fruit from each tree until you cannot, i.e., you will stop when you have to pick from a third fruit type
- *
- * Output: he maximum number of fruits in both baskets
- *
- * Naive Brute Force Approach
- * ---------------
- * Variables:
- *
- * */
+// You only have two baskets, and each basket can only hold a single type of fruit. There is no limit on the amount of fruit each basket can hold.
+// Starting from any tree of your choice, you must pick exactly one fruit from every tree (including the start tree) while moving to the right. The picked fruits must fit in one of your baskets.
+// Once you reach a tree with fruit that cannot fit in your baskets, you must stop.
+// Given the integer array fruits, return the maximum number of fruits you can pick.
+
+ 
+
+// Example 1:
+
+// Input: fruits = [1,2,1]
+// Output: 3
+// Explanation: We can pick from all 3 trees.
 
 
-export const fruits_into_baskets = (fruits: string[]): number => {
-  let startPoint = 0;
-  let endPoint = 0;
-  const fruitBucket = new Map<string, number>();
-  let currentCount = 0;
-  let maxCount = 0;
+// Example 2:
 
-  while (startPoint < fruits.length && endPoint < fruits.length) {
-    const fruit = fruits[endPoint];
+// Input: fruits = [0,1,2,2]
+// Output: 3
+// Explanation: We can pick from trees [1,2,2].
+// If we had started at the first tree, we would only pick from trees [0,1].
 
-    if (fruitBucket.has(fruit)) {
-      fruitBucket.set(fruit, fruitBucket.get(fruit)! + 1);
-      endPoint++;
-      currentCount++;
-    } else if (fruitBucket.size < 2) {
-      fruitBucket.set(fruit, 1);
-      endPoint++;
-      currentCount++;
-    } else {
-      const fruitToBeRemoved = fruits[startPoint];
-      const count = fruitBucket.get(fruitToBeRemoved)!;
 
-      if (count === 1) {
-        fruitBucket.delete(fruitToBeRemoved);
-      } else {
-        fruitBucket.set(fruitToBeRemoved, count - 1);
-      }
+// Example 3:
 
-      currentCount--;
-      startPoint++;
+// Input: fruits = [1,2,3,2,2]
+// Output: 4
+// Explanation: We can pick from trees [2,3,2,2].
+// If we had started at the first tree, we would only pick from trees [1,2].
+ 
+
+// Constraints:
+
+// 1 <= fruits.length <= 105
+// 0 <= fruits[i] < fruits.length
+
+
+
+export const totalFruit = (fruits: number[]): number => {
+    let maxFruits = 0;
+    let left = 0;
+    const fruitMap: Map<number, number> = new Map();
+
+    for (let right = 0; right < fruits.length; right++) {
+        const currentFruit = fruits[right];
+        fruitMap.set(currentFruit, (fruitMap.get(currentFruit) || 0) + 1);
+
+        while (fruitMap.size > 2) {
+            const leftFruit = fruits[left];
+            fruitMap.set(leftFruit, fruitMap.get(leftFruit)! - 1);
+            if (fruitMap.get(leftFruit) === 0) {
+                fruitMap.delete(leftFruit);
+            }
+            left++;
+        }
+
+        maxFruits = Math.max(maxFruits, right - left + 1);
     }
 
-    maxCount = Math.max(currentCount, maxCount);
-  }
+    return maxFruits;
+}
 
-  return maxCount;
-};
+// Example usage:
+const fruits1 = [1, 2, 1];
+console.log(totalFruit(fruits1)); // Output: 3
 
-console.log(`Maximum number of fruits: ${fruits_into_baskets(["A", "B", "C", "A", "C"])}`)
+const fruits2 = [0, 1, 2, 2];
+console.log(totalFruit(fruits2)); // Output: 3
 
-console.log(
-  `Maximum number of fruits: ${fruits_into_baskets(["A", "B", "X", "Y", "C", "A", "A", "A"])}`,
-)
-
-console.log(`Maximum number of fruits: ${fruits_into_baskets(["A", "B", "C", "B", "B", "C"])}`)
-
-
-
-
+const fruits3 = [1, 2, 3, 2, 2];
+console.log(totalFruit(fruits3)); // Output: 4

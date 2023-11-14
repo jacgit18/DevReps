@@ -1,7 +1,30 @@
-// Problem Statement #
-// Given a sorted array, create a new array containing squares of all the numbers of the input array in the sorted order.
+// Given an integer array nums sorted in non-decreasing order, return an array of the squares of each number sorted in non-decreasing order.
 
-export const make_squares = (arr: number[]): number[] => {
+ 
+
+// Example 1:
+
+// Input: nums = [-4,-1,0,3,10]
+// Output: [0,1,9,16,100]
+// Explanation: After squaring, the array becomes [16,1,0,9,100].
+// After sorting, it becomes [0,1,9,16,100].
+
+
+// Example 2:
+
+// Input: nums = [-7,-3,2,3,11]
+// Output: [4,9,9,49,121]
+ 
+
+// Constraints:
+
+// 1 <= nums.length <= 104
+// -104 <= nums[i] <= 104
+// nums is sorted in non-decreasing order.
+
+
+
+export const sortedSquares = (arr: number[]): number[] => {
   let result: number[] = [];
   let left: number = 0;
   let right: number = arr.length - 1;
@@ -30,5 +53,5 @@ export const make_squares = (arr: number[]): number[] => {
 // Squares: 0,1,4,4,9
 // Squares: 0,1,0,4,9
 
-console.log(`Squares: ${make_squares([-2, -1, 0, 2, 3])}`);
-console.log(`Squares: ${make_squares([-3, -1, 0, 1, 2])}`);
+console.log(`Squares: ${sortedSquares([-2, -1, 0, 2, 3])}`);
+console.log(`Squares: ${sortedSquares([-3, -1, 0, 1, 2])}`);
