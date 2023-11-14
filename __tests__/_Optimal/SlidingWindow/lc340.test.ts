@@ -1,5 +1,5 @@
 // import { combinedAttemptExports } from "../../../src/routers/OptimalAttempt";
-import { combinedSolutionExports } from "../../../src/routers/OptimalSolution";
+import { combinedOptimalSolutionExports } from "../../../src/routers/OptimalSolution";
 
 type TestFunction = (str: string, k: number) => number;
 
@@ -45,7 +45,7 @@ const runTestCases = () => {
     // );
 
     generateTestCases(
-        combinedSolutionExports.OptimalSlidingWindSolution.lc340,
+      combinedOptimalSolutionExports.OptimalSlidingWindSolution.lc340,
         testCase.str,
         testCase.k,
         `Test Case ${index + 1}`,

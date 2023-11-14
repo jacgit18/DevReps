@@ -1,5 +1,5 @@
 // import { combinedAttemptExports } from "../../../src/routers/OptimalAttempt";
-import { combinedSolutionExports } from "../../../src/routers/OptimalSolution";
+import { combinedOptimalSolutionExports } from "../../../src/routers/OptimalSolution";
 
 type TestFunction = (s: number, arr: number[]) => number;
 
@@ -49,7 +49,7 @@ const runTestCases = () => {
 
     // Test the Solution approach
     generateTestCases(
-      combinedSolutionExports.OptimalSlidingWindSolution.lc209,
+      combinedOptimalSolutionExports.OptimalSlidingWindSolution.lc209,
       testCase.input,
       testCase.arr,
       `209 Solution - Test Case ${index + 1}`,
@@ -58,7 +58,7 @@ const runTestCases = () => {
 
     // Test the Alt Approach
     generateTestCases(
-      combinedSolutionExports.OptimalSlidingWindSolution.lc209alt,
+      combinedOptimalSolutionExports.OptimalSlidingWindSolution.lc209alt,
       testCase.input,
       testCase.arr,
       `209 Alt Solution - Test Case ${index + 1}`,

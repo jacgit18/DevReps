@@ -1,1 +1,1 @@
-export { combinedAttemptExports } from "../Attempt/Naive-Optimal/index";
+export { combinedNaiveAttemptExports } from "../Attempt/Naive-Optimal/index";

@@ -1,1 +1,1 @@
-export { combinedAttemptExports } from "../Attempt/Greedy/index";
+export { combinedGreedyAttemptExports } from "../Attempt/Greedy/index";

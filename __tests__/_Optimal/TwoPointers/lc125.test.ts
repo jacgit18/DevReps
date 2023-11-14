@@ -1,5 +1,5 @@
 // import { combinedAttemptExports } from "../../../src/routers/OptimalAttempt";
-import { combinedSolutionExports } from "../../../src/routers/OptimalSolution";
+import { combinedOptimalSolutionExports } from "../../../src/routers/OptimalSolution";
 
 
 type TestFunction = (sen: string) => boolean;
@@ -46,7 +46,7 @@ const runTestCases = () => {
     //   );
 
     generateTestCases(
-      combinedSolutionExports.OptimalTwoPointerSolution.lc125,
+      combinedOptimalSolutionExports.OptimalTwoPointerSolution.lc125,
       testCase.sentence,
       `Test Case ${index + 1}`,
       testCase.expect

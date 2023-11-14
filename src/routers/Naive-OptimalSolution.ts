@@ -1,3 +1,3 @@
-export { combinedSolutionExports } from "../Solution/Naive-Optimal/index";
+export { combinedNaiveSolutionExports } from "../Solution/Naive-Optimal/index";
 
 

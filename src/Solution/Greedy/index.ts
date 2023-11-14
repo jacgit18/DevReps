@@ -7,7 +7,7 @@ const GreedySolution = {
   };
 
 
-  export const combinedSolutionExports = {
+  export const combinedGreedySolutionExports = {
     GreedySolution,
 
   }

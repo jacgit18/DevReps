@@ -1,8 +1,8 @@
 // import { combinedAttemptExports } from "../../../src/routers/OptimalAttempt";
-import { combinedSolutionExports } from "../../../src/routers/OptimalSolution";
+import { combinedOptimalSolutionExports } from "../../../src/routers/OptimalSolution";
 
 
-type TestFunction = (k: number, arr: number[]) => number;
+type TestFunction = (k: any, arr: any[]) => any;
 
 const generateTestCases = (
   maxSubarrayFunction: TestFunction,
@@ -44,7 +44,7 @@ const runTestCases = () => {
 //     );
 
     generateTestCases(
-      combinedSolutionExports.OptimalSlidingWindSolution.lc53,
+      combinedOptimalSolutionExports.OptimalSlidingWindSolution.lc53,
       testCase.k,
       testCase.arr,
       `Test Case ${index + 1}`,

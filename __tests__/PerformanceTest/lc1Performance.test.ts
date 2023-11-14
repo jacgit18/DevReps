@@ -1,5 +1,5 @@
 // import { combinedAttemptExports } from "../../src/routers/OptimalAttempt";
-import { combinedSolutionExports } from "../../src/routers/OptimalSolution";
+import { combinedOptimalSolutionExports } from "../../src/routers/OptimalSolution";
 import BenchmarkHelper from '../../src/util/benchmark-helper';
 
 type TestFunction = (nums: number[], target: number) => number[];
@@ -34,9 +34,9 @@ const generateTestCases = (
     let lc1Alt: (nums: number[], target: number) =>  number[];
   
     beforeEach(() => {
-      lc1 = combinedSolutionExports.OptimalTwoPointerSolution.lc1;
+      lc1 = combinedOptimalSolutionExports.OptimalTwoPointerSolution.lc1;
       // lc1Attempt = combinedAttemptExports.OptimalSlidingWindAttempt.lc1;
-      lc1Alt = combinedSolutionExports.OptimalTwoPointerSolution.lc1Alt;
+      lc1Alt = combinedOptimalSolutionExports.OptimalTwoPointerSolution.lc1Alt;
     });
   
     const testCases = [

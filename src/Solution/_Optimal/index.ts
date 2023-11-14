@@ -121,7 +121,8 @@ import { mergeKLists } from "./K-way Merge Dynamic Programing/lc23";
 // Knapsack
 import { findMaxForm } from "./Knapsack Dynamic Programing/lc474";
 
-
+// Bitwise XOR
+import { singleNumber } from "./Bitwise XOR/lc136";
 
 
 
@@ -267,10 +268,18 @@ const OptimalKnapSack ={
   };
 
 
+  const OptimalBitWiseXOR ={
+    lc136: singleNumber,
+
+
+  };
+
+  
 
 
 
-export const combinedSolutionExports = {
+
+export const combinedOptimalSolutionExports = {
     OptimalTwoPointerSolution,
     OptimalSlidingWindSolution,
     MergeIntervalSolution,
@@ -283,7 +292,8 @@ export const combinedSolutionExports = {
     OptimalTopologicalSort,
     OptimalTop_K_Elements,
     Optimal_KwayMerge,
-    OptimalKnapSack
+    OptimalKnapSack,
+    OptimalBitWiseXOR
   }
 
 

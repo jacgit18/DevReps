@@ -1,3 +1,3 @@
-export { combinedSolutionExports } from "../Solution/Extra/index";
+export { combinedExtraSolutionExports } from "../Solution/Extra/index";
 
 
