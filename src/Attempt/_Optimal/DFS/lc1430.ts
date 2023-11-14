@@ -40,23 +40,8 @@ import { TreeNode } from "../../../util/BinaryTreeMaker";
 
 
 export const isValidSequence = (root: TreeNode | null, arr: number[]): boolean =>{
-  const n = arr.length;
 
-  function dfs(node: TreeNode | null, index: number): boolean {
-    if (!node || index === n || node.value !== arr[index]) {
-      return false;
-    }
-
-    if (!node.left && !node.right && index === n - 1) {
-      // If it's a leaf node and the end of the array is reached, it's a valid sequence
-      return true;
-    }
-
-    // Recursively explore left and right subtrees with the updated index
-    return dfs(node.left, index + 1) || dfs(node.right, index + 1);
-  }
-
-  return dfs(root, 0);
+  return true;
 }
 
 // Example usage:

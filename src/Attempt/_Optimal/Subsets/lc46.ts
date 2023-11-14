@@ -27,26 +27,9 @@
 
 
 export const permute = (nums: number[]): number[][] => {
-  const result: number[][] = [];
+ 
 
-  const backtrack = (currentPermutation: number[]) => {
-    if (currentPermutation.length === nums.length) {
-      result.push([...currentPermutation]);
-      return;
-    }
-
-    for (const num of nums) {
-      if (!currentPermutation.includes(num)) {
-        currentPermutation.push(num);
-        backtrack(currentPermutation);
-        currentPermutation.pop();
-      }
-    }
-  };
-
-  backtrack([]);
-
-  return result;
+  return [[0]];
 }
 
 // Example usage:

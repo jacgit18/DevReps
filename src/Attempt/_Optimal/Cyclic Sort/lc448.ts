@@ -20,16 +20,9 @@
 
 
 export const findDisappearedNumbers = (nums: number[]): number[] => {
-  const result: number[] = [];
-  const numSet = new Set(nums);
+  
 
-  for (let i = 1; i <= nums.length; i++) {
-    if (!numSet.has(i)) {
-      result.push(i);
-    }
-  }
-
-  return result;
+  return [0];
 };
 
 // Example usage:

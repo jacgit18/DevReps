@@ -107,16 +107,9 @@ class MinHeap {
   }
   
   export const findKthLargest = (nums: number[], k: number): number | undefined => {
-    const minHeap = new MinHeap();
+   
   
-    for (const num of nums) {
-      minHeap.add(num);
-      if (minHeap.size() > k) {
-        minHeap.pop();
-      }
-    }
-  
-    return minHeap.peek();
+    return 0;
   };
   
   // Example usage:

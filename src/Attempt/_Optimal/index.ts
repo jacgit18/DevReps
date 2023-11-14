@@ -1,10 +1,5 @@
 // Two Pointer
-// Dynamic Importing: Instead of importing all functions at once, 
-// you can dynamically import only the functions you need at runtime. 
-// This can reduce the initial loading time.
-// const { pair_with_target_sum_Two_Pointer, pair_with_target_sum_map } = await import("./TwoPointers/lc1");
-import { pair_with_target_sum_Two_Pointer, pair_with_target_sum_map } from "./TwoPointers/lc1";
-
+import { pair_with_target_sum } from "./TwoPointers/lc1";
 import { maxArea } from "./TwoPointers/lc11";
 import { isPalindrome } from "./TwoPointers/lc125";
 import { threeSum } from "./TwoPointers/lc15";
@@ -22,11 +17,11 @@ import { sortedSquares } from "./TwoPointers/lc977";
 
 // Sliding Window
 import { longestOnes } from "./SlidingWindow/lc1004";
-import { smallestSubarrayWithGivenSum, smallest_subarray_with_given_sumAlt } from "./SlidingWindow/lc209";
+import { smallestSubarrayWithGivenSum } from "./SlidingWindow/lc209";
 import { lengthOfLongestSubstring } from "./SlidingWindow/lc3";
 import { findSubstring } from "./SlidingWindow/lc30";
 import { longest_substring_with_k_distinct } from "./SlidingWindow/lc340";
-import { findAnagrams, findAnagramsTwoPointer } from "./SlidingWindow/lc438";
+import { findAnagrams } from "./SlidingWindow/lc438";
 import { maxSubArray } from "./SlidingWindow/lc53";
 import { checkInclusion } from "./SlidingWindow/lc567";
 import { minWindow } from "./SlidingWindow/lc76";
@@ -43,11 +38,9 @@ import { intervalIntersection } from "./Merge Intervals/lc986";
 
 
 // Subset/ Backtracking pattern
-import { robotPaths } from "./Subsets/BacktrackMatrix";
-import { matrix } from "./Subsets/MockIntMatrix";
-import { letterCombinationsBackTrack } from "./Subsets/lc17";
+import { letterCombinations } from "./Subsets/lc17";
 import { diffWaysToCompute } from "./Subsets/lc241";
-import { findDuplicatesBackTrack, findDuplicatesCyclic } from "./Subsets/lc442";
+import { findDuplicatesCyclic } from "./Subsets/lc442";
 import { permute } from "./Subsets/lc46";
 import { subsets } from "./Subsets/lc78";
 import { letterCasePermutation } from "./Subsets/lc784";
@@ -67,7 +60,6 @@ import { search } from "./Modified Binary Search/lc81";
 
 
 // Cyclic Sort
-import { cyclic_sort } from "./Cyclic Sort/cyclicSortEasy";
 import { findKthPositive } from "./Cyclic Sort/lc1539";
 import { find_missing_number } from "./Cyclic Sort/lc268";
 import { findDuplicate } from "./Cyclic Sort/lc287";
@@ -86,10 +78,10 @@ import { isHappy } from "./Fast Slow(LinkedList)/lc202";
 // BFS
 import { isSameTree } from "./BFS/lc100";
 import { isSymmetric } from "./BFS/lc101";
-import { levelOrderTraversal, levelOrderTraversalRec } from "./BFS/lc102VistAllLevelPureBFS";
+import { levelOrderTraversal } from "./BFS/lc102VistAllLevelPureBFS";
 import { zigzagLevelOrder } from "./BFS/lc103";
 import { maxDepth } from "./BFS/lc104";
-import { RecursiveBFSFunc } from "./BFS/lc107";
+import { levelOrderBottom } from "./BFS/lc107";
 import { minDepth } from "./BFS/lc111";
 import { connect } from "./BFS/lc117";
 import { averageOfLevels } from "./BFS/lc637";
@@ -115,7 +107,7 @@ import { findKthLargest } from "./Top K Elements/lc215";
 
 
 // K-way Merge
-import { mergeKLists } from "./K-way Merge Dynamic Programing/lc23";
+// import { mergeKLists } from "./K-way Merge Dynamic Programing/lc";
 
 
 // Knapsack
@@ -126,9 +118,8 @@ import { singleNumber } from "./Bitwise XOR/lc136";
 
 
 
-const OptimalTwoPointerSolution = {
-  lc1: pair_with_target_sum_Two_Pointer,
-  lc1Alt: pair_with_target_sum_map,
+const OptimalTwoPointer = {
+  lc1: pair_with_target_sum,
   lc11: maxArea,
   lc15: threeSum,
   lc16: threeSumClosest,
@@ -146,22 +137,21 @@ const OptimalTwoPointerSolution = {
 
 
 
-const OptimalSlidingWindSolution = {
+const OptimalSlidingWind = {
     lc3:lengthOfLongestSubstring,
     lc30:findSubstring,
     lc53: maxSubArray,
     lc76: minWindow,
     lc209: smallestSubarrayWithGivenSum,
-    lc209alt: smallest_subarray_with_given_sumAlt,
     lc340: longest_substring_with_k_distinct,
-    lc438: findAnagramsTwoPointer,
+    lc438: findAnagrams,
     lc438Alt: findAnagrams,
     ls567: checkInclusion,
     lc904: totalFruit,
     lc1004: longestOnes
   };
 
-const MergeIntervalSolution = {
+const MergeInterval = {
     lc56: merge,
     lc57: insertInterval,
     lc252: canAttendMeetings,
@@ -172,16 +162,13 @@ const MergeIntervalSolution = {
   };
 
 
-const OptimalSubsetSolution = {
-    backtrackOne: matrix,
-    backtrackTwo:robotPaths,
-    lc17: letterCombinationsBackTrack,
+const OptimalSubset = {
+    lc17: letterCombinations,
     lc46: permute,
     lc78: subsets,
     lc90: subsetsWithDup,
     lc241: diffWaysToCompute,
-    lc442: findDuplicatesBackTrack,
-    lc442Alt: findDuplicatesCyclic,
+    lc442: findDuplicatesCyclic,
     lc784: letterCasePermutation,
   };
 
@@ -198,7 +185,6 @@ const OptimalModifiedBinarySearch = {
   };
 
 const OptimalCycSort ={
-    sort: cyclic_sort,
     lc41: firstMissingPositive,
     lc268: find_missing_number,
     lc287: findDuplicate,
@@ -221,11 +207,10 @@ const OptimalFastSlowPointers ={
 const OptimalBFS = {
     lc100: isSameTree,
     lc101: isSymmetric,
-    lc102Iter: levelOrderTraversal,
-    lc102Rec: levelOrderTraversalRec,
+    lc102: levelOrderTraversal,
     lc103: zigzagLevelOrder,
     lc104: maxDepth,
-    lc107: RecursiveBFSFunc.levelOrderBottom,
+    lc107: levelOrderBottom,
     lc111: minDepth,
     lc117: connect,
     lc637: averageOfLevels,
@@ -256,7 +241,6 @@ const OptimalTop_K_Elements ={
 
 
 const Optimal_KwayMerge ={
-    lc23: mergeKLists,
 
 
   };
@@ -280,10 +264,10 @@ const OptimalKnapSack ={
 
 
 export const combinedOptimalAttemptExports = {
-    OptimalTwoPointerSolution,
-    OptimalSlidingWindSolution,
-    MergeIntervalSolution,
-    OptimalSubsetSolution,
+    OptimalTwoPointer,
+    OptimalSlidingWind,
+    MergeInterval,
+    OptimalSubset,
     OptimalModifiedBinarySearch,
     OptimalCycSort,
     OptimalFastSlowPointers,
@@ -298,32 +282,3 @@ export const combinedOptimalAttemptExports = {
 
 
 
-
-  // import { smallestSubarrayWithGivenSum } from "./SlidingWindow/lc209";
-  // import { characterReplacementTwoPointer } from "./TwoPointers/lc424";
-  
-  // import { pair_with_target_sum_Two_Pointer } from "./SlidingWindow/lc1";
-  
-  
-  
-  
-  // const OptimalSlidingWindAttempt = {
-  //     lc1: pair_with_target_sum_Two_Pointer,
-  //     lc209: smallestSubarrayWithGivenSum,
-  //   };
-  
-  
-  
-  
-  // const OptimalTwoPointerAttempt = {
-  //     lc424:characterReplacementTwoPointer,
-  //   };
-  
-  
-  
-  //   export const combinedAttemptExports = {
-  //     OptimalSlidingWindAttempt,
-  //     OptimalTwoPointerAttempt,
-  // };
-  
-  

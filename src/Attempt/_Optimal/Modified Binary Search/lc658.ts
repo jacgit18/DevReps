@@ -27,21 +27,9 @@
 
 
 export const findClosestElements = (arr: number[], k: number, x: number): number[] =>{
-        let left = 0;
-        let right = arr.length - 1;
+      
     
-        while (right - left + 1 > k) {
-            const distLeft = Math.abs(arr[left] - x);
-            const distRight = Math.abs(arr[right] - x);
-    
-            if (distLeft > distRight) {
-                left++;
-            } else {
-                right--;
-            }
-        }
-    
-        return arr.slice(left, right + 1);
+        return [0];
     }
     
     // Example usage:

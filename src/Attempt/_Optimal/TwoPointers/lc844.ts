@@ -34,13 +34,9 @@
 
 
 export const backspaceCompare = (s:string , t:string):boolean => {
-  // replace # with \b
-  const regexExp = /#/g;
-  const sWithoutHash = s.replace(regexExp, '');
+ 
 
-  const tWithoutHash = t.replace(regexExp, '');
-
-  return sWithoutHash === tWithoutHash;
+  return true;
 }
 
 

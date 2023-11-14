@@ -68,26 +68,8 @@ class GraphNode {
 }
 
 export const cloneGrapher = (node: GraphNode | null): GraphNode | null => {
-  if (!node) return null;
-
-  const visited = new Map();
-
-  const dfs = (originalNode: GraphNode): GraphNode => {
-    if (visited.has(originalNode.val)) {
-      return visited.get(originalNode.val);
-    }
-
-    const cloneNode = new GraphNode(originalNode.val);
-    visited.set(cloneNode.val, cloneNode);
-
-    for (const neighbor of originalNode.neighbors) {
-      cloneNode.neighbors.push(dfs(neighbor));
-    }
-
-    return cloneNode;
-  };
-
-  return dfs(node);
+  
+  return null;
 };
 
 // Example usage:

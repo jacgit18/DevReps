@@ -38,48 +38,9 @@
 
 
 export const minWindow = (s: string, t: string): string => {
-    const targetMap: Map<string, number> = new Map();
-    let requiredCharacters = t.length;
+   
 
-    for (const char of t) {
-        targetMap.set(char, (targetMap.get(char) || 0) + 1);
-    }
-
-    let left = 0;
-    let right = 0;
-    let minWindow = "";
-    let minLength = Infinity;
-
-    while (right < s.length) {
-        const charRight = s[right];
-        if (targetMap.has(charRight)) {
-            if (targetMap.get(charRight)! > 0) {
-                requiredCharacters--;
-            }
-            targetMap.set(charRight, targetMap.get(charRight)! - 1);
-        }
-
-        while (requiredCharacters === 0) {
-            if (right - left + 1 < minLength) {
-                minLength = right - left + 1;
-                minWindow = s.substring(left, right + 1);
-            }
-
-            const charLeft = s[left];
-            if (targetMap.has(charLeft)) {
-                targetMap.set(charLeft, targetMap.get(charLeft)! + 1);
-                if (targetMap.get(charLeft)! > 0) {
-                    requiredCharacters++;
-                }
-            }
-
-            left++;
-        }
-
-        right++;
-    }
-
-    return minWindow;
+    return " ";
 }
 
 // Example usage:

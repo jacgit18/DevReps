@@ -2,23 +2,9 @@ import { DoublyLinkedListNode } from "../../../util/DoubleLinkedListMaker";
 
 
 export const isDoublyCyclic = (head: DoublyLinkedListNode | null): boolean =>{
-  if (!head || (!head.next && !head.prev)) {
-    return false;
-  }
+  
 
-  let forwardPointer: DoublyLinkedListNode | null = head;
-  let backwardPointer: DoublyLinkedListNode | null = head;
-
-  while (forwardPointer !== null && backwardPointer !== null) {
-    forwardPointer = forwardPointer.next;
-    backwardPointer = backwardPointer.prev;
-
-    if (forwardPointer === head || backwardPointer === head) {
-      return true; // Doubly cyclic linked list detected
-    }
-  }
-
-  return false; // No doubly cyclic linked list found
+  return true; 
 }
 
 // Example usage:

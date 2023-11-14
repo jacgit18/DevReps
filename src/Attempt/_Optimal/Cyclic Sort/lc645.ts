@@ -23,26 +23,8 @@
 
 
 export const findErrorNums = (nums: number[]): number[] => {
-  const n = nums.length;
-  const numSet = new Set<number>();
-  let duplicate = -1;
-  let missing = -1;
-
-  for (const num of nums) {
-    if (numSet.has(num)) {
-      duplicate = num;
-    }
-    numSet.add(num);
-  }
-
-  for (let i = 1; i <= n; i++) {
-    if (!numSet.has(i)) {
-      missing = i;
-      break;
-    }
-  }
-
-  return [duplicate, missing];
+  
+  return [0];
 };
 
 // Example usage:

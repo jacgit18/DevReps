@@ -26,28 +26,8 @@
 
 
 export const findDuplicate = (nums: number[]): number => {
-  let index = 0;
-  const n = nums.length - 1;
-
-  while (index <= n) {
-    const currentSubarray = nums[index] - 1;
-
-    if (nums[index] !== nums[currentSubarray]) {
-      [nums[index], nums[currentSubarray]] = [nums[currentSubarray], nums[index]]; // swap indices
-    } else {
-      index++;
-    }
-  }
-
-  for (let i = 0; i <= n; i++) {
-    if (nums[i] !== i + 1) {
-      return nums[i];
-    }
-  }
-
-  // This return statement is added to satisfy TypeScript's strict null checks.
-  // In practice, this case should not be reached given the problem constraints.
-  return -1;
+ 
+  return 0;
 };
 
 // Example usage:

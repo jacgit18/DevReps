@@ -24,28 +24,9 @@
 
 
 export const subsetsWithDup = (nums: number[]): number[][] => {
-  const result: number[][] = [];
+ 
 
-  nums.sort((a, b) => a - b); // Sort the array to handle duplicates
-
-  const backtrack = (start: number, currentSubset: number[]) => {
-    result.push([...currentSubset]);
-
-    for (let i = start; i < nums.length; i++) {
-      // Skip duplicates to avoid duplicate subsets
-      if (i > start && nums[i] === nums[i - 1]) {
-        continue;
-      }
-
-      currentSubset.push(nums[i]);
-      backtrack(i + 1, currentSubset);
-      currentSubset.pop();
-    }
-  };
-
-  backtrack(0, []);
-
-  return result;
+  return [[0]];
 }
 
 // Example usage:

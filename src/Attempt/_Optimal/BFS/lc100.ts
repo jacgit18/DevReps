@@ -31,32 +31,6 @@ import { TreeNode } from "../../../util/BinaryTreeMaker";
 
 
 export const isSameTree = (p: TreeNode | null, q: TreeNode | null): boolean =>{
-  if (!p && !q) {
-      return true;
-  }
-
-  if (!p || !q || p.value !== q.value) {
-      return false;
-  }
-
-  const queueP: (TreeNode | null)[] = [p];
-  const queueQ: (TreeNode | null)[] = [q];
-
-  while (queueP.length && queueQ.length) {
-      const nodeP = queueP.shift();
-      const nodeQ = queueQ.shift();
-
-      if (!nodeP && !nodeQ) {
-          continue;
-      }
-
-      if (!nodeP || !nodeQ || nodeP.value !== nodeQ.value) {
-          return false;
-      }
-
-      queueP.push(nodeP.left, nodeP.right);
-      queueQ.push(nodeQ.left, nodeQ.right);
-  }
 
   return true;
 }

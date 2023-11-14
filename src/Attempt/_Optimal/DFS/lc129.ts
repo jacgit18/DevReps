@@ -52,28 +52,8 @@
 import { TreeNode } from "../../../util/BinaryTreeMaker";
 
 export const sumNumbers = (root: TreeNode | null): number =>{
-  let totalSum = 0;
-
-  function dfs(node: TreeNode | null, currentSum: number) {
-    if (!node) {
-      return;
-    }
-
-    currentSum = currentSum * 10 + node.value;
-
-    if (!node.left && !node.right) {
-      // If leaf node, add the current sum to the total sum
-      totalSum += currentSum;
-      return;
-    }
-
-    // Recursively explore left and right subtrees
-    dfs(node.left, currentSum);
-    dfs(node.right, currentSum);
-  }
-
-  dfs(root, 0);
-  return totalSum;
+ 
+  return 0;
 }
 
 // Example usage:

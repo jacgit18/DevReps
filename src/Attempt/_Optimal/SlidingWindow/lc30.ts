@@ -44,39 +44,10 @@
 // s and words[i] consist of lowercase English letters.
 
 
-// Intergration test  helper function make just like unit but design it in a way were the test is 
-// addressing what helper
-
-const isConcat = (sub: string, map: { [key: string]: number }, wordLength: number): boolean => {
-  let seen: { [key: string]: number } = {};
-  for (let i = 0; i < sub.length; i += wordLength) {
-    let word = sub.slice(i, i + wordLength);
-    seen[word] = seen[word] + 1 || 1;
-  }
-
-  for (let key in map) {
-    if (map[key] !== seen[key]) return false; // Word freq must match between map and seen
-  }
-  return true;
-};
 
 export const findSubstring = (s: string, words: string[]): number[] => {
-  let res: number[] = [];
-
-  let wordLength = words[0].length;
-  let wordCount = words.length;
-  let len = wordCount * wordLength; // Length of sliding window
-
-  let map: { [key: string]: number } = {};
-
-  for (let word of words) map[word] = map[word] + 1 || 1; // Hash word freq
-
-  for (let i = 0; i < s.length - len + 1; i++) {
-    let sub = s.slice(i, i + len); // Generate substring of sliding window length
-    if (isConcat(sub, map, wordLength)) res.push(i);
-  }
-
-  return res;
+ 
+  return [0];
 };
 
 console.time("Sliding");

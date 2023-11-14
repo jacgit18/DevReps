@@ -83,23 +83,9 @@ import { LinkedListNode } from "../../../util/LinkedListMaker";
 
 
 export const hasCycle = (head: LinkedListNode | null): boolean =>{
-  if (!head || !head.next) {
-    return false;
-  }
+ 
 
-  let slow: LinkedListNode | null = head;
-  let fast: LinkedListNode | null = head;
-
-  while (fast !== null && fast.next !== null) {
-    slow = slow!.next;
-    fast = fast.next.next;
-
-    if (slow === fast) {
-      return true; // Cycle detected
-    }
-  }
-
-  return false; // No cycle found
+  return true; 
 }
 
 // Example usage:

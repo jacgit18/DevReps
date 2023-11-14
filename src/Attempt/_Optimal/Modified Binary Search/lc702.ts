@@ -33,35 +33,16 @@
 // The value of each element in the array will be in the range[-9999, 9999].
 
 
+// Might need to attempt on leetcode
+
 interface ArrayReader {
     get(index: number): number;
 }
 
 export const searchInArrayReader = (reader: ArrayReader, target: number): number =>{
-    let left = 0;
-    let right = 1;
+   
 
-    // Expand the search space until finding a range where target might exist
-    while (reader.get(right) < target) {
-        left = right;
-        right *= 2;
-    }
-
-    // Perform binary search within the identified range
-    while (left <= right) {
-        const mid = left + Math.floor((right - left) / 2);
-        const midValue = reader.get(mid);
-
-        if (midValue === target) {
-            return mid;
-        } else if (midValue < target) {
-            left = mid + 1;
-        } else {
-            right = mid - 1;
-        }
-    }
-
-    return -1; // Target not found
+    return 0; 
 }
 
 // Example usage:

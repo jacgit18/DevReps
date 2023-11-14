@@ -28,60 +28,11 @@
 import { TreeNode } from "../../../util/BinaryTreeMaker";
 
 export const levelOrderTraversal = (root: TreeNode | null): number[][] =>{
-  if (!root) {
-      return [];
-  }
-
-  const result: number[][] = [];
-  const queue: TreeNode[] = [root];
-
-  while (queue.length > 0) {
-      const currentLevelSize = queue.length;
-      const currentLevelValues: number[] = [];
-
-      for (let i = 0; i < currentLevelSize; i++) {
-          const currentNode = queue.shift()!;
-          currentLevelValues.push(currentNode.value);
-
-          if (currentNode.left) {
-              queue.push(currentNode.left);
-          }
-
-          if (currentNode.right) {
-              queue.push(currentNode.right);
-          }
-      }
-
-      result.push(currentLevelValues);
-  }
-
-  return result;
+ 
+  return [[0]];
 }
 
 
-
-export const levelOrderTraversalRec = (root: TreeNode | null): number[][] =>{
-  const result: number[][] = [];
-
-  const traverse = (node: TreeNode | null, level: number): void => {
-      if (!node) {
-          return;
-      }
-
-      if (result.length <= level) {
-          result.push([]);
-      }
-
-      result[level].push(node.value);
-
-      traverse(node.left, level + 1);
-      traverse(node.right, level + 1);
-  };
-
-  traverse(root, 0);
-
-  return result;
-}
 
 
 
@@ -93,4 +44,3 @@ tree.right.left = new TreeNode(15);
 tree.right.right = new TreeNode(7);
 
 console.log(levelOrderTraversal(tree)); // Output: [[3],[9,20],[15,7]]
-console.log(levelOrderTraversalRec(tree)); // Output: [[3],[9,20],[15,7]]

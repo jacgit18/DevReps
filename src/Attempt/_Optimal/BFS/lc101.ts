@@ -24,23 +24,8 @@
 import { TreeNode } from "../../../util/BinaryTreeMaker";
 
 export const isSymmetric = (root: TreeNode | null): boolean =>{
-  if (!root) {
-      return true;
-  }
 
-  const isMirror = (left: TreeNode | null, right: TreeNode | null): boolean => {
-      if (!left && !right) {
-          return true;
-      }
-
-      if (!left || !right || left.value !== right.value) {
-          return false;
-      }
-
-      return isMirror(left.left, right.right) && isMirror(left.right, right.left);
-  };
-
-  return isMirror(root.left, root.right);
+    return true
 }
 
 // Example usage:

@@ -31,34 +31,12 @@
 
 
 export const findMaxForm = (strs: string[], m: number, n: number): number =>{
-    const dp: number[][][] = new Array(strs.length + 1)
-      .fill(0)
-      .map(() => new Array(m + 1).fill(0).map(() => new Array(n + 1).fill(0)));
+   
   
-    for (let i = 1; i <= strs.length; i++) {
-      const [zeros, ones] = countZerosOnes(strs[i - 1]);
-  
-      for (let j = 0; j <= m; j++) {
-        for (let k = 0; k <= n; k++) {
-          dp[i][j][k] = dp[i - 1][j][k]; // Exclude the current string
-  
-          if (j >= zeros && k >= ones) {
-            dp[i][j][k] = Math.max(dp[i][j][k], dp[i - 1][j - zeros][k - ones] + 1); // Include the current string
-          }
-        }
-      }
-    }
-  
-    return dp[strs.length][m][n];
+    return 0;
   }
   
-  function countZerosOnes(str: string): number[] {
-    const result = [0, 0];
-    for (const char of str) {
-      result[Number(char)]++;
-    }
-    return result;
-  }
+  
   
   // Example usage:
   console.log(findMaxForm(["10", "0001", "111001", "1", "0"], 5, 3)); // Output: 4

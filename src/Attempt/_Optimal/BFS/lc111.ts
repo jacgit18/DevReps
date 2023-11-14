@@ -27,24 +27,9 @@
 import { TreeNode } from "../../../util/BinaryTreeMaker";
 
 export const minDepth = (root: TreeNode | null): number =>{
-  if (!root) return 0;
+ 
 
-  if (!root.left && !root.right) {
-      // Leaf node
-      return 1;
-  }
-
-  let minDepthValue = Number.MAX_SAFE_INTEGER;
-
-  if (root.left) {
-      minDepthValue = Math.min(minDepthValue, minDepth(root.left));
-  }
-
-  if (root.right) {
-      minDepthValue = Math.min(minDepthValue, minDepth(root.right));
-  }
-
-  return minDepthValue + 1;
+  return 0;
 }
 
 // Example usage:

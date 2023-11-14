@@ -24,27 +24,8 @@
 // Output: 0
 
 export const threeSumSmaller = (nums: number[], target: number): number => {
-    nums.sort((a, b) => a - b);
-    let count = 0;
-
-    for (let i = 0; i < nums.length - 2; i++) {
-        let left = i + 1;
-        let right = nums.length - 1;
-
-        while (left < right) {
-            const sum = nums[i] + nums[left] + nums[right];
-
-            if (sum < target) {
-                // If the sum is less than the target, then all pairs (left, right) will satisfy the condition
-                count += right - left;
-                left++;
-            } else {
-                right--;
-            }
-        }
-    }
-
-    return count;
+ 
+    return 0;
 }
 
 // Example usage:

@@ -35,22 +35,8 @@
 
 
 export const nextGreatestLetter = (letters: string[], target: string): string =>{
-          let left = 0;
-        let right = letters.length;
-    
-        while (left < right) {
-            const mid = left + Math.floor((right - left) / 2);
-    
-            if (letters[mid] <= target) {
-                left = mid + 1;
-            } else {
-                right = mid;
-            }
-        }
-    
-        // If left is out of bounds, return the first character
-        // Otherwise, return the character at the left index
-        return left < letters.length ? letters[left] : letters[0];
+        
+    return " ";
     }
     
     // Example usage:

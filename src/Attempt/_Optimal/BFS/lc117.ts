@@ -47,33 +47,9 @@ class NodeDiff {
 }
 
 export const connect = (root: NodeDiff | null): NodeDiff | null =>{
-  if (!root) {
-    return null;
-  }
+ 
 
-  let queue: NodeDiff[] = [root];
-
-  while (queue.length > 0) {
-    let levelSize = queue.length;
-
-    for (let i = 0; i < levelSize; i++) {
-      let current = queue.shift()!;
-      
-      if (i < levelSize - 1) {
-        current.next = queue[0];
-      }
-
-      if (current.left) {
-        queue.push(current.left);
-      }
-
-      if (current.right) {
-        queue.push(current.right);
-      }
-    }
-  }
-
-  return root;
+  return null;
 }
 
 // Example usage:

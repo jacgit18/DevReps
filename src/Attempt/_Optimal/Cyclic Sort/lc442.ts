@@ -27,29 +27,9 @@
 
 
 export const findDuplicates = (nums: number[]): number[] => {
-  const duplicates: number[] = [];
+ 
 
-  let index = 0;
-  const n = nums.length;
-
-  while (index < n) {
-    const currentNum = nums[index];
-    const correctIndex = currentNum - 1;
-
-    if (nums[index] !== nums[correctIndex]) {
-      [nums[index], nums[correctIndex]] = [nums[correctIndex], nums[index]]; // swap indices
-    } else {
-      index++;
-    }
-  }
-
-  for (let i = 0; i < n; i++) {
-    if (nums[i] !== i + 1) {
-      duplicates.push(nums[i]);
-    }
-  }
-
-  return duplicates;
+  return [0];
 };
 
 // Example usage:

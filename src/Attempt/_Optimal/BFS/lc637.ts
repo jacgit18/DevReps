@@ -25,34 +25,9 @@
 import { TreeNode } from "../../../util/BinaryTreeMaker";
 
 export const averageOfLevels = (root: TreeNode | null): number[] =>{
-  if (!root) {
-    return [];
-  }
+ 
 
-  let result: number[] = [];
-  let queue: TreeNode[] = [root];
-
-  while (queue.length > 0) {
-    let levelSize = queue.length;
-    let levelSum = 0;
-
-    for (let i = 0; i < levelSize; i++) {
-      let current = queue.shift()!;
-      levelSum += current.value;
-
-      if (current.left) {
-        queue.push(current.left);
-      }
-
-      if (current.right) {
-        queue.push(current.right);
-      }
-    }
-
-    result.push(levelSum / levelSize);
-  }
-
-  return result;
+  return [0];
 }
 
 // Example usage:

@@ -29,26 +29,9 @@
 
 
 export const find_missing_number = (nums: number[]): number => {
-  let index = 0;
-  const CurrentIndex = nums.length;
+ 
 
-  while (index < CurrentIndex) {
-    let currentSubarray = nums[index];
-
-    if (nums[index] < CurrentIndex && nums[index] !== nums[currentSubarray]) {
-      [nums[index], nums[currentSubarray]] = [nums[currentSubarray], nums[index]]; // swap indices
-    } else {
-      index++;
-    }
-  }
-
-  for (index = 0; index < CurrentIndex; index++) {
-    if (nums[index] !== index) {
-      return index;
-    }
-  }
-
-  return CurrentIndex;
+  return 0;
 };
 
 console.log(find_missing_number([3, 0, 1])); // 2

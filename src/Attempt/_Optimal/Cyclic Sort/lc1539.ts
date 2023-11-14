@@ -25,20 +25,9 @@
 
 
 export const findKthPositive = (arr: number[], k: number): number => {
-  let missingCount = 0;
-  let num = 1;
-  let index = 0;
+ 
 
-  while (missingCount < k) {
-    if (index < arr.length && arr[index] === num) {
-      index++;
-    } else {
-      missingCount++;
-    }
-    num++;
-  }
-
-  return num - 1;
+  return 0;
 };
 
 // Example usage:

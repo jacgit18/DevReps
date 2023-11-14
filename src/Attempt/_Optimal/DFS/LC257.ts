@@ -26,29 +26,8 @@ import { TreeNode } from "../../../util/BinaryTreeMaker";
 
 
 export const binaryTreePaths = (root: TreeNode | null): string[] =>{
-  const result: string[] = [];
-  
-  function dfs(node: TreeNode | null, path: string) {
-    if (!node) {
-      return;
-    }
-
-    // Construct the current path
-    const currentPath = path === "" ? `${node.value}` : `${path}->${node.value}`;
-
-    if (!node.left && !node.right) {
-      // If leaf node, add the current path to the result
-      result.push(currentPath);
-      return;
-    }
-
-    // Recursively explore left and right subtrees with the updated path
-    dfs(node.left, currentPath);
-    dfs(node.right, currentPath);
-  }
-
-  dfs(root, "");
-  return result;
+ 
+  return [" "];
 }
 
 // Example usage:

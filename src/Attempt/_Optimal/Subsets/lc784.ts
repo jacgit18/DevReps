@@ -23,32 +23,9 @@
 
 
 export const letterCasePermutation = (s: string): string[] =>{
-  const result: string[] = [];
 
-  const backtrack = (current: string[], index: number) => {
-    if (index === s.length) {
-      result.push(current.join(''));
-      return;
-    }
 
-    const char = s[index];
-
-    // Include the current character as lowercase
-    current.push(char.toLowerCase());
-    backtrack(current, index + 1);
-    current.pop();
-
-    // Include the current character as uppercase if it's a letter
-    if (char.toLowerCase() !== char.toUpperCase()) {
-      current.push(char.toUpperCase());
-      backtrack(current, index + 1);
-      current.pop();
-    }
-  };
-
-  backtrack([], 0);
-
-  return result;
+  return [" "];
 }
 
 // Example usage:

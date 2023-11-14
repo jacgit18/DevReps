@@ -28,35 +28,9 @@
 import { TreeNode } from "../../../util/BinaryTreeMaker";
 
 export const zigzagLevelOrder = (root: TreeNode | null): number[][] =>{
-  if (!root) return [];
+ 
 
-  const result: number[][] = [];
-  let level: number[] = [];
-  let queue: TreeNode[] = [root];
-  let reverseOrder = false;
-
-  while (queue.length > 0) {
-      const levelSize = queue.length;
-
-      for (let i = 0; i < levelSize; i++) {
-          const currentNode = queue.shift()!;
-
-          if (reverseOrder) {
-              level.unshift(currentNode.value);
-          } else {
-              level.push(currentNode.value);
-          }
-
-          if (currentNode.left) queue.push(currentNode.left);
-          if (currentNode.right) queue.push(currentNode.right);
-      }
-
-      result.push(level);
-      level = [];
-      reverseOrder = !reverseOrder;
-  }
-
-  return result;
+  return [[0]];
 }
 
 // Example usage:

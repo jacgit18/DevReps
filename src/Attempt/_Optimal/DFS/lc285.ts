@@ -27,20 +27,9 @@ import { TreeNode } from "../../../util/BinaryTreeMaker";
 
 
 export const inorderSuccessor = (root: TreeNode | null, p: TreeNode | null): TreeNode | null =>{
-  let successor: TreeNode | null = null;
+ 
 
-  while (root) {
-    if (root.value > p!.value) {
-      // If the current node is greater than p, update successor and move to the left subtree
-      successor = root;
-      root = root.left;
-    } else {
-      // If the current node is less than or equal to p, move to the right subtree
-      root = root.right;
-    }
-  }
-
-  return successor;
+  return null;
 }
 
 // Example usage:

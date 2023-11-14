@@ -27,29 +27,9 @@
 
 
 export const longestOnes = (nums: number[], k: number):number => {
-        let left = 0;
-        let right = 0;
-        let maxOnes = 0;
-        let zeroCount = 0;
+       
     
-        while (right < nums.length) {
-            if (nums[right] === 0) {
-                zeroCount++;
-            }
-    
-            while (zeroCount > k) {
-                if (nums[left] === 0) {
-                    zeroCount--;
-                }
-                left++;
-            }
-    
-            maxOnes = Math.max(maxOnes, right - left + 1);
-    
-            right++;
-        }
-    
-        return maxOnes;
+        return 0;
     }
     
     // Example usage:

@@ -1,4 +1,4 @@
-// import { combinedAttemptExports } from "../../../src/routers/OptimalAttempt";
+// import { combinedOptimalAttemptExports } from "../../../src/routers/OptimalAttempt";
 import { combinedOptimalSolutionExports } from "../../../src/routers/OptimalSolution";
 
 
@@ -37,7 +37,7 @@ const runTestCases = () => {
 
   testCases.forEach((testCase, index) => {
     // generateTestCases(
-    //     combinedAttemptExports,
+    //     combinedOptimalAttemptExports,
     //   testCase.fruits,
     //   `Test Case ${index + 1}`,
     //   testCase.expect

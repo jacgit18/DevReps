@@ -25,38 +25,9 @@
 
 
 export const checkInclusion = (s1: string, s2: string): boolean => {
-  if (s1.length > s2.length) return false;
+ 
 
-  const s1CharCount: number[] = Array(26).fill(0);
-  const window: number[] = Array(26).fill(0);
-
-  for (let char of s1) {
-    const idx = char.charCodeAt(0) - 97; // Add 0 as an argument to charCodeAt
-    s1CharCount[idx]++;
-  }
-
-  for (let i = 0; i < s1.length; i++) {
-    const idx = s2[i].charCodeAt(0) - 97; // Add 0 as an argument to charCodeAt
-    window[idx]++;
-  }
-
-  let start = 0;
-  let end = s1.length - 1;
-
-  while (end < s2.length) {
-    if (window.join("") === s1CharCount.join("")) return true;
-    end++;
-
-    if (end === s2.length) break;
-
-    const startIdx = s2[start].charCodeAt(0) - 97; // Add 0 as an argument to charCodeAt
-    const endIdx = s2[end].charCodeAt(0) - 97; // Add 0 as an argument to charCodeAt
-    window[startIdx]--;
-    window[endIdx]++;
-    start++;
-  }
-
-  return false;
+  return true;
 };
 
 let s1 = "ab",

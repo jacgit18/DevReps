@@ -161,7 +161,7 @@ const OptimalSlidingWindSolution = {
     lc1004: longestOnes
   };
 
-const MergeIntervalSolution = {
+const MergeInterval = {
     lc56: merge,
     lc57: insertInterval,
     lc252: canAttendMeetings,
@@ -172,7 +172,7 @@ const MergeIntervalSolution = {
   };
 
 
-const OptimalSubsetSolution = {
+const OptimalSubset = {
     backtrackOne: matrix,
     backtrackTwo:robotPaths,
     lc17: letterCombinationsBackTrack,
@@ -282,8 +282,8 @@ const OptimalKnapSack ={
 export const combinedOptimalSolutionExports = {
     OptimalTwoPointerSolution,
     OptimalSlidingWindSolution,
-    MergeIntervalSolution,
-    OptimalSubsetSolution,
+    MergeInterval,
+    OptimalSubset,
     OptimalModifiedBinarySearch,
     OptimalCycSort,
     OptimalFastSlowPointers,
@@ -296,34 +296,3 @@ export const combinedOptimalSolutionExports = {
     OptimalBitWiseXOR
   }
 
-
-
-
-  // import { smallestSubarrayWithGivenSum } from "./SlidingWindow/lc209";
-  // import { characterReplacementTwoPointer } from "./TwoPointers/lc424";
-  
-  // import { pair_with_target_sum_Two_Pointer } from "./SlidingWindow/lc1";
-  
-  
-  
-  
-  // const OptimalSlidingWindAttempt = {
-  //     lc1: pair_with_target_sum_Two_Pointer,
-  //     lc209: smallestSubarrayWithGivenSum,
-  //   };
-  
-  
-  
-  
-  // const OptimalTwoPointerAttempt = {
-  //     lc424:characterReplacementTwoPointer,
-  //   };
-  
-  
-  
-  //   export const combinedAttemptExports = {
-  //     OptimalSlidingWindAttempt,
-  //     OptimalTwoPointerAttempt,
-  // };
-  
-  

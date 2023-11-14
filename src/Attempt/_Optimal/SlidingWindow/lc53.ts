@@ -32,18 +32,9 @@
 
  
 export const maxSubArray = (nums: number[]):number => {
-  let maxSum = nums[0];
-    let currentSum = nums[0];
+ 
 
-    for (let i = 1; i < nums.length; i++) {
-        // If the current sum becomes negative, start a new subarray
-        currentSum = Math.max(nums[i], currentSum + nums[i]);
-
-        // Update the maximum sum if the current sum is greater
-        maxSum = Math.max(maxSum, currentSum);
-    }
-
-    return maxSum;
+    return 0;
 }
 
 // Example usage:

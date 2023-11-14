@@ -27,11 +27,8 @@
 // Each element in the array appears twice except for one element which appears only once.
 
 export const singleNumber = (nums: number[]): number =>{
-    let result = 0;
-    for (const num of nums) {
-        result ^= num;
-    }
-    return result;
+   
+    return 0;
 }
 
 // Example usage:

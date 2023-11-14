@@ -49,31 +49,8 @@ import { TreeNode } from "../../../util/BinaryTreeMaker";
 
 
 export const pathSumTwo = (root: TreeNode | null, targetSum: number): number[][] =>{
-  const result: number[][] = [];
-  const currentPath: number[] = [];
-
-  function dfs(node: TreeNode | null, sumSoFar: number) {
-    if (!node) {
-      return;
-    }
-
-    currentPath.push(node.value);
-
-    if (!node.left && !node.right && sumSoFar + node.value === targetSum) {
-      // If leaf node and the sum equals targetSum, add the current path to the result
-      result.push([...currentPath]);
-    }
-
-    // Recursively explore left and right subtrees
-    dfs(node.left, sumSoFar + node.value);
-    dfs(node.right, sumSoFar + node.value);
-
-    // Backtrack: remove the last node as we backtrack to explore other paths
-    currentPath.pop();
-  }
-
-  dfs(root, 0);
-  return result;
+ 
+  return [[0]];
 }
 
 // Example usage:

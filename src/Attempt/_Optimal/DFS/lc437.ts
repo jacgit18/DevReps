@@ -29,33 +29,8 @@ import { TreeNode } from "../../../util/BinaryTreeMaker";
 
 
 export const pathSum = (root: TreeNode | null, targetSum: number): number =>{
-  const prefixSumCount = new Map<number, number>();
-  let totalCount = 0;
-
-  function dfs(node: TreeNode | null, currentSum: number) {
-    if (!node) {
-      return;
-    }
-
-    // Update the current sum
-    currentSum += node.value;
-
-    // Check if there is a prefix sum (currentSum - targetSum) in the map
-    totalCount += prefixSumCount.get(currentSum - targetSum) || 0;
-
-    // Update the map with the current prefix sum
-    prefixSumCount.set(currentSum, (prefixSumCount.get(currentSum) || 0) + 1);
-
-    // Recursively explore left and right subtrees
-    dfs(node.left, currentSum);
-    dfs(node.right, currentSum);
-
-    // Backtrack: remove the current prefix sum as we backtrack to explore other paths
-    prefixSumCount.set(currentSum, (prefixSumCount.get(currentSum) || 0) - 1);
-  }
-
-  dfs(root, 0);
-  return totalCount;
+ 
+  return 0;
 }
 
 // Example usage:

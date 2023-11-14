@@ -28,21 +28,8 @@
 // 0 <= height[i] <= 104
 
 export const maxArea = (height: number[]): number => {
-  let [result, leftIndex, rightIndex] = [0, 0, height.length - 1]
-
-  while (leftIndex < rightIndex) {
-    // calculate the shortest side and the area
-    let shortestSide = Math.min(height[leftIndex], height[rightIndex])
-    let area = (rightIndex - leftIndex) * shortestSide
-
-    // compare area and result to update the result
-    result = Math.max(area, result)
-
-    // update the left or right index
-    if (height[leftIndex] < height[rightIndex]) leftIndex++
-    else rightIndex--
-  }
-  return result
+ 
+  return 0
 }
 
 console.log(maxArea([1, 8, 6, 2, 5, 4, 8, 3, 7]))

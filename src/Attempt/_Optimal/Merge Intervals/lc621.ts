@@ -41,25 +41,9 @@
 
 
 export const leastInterval = (tasks: string[], n: number): number =>{
-  const taskFrequency: number[] = Array(26).fill(0);
+ 
 
-  for (const task of tasks) {
-      const index = task.charCodeAt(0) - 'A'.charCodeAt(0);
-      taskFrequency[index]++;
-  }
-
-  taskFrequency.sort((a, b) => b - a); // Sort frequencies in descending order
-
-  let maxFrequency = taskFrequency[0] - 1;
-  let idleSlots = maxFrequency * n;
-
-  for (let i = 1; i < taskFrequency.length; i++) {
-      idleSlots -= Math.min(maxFrequency, taskFrequency[i]);
-  }
-
-  idleSlots = Math.max(0, idleSlots); // Ensure idleSlots is non-negative
-
-  return tasks.length + idleSlots;
+  return 0;
 }
 
 // Example usage:

@@ -32,50 +32,9 @@
 
 
 export const diffWaysToCompute = (expression: string): number[] =>{
-    const result: number[] = [];
   
-    const isOperator = (char: string): boolean => char === '+' || char === '-' || char === '*';
   
-    const calculate = (left: number, right: number, operator: string): number => {
-      switch (operator) {
-        case '+':
-          return left + right;
-        case '-':
-          return left - right;
-        case '*':
-          return left * right;
-        default:
-          throw new Error(`Invalid operator: ${operator}`);
-      }
-    };
-  
-    const compute = (input: string): number[] => {
-      const ways: number[] = [];
-  
-      for (let i = 0; i < input.length; i++) {
-        const char = input[i];
-  
-        if (isOperator(char)) {
-          const leftResults = compute(input.substring(0, i));
-          const rightResults = compute(input.substring(i + 1));
-  
-          for (const left of leftResults) {
-            for (const right of rightResults) {
-              ways.push(calculate(left, right, char));
-            }
-          }
-        }
-      }
-  
-      if (ways.length === 0) {
-        // No operators found, the input is a single number
-        ways.push(parseInt(input));
-      }
-  
-      return ways;
-    };
-  
-    return compute(expression);
+    return [0];
   }
   
   // Example usage:

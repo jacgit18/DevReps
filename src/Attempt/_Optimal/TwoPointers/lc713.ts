@@ -24,25 +24,8 @@
 
 
 export const numSubarrayProductLessThanK = (nums: number[], k: number): number =>{
-  let count = 0
-  // i and j are pointers
-  let right = 0
-  let left = 0
-  let product = 1 // initial multiplication
-
-  if (k <= 1) return 0
-
-  while (right < nums.length) {
-    product *= nums[right]
-    while (product >= k) {
-      product /= nums[left]
-      left++
-    }
-    count += right - left + 1
-    right++
-  }
-
-  return count
+ 
+  return 0
 }
 
 console.log(numSubarrayProductLessThanK([10,5,2,6], 100));

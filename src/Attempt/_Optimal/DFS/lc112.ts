@@ -39,17 +39,9 @@
 import { TreeNode } from "../../../util/BinaryTreeMaker";
 
 export const hasPathSum = (root: TreeNode | null, targetSum: number): boolean =>{
-  if (!root) {
-    return false;
-  }
 
-  // Check if the current node is a leaf node and if the sum is equal to the target
-  if (!root.left && !root.right && root.value === targetSum) {
-    return true;
-  }
 
-  // Recursively check the left and right subtrees with the updated target sum
-  return hasPathSum(root.left, targetSum - root.value) || hasPathSum(root.right, targetSum - root.value);
+  return true;
 }
 
 // Example usage:

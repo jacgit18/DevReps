@@ -40,27 +40,9 @@
 
 
 export const totalFruit = (fruits: number[]): number => {
-    let maxFruits = 0;
-    let left = 0;
-    const fruitMap: Map<number, number> = new Map();
+   
 
-    for (let right = 0; right < fruits.length; right++) {
-        const currentFruit = fruits[right];
-        fruitMap.set(currentFruit, (fruitMap.get(currentFruit) || 0) + 1);
-
-        while (fruitMap.size > 2) {
-            const leftFruit = fruits[left];
-            fruitMap.set(leftFruit, fruitMap.get(leftFruit)! - 1);
-            if (fruitMap.get(leftFruit) === 0) {
-                fruitMap.delete(leftFruit);
-            }
-            left++;
-        }
-
-        maxFruits = Math.max(maxFruits, right - left + 1);
-    }
-
-    return maxFruits;
+    return 0;
 }
 
 // Example usage:

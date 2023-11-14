@@ -18,21 +18,9 @@
 //  true
 
 export const canAttendMeetings = (intervals: number[][]): boolean =>{
-  if (intervals.length <= 1) {
-      return true; // No overlap if there is 0 or 1 meeting
-  }
+ 
 
-  // Sort intervals based on their start times
-  intervals.sort((a, b) => a[0] - b[0]);
-
-  // Check for overlapping meetings
-  for (let i = 1; i < intervals.length; i++) {
-      if (intervals[i][0] < intervals[i - 1][1]) {
-          return false; // Overlapping meetings
-      }
-  }
-
-  return true; // No overlapping meetings
+  return true; 
 }
 
 // Example usage:
