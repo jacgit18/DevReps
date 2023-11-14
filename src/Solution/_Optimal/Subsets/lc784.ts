@@ -8,6 +8,8 @@
 
 // Input: s = "a1b2"
 // Output: ["a1b2","a1B2","A1b2","A1B2"]
+
+
 // Example 2:
 
 // Input: s = "3z4"
