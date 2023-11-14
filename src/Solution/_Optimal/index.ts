@@ -26,7 +26,7 @@ import { smallestSubarrayWithGivenSum, smallest_subarray_with_given_sumAlt } fro
 import { lengthOfLongestSubstring } from "./SlidingWindow/lc3";
 import { findSubstring } from "./SlidingWindow/lc30";
 import { longest_substring_with_k_distinct } from "./SlidingWindow/lc340";
-import { findAnagramsTwoPointer, findAnagrams } from "./SlidingWindow/lc438";
+import { findAnagrams, findAnagramsTwoPointer } from "./SlidingWindow/lc438";
 import { maxSubArray } from "./SlidingWindow/lc53";
 import { checkInclusion } from "./SlidingWindow/lc567";
 import { minWindow } from "./SlidingWindow/lc76";
@@ -60,7 +60,7 @@ import { searchRanger } from "./Modified Binary Search/lc33";
 import { searchRange } from "./Modified Binary Search/lc34";
 import { searchInsert } from "./Modified Binary Search/lc35";
 import { findClosestElements } from "./Modified Binary Search/lc658";
-import { searchtargetinnums } from "./Modified Binary Search/lc702";
+import { searchInArrayReader } from "./Modified Binary Search/lc702";
 import { searchBin } from "./Modified Binary Search/lc704";
 import { nextGreatestLetter } from "./Modified Binary Search/lc744";
 import { search } from "./Modified Binary Search/lc81";
@@ -191,7 +191,7 @@ const OptimalModifiedBinarySearch = {
     lc81: search,
     lc153: findMin,
     lc658: findClosestElements,
-    lc702: searchtargetinnums,
+    lc702: searchInArrayReader,
     lc704: searchBin,
     lc744: nextGreatestLetter,
   };

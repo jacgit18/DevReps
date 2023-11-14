@@ -30,5 +30,43 @@
 
 export const search = (nums: number[], target: number): boolean =>{
     
-return true
-};
+        let left = 0;
+        let right = nums.length - 1;
+    
+        while (left <= right) {
+            const mid = Math.floor((left + right) / 2);
+    
+            if (nums[mid] === target) {
+                return true;
+            }
+    
+            if (nums[left] === nums[mid] && nums[right] === nums[mid]) {
+                left++;
+                right--;
+            } else if (nums[left] <= nums[mid]) {
+                if (nums[left] <= target && target < nums[mid]) {
+                    right = mid - 1;
+                } else {
+                    left = mid + 1;
+                }
+            } else {
+                if (nums[mid] < target && target <= nums[right]) {
+                    left = mid + 1;
+                } else {
+                    right = mid - 1;
+                }
+            }
+        }
+    
+        return false;
+    }
+    
+    // Example usage:
+    const nums1 = [2, 5, 6, 0, 0, 1, 2];
+    const target1 = 0;
+    console.log(search(nums1, target1)); // Output: true
+    
+    const nums2 = [2, 5, 6, 0, 0, 1, 2];
+    const target2 = 3;
+    console.log(search(nums2, target2)); // Output: false
+    

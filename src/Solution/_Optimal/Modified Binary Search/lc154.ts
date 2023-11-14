@@ -31,7 +31,29 @@
 
 
 export const findMinTwo = (nums: number[]): number =>{
+        let left = 0;
+        let right = nums.length - 1;
     
-
-return 0
-};
+        while (left < right) {
+            const mid = Math.floor((left + right) / 2);
+    
+            if (nums[mid] > nums[right]) {
+                left = mid + 1;
+            } else {
+                right = mid;
+            }
+        }
+    
+        return nums[left];
+    }
+    
+    // Example usage:
+    const nums1 = [3, 4, 5, 1, 2];
+    console.log(findMinTwo(nums1)); // Output: 1
+    
+    const nums2 = [4, 5, 6, 7, 0, 1, 2];
+    console.log(findMinTwo(nums2)); // Output: 0
+    
+    const nums3 = [11, 13, 15, 17];
+    console.log(findMinTwo(nums3)); // Output: 11
+    
