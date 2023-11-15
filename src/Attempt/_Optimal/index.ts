@@ -41,6 +41,7 @@ import { intervalIntersection } from "./Merge Intervals/lc986"
 // Subset/ Backtracking pattern
 import { letterCombinations } from "./Subsets/lc17"
 import { diffWaysToCompute } from "./Subsets/lc241"
+import { gameOfLife } from "./Subsets/lc289"
 import { findDuplicatesCyclic } from "./Subsets/lc442"
 import { permute } from "./Subsets/lc46"
 import { subsets } from "./Subsets/lc78"
@@ -161,6 +162,7 @@ const OptimalSubset = {
   lc78: subsets,
   lc90: subsetsWithDup,
   lc241: diffWaysToCompute,
+  lc289: gameOfLife,
   lc442: findDuplicatesCyclic,
   lc784: letterCasePermutation,
 }

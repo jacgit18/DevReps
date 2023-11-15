@@ -14,6 +14,7 @@
 
 // Input: board = [[0,1,0],[0,0,1],[1,1,1],[0,0,0]]
 // Output: [[0,0,0],[1,0,1],[0,1,1],[0,1,0]]
+
 // Example 2:
 
 // Input: board = [[1,1],[1,0]]
@@ -26,8 +27,16 @@
 // 1 <= m, n <= 25
 // board[i][j] is 0 or 1.
 
-const gameOfLife = (board) => {}
-
-gameOfLife()
-gameOfLife()
-gameOfLife()
+export const gameOfLife=(board: number[][]): void =>{
+      
+    }
+    
+    // Example usage:
+    const board1 = [[0,1,0],[0,0,1],[1,1,1],[0,0,0]];
+    gameOfLife(board1);
+    console.log(board1);
+    
+    const board2 = [[1,1],[1,0]];
+    gameOfLife(board2);
+    console.log(board2);
+    

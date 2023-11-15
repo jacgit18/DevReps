@@ -46,6 +46,7 @@ import { robotPaths } from "./Subsets/BacktrackMatrix"
 import { matrix } from "./Subsets/MockIntMatrix"
 import { letterCombinationsBackTrack } from "./Subsets/lc17"
 import { diffWaysToCompute } from "./Subsets/lc241"
+import { gameOfLife } from "./Subsets/lc289"
 import { findDuplicatesBackTrack, findDuplicatesCyclic } from "./Subsets/lc442"
 import { permute } from "./Subsets/lc46"
 import { subsets } from "./Subsets/lc78"
@@ -170,6 +171,7 @@ const OptimalSubset = {
   lc78: subsets,
   lc90: subsetsWithDup,
   lc241: diffWaysToCompute,
+  lc289: gameOfLife,
   lc442: findDuplicatesBackTrack,
   lc442Alt: findDuplicatesCyclic,
   lc784: letterCasePermutation,
