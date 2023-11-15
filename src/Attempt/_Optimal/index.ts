@@ -1,3 +1,7 @@
+// Primative type
+import { revString } from "./PrimativeType/lc344"
+
+
 // Two Pointer
 import { pair_with_target_sum } from "./TwoPointers/lc1"
 import { maxArea } from "./TwoPointers/lc11"
@@ -102,6 +106,14 @@ import { findMaxForm } from "./Knapsack Dynamic Programing/lc474"
 
 // Bitwise XOR
 import { singleNumber } from "./Bitwise XOR/lc136"
+
+
+
+
+const OptimalPrimatives = {
+  lc344: revString.revString1, 
+
+}
 
 const OptimalTwoPointer = {
   lc1: pair_with_target_sum,
@@ -222,6 +234,7 @@ const OptimalBitWiseXOR = {
 }
 
 export const combinedOptimalAttemptExports = {
+  OptimalPrimatives,
   OptimalTwoPointer,
   OptimalSlidingWindow,
   MergeInterval,

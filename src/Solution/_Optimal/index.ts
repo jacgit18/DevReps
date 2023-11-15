@@ -1,10 +1,12 @@
+// Primative type
+import { revString } from "./PrimativeType/lc344"
+
 // Two Pointer
 // Dynamic Importing: Instead of importing all functions at once,
 // you can dynamically import only the functions you need at runtime.
 // This can reduce the initial loading time.
 // const { pair_with_target_sum_Two_Pointer, pair_with_target_sum_map } = await import("./TwoPointers/lc1");
 import { pair_with_target_sum_Two_Pointer, pair_with_target_sum_map } from "./TwoPointers/lc1"
-
 import { maxArea } from "./TwoPointers/lc11"
 import { isPalindrome } from "./TwoPointers/lc125"
 import { threeSum } from "./TwoPointers/lc15"
@@ -21,10 +23,7 @@ import { sortedSquares } from "./TwoPointers/lc977"
 
 // Sliding Window
 import { longestOnes } from "./SlidingWindow/lc1004"
-import {
-  smallestSubarrayWithGivenSum,
-  smallest_subarray_with_given_sumAlt,
-} from "./SlidingWindow/lc209"
+import { smallestSubarrayWithGivenSum, smallest_subarray_with_given_sumAlt } from "./SlidingWindow/lc209"
 import { lengthOfLongestSubstring } from "./SlidingWindow/lc3"
 import { findSubstring } from "./SlidingWindow/lc30"
 import { longest_substring_with_k_distinct } from "./SlidingWindow/lc340"
@@ -113,6 +112,13 @@ import { findMaxForm } from "./Knapsack Dynamic Programing/lc474"
 
 // Bitwise XOR
 import { singleNumber } from "./Bitwise XOR/lc136"
+
+
+const OptimalPrimatives = {
+  lc344: revString.revString1, 
+
+}
+
 
 const OptimalTwoPointerSolution = {
   lc1: pair_with_target_sum_Two_Pointer,
@@ -242,6 +248,7 @@ const OptimalBitWiseXOR = {
 }
 
 export const combinedOptimalSolutionExports = {
+  OptimalPrimatives,
   OptimalTwoPointerSolution,
   OptimalSlidingWindSolution,
   MergeInterval,
