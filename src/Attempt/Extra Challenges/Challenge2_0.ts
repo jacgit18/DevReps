@@ -1,60 +1,64 @@
-function spaceEater(food) {
+function spaceEater(food: string[][]): void {
   for (let consumptionStart = 0; consumptionStart < food.length; ++consumptionStart) {
-    console.log(food[consumptionStart])
+    console.log(food[consumptionStart]);
     if (
-      food[consumptionStart][consumptionStart + 1] === "" ||
-      food[consumptionStart][consumptionStart + 1] === " "
+      food[consumptionStart][1] === "" ||
+      food[consumptionStart][1] === " "
     ) {
-      food[consumptionStart].splice()
+      food[consumptionStart].splice(1, 1);
     }
   }
-  return
 }
 
-function solution(queries) {
-  // good problem made me think
+
+// good problem made me think
+export const solution = (queries: string[][]): string[] =>{
   let action = {
     1: "APPEND",
     2: "BACKSPACE",
     3: "MOVE",
-  }
+  };
 
-  let sanitized = spaceEater(queries)
-  let res = []
-  //  let word = queries[0].length
-  // console.log(word)
+  let sanitized: void = spaceEater(queries);
+  let res: string[] = [];
 
   for (let i = 0; i < queries.length; ++i) {
     for (let j = 0; j < queries[i].length; ++j) {
-      // remove empty space
-      // queries[i].filter(function(){})
-      let word = queries[j][1]
-      //   console.log(word)
-
-      // if(queries[1][j] === ' ')
+      let word = queries[j][1];
 
       if (queries[i][0] === action[1]) {
         if (res.length < 1) {
-          res.push(queries[i][1])
+          res.push(queries[i][1]);
         } else {
-          let word2 = word + queries[1][j]
-          res.push(word2)
-          //    word = res[j]
+          let word2 = word + queries[1][j];
+          res.push(word2);
         }
       }
 
       if (queries[i][0] === action[2]) {
+        // Handle BACKSPACE logic here
       }
 
       if (queries[i][0] === action[3]) {
+        // Handle MOVE logic here
       }
     }
   }
 
-  // console.log(res)
-
-  return res
+  return res;
 }
+
+
+const queries = [
+  ['APPEND', 'Hey'],
+  ['APPEND', ' you'],
+  ['APPEND', ", don't"],
+  ['APPEND', ' '],
+  ['APPEND', 'let me down'],
+];
+
+console.log(solution(queries));
+
 
 /**
  * 

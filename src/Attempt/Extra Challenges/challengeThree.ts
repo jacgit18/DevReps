@@ -30,7 +30,7 @@
 // 3 OPQ Panasonic 77
 // 4 ABC Taco 10
 
-// Design the Java classes, their member variables and methods signatures to support this automation project, with a
+// Design the Java/typescript classes, their member variables and methods signatures to support this automation project, with a
 // focus on how to handle different file types and formats. Feel free to use supporting database tables if necessary
 // (specify columns, primary keys, foreign keys). As with Question 1, please include any assumptions you make.
 // Deliverables:
