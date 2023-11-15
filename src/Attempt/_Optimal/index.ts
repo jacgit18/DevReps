@@ -120,7 +120,7 @@ const OptimalTwoPointer = {
   lc977: sortedSquares,
 }
 
-const OptimalSlidingWind = {
+const OptimalSlidingWindow = {
   lc3: lengthOfLongestSubstring,
   lc30: findSubstring,
   lc53: maxSubArray,
@@ -223,7 +223,7 @@ const OptimalBitWiseXOR = {
 
 export const combinedOptimalAttemptExports = {
   OptimalTwoPointer,
-  OptimalSlidingWind,
+  OptimalSlidingWindow,
   MergeInterval,
   OptimalSubset,
   OptimalModifiedBinarySearch,

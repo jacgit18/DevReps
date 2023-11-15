@@ -1,4 +1,4 @@
-// import { combinedOptimalAttemptExports } from "../../../src/routers/OptimalAttempt";
+import { combinedOptimalAttemptExports } from "../../../src/routers/OptimalAttempt";
 import { combinedOptimalSolutionExports } from "../../../src/routers/OptimalSolution";
 
 
@@ -36,12 +36,12 @@ const runTestCases = () => {
   ];
 
   testCases.forEach((testCase, index) => {
-    // generateTestCases(
-    //     combinedOptimalAttemptExports,
-    //   testCase.fruits,
-    //   `Test Case ${index + 1}`,
-    //   testCase.expect
-    // );
+    generateTestCases(
+      combinedOptimalAttemptExports.OptimalSlidingWindow.lc904,
+      testCase.fruits,
+      `Test Case ${index + 1}`,
+      testCase.expect
+    );
     generateTestCases(
       combinedOptimalSolutionExports.OptimalSlidingWindSolution.lc904,
       testCase.fruits,
