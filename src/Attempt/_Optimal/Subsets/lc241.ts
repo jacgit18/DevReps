@@ -2,14 +2,12 @@
 
 // The test cases are generated such that the output values fit in a 32-bit integer and the number of different results does not exceed 104.
 
- 
-
 // Example 1:
 
 // Input: expression = "2-1-1"
 // Output: [0,2]
 // Explanation:
-// ((2-1)-1) = 0 
+// ((2-1)-1) = 0
 // (2-(1-1)) = 2
 
 // Example 2:
@@ -17,12 +15,11 @@
 // Input: expression = "2*3-4*5"
 // Output: [-34,-14,-10,-10,10]
 // Explanation:
-// (2*(3-(4*5))) = -34 
-// ((2*3)-(4*5)) = -14 
-// ((2*(3-4))*5) = -10 
-// (2*((3-4)*5)) = -10 
+// (2*(3-(4*5))) = -34
+// ((2*3)-(4*5)) = -14
+// ((2*(3-4))*5) = -10
+// (2*((3-4)*5)) = -10
 // (((2*3)-4)*5) = 10
- 
 
 // Constraints:
 
@@ -30,17 +27,13 @@
 // expression consists of digits and the operator '+', '-', and '*'.
 // All the integer values in the input expression are in the range [0, 99].
 
+export const diffWaysToCompute = (expression: string): number[] => {
+  return [0]
+}
 
-export const diffWaysToCompute = (expression: string): number[] =>{
-  
-  
-    return [0];
-  }
-  
-  // Example usage:
-  const example1 = diffWaysToCompute("2-1-1");
-  console.log(example1);
-  
-  const example2 = diffWaysToCompute("2*3-4*5");
-  console.log(example2);
-  
+// Example usage:
+const example1 = diffWaysToCompute("2-1-1")
+console.log(example1)
+
+const example2 = diffWaysToCompute("2*3-4*5")
+console.log(example2)

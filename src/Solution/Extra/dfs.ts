@@ -1,4 +1,3 @@
-
 /*  Let's build the following tree with deserialize:
  *
  *              4
@@ -13,9 +12,6 @@
 let array = [4, 2, 5, 1, 3, null, 7, null, null, null, null, 6, 8]
 let newTree = tree.ArrayBinaryTreeDeserialize(array)
 
-
-
-
 // Depth First Search - Pre
 let resultPre = []
 function dfsPre(node) {
@@ -29,8 +25,6 @@ function dfsPre(node) {
 }
 console.log("DFS Pre:", dfsPre(newTree))
 
-
-
 // Depth First Search - In-order
 let resultIn = []
 function dfsIn(node) {
@@ -43,8 +37,6 @@ function dfsIn(node) {
   return resultIn
 }
 console.log("DFS In:", dfsIn(newTree))
-
-
 
 //Depth First Search - Post
 let resultPost = []

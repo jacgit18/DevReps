@@ -4,8 +4,6 @@
 
 // You can return the answer in any order.
 
- 
-
 // Example 1:
 
 // Input: nums = [2,7,11,15], target = 9
@@ -19,7 +17,6 @@
 
 // Input: nums = [3,3], target = 6
 // Output: [0,1]
- 
 
 // Constraints:
 
@@ -27,19 +24,17 @@
 // -109 <= nums[i] <= 109
 // -109 <= target <= 109
 // Only one valid answer exists.
- 
 
 export const pair_with_target_sum = (arr: number[], targetSum: number): number[] => {
- 
-  return [0];
+  return [0]
 }
 
-console.time("Pair time");
-console.log(pair_with_target_sum([1, 2, 3, 4, 6], 6));
-console.timeEnd("Pair time");
+console.time("Pair time")
+console.log(pair_with_target_sum([1, 2, 3, 4, 6], 6))
+console.timeEnd("Pair time")
 
 // console.log(pair_with_target_sum([2, 5, 9, 11], 11));
 
-console.log(`\n ------- Edge Case -------- `);
+console.log(`\n ------- Edge Case -------- `)
 // console.log(`Edge 1: [${pair_with_target_sum([], 6)}]`);
 // console.log(`Edge 1: [${pair_with_target_sum([3], 6)}]`);

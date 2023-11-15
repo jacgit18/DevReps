@@ -4,8 +4,6 @@
 
 // A root-to-leaf path is a path starting from the root and ending at any leaf node. A leaf is a node with no children.
 
- 
-
 // Example 1:
 
 // Input: root = [5,4,8,11,null,13,4,7,2,null,null,5,1], targetSum = 22
@@ -14,19 +12,15 @@
 // 5 + 4 + 11 + 2 = 22
 // 5 + 8 + 4 + 5 = 22
 
-
 // Example 2:
-
 
 // Input: root = [1,2,3], targetSum = 5
 // Output: []
-
 
 // Example 3:
 
 // Input: root = [1,2], targetSum = 0
 // Output: []
- 
 
 // Constraints:
 
@@ -44,25 +38,23 @@
 //  / |   | \
 // 4  5   2  7
 
-import { TreeNode } from "../../../util/BinaryTreeMaker";
+import { TreeNode } from "../../../util/BinaryTreeMaker"
 
-
-
-export const pathSumTwo = (root: TreeNode | null, targetSum: number): number[][] =>{
- 
-  return [[0]];
+export const pathSumTwo = (root: TreeNode | null, targetSum: number): number[][] => {
+  return [[0]]
 }
 
 // Example usage:
-const root = new TreeNode(5,
+const root = new TreeNode(
+  5,
   new TreeNode(4, new TreeNode(11, new TreeNode(7), new TreeNode(2))),
-  new TreeNode(8, new TreeNode(13), new TreeNode(4, new TreeNode(5), new TreeNode(1)))
-);
+  new TreeNode(8, new TreeNode(13), new TreeNode(4, new TreeNode(5), new TreeNode(1))),
+)
 
-const targetSum1 = 22;
-const targetSum2 = 5;
-const targetSum3 = 0;
+const targetSum1 = 22
+const targetSum2 = 5
+const targetSum3 = 0
 
-console.log(pathSumTwo(root, targetSum1)); // Output: [[5,4,11,2],[5,8,4,5]]
-console.log(pathSumTwo(root, targetSum2)); // Output: []
-console.log(pathSumTwo(new TreeNode(1, new TreeNode(2)), targetSum3)); // Output: []
+console.log(pathSumTwo(root, targetSum1)) // Output: [[5,4,11,2],[5,8,4,5]]
+console.log(pathSumTwo(root, targetSum2)) // Output: []
+console.log(pathSumTwo(new TreeNode(1, new TreeNode(2)), targetSum3)) // Output: []

@@ -4,8 +4,6 @@
 
 // Return intervals after the insertion.
 
- 
-
 // Example 1:
 
 // Input: intervals = [[1,3],[6,9]], newInterval = [2,5]
@@ -15,7 +13,6 @@
 // Input: intervals = [[1,2],[3,5],[6,7],[8,10],[12,16]], newInterval = [4,8]
 // Output: [[1,2],[3,10],[12,16]]
 // Explanation: Because the new interval [4,8] overlaps with [3,5],[6,7],[8,10].
- 
 
 // Constraints:
 
@@ -26,39 +23,53 @@
 // newInterval.length == 2
 // 0 <= start <= end <= 105
 
-
-export const insertInterval =(intervals: number[][], newInterval: number[]): number[][] =>{
-  const result: number[][] = [];
-  let i = 0;
+export const insertInterval = (intervals: number[][], newInterval: number[]): number[][] => {
+  const result: number[][] = []
+  let i = 0
 
   // Add intervals that come before newInterval
   while (i < intervals.length && intervals[i][1] < newInterval[0]) {
-      result.push(intervals[i]);
-      i++;
+    result.push(intervals[i])
+    i++
   }
 
   // Merge overlapping intervals
   while (i < intervals.length && intervals[i][0] <= newInterval[1]) {
-      newInterval[0] = Math.min(newInterval[0], intervals[i][0]);
-      newInterval[1] = Math.max(newInterval[1], intervals[i][1]);
-      i++;
+    newInterval[0] = Math.min(newInterval[0], intervals[i][0])
+    newInterval[1] = Math.max(newInterval[1], intervals[i][1])
+    i++
   }
 
   // Add the merged interval
-  result.push(newInterval);
+  result.push(newInterval)
 
   // Add intervals that come after newInterval
   while (i < intervals.length) {
-      result.push(intervals[i]);
-      i++;
+    result.push(intervals[i])
+    i++
   }
 
-  return result;
+  return result
 }
 
 // Example usage:
-const example1 = insertInterval([[1, 3], [6, 9]], [2, 5]);
-console.log(example1); // Output: [[1, 5], [6, 9]]
+const example1 = insertInterval(
+  [
+    [1, 3],
+    [6, 9],
+  ],
+  [2, 5],
+)
+console.log(example1) // Output: [[1, 5], [6, 9]]
 
-const example2 = insertInterval([[1, 2], [3, 5], [6, 7], [8, 10], [12, 16]], [4, 8]);
-console.log(example2); // Output: [[1, 2], [3, 10], [12, 16]]
+const example2 = insertInterval(
+  [
+    [1, 2],
+    [3, 5],
+    [6, 7],
+    [8, 10],
+    [12, 16],
+  ],
+  [4, 8],
+)
+console.log(example2) // Output: [[1, 2], [3, 10], [12, 16]]

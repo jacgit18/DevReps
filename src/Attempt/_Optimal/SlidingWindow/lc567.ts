@@ -2,8 +2,6 @@
 
 // In other words, return true if one of s1's permutations is the substring of s2.
 
- 
-
 // Example 1:
 
 // Input: s1 = "ab", s2 = "eidbaooo"
@@ -14,25 +12,19 @@
 
 // Input: s1 = "ab", s2 = "eidboaoo"
 // Output: false
- 
 
 // Constraints:
 
 // 1 <= s1.length, s2.length <= 104
 // s1 and s2 consist of lowercase English letters.
 
-
-
-
 export const checkInclusion = (s1: string, s2: string): boolean => {
- 
-
-  return true;
-};
+  return true
+}
 
 let s1 = "ab",
   s2 = "eidbaooo",
-  s3 = "eidboaoo"; // swap a with a for s3 would be false
+  s3 = "eidboaoo" // swap a with a for s3 would be false
 
-console.log(checkInclusion(s1, s2)); // true
-console.log(checkInclusion(s1, s3)); // false
+console.log(checkInclusion(s1, s2)) // true
+console.log(checkInclusion(s1, s3)) // false

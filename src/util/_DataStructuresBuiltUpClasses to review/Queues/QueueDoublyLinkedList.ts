@@ -1,98 +1,98 @@
 class QNode {
-  data: any;
-  next: QNode | null;
-  prev: QNode | null;
+  data: any
+  next: QNode | null
+  prev: QNode | null
 
   constructor(data: any, prev: QNode | null) {
-    this.data = data;
-    this.next = null;
-    this.prev = prev;
+    this.data = data
+    this.next = null
+    this.prev = prev
   }
 }
 
 class MyQueue {
-  front: QNode | null;
-  back: QNode | null;
-  size: number;
+  front: QNode | null
+  back: QNode | null
+  size: number
 
   constructor() {
-    this.front = null;
-    this.back = null;
-    this.size = 0;
+    this.front = null
+    this.back = null
+    this.size = 0
   }
 
   // Add a node into the queue
   enqueue(data: any): void {
-    const node = new QNode(data, this.back);
+    const node = new QNode(data, this.back)
     if (this.front === null) {
-      this.front = node;
-      this.size = 1;
+      this.front = node
+      this.size = 1
     } else {
-      this.back!.next = node;
-      this.size++;
+      this.back!.next = node
+      this.size++
     }
-    this.back = node;
+    this.back = node
   }
 
   isEmpty(): boolean {
-    return this.size === 0;
+    return this.size === 0
   }
 
   // Get the front element of the queue
   peek(): any {
     if (this.isEmpty()) {
-      console.log("\n Empty Queue");
-      return -1;
+      console.log("\n Empty Queue")
+      return -1
     } else {
-      return this.front!.data;
+      return this.front!.data
     }
   }
 
   isSize(): number {
-    return this.size;
+    return this.size
   }
 
   // Remove the front node of the queue
   dequeue(): any {
     if (this.size === 0) {
-      return -1;
+      return -1
     } else {
-      const data = this.front!.data;
+      const data = this.front!.data
       if (this.front === this.back) {
-        this.back = null;
-        this.front = null;
+        this.back = null
+        this.front = null
       } else {
-        this.front = this.front!.next;
+        this.front = this.front!.next
         if (this.front) {
-          this.front.prev = null;
+          this.front.prev = null
         }
       }
-      this.size--;
-      return data;
+      this.size--
+      return data
     }
   }
 
   // Print elements of the queue
   printQdata(): void {
-    let node = this.front;
-    console.log("\n Queue Element");
+    let node = this.front
+    console.log("\n Queue Element")
     while (node !== null) {
-      process.stdout.write(" " + node.data);
-      node = node.next;
+      process.stdout.write(" " + node.data)
+      node = node.next
     }
-    console.log();
+    console.log()
   }
 }
 
-const q = new MyQueue();
+const q = new MyQueue()
 
 // Add queue elements
-q.enqueue("joy");
-q.enqueue("matt");
-q.enqueue("pavel");
-q.dequeue();
+q.enqueue("joy")
+q.enqueue("matt")
+q.enqueue("pavel")
+q.dequeue()
 
-console.log(q);
+console.log(q)
 
 // Uncomment the following lines to test the main function
 // function main() {

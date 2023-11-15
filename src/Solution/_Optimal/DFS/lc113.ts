@@ -4,8 +4,6 @@
 
 // A root-to-leaf path is a path starting from the root and ending at any leaf node. A leaf is a node with no children.
 
- 
-
 // Example 1:
 
 // Input: root = [5,4,8,11,null,13,4,7,2,null,null,5,1], targetSum = 22
@@ -14,19 +12,15 @@
 // 5 + 4 + 11 + 2 = 22
 // 5 + 8 + 4 + 5 = 22
 
-
 // Example 2:
-
 
 // Input: root = [1,2,3], targetSum = 5
 // Output: []
-
 
 // Example 3:
 
 // Input: root = [1,2], targetSum = 0
 // Output: []
- 
 
 // Constraints:
 
@@ -44,48 +38,47 @@
 //  / |   | \
 // 4  5   2  7
 
-import { TreeNode } from "../../../util/BinaryTreeMaker";
+import { TreeNode } from "../../../util/BinaryTreeMaker"
 
-
-
-export const pathSumTwo = (root: TreeNode | null, targetSum: number): number[][] =>{
-  const result: number[][] = [];
-  const currentPath: number[] = [];
+export const pathSumTwo = (root: TreeNode | null, targetSum: number): number[][] => {
+  const result: number[][] = []
+  const currentPath: number[] = []
 
   function dfs(node: TreeNode | null, sumSoFar: number) {
     if (!node) {
-      return;
+      return
     }
 
-    currentPath.push(node.value);
+    currentPath.push(node.value)
 
     if (!node.left && !node.right && sumSoFar + node.value === targetSum) {
       // If leaf node and the sum equals targetSum, add the current path to the result
-      result.push([...currentPath]);
+      result.push([...currentPath])
     }
 
     // Recursively explore left and right subtrees
-    dfs(node.left, sumSoFar + node.value);
-    dfs(node.right, sumSoFar + node.value);
+    dfs(node.left, sumSoFar + node.value)
+    dfs(node.right, sumSoFar + node.value)
 
     // Backtrack: remove the last node as we backtrack to explore other paths
-    currentPath.pop();
+    currentPath.pop()
   }
 
-  dfs(root, 0);
-  return result;
+  dfs(root, 0)
+  return result
 }
 
 // Example usage:
-const root = new TreeNode(5,
+const root = new TreeNode(
+  5,
   new TreeNode(4, new TreeNode(11, new TreeNode(7), new TreeNode(2))),
-  new TreeNode(8, new TreeNode(13), new TreeNode(4, new TreeNode(5), new TreeNode(1)))
-);
+  new TreeNode(8, new TreeNode(13), new TreeNode(4, new TreeNode(5), new TreeNode(1))),
+)
 
-const targetSum1 = 22;
-const targetSum2 = 5;
-const targetSum3 = 0;
+const targetSum1 = 22
+const targetSum2 = 5
+const targetSum3 = 0
 
-console.log(pathSumTwo(root, targetSum1)); // Output: [[5,4,11,2],[5,8,4,5]]
-console.log(pathSumTwo(root, targetSum2)); // Output: []
-console.log(pathSumTwo(new TreeNode(1, new TreeNode(2)), targetSum3)); // Output: []
+console.log(pathSumTwo(root, targetSum1)) // Output: [[5,4,11,2],[5,8,4,5]]
+console.log(pathSumTwo(root, targetSum2)) // Output: []
+console.log(pathSumTwo(new TreeNode(1, new TreeNode(2)), targetSum3)) // Output: []

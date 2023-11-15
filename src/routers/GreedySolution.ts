@@ -1,3 +1,1 @@
-export { combinedGreedySolutionExports } from "../Solution/Greedy/index";
-
-
+export { combinedGreedySolutionExports } from "../Solution/Greedy/index"

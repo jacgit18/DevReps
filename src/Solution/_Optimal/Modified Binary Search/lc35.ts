@@ -2,8 +2,6 @@
 
 // You must write an algorithm with O(log n) runtime complexity.
 
- 
-
 // Example 1:
 
 // Input: nums = [1,3,5,6], target = 5
@@ -18,7 +16,6 @@
 
 // Input: nums = [1,3,5,6], target = 7
 // Output: 4
- 
 
 // Constraints:
 
@@ -27,34 +24,32 @@
 // nums contains distinct values sorted in ascending order.
 // -104 <= target <= 104
 
+export const searchInsert = (nums: number[], target: number): number => {
+  let left = 0
+  let right = nums.length - 1
 
-export const searchInsert = (nums: number[], target: number): number =>{
-    let left = 0;
-    let right = nums.length - 1;
-  
-    while (left <= right) {
-      const mid = Math.floor((left + right) / 2);
-  
-      if (nums[mid] === target) {
-        return mid;
-      } else if (nums[mid] < target) {
-        left = mid + 1;
-      } else {
-        right = mid - 1;
-      }
+  while (left <= right) {
+    const mid = Math.floor((left + right) / 2)
+
+    if (nums[mid] === target) {
+      return mid
+    } else if (nums[mid] < target) {
+      left = mid + 1
+    } else {
+      right = mid - 1
     }
-  
-    // At this point, 'left' is the position where the target should be inserted
-    return left;
   }
-  
-  // Example usage:
-  const example1 = searchInsert([1, 3, 5, 6], 5);
-  console.log(example1);
-  
-  const example2 = searchInsert([1, 3, 5, 6], 2);
-  console.log(example2);
-  
-  const example3 = searchInsert([1, 3, 5, 6], 7);
-  console.log(example3);
-  
+
+  // At this point, 'left' is the position where the target should be inserted
+  return left
+}
+
+// Example usage:
+const example1 = searchInsert([1, 3, 5, 6], 5)
+console.log(example1)
+
+const example2 = searchInsert([1, 3, 5, 6], 2)
+console.log(example2)
+
+const example3 = searchInsert([1, 3, 5, 6], 7)
+console.log(example3)

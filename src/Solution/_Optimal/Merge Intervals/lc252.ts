@@ -9,7 +9,6 @@
 // Output:
 //  false
 
-
 // Example 2:
 // Input:
 //  [[7,10],[2,4]]
@@ -17,27 +16,35 @@
 // Output:
 //  true
 
-export const canAttendMeetings = (intervals: number[][]): boolean =>{
+export const canAttendMeetings = (intervals: number[][]): boolean => {
   if (intervals.length <= 1) {
-      return true; // No overlap if there is 0 or 1 meeting
+    return true // No overlap if there is 0 or 1 meeting
   }
 
   // Sort intervals based on their start times
-  intervals.sort((a, b) => a[0] - b[0]);
+  intervals.sort((a, b) => a[0] - b[0])
 
   // Check for overlapping meetings
   for (let i = 1; i < intervals.length; i++) {
-      if (intervals[i][0] < intervals[i - 1][1]) {
-          return false; // Overlapping meetings
-      }
+    if (intervals[i][0] < intervals[i - 1][1]) {
+      return false // Overlapping meetings
+    }
   }
 
-  return true; // No overlapping meetings
+  return true // No overlapping meetings
 }
 
 // Example usage:
-const example1 = canAttendMeetings([[1, 3], [4, 6], [7, 9]]);
-console.log(example1); // Output: true
+const example1 = canAttendMeetings([
+  [1, 3],
+  [4, 6],
+  [7, 9],
+])
+console.log(example1) // Output: true
 
-const example2 = canAttendMeetings([[1, 3], [2, 5], [6, 9]]);
-console.log(example2); // Output: false (overlapping meetings)
+const example2 = canAttendMeetings([
+  [1, 3],
+  [2, 5],
+  [6, 9],
+])
+console.log(example2) // Output: false (overlapping meetings)

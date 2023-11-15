@@ -1,13 +1,5 @@
-
-
-const NaivePrimativeTypes = {
-
-
-}
-
-
+const NaivePrimativeTypes = {}
 
 export const combinedNaiveSolutionExports = {
-    NaivePrimativeTypes
-    
+  NaivePrimativeTypes,
 }

@@ -4,8 +4,6 @@
 
 // You must solve the problem without modifying the array nums and uses only constant extra space.
 
- 
-
 // Example 1:
 
 // Input: nums = [1,3,4,2,2]
@@ -14,7 +12,6 @@
 
 // Input: nums = [3,1,3,4,2]
 // Output: 3
- 
 
 // Constraints:
 
@@ -23,13 +20,10 @@
 // 1 <= nums[i] <= n
 // All the integers in nums appear only once except for precisely one integer which appears two or more times.
 
-
-
 export const findDuplicate = (nums: number[]): number => {
- 
-  return 0;
-};
+  return 0
+}
 
 // Example usage:
-console.log(findDuplicate([1, 3, 4, 2, 2])); // Output: 2
-console.log(findDuplicate([3, 1, 3, 4, 2])); // Output: 3
+console.log(findDuplicate([1, 3, 4, 2, 2])) // Output: 2
+console.log(findDuplicate([3, 1, 3, 4, 2])) // Output: 3

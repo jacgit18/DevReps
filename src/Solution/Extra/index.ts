@@ -1,11 +1,5 @@
-
-
-const ExtraSolution = {
-
-};
-
+const ExtraSolution = {}
 
 export const combinedExtraSolutionExports = {
-    ExtraSolution,
-
+  ExtraSolution,
 }

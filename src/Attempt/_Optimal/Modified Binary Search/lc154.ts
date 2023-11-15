@@ -8,19 +8,15 @@
 
 // You must decrease the overall operation steps as much as possible.
 
- 
-
 // Example 1:
 
 // Input: nums = [1,3,5]
 // Output: 1
 
-
 // Example 2:
 
 // Input: nums = [2,2,2,0,1]
 // Output: 0
- 
 
 // Constraints:
 
@@ -29,19 +25,16 @@
 // -5000 <= nums[i] <= 5000
 // nums is sorted and rotated between 1 and n times.
 
+export const findMinTwo = (nums: number[]): number => {
+  return 0
+}
 
-export const findMinTwo = (nums: number[]): number =>{
-      
-        return 0;
-    }
-    
-    // Example usage:
-    const nums1 = [3, 4, 5, 1, 2];
-    console.log(findMinTwo(nums1)); // Output: 1
-    
-    const nums2 = [4, 5, 6, 7, 0, 1, 2];
-    console.log(findMinTwo(nums2)); // Output: 0
-    
-    const nums3 = [11, 13, 15, 17];
-    console.log(findMinTwo(nums3)); // Output: 11
-    
+// Example usage:
+const nums1 = [3, 4, 5, 1, 2]
+console.log(findMinTwo(nums1)) // Output: 1
+
+const nums2 = [4, 5, 6, 7, 0, 1, 2]
+console.log(findMinTwo(nums2)) // Output: 0
+
+const nums3 = [11, 13, 15, 17]
+console.log(findMinTwo(nums3)) // Output: 11

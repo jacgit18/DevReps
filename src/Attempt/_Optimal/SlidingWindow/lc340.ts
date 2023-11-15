@@ -4,13 +4,9 @@
 
 // You can assume that K is less than or equal to the length of the given string.
 
-
 export const longest_substring_with_k_distinct = (str: string, k: number): number => {
-
-  return 0;
-};
-
-
+  return 0
+}
 
 // console.log(
 //   `Length of the longest substring: ${longest_substring_with_k_distinct(

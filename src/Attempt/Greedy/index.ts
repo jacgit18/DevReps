@@ -1,13 +1,9 @@
-import { longestPalindrome } from "./lc409";
-
+import { longestPalindrome } from "./lc409"
 
 const GreedyAttempt = {
-    lc409: longestPalindrome,
+  lc409: longestPalindrome,
+}
 
-  };
-
-
-  export const combinedGreedyAttemptExports = {
-    GreedyAttempt,
-
-  }
+export const combinedGreedyAttemptExports = {
+  GreedyAttempt,
+}

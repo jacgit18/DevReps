@@ -7,8 +7,6 @@
 // Those numbers for which this process ends in 1 are happy.
 // Return true if n is a happy number, and false if not.
 
- 
-
 // Example 1:
 
 // Input: n = 19
@@ -19,12 +17,10 @@
 // 62 + 82 = 100
 // 12 + 02 + 02 = 1
 
-
 // Example 2:
 
 // Input: n = 2
 // Output: false
- 
 
 // Constraints:
 
@@ -32,11 +28,9 @@
 
 // fast slow pointer pattern is,nt just for linked list
 export const isHappy = (n: number): boolean => {
- 
-
-  return true;
-};
+  return true
+}
 
 // Example usage:
-console.log(isHappy(19)); // Output: true
-console.log(isHappy(2));  // Output: false
+console.log(isHappy(19)) // Output: true
+console.log(isHappy(2)) // Output: false

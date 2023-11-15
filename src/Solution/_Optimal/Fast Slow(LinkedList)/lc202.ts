@@ -7,8 +7,6 @@
 // Those numbers for which this process ends in 1 are happy.
 // Return true if n is a happy number, and false if not.
 
- 
-
 // Example 1:
 
 // Input: n = 19
@@ -19,12 +17,10 @@
 // 62 + 82 = 100
 // 12 + 02 + 02 = 1
 
-
 // Example 2:
 
 // Input: n = 2
 // Output: false
- 
 
 // Constraints:
 
@@ -33,26 +29,26 @@
 // fast slow pointer pattern is,nt just for linked list
 export const isHappy = (n: number): boolean => {
   const getNext = (num: number): number => {
-    let sum = 0;
+    let sum = 0
     while (num > 0) {
-      const digit = num % 10;
-      sum += digit * digit;
-      num = Math.floor(num / 10);
+      const digit = num % 10
+      sum += digit * digit
+      num = Math.floor(num / 10)
     }
-    return sum;
-  };
-
-  let slow = n;
-  let fast = getNext(n);
-
-  while (fast !== 1 && slow !== fast) {
-    slow = getNext(slow);
-    fast = getNext(getNext(fast));
+    return sum
   }
 
-  return fast === 1;
-};
+  let slow = n
+  let fast = getNext(n)
+
+  while (fast !== 1 && slow !== fast) {
+    slow = getNext(slow)
+    fast = getNext(getNext(fast))
+  }
+
+  return fast === 1
+}
 
 // Example usage:
-console.log(isHappy(19)); // Output: true
-console.log(isHappy(2));  // Output: false
+console.log(isHappy(19)) // Output: true
+console.log(isHappy(2)) // Output: false

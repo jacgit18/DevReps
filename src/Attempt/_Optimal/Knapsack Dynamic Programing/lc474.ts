@@ -4,8 +4,6 @@
 
 // A set x is a subset of a set y if all elements of x are also elements of y.
 
- 
-
 // Example 1:
 
 // Input: strs = ["10","0001","111001","1","0"], m = 5, n = 3
@@ -14,13 +12,11 @@
 // Other valid but smaller subsets include {"0001", "1"} and {"10", "1", "0"}.
 // {"111001"} is an invalid subset because it contains 4 1's, greater than the maximum of 3.
 
-
 // Example 2:
 
 // Input: strs = ["10","0","1"], m = 1, n = 1
 // Output: 2
 // Explanation: The largest subset is {"0", "1"}, so the answer is 2.
- 
 
 // Constraints:
 
@@ -29,16 +25,10 @@
 // strs[i] consists only of digits '0' and '1'.
 // 1 <= m, n <= 100
 
+export const findMaxForm = (strs: string[], m: number, n: number): number => {
+  return 0
+}
 
-export const findMaxForm = (strs: string[], m: number, n: number): number =>{
-   
-  
-    return 0;
-  }
-  
-  
-  
-  // Example usage:
-  console.log(findMaxForm(["10", "0001", "111001", "1", "0"], 5, 3)); // Output: 4
-  console.log(findMaxForm(["10", "0", "1"], 1, 1)); // Output: 2
-  
+// Example usage:
+console.log(findMaxForm(["10", "0001", "111001", "1", "0"], 5, 3)) // Output: 4
+console.log(findMaxForm(["10", "0", "1"], 1, 1)) // Output: 2

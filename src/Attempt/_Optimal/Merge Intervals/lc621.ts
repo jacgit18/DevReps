@@ -4,13 +4,11 @@
 
 // Return the least number of units of times that the CPU will take to finish all the given tasks.
 
- 
-
 // Example 1:
 
 // Input: tasks = ["A","A","A","B","B","B"], n = 2
 // Output: 8
-// Explanation: 
+// Explanation:
 // A -> B -> idle -> A -> B -> idle -> A -> B
 // There is at least 2 units of time between any two same tasks.
 // Example 2:
@@ -27,10 +25,9 @@
 
 // Input: tasks = ["A","A","A","A","A","A","B","C","D","E","F","G"], n = 2
 // Output: 16
-// Explanation: 
+// Explanation:
 // One possible solution is
 // A -> B -> C -> A -> D -> E -> A -> F -> G -> A -> idle -> idle -> A -> idle -> idle -> A
- 
 
 // Constraints:
 
@@ -38,20 +35,16 @@
 // tasks[i] is upper-case English letter.
 // The integer n is in the range [0, 100].
 
-
-
-export const leastInterval = (tasks: string[], n: number): number =>{
- 
-
-  return 0;
+export const leastInterval = (tasks: string[], n: number): number => {
+  return 0
 }
 
 // Example usage:
-const example1 = leastInterval(["A", "A", "A", "B", "B", "B"], 2);
-console.log(example1); // Output: 8
+const example1 = leastInterval(["A", "A", "A", "B", "B", "B"], 2)
+console.log(example1) // Output: 8
 
-const example2 = leastInterval(["A", "A", "A", "B", "B", "B"], 0);
-console.log(example2); // Output: 6
+const example2 = leastInterval(["A", "A", "A", "B", "B", "B"], 0)
+console.log(example2) // Output: 6
 
-const example3 = leastInterval(["A", "A", "A", "A", "A", "A", "B", "C", "D", "E", "F", "G"], 2);
-console.log(example3); // Output: 16
+const example3 = leastInterval(["A", "A", "A", "A", "A", "A", "B", "C", "D", "E", "F", "G"], 2)
+console.log(example3) // Output: 16

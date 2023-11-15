@@ -4,8 +4,6 @@
 
 // Return intervals after the insertion.
 
- 
-
 // Example 1:
 
 // Input: intervals = [[1,3],[6,9]], newInterval = [2,5]
@@ -15,7 +13,6 @@
 // Input: intervals = [[1,2],[3,5],[6,7],[8,10],[12,16]], newInterval = [4,8]
 // Output: [[1,2],[3,10],[12,16]]
 // Explanation: Because the new interval [4,8] overlaps with [3,5],[6,7],[8,10].
- 
 
 // Constraints:
 
@@ -26,16 +23,28 @@
 // newInterval.length == 2
 // 0 <= start <= end <= 105
 
-
-export const insertInterval =(intervals: number[][], newInterval: number[]): number[][] =>{
- 
-
-  return [[0]];
+export const insertInterval = (intervals: number[][], newInterval: number[]): number[][] => {
+  return [[0]]
 }
 
 // Example usage:
-const example1 = insertInterval([[1, 3], [6, 9]], [2, 5]);
-console.log(example1); // Output: [[1, 5], [6, 9]]
+const example1 = insertInterval(
+  [
+    [1, 3],
+    [6, 9],
+  ],
+  [2, 5],
+)
+console.log(example1) // Output: [[1, 5], [6, 9]]
 
-const example2 = insertInterval([[1, 2], [3, 5], [6, 7], [8, 10], [12, 16]], [4, 8]);
-console.log(example2); // Output: [[1, 2], [3, 10], [12, 16]]
+const example2 = insertInterval(
+  [
+    [1, 2],
+    [3, 5],
+    [6, 7],
+    [8, 10],
+    [12, 16],
+  ],
+  [4, 8],
+)
+console.log(example2) // Output: [[1, 2], [3, 10], [12, 16]]

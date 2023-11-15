@@ -9,8 +9,6 @@
 
 // A leaf node is a node with no children.
 
- 
-
 // Example 1:
 
 // Input: root = [1,2,3]
@@ -20,9 +18,7 @@
 // The root-to-leaf path 1->3 represents the number 13.
 // Therefore, sum = 12 + 13 = 25.
 
-
 // Example 2:
-
 
 // Input: root = [4,9,0,5,1]
 // Output: 1026
@@ -31,7 +27,6 @@
 // The root-to-leaf path 4->9->1 represents the number 491.
 // The root-to-leaf path 4->0 represents the number 40.
 // Therefore, sum = 495 + 491 + 40 = 1026.
- 
 
 // Constraints:
 
@@ -49,36 +44,36 @@
 //        | \
 //        2  9
 
-import { TreeNode } from "../../../util/BinaryTreeMaker";
+import { TreeNode } from "../../../util/BinaryTreeMaker"
 
-export const sumNumbers = (root: TreeNode | null): number =>{
-  let totalSum = 0;
+export const sumNumbers = (root: TreeNode | null): number => {
+  let totalSum = 0
 
   function dfs(node: TreeNode | null, currentSum: number) {
     if (!node) {
-      return;
+      return
     }
 
-    currentSum = currentSum * 10 + node.value;
+    currentSum = currentSum * 10 + node.value
 
     if (!node.left && !node.right) {
       // If leaf node, add the current sum to the total sum
-      totalSum += currentSum;
-      return;
+      totalSum += currentSum
+      return
     }
 
     // Recursively explore left and right subtrees
-    dfs(node.left, currentSum);
-    dfs(node.right, currentSum);
+    dfs(node.left, currentSum)
+    dfs(node.right, currentSum)
   }
 
-  dfs(root, 0);
-  return totalSum;
+  dfs(root, 0)
+  return totalSum
 }
 
 // Example usage:
-const root1 = new TreeNode(1, new TreeNode(2), new TreeNode(3));
-const root2 = new TreeNode(4, new TreeNode(9, new TreeNode(5), new TreeNode(1)), new TreeNode(0));
+const root1 = new TreeNode(1, new TreeNode(2), new TreeNode(3))
+const root2 = new TreeNode(4, new TreeNode(9, new TreeNode(5), new TreeNode(1)), new TreeNode(0))
 
-console.log(sumNumbers(root1)); // Output: 25
-console.log(sumNumbers(root2)); // Output: 1026
+console.log(sumNumbers(root1)) // Output: 25
+console.log(sumNumbers(root2)) // Output: 1026

@@ -129,7 +129,6 @@ Also the Optimal approach isnt always one these patterns It depends on the probl
   - [] Topological Sort (medium)
   - [] Tasks Scheduling (medium): LC #207
   - [] Tasks Scheduling Order (medium): LC #210
-  - [] All Tasks Scheduling Orders (hard): LC #210 (output all possible solutions)
   - [] Alien Dictionary (hard): LC #269
   - [] Reconstructing a Sequence (hard): LC #444
   - [] Minimum Height Trees (hard): LC #310

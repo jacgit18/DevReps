@@ -15,10 +15,8 @@
 // For the input, you should provide the entire linked list head and the node to be given node. node should not be the last node of the list and should be an actual node in the list.
 // We will build the linked list and pass the node to your function.
 // The output will be the entire list after calling your function.
- 
 
 // Example 1:
-
 
 // Input: head = [4,5,1,9], node = 5
 // Output: [4,1,9]
@@ -26,11 +24,9 @@
 
 // Example 2:
 
-
 // Input: head = [4,5,1,9], node = 1
 // Output: [4,5,9]
 // Explanation: You are given the third node with value 1, the linked list should become 4 -> 5 -> 9 after calling your function.
- 
 
 // Constraints:
 
@@ -39,15 +35,12 @@
 // The value of each node in the list is unique.
 // The node to be deleted is in the list and is not a tail node.
 
+import { LinkedListNode, createLinkedListFromArray } from "../../util/LinkedListMaker"
 
-import { LinkedListNode, createLinkedListFromArray } from "../../util/LinkedListMaker";
+const myLK = new LinkedListNode()
 
-const myLK = new LinkedListNode();
-
-
-let LinkListArray = [4, 5, 1, 9];
-let head = createLinkedListFromArray(LinkListArray);
-
+let LinkListArray = [4, 5, 1, 9]
+let head = createLinkedListFromArray(LinkListArray)
 
 //  console.log(head); // full list
 //   console.log(head.value); // just 4 for no list
@@ -57,15 +50,13 @@ let head = createLinkedListFromArray(LinkListArray);
 //   console.log(head.next.next.next); // return 9
 //   console.log(head.next.next.next.next); // return null
 
-
 export const deleteNode = (head: any, node: any) => {
-  head.next.value = head.value; // points 4 -> 5 -> 1 -> 9 -> null
-  head.next = head.next.next;
-  return head;
-};
+  head.next.value = head.value // points 4 -> 5 -> 1 -> 9 -> null
+  head.next = head.next.next
+  return head
+}
 
 // let node = head.next.value;
 // let node = 5;
 
-
-console.log(deleteNode(head, 5));
+console.log(deleteNode(head, 5))

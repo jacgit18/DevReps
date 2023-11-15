@@ -1,4 +1,4 @@
-import * as routes from "./routers/OptimalSolution";
+import * as routes from "./routers/OptimalSolution"
 // import { logg } from './util/logger.js';
 
 // // Function to execute TypeScript files
@@ -38,8 +38,8 @@ import * as routes from "./routers/OptimalSolution";
 
 // logg(`Smallest subarray length: ${routes.Optimal(7, [2, 1, 5, 2, 3, 1])}`, "Hi", "bye", ["test", 3, 53, true], "test2");
 
-const app = routes.combinedSolutionExports.OptimalSlidingWindSolution.lc209;
+const app = routes.combinedSolutionExports.OptimalSlidingWindSolution.lc209
 
-app(3,[4,6,6,8]);
+app(3, [4, 6, 6, 8])
 
 // export default app

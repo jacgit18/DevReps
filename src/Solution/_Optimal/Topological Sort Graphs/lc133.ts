@@ -8,7 +8,6 @@
 //     public int val;
 //     public List<Node> neighbors;
 // }
- 
 
 // Test case format:
 
@@ -18,10 +17,7 @@
 
 // The given node will always be the first node with val = 1. You must return the copy of the given node as a reference to the cloned graph.
 
- 
-
 // Example 1:
-
 
 // Input: adjList = [[2,4],[1,3],[2,4],[1,3]]
 // Output: [[2,4],[1,3],[2,4],[1,3]]
@@ -31,21 +27,17 @@
 // 3rd node (val = 3)'s neighbors are 2nd node (val = 2) and 4th node (val = 4).
 // 4th node (val = 4)'s neighbors are 1st node (val = 1) and 3rd node (val = 3).
 
-
 // Example 2:
-
 
 // Input: adjList = [[]]
 // Output: [[]]
 // Explanation: Note that the input contains one empty list. The graph consists of only one node with val = 1 and it does not have any neighbors.
-
 
 // Example 3:
 
 // Input: adjList = []
 // Output: []
 // Explanation: This an empty graph, it does not have any nodes.
- 
 
 // Constraints:
 
@@ -55,51 +47,49 @@
 // There are no repeated edges and no self-loops in the graph.
 // The Graph is connected and all nodes can be visited starting from the given node.
 
-
-
 class GraphNode {
-  val: number;
-  neighbors: GraphNode[];
+  val: number
+  neighbors: GraphNode[]
 
   constructor(val: number) {
-    this.val = val;
-    this.neighbors = [];
+    this.val = val
+    this.neighbors = []
   }
 }
 
 export const cloneGrapher = (node: GraphNode | null): GraphNode | null => {
-  if (!node) return null;
+  if (!node) return null
 
-  const visited = new Map();
+  const visited = new Map()
 
   const dfs = (originalNode: GraphNode): GraphNode => {
     if (visited.has(originalNode.val)) {
-      return visited.get(originalNode.val);
+      return visited.get(originalNode.val)
     }
 
-    const cloneNode = new GraphNode(originalNode.val);
-    visited.set(cloneNode.val, cloneNode);
+    const cloneNode = new GraphNode(originalNode.val)
+    visited.set(cloneNode.val, cloneNode)
 
     for (const neighbor of originalNode.neighbors) {
-      cloneNode.neighbors.push(dfs(neighbor));
+      cloneNode.neighbors.push(dfs(neighbor))
     }
 
-    return cloneNode;
-  };
+    return cloneNode
+  }
 
-  return dfs(node);
-};
+  return dfs(node)
+}
 
 // Example usage:
-const node1 = new GraphNode(1);
-const node2 = new GraphNode(2);
-const node3 = new GraphNode(3);
-const node4 = new GraphNode(4);
+const node1 = new GraphNode(1)
+const node2 = new GraphNode(2)
+const node3 = new GraphNode(3)
+const node4 = new GraphNode(4)
 
-node1.neighbors = [node2, node4];
-node2.neighbors = [node1, node3];
-node3.neighbors = [node2, node4];
-node4.neighbors = [node1, node3];
+node1.neighbors = [node2, node4]
+node2.neighbors = [node1, node3]
+node3.neighbors = [node2, node4]
+node4.neighbors = [node1, node3]
 
-const clonedGraph = cloneGrapher(node1);
-console.log(clonedGraph);
+const clonedGraph = cloneGrapher(node1)
+console.log(clonedGraph)

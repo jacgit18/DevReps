@@ -6,8 +6,6 @@
 
 // You must decrease the overall operation steps as much as possible.
 
- 
-
 // Example 1:
 
 // Input: nums = [2,5,6,0,0,1,2], target = 0
@@ -17,7 +15,6 @@
 
 // Input: nums = [2,5,6,0,0,1,2], target = 3
 // Output: false
- 
 
 // Constraints:
 
@@ -25,20 +22,16 @@
 // -104 <= nums[i] <= 104
 // nums is guaranteed to be rotated at some pivot.
 // -104 <= target <= 104
- 
 
+export const search = (nums: number[], target: number): boolean => {
+  return true
+}
 
-export const search = (nums: number[], target: number): boolean =>{
-    
-        return true;
-    }
-    
-    // Example usage:
-    const nums1 = [2, 5, 6, 0, 0, 1, 2];
-    const target1 = 0;
-    console.log(search(nums1, target1)); // Output: true
-    
-    const nums2 = [2, 5, 6, 0, 0, 1, 2];
-    const target2 = 3;
-    console.log(search(nums2, target2)); // Output: false
-    
+// Example usage:
+const nums1 = [2, 5, 6, 0, 0, 1, 2]
+const target1 = 0
+console.log(search(nums1, target1)) // Output: true
+
+const nums2 = [2, 5, 6, 0, 0, 1, 2]
+const target2 = 3
+console.log(search(nums2, target2)) // Output: false

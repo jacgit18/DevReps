@@ -4,8 +4,6 @@
 
 // Find the number that occurs twice and the number that is missing and return them in the form of an array.
 
- 
-
 // Example 1:
 
 // Input: nums = [1,2,2,4]
@@ -14,37 +12,35 @@
 
 // Input: nums = [1,1]
 // Output: [1,2]
- 
 
 // Constraints:
 
 // 2 <= nums.length <= 104
 // 1 <= nums[i] <= 104
 
-
 export const findErrorNums = (nums: number[]): number[] => {
-  const n = nums.length;
-  const numSet = new Set<number>();
-  let duplicate = -1;
-  let missing = -1;
+  const n = nums.length
+  const numSet = new Set<number>()
+  let duplicate = -1
+  let missing = -1
 
   for (const num of nums) {
     if (numSet.has(num)) {
-      duplicate = num;
+      duplicate = num
     }
-    numSet.add(num);
+    numSet.add(num)
   }
 
   for (let i = 1; i <= n; i++) {
     if (!numSet.has(i)) {
-      missing = i;
-      break;
+      missing = i
+      break
     }
   }
 
-  return [duplicate, missing];
-};
+  return [duplicate, missing]
+}
 
 // Example usage:
-console.log(findErrorNums([1, 2, 2, 4])); // Output: [2, 3]
-console.log(findErrorNums([1, 1])); // Output: [1, 2]
+console.log(findErrorNums([1, 2, 2, 4])) // Output: [2, 3]
+console.log(findErrorNums([1, 1])) // Output: [1, 2]

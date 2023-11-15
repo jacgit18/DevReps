@@ -6,8 +6,6 @@
 // Return k.
 // Custom Judge:
 
-
-
 // The judge will test your solution with the following code:
 
 // int[] nums = [...]; // Input array
@@ -21,8 +19,6 @@
 // }
 // If all assertions pass, then your solution will be accepted.
 
- 
-
 // Example 1:
 
 // Input: nums = [1,1,2]
@@ -30,14 +26,12 @@
 // Explanation: Your function should return k = 2, with the first two elements of nums being 1 and 2 respectively.
 // It does not matter what you leave beyond the returned k (hence they are underscores).
 
-
 // Example 2:
 
 // Input: nums = [0,0,1,1,1,2,2,3,3,4]
 // Output: 5, nums = [0,1,2,3,4,_,_,_,_,_]
 // Explanation: Your function should return k = 5, with the first five elements of nums being 0, 1, 2, 3, and 4 respectively.
 // It does not matter what you leave beyond the returned k (hence they are underscores).
- 
 
 // Constraints:
 
@@ -45,19 +39,15 @@
 // -100 <= nums[i] <= 100
 // nums is sorted in non-decreasing order.
 
-
-
-export const removeDuplicates=(nums: number[]): number =>{
-
-
-    return 0;
+export const removeDuplicates = (nums: number[]): number => {
+  return 0
 }
 
 // Example usage:
-const nums1 = [1, 1, 2];
-const k1 = removeDuplicates(nums1);
-console.log(k1, nums1.slice(0, k1));
+const nums1 = [1, 1, 2]
+const k1 = removeDuplicates(nums1)
+console.log(k1, nums1.slice(0, k1))
 
-const nums2 = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4];
-const k2 = removeDuplicates(nums2);
-console.log(k2, nums2.slice(0, k2));
+const nums2 = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4]
+const k2 = removeDuplicates(nums2)
+console.log(k2, nums2.slice(0, k2))

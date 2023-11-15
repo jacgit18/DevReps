@@ -7,14 +7,11 @@
 // Once you reach a tree with fruit that cannot fit in your baskets, you must stop.
 // Given the integer array fruits, return the maximum number of fruits you can pick.
 
- 
-
 // Example 1:
 
 // Input: fruits = [1,2,1]
 // Output: 3
 // Explanation: We can pick from all 3 trees.
-
 
 // Example 2:
 
@@ -23,34 +20,28 @@
 // Explanation: We can pick from trees [1,2,2].
 // If we had started at the first tree, we would only pick from trees [0,1].
 
-
 // Example 3:
 
 // Input: fruits = [1,2,3,2,2]
 // Output: 4
 // Explanation: We can pick from trees [2,3,2,2].
 // If we had started at the first tree, we would only pick from trees [1,2].
- 
 
 // Constraints:
 
 // 1 <= fruits.length <= 105
 // 0 <= fruits[i] < fruits.length
 
-
-
 export const totalFruit = (fruits: number[]): number => {
-   
-
-    return 0;
+  return 0
 }
 
 // Example usage:
-const fruits1 = [1, 2, 1];
-console.log(totalFruit(fruits1)); // Output: 3
+const fruits1 = [1, 2, 1]
+console.log(totalFruit(fruits1)) // Output: 3
 
-const fruits2 = [0, 1, 2, 2];
-console.log(totalFruit(fruits2)); // Output: 3
+const fruits2 = [0, 1, 2, 2]
+console.log(totalFruit(fruits2)) // Output: 3
 
-const fruits3 = [1, 2, 3, 2, 2];
-console.log(totalFruit(fruits3)); // Output: 4
+const fruits3 = [1, 2, 3, 2, 2]
+console.log(totalFruit(fruits3)) // Output: 4

@@ -2,8 +2,6 @@
 
 // You must implement a solution with a linear runtime complexity and use only constant extra space.
 
- 
-
 // Example 1:
 
 // Input: nums = [2,2,1]
@@ -18,7 +16,6 @@
 
 // Input: nums = [1]
 // Output: 1
- 
 
 // Constraints:
 
@@ -26,20 +23,20 @@
 // -3 * 104 <= nums[i] <= 3 * 104
 // Each element in the array appears twice except for one element which appears only once.
 
-export const singleNumber = (nums: number[]): number =>{
-    let result = 0;
-    for (const num of nums) {
-        result ^= num;
-    }
-    return result;
+export const singleNumber = (nums: number[]): number => {
+  let result = 0
+  for (const num of nums) {
+    result ^= num
+  }
+  return result
 }
 
 // Example usage:
-const nums1 = [2, 2, 1];
-console.log(singleNumber(nums1)); // Output: 1
+const nums1 = [2, 2, 1]
+console.log(singleNumber(nums1)) // Output: 1
 
-const nums2 = [4, 1, 2, 1, 2];
-console.log(singleNumber(nums2)); // Output: 4
+const nums2 = [4, 1, 2, 1, 2]
+console.log(singleNumber(nums2)) // Output: 4
 
-const nums3 = [1];
-console.log(singleNumber(nums3)); // Output: 1
+const nums3 = [1]
+console.log(singleNumber(nums3)) // Output: 1

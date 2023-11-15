@@ -1,7 +1,5 @@
 // Given an array of intervals where intervals[i] = [starti, endi], merge all overlapping intervals, and return an array of the non-overlapping intervals that cover all the intervals in the input.
 
- 
-
 // Example 1:
 
 // Input: intervals = [[1,3],[2,6],[8,10],[15,18]]
@@ -12,7 +10,6 @@
 // Input: intervals = [[1,4],[4,5]]
 // Output: [[1,5]]
 // Explanation: Intervals [1,4] and [4,5] are considered overlapping.
- 
 
 // Constraints:
 
@@ -20,17 +17,21 @@
 // intervals[i].length == 2
 // 0 <= starti <= endi <= 104
 
-
-
 export const merge = (intervals: number[][]): number[][] => {
- 
-
-  return [[0]];
+  return [[0]]
 }
 
 // Example usage:
-const example1 = merge([[1, 3], [2, 6], [8, 10], [15, 18]]);
-console.log(example1); // Output: [[1, 6], [8, 10], [15, 18]]
+const example1 = merge([
+  [1, 3],
+  [2, 6],
+  [8, 10],
+  [15, 18],
+])
+console.log(example1) // Output: [[1, 6], [8, 10], [15, 18]]
 
-const example2 = merge([[1, 4], [4, 5]]);
-console.log(example2); // Output: [[1, 5]]
+const example2 = merge([
+  [1, 4],
+  [4, 5],
+])
+console.log(example2) // Output: [[1, 5]]

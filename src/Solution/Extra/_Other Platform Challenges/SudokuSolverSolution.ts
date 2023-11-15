@@ -34,7 +34,7 @@ function getCandidates(board: string[][], row: number, col: number): number[] {
   return candidates
 }
 
-export const sudokuSolver = (board: string[][]): boolean =>{
+export const sudokuSolver = (board: string[][]): boolean => {
   // # For each empty cell, consider 'newCandidates', the
   // # set of possible candidate values that can
   // # be placed into that cell.

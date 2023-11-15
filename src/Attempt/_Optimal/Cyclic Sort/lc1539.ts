@@ -2,8 +2,6 @@
 
 // Return the kth positive integer that is missing from this array.
 
- 
-
 // Example 1:
 
 // Input: arr = [2,3,4,7,11], k = 5
@@ -14,7 +12,6 @@
 // Input: arr = [1,2,3,4], k = 2
 // Output: 6
 // Explanation: The missing positive integers are [5,6,7,...]. The 2nd missing positive integer is 6.
- 
 
 // Constraints:
 
@@ -23,13 +20,10 @@
 // 1 <= k <= 1000
 // arr[i] < arr[j] for 1 <= i < j <= arr.length
 
-
 export const findKthPositive = (arr: number[], k: number): number => {
- 
-
-  return 0;
-};
+  return 0
+}
 
 // Example usage:
-console.log(findKthPositive([2, 3, 4, 7, 11], 5)); // Output: 9
-console.log(findKthPositive([1, 2, 3, 4], 2)); // Output: 6
+console.log(findKthPositive([2, 3, 4, 7, 11], 5)) // Output: 9
+console.log(findKthPositive([1, 2, 3, 4], 2)) // Output: 6

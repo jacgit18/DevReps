@@ -4,8 +4,6 @@
 
 // Find the number that occurs twice and the number that is missing and return them in the form of an array.
 
- 
-
 // Example 1:
 
 // Input: nums = [1,2,2,4]
@@ -14,19 +12,16 @@
 
 // Input: nums = [1,1]
 // Output: [1,2]
- 
 
 // Constraints:
 
 // 2 <= nums.length <= 104
 // 1 <= nums[i] <= 104
 
-
 export const findErrorNums = (nums: number[]): number[] => {
-  
-  return [0];
-};
+  return [0]
+}
 
 // Example usage:
-console.log(findErrorNums([1, 2, 2, 4])); // Output: [2, 3]
-console.log(findErrorNums([1, 1])); // Output: [1, 2]
+console.log(findErrorNums([1, 2, 2, 4])) // Output: [2, 3]
+console.log(findErrorNums([1, 1])) // Output: [1, 2]

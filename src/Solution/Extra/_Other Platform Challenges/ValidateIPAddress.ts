@@ -20,29 +20,28 @@ output: false
 
 */
 
+export const validateIPAddress = (ip: string): boolean => {
+  const ipAddressRegex = /^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})$/
 
-export const validateIPAddress = (ip: string): boolean =>{
-  const ipAddressRegex = /^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})$/;
-
-  const match = ip.match(ipAddressRegex);
+  const match = ip.match(ipAddressRegex)
 
   if (!match) {
-    return false;
+    return false
   }
 
   for (let i = 1; i <= 4; i++) {
-    const octet = parseInt(match[i], 10);
+    const octet = parseInt(match[i], 10)
 
     if (isNaN(octet) || octet < 0 || octet > 255) {
-      return false;
+      return false
     }
   }
 
-  return true;
+  return true
 }
 
 // Examples:
-console.log(validateIPAddress('192.168.0.1'));   // true
-console.log(validateIPAddress('0.0.0.0'));       // true
-console.log(validateIPAddress('123.24.59.99'));  // true
-console.log(validateIPAddress('192.168.123.456'));// false
+console.log(validateIPAddress("192.168.0.1")) // true
+console.log(validateIPAddress("0.0.0.0")) // true
+console.log(validateIPAddress("123.24.59.99")) // true
+console.log(validateIPAddress("192.168.123.456")) // false

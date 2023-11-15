@@ -1,11 +1,5 @@
+const ExtraAttempt = {}
 
-
-const ExtraAttempt = {
-
-  };
-
-
-  export const combinedExtAttemptExports = {
-    ExtraAttempt,
-
-  }
+export const combinedExtAttemptExports = {
+  ExtraAttempt,
+}
