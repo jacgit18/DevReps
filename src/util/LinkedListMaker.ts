@@ -25,5 +25,5 @@ export function createLinkedListFromArray(arr: any[]): LinkedListNode | null {
 }
 
 // Example usage:
-const arrayToLinkedList = createLinkedListFromArray([1, 2, 3, 4, 5])
-console.log(arrayToLinkedList)
+// const arrayToLinkedList = createLinkedListFromArray([1, 2, 3, 4, 5])
+// console.log(arrayToLinkedList)

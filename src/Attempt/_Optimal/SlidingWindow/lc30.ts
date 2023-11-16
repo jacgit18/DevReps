@@ -42,8 +42,6 @@ export const findSubstring = (s: string, words: string[]): number[] => {
   return [0]
 }
 
-console.time("Sliding")
 // console.log(findSubstring("barfoothefoobarman", ["foo","bar"])) // [0,9]
 // console.log(findSubstring("wordgoodgoodgoodbestword",  ["word","good","best","word"])) // []
 // console.log(findSubstring("barfoofoobarthefoobarman", ["bar","foo","the"])) // [6,9,12]
-console.timeEnd("Sliding")

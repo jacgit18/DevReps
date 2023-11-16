@@ -35,14 +35,14 @@ export const minWindow = (s: string, t: string): string => {
 }
 
 // Example usage:
-const s1 = "ADOBECODEBANC"
-const t1 = "ABC"
-console.log(minWindow(s1, t1)) // Output: "BANC"
+// const s1 = "ADOBECODEBANC"
+// const t1 = "ABC"
+// console.log(minWindow(s1, t1)) // Output: "BANC"
 
-const s2 = "a"
-const t2 = "a"
-console.log(minWindow(s2, t2)) // Output: "a"
+// const s2 = "a"
+// const t2 = "a"
+// console.log(minWindow(s2, t2)) // Output: "a"
 
-const s3 = "a"
-const t3 = "aa"
-console.log(minWindow(s3, t3)) // Output: ""
+// const s3 = "a"
+// const t3 = "aa"
+// console.log(minWindow(s3, t3)) // Output: ""

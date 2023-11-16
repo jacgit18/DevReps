@@ -34,4 +34,4 @@ const dataToIterate = {
   },
 }
 
-logAllValues(dataToIterate)
+// logAllValues(dataToIterate)

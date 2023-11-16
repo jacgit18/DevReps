@@ -29,12 +29,10 @@ export const pair_with_target_sum = (arr: number[], targetSum: number): number[]
   return [0]
 }
 
-console.time("Pair time")
 console.log(pair_with_target_sum([1, 2, 3, 4, 6], 6))
-console.timeEnd("Pair time")
 
 // console.log(pair_with_target_sum([2, 5, 9, 11], 11));
 
-console.log(`\n ------- Edge Case -------- `)
+// console.log(`\n ------- Edge Case -------- `)
 // console.log(`Edge 1: [${pair_with_target_sum([], 6)}]`);
 // console.log(`Edge 1: [${pair_with_target_sum([3], 6)}]`);

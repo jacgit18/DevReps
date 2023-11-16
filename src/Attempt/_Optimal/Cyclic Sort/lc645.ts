@@ -23,5 +23,5 @@ export const findErrorNums = (nums: number[]): number[] => {
 }
 
 // Example usage:
-console.log(findErrorNums([1, 2, 2, 4])) // Output: [2, 3]
-console.log(findErrorNums([1, 1])) // Output: [1, 2]
+// console.log(findErrorNums([1, 2, 2, 4])) // Output: [2, 3]
+// console.log(findErrorNums([1, 1])) // Output: [1, 2]

@@ -110,17 +110,17 @@ export const findAnagrams = (s: string, p: string): number[] => {
   return result
 }
 
-// Example usage:
-const example1 = findAnagrams("cbaebabacd", "abc")
-console.log(example1) // Output: [0, 6]
+// // Example usage:
+// const example1 = findAnagrams("cbaebabacd", "abc")
+// console.log(example1) // Output: [0, 6]
 
-const example2 = findAnagrams("abab", "ab")
-console.log(example2) // Output: [0, 1, 2]
+// const example2 = findAnagrams("abab", "ab")
+// console.log(example2) // Output: [0, 1, 2]
 
-const s1 = "cbaebabacd"
-const p1 = "abc"
-console.log(findAnagramsTwoPointer(s1, p1)) // Output: [0, 6]
+// const s1 = "cbaebabacd"
+// const p1 = "abc"
+// console.log(findAnagramsTwoPointer(s1, p1)) // Output: [0, 6]
 
-const s2 = "abab"
-const p2 = "ab"
-console.log(findAnagramsTwoPointer(s2, p2)) // Output: [0, 1, 2]
+// const s2 = "abab"
+// const p2 = "ab"
+// console.log(findAnagramsTwoPointer(s2, p2)) // Output: [0, 1, 2]

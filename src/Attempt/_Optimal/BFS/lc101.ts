@@ -30,7 +30,7 @@ tree1.left.right = new TreeNode(4)
 tree1.right.left = new TreeNode(4)
 tree1.right.right = new TreeNode(3)
 
-console.log(isSymmetric(tree1)) // Output: true
+// console.log(isSymmetric(tree1)) // Output: true
 
 const tree2 = new TreeNode(1)
 tree2.left = new TreeNode(2)
@@ -38,4 +38,4 @@ tree2.right = new TreeNode(2)
 tree2.left.right = new TreeNode(3)
 tree2.right.right = new TreeNode(3)
 
-console.log(isSymmetric(tree2)) // Output: false
+// console.log(isSymmetric(tree2)) // Output: false

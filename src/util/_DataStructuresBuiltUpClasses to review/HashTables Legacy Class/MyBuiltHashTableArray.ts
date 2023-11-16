@@ -58,15 +58,15 @@ class MyHashTable {
   }
 }
 
-// Create an object of type hash table
-const ht = new MyHashTable()
+// // Create an object of type hash table
+// const ht = new MyHashTable()
 
-try {
-  console.log(ht.set("grapes", 10000))
-  console.log(ht.set("pear", 4))
-  console.log(ht.get("grapes"))
-  console.log(ht.getIndex("grapes"))
-  console.log(ht.hash("grapes"))
-} catch (error) {
-  // Handle errors if needed
-}
+// try {
+//   console.log(ht.set("grapes", 10000))
+//   console.log(ht.set("pear", 4))
+//   console.log(ht.get("grapes"))
+//   console.log(ht.getIndex("grapes"))
+//   console.log(ht.hash("grapes"))
+// } catch (error) {
+//   // Handle errors if needed
+// }

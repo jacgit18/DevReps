@@ -12,23 +12,23 @@ export const deepClone = (obj: any): any => {
   return newObj
 }
 
-let testArray: number[] = [44, 22]
-const newA: number[] = deepClone(testArray)
-console.log(testArray === newA) // false (reference equality)
+// let testArray: number[] = [44, 22]
+// const newA: number[] = deepClone(testArray)
+// console.log(testArray === newA) // false (reference equality)
 
-testArray.push(1)
-newA.push(8)
-console.log(newA)
-console.log(testArray === newA) // false (reference equality)
-console.log(testArray)
+// testArray.push(1)
+// newA.push(8)
+// console.log(newA)
+// console.log(testArray === newA) // false (reference equality)
+// console.log(testArray)
 
-let testObj: any = {
-  first: 44,
-  sec: 12,
-  third: { a: 1, b: 2 },
-}
-const objay: any = deepClone(testObj)
-console.log(objay === testObj) // false (reference equality)
+// let testObj: any = {
+//   first: 44,
+//   sec: 12,
+//   third: { a: 1, b: 2 },
+// }
+// const objay: any = deepClone(testObj)
+// console.log(objay === testObj) // false (reference equality)
 
-const arr: number[] = Array.from(Array(10).keys())
-console.log(arr)
+// const arr: number[] = Array.from(Array(10).keys())
+// console.log(arr)

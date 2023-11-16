@@ -58,11 +58,11 @@ export const leastInterval = (tasks: string[], n: number): number => {
 }
 
 // Example usage:
-const example1 = leastInterval(["A", "A", "A", "B", "B", "B"], 2)
-console.log(example1) // Output: 8
+// const example1 = leastInterval(["A", "A", "A", "B", "B", "B"], 2)
+// console.log(example1) // Output: 8
 
-const example2 = leastInterval(["A", "A", "A", "B", "B", "B"], 0)
-console.log(example2) // Output: 6
+// const example2 = leastInterval(["A", "A", "A", "B", "B", "B"], 0)
+// console.log(example2) // Output: 6
 
-const example3 = leastInterval(["A", "A", "A", "A", "A", "A", "B", "C", "D", "E", "F", "G"], 2)
-console.log(example3) // Output: 16
+// const example3 = leastInterval(["A", "A", "A", "A", "A", "A", "B", "C", "D", "E", "F", "G"], 2)
+// console.log(example3) // Output: 16

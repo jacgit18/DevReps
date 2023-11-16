@@ -49,6 +49,6 @@ export const longestPalindrome = (s: string): number => {
   return length
 }
 
-// Example usage:
-console.log(longestPalindrome("abccccdd")) // Output: 7
-console.log(longestPalindrome("a")) // Output: 1
+// // Example usage:
+// console.log(longestPalindrome("abccccdd")) // Output: 7
+// console.log(longestPalindrome("a")) // Output: 1

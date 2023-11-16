@@ -26,10 +26,10 @@ export const searchBin = (nums: number[], target: number): number => {
 }
 
 // Example usage:
-const nums1 = [-1, 0, 3, 5, 9, 12]
-const target1 = 9
-console.log(searchBin(nums1, target1)) // Output: 4
+// const nums1 = [-1, 0, 3, 5, 9, 12]
+// const target1 = 9
+// console.log(searchBin(nums1, target1)) // Output: 4
 
-const nums2 = [-1, 0, 3, 5, 9, 12]
-const target2 = 2
-console.log(searchBin(nums2, target2)) // Output: -1
+// const nums2 = [-1, 0, 3, 5, 9, 12]
+// const target2 = 2
+// console.log(searchBin(nums2, target2)) // Output: -1

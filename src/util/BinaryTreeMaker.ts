@@ -36,7 +36,7 @@ export const sortedArrayToBST = (nums: number[]): TreeNode | null => {
 }
 
 // Example Usage:
-const unsortedArray = [3, 1, 4, 6, 2, 5, 7]
-const bstRoot = sortedArrayToBST(unsortedArray)
+// const unsortedArray = [3, 1, 4, 6, 2, 5, 7]
+// const bstRoot = sortedArrayToBST(unsortedArray)
 
-console.log(bstRoot)
+// console.log(bstRoot)

@@ -93,15 +93,15 @@ class PriorityQueuer {
   }
 }
 
-const treeOne = new PriorityQueuer()
-treeOne.enqueue(3, 2)
-treeOne.enqueue(4, 5)
-treeOne.enqueue(31, 1)
-treeOne.enqueue(6, 3)
+// const treeOne = new PriorityQueuer()
+// treeOne.enqueue(3, 2)
+// treeOne.enqueue(4, 5)
+// treeOne.enqueue(31, 1)
+// treeOne.enqueue(6, 3)
 
-console.log(treeOne.getFirst()) // { val: 4, priority: 5 }
-treeOne.printQueue() // [ { val: 4, priority: 5 }, { val: 3, priority: 2 }, { val: 31, priority: 1 }, { val: 6, priority: 3 } ]
-console.log(treeOne.dequeue()) // { val: 4, priority: 5 }
-console.log(treeOne.dequeue()) // { val: 6, priority: 3 }
-console.log(treeOne.dequeue()) // { val: 3, priority: 2 }
-console.log(treeOne.dequeue()) // { val: 31, priority: 1 }
+// console.log(treeOne.getFirst()) // { val: 4, priority: 5 }
+// treeOne.printQueue() // [ { val: 4, priority: 5 }, { val: 3, priority: 2 }, { val: 31, priority: 1 }, { val: 6, priority: 3 } ]
+// console.log(treeOne.dequeue()) // { val: 4, priority: 5 }
+// console.log(treeOne.dequeue()) // { val: 6, priority: 3 }
+// console.log(treeOne.dequeue()) // { val: 3, priority: 2 }
+// console.log(treeOne.dequeue()) // { val: 31, priority: 1 }

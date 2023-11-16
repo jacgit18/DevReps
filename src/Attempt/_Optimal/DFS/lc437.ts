@@ -42,5 +42,5 @@ const root2 = new TreeNode(
 
 const targetSum2 = 22
 
-console.log(pathSum(root1, targetSum1)) // Output: 3
-console.log(pathSum(root2, targetSum2)) // Output: 3
+// console.log(pathSum(root1, targetSum1)) // Output: 3
+// console.log(pathSum(root2, targetSum2)) // Output: 3

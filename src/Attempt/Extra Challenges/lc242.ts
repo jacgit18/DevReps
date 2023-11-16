@@ -21,4 +21,4 @@ export const isAnagram = (s: string, t: string): boolean => {
   return true
 }
 
-console.log(isAnagram("anagram", "nagaram")) // returns true
+// console.log(isAnagram("anagram", "nagaram")) // returns true

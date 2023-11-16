@@ -62,6 +62,6 @@ export const decompressString = (s: string): string => {
 }
 
 // Example usage:
-const compressedString = "3[abc]4[ab]c"
-const decompressedString = decompressString(compressedString)
-console.log(decompressedString) // Output: 'abcabcabcababababc'
+// const compressedString = "3[abc]4[ab]c"
+// const decompressedString = decompressString(compressedString)
+// console.log(decompressedString) // Output: 'abcabcabcababababc'

@@ -117,4 +117,4 @@ export const reverseList = function (
   return reverseList(next, prev)
 }
 
-console.log(reverseREc(linkedList))
+// console.log(reverseREc(linkedList))

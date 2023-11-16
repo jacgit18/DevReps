@@ -25,6 +25,6 @@ export const firstUniqChar = (s: string): number => {
 }
 
 // Example usage:
-console.log(firstUniqChar("leetcode")) // Output: 0
-console.log(firstUniqChar("loveleetcode")) // Output: 2
-console.log(firstUniqChar("aabb")) // Output: -1
+// console.log(firstUniqChar("leetcode")) // Output: 0
+// console.log(firstUniqChar("loveleetcode")) // Output: 2
+// console.log(firstUniqChar("aabb")) // Output: -1

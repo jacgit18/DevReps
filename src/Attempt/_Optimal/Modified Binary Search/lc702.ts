@@ -51,8 +51,8 @@ const arrayReader: ArrayReader = {
   },
 }
 
-const target1 = 9
-console.log(searchInArrayReader(arrayReader, target1)) // Output: 4
+// const target1 = 9
+// console.log(searchInArrayReader(arrayReader, target1)) // Output: 4
 
-const target2 = 2
-console.log(searchInArrayReader(arrayReader, target2)) // Output: -1
+// const target2 = 2
+// console.log(searchInArrayReader(arrayReader, target2)) // Output: -1

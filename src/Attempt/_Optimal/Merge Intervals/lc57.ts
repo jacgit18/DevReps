@@ -27,24 +27,24 @@ export const insertInterval = (intervals: number[][], newInterval: number[]): nu
   return [[0]]
 }
 
-// Example usage:
-const example1 = insertInterval(
-  [
-    [1, 3],
-    [6, 9],
-  ],
-  [2, 5],
-)
-console.log(example1) // Output: [[1, 5], [6, 9]]
+// // Example usage:
+// const example1 = insertInterval(
+//   [
+//     [1, 3],
+//     [6, 9],
+//   ],
+//   [2, 5],
+// )
+// console.log(example1) // Output: [[1, 5], [6, 9]]
 
-const example2 = insertInterval(
-  [
-    [1, 2],
-    [3, 5],
-    [6, 7],
-    [8, 10],
-    [12, 16],
-  ],
-  [4, 8],
-)
-console.log(example2) // Output: [[1, 2], [3, 10], [12, 16]]
+// const example2 = insertInterval(
+//   [
+//     [1, 2],
+//     [3, 5],
+//     [6, 7],
+//     [8, 10],
+//     [12, 16],
+//   ],
+//   [4, 8],
+// )
+// console.log(example2) // Output: [[1, 2], [3, 10], [12, 16]]

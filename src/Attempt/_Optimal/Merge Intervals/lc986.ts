@@ -29,19 +29,19 @@ export const intervalIntersection = (firstList: number[][], secondList: number[]
   return [[0]]
 }
 
-// Example usage:
-const firstList = [
-  [0, 2],
-  [5, 10],
-  [13, 23],
-  [24, 25],
-]
-const secondList = [
-  [1, 5],
-  [8, 12],
-  [15, 24],
-  [25, 26],
-]
+// // Example usage:
+// const firstList = [
+//   [0, 2],
+//   [5, 10],
+//   [13, 23],
+//   [24, 25],
+// ]
+// const secondList = [
+//   [1, 5],
+//   [8, 12],
+//   [15, 24],
+//   [25, 26],
+// ]
 
-const result = intervalIntersection(firstList, secondList)
-console.log(result)
+// const result = intervalIntersection(firstList, secondList)
+// console.log(result)

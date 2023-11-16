@@ -35,7 +35,7 @@ export const backspaceCompare = (s: string, t: string): boolean => {
   return sWithoutHash === tWithoutHash
 }
 
-console.log(backspaceCompare("ab#c", "ad#c")) // true
+// console.log(backspaceCompare("ab#c", "ad#c")) // true
 
 // console.log(backspaceCompare("ab##", "c#d#")); // true
 // console.log(backspaceCompare("a#c", "b")); // false

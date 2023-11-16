@@ -53,10 +53,10 @@ class BubbleSort {
 
 // Usage
 // cant resue vairiable names in different files outside of function may use encapsulation
-const myArrayTwo = [5, 2, 9, 3, 6]
-const sorter = new BubbleSort(myArrayTwo)
-sorter.sort()
-console.log(myArrayTwo) // Sorted array
+// const myArrayTwo = [5, 2, 9, 3, 6]
+// const sorter = new BubbleSort(myArrayTwo)
+// sorter.sort()
+// console.log(myArrayTwo) // Sorted array
 
 // Higher Order bubble sort implementing something like this doesnt really make sense
 
@@ -78,6 +78,6 @@ function sortArrayInPlace(initArray: number[], sortFunction: (array: number[]) =
 }
 
 // Usage
-const myArrayThree: number[] = [5, 2, 9, 3, 6]
-sortArrayInPlace(myArrayThree, bubbleSortInPlace)
-console.log(myArrayThree) // The original array is now sorted in place
+// const myArrayThree: number[] = [5, 2, 9, 3, 6]
+// sortArrayInPlace(myArrayThree, bubbleSortInPlace)
+// console.log(myArrayThree) // The original array is now sorted in place

@@ -28,8 +28,8 @@ export const findAnagrams = (s: string, p: string): number[] => {
 }
 
 // Example usage:
-const example1 = findAnagrams("cbaebabacd", "abc")
-console.log(example1) // Output: [0, 6]
+// const example1 = findAnagrams("cbaebabacd", "abc")
+// console.log(example1) // Output: [0, 6]
 
-const example2 = findAnagrams("abab", "ab")
-console.log(example2) // Output: [0, 1, 2]
+// const example2 = findAnagrams("abab", "ab")
+// console.log(example2) // Output: [0, 1, 2]

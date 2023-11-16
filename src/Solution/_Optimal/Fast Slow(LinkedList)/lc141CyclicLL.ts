@@ -88,28 +88,28 @@ export const hasCycle = (head: LinkedListNode | null): boolean => {
   return false // No cycle found
 }
 
-// Example usage:
-const example1 = new LinkedListNode(3)
-example1.next = new LinkedListNode(2)
-example1.next.next = new LinkedListNode(0)
-example1.next.next.next = new LinkedListNode(-4)
-example1.next.next.next.next = example1.next // creating a cycle
+// // Example usage:
+// const example1 = new LinkedListNode(3)
+// example1.next = new LinkedListNode(2)
+// example1.next.next = new LinkedListNode(0)
+// example1.next.next.next = new LinkedListNode(-4)
+// example1.next.next.next.next = example1.next // creating a cycle
 
-console.log(hasCycle(example1)) // Output: true
+// console.log(hasCycle(example1)) // Output: true
 
-const example2 = new LinkedListNode(1)
-example2.next = new LinkedListNode(2)
-example2.next.next = example2 // creating a cycle
+// const example2 = new LinkedListNode(1)
+// example2.next = new LinkedListNode(2)
+// example2.next.next = example2 // creating a cycle
 
-console.log(hasCycle(example2)) // Output: true
+// console.log(hasCycle(example2)) // Output: true
 
-const example3 = new LinkedListNode(1)
+// const example3 = new LinkedListNode(1)
 
-console.log(hasCycle(example3)) // Output: false
+// console.log(hasCycle(example3)) // Output: false
 
-// actual linked list
-const example4 = new LinkedListNode(3)
-example4.next = new LinkedListNode(2)
-example4.next.next = new LinkedListNode(0)
-example4.next.next.next = new LinkedListNode(-4)
-console.log(hasCycle(example4)) // Output: false
+// // actual linked list
+// const example4 = new LinkedListNode(3)
+// example4.next = new LinkedListNode(2)
+// example4.next.next = new LinkedListNode(0)
+// example4.next.next.next = new LinkedListNode(-4)
+// console.log(hasCycle(example4)) // Output: false

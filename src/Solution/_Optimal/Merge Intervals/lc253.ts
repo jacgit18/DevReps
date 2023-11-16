@@ -40,16 +40,16 @@ export const minMeetingRooms = (intervals: number[][]): number => {
   return minHeap.size()
 }
 
-// Example usage:
-const example1 = minMeetingRooms([
-  [0, 30],
-  [5, 10],
-  [15, 20],
-])
-console.log(example1) // Output: 2
+// // Example usage:
+// const example1 = minMeetingRooms([
+//   [0, 30],
+//   [5, 10],
+//   [15, 20],
+// ])
+// console.log(example1) // Output: 2
 
-const example2 = minMeetingRooms([
-  [7, 10],
-  [2, 4],
-])
-console.log(example2) // Output: 1
+// const example2 = minMeetingRooms([
+//   [7, 10],
+//   [2, 4],
+// ])
+// console.log(example2) // Output: 1

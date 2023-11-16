@@ -52,7 +52,7 @@ const queries = [
   ["APPEND", "let me down"],
 ]
 
-console.log(solution(queries))
+// console.log(solution(queries))
 
 /**
  * 

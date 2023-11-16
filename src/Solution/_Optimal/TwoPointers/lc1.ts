@@ -43,9 +43,9 @@ export const pair_with_target_sum_map = (nums: number[], target: number): number
   return [-1, -1]
 }
 
-console.time("Pair time map")
-console.log(pair_with_target_sum_map([1, 2, 3, 4, 6], 6))
-console.timeEnd("Pair time map")
+// console.time("Pair time map")
+// console.log(pair_with_target_sum_map([1, 2, 3, 4, 6], 6))
+// console.timeEnd("Pair time map")
 
 export const pair_with_target_sum_Two_Pointer = (arr: number[], targetSum: number): number[] => {
   let left = 0,
@@ -67,12 +67,12 @@ export const pair_with_target_sum_Two_Pointer = (arr: number[], targetSum: numbe
   return [-1, -1]
 }
 
-console.time("Pair time")
-console.log(pair_with_target_sum_Two_Pointer([1, 2, 3, 4, 6], 6))
-console.timeEnd("Pair time")
+// console.time("Pair time")
+// console.log(pair_with_target_sum_Two_Pointer([1, 2, 3, 4, 6], 6))
+// console.timeEnd("Pair time")
 
 // console.log(pair_with_target_sum([2, 5, 9, 11], 11));
 
-console.log(`\n ------- Edge Case -------- `)
+// console.log(`\n ------- Edge Case -------- `)
 // console.log(`Edge 1: [${pair_with_target_sum([], 6)}]`);
 // console.log(`Edge 1: [${pair_with_target_sum([3], 6)}]`);

@@ -43,16 +43,16 @@ export const threeSumSmaller = (nums: number[], target: number): number => {
 }
 
 // Example usage:
-const nums1 = [-2, 0, 1, 3]
-const target1 = 2
-const result1 = threeSumSmaller(nums1, target1)
-console.log(result1) // Output: 2
+// const nums1 = [-2, 0, 1, 3]
+// const target1 = 2
+// const result1 = threeSumSmaller(nums1, target1)
+// console.log(result1) // Output: 2
 
-const nums2: any = []
-const target2 = 0
-const result2 = threeSumSmaller(nums2, target2)
-console.log(result2) // Output: 0
+// const nums2: any = []
+// const target2 = 0
+// const result2 = threeSumSmaller(nums2, target2)
+// console.log(result2) // Output: 0
 
-const nums3 = [0]
-const result3 = threeSumSmaller(nums3, target2)
-console.log(result3) // Output: 0
+// const nums3 = [0]
+// const result3 = threeSumSmaller(nums3, target2)
+// console.log(result3) // Output: 0

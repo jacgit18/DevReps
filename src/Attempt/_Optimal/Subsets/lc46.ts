@@ -26,11 +26,11 @@ export const permute = (nums: number[]): number[][] => {
 }
 
 // Example usage:
-const example1 = permute([1, 2, 3])
-console.log(example1)
+// const example1 = permute([1, 2, 3])
+// console.log(example1)
 
-const example2 = permute([0, 1])
-console.log(example2)
+// const example2 = permute([0, 1])
+// console.log(example2)
 
-const example3 = permute([1])
-console.log(example3)
+// const example3 = permute([1])
+// console.log(example3)

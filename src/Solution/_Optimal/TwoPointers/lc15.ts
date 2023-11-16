@@ -67,14 +67,14 @@ export const threeSum = (nums: number[]): number[][] => {
 }
 
 // Example usage:
-const nums1 = [-1, 0, 1, 2, -1, -4]
-const result1 = threeSum(nums1)
-console.log(result1)
+// const nums1 = [-1, 0, 1, 2, -1, -4]
+// const result1 = threeSum(nums1)
+// console.log(result1)
 
-const nums2 = [0, 1, 1]
-const result2 = threeSum(nums2)
-console.log(result2)
+// const nums2 = [0, 1, 1]
+// const result2 = threeSum(nums2)
+// console.log(result2)
 
-const nums3 = [0, 0, 0]
-const result3 = threeSum(nums3)
-console.log(result3)
+// const nums3 = [0, 0, 0]
+// const result3 = threeSum(nums3)
+// console.log(result3)

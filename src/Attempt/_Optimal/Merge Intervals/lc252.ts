@@ -20,17 +20,17 @@ export const canAttendMeetings = (intervals: number[][]): boolean => {
   return true
 }
 
-// Example usage:
-const example1 = canAttendMeetings([
-  [1, 3],
-  [4, 6],
-  [7, 9],
-])
-console.log(example1) // Output: true
+// // Example usage:
+// const example1 = canAttendMeetings([
+//   [1, 3],
+//   [4, 6],
+//   [7, 9],
+// ])
+// console.log(example1) // Output: true
 
-const example2 = canAttendMeetings([
-  [1, 3],
-  [2, 5],
-  [6, 9],
-])
-console.log(example2) // Output: false (overlapping meetings)
+// const example2 = canAttendMeetings([
+//   [1, 3],
+//   [2, 5],
+//   [6, 9],
+// ])
+// console.log(example2) // Output: false (overlapping meetings)

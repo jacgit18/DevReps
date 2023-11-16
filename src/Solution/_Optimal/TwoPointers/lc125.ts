@@ -44,11 +44,11 @@ export const isPalindrome = (s: string): boolean => {
 }
 
 // Example usage:
-const example1 = "A man, a plan, a canal: Panama"
-console.log(isPalindrome(example1)) // Output: true
+// const example1 = "A man, a plan, a canal: Panama"
+// console.log(isPalindrome(example1)) // Output: true
 
-const example2 = "race a car"
-console.log(isPalindrome(example2)) // Output: false
+// const example2 = "race a car"
+// console.log(isPalindrome(example2)) // Output: false
 
-const example3 = " "
-console.log(isPalindrome(example3)) // Output: true
+// const example3 = " "
+// console.log(isPalindrome(example3)) // Output: true

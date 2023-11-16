@@ -217,12 +217,12 @@ class BinaryTree {
   }
 }
 
-const treeTwo = new BinaryTree()
-treeTwo.add(12)
-treeTwo.add(7)
-treeTwo.add(9)
-treeTwo.add(0)
-treeTwo.add(1)
-treeTwo.add(10)
-treeTwo.add(5)
-console.log(treeTwo.levelOrder())
+// const treeTwo = new BinaryTree()
+// treeTwo.add(12)
+// treeTwo.add(7)
+// treeTwo.add(9)
+// treeTwo.add(0)
+// treeTwo.add(1)
+// treeTwo.add(10)
+// treeTwo.add(5)
+// console.log(treeTwo.levelOrder())

@@ -26,12 +26,12 @@ export const fourSum = (nums: number[], target: number): number[][] => {
 }
 
 // Example usage:
-const nums1 = [1, 0, -1, 0, -2, 2]
-const target1 = 0
-const result1 = fourSum(nums1, target1)
-console.log(result1)
+// const nums1 = [1, 0, -1, 0, -2, 2]
+// const target1 = 0
+// const result1 = fourSum(nums1, target1)
+// console.log(result1)
 
-const nums2 = [2, 2, 2, 2, 2]
-const target2 = 8
-const result2 = fourSum(nums2, target2)
-console.log(result2)
+// const nums2 = [2, 2, 2, 2, 2]
+// const target2 = 8
+// const result2 = fourSum(nums2, target2)
+// console.log(result2)

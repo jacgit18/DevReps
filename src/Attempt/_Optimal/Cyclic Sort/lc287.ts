@@ -25,5 +25,5 @@ export const findDuplicate = (nums: number[]): number => {
 }
 
 // Example usage:
-console.log(findDuplicate([1, 3, 4, 2, 2])) // Output: 2
-console.log(findDuplicate([3, 1, 3, 4, 2])) // Output: 3
+// console.log(findDuplicate([1, 3, 4, 2, 2])) // Output: 2
+// console.log(findDuplicate([3, 1, 3, 4, 2])) // Output: 3

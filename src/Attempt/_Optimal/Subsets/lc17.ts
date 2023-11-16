@@ -38,6 +38,6 @@ export const letterCombinations = (digits: string): string[] => {
 }
 
 // Example usage:
-console.log(letterCombinations("23")) // Output: ["ad","ae","af","bd","be","bf","cd","ce","cf"]
-console.log(letterCombinations("")) // Output: []
-console.log(letterCombinations("2")) // Output: ["a","b","c"]
+// console.log(letterCombinations("23")) // Output: ["ad","ae","af","bd","be","bf","cd","ce","cf"]
+// console.log(letterCombinations("")) // Output: []
+// console.log(letterCombinations("2")) // Output: ["a","b","c"]

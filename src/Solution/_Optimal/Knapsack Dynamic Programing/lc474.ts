@@ -55,6 +55,6 @@ function countZerosOnes(str: string): number[] {
   return result
 }
 
-// Example usage:
-console.log(findMaxForm(["10", "0001", "111001", "1", "0"], 5, 3)) // Output: 4
-console.log(findMaxForm(["10", "0", "1"], 1, 1)) // Output: 2
+// // Example usage:
+// console.log(findMaxForm(["10", "0001", "111001", "1", "0"], 5, 3)) // Output: 4
+// console.log(findMaxForm(["10", "0", "1"], 1, 1)) // Output: 2

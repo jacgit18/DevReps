@@ -62,10 +62,10 @@ export const nameMatch = (knownAliases: string[], recordName: string): boolean =
 
 function assertEqual(expected: boolean, result: boolean, errorMessage: string): void {
   if (result !== expected) {
-    console.log(errorMessage)
-    console.log(`expected: ${expected}`)
-    console.log(`actual: ${result}`)
-    console.log("")
+    // console.log(errorMessage)
+    // console.log(`expected: ${expected}`)
+    // console.log(`actual: ${result}`)
+    // console.log("")
   }
 }
 
@@ -101,7 +101,7 @@ function testRun(): void {
   assertEqual(false, nameMatch(knownAliases, "Alphonse Edward Capone"), "error 5.4")
   assertEqual(false, nameMatch(knownAliases, "Alphonse Gregory Capone"), "error 5.5")
 
-  console.log("Test run finished")
+  // console.log("Test run finished")
 }
 
-testRun()
+// testRun()

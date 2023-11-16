@@ -98,23 +98,23 @@ class MinBinaryHeap {
   }
 }
 
-const hpOne = new MinBinaryHeap()
+// const hpOne = new MinBinaryHeap()
 
-hpOne.insert(652)
-hpOne.insert(335)
-hpOne.insert(466)
-hpOne.insert(532)
-hpOne.insert(2330)
-hpOne.insert(324)
-hpOne.insert(222)
-hpOne.insert(4654)
-hpOne.insert(5432)
-hpOne.insert(43)
+// hpOne.insert(652)
+// hpOne.insert(335)
+// hpOne.insert(466)
+// hpOne.insert(532)
+// hpOne.insert(2330)
+// hpOne.insert(324)
+// hpOne.insert(222)
+// hpOne.insert(4654)
+// hpOne.insert(5432)
+// hpOne.insert(43)
 
-// hp.bubbleDown();
+// // hp.bubbleDown();
 
-console.log(hpOne)
+// console.log(hpOne)
 
-console.log(hpOne.removeMin())
-// hp.bubbleDown();
-console.log(hpOne)
+// console.log(hpOne.removeMin())
+// // hp.bubbleDown();
+// console.log(hpOne)

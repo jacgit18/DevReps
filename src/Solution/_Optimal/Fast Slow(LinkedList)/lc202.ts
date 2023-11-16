@@ -50,5 +50,5 @@ export const isHappy = (n: number): boolean => {
 }
 
 // Example usage:
-console.log(isHappy(19)) // Output: true
-console.log(isHappy(2)) // Output: false
+// console.log(isHappy(19)) // Output: true
+// console.log(isHappy(2)) // Output: false

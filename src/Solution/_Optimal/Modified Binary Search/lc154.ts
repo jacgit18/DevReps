@@ -43,11 +43,11 @@ export const findMinTwo = (nums: number[]): number => {
 }
 
 // Example usage:
-const nums1 = [3, 4, 5, 1, 2]
-console.log(findMinTwo(nums1)) // Output: 1
+// const nums1 = [3, 4, 5, 1, 2]
+// console.log(findMinTwo(nums1)) // Output: 1
 
-const nums2 = [4, 5, 6, 7, 0, 1, 2]
-console.log(findMinTwo(nums2)) // Output: 0
+// const nums2 = [4, 5, 6, 7, 0, 1, 2]
+// console.log(findMinTwo(nums2)) // Output: 0
 
-const nums3 = [11, 13, 15, 17]
-console.log(findMinTwo(nums3)) // Output: 11
+// const nums3 = [11, 13, 15, 17]
+// console.log(findMinTwo(nums3)) // Output: 11

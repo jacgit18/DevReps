@@ -189,9 +189,9 @@ class HashTable {
 }
 
 /* Examples */
-const hash = new HashTable(50)
+// const hash = new HashTable(50)
 
-hash.insert("James Hamann", 30)
-hash.insert("James Hamann", 35)
+// hash.insert("James Hamann", 30)
+// hash.insert("James Hamann", 35)
 
-console.log(hash.retrieve("James Hamann"))
+// console.log(hash.retrieve("James Hamann"))

@@ -35,6 +35,6 @@ export const customLog = (
 }
 
 // Usage examples:
-customLog("log", "Before:", "Hello", "After", "Additional Context")
+// customLog("log", "Before:", "Hello", "After", "Additional Context")
 // customLog('info', 'Info:', 'Some Information', 'Details', 'More Context');
 // customLog('error', 'Error:', 'Something went wrong', 'Details', 'Error Context');

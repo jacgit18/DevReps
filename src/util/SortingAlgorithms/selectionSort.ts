@@ -18,5 +18,5 @@ function selectionSort(array: number[]): number[] {
   return array
 }
 
-selectionSort(Morenumbers)
-console.log(Morenumbers)
+// selectionSort(Morenumbers)
+// console.log(Morenumbers)

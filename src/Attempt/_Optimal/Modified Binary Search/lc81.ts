@@ -28,10 +28,10 @@ export const search = (nums: number[], target: number): boolean => {
 }
 
 // Example usage:
-const nums1 = [2, 5, 6, 0, 0, 1, 2]
-const target1 = 0
-console.log(search(nums1, target1)) // Output: true
+// const nums1 = [2, 5, 6, 0, 0, 1, 2]
+// const target1 = 0
+// console.log(search(nums1, target1)) // Output: true
 
-const nums2 = [2, 5, 6, 0, 0, 1, 2]
-const target2 = 3
-console.log(search(nums2, target2)) // Output: false
+// const nums2 = [2, 5, 6, 0, 0, 1, 2]
+// const target2 = 3
+// console.log(search(nums2, target2)) // Output: false

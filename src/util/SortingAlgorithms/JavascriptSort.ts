@@ -6,7 +6,7 @@ const Comparefunc = (a: number, b: number): number => a - b
 const numbers: number[] = [34, 21, 1, 100, 42, -1, 23]
 
 numbers.sort(Comparefunc)
-console.table(numbers)
+// console.table(numbers)
 
 interface Product {
   name: string
@@ -23,4 +23,4 @@ proder.sort((a: Product, b: Product): number => {
   return a.price - b.price
 })
 
-console.log(proder)
+// console.log(proder)

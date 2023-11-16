@@ -47,5 +47,5 @@ const fanOut = (left: number, right: number, s: string): number => {
   return count
 }
 
-console.log(countSubstrings("abc"))
-console.log(countSubstrings("aaa"))
+// console.log(countSubstrings("abc"))
+// console.log(countSubstrings("aaa"))

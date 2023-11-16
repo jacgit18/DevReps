@@ -22,6 +22,6 @@ function countingSort(arr: number[]): number[] {
 }
 
 // Example usage
-const TypeUnsortedArray: number[] = [4, 2, 2, 8, 3, 3, 1]
-const TypedSortedArray = countingSort(TypeUnsortedArray)
-console.log(TypedSortedArray) // Output: [1, 2, 2, 3, 3, 4, 8]
+// const TypeUnsortedArray: number[] = [4, 2, 2, 8, 3, 3, 1]
+// const TypedSortedArray = countingSort(TypeUnsortedArray)
+// console.log(TypedSortedArray) // Output: [1, 2, 2, 3, 3, 4, 8]

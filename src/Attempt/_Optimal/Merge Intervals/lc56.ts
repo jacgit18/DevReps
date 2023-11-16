@@ -22,16 +22,16 @@ export const merge = (intervals: number[][]): number[][] => {
 }
 
 // Example usage:
-const example1 = merge([
-  [1, 3],
-  [2, 6],
-  [8, 10],
-  [15, 18],
-])
-console.log(example1) // Output: [[1, 6], [8, 10], [15, 18]]
+// const example1 = merge([
+//   [1, 3],
+//   [2, 6],
+//   [8, 10],
+//   [15, 18],
+// ])
+// console.log(example1) // Output: [[1, 6], [8, 10], [15, 18]]
 
-const example2 = merge([
-  [1, 4],
-  [4, 5],
-])
-console.log(example2) // Output: [[1, 5]]
+// const example2 = merge([
+//   [1, 4],
+//   [4, 5],
+// ])
+// console.log(example2) // Output: [[1, 5]]

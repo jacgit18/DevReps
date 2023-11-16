@@ -22,9 +22,9 @@ export const checkInclusion = (s1: string, s2: string): boolean => {
   return true
 }
 
-let s1 = "ab",
-  s2 = "eidbaooo",
-  s3 = "eidboaoo" // swap a with a for s3 would be false
+// let s1 = "ab",
+//   s2 = "eidbaooo",
+//   s3 = "eidboaoo" // swap a with a for s3 would be false
 
-console.log(checkInclusion(s1, s2)) // true
-console.log(checkInclusion(s1, s3)) // false
+// console.log(checkInclusion(s1, s2)) // true
+// console.log(checkInclusion(s1, s3)) // false

@@ -45,4 +45,4 @@ let matrixVal: number[][] = [
 ]
 
 // Call the matrix function
-matrix(matrixVal)
+// matrix(matrixVal)

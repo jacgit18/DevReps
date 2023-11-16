@@ -25,5 +25,5 @@ export const countSubstrings = (s: string): number => {
   return 0
 }
 
-console.log(countSubstrings("abc"))
-console.log(countSubstrings("aaa"))
+// console.log(countSubstrings("abc"))
+// console.log(countSubstrings("aaa"))

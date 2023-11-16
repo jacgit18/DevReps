@@ -78,11 +78,11 @@ export const searchRange = (nums: number[], target: number): number[] => {
 }
 
 // Example usage:
-const example1 = searchRange([5, 7, 7, 8, 8, 10], 8)
-console.log(example1)
+// const example1 = searchRange([5, 7, 7, 8, 8, 10], 8)
+// console.log(example1)
 
-const example2 = searchRange([5, 7, 7, 8, 8, 10], 6)
-console.log(example2)
+// const example2 = searchRange([5, 7, 7, 8, 8, 10], 6)
+// console.log(example2)
 
-const example3 = searchRange([], 0)
-console.log(example3)
+// const example3 = searchRange([], 0)
+// console.log(example3)

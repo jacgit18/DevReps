@@ -83,10 +83,10 @@ export const mergeKLists = (lists: Array<ListNode | null>): ListNode | null => {
 }
 
 // Example usage:
-const lists1 = [
-  new ListNode(1, new ListNode(4, new ListNode(5))),
-  new ListNode(1, new ListNode(3, new ListNode(4))),
-  new ListNode(2, new ListNode(6)),
-]
+// const lists1 = [
+//   new ListNode(1, new ListNode(4, new ListNode(5))),
+//   new ListNode(1, new ListNode(3, new ListNode(4))),
+//   new ListNode(2, new ListNode(6)),
+// ]
 
-console.log(mergeKLists(lists1))
+// console.log(mergeKLists(lists1))

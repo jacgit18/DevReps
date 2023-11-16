@@ -40,12 +40,12 @@ export const distributeCandies = (candyType: number[]): number => {
   return Math.min(n / 2, uniqueCandies.size)
 }
 
-// Example usage:
-const candyType1 = [1, 1, 2, 2, 3, 3]
-console.log(distributeCandies(candyType1)) // Output: 3
+// // Example usage:
+// const candyType1 = [1, 1, 2, 2, 3, 3]
+// console.log(distributeCandies(candyType1)) // Output: 3
 
-const candyType2 = [1, 1, 2, 3]
-console.log(distributeCandies(candyType2)) // Output: 2
+// const candyType2 = [1, 1, 2, 3]
+// console.log(distributeCandies(candyType2)) // Output: 2
 
-const candyType3 = [6, 6, 6, 6]
-console.log(distributeCandies(candyType3)) // Output: 1
+// const candyType3 = [6, 6, 6, 6]
+// console.log(distributeCandies(candyType3)) // Output: 1

@@ -29,4 +29,4 @@ export const searchBin = (nums: number[], target: number): number => {
   return recursiveSearch(nums, target, startIndex, endIndex)
 }
 
-console.log(searchBin([-1, 0, 3, 5, 9, 12], 9))
+// console.log(searchBin([-1, 0, 3, 5, 9, 12], 9))

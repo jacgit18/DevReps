@@ -33,4 +33,4 @@ const binaryMatrix = [
   [1, 0, 1, 0, 1],
 ]
 
-console.log(getNumberOfIslands(binaryMatrix)) // Output: 6
+// console.log(getNumberOfIslands(binaryMatrix)) // Output: 6

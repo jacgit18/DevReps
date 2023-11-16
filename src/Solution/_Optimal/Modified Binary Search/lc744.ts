@@ -48,14 +48,14 @@ export const nextGreatestLetter = (letters: string[], target: string): string =>
 }
 
 // Example usage:
-const letters1 = ["c", "f", "j"]
-const target1 = "a"
-console.log(nextGreatestLetter(letters1, target1)) // Output: "c"
+// const letters1 = ["c", "f", "j"]
+// const target1 = "a"
+// console.log(nextGreatestLetter(letters1, target1)) // Output: "c"
 
-const letters2 = ["c", "f", "j"]
-const target2 = "c"
-console.log(nextGreatestLetter(letters2, target2)) // Output: "f"
+// const letters2 = ["c", "f", "j"]
+// const target2 = "c"
+// console.log(nextGreatestLetter(letters2, target2)) // Output: "f"
 
-const letters3 = ["x", "x", "y", "y"]
-const target3 = "z"
-console.log(nextGreatestLetter(letters3, target3)) // Output: "x"
+// const letters3 = ["x", "x", "y", "y"]
+// const target3 = "z"
+// console.log(nextGreatestLetter(letters3, target3)) // Output: "x"

@@ -45,11 +45,11 @@ export const searchInsert = (nums: number[], target: number): number => {
 }
 
 // Example usage:
-const example1 = searchInsert([1, 3, 5, 6], 5)
-console.log(example1)
+// const example1 = searchInsert([1, 3, 5, 6], 5)
+// console.log(example1)
 
-const example2 = searchInsert([1, 3, 5, 6], 2)
-console.log(example2)
+// const example2 = searchInsert([1, 3, 5, 6], 2)
+// console.log(example2)
 
-const example3 = searchInsert([1, 3, 5, 6], 7)
-console.log(example3)
+// const example3 = searchInsert([1, 3, 5, 6], 7)
+// console.log(example3)

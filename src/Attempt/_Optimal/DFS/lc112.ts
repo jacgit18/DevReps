@@ -46,6 +46,6 @@ const targetSum1 = 22
 const targetSum2 = 5
 const targetSum3 = 0
 
-console.log(hasPathSum(root, targetSum1)) // Output: true
-console.log(hasPathSum(root, targetSum2)) // Output: false
-console.log(hasPathSum(null, targetSum3)) // Output: false
+// console.log(hasPathSum(root, targetSum1)) // Output: true
+// console.log(hasPathSum(root, targetSum2)) // Output: false
+// console.log(hasPathSum(null, targetSum3)) // Output: false

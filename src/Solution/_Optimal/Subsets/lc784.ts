@@ -46,9 +46,9 @@ export const letterCasePermutation = (s: string): string[] => {
   return result
 }
 
-// Example usage:
-const example1 = letterCasePermutation("a1b2")
-console.log(example1)
+// // Example usage:
+// const example1 = letterCasePermutation("a1b2")
+// console.log(example1)
 
-const example2 = letterCasePermutation("3z4")
-console.log(example2)
+// const example2 = letterCasePermutation("3z4")
+// console.log(example2)

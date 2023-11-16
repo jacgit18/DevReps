@@ -69,16 +69,16 @@ export const pathSumTwo = (root: TreeNode | null, targetSum: number): number[][]
 }
 
 // Example usage:
-const root = new TreeNode(
-  5,
-  new TreeNode(4, new TreeNode(11, new TreeNode(7), new TreeNode(2))),
-  new TreeNode(8, new TreeNode(13), new TreeNode(4, new TreeNode(5), new TreeNode(1))),
-)
+// const root = new TreeNode(
+//   5,
+//   new TreeNode(4, new TreeNode(11, new TreeNode(7), new TreeNode(2))),
+//   new TreeNode(8, new TreeNode(13), new TreeNode(4, new TreeNode(5), new TreeNode(1))),
+// )
 
-const targetSum1 = 22
-const targetSum2 = 5
-const targetSum3 = 0
+// const targetSum1 = 22
+// const targetSum2 = 5
+// const targetSum3 = 0
 
-console.log(pathSumTwo(root, targetSum1)) // Output: [[5,4,11,2],[5,8,4,5]]
-console.log(pathSumTwo(root, targetSum2)) // Output: []
-console.log(pathSumTwo(new TreeNode(1, new TreeNode(2)), targetSum3)) // Output: []
+// console.log(pathSumTwo(root, targetSum1)) // Output: [[5,4,11,2],[5,8,4,5]]
+// console.log(pathSumTwo(root, targetSum2)) // Output: []
+// console.log(pathSumTwo(new TreeNode(1, new TreeNode(2)), targetSum3)) // Output: []

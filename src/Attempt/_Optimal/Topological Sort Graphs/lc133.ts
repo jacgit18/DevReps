@@ -73,4 +73,4 @@ node3.neighbors = [node2, node4]
 node4.neighbors = [node1, node3]
 
 const clonedGraph = cloneGrapher(node1)
-console.log(clonedGraph)
+// console.log(clonedGraph)

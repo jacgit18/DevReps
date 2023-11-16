@@ -27,12 +27,12 @@ export const threeSumClosest = (nums: number[], target: number): number => {
 }
 
 // Example usage:
-const nums1 = [-1, 2, 1, -4]
-const target1 = 1
-const result1 = threeSumClosest(nums1, target1)
-console.log(result1)
+// const nums1 = [-1, 2, 1, -4]
+// const target1 = 1
+// const result1 = threeSumClosest(nums1, target1)
+// console.log(result1)
 
-const nums2 = [0, 0, 0]
-const target2 = 1
-const result2 = threeSumClosest(nums2, target2)
-console.log(result2)
+// const nums2 = [0, 0, 0]
+// const target2 = 1
+// const result2 = threeSumClosest(nums2, target2)
+// console.log(result2)

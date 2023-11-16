@@ -31,7 +31,7 @@ function radixSorter(arr: number[]): number[] {
   return arr
 }
 
-// Example usage
-const unsortedArray: number[] = [170, 45, 75, 90, 802, 24, 2, 66]
-const sortedArray = radixSorter(unsortedArray)
-console.log(sortedArray) // Output: [2, 24, 45, 66, 75, 90, 170, 802]
+// // Example usage
+// const unsortedArray: number[] = [170, 45, 75, 90, 802, 24, 2, 66]
+// const sortedArray = radixSorter(unsortedArray)
+// console.log(sortedArray) // Output: [2, 24, 45, 66, 75, 90, 170, 802]

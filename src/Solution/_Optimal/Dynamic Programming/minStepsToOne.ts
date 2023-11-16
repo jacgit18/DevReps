@@ -92,14 +92,14 @@ export const minStepsToOneTab = (n: number): number => {
   return tab[n]
 }
 
-console.time("Brute Force Recursion: ")
-console.log(minStepsToOne(10))
-console.timeEnd("Brute Force Recursion: ")
+// console.time("Brute Force Recursion: ")
+// console.log(minStepsToOne(10))
+// console.timeEnd("Brute Force Recursion: ")
 
-console.time("Memoization: ")
-console.log(minStepsToOneMemo(5678))
-console.timeEnd("Memoization: ")
+// console.time("Memoization: ")
+// console.log(minStepsToOneMemo(5678))
+// console.timeEnd("Memoization: ")
 
-console.time("Tabulation: ")
-console.log(minStepsToOneTab(5678))
-console.timeEnd("Tabulation: ")
+// console.time("Tabulation: ")
+// console.log(minStepsToOneTab(5678))
+// console.timeEnd("Tabulation: ")

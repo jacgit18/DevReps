@@ -75,8 +75,8 @@ export const diffWaysToCompute = (expression: string): number[] => {
 }
 
 // Example usage:
-const example1 = diffWaysToCompute("2-1-1")
-console.log(example1)
+// const example1 = diffWaysToCompute("2-1-1")
+// console.log(example1)
 
-const example2 = diffWaysToCompute("2*3-4*5")
-console.log(example2)
+// const example2 = diffWaysToCompute("2*3-4*5")
+// console.log(example2)

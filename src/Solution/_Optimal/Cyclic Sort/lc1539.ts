@@ -38,5 +38,5 @@ export const findKthPositive = (arr: number[], k: number): number => {
 }
 
 // Example usage:
-console.log(findKthPositive([2, 3, 4, 7, 11], 5)) // Output: 9
-console.log(findKthPositive([1, 2, 3, 4], 2)) // Output: 6
+// console.log(findKthPositive([2, 3, 4, 7, 11], 5)) // Output: 9
+// console.log(findKthPositive([1, 2, 3, 4], 2)) // Output: 6

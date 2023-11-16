@@ -20,6 +20,6 @@ function iterateAndStore(data: any): any[] {
 }
 
 // Example usage:
-const dataStructure: any[] = [1, [2, 3, [4, 5]], { a: 6, b: [7, 8] }]
-const valuesArray: any[] = iterateAndStore(dataStructure)
-console.log(valuesArray)
+// const dataStructure: any[] = [1, [2, 3, [4, 5]], { a: 6, b: [7, 8] }]
+// const valuesArray: any[] = iterateAndStore(dataStructure)
+// console.log(valuesArray)

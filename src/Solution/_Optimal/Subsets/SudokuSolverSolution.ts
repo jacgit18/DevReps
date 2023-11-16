@@ -89,5 +89,5 @@ const inputBoard = [
   [0, 0, 0, 0, 8, 0, 0, 7, 9],
 ]
 
-const solvedBoard = sudokuSolver(inputBoard)
-console.log(solvedBoard)
+// const solvedBoard = sudokuSolver(inputBoard)
+// console.log(solvedBoard)

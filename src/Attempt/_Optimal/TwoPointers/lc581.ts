@@ -27,6 +27,6 @@ export const findUnsortedSubarray = (nums: number[]): number => {
   return 0
 }
 
-console.log(findUnsortedSubarray([2, 6, 4, 8, 10, 9, 15])) // 5
-console.log(findUnsortedSubarray([1, 2, 3, 4])) // 0
-console.log(findUnsortedSubarray([1])) // 0
+// console.log(findUnsortedSubarray([2, 6, 4, 8, 10, 9, 15])) // 5
+// console.log(findUnsortedSubarray([1, 2, 3, 4])) // 0
+// console.log(findUnsortedSubarray([1])) // 0

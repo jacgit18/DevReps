@@ -54,5 +54,5 @@ export const sumNumbers = (root: TreeNode | null): number => {
 const root1 = new TreeNode(1, new TreeNode(2), new TreeNode(3))
 const root2 = new TreeNode(4, new TreeNode(9, new TreeNode(5), new TreeNode(1)), new TreeNode(0))
 
-console.log(sumNumbers(root1)) // Output: 25
-console.log(sumNumbers(root2)) // Output: 1026
+// console.log(sumNumbers(root1)) // Output: 25
+// console.log(sumNumbers(root2)) // Output: 1026

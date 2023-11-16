@@ -36,6 +36,6 @@ function bucketSort(arr: number[]): number[] {
 }
 
 // Example usage
-const unsortedOneArray: number[] = [0.42, 0.32, 0.33, 0.52, 0.37, 0.47, 0.51]
-const sortedOneArray = bucketSort(unsortedOneArray)
-console.log(sortedOneArray) // Output: [0.32, 0.33, 0.37, 0.42, 0.47, 0.51, 0.52]
+// const unsortedOneArray: number[] = [0.42, 0.32, 0.33, 0.52, 0.37, 0.47, 0.51]
+// const sortedOneArray = bucketSort(unsortedOneArray)
+// console.log(sortedOneArray) // Output: [0.32, 0.33, 0.37, 0.42, 0.47, 0.51, 0.52]

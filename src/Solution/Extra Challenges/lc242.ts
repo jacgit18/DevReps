@@ -33,4 +33,4 @@ export const isAnagram = (s: string, t: string): boolean => {
   return Object.keys(hash).length === 0
 }
 
-console.log(isAnagram("anagram", "nagaram")) // returns true
+// console.log(isAnagram("anagram", "nagaram")) // returns true

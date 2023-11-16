@@ -46,8 +46,8 @@ export const binaryTreePaths = (root: TreeNode | null): string[] => {
 }
 
 // Example usage:
-const root1 = new TreeNode(1, new TreeNode(2, null, new TreeNode(5)), new TreeNode(3))
-const root2 = new TreeNode(1)
+// const root1 = new TreeNode(1, new TreeNode(2, null, new TreeNode(5)), new TreeNode(3))
+// const root2 = new TreeNode(1)
 
-console.log(binaryTreePaths(root1)) // Output: ["1->2->5", "1->3"]
-console.log(binaryTreePaths(root2)) // Output: ["1"]
+// console.log(binaryTreePaths(root1)) // Output: ["1->2->5", "1->3"]
+// console.log(binaryTreePaths(root2)) // Output: ["1"]

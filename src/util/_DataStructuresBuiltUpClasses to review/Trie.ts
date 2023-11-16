@@ -75,11 +75,11 @@ class TrieTree {
   }
 }
 
-const trieTree = new TrieTree()
-trieTree.insert("asdfasdf", 5)
-trieTree.insert("cdfasdfas", 23)
-trieTree.insert("cdfzsvljsdf", 42)
+// const trieTree = new TrieTree()
+// trieTree.insert("asdfasdf", 5)
+// trieTree.insert("cdfasdfas", 23)
+// trieTree.insert("cdfzsvljsdf", 42)
 
-let answer = trieTree.searchNode("asdfasdf")
-console.log(answer?.value) // 5
-trieTree.startsWith("cdf")
+// let answer = trieTree.searchNode("asdfasdf")
+// console.log(answer?.value) // 5
+// trieTree.startsWith("cdf")

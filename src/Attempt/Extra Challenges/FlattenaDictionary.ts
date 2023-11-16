@@ -8,5 +8,5 @@ export const flattenObject = (obj: FlattenObject): FlattenObject => {
   return { 0: " " }
 }
 
-const flattenedObject = flattenObject(dict)
-console.log(flattenedObject)
+// const flattenedObject = flattenObject(dict)
+// console.log(flattenedObject)

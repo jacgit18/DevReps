@@ -51,7 +51,7 @@ export const averageOfLevels = (root: TreeNode | null): number[] => {
 }
 
 // Example usage:
-const root = new TreeNode(3, new TreeNode(9), new TreeNode(20, new TreeNode(15), new TreeNode(7)))
+// const root = new TreeNode(3, new TreeNode(9), new TreeNode(20, new TreeNode(15), new TreeNode(7)))
 
-const averages = averageOfLevels(root)
+// const averages = averageOfLevels(root)
 // averages will be [3, 14.5, 11]

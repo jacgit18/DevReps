@@ -21,8 +21,8 @@ export const longestPalindrome = (s: string): string => {
 }
 
 // Example usage:
-const input1 = "babad"
-console.log(longestPalindrome(input1)) // Output: "bab" or "aba"
+// const input1 = "babad"
+// console.log(longestPalindrome(input1)) // Output: "bab" or "aba"
 
-const input2 = "cbbd"
-console.log(longestPalindrome(input2)) // Output: "bb"
+// const input2 = "cbbd"
+// console.log(longestPalindrome(input2)) // Output: "bb"

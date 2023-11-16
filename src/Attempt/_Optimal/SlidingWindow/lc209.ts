@@ -28,4 +28,4 @@ export const smallestSubarrayWithGivenSum = (s: number, arr: number[]): number =
   return 0
 }
 
-console.log(smallestSubarrayWithGivenSum(3, [4, 6, 6, 8]))
+// console.log(smallestSubarrayWithGivenSum(3, [4, 6, 6, 8]))

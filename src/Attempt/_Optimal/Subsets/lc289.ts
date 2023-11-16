@@ -29,19 +29,19 @@
 
 export const gameOfLife = (board: number[][]): void => {}
 
-// Example usage:
-const board1 = [
-  [0, 1, 0],
-  [0, 0, 1],
-  [1, 1, 1],
-  [0, 0, 0],
-]
-gameOfLife(board1)
-console.log(board1)
+// // Example usage:
+// const board1 = [
+//   [0, 1, 0],
+//   [0, 0, 1],
+//   [1, 1, 1],
+//   [0, 0, 0],
+// ]
+// gameOfLife(board1)
+// console.log(board1)
 
-const board2 = [
-  [1, 1],
-  [1, 0],
-]
-gameOfLife(board2)
-console.log(board2)
+// const board2 = [
+//   [1, 1],
+//   [1, 0],
+// ]
+// gameOfLife(board2)
+// console.log(board2)

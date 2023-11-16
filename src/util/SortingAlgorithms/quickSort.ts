@@ -36,7 +36,7 @@ function swap(array: number[], firstIndex: number, secondIndex: number): void {
   array[secondIndex] = temp
 }
 
-// Select first and last index as 2nd and 3rd parameters
-console.time("quick")
-console.log(quickSort(numbersToSort, 0, numbersToSort.length - 1))
-console.timeEnd("quick")
+// // Select first and last index as 2nd and 3rd parameters
+// console.time("quick")
+// console.log(quickSort(numbersToSort, 0, numbersToSort.length - 1))
+// console.timeEnd("quick")

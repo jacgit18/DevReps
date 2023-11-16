@@ -27,10 +27,10 @@ export const zigzagLevelOrder = (root: TreeNode | null): number[][] => {
 
 // Example usage:
 const root1 = new TreeNode(3, new TreeNode(9), new TreeNode(20, new TreeNode(15), new TreeNode(7)))
-console.log(zigzagLevelOrder(root1)) // Output: [[3], [20, 9], [15, 7]]
+// console.log(zigzagLevelOrder(root1)) // Output: [[3], [20, 9], [15, 7]]
 
-const root2 = new TreeNode(1)
-console.log(zigzagLevelOrder(root2)) // Output: [[1]]
+// const root2 = new TreeNode(1)
+// console.log(zigzagLevelOrder(root2)) // Output: [[1]]
 
-const root3 = null
-console.log(zigzagLevelOrder(root3)) // Output: []
+// const root3 = null
+// console.log(zigzagLevelOrder(root3)) // Output: []

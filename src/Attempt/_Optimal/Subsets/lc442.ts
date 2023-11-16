@@ -29,11 +29,11 @@ export const findDuplicatesCyclic = (nums: number[]): number[] => {
 }
 
 // Example usage:
-const example1 = findDuplicatesCyclic([4, 3, 2, 7, 8, 2, 3, 1])
-console.log(example1)
+// const example1 = findDuplicatesCyclic([4, 3, 2, 7, 8, 2, 3, 1])
+// console.log(example1)
 
-const example2 = findDuplicatesCyclic([1, 1, 2])
-console.log(example2)
+// const example2 = findDuplicatesCyclic([1, 1, 2])
+// console.log(example2)
 
-const example3 = findDuplicatesCyclic([1])
-console.log(example3)
+// const example3 = findDuplicatesCyclic([1])
+// console.log(example3)

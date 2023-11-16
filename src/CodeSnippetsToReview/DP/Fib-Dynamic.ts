@@ -77,5 +77,5 @@ function fibBottomUpDPBackward(n: number): number {
   return dp[n]
 }
 
-console.log(fibBottomUpDPForward(6))
-console.log(fibBottomUpDPBackward(6))
+// console.log(fibBottomUpDPForward(6))
+// console.log(fibBottomUpDPBackward(6))

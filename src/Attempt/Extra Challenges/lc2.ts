@@ -53,4 +53,4 @@ export const addTwoNumbers = (
 let list1 = generateList([2, 4, 3])
 let list2 = generateList([5, 6, 4])
 
-console.log(addTwoNumbers(list1, list2))
+// console.log(addTwoNumbers(list1, list2))

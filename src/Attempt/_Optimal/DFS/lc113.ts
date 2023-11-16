@@ -55,6 +55,6 @@ const targetSum1 = 22
 const targetSum2 = 5
 const targetSum3 = 0
 
-console.log(pathSumTwo(root, targetSum1)) // Output: [[5,4,11,2],[5,8,4,5]]
-console.log(pathSumTwo(root, targetSum2)) // Output: []
-console.log(pathSumTwo(new TreeNode(1, new TreeNode(2)), targetSum3)) // Output: []
+// console.log(pathSumTwo(root, targetSum1)) // Output: [[5,4,11,2],[5,8,4,5]]
+// console.log(pathSumTwo(root, targetSum2)) // Output: []
+// console.log(pathSumTwo(new TreeNode(1, new TreeNode(2)), targetSum3)) // Output: []

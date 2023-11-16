@@ -24,8 +24,8 @@ export const subsetsWithDup = (nums: number[]): number[][] => {
 }
 
 // Example usage:
-const example1 = subsetsWithDup([1, 2, 2])
-console.log(example1)
+// const example1 = subsetsWithDup([1, 2, 2])
+// console.log(example1)
 
-const example2 = subsetsWithDup([0])
-console.log(example2)
+// const example2 = subsetsWithDup([0])
+// console.log(example2)

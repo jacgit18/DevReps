@@ -43,6 +43,6 @@ function heap_sort(array: number[]): number[] {
   return array
 }
 
-const arrayTOWorkOn: number[] = [8, 4, 7, 1, 3, 5]
-console.log(`Array before: ${arrayTOWorkOn}`)
-console.log(`Array after: ${heap_sort(arrayTOWorkOn)}`)
+// const arrayTOWorkOn: number[] = [8, 4, 7, 1, 3, 5]
+// console.log(`Array before: ${arrayTOWorkOn}`)
+// console.log(`Array after: ${heap_sort(arrayTOWorkOn)}`)

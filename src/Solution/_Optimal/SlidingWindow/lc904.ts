@@ -57,11 +57,11 @@ export const totalFruit = (fruits: number[]): number => {
 }
 
 // Example usage:
-const fruits1 = [1, 2, 1]
-console.log(totalFruit(fruits1)) // Output: 3
+// const fruits1 = [1, 2, 1]
+// console.log(totalFruit(fruits1)) // Output: 3
 
-const fruits2 = [0, 1, 2, 2]
-console.log(totalFruit(fruits2)) // Output: 3
+// const fruits2 = [0, 1, 2, 2]
+// console.log(totalFruit(fruits2)) // Output: 3
 
-const fruits3 = [1, 2, 3, 2, 2]
-console.log(totalFruit(fruits3)) // Output: 4
+// const fruits3 = [1, 2, 3, 2, 2]
+// console.log(totalFruit(fruits3)) // Output: 4

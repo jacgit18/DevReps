@@ -25,8 +25,8 @@ export const subsets = (nums: number[]): number[][] => {
 }
 
 // Example usage:
-const example1 = subsets([1, 2, 3])
-console.log(example1)
+// const example1 = subsets([1, 2, 3])
+// console.log(example1)
 
-const example2 = subsets([0])
-console.log(example2)
+// const example2 = subsets([0])
+// console.log(example2)

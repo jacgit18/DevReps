@@ -43,8 +43,8 @@ export const revString = {
   revString3,
 }
 
-console.log(revString1("hell"))
-console.log(revString2("hell"))
-console.log(revString3("hell"))
+// console.log(revString1("hell"))
+// console.log(revString2("hell"))
+// console.log(revString3("hell"))
 
-console.log("hell")
+// console.log("hell")

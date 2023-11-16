@@ -29,6 +29,6 @@ function mergeHelper(left: number[], right: number[]): number[] {
   return result.concat(left.slice(leftIndex)).concat(right.slice(rightIndex))
 }
 
-console.time("mergeHelper")
-console.log(mergeSort(numbersortMerge))
-console.timeEnd("mergeHelper")
+// console.time("mergeHelper")
+// console.log(mergeSort(numbersortMerge))
+// console.timeEnd("mergeHelper")

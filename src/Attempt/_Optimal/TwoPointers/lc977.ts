@@ -25,5 +25,5 @@ export const sortedSquares = (arr: number[]): number[] => {
 // Squares: 0,1,4,4,9
 // Squares: 0,1,0,4,9
 
-console.log(`Squares: ${sortedSquares([-2, -1, 0, 2, 3])}`)
-console.log(`Squares: ${sortedSquares([-3, -1, 0, 1, 2])}`)
+// console.log(`Squares: ${sortedSquares([-2, -1, 0, 2, 3])}`)
+// console.log(`Squares: ${sortedSquares([-3, -1, 0, 1, 2])}`)

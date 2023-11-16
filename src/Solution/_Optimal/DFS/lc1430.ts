@@ -89,6 +89,6 @@ const root3 = new TreeNode(
 
 const arr3 = [0, 1, 1]
 
-console.log(isValidSequence(root1, arr1)) // Output: true
-console.log(isValidSequence(root2, arr2)) // Output: false
-console.log(isValidSequence(root3, arr3)) // Output: false
+// console.log(isValidSequence(root1, arr1)) // Output: true
+// console.log(isValidSequence(root2, arr2)) // Output: false
+// console.log(isValidSequence(root3, arr3)) // Output: false

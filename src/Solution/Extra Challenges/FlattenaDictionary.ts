@@ -31,5 +31,5 @@ export const flattenObject = (obj: FlattenObject): FlattenObject => {
   return result
 }
 
-const flattenedObject = flattenObject(dict)
-console.log(flattenedObject)
+// const flattenedObject = flattenObject(dict)
+// console.log(flattenedObject)

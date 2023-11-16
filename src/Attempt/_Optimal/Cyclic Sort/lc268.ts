@@ -27,6 +27,6 @@ export const find_missing_number = (nums: number[]): number => {
   return 0
 }
 
-console.log(find_missing_number([3, 0, 1])) // 2
-console.log(find_missing_number([0, 1])) // 2
-console.log(find_missing_number([9, 6, 4, 2, 3, 5, 7, 0, 1])) // 8
+// console.log(find_missing_number([3, 0, 1])) // 2
+// console.log(find_missing_number([0, 1])) // 2
+// console.log(find_missing_number([9, 6, 4, 2, 3, 5, 7, 0, 1])) // 8

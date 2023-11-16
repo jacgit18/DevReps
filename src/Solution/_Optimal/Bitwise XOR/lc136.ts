@@ -32,11 +32,11 @@ export const singleNumber = (nums: number[]): number => {
 }
 
 // Example usage:
-const nums1 = [2, 2, 1]
-console.log(singleNumber(nums1)) // Output: 1
+// const nums1 = [2, 2, 1]
+// console.log(singleNumber(nums1)) // Output: 1
 
-const nums2 = [4, 1, 2, 1, 2]
-console.log(singleNumber(nums2)) // Output: 4
+// const nums2 = [4, 1, 2, 1, 2]
+// console.log(singleNumber(nums2)) // Output: 4
 
-const nums3 = [1]
-console.log(singleNumber(nums3)) // Output: 1
+// const nums3 = [1]
+// console.log(singleNumber(nums3)) // Output: 1

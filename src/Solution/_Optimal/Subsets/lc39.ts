@@ -55,7 +55,7 @@ export const combinationSum = (candidates: number[], target: number): number[][]
   return result
 }
 
-// Example usage:
-console.log(combinationSum([2, 3, 6, 7], 7))
-console.log(combinationSum([2, 3, 5], 8))
-console.log(combinationSum([2], 1))
+// // Example usage:
+// console.log(combinationSum([2, 3, 6, 7], 7))
+// console.log(combinationSum([2, 3, 5], 8))
+// console.log(combinationSum([2], 1))

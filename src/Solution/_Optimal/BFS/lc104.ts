@@ -31,8 +31,8 @@ export const maxDepth = (root: TreeNode | null): number => {
 }
 
 // Example usage:
-const root1 = new TreeNode(3, new TreeNode(9), new TreeNode(20, new TreeNode(15), new TreeNode(7)))
-console.log(maxDepth(root1)) // Output: 3
+// const root1 = new TreeNode(3, new TreeNode(9), new TreeNode(20, new TreeNode(15), new TreeNode(7)))
+// console.log(maxDepth(root1)) // Output: 3
 
-const root2 = new TreeNode(1, null, new TreeNode(2))
-console.log(maxDepth(root2)) // Output: 2
+// const root2 = new TreeNode(1, null, new TreeNode(2))
+// console.log(maxDepth(root2)) // Output: 2

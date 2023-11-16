@@ -33,5 +33,5 @@ export function createDoublyLinkedListFromArray(arr: any[]): DoublyLinkedListNod
 }
 
 // Example usage:
-const arrayToDoublyLinkedList = createDoublyLinkedListFromArray([1, 2, 3, 4, 5])
-console.log(arrayToDoublyLinkedList)
+// const arrayToDoublyLinkedList = createDoublyLinkedListFromArray([1, 2, 3, 4, 5])
+// console.log(arrayToDoublyLinkedList)

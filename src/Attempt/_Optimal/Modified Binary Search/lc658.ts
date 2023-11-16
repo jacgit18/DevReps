@@ -26,13 +26,13 @@ export const findClosestElements = (arr: number[], k: number, x: number): number
   return [0]
 }
 
-// Example usage:
-const arr1 = [1, 2, 3, 4, 5]
-const k1 = 4
-const x1 = 3
-console.log(findClosestElements(arr1, k1, x1)) // Output: [1, 2, 3, 4]
+// // Example usage:
+// const arr1 = [1, 2, 3, 4, 5]
+// const k1 = 4
+// const x1 = 3
+// console.log(findClosestElements(arr1, k1, x1)) // Output: [1, 2, 3, 4]
 
-const arr2 = [1, 2, 3, 4, 5]
-const k2 = 4
-const x2 = -1
-console.log(findClosestElements(arr2, k2, x2)) // Output: [1, 2, 3, 4]
+// const arr2 = [1, 2, 3, 4, 5]
+// const k2 = 4
+// const x2 = -1
+// console.log(findClosestElements(arr2, k2, x2)) // Output: [1, 2, 3, 4]

@@ -109,6 +109,6 @@ export function robotPaths(matrix: number[][]): number {
   return traverse()
 }
 
-let gatecall: number = robotPaths(matrix2)
+// let gatecall: number = robotPaths(matrix2)
 
-console.log(gatecall)
+// console.log(gatecall)

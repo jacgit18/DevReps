@@ -58,9 +58,9 @@ export const letterCombinationsBackTrack = (digits: string): string[] => {
 }
 
 // Example usage:
-console.log(letterCombinationsBackTrack("23")) // Output: ["ad","ae","af","bd","be","bf","cd","ce","cf"]
-console.log(letterCombinationsBackTrack("")) // Output: []
-console.log(letterCombinationsBackTrack("2")) // Output: ["a","b","c"]
+// console.log(letterCombinationsBackTrack("23")) // Output: ["ad","ae","af","bd","be","bf","cd","ce","cf"]
+// console.log(letterCombinationsBackTrack("")) // Output: []
+// console.log(letterCombinationsBackTrack("2")) // Output: ["a","b","c"]
 
 function letterCombinations(digits: string): string[] {
   if (digits.length === 0) {
@@ -98,6 +98,6 @@ function letterCombinations(digits: string): string[] {
 }
 
 // Example usage:
-console.log(letterCombinations("23")) // Output: ["ad","ae","af","bd","be","bf","cd","ce","cf"]
-console.log(letterCombinations("")) // Output: []
-console.log(letterCombinations("2")) // Output: ["a","b","c"]
+// console.log(letterCombinations("23")) // Output: ["ad","ae","af","bd","be","bf","cd","ce","cf"]
+// console.log(letterCombinations("")) // Output: []
+// console.log(letterCombinations("2")) // Output: ["a","b","c"]

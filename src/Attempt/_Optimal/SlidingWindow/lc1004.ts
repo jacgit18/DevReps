@@ -25,10 +25,10 @@ export const longestOnes = (nums: number[], k: number): number => {
 }
 
 // Example usage:
-const nums1 = [1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0]
-const k1 = 2
-console.log(longestOnes(nums1, k1)) // Output: 6
+// const nums1 = [1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0]
+// const k1 = 2
+// console.log(longestOnes(nums1, k1)) // Output: 6
 
-const nums2 = [0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1]
-const k2 = 3
-console.log(longestOnes(nums2, k2)) // Output: 10
+// const nums2 = [0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1]
+// const k2 = 3
+// console.log(longestOnes(nums2, k2)) // Output: 10

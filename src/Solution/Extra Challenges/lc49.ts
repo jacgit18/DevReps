@@ -40,4 +40,4 @@ export const groupAnagrams = (s: string[]): string[][] => {
 }
 
 // [ [ 'eat', 'tea', 'ate' ], [ 'tan', 'nat' ], [ 'bat' ] ]
-console.log(groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]))
+// console.log(groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]))

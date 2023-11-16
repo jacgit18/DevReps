@@ -41,4 +41,4 @@ const inputBoard = [
   [0, 0, 0, 0, 8, 0, 0, 7, 9],
 ]
 
-console.log("Edge case one", sudokuSolver(inputBoard))
+// console.log("Edge case one", sudokuSolver(inputBoard))

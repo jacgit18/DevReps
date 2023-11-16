@@ -92,21 +92,21 @@ class MaxBinaryHeap {
   }
 }
 
-const hpTwo = new MaxBinaryHeap()
+// const hpTwo = new MaxBinaryHeap()
 
-hpTwo.insert(652)
-hpTwo.insert(335)
-hpTwo.insert(466)
-hpTwo.insert(532)
-hpTwo.insert(2330)
-hpTwo.insert(324)
-hpTwo.insert(222)
-hpTwo.insert(4654)
-hpTwo.insert(343212)
-hpTwo.insert(43)
+// hpTwo.insert(652)
+// hpTwo.insert(335)
+// hpTwo.insert(466)
+// hpTwo.insert(532)
+// hpTwo.insert(2330)
+// hpTwo.insert(324)
+// hpTwo.insert(222)
+// hpTwo.insert(4654)
+// hpTwo.insert(343212)
+// hpTwo.insert(43)
 
-console.log(hpTwo)
+// console.log(hpTwo)
 
-console.log(hpTwo.removeMax())
-hpTwo.bubbleDown()
-console.log(hpTwo)
+// console.log(hpTwo.removeMax())
+// hpTwo.bubbleDown()
+// console.log(hpTwo)

@@ -22,5 +22,5 @@ function insertionSorter(array: number[]): void {
   }
 }
 
-insertionSorter(numbersToSortNow)
-console.log(numbersToSortNow)
+// insertionSorter(numbersToSortNow)
+// console.log(numbersToSortNow)

@@ -44,7 +44,7 @@ export const rob = (): ((nums: number[], i: number) => number) => {
 let price: number[] = [1, 2, 3, 1]
 
 // acts as a private method or variable
-const myrobObj = rob()
+// const myrobObj = rob()
 
 // if this function took a param it would look like this
 
@@ -53,11 +53,11 @@ const myrobObj = rob()
 // console.log(newFunction);
 // console.log(newFunction(price, price.length - 1)); return function second param
 
-console.log(myrobObj(price, price.length - 1)) // using currying here
+// console.log(myrobObj(price, price.length - 1)) // using currying here
 // newFunction('out')(price, price.length - 1) // alternatively you can curry like this
 
 // console.log(rob(price))
 
-console.log(`\n ------- Edge Case -------- `)
+// console.log(`\n ------- Edge Case -------- `)
 
-console.log(` Case 01  ${myrobObj(price, price.length - 1)}`)
+// console.log(` Case 01  ${myrobObj(price, price.length - 1)}`)

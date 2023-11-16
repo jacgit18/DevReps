@@ -142,16 +142,16 @@ class DoublyLinkedList {
 
 // Testing functions
 
-const dLinkedList = new DoublyLinkedList()
+// const dLinkedList = new DoublyLinkedList()
 
-dLinkedList.insert(7)
-dLinkedList.insert(8)
-dLinkedList.insert(9)
-dLinkedList.insert(69)
-dLinkedList.insert(98)
-dLinkedList.insert(29)
+// dLinkedList.insert(7)
+// dLinkedList.insert(8)
+// dLinkedList.insert(9)
+// dLinkedList.insert(69)
+// dLinkedList.insert(98)
+// dLinkedList.insert(29)
 
-// dLinkedList.remove();
-// dLinkedList.print();
+// // dLinkedList.remove();
+// // dLinkedList.print();
 
-console.log(dLinkedList)
+// console.log(dLinkedList)
