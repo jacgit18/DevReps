@@ -26,6 +26,18 @@
 // -104 <= nums[i] <= 104
 
 export const lengthOfLIS =(nums: number[]): number =>{
+       
     
-    return 0
-};
+        return 0;
+    }
+    
+    // Example usage:
+    const nums1 = [10,9,2,5,3,7,101,18];
+    console.log(lengthOfLIS(nums1)); // Output: 4
+    
+    const nums2 = [0,1,0,3,2,3];
+    console.log(lengthOfLIS(nums2)); // Output: 4
+    
+    const nums3 = [7,7,7,7,7,7,7];
+    console.log(lengthOfLIS(nums3)); // Output: 1
+    
