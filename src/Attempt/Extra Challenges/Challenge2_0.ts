@@ -1,37 +1,33 @@
 function spaceEater(food: string[][]): void {
   for (let consumptionStart = 0; consumptionStart < food.length; ++consumptionStart) {
-    console.log(food[consumptionStart]);
-    if (
-      food[consumptionStart][1] === "" ||
-      food[consumptionStart][1] === " "
-    ) {
-      food[consumptionStart].splice(1, 1);
+    console.log(food[consumptionStart])
+    if (food[consumptionStart][1] === "" || food[consumptionStart][1] === " ") {
+      food[consumptionStart].splice(1, 1)
     }
   }
 }
 
-
 // good problem made me think
-export const solution = (queries: string[][]): string[] =>{
+export const solution = (queries: string[][]): string[] => {
   let action = {
     1: "APPEND",
     2: "BACKSPACE",
     3: "MOVE",
-  };
+  }
 
-  let sanitized: void = spaceEater(queries);
-  let res: string[] = [];
+  let sanitized: void = spaceEater(queries)
+  let res: string[] = []
 
   for (let i = 0; i < queries.length; ++i) {
     for (let j = 0; j < queries[i].length; ++j) {
-      let word = queries[j][1];
+      let word = queries[j][1]
 
       if (queries[i][0] === action[1]) {
         if (res.length < 1) {
-          res.push(queries[i][1]);
+          res.push(queries[i][1])
         } else {
-          let word2 = word + queries[1][j];
-          res.push(word2);
+          let word2 = word + queries[1][j]
+          res.push(word2)
         }
       }
 
@@ -45,20 +41,18 @@ export const solution = (queries: string[][]): string[] =>{
     }
   }
 
-  return res;
+  return res
 }
 
-
 const queries = [
-  ['APPEND', 'Hey'],
-  ['APPEND', ' you'],
-  ['APPEND', ", don't"],
-  ['APPEND', ' '],
-  ['APPEND', 'let me down'],
-];
+  ["APPEND", "Hey"],
+  ["APPEND", " you"],
+  ["APPEND", ", don't"],
+  ["APPEND", " "],
+  ["APPEND", "let me down"],
+]
 
-console.log(solution(queries));
-
+console.log(solution(queries))
 
 /**
  * 

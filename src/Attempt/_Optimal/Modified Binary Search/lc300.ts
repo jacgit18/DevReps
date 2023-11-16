@@ -8,12 +8,10 @@
 // Output: 4
 // Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4.
 
-
 // Example 2:
 
 // Input: nums = [0,1,0,3,2,3]
 // Output: 4
-
 
 // Example 3:
 
@@ -25,19 +23,16 @@
 // 1 <= nums.length <= 2500
 // -104 <= nums[i] <= 104
 
-export const lengthOfLIS =(nums: number[]): number =>{
-       
-    
-        return 0;
-    }
-    
-    // Example usage:
-    const nums1 = [10,9,2,5,3,7,101,18];
-    console.log(lengthOfLIS(nums1)); // Output: 4
-    
-    const nums2 = [0,1,0,3,2,3];
-    console.log(lengthOfLIS(nums2)); // Output: 4
-    
-    const nums3 = [7,7,7,7,7,7,7];
-    console.log(lengthOfLIS(nums3)); // Output: 1
-    
+export const lengthOfLIS = (nums: number[]): number => {
+  return 0
+}
+
+// Example usage:
+const nums1 = [10, 9, 2, 5, 3, 7, 101, 18]
+console.log(lengthOfLIS(nums1)) // Output: 4
+
+const nums2 = [0, 1, 0, 3, 2, 3]
+console.log(lengthOfLIS(nums2)) // Output: 4
+
+const nums3 = [7, 7, 7, 7, 7, 7, 7]
+console.log(lengthOfLIS(nums3)) // Output: 1

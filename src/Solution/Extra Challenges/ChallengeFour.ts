@@ -28,43 +28,40 @@
 // Learning objectives
 // This question gives you the chance to practice with strings, recursion, algorithm, compilers, automata, and loops. It’s also an opportunity to work on coding with better efficiency.
 
+export const decompressString = (s: string): string => {
+  let i = 0
 
+  const decompress = (): string => {
+    let result = ""
+    let num = ""
 
-function decompressString(s: string): string {
-    let i = 0;
-  
-    const decompress = (): string => {
-      let result = '';
-      let num = '';
-  
-      while (i < s.length) {
-        const char = s[i];
-  
-        if (char === '[') {
-          i++;
-          const innerResult = decompress();
-          result += num.repeat(Number(innerResult));
-          num = '';
-        } else if (char === ']') {
-          i++;
-          return result;
-        } else if (char >= '0' && char <= '9') {
-          num += char;
-          i++;
-        } else {
-          result += char;
-          i++;
-        }
+    while (i < s.length) {
+      const char = s[i]
+
+      if (char === "[") {
+        i++
+        const innerResult = decompress()
+        result += num.repeat(Number(innerResult))
+        num = ""
+      } else if (char === "]") {
+        i++
+        return result
+      } else if (char >= "0" && char <= "9") {
+        num += char
+        i++
+      } else {
+        result += char
+        i++
       }
-  
-      return result;
-    };
-  
-    return decompress();
+    }
+
+    return result
   }
-  
-  // Example usage:
-  const compressedString = '3[abc]4[ab]c';
-  const decompressedString = decompressString(compressedString);
-  console.log(decompressedString); // Output: 'abcabcabcababababc'
-  
+
+  return decompress()
+}
+
+// Example usage:
+const compressedString = "3[abc]4[ab]c"
+const decompressedString = decompressString(compressedString)
+console.log(decompressedString) // Output: 'abcabcabcababababc'

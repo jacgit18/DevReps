@@ -1,1 +1,1 @@
-export { combinedExtraSolutionExports } from "../Solution/Extra/index"
+export { combinedExtraSolutionExports } from "../Solution/Extra Challenges/index"

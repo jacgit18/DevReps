@@ -27,57 +27,64 @@
 // 1 <= m, n <= 25
 // board[i][j] is 0 or 1.
 
-export const gameOfLife=(board: number[][]): void =>{
-        const m = board.length;
-        const n = board[0].length;
-    
-        function countLiveNeighbors(row: number, col: number): number {
-            let count = 0;
-    
-            for (let i = -1; i <= 1; i++) {
-                for (let j = -1; j <= 1; j++) {
-                    const newRow = row + i;
-                    const newCol = col + j;
-    
-                    if (i === 0 && j === 0) continue; // Skip the current cell
-                    if (newRow >= 0 && newRow < m && newCol >= 0 && newCol < n) {
-                        count += board[newRow][newCol] & 1;
-                    }
-                }
-            }
-    
-            return count;
+export const gameOfLife = (board: number[][]): void => {
+  const m = board.length
+  const n = board[0].length
+
+  function countLiveNeighbors(row: number, col: number): number {
+    let count = 0
+
+    for (let i = -1; i <= 1; i++) {
+      for (let j = -1; j <= 1; j++) {
+        const newRow = row + i
+        const newCol = col + j
+
+        if (i === 0 && j === 0) continue // Skip the current cell
+        if (newRow >= 0 && newRow < m && newCol >= 0 && newCol < n) {
+          count += board[newRow][newCol] & 1
         }
-    
-        for (let i = 0; i < m; i++) {
-            for (let j = 0; j < n; j++) {
-                const liveNeighbors = countLiveNeighbors(i, j);
-    
-                if (board[i][j] === 1) {
-                    if (liveNeighbors < 2 || liveNeighbors > 3) {
-                        board[i][j] = 1 | 2; // Set the second bit to 1 to represent a live cell becoming dead
-                    }
-                } else {
-                    if (liveNeighbors === 3) {
-                        board[i][j] = 2; // Set the second bit to 1 to represent a dead cell becoming live
-                    }
-                }
-            }
-        }
-    
-        for (let i = 0; i < m; i++) {
-            for (let j = 0; j < n; j++) {
-                board[i][j] >>= 1; // Update the board based on the second bit
-            }
-        }
+      }
     }
-    
-    // Example usage:
-    const board1 = [[0,1,0],[0,0,1],[1,1,1],[0,0,0]];
-    gameOfLife(board1);
-    console.log(board1);
-    
-    const board2 = [[1,1],[1,0]];
-    gameOfLife(board2);
-    console.log(board2);
-    
+
+    return count
+  }
+
+  for (let i = 0; i < m; i++) {
+    for (let j = 0; j < n; j++) {
+      const liveNeighbors = countLiveNeighbors(i, j)
+
+      if (board[i][j] === 1) {
+        if (liveNeighbors < 2 || liveNeighbors > 3) {
+          board[i][j] = 1 | 2 // Set the second bit to 1 to represent a live cell becoming dead
+        }
+      } else {
+        if (liveNeighbors === 3) {
+          board[i][j] = 2 // Set the second bit to 1 to represent a dead cell becoming live
+        }
+      }
+    }
+  }
+
+  for (let i = 0; i < m; i++) {
+    for (let j = 0; j < n; j++) {
+      board[i][j] >>= 1 // Update the board based on the second bit
+    }
+  }
+}
+
+// Example usage:
+const board1 = [
+  [0, 1, 0],
+  [0, 0, 1],
+  [1, 1, 1],
+  [0, 0, 0],
+]
+gameOfLife(board1)
+console.log(board1)
+
+const board2 = [
+  [1, 1],
+  [1, 0],
+]
+gameOfLife(board2)
+console.log(board2)

@@ -4,9 +4,8 @@ Find last word of a string and return its length
 
 
 **/
-export const lengthOfLastWord = (s: string): string =>{
-
-    return " "
+export const lengthOfLastWord = (s: string): string => {
+  return " "
 }
 
 // console.log(    lengthOfLastWord( "a")

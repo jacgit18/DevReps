@@ -54,54 +54,33 @@
  * nameMatch(knownAliases, "Alphonse Gregory Capone") => false
  */
 
-function nameSpilter(name) {
-  // input: string (name like "Alphonse Gabriel Capone")
-  // output: object {
-  // first: "Alphonse",
-  // middle: "Gabriel",
-  // last: "Capone",
-  // }
+export const nameMatch = (knownAliases: string[], recordName: string): boolean => {
+  // Normalize names by converting them to lowercase and removing extra spaces
+  const normalizeName = (name: string): string => name.toLowerCase().replace(/\s+/g, " ").trim()
 
-  let name = "Alphonse Gabriel Capone"
+  // Iterate through each known alias
+  for (const alias of knownAliases) {
+    const normalizedAlias = normalizeName(alias)
+    const normalizedRecordName = normalizeName(recordName)
 
-  let fName = name.split(" ")
-  let mName = name.split(" ")
-  let lName = name.split(" ")
+    // Split each name into parts
+    const aliasParts = normalizedAlias.split(" ")
+    const recordNameParts = normalizedRecordName.split(" ")
 
-  const spltNames = {
-    firstName: fName,
-    middleName: mName,
-    lastName: lName,
-  }
-
-  return spltNames
-}
-
-function nameMatch(knownAliases, name) {
-  for (let start = 0; start < knownAliases.length; ++start) {
-    // let spltknownAliases = knownAliases[start].split(' ');
-    // let spltName = name[start].split(' ');
-
-    let aliasWords = nameSpilter(knownAliases[start])
-    console.log(aliasWords)
-    let nameWords = nameSpilter(name)
-
-    if (knownAliases[start] === name) {
+    // Check if each part of the record name matches at least one part of the alias
+    if (
+      recordNameParts.every((part) => aliasParts.some((aliasPart) => aliasPart.startsWith(part)))
+    ) {
       return true
     }
-
-    // if(spltknownAliases.length === 2 && middleName !== middleNameComp ){
-
-    // return true
-    // }
   }
-  // Implement me
+
   return false
 }
 
 /** Tests **/
 
-function assertEqual(expected, result, errorMessage) {
+function assertEqual(expected: boolean, result: boolean, errorMessage: string): void {
   if (result !== expected) {
     console.log(errorMessage)
     console.log(`expected: ${expected}`)
@@ -110,8 +89,8 @@ function assertEqual(expected, result, errorMessage) {
   }
 }
 
-function test() {
-  let knownAliases
+function testRun(): void {
+  let knownAliases: string[]
 
   knownAliases = ["Alphonse Gabriel Capone", "Al Capone", "Mary Francis Capone"]
   assertEqual(true, nameMatch(knownAliases, "Alphonse Gabriel Capone"), "error 1.1")
@@ -144,4 +123,5 @@ function test() {
 
   console.log("Test run finished")
 }
-test()
+
+testRun()

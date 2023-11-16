@@ -19,6 +19,7 @@
 
 Example:
 For the provided commands, here is an example output:
+
 ```javascript
 textEditor2_2(queries) = [
     "Hey",

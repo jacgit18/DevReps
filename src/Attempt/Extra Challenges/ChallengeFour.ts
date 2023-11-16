@@ -28,3 +28,11 @@
 // Learning objectives
 // This question gives you the chance to practice with strings, recursion, algorithm, compilers, automata, and loops. It’s also an opportunity to work on coding with better efficiency.
 
+export const decompressString = (s: string): string => {
+  return " "
+}
+
+// Example usage:
+const compressedString = "3[abc]4[ab]c"
+const decompressedString = decompressString(compressedString)
+console.log(decompressedString) // Output: 'abcabcabcababababc'

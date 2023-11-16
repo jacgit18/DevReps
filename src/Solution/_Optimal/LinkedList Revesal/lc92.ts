@@ -17,7 +17,7 @@
 // -500 <= Node.val <= 500
 // 1 <= left <= right <= n
 
-import { LinkedListNode } from "../../util/LinkedListMaker"
+import { LinkedListNode } from "../../../util/LinkedListMaker"
 
 export const reverse_sub_list = (
   head: LinkedListNode | null,

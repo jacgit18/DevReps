@@ -21,8 +21,6 @@ output: 6 # since this is the number of islands in binaryMatrix.
 */
 
 export const getNumberOfIslands = (binaryMatrix: number[][]): number => {
- 
-
   return 0
 }
 

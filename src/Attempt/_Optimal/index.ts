@@ -1,10 +1,10 @@
 // Primative type
 import { revString } from "./PrimativeType/lc344"
 
-
 // Two Pointer
 import { pair_with_target_sum } from "./TwoPointers/lc1"
 import { maxArea } from "./TwoPointers/lc11"
+import { maxProfit } from "./TwoPointers/lc121"
 import { isPalindrome } from "./TwoPointers/lc125"
 import { threeSum } from "./TwoPointers/lc15"
 import { threeSumClosest } from "./TwoPointers/lc16"
@@ -71,6 +71,10 @@ import { findDuplicates } from "./Cyclic Sort/lc442"
 import { findDisappearedNumbers } from "./Cyclic Sort/lc448"
 import { findErrorNums } from "./Cyclic Sort/lc645"
 
+// Reverse Linked List
+import { reverseList } from "./LinkedList Revesal/lc206"
+import { reverse_sub_list } from "./LinkedList Revesal/lc92"
+
 // Fast Slow  Pointer
 import { hasCycle } from "./Fast Slow(LinkedList)/lc141CyclicLL"
 import { isDoublyCyclic } from "./Fast Slow(LinkedList)/lc141DoubleVer"
@@ -99,11 +103,10 @@ import { pathSum } from "./DFS/lc437"
 // Topological Sort
 import { cloneGrapher } from "./Topological Sort Graphs/lc133"
 
-// Dynamic 
+// Dynamic
 import { rob } from "./Dynamic Programming/lc198"
 import { coinChange } from "./Dynamic Programming/lc322"
 import { longestPalindrome } from "./Dynamic Programming/lc5"
-
 
 // Top K Elements
 import { findKthLargest } from "./Top K Elements/lc215"
@@ -117,12 +120,8 @@ import { findMaxForm } from "./Knapsack Dynamic Programing/lc474"
 // Bitwise XOR
 import { singleNumber } from "./Bitwise XOR/lc136"
 
-
-
-
 const OptimalPrimatives = {
-  lc344: revString.revString1, 
-
+  lc344: revString.revString1,
 }
 
 const OptimalTwoPointer = {
@@ -133,6 +132,7 @@ const OptimalTwoPointer = {
   lc18: fourSum,
   lc26: removeDuplicates,
   lc75: sortColors,
+  lc121: maxProfit,
   lc125: isPalindrome,
   lc259: threeSumSmaller,
   lc424: characterReplacement,
@@ -184,7 +184,7 @@ const OptimalModifiedBinarySearch = {
   lc35: searchInsert,
   lc81: search,
   lc153: findMin,
-  lc300: lengthOfLIS ,
+  lc300: lengthOfLIS,
   lc658: findClosestElements,
   lc702: searchInArrayReader,
   lc704: searchBin,
@@ -199,6 +199,11 @@ const OptimalCycSort = {
   lc448: findDisappearedNumbers,
   lc645: findErrorNums,
   lc1539: findKthPositive,
+}
+
+const OptimalRevLinkedList = {
+  lc92: reverse_sub_list,
+  lc206: reverseList,
 }
 
 const OptimalFastSlowPointers = {
@@ -234,9 +239,9 @@ const OptimalTopologicalSort = {
 }
 
 const OptimalDynamic = {
-lc322: coinChange,
-lc198: rob ,
-lc5: longestPalindrome
+  lc322: coinChange,
+  lc198: rob,
+  lc5: longestPalindrome,
 }
 
 const OptimalTop_K_Elements = {
@@ -261,6 +266,7 @@ export const combinedOptimalAttemptExports = {
   OptimalSubset,
   OptimalModifiedBinarySearch,
   OptimalCycSort,
+  OptimalRevLinkedList,
   OptimalFastSlowPointers,
   OptimalBFS,
   OptimalDFS,
