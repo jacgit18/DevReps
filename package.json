@@ -31,6 +31,7 @@
     "@types/benchmark": "^2.1.5",
     "@types/jest": "^29.5.6",
     "@types/node": "^20.8.9",
+    "@types/readline-sync": "^1.4.7",
     "benchmark": "^2.1.4",
     "debug": "~2.6.9",
     "eslint": "^8.52.0",
@@ -156,5 +157,8 @@
       "unicorn/throw-new-error": "error",
       "unicorn/prevent-abbreviations": "off"
     }
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.10"
   }
 }
