@@ -44,9 +44,11 @@ import { intervalIntersection } from "./Merge Intervals/lc986"
 // Subset/ Backtracking pattern
 import { robotPaths } from "./Subsets/BacktrackMatrix"
 import { matrix } from "./Subsets/MockIntMatrix"
+import { sudokuSolver } from "./Subsets/SudokuSolverSolution"
 import { letterCombinationsBackTrack } from "./Subsets/lc17"
 import { diffWaysToCompute } from "./Subsets/lc241"
 import { gameOfLife } from "./Subsets/lc289"
+import { combinationSum } from "./Subsets/lc39"
 import { findDuplicatesBackTrack, findDuplicatesCyclic } from "./Subsets/lc442"
 import { permute } from "./Subsets/lc46"
 import { subsets } from "./Subsets/lc78"
@@ -55,6 +57,7 @@ import { subsetsWithDup } from "./Subsets/lc90"
 
 // Modified Binary Search
 import { findMin } from "./Modified Binary Search/lc153"
+import { lengthOfLIS } from "./Modified Binary Search/lc300"
 import { searchRanger } from "./Modified Binary Search/lc33"
 import { searchRange } from "./Modified Binary Search/lc34"
 import { searchInsert } from "./Modified Binary Search/lc35"
@@ -101,6 +104,12 @@ import { pathSum } from "./DFS/lc437"
 
 // Topological Sort
 import { cloneGrapher } from "./Topological Sort Graphs/lc133"
+
+// Dynamic 
+import { rob } from "./Dynamic Programming/lc198"
+import { coinChange } from "./Dynamic Programming/lc322"
+import { longestPalindrome } from "./Dynamic Programming/lc5"
+
 
 // Top K Elements
 import { findKthLargest } from "./Top K Elements/lc215"
@@ -166,7 +175,9 @@ const MergeInterval = {
 const OptimalSubset = {
   backtrackOne: matrix,
   backtrackTwo: robotPaths,
+  sudoku: sudokuSolver,
   lc17: letterCombinationsBackTrack,
+  lc39: combinationSum,
   lc46: permute,
   lc78: subsets,
   lc90: subsetsWithDup,
@@ -183,6 +194,7 @@ const OptimalModifiedBinarySearch = {
   lc35: searchInsert,
   lc81: search,
   lc153: findMin,
+  lc300: lengthOfLIS ,
   lc658: findClosestElements,
   lc702: searchInArrayReader,
   lc704: searchBin,
@@ -233,6 +245,12 @@ const OptimalTopologicalSort = {
   lc133: cloneGrapher,
 }
 
+const OptimalDynamic = {
+  lc322: coinChange,
+  lc198: rob ,
+  lc5: longestPalindrome
+  }
+
 const OptimalTop_K_Elements = {
   lc215: findKthLargest,
 }
@@ -261,6 +279,7 @@ export const combinedOptimalSolutionExports = {
   OptimalBFS,
   OptimalDFS,
   OptimalTopologicalSort,
+  OptimalDynamic,
   OptimalTop_K_Elements,
   Optimal_KwayMerge,
   OptimalKnapSack,
