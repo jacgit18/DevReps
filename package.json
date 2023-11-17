@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "main": "build/app.js",
   "scripts": {
     "dev": "npm run clean && npm run compile-ts-watch-mode & npm run start",
