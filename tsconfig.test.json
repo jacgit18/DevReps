@@ -1,8 +1,9 @@
 {
+  "extends": "./tsconfig.json",
   "compilerOptions": {
     "target": "ES6",                  // The target ECMAScript version
     "module": "ESNext",               // Specify module system (CommonJS, ESNext, etc.)
-    "outDir": "./build",               // Output directory for compiled files
+    "outDir": "./build-test", // Output directory for compiled files
     "strict": true,                   // Enable strict type checking
     "esModuleInterop": true,          // Allow default imports from CommonJS modules
     "resolveJsonModule": true,        // Enable JSON imports
@@ -10,8 +11,5 @@
     "allowSyntheticDefaultImports": true, // Allow default imports for CommonJS modules
   },
   "types": ["@types/jest", "benchmark"],
-  "include": ["src/**/*.ts"],
-  "exclude": [
-    "node_modules"                  // Exclude the node_modules directory
-  ]
+  "include": ["__tests__/**/*.ts"],
 }
