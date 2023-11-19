@@ -3,7 +3,7 @@
 // app.ts
 
 import * as readlineSync from 'readline-sync'; // Import readline-sync for user input
-import { combinedOptimalSolutionExports } from './Solution/_Optimal/index';
+import { combinedOptimalSolutionExports } from './Solution/_Optimal/Topological Sort Graphs/index';
 
 
 // Experiment
