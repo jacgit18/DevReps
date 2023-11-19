@@ -1,5 +1,11 @@
-const NaivePrimativeTypes = {}
+// import 
 
-export const combinedNaiveSolutionExports = {
-  NaivePrimativeTypes,
-}
+
+export const NaiveSubjectSolution = {};
+
+
+
+// export const Naive
+// Subject
+// Solution = {};
+
