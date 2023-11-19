@@ -1,4 +1,4 @@
-function iterateAndStore(data: any): any[] {
+export const iterateAndStore = (data: any): any[] =>{
   const resultArray: any[] = []
 
   function recursiveIterator(item: any): void {

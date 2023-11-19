@@ -38,3 +38,5 @@
 // interested in how you design data structures.
 // - A document file (text, Word, PDF, or any format that we can likely open) describing the database schema, if you
 // use tables.
+
+export const challengThree = ():void =>{}

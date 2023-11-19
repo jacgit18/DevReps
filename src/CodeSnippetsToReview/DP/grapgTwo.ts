@@ -17,12 +17,12 @@ const routes: [string, string][] = [
 const adjacencyList: Map<string, string[]> = new Map()
 
 // Add node
-function addNode(airport: string): void {
+export function addNode(airport: string): void {
   adjacencyList.set(airport, [])
 }
 
 // Add edge, undirected
-function addEdge(origin: string, destination: string): void {
+export function addEdge(origin: string, destination: string): void {
   adjacencyList.get(origin)!.push(destination)
   adjacencyList.get(destination)!.push(origin)
 }
@@ -31,7 +31,7 @@ function addEdge(origin: string, destination: string): void {
 airports.forEach(addNode)
 routes.forEach((route) => addEdge(...route))
 
-function bfs(start: string): void {
+export function bfs(start: string): void {
   const visited: Set<string> = new Set()
 
   const queue: string[] = [start]
@@ -56,7 +56,7 @@ function bfs(start: string): void {
 
 bfs("PHX")
 
-function dfs(start: string, visited: Set<string> = new Set()): void {
+export function dfs(start: string, visited: Set<string> = new Set()): void {
   console.log(start)
 
   visited.add(start)

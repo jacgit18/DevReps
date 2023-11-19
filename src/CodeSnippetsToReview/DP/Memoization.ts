@@ -23,7 +23,7 @@
 // console.log(2, memoizeAddTo80(6))
 
 // Let's make that better with no global scope. This is a closure in JavaScript.
-function memoizeAddTo80() {
+export function memoizeAddTo80() {
   let cache: { [key: number]: number } = {}
   return function (n: number): number {
     if (n in cache) {
