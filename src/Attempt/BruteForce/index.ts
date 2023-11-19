@@ -1,7 +1,10 @@
 // import { longestPalindrome } from "./lc409";
 
-const BruteForceAttempt = {}
+export const BruteForceSubjectAttempt = {};
 
-export const combinedBruteForceAttemptExports = {
-  BruteForceAttempt,
-}
+
+
+// export const BruteForce
+// Subject
+// Attempt = {};
+

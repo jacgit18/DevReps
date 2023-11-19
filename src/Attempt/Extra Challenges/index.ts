@@ -15,10 +15,7 @@ import { countSubstrings } from "./lc647"
 import { nameMatch } from "./nameMatch"
 
 
-
-
-
-const ExtraAttempt = {
+export const ExtraAttempt = {
   challengeOne: lengthOfLastWord,
   challengeTwo: solution,
   challengeFour: decompressString,
@@ -36,6 +33,3 @@ const ExtraAttempt = {
   lc647: countSubstrings
 }
 
-export const combinedExtAttemptExports = {
-  ExtraAttempt,
-}

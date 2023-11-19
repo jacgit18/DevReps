@@ -1,9 +1,12 @@
-// import { revString1 } from "./PrimativeType/lc344"
+// import 
 
-// const NaivePrimativeTypes = {
-//   lc344: revString1,
-// }
 
-// export const combinedNaiveAttemptExports = {
-//   NaivePrimativeTypes,
-// }
+export const NaiveSubjectAttempt = {};
+
+
+
+// export const Naive
+// Subject
+// Attempt = {};
+
+
