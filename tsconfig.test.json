@@ -11,6 +11,6 @@
     "moduleResolution": "node",      // Module resolution strategy (Node.js style)
     "allowSyntheticDefaultImports": true, // Allow default imports for CommonJS modules
   },
-  "types": ["benchmark"],
+  // "types": ["benchmark"],
   "include": ["test/**/*.spec.ts"],
 }
