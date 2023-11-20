@@ -1,7 +1,7 @@
 import { longestOnes } from "./lc1004";
 import {
   smallestSubarrayWithGivenSum,
-  smallest_subarray_with_given_sumAlt,
+  smallest_subarray_with_given_sumAlt
 } from "./lc209";
 import { lengthOfLongestSubstring } from "./lc3";
 import { findSubstring } from "./lc30";

@@ -28,13 +28,3 @@
 export const maxSubArray = (nums: number[]): number => {
   return 0
 }
-
-// // Example usage:
-// const nums1 = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
-// console.log(maxSubArray(nums1)) // Output: 6
-
-// const nums2 = [1]
-// console.log(maxSubArray(nums2)) // Output: 1
-
-// const nums3 = [5, 4, -1, 7, 8]
-// console.log(maxSubArray(nums3)) // Output: 23
