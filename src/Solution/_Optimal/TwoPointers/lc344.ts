@@ -17,6 +17,27 @@
 // 1 <= s.length <= 105
 // s[i] is a printable ascii character.
 
+
+const reverseStringTwoPointer = (s: string[]): string[] =>{
+  const reversedArray: string[] = [...s]; // Create a shallow copy to avoid modifying the input array
+    let left = 0;
+    let right = reversedArray.length - 1;
+
+    while (left < right) {
+        // Swap characters at the left and right pointers
+        const temp = reversedArray[left];
+        reversedArray[left] = reversedArray[right];
+        reversedArray[right] = temp;
+
+        // Move pointers towards the center
+        left++;
+        right--;
+    }
+
+    return reversedArray;
+}
+
+
 const revString1 = (str: string): string => {
   const strArr: string[] = str.split("") // turn string to an array
   const revStrArr: string[] = strArr.reverse() // reverse that array
@@ -37,10 +58,12 @@ const revString3 = (str: string): string => {
   return final
 }
 
+
 export const revString = {
   revString1,
   revString2,
   revString3,
+  reverseStringTwoPointer
 }
 
 // console.log(revString1("hell"))

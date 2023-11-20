@@ -2,7 +2,7 @@
 
 export type TestCase = {
     params?: any[];
-    expected: number | boolean | string;
+    expected: number | boolean | string | string[];
   };
   
 type TestFunction = (...params: any[]) => any;

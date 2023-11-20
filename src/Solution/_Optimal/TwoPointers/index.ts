@@ -31,7 +31,7 @@ export const OptimalTwoPointerSolution = {
   lc121: maxProfit,
   lc125: isPalindrome,
   lc259: threeSumSmaller,
-  lc344: revString,
+  lc344: revString.reverseStringTwoPointer,
   lc424: characterReplacement,
   lc581: findUnsortedSubarray,
   lc713: numSubarrayProductLessThanK,

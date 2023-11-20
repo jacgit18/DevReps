@@ -1,4 +1,4 @@
-
+import { OptimalSlidingWindSolution } from "./Solution/_Optimal/SlidingWindow";
 
 // // app.ts
 
@@ -49,7 +49,9 @@
 // main();
 
 
-export const app = ():void => {
+ const app = ():any => {
+
+    OptimalSlidingWindSolution.lc209( 7, [2,3,1,2,4,3])
 
 }
 

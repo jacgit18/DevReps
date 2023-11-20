@@ -11,7 +11,7 @@ import { characterReplacement } from "./lc424";
 import { findUnsortedSubarray } from "./lc581";
 import { numSubarrayProductLessThanK } from "./lc713";
 import { sortColors } from "./lc75";
-import { revString } from "./lc344";
+import { reverseString } from "./lc344";
 import { backspaceCompare } from "./lc844";
 import { sortedSquares } from "./lc977";
 
@@ -26,7 +26,7 @@ export const OptimalTwoPointerAttempt = {
   lc121: maxProfit,
   lc125: isPalindrome,
   lc259: threeSumSmaller,
-  lc344: revString,
+  lc344: reverseString,
   lc424: characterReplacement,
   lc581: findUnsortedSubarray,
   lc713: numSubarrayProductLessThanK,

@@ -4,11 +4,12 @@
   "description": "",
   "keywords": ["typescript", "node", "eslint", "prettier", "jest", "supertest"],
   "type": "module",
+  "types": "ts",
   "engines": {
     "node": ">=20.9.0",
     "npm": ">=10.1.0"
   },
-  "main": "app.js",
+  "main": "app.ts",
   "scripts": {
     "dev": "npm run clean && npm run compile-ts-watch-mode & npm run start",
     "cbs": "npm run build && npm run start",
@@ -85,7 +86,7 @@
     "ignore": [
       "src/**/*.test.ts"
     ],
-    "exec": "npm run prettier-format && npm run lint && babel-node src/app.ts --extensions \".ts\""
+    "exec": "npm run prettier-format && npm run lint && node src/app.ts"
   },
   "eslintConfig": {
     "ignorePatterns": [
