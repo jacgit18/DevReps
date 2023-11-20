@@ -1,6 +1,7 @@
-import { generateTestCases, TestCase } from "../../lib/genTest";
-import { OptimalSlidingWindowAttempt } from "../../src/Attempt/_Optimal/SlidingWindow/index";
-import { OptimalSlidingWindSolution } from "../../src/Solution/_Optimal/SlidingWindow/index";
+import { generateTestCases, TestCase } from "../../../lib/genTest";
+
+import { OptimalSlidingWindowAttempt } from "../../../src/Attempt/_Optimal/SlidingWindow/index";
+import { OptimalSlidingWindSolution } from "../../../src/Solution/_Optimal/SlidingWindow/index";
 
 
 const runTestCases = () => {
@@ -28,14 +29,12 @@ const runTestCases = () => {
     // { params: [2, [5, 4]], expected: 4 }, // Window size equal to array length with two elements
     // { params: [2, [3, 2, 1, 5, 4, 3, 2, 1]], expected: 2 }, // Generic case
     // { params: [10, [2, 5, 1, 3, 4, 1, 2, 1, 4, 3]], expected: 3 }, // Generic case
-
-        // Add more test cases here
       ];
       
   
       generateTestCases(OptimalSlidingWindowAttempt.lc209, testCasePlaceholder, ' Attempt ');
       generateTestCases(OptimalSlidingWindSolution.lc209, testCases, ' Solution ');
-      generateTestCases(OptimalSlidingWindSolution.lc209alt, testCases, ' Solution ');
+      generateTestCases(OptimalSlidingWindSolution.lc209alt, testCases, 'Alt Solution ');
 
   
     
