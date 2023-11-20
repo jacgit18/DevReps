@@ -1,5 +1,4 @@
 import { generateTestCases, TestCase } from "../../../lib/genTest";
-
 import { OptimalSlidingWindowAttempt } from "../../../src/Attempt/_Optimal/SlidingWindow/index";
 import { OptimalSlidingWindSolution } from "../../../src/Solution/_Optimal/SlidingWindow/index";
 
