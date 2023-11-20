@@ -7,9 +7,6 @@ Also the Optimal approach isnt always one these patterns It depends on the probl
 
 ## Syllabus
 
-- Extra
-  - [] Try Question with different levels [Question here](src/Extra/Challenge2_0.md)
-
 - Two Pointers
   - [] Pair with Target Sum (easy): LC #1
   - [] Triplet Sum Close to Target (medium): LC #16
