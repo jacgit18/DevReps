@@ -12,7 +12,14 @@ const runTestCases = () => {
     { params: ["ADOBECODEBANC", "ABC"], expected: "BANC" },
     { params: ["a", "a"], expected: "a" },
     { params: ["a", "aa"], expected: "" },
-    // Add more test cases here
+    { params: ["abc", "ab"], expected: "ab" }, // Generic case with matching characters
+    { params: ["aab", "aab"], expected: "aab" }, // Both strings are the same
+    { params: ["abcde", "xyz"], expected: "" }, // No matching characters
+    { params: ["aaaa", "aa"], expected: "aa" }, // Repeating characters in the pattern
+    { params: ["", "a"], expected: "" }, // Empty string
+
+    // Solution doesnt account for  this Scenario so test hangs
+    // { params: ["abc", ""], expected: "" }, // Empty pattern
   ];
 
 

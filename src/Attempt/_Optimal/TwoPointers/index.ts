@@ -7,11 +7,11 @@ import { threeSumClosest } from "./lc16";
 import { fourSum } from "./lc18";
 import { threeSumSmaller } from "./lc259";
 import { removeDuplicates } from "./lc26";
+import { reverseString } from "./lc344";
 import { characterReplacement } from "./lc424";
 import { findUnsortedSubarray } from "./lc581";
 import { numSubarrayProductLessThanK } from "./lc713";
 import { sortColors } from "./lc75";
-import { reverseString } from "./lc344";
 import { backspaceCompare } from "./lc844";
 import { sortedSquares } from "./lc977";
 
