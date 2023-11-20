@@ -29,7 +29,7 @@ export const pair_with_target_sum_map = (nums: number[], target: number): number
   let map = new Map<number, number>()
 
   for (let i = 0; i < nums.length; i++) {
-    console.log(map)
+    // console.log(map)
 
     let complement = target - nums[i]
     if (map.has(complement)) {

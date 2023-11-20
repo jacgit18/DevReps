@@ -1,6 +1,6 @@
+import { generateTestCases, TestCase } from "../../../lib/genTest";
 import { OptimalSlidingWindowAttempt } from "../../../src/Attempt/_Optimal/SlidingWindow/index";
 import { OptimalSlidingWindSolution } from "../../../src/Solution/_Optimal/SlidingWindow";
-import { generateTestCases, TestCase } from "../../util/genTest";
 
 
 const runTestCases = () => {
