@@ -18,7 +18,7 @@
 // s[i] is a printable ascii character.
 
 
-const reverseStringTwoPointer = (s: string[]): string[] =>{
+export const reverseStringTwoPointer = (s: string[]): string[] =>{
   const reversedArray: string[] = [...s]; // Create a shallow copy to avoid modifying the input array
     let left = 0;
     let right = reversedArray.length - 1;
@@ -63,7 +63,6 @@ export const revString = {
   revString1,
   revString2,
   revString3,
-  reverseStringTwoPointer
 }
 
 // console.log(revString1("hell"))

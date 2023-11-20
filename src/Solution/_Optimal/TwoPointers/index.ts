@@ -17,7 +17,7 @@ import { numSubarrayProductLessThanK } from "../TwoPointers/lc713";
 import { sortColors } from "../TwoPointers/lc75";
 import { backspaceCompare } from "../TwoPointers/lc844";
 import { sortedSquares } from "../TwoPointers/lc977";
-import { revString } from "./lc344";
+import { reverseStringTwoPointer } from "./lc344";
 
 export const OptimalTwoPointerSolution = {
   lc1: pair_with_target_sum_Two_Pointer,
@@ -31,7 +31,7 @@ export const OptimalTwoPointerSolution = {
   lc121: maxProfit,
   lc125: isPalindrome,
   lc259: threeSumSmaller,
-  lc344: revString.reverseStringTwoPointer,
+  lc344: reverseStringTwoPointer,
   lc424: characterReplacement,
   lc581: findUnsortedSubarray,
   lc713: numSubarrayProductLessThanK,

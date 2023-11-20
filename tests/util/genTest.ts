@@ -26,7 +26,7 @@ type TestFunction = (...params: any[]) => any;
       it(`should return ${expected} for input: "${params}"`, () => {
         const result = fun(...(params || []));
         console.time(`${testName} Test case ${index + 1}`)
-        expect(result).toBe(expected);
+        expect(result).toStrictEqual(expected);
         console.timeEnd(`${testName} Test case ${index + 1}`)
       });
   
