@@ -1,70 +1,27 @@
 import { OptimalSlidingWindowAttempt } from "../../../src/Attempt/_Optimal/SlidingWindow/index";
-import { OptimalSlidingWindSolution } from "../../../src/Solution/_Optimal/SlidingWindow/index";
-
-
-type TestFunction = (str: string, targets: string) => string;
-
-const generateTestCases = (
-  minWindowFunction: TestFunction,
-  str: string,
-  targets: string,
-  testName: string,
-  expected: string
-) => {
-  describe(`minWindow ${testName}`, () => {
-    let minWindowFn: TestFunction;
-
-    beforeEach(() => {
-      minWindowFn = minWindowFunction;
-    });
-
-    it(`should return "${expected}" for str: "${str}" and targets: "${targets}"`, () => {
-      const result = minWindowFn(str, targets);
-      console.time(`minWindow${testName}`);
-      expect(result).toBe(expected);
-      console.timeEnd(`minWindow${testName}`);
-    });
-  });
-};
+import { OptimalSlidingWindSolution } from "../../../src/Solution/_Optimal/SlidingWindow";
+import { generateTestCases, TestCase } from "../../util/genTest";
 
 const runTestCases = () => {
 
-  const testCasePlaceholder = [
-    { str: "ADOBECODEBANC", target: "ABC", expect: " " },
+  const testCasePlaceholder: TestCase[]  = [
+    { params: ["ADOBECODEBANC", "ABC"], expected: " " },
   ];
 
-  const testCases = [
-    { str: "ADOBECODEBANC", target: "ABC", expect: "BANC" },
-    { str: "a", target: "a", expect: "a" },
-    { str: "a", target: "aa", expect: "" },
-
-
+  const testCases: TestCase[]  = [
+    { params: ["ADOBECODEBANC", "ABC"], expected: "BANC" },
+    { params: ["a", "a"], expected: "a" },
+    { params: ["a", "aa"], expected: "" },
     // Add more test cases here
   ];
 
 
-  testCasePlaceholder.forEach((testCase, index) => {
-    generateTestCases(
-      OptimalSlidingWindowAttempt.lc76,
-      testCase.str,
-      testCase.target,
-      `Test Case ${index + 1}`,
-      testCase.expect
-    );
-
-  });
+ 
 
 
-  testCases.forEach((testCase, index) => {
-  generateTestCases(
-    OptimalSlidingWindSolution.lc76,
-    testCase.str,
-    testCase.target,
-    `Test Case ${index + 1}`,
-    testCase.expect
-  );
+  generateTestCases(OptimalSlidingWindowAttempt.lc76, testCasePlaceholder, ' Attempt ');
+  generateTestCases(OptimalSlidingWindSolution.lc76, testCases, ' Solution ');
 
-  });
 
 
 };
