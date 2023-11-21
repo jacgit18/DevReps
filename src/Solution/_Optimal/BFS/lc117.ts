@@ -76,12 +76,12 @@ export const connect = (root: NodeDiff | null): NodeDiff | null => {
 }
 
 // Example usage:
-// const rootNEW = new NodeDiff(
-//   1,
-//   new NodeDiff(2, new NodeDiff(4), new NodeDiff(5)),
-//   new NodeDiff(3, null, new NodeDiff(7)),
-// )
+const rootNEW = new NodeDiff(
+  1,
+  new NodeDiff(2, new NodeDiff(4), new NodeDiff(5)),
+  new NodeDiff(3, null, new NodeDiff(7)),
+)
 
-// const connectedRoot = connect(rootNEW)
+const connectedRoot = connect(rootNEW)
 
 // Access connected nodes through the 'next' pointers.

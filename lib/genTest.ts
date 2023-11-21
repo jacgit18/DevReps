@@ -1,13 +1,15 @@
 import Benchmark from "benchmark";
+import { TreeNode } from "../src/util/BinaryTreeMaker";
 
 export type TestCase = {
-  params?: any[];
-  expected: number | string | boolean | string[] | number[];
+  params?: any | any[]; // Updated type for params
+  paramsTwo?: any | any[]; // Updated type for paramsTwo
+  paramsThree?: any | any[]; // Updated type for paramsThree
+  expected: number | string | boolean | string[] | number[] | TreeNode | null;
   performance?: boolean; // Flag to indicate a performance test case
 };
 
 type TestFunction = (...params: any[]) => any;
-
 
 export const generateTestCases = (
   lcFunction: TestFunction,
@@ -17,19 +19,24 @@ export const generateTestCases = (
   describe(testName, () => {
     let fun: TestFunction;
     testCases.forEach((testCase, index) => {
-      const { params, expected, performance } = testCase;
+      const { params, paramsTwo, paramsThree, expected, performance } = testCase;
 
       beforeEach(() => {
         fun = lcFunction;
       });
 
       if (performance) {
-        it(`should perform well for input: "${params}"`, () => {
-          BenchmarkHelper.benchmarkFunction(fun, ...(params || []));
+        it(`should perform well for input: "${params}, ${paramsTwo}, ${paramsThree}"`, () => {
+          const combinedParams = [params, paramsTwo, paramsThree].map(param =>
+            Array.isArray(param) ? param : [param]
+          );
+          BenchmarkHelper.benchmarkFunction(fun, ...combinedParams.flat());
         });
       } else {
-        it(`should return ${expected} for input: "${params}"`, () => {
-          const result = fun(...(params || []));
+        it(`should return ${expected} for input: "${params}, ${paramsTwo}, ${paramsThree}"`, () => {
+          const result = fun(...[params, paramsTwo, paramsThree].map(param =>
+            Array.isArray(param) ? param : [param]
+          ).flat());
           console.time(`${testName} Test case ${index + 1}`);
           expect(result).toStrictEqual(expected);
           console.timeEnd(`${testName} Test case ${index + 1}`);
