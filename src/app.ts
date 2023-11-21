@@ -49,11 +49,11 @@ import { OptimalSlidingWindSolution } from "./Solution/_Optimal/SlidingWindow";
 // main();
 
 
- const app = ():any => {
+//  const app = ():any => {
 
-    OptimalSlidingWindSolution.lc209( 7, [2,3,1,2,4,3])
+//     OptimalSlidingWindSolution.lc209( 7, [2,3,1,2,4,3])
 
-}
+// }
 
 
-app();
+console.log(OptimalSlidingWindSolution.lc209( 7, [2,3,1,2,4,3]))

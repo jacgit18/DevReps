@@ -14,7 +14,7 @@
     "dev": "npm run clean && npm run compile-ts-watch-mode & npm run start",
     "cbs": "npm run build && npm run start",
     "start": "node src",
-    "local": "ts-node ./src",
+    "local": "ts-node ./src/app.ts",
     "local:watch": "nodemon src -e ts,json --exec 'npm run local'",
     "clean": "rm -rf build",
     "build": "npm run clean && npm run compile-ts",
