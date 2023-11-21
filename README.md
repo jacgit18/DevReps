@@ -1,9 +1,18 @@
 ![](assets/Brain-Training-Mind-Lifter.gif)
 
 # Dev Mental Gym
-When tackling a coding challenge, especially when learning and implementing advanced patterns, it's essential to refrain from automatically defaulting to a specific pattern. Instead, take the time to thoroughly analyze the problem. For instance, when faced with a string-related question, it's best not to jump to conclusions like immediately opting for a two-pointer or sliding window approach. Doing so can restrict your thought process, causing you hyper-focus on a single method without proper consideration of the specific details.
 
-Also the Optimal approach isnt always one these patterns It depends on the problem your doing like it be something very simple at times.
+The most straightforward approach is typically the Brute Force approach, which involves trying all possible combinations to find the minimum solution.
+
+The Naïve approach is an improvement over Brute Force, providing a better guess that is often more optimal, but it may still have room for further optimization or some times your best guess can end up being the most optimal choice.
+
+Greedy algorithms make locally optimal choices at each stage, offering simplicity and speed in coding. However, they may not guarantee an overall optimal solution, especially in complex scenarios.
+
+Optimal approaches aim for the most efficient solution based on the problem. While certain algorithm patterns may seem optimal, it depends on the specific problem at hand.
+
+When tackling coding challenges, especially when implementing advanced patterns, refrain from defaulting to a specific coding pattern in your approach. Take the time to analyze the problem thoroughly, considering various factors, as blindly choosing a pattern may limit your perspective and hinder a comprehensive solution. Like for example assuming every string or array question best approach is either a sliding window or two pointer this is lazy thinking and waste time.
+
+
 
 ## Syllabus
 
