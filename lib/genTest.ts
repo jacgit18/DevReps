@@ -2,11 +2,12 @@ import Benchmark from "benchmark";
 
 export type TestCase = {
   params?: any[];
-  expected: any | any[];
+  expected: number | string | boolean | string[] | number[];
   performance?: boolean; // Flag to indicate a performance test case
 };
 
 type TestFunction = (...params: any[]) => any;
+
 
 export const generateTestCases = (
   lcFunction: TestFunction,
