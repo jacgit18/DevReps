@@ -2,7 +2,14 @@
   "name": "coding-challenges",
   "version": "1.0.0",
   "description": "",
-  "keywords": ["typescript", "node", "eslint", "prettier", "jest", "supertest"],
+  "keywords": [
+    "typescript",
+    "node",
+    "eslint",
+    "prettier",
+    "jest",
+    "supertest"
+  ],
   "type": "module",
   "types": "ts",
   "engines": {
@@ -14,6 +21,7 @@
     "dev": "npm run clean && npm run compile-ts-watch-mode & npm run start",
     "cbs": "npm run build && npm run start",
     "start": "node src",
+    "start2": "vite",
     "local": "ts-node ./src/app.ts",
     "local:watch": "nodemon src -e ts,json --exec 'npm run local'",
     "clean": "rm -rf build",
@@ -31,7 +39,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "readline-sync": "^1.4.10"
+    "readline-sync": "^1.4.10",
+    "vite": "^5.0.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.23.0",
@@ -74,8 +83,15 @@
     },
     "testEnvironment": "node",
     "testRegex": "tests/.*\\.(test|spec)?\\.(js|ts)$",
-    "moduleFileExtensions": ["ts", "js", "json", "node"],
-    "roots": ["<rootDir>/tests"]
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json",
+      "node"
+    ],
+    "roots": [
+      "<rootDir>/tests"
+    ]
   },
   "tsconfig": "tsconfig.json",
   "nodemonConfig": {
