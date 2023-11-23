@@ -1,4 +1,4 @@
-import { cloneGrapher } from "../Topological Sort Graphs/lc133";
+import { cloneGrapher } from "./lc133";
 
 
 export const OptimalTopologicalSortAttempt  = {

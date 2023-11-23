@@ -1,6 +1,6 @@
-import { rob } from "../Dynamic Programming/lc198";
-import { coinChange } from "../Dynamic Programming/lc322";
-import { longestPalindrome } from "../Dynamic Programming/lc5";
+import { rob } from "./lc198";
+import { coinChange } from "./lc322";
+import { longestPalindrome } from "./lc5";
 
 export const OptimalDynamicAttempt  = {
   lc322: coinChange,

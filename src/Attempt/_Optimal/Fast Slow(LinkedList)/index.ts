@@ -1,6 +1,6 @@
-import { hasCycle } from "../Fast Slow(LinkedList)/lc141CyclicLL";
-import { isDoublyCyclic } from "../Fast Slow(LinkedList)/lc141DoubleVer";
-import { isHappy } from "../Fast Slow(LinkedList)/lc202";
+import { hasCycle } from "./lc141CyclicLL";
+import { isDoublyCyclic } from "./lc141DoubleVer";
+import { isHappy } from "./lc202";
 
 
 export const OptimalFastSlowPointersAttempt  = {

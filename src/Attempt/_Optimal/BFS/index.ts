@@ -1,13 +1,13 @@
 // BFS
-import { isSameTree } from "../BFS/lc100";
-import { isSymmetric } from "../BFS/lc101";
-import { levelOrderTraversal } from "../BFS/lc102VistAllLevelPureBFS";
-import { zigzagLevelOrder } from "../BFS/lc103";
-import { maxDepth } from "../BFS/lc104";
-import { levelOrderBottom } from "../BFS/lc107";
-import { minDepth } from "../BFS/lc111";
-import { connect } from "../BFS/lc117";
-import { averageOfLevels } from "../BFS/lc637";
+import { isSameTree } from "./lc100";
+import { isSymmetric } from "./lc101";
+import { levelOrderTraversal } from "./lc102VistAllLevelPureBFS";
+import { zigzagLevelOrder } from "./lc103";
+import { maxDepth } from "./lc104";
+import { levelOrderBottom } from "./lc107";
+import { minDepth } from "./lc111";
+import { connect } from "./lc117";
+import { averageOfLevels } from "./lc637";
 
 
 export const OptimalBFSAttempt  = {

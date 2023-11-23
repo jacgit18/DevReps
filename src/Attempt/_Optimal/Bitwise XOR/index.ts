@@ -1,4 +1,4 @@
-import { singleNumber } from "../Bitwise XOR/lc136";
+import { singleNumber } from "./lc136";
 
 export const OptimalBitWiseXORAttempt  = {
   lc136: singleNumber,

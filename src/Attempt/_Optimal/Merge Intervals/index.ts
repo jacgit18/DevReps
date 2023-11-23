@@ -1,9 +1,9 @@
-import { canAttendMeetings } from "../Merge Intervals/lc252";
-import { minMeetingRooms } from "../Merge Intervals/lc253";
-import { merge } from "../Merge Intervals/lc56";
-import { insertInterval } from "../Merge Intervals/lc57";
-import { leastInterval } from "../Merge Intervals/lc621";
-import { intervalIntersection } from "../Merge Intervals/lc986";
+import { canAttendMeetings } from "./lc252";
+import { minMeetingRooms } from "./lc253";
+import { merge } from "./lc56";
+import { insertInterval } from "./lc57";
+import { leastInterval } from "./lc621";
+import { intervalIntersection } from "./lc986";
 
 
 export const MergeIntervalAttempt  = {

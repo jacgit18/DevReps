@@ -1,4 +1,5 @@
-import { OptimalSlidingWindSolution } from "./Solution/_Optimal/SlidingWindow";
+// import { OptimalSlidingWindSolution } from "./Solution/_Optimal/SlidingWindow";
+import { ExtraSolution } from "./Solution/Extra Challenges";
 
 // // app.ts
 
@@ -56,4 +57,4 @@ import { OptimalSlidingWindSolution } from "./Solution/_Optimal/SlidingWindow";
 // }
 
 
-console.log(OptimalSlidingWindSolution.lc209( 7, [2,3,1,2,4,3]))
+console.log(ExtraSolution.lc14(["flower", "flow", "flight"]))

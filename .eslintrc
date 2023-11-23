@@ -6,5 +6,12 @@
   "plugins": [
     "@typescript-eslint"
   ],
-  "root": true
+  "root": true,
+  "rules":{
+    "no-eval": "error",
+    "no-implied-eval": "error",
+    "no-new-func": "error"
+
+
+  }
 }
