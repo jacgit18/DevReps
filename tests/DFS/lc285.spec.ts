@@ -1,7 +1,7 @@
-import { generateTestCases, TestCase } from "../../../lib/genTest";
-import { OptimalDFSAttempt } from "../../../src/Attempt/DFS";
-import { OptimalDFS_Solution } from "../../../src/Solution/DFS";
-import { TreeNode } from "../../../src/util/BinaryTreeMaker";
+import { generateTestCases, TestCase } from "../../lib/genTest";
+import { OptimalDFSAttempt } from "../../src/Attempt/DFS";
+import { OptimalDFS_Solution } from "../../src/Solution/DFS";
+import { TreeNode } from "../../src/util/BinaryTreeMaker";
 
 const runTestCases = () => {
   const root1 = new TreeNode(2, new TreeNode(1), new TreeNode(3))

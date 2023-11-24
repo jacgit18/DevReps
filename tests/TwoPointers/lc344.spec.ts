@@ -1,6 +1,6 @@
-import { generateTestCases, TestCase } from "../../../lib/genTest";
-import { OptimalTwoPointerAttempt } from "../../../src/Attempt/TwoPointers/index";
-import { OptimalTwoPointerSolution } from "../../../src/Solution/TwoPointers/index";
+import { generateTestCases, TestCase } from "../../lib/genTest";
+import { OptimalTwoPointerAttempt } from "../../src/Attempt/TwoPointers/index";
+import { OptimalTwoPointerSolution } from "../../src/Solution/TwoPointers/index";
 
 const runTestCases = () => {
 
