@@ -34,11 +34,22 @@ export const generateTestCases = (
         });
       } else {
         it(`should return ${expected} for input: "${params}, ${paramsTwo}, ${paramsThree}"`, () => {
-          const result = fun(...[params, paramsTwo, paramsThree].map(param =>
-            Array.isArray(param) ? param : [param]
-          ).flat());
+          const result = fun(
+            ...( [params, paramsTwo, paramsThree].map(param =>
+              Array.isArray(param) ? param : [param]
+            ).flat() )
+          );
+          
           console.time(`${testName} Test case ${index + 1}`);
-          expect(result).toStrictEqual(expected);
+
+          if (result instanceof TreeNode) {
+            // If 'result' is a TreeNode, extract 'value' for comparison
+            expect(result?.value).toBe(expected); // Assuming 'result' is the received TreeNode object
+          } else {
+            // Default comparison if 'result' is not a TreeNode
+            expect(result).toStrictEqual(expected);
+          }
+
           console.timeEnd(`${testName} Test case ${index + 1}`);
         });
       }

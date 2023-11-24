@@ -22,21 +22,20 @@
 import { TreeNode } from "../../../util/BinaryTreeMaker"
 
 export const inorderSuccessor = (root: TreeNode | null, p: TreeNode | null): TreeNode | null => {
-  if (!root || !p) {
-    return null;
-  }
-
+  if (!root || !p) return null;
+  
   let successor: TreeNode | null = null;
-
-  while (root) {
-    if (root.value > p.value) {
-      successor = root;
-      root = root.left;
-    } else {
-      root = root.right;
-    }
+  let current: TreeNode | null = root;
+  
+  while (current) {
+      if (current.value > p.value) {
+          successor = current;
+          current = current.left;
+      } else {
+          current = current.right;
+      }
   }
-
+  
   return successor;
 };
 
@@ -45,8 +44,16 @@ export const inorderSuccessor = (root: TreeNode | null, p: TreeNode | null): Tre
 const root1 = new TreeNode(2, new TreeNode(1), new TreeNode(3))
 const p1 = new TreeNode(1)
 
-const root2 = new TreeNode(5, new TreeNode(3, new TreeNode(2), new TreeNode(4)), new TreeNode(6))
+const root2 = new TreeNode(5);
+root2.left = new TreeNode(3);
+root2.right = new TreeNode(6);
+root2.left.left = new TreeNode(2);
+root2.left.right = new TreeNode(4);
+root2.left.left.left = new TreeNode(1);
 const p2 = new TreeNode(6)
 
 console.log(inorderSuccessor(root1, p1)) // Output: 2
 console.log(inorderSuccessor(root2, p2)) // Output: null
+
+
+
