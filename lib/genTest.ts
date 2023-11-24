@@ -5,7 +5,7 @@ export type TestCase = {
   params?: any | any[]; // Updated type for params
   paramsTwo?: any | any[]; // Updated type for paramsTwo
   paramsThree?: any | any[]; // Updated type for paramsThree
-  expected: number | string | boolean | string[] | number[] | TreeNode | null;
+  expected: number | string | boolean | any[] | any[][] | TreeNode | null;
   performance?: boolean; // Flag to indicate a performance test case
 };
 

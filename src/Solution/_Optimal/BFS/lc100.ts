@@ -55,13 +55,4 @@ export const isSameTree = (p: TreeNode | null, q: TreeNode | null): boolean => {
   return true
 }
 
-// // Example usage:
-// const tree1 = new TreeNode(1)
-// tree1.left = new TreeNode(2)
-// tree1.right = new TreeNode(3)
 
-// const tree2 = new TreeNode(1)
-// tree2.left = new TreeNode(2)
-// tree2.right = new TreeNode(3)
-
-// console.log(isSameTree(tree1, tree2)) // Output: true

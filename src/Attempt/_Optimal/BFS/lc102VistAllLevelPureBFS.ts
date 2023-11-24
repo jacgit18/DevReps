@@ -22,7 +22,7 @@
 import { TreeNode } from "../../../util/BinaryTreeMaker"
 
 export const levelOrderTraversal = (root: TreeNode | null): number[][] => {
-  return [[0]]
+  return [[]]
 }
 
 // Example usage:

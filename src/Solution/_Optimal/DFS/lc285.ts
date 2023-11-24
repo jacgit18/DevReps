@@ -41,19 +41,21 @@ export const inorderSuccessor = (root: TreeNode | null, p: TreeNode | null): Tre
 
 
 // Example usage:
-const root1 = new TreeNode(2, new TreeNode(1), new TreeNode(3))
-const p1 = new TreeNode(1)
+// const root1 = new TreeNode(2, new TreeNode(1), new TreeNode(3))
+// const p1 = new TreeNode(1)
 
-const root2 = new TreeNode(5);
-root2.left = new TreeNode(3);
-root2.right = new TreeNode(6);
-root2.left.left = new TreeNode(2);
-root2.left.right = new TreeNode(4);
-root2.left.left.left = new TreeNode(1);
-const p2 = new TreeNode(6)
 
-console.log(inorderSuccessor(root1, p1)) // Output: 2
-console.log(inorderSuccessor(root2, p2)) // Output: null
+// // Alt Manual way to assign nodes in tree
+// const root2 = new TreeNode(5);
+// root2.left = new TreeNode(3);
+// root2.right = new TreeNode(6);
+// root2.left.left = new TreeNode(2);
+// root2.left.right = new TreeNode(4);
+// root2.left.left.left = new TreeNode(1);
+// const p2 = new TreeNode(6)
+
+// console.log(inorderSuccessor(root1, p1)) // Output: 2
+// console.log(inorderSuccessor(root2, p2)) // Output: null
 
 
 

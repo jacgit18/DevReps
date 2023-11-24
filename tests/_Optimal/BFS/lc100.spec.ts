@@ -1,27 +1,23 @@
 import { generateTestCases, TestCase } from "../../../lib/genTest";
-import { OptimalTwoPointerAttempt } from "../../../src/Attempt/_Optimal/TwoPointers";
-import { OptimalTwoPointerSolution } from "../../../src/Solution/_Optimal/TwoPointers";
-
+import { OptimalBFSAttempt } from "../../../src/Attempt/_Optimal/BFS";
+import { OptimalBFS_Solution } from "../../../src/Solution/_Optimal/BFS";
+import { TreeNode } from "../../../src/util/BinaryTreeMaker";
 
 const runTestCases = () => {
+  const treeOne = new TreeNode(1, new TreeNode(2), new TreeNode(3))
+  const treeTwo = new TreeNode(1, new TreeNode(2), new TreeNode(3))
+  const treeThree = new TreeNode(6, new TreeNode(2), new TreeNode(3))
 
-  const testCasePlaceholder:  TestCase[]  = [
-    { params: ["A man, a plan, a canal: Panama"], expected: true },
-  ];
 
+  
   const testCases:  TestCase[]  = [
-    { params: ["A man, a plan, a canal: Panama"], expected: true },
-    { params: ["racecar"], expected: true },
-    { params: ["hello"], expected: false },
-    { params: ["Was it a car or a cat I saw?"], expected: true },
-    { params: [" "], expected: true },
+    { params: treeOne, paramsTwo: treeTwo, expected: true },
+    // { params: treeOne, paramsTwo: treeThree, expected: false },
 
-    // Add more test cases here
   ];
 
-
-    generateTestCases(OptimalTwoPointerAttempt.lc125, testCasePlaceholder,' Attempt ');
-    generateTestCases(OptimalTwoPointerSolution.lc125, testCases,' Solution ',);
+    generateTestCases(OptimalBFSAttempt.lc100, testCases,' Attempt ');
+    generateTestCases(OptimalBFS_Solution.lc100, testCases,' Solution ',);
 
 
   
