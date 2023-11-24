@@ -24,7 +24,7 @@ const runTestCases = () => {
       ];
       
   
-      generateTestCases(OptimalTwoPointerAttempt.lc1, testCasePlaceholder, ' Attempt ');
+      generateTestCases(OptimalTwoPointerAttempt.lc1.pair_with_target_sum_BruteForce, testCasePlaceholder, ' Attempt ');
       generateTestCases(OptimalTwoPointerSolution.lc1, testCases, ' Solution ');
       generateTestCases(OptimalTwoPointerSolution.lc1Alt, testCases, 'Alt Solution ');
 

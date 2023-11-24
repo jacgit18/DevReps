@@ -17,7 +17,7 @@ const runTestCases = () => {
     ];
   
   const testCases:  TestCase[]  = [
-    { params: treeOne,  expected: [[3],[9,20],[15,7]] },
+    { params: treeOne,  expected: [[3],[9,20],[15,7]] , performance: true },
 
   ];
 
