@@ -62,7 +62,7 @@ export const letterCombinationsBackTrack = (digits: string): string[] => {
 // console.log(letterCombinationsBackTrack("")) // Output: []
 // console.log(letterCombinationsBackTrack("2")) // Output: ["a","b","c"]
 
-function letterCombinations(digits: string): string[] {
+export function letterCombinations(digits: string): string[] {
   if (digits.length === 0) {
     return []
   }
