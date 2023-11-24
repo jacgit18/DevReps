@@ -16,7 +16,7 @@ When tackling coding challenges, especially when implementing advanced patterns,
 
 ## Syllabus
 
-- Two Pointers
+- Two Pointers(Typically Associated with Arrays & Strings, Linked List)
   - [] Pair with Target Sum (easy): LC #1
   - [] Triplet Sum Close to Target (medium): LC #16
   - [] Triplet Sum to Zero (medium): LC #15
@@ -30,7 +30,7 @@ When tackling coding challenges, especially when implementing advanced patterns,
   - [] Comparing Strings containing Backspaces (medium): LC #844
   - [] Squaring a Sorted Array (easy): LC #977
 
-- Sliding Window
+- Sliding Window(Associated with Sorted Arrays)
   - [] No-repeat Substring (hard): LC #3
   - [] Words Concatenation (hard): LC #30
   - [] Maximum Sum Subarray of Size K (easy) LC #53
@@ -42,7 +42,7 @@ When tackling coding challenges, especially when implementing advanced patterns,
   - [] Fruits into Baskets (medium): LC #904
   - [] Max Consecutive Ones III (hard): LC #1004
 
-- Merge Intervals
+- Merge Intervals(2 dimensional array)
   - [] Merge Intervals (medium): LC #56
   - [] Insert Interval (medium): LC #57
   - [] Intervals Intersection (medium): LC #986
@@ -51,7 +51,7 @@ When tackling coding challenges, especially when implementing advanced patterns,
   - [] Maximum CPU Load(Task Scheduler) (hard): LC proably #621
   - [] Employee Free Time (hard): LC #759
 
-- Subsets/Backtracking
+- Subsets/Backtracking(2 dimensional array)
   - [] Subsets (easy): LC #78
   - [] Subsets With Duplicates (easy): LC #90
   - [] Permutations (medium): LC #46
@@ -62,7 +62,7 @@ When tackling coding challenges, especially when implementing advanced patterns,
   - [] Structurally Unique Binary Search Trees (hard): LC #95(Binary Tree)
   - [] Count of Structurally Unique Binary Search Trees (hard): LC #96(Binary Tree)
 
-- Modified Binary Search
+- Modified Binary Search(Associated with Sorted Arrays & Binary Search Tree)
   - [] Order-agnostic Binary Search (easy): LC #704
   - [] Ceiling of a Number (easy): LC #35
   - [] Next Letter (medium): LC #744
@@ -75,7 +75,7 @@ When tackling coding challenges, especially when implementing advanced patterns,
   - [] Find Minimum in Rotated Sorted Array (medium): LC #153
   - [] Find Minimum in Rotated Sorted Array II (medium): LC #154
 
-- Cyclic Sort
+- Cyclic Sort(Associated with Arrays in range of numbers)
   - [] Cyclic Sort (easy)
   - [] Find the Missing Number (easy): LC #268
   - [] Find All Numbers Disappeared in an Array (easy): LC #448
@@ -85,7 +85,7 @@ When tackling coding challenges, especially when implementing advanced patterns,
   - [] Find the Smallest Missing Positive Number (medium): LC #41
   - [] Find the First K Missing Positive Numbers (hard): LC proably #1539
 
-- Fast & Slow Pointers
+- Fast & Slow Pointers(Linked List & Arrays)
   - [] LinkedList Cycle (easy): LC #141
   - [] Happy Number (medium): LC #202
   - [] Start of LinkedList Cycle (medium): LC #142
@@ -109,7 +109,7 @@ When tackling coding challenges, especially when implementing advanced patterns,
   - [] Flatten a Multilevel Doubly Linked List (medium): LC #430
   - [] Design Browser History (medium): LC #1472
 
-- Trees: BFS
+- Trees: BFS(Also Graph)
   - [] Same Tree(easy) LC #100
   - [] Symmetric Tree (easy): LC #101
   - [] Binary Tree Level Order Traversal (easy): LC #102
@@ -123,7 +123,7 @@ When tackling coding challenges, especially when implementing advanced patterns,
   - [] Connect All Level Order Siblings (medium): LC maybe #116
   - [] Right View of a Binary Tree (easy): LC #199
 
-- Trees: DFS
+- Trees: DFS(Also Graph)
   - [] Binary Tree Path Sum (easy): LC #112
   - [] Path Sum II (medium): LC #113
   - [] Binary Tree Paths (medium): LC #257
@@ -141,7 +141,7 @@ When tackling coding challenges, especially when implementing advanced patterns,
   - [] Reconstructing a Sequence (hard): LC #444
   - [] Minimum Height Trees (hard): LC #310
 
-- Top K Elements
+- Top K Elements(Priority queue and heaps)
   - [] Top 'K' Numbers (easy)
   - [] Kth Smallest Number (easy): LC #215
   - [] 'K' Closest Points to the Origin (easy): LC #973
@@ -157,14 +157,14 @@ When tackling coding challenges, especially when implementing advanced patterns,
   - [] Scheduling Tasks (hard): LC #621(Greedy)
   - [] Frequency Stack (hard): LC #895
 
-- K-way Merge
+- K-way Merge(Priority queue, and merging sorted arrays)
   - [] Merge K Sorted Lists (Hard): LC #23
   - [] Kth Smallest Number in M Sorted Lists (Medium)
   - [] Kth Smallest Number in a Sorted Matrix (Hard): LC #378
   - [] Smallest Number Range (Hard): LC #632
   - [] Problem K Pairs with Largest Sums (Hard): LC #373
 
-- Knapsack (Dynamic Programming)
+- Knapsack (Dynamic Programming and 2d array)
   - [] 0/1 Knapsack (medium)
   - [] Equal Subset Sum Partition (medium): LC #416
   - [] Subset Sum (medium)

@@ -1,5 +1,5 @@
 // import { OptimalSlidingWindSolution } from "./Solution/_Optimal/SlidingWindow";
-import { ExtraSolution } from "./Solution/Extra Challenges";
+// import { ExtraSolution } from "./Solution/Extra Challenges";
 
 // // app.ts
 
@@ -57,4 +57,22 @@ import { ExtraSolution } from "./Solution/Extra Challenges";
 // }
 
 
-console.log(ExtraSolution.lc14(["flower", "flow", "flight"]))
+// console.log(ExtraSolution.lc14(["flower", "flow", "flight"]))
+
+
+ function memoizeAddTo80() {
+    let cache: { [key: number]: number } = {}
+    return function (n: number): number {
+      if (n in cache) {
+        return cache[n]
+      } else {
+        console.log("long time")
+        const answer: number = n + 80
+        cache[n] = answer
+        return answer
+      }
+    }
+  }
+  
+  const memoized: (n: number) => number = memoizeAddTo80()
+  console.log(1, memoized(35))
