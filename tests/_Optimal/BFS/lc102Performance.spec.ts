@@ -1,6 +1,6 @@
 import { generateTestCases, TestCase } from "../../../lib/genTest";
 // import { OptimalBFSAttempt } from "../../../src/Attempt/_Optimal/BFS";
-import { OptimalBFS_Solution } from "../../../src/Solution/_Optimal/BFS";
+import { OptimalBFS_Solution } from "../../../src/Solution/BFS";
 import { TreeNode } from "../../../src/util/BinaryTreeMaker";
 
 const runTestCases = () => {

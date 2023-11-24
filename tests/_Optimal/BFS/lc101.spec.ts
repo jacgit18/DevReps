@@ -1,11 +1,11 @@
 import { generateTestCases, TestCase } from "../../../lib/genTest";
-import { OptimalBFSAttempt } from "../../../src/Attempt/_Optimal/BFS";
-import { OptimalBFS_Solution } from "../../../src/Solution/_Optimal/BFS";
+import { OptimalBFSAttempt } from "../../../src/Attempt/BFS";
+import { OptimalBFS_Solution } from "../../../src/Solution/BFS";
 import { TreeNode } from "../../../src/util/BinaryTreeMaker";
 
 const runTestCases = () => {
-  const treeOne = new TreeNode(1, 
-    new TreeNode(2, new TreeNode(3), new TreeNode(4)), 
+  const treeOne = new TreeNode(1,
+    new TreeNode(2, new TreeNode(3), new TreeNode(4)),
     new TreeNode(2, new TreeNode(4), new TreeNode(3)));
 
   const treeTwo = new TreeNode(1,

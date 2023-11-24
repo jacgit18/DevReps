@@ -1,6 +1,6 @@
 import { generateTestCases, TestCase } from "../../../lib/genTest";
-import { OptimalDFSAttempt } from "../../../src/Attempt/_Optimal/DFS";
-import { OptimalDFS_Solution } from "../../../src/Solution/_Optimal/DFS";
+import { OptimalDFSAttempt } from "../../../src/Attempt/DFS";
+import { OptimalDFS_Solution } from "../../../src/Solution/DFS";
 import { TreeNode } from "../../../src/util/BinaryTreeMaker";
 
 const runTestCases = () => {
