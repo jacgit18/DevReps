@@ -1,11 +1,12 @@
 import Benchmark from "benchmark";
 import { TreeNode } from "../src/util/BinaryTreeMaker";
+import { LinkedListNode } from "../src/util/LinkedListMaker";
 
 export type TestCase = {
   params?: any | any[]; // Updated type for params
   paramsTwo?: any | any[]; // Updated type for paramsTwo
   paramsThree?: any | any[]; // Updated type for paramsThree
-  expected: number | string | boolean | any[] | any[][] | TreeNode | null;
+  expected: number | string | boolean | any[] | any[][] | TreeNode | LinkedListNode | null;
   performance?: boolean; // Flag to indicate a performance test case
 };
 
@@ -42,7 +43,7 @@ export const generateTestCases = (
           
           console.time(`${testName} Test case ${index + 1}`);
 
-          if (result instanceof TreeNode) {
+          if (result instanceof TreeNode || result instanceof LinkedListNode) {
             // If 'result' is a TreeNode, extract 'value' for comparison
             expect(result?.value).toBe(expected); // Assuming 'result' is the received TreeNode object
           } else {

@@ -26,10 +26,23 @@
 // 1 <= s.length <= 2 * 105
 // s consists only of printable ASCII characters.
 
-export const isPalindrome = (s: string): boolean => {
+const isPalindromeBruteForce = (s: string): boolean => {
   return true
 }
 
+const isPalindromeNaive = (s: string): boolean => {
+  return true
+}
+
+const pisPalindromeOptimal = (s: string): boolean => {
+  return true
+}
+
+export const isPalindrome = {
+  isPalindromeBruteForce,
+  isPalindromeNaive,
+  pisPalindromeOptimal
+}
 // Example usage:
 // const example1 = "A man, a plan, a canal: Panama"
 // console.log(isPalindrome(example1)) // Output: true

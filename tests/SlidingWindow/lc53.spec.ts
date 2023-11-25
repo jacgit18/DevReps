@@ -25,7 +25,7 @@ const runTestCases = () => {
   ];
 
 
-    generateTestCases(OptimalSlidingWindowAttempt.lc53, testCasePlaceholder, ' Attempt ');
+    generateTestCases(OptimalSlidingWindowAttempt.lc53.maxSubArrayNaive, testCasePlaceholder, ' Attempt ');
     generateTestCases(OptimalSlidingWindSolution.lc53, testCases, " Solution ")
 
 

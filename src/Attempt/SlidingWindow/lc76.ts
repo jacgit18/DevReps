@@ -30,10 +30,18 @@
 // 1 <= m, n <= 105
 // s and t consist of uppercase and lowercase English letters.
 
-export const minWindow = (s: string, t: string): string => {
+const minWindowBruteForce = (s: string, t: string): string => {
   return " "
 }
 
+
+const minWindowNaive = (s: string, t: string): string => {
+  return " "
+}
+
+const minWindowOptimal = (s: string, t: string): string => {
+  return " "
+}
 // Example usage:
 // const s1 = "ADOBECODEBANC"
 // const t1 = "ABC"
@@ -46,3 +54,10 @@ export const minWindow = (s: string, t: string): string => {
 // const s3 = "a"
 // const t3 = "aa"
 // console.log(minWindow(s3, t3)) // Output: ""
+
+
+export const minWindow = {
+  minWindowBruteForce,
+  minWindowNaive,
+  minWindowOptimal
+}

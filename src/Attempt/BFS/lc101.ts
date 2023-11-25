@@ -17,7 +17,15 @@
 
 import { TreeNode } from "../../../src/util/BinaryTreeMaker"
 
-export const isSymmetric = (root: TreeNode | null): boolean => {
+const isSymmetricBruteForce = (root: TreeNode | null): boolean => {
+  return true
+}
+
+const isSymmetricNaive = (root: TreeNode | null): boolean => {
+  return true
+}
+
+const isSymmetricOptimal = (root: TreeNode | null): boolean => {
   return true
 }
 
@@ -39,3 +47,9 @@ tree2.left.right = new TreeNode(3)
 tree2.right.right = new TreeNode(3)
 
 // console.log(isSymmetric(tree2)) // Output: false
+
+
+export const isSymmetric = {
+  isSymmetricBruteForce,
+  isSymmetricNaive,
+  isSymmetricOptimal}

@@ -26,62 +26,46 @@
 
 import { LinkedListNode } from "../../util/LinkedListMaker"
 
-// Generate a linked list from an array
-function generateList(arr: number[]): LinkedListNode | null {
-  if (arr.length === 0) {
-    return null
+
+
+export const addTwoNumbers = (l1: LinkedListNode | null, l2: LinkedListNode | null): LinkedListNode | null =>{
+  const dummyHead: LinkedListNode = new LinkedListNode(0);
+  let p: LinkedListNode | null = l1;
+  let q: LinkedListNode | null = l2;
+  let current: LinkedListNode | null = dummyHead;
+  let carry: number = 0;
+  
+  while (p !== null || q !== null) {
+      const x: number = p ? p.value : 0;
+      const y: number = q ? q.value : 0;
+      const sum: number = x + y + carry;
+      carry = Math.floor(sum / 10);
+      
+      current.next = new LinkedListNode(sum % 10);
+      current = current.next;
+      
+      if (p) p = p.next;
+      if (q) q = q.next;
   }
-
-  let head = new LinkedListNode(arr[0])
-
-  let current = head
-  for (let i = 1; i < arr.length; i++) {
-    current.next = new LinkedListNode(arr[i])
-    current = current.next
+  
+  if (carry > 0) {
+      current.next = new LinkedListNode(carry);
   }
-
-  return head
+  
+  return dummyHead.next;
 }
 
-export const addTwoNumbers = (
-  current1: LinkedListNode | null,
-  current2: LinkedListNode | null,
-): LinkedListNode | null => {
-  let previousNode = new LinkedListNode(25)
-  let dummyNode = previousNode
-  let carry = 0
+// Test cases
+const l1 = new LinkedListNode(2, new LinkedListNode(4, new LinkedListNode(3)));
+const l2 = new LinkedListNode(5, new LinkedListNode(6, new LinkedListNode(4)));
 
-  while (current1 !== null || current2 !== null || carry > 0) {
-    let value1 = 0
-    let value2 = 0
+// let result = addTwoNumbers(l1, l2);
+// let output = '';
+// while (result !== null) {
+//   output += `${result.value} -> `;
+//   result = result.next;
+// }
+// output += 'null';
+// console.log(output); // This will print the sum as a linked list
 
-    if (current1 !== null) {
-      value1 = current1.val || 0
-      current1 = current1.next
-    }
 
-    if (current2 !== null) {
-      value2 = current2.val || 0
-      current2 = current2.next
-    }
-
-    let sum = value1 + value2 + carry
-    let number = sum % 10
-
-    if (sum > 9) {
-      carry = 1
-    } else {
-      carry = 0
-    }
-
-    let currentNode = new LinkedListNode(number)
-    previousNode.next = currentNode
-    previousNode = currentNode
-  }
-  return dummyNode.next
-}
-
-// let list1 = generateList([2, 4, 3])
-// let list2 = generateList([5, 6, 4])
-
-// console.log(addTwoNumbers(list1, list2))

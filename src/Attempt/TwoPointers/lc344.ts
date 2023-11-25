@@ -18,9 +18,27 @@
 // s[i] is a printable ascii character.
 
 
-export const reverseString = (s: string[]): string[] =>{
+const reverseStringBruteForce = (s: string[]): string[] =>{
   
   return [" "]
+}
+
+
+const reverseStringNaive = (s: string[]): string[] =>{
+  
+  return [" "]
+}
+
+
+const reverseStringOptimal = (s: string[]): string[] =>{
+  
+  return [" "]
+}
+
+export const reverseString = {
+  reverseStringBruteForce,
+  reverseStringNaive,
+  reverseStringOptimal
 }
 
 

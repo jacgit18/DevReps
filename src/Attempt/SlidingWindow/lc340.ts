@@ -4,8 +4,22 @@
 
 // You can assume that K is less than or equal to the length of the given string.
 
-export const longest_substring_with_k_distinct = (str: string, k: number): number => {
+ const longest_substring_with_k_distinctBruteForce = (str: string, k: number): number => {
   return 0
+}
+
+const longest_substring_with_k_distinctNaive = (str: string, k: number): number => {
+  return 0
+}
+
+const longest_substring_with_k_distinctOptimal = (str: string, k: number): number => {
+  return 0
+}
+
+export const longest_substring_with_k_distinct = {
+  longest_substring_with_k_distinctBruteForce,
+  longest_substring_with_k_distinctNaive,
+  longest_substring_with_k_distinctOptimal
 }
 
 // console.log(

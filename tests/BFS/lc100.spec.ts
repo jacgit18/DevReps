@@ -16,7 +16,7 @@ const runTestCases = () => {
 
   ];
 
-    generateTestCases(OptimalBFSAttempt.lc100, testCases,' Attempt ');
+    generateTestCases(OptimalBFSAttempt.lc100.isSameTreeNaive, testCases,' Attempt ');
     generateTestCases(OptimalBFS_Solution.lc100, testCases,' Solution ',);
 
 

@@ -1,8 +1,8 @@
 export class LinkedListNode {
-  val: number
+  value: number
   next: LinkedListNode | null
-  constructor(val?: number, next?: LinkedListNode | null) {
-    this.val = val ?? 0
+  constructor(value?: number, next?: LinkedListNode | null) {
+    this.value = value ?? 0
     this.next = next ?? null
   }
 }

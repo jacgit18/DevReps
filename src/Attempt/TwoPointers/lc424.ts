@@ -22,6 +22,21 @@
 // s consists of only uppercase English letters.
 // 0 <= k <= s.length
 
-export const characterReplacement = (s: string, k: number): number => {
+const characterReplacementBruteForce = (s: string, k: number): number => {
   return 0
 }
+
+const characterReplacementNaive = (s: string, k: number): number => {
+  return 0
+}
+
+const characterReplacementOptimal = (s: string, k: number): number => {
+  return 0
+}
+
+export const characterReplacement = {
+  characterReplacementBruteForce,
+  characterReplacementNaive,
+  characterReplacementOptimal
+}
+

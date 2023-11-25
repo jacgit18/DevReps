@@ -24,7 +24,7 @@ const runTestCases = () => {
       ];
 
  
-  generateTestCases(OptimalSubsetBacktrackAttempt.lc17, testCases,' Attempt ');
+  generateTestCases(OptimalSubsetBacktrackAttempt.lc17.letterCombinationsNaive, testCases,' Attempt ');
 // figure out whats causing solution to hang
 //   generateTestCases(OptimalSubsetBacktrackSolution.lc17, testCases,' Solution ');
 

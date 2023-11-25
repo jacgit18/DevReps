@@ -24,7 +24,7 @@ const runTestCases = () => {
   ];
 
 
-  generateTestCases(OptimalSlidingWindowAttempt.lc904, testCasePlaceholder, ' Attempt ');
+  generateTestCases(OptimalSlidingWindowAttempt.lc904.totalFruitNaive, testCasePlaceholder, ' Attempt ');
   generateTestCases(OptimalSlidingWindSolution.lc904, testCases, ' Solution ');
 
 

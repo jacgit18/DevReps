@@ -24,8 +24,24 @@
 // 1 <= nums.length <= 105
 // 1 <= nums[i] <= 104
 
-export const smallestSubarrayWithGivenSum = (s: number, arr: number[]): number => {
+const smallestSubarrayWithGivenSumBruteForce = (s: number, arr: number[]): number => {
+  return 0
+}
+
+
+const smallestSubarrayWithGivenSumNaive = (s: number, arr: number[]): number => {
+  return 0
+}
+
+const smallestSubarrayWithGivenSumOptimal = (s: number, arr: number[]): number => {
   return 0
 }
 
 // console.log(smallestSubarrayWithGivenSum(3, [4, 6, 6, 8]))
+
+
+export const smallestSubarrayWithGivenSum = {
+  smallestSubarrayWithGivenSumBruteForce,
+  smallestSubarrayWithGivenSumNaive,
+  smallestSubarrayWithGivenSumOptimal
+}

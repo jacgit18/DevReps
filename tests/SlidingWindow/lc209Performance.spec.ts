@@ -31,7 +31,7 @@ const runTestCases = () => {
       ];
       
   
-      generateTestCases(OptimalSlidingWindowAttempt.lc209, testCasePlaceholder, ' Attempt ');
+      generateTestCases(OptimalSlidingWindowAttempt.lc209.smallestSubarrayWithGivenSumNaive, testCasePlaceholder, ' Attempt ');
       generateTestCases(OptimalSlidingWindSolution.lc209, testCases, ' Solution ');
       generateTestCases(OptimalSlidingWindSolution.lc209alt, testCases, 'Alt Solution ');
 

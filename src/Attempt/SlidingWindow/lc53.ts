@@ -25,6 +25,23 @@
 // 1 <= nums.length <= 105
 // -104 <= nums[i] <= 104
 
-export const maxSubArray = (nums: number[]): number => {
+const maxSubArrayBruteForce = (nums: number[]): number => {
   return 0
+}
+
+
+const maxSubArrayNaive = (nums: number[]): number => {
+  return 0
+}
+
+
+const maxSubArrayOptimal = (nums: number[]): number => {
+  return 0
+}
+
+
+export const maxSubArray = {
+  maxSubArrayBruteForce,
+  maxSubArrayNaive,
+  maxSubArrayOptimal
 }

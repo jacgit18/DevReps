@@ -24,33 +24,37 @@
 // 0 <= Node.val <= 9
 // It is guaranteed that the list represents a number that does not have leading zeros.
 
-import { LinkedListNode } from "../../util/LinkedListMaker"
+import { LinkedListNode, createLinkedListFromArray } from "../../util/LinkedListMaker"
 
-// Generate a linked list from an array
-function generateList(arr: number[]): LinkedListNode | null {
-  if (arr.length === 0) {
-    return null
-  }
 
-  let head = new LinkedListNode(arr[0])
 
-  let current = head
-  for (let i = 1; i < arr.length; i++) {
-    current.next = new LinkedListNode(arr[i])
-    current = current.next
-  }
-
-  return head
-}
-
-export const addTwoNumbers = (
+ const addTwoNumbersBruteForce = (
   current1: LinkedListNode | null,
   current2: LinkedListNode | null,
 ): LinkedListNode | null => {
   return null
 }
 
-let list1 = generateList([2, 4, 3])
-let list2 = generateList([5, 6, 4])
 
-// console.log(addTwoNumbers(list1, list2))
+ const addTwoNumbersNaive = (
+  current1: LinkedListNode | null,
+  current2: LinkedListNode | null,
+): LinkedListNode | null => {
+  return null
+}
+
+
+ const addTwoNumbersOptimal = (
+  current1: LinkedListNode | null,
+  current2: LinkedListNode | null,
+): LinkedListNode | null => {
+  return null
+}
+
+export const addTwoNumbers = {
+  addTwoNumbersBruteForce,
+  addTwoNumbersNaive,
+  addTwoNumbersOptimal
+}
+
+

@@ -32,8 +32,23 @@
 // 1 <= fruits.length <= 105
 // 0 <= fruits[i] < fruits.length
 
-export const totalFruit = (fruits: number[]): number => {
+ const totalFruitBruteForce = (fruits: number[]): number => {
   return 0
+}
+
+const totalFruitNaive = (fruits: number[]): number => {
+  return 0
+}
+
+const totalFruitOptimal = (fruits: number[]): number => {
+  return 0
+}
+
+
+export const totalFruit = {
+  totalFruitBruteForce,
+  totalFruitNaive,
+  totalFruitOptimal
 }
 
 // Example usage:

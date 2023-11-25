@@ -26,7 +26,7 @@ const runTestCases = () => {
  
 
 
-  generateTestCases(OptimalSlidingWindowAttempt.lc76, testCasePlaceholder, ' Attempt ');
+  generateTestCases(OptimalSlidingWindowAttempt.lc76.minWindowNaive, testCasePlaceholder, ' Attempt ');
   generateTestCases(OptimalSlidingWindSolution.lc76, testCases, ' Solution ');
 
 

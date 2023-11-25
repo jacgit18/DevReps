@@ -20,7 +20,7 @@ const runTestCases = () => {
   ];
 
 
-    generateTestCases(OptimalTwoPointerAttempt.lc344, testCasePlaceholder,' Attempt ');
+    generateTestCases(OptimalTwoPointerAttempt.lc344.reverseStringNaive, testCasePlaceholder,' Attempt ');
     generateTestCases(OptimalTwoPointerSolution.lc344.reverseStringTwoPointer, testCases,' Solution ',);
 
 

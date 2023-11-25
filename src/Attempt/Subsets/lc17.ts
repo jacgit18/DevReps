@@ -22,7 +22,37 @@
 // 0 <= digits.length <= 4
 // digits[i] is a digit in the range ['2', '9'].
 
-export const letterCombinations = (digits: string): string[] => {
+ const letterCombinationsBruteForce = (digits: string): string[] => {
+  const digitToLetters: { [key: string]: string[] } = {
+    "2": ["a", "b", "c"],
+    "3": ["d", "e", "f"],
+    "4": ["g", "h", "i"],
+    "5": ["j", "k", "l"],
+    "6": ["m", "n", "o"],
+    "7": ["p", "q", "r", "s"],
+    "8": ["t", "u", "v"],
+    "9": ["w", "x", "y", "z"],
+  }
+
+  return [" "]
+}
+
+const letterCombinationsNaive = (digits: string): string[] => {
+  const digitToLetters: { [key: string]: string[] } = {
+    "2": ["a", "b", "c"],
+    "3": ["d", "e", "f"],
+    "4": ["g", "h", "i"],
+    "5": ["j", "k", "l"],
+    "6": ["m", "n", "o"],
+    "7": ["p", "q", "r", "s"],
+    "8": ["t", "u", "v"],
+    "9": ["w", "x", "y", "z"],
+  }
+
+  return [" "]
+}
+
+const letterCombinationsOptimal = (digits: string): string[] => {
   const digitToLetters: { [key: string]: string[] } = {
     "2": ["a", "b", "c"],
     "3": ["d", "e", "f"],
@@ -41,3 +71,10 @@ export const letterCombinations = (digits: string): string[] => {
 // console.log(letterCombinations("23")) // Output: ["ad","ae","af","bd","be","bf","cd","ce","cf"]
 // console.log(letterCombinations("")) // Output: []
 // console.log(letterCombinations("2")) // Output: ["a","b","c"]
+
+
+export const letterCombinations = {
+  letterCombinationsBruteForce,
+  letterCombinationsNaive,
+  letterCombinationsOptimal
+}

@@ -17,7 +17,7 @@ const runTestCases = () => {
     { params: ["AABA", 0], expected: 2 },
   ];
 
-  generateTestCases(OptimalTwoPointerAttempt.lc424, testCasePlaceholder, 'Attempt');
+  generateTestCases(OptimalTwoPointerAttempt.lc424.characterReplacementNaive, testCasePlaceholder, 'Attempt');
   generateTestCases(OptimalTwoPointerSolution.lc424, testCases, 'Solution');
 };
 

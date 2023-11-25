@@ -22,7 +22,7 @@ export const ExtraAttempt = {
   flat: flattenObject,
   island: getNumberOfIslands,
   matchName: nameMatch,
-  lc2:addTwoNumbers,
+  lc2: addTwoNumbers,
   lc14: longestCommonPrefix,
   lc20: isValid,
   lc49: groupAnagrams,

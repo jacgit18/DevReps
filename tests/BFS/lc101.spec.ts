@@ -19,7 +19,7 @@ const runTestCases = () => {
 
   ];
 
-    generateTestCases(OptimalBFSAttempt.lc101, testCases,' Attempt ');
+    generateTestCases(OptimalBFSAttempt.lc101.isSymmetricNaive, testCases,' Attempt ');
     generateTestCases(OptimalBFS_Solution.lc101, testCases,' Solution ',);
 
 
