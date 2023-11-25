@@ -8,6 +8,7 @@
 
 // Input: nums = [1,2,2,4]
 // Output: [2,3]
+
 // Example 2:
 
 // Input: nums = [1,1]
