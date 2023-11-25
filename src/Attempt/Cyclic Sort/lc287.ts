@@ -20,8 +20,22 @@
 // 1 <= nums[i] <= n
 // All the integers in nums appear only once except for precisely one integer which appears two or more times.
 
-export const findDuplicate = (nums: number[]): number => {
+const findDuplicate = (nums: number[]): number => {
   return 0
+}
+
+const findDuplicate = (nums: number[]): number => {
+  return 0
+}
+
+const findDuplicate = (nums: number[]): number => {
+  return 0
+}
+
+export const nextGreatestLetter = {
+  BruteForce,
+  Naive,
+  Optimal
 }
 
 // Example usage:

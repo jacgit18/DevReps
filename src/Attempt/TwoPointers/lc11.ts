@@ -23,8 +23,22 @@
 // 2 <= n <= 105
 // 0 <= height[i] <= 104
 
-export const maxArea = (height: number[]): number => {
+const maxAreaBruteForce = (height: number[]): number => {
   return 0
+}
+
+const maxAreaNaive = (height: number[]): number => {
+  return 0
+}
+
+const maxAreaOptimal = (height: number[]): number => {
+  return 0
+}
+
+export const maxArea = {
+  maxAreaBruteForce,
+  maxAreaNaive,
+  maxAreaOptimal
 }
 
 // console.log(maxArea([1, 8, 6, 2, 5, 4, 8, 3, 7]))

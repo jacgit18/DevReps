@@ -20,7 +20,15 @@
 // nums[i] is either 0 or 1.
 // 0 <= k <= nums.length
 
-export const longestOnes = (nums: number[], k: number): number => {
+const longestOnesBruteForce = (nums: number[], k: number): number => {
+  return 0
+}
+
+const longestOnesNaive = (nums: number[], k: number): number => {
+  return 0
+}
+
+const longestOnesOptimal = (nums: number[], k: number): number => {
   return 0
 }
 
@@ -32,3 +40,9 @@ export const longestOnes = (nums: number[], k: number): number => {
 // const nums2 = [0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1]
 // const k2 = 3
 // console.log(longestOnes(nums2, k2)) // Output: 10
+
+export const longestOnes = {
+  longestOnesBruteForce,
+  longestOnesNaive,
+  longestOnesOptimal
+}

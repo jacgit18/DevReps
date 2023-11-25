@@ -19,7 +19,23 @@
 
 import { LinkedListNode } from "../../../src/util/LinkedListMaker"
 
-export const reverse_sub_list = (
+const reverse_sub_list = (
+  head: LinkedListNode | null,
+  p: number,
+  q: number,
+): LinkedListNode | null => {
+  return null
+}
+
+const reverse_sub_list = (
+  head: LinkedListNode | null,
+  p: number,
+  q: number,
+): LinkedListNode | null => {
+  return null
+}
+
+const reverse_sub_list = (
   head: LinkedListNode | null,
   p: number,
   q: number,
@@ -32,3 +48,9 @@ head.next = new LinkedListNode(2)
 head.next.next = new LinkedListNode(3)
 head.next.next.next = new LinkedListNode(4)
 head.next.next.next.next = new LinkedListNode(5)
+
+export const nextGreatestLetter = {
+  BruteForce,
+  Naive,
+  Optimal
+}

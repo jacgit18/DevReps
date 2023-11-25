@@ -25,7 +25,15 @@
 
 // The solution should correctly fill in the empty cells while adhering to Sudoku rules.
 
-export const sudokuSolver = (board: number[][]): number[][] => {
+const sudokuSolverBruteForce = (board: number[][]): number[][] => {
+  return [[0]]
+}
+
+const sudokuSolverNaive = (board: number[][]): number[][] => {
+  return [[0]]
+}
+
+const sudokuSolverOptimal = (board: number[][]): number[][] => {
   return [[0]]
 }
 
@@ -42,3 +50,10 @@ const inputBoard = [
 ]
 
 // console.log("Edge case one", sudokuSolver(inputBoard))
+
+
+export const sudokuSolver = {
+  sudokuSolverBruteForce,
+  sudokuSolverNaive,
+  sudokuSolverOptimal
+}

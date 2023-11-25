@@ -30,10 +30,24 @@
 // 3 <= nums.length <= 3000
 // -105 <= nums[i] <= 105
 
-export const threeSum = (nums: number[]): number[][] => {
+const threeSumBruteForce = (nums: number[]): number[][] => {
   return [[0]]
 }
 
+const threeSumNaive = (nums: number[]): number[][] => {
+  return [[0]]
+}
+
+const threeSumOptimal = (nums: number[]): number[][] => {
+  return [[0]]
+}
+
+
+export const threeSum = {
+  threeSumBruteForce,
+  threeSumNaive,
+  threeSumOptimal
+}
 // Example usage:
 // const nums1 = [-1, 0, 1, 2, -1, -4]
 // const result1 = threeSum(nums1)

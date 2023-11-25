@@ -25,7 +25,12 @@
 /**
  Do not return anything, modify nums in-place instead.
  */
-export const sortColors = (nums: number[]): void => {}
+const sortColorsBruteForce = (nums: number[]): void => {}
+
+const sortColorsNaive = (nums: number[]): void => {}
+
+const sortColorsOptimal = (nums: number[]): void => {}
+
 
 // Example usage:
 // const nums1 = [2, 0, 2, 1, 1, 0]
@@ -35,3 +40,9 @@ export const sortColors = (nums: number[]): void => {}
 // const nums2 = [2, 0, 1]
 // sortColors(nums2)
 // console.log(nums2)
+
+export const sortColors = {
+    sortColorsBruteForce,
+    sortColorsNaive,
+    sortColorsOptimal
+  }

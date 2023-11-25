@@ -5,6 +5,7 @@
 // Input: intervals = [[1,3],[2,6],[8,10],[15,18]]
 // Output: [[1,6],[8,10],[15,18]]
 // Explanation: Since intervals [1,3] and [2,6] overlap, merge them into [1,6].
+
 // Example 2:
 
 // Input: intervals = [[1,4],[4,5]]
@@ -17,7 +18,15 @@
 // intervals[i].length == 2
 // 0 <= starti <= endi <= 104
 
-export const merge = (intervals: number[][]): number[][] => {
+const merge = (intervals: number[][]): number[][] => {
+  return [[0]]
+}
+
+const merge = (intervals: number[][]): number[][] => {
+  return [[0]]
+}
+
+const merge = (intervals: number[][]): number[][] => {
   return [[0]]
 }
 
@@ -35,3 +44,9 @@ export const merge = (intervals: number[][]): number[][] => {
 //   [4, 5],
 // ])
 // console.log(example2) // Output: [[1, 5]]
+
+export const nextGreatestLetter = {
+  BruteForce,
+  Naive,
+  Optimal
+}

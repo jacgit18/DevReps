@@ -20,7 +20,16 @@
 // -10 <= nums[i] <= 10
 // All the numbers of nums are unique.
 
-export const subsets = (nums: number[]): number[][] => {
+const subsetsBruteForce = (nums: number[]): number[][] => {
+  return [[0]]
+}
+
+const subsetsNaive = (nums: number[]): number[][] => {
+  return [[0]]
+}
+
+
+const subsetsOptimal = (nums: number[]): number[][] => {
   return [[0]]
 }
 
@@ -30,3 +39,10 @@ export const subsets = (nums: number[]): number[][] => {
 
 // const example2 = subsets([0])
 // console.log(example2)
+
+
+export const subsets = {
+  subsetsBruteForce,
+  subsetsNaive,
+  subsetsOptimal
+}

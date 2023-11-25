@@ -18,8 +18,22 @@
 // 2 <= nums.length <= 104
 // 1 <= nums[i] <= 104
 
-export const findErrorNums = (nums: number[]): number[] => {
+const findErrorNums = (nums: number[]): number[] => {
   return [0]
+}
+
+const findErrorNums = (nums: number[]): number[] => {
+  return [0]
+}
+
+const findErrorNums = (nums: number[]): number[] => {
+  return [0]
+}
+
+export const nextGreatestLetter = {
+  BruteForce,
+  Naive,
+  Optimal
 }
 
 // Example usage:

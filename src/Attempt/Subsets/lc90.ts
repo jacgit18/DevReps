@@ -19,7 +19,15 @@
 // 1 <= nums.length <= 10
 // -10 <= nums[i] <= 10
 
-export const subsetsWithDup = (nums: number[]): number[][] => {
+const subsetsWithDupBruteForce = (nums: number[]): number[][] => {
+  return [[0]]
+}
+
+const subsetsWithDupNaive = (nums: number[]): number[][] => {
+  return [[0]]
+}
+
+const subsetsWithDupOptimal = (nums: number[]): number[][] => {
   return [[0]]
 }
 
@@ -29,3 +37,10 @@ export const subsetsWithDup = (nums: number[]): number[][] => {
 
 // const example2 = subsetsWithDup([0])
 // console.log(example2)
+
+
+export const subsetsWithDup = {
+  subsetsWithDupBruteForce,
+  subsetsWithDupNaive,
+  subsetsWithDupOptimal
+}

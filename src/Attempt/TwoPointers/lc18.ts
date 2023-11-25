@@ -21,8 +21,22 @@
 // -109 <= nums[i] <= 109
 // -109 <= target <= 109
 
-export const fourSum = (nums: number[], target: number): number[][] => {
+const fourSumBruteForce = (nums: number[], target: number): number[][] => {
   return [[0]]
+}
+
+const fourSumNaive = (nums: number[], target: number): number[][] => {
+  return [[0]]
+}
+
+const fourSumOptimal = (nums: number[], target: number): number[][] => {
+  return [[0]]
+}
+
+export const fourSum = {
+  fourSumBruteForce,
+  fourSumNaive,
+  fourSumOptimal
 }
 
 // Example usage:

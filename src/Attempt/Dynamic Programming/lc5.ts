@@ -16,8 +16,23 @@
 // 1 <= s.length <= 1000
 // s consist of only digits and English letters.
 
-export const longestPalindrome = (s: string): string => {
+const longestPalindrome = (s: string): string => {
   return ""
+}
+
+const longestPalindrome = (s: string): string => {
+  return ""
+}
+
+const longestPalindrome = (s: string): string => {
+  return ""
+}
+
+
+export const nextGreatestLetter = {
+  BruteForce,
+  Naive,
+  Optimal
 }
 
 // Example usage:

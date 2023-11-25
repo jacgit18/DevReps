@@ -19,9 +19,23 @@
 // 1 <= nums[i] <= 1000
 // 0 <= k <= 106
 
-export const numSubarrayProductLessThanK = (nums: number[], k: number): number => {
+const numSubarrayProductLessThanKBruteForce = (nums: number[], k: number): number => {
   return 0
 }
 
+const numSubarrayProductLessThanKNaive = (nums: number[], k: number): number => {
+  return 0
+}
+
+const numSubarrayProductLessThanKOptimal = (nums: number[], k: number): number => {
+  return 0
+}
 // console.log(numSubarrayProductLessThanK([10, 5, 2, 6], 100))
 // console.log(numSubarrayProductLessThanK([1, 2, 3], 0))
+
+
+export const numSubarrayProductLessThanK = {
+  numSubarrayProductLessThanKBruteForce,
+  numSubarrayProductLessThanKNaive,
+  numSubarrayProductLessThanKOptimal
+}

@@ -21,7 +21,15 @@
 // -10 <= nums[i] <= 10
 // All the integers of nums are unique.
 
-export const permute = (nums: number[]): number[][] => {
+const permuteBruteForce = (nums: number[]): number[][] => {
+  return [[0]]
+}
+
+const permuteNaive = (nums: number[]): number[][] => {
+  return [[0]]
+}
+
+const permuteOptimal = (nums: number[]): number[][] => {
   return [[0]]
 }
 
@@ -34,3 +42,9 @@ export const permute = (nums: number[]): number[][] => {
 
 // const example3 = permute([1])
 // console.log(example3)
+
+export const permute = {
+  permuteBruteForce,
+  permuteNaive,
+  permuteOptimal
+}

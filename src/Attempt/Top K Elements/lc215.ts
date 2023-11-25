@@ -101,10 +101,25 @@ class MinHeap {
   }
 }
 
-export const findKthLargest = (nums: number[], k: number): number | undefined => {
+const findKthLargestBruteForce = (nums: number[], k: number): number | undefined => {
+  return 0
+}
+
+const findKthLargestNaive = (nums: number[], k: number): number | undefined => {
+  return 0
+}
+
+const findKthLargestOptimal = (nums: number[], k: number): number | undefined => {
   return 0
 }
 
 // // Example usage:
 // console.log(findKthLargest([3, 2, 1, 5, 6, 4], 2)) // Output: 5
 // console.log(findKthLargest([3, 2, 3, 1, 2, 4, 5, 5, 6], 4)) // Output: 4
+
+
+export const findKthLargest = {
+  findKthLargestBruteForce,
+  findKthLargestNaive,
+  findKthLargestOptimal
+}

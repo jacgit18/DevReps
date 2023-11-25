@@ -23,7 +23,15 @@
 // nums is guaranteed to be rotated at some pivot.
 // -104 <= target <= 104
 
-export const search = (nums: number[], target: number): boolean => {
+const searchBruteForce = (nums: number[], target: number): boolean => {
+  return true
+}
+
+const searchNaive = (nums: number[], target: number): boolean => {
+  return true
+}
+
+const searchOptimal = (nums: number[], target: number): boolean => {
   return true
 }
 
@@ -35,3 +43,10 @@ export const search = (nums: number[], target: number): boolean => {
 // const nums2 = [2, 5, 6, 0, 0, 1, 2]
 // const target2 = 3
 // console.log(search(nums2, target2)) // Output: false
+
+
+export const search = {
+  searchBruteForce,
+  searchNaive,
+  searchOptimal
+}

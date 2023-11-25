@@ -39,8 +39,22 @@
 // -100 <= nums[i] <= 100
 // nums is sorted in non-decreasing order.
 
-export const removeDuplicates = (nums: number[]): number => {
+const removeDuplicatesBruteForce = (nums: number[]): number => {
   return 0
+}
+
+const removeDuplicatesNaive = (nums: number[]): number => {
+  return 0
+}
+
+const removeDuplicatesOptimal = (nums: number[]): number => {
+  return 0
+}
+
+export const removeDuplicates = {
+  removeDuplicatesBruteForce,
+  removeDuplicatesNaive,
+  removeDuplicatesOptimal
 }
 
 // Example usage:

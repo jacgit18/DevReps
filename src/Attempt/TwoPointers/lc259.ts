@@ -18,7 +18,15 @@
 // Input: nums = [0], and target = 0
 // Output: 0
 
-export const threeSumSmaller = (nums: number[], target: number): number => {
+const threeSumSmallerBruteForce = (nums: number[], target: number): number => {
+  return 0
+}
+
+const threeSumSmallerNaive = (nums: number[], target: number): number => {
+  return 0
+}
+
+const threeSumSmallerOptimal = (nums: number[], target: number): number => {
   return 0
 }
 
@@ -36,3 +44,9 @@ export const threeSumSmaller = (nums: number[], target: number): number => {
 // const nums3 = [0]
 // const result3 = threeSumSmaller(nums3, target2)
 // console.log(result3) // Output: 0
+
+export const threeSumSmaller = {
+  threeSumSmallerBruteForce,
+  threeSumSmallerNaive,
+  threeSumSmallerOptimal
+}

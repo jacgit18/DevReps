@@ -35,7 +35,15 @@
 // tasks[i] is upper-case English letter.
 // The integer n is in the range [0, 100].
 
-export const leastInterval = (tasks: string[], n: number): number => {
+const leastIntervalBruteForce = (tasks: string[], n: number): number => {
+  return 0
+}
+
+const leastIntervalNaive = (tasks: string[], n: number): number => {
+  return 0
+}
+
+const leastIntervalOptimal = (tasks: string[], n: number): number => {
   return 0
 }
 
@@ -48,3 +56,10 @@ export const leastInterval = (tasks: string[], n: number): number => {
 
 // const example3 = leastInterval(["A", "A", "A", "A", "A", "A", "B", "C", "D", "E", "F", "G"], 2)
 // console.log(example3) // Output: 16
+
+
+export const leastInterval = {
+  leastIntervalBruteForce,
+  leastIntervalNaive,
+  leastIntervalOptimal
+}

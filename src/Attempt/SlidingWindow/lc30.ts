@@ -38,10 +38,25 @@
 // 1 <= words[i].length <= 30
 // s and words[i] consist of lowercase English letters.
 
-export const findSubstring = (s: string, words: string[]): number[] => {
+const findSubstringBruteForce = (s: string, words: string[]): number[] => {
+  return [0]
+}
+
+const findSubstringNaive = (s: string, words: string[]): number[] => {
+  return [0]
+}
+
+const findSubstringOptimal = (s: string, words: string[]): number[] => {
   return [0]
 }
 
 // console.log(findSubstring("barfoothefoobarman", ["foo","bar"])) // [0,9]
 // console.log(findSubstring("wordgoodgoodgoodbestword",  ["word","good","best","word"])) // []
 // console.log(findSubstring("barfoofoobarthefoobarman", ["bar","foo","the"])) // [6,9,12]
+
+
+export const findSubstring = {
+  findSubstringBruteForce,
+  findSubstringNaive,
+  findSubstringOptimal
+}

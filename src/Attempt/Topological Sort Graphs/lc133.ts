@@ -57,7 +57,15 @@ class GraphNode {
   }
 }
 
-export const cloneGrapher = (node: GraphNode | null): GraphNode | null => {
+const cloneGrapherBruteForce = (node: GraphNode | null): GraphNode | null => {
+  return null
+}
+
+const cloneGrapherNaive = (node: GraphNode | null): GraphNode | null => {
+  return null
+}
+
+const cloneGrapherOptimal = (node: GraphNode | null): GraphNode | null => {
   return null
 }
 
@@ -72,5 +80,12 @@ node2.neighbors = [node1, node3]
 node3.neighbors = [node2, node4]
 node4.neighbors = [node1, node3]
 
-const clonedGraph = cloneGrapher(node1)
+// const clonedGraph = cloneGrapher(node1)
 // console.log(clonedGraph)
+
+
+export const cloneGrapher = {
+  cloneGrapherBruteForce,
+  cloneGrapherNaive,
+  cloneGrapherOptimal
+}

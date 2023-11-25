@@ -10,7 +10,15 @@
 // Input: [[7,10],[2,4]]
 // Output: 1
 
-export const minMeetingRooms = (intervals: number[][]): number => {
+const minMeetingRooms = (intervals: number[][]): number => {
+  return 0
+}
+
+const minMeetingRooms = (intervals: number[][]): number => {
+  return 0
+}
+
+const minMeetingRooms = (intervals: number[][]): number => {
   return 0
 }
 
@@ -27,3 +35,9 @@ export const minMeetingRooms = (intervals: number[][]): number => {
 //   [2, 4],
 // ])
 // console.log(example2) // Output: 1
+
+export const nextGreatestLetter = {
+  BruteForce,
+  Naive,
+  Optimal
+}

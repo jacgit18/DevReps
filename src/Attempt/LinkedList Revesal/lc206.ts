@@ -32,9 +32,30 @@ head.next.next.next.next = new LinkedListNode(10)
 let array1 = [1, 5, 7, 10]
 let linkedList = createLinkedListFromArray(array1)
 
-export const reverseList = function (
+const reverseList = function (
   head: LinkedListNode | null,
   prev: LinkedListNode | null = null,
 ): LinkedListNode | null {
   return null
+}
+
+const reverseList = function (
+  head: LinkedListNode | null,
+  prev: LinkedListNode | null = null,
+): LinkedListNode | null {
+  return null
+}
+
+const reverseList = function (
+  head: LinkedListNode | null,
+  prev: LinkedListNode | null = null,
+): LinkedListNode | null {
+  return null
+}
+
+
+export const nextGreatestLetter = {
+  BruteForce,
+  Naive,
+  Optimal
 }

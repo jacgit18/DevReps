@@ -21,6 +21,21 @@
 // 1 <= nums.length <= 100
 // 0 <= nums[i] <= 400
 
-export const rob = (nums: number[]): number => {
+const rob = (nums: number[]): number => {
   return 0
+}
+
+const rob = (nums: number[]): number => {
+  return 0
+}
+
+const rob = (nums: number[]): number => {
+  return 0
+}
+
+
+export const nextGreatestLetter = {
+  BruteForce,
+  Naive,
+  Optimal
 }

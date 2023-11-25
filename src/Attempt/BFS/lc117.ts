@@ -45,8 +45,22 @@ class NodeDiff {
   }
 }
 
-export const connect = (root: NodeDiff | null): NodeDiff | null => {
+const connect = (root: NodeDiff | null): NodeDiff | null => {
   return null
+}
+
+const connect = (root: NodeDiff | null): NodeDiff | null => {
+  return null
+}
+
+const connect = (root: NodeDiff | null): NodeDiff | null => {
+  return null
+}
+
+export const nextGreatestLetter = {
+  BruteForce,
+  Naive,
+  Optimal
 }
 
 // Example usage:

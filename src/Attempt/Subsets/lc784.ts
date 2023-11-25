@@ -17,7 +17,15 @@
 // 1 <= s.length <= 12
 // s consists of lowercase English letters, uppercase English letters, and digits.
 
-export const letterCasePermutation = (s: string): string[] => {
+const letterCasePermutationBruteForce = (s: string): string[] => {
+  return [" "]
+}
+
+const letterCasePermutationNaive = (s: string): string[] => {
+  return [" "]
+}
+
+const letterCasePermutationOptimal = (s: string): string[] => {
   return [" "]
 }
 
@@ -27,3 +35,9 @@ export const letterCasePermutation = (s: string): string[] => {
 
 // const example2 = letterCasePermutation("3z4")
 // console.log(example2)
+
+export const letterCasePermutation = {
+  letterCasePermutationBruteForce,
+  letterCasePermutationNaive,
+  letterCasePermutationOptimal
+}

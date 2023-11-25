@@ -27,7 +27,15 @@
 // expression consists of digits and the operator '+', '-', and '*'.
 // All the integer values in the input expression are in the range [0, 99].
 
-export const diffWaysToCompute = (expression: string): number[] => {
+const diffWaysToComputeBruteForce = (expression: string): number[] => {
+  return [0]
+}
+
+const diffWaysToComputeNaive = (expression: string): number[] => {
+  return [0]
+}
+
+const diffWaysToComputeOptimal = (expression: string): number[] => {
   return [0]
 }
 
@@ -37,3 +45,10 @@ export const diffWaysToCompute = (expression: string): number[] => {
 
 // const example2 = diffWaysToCompute("2*3-4*5")
 // console.log(example2)
+
+
+export const diffWaysToCompute = {
+  diffWaysToComputeBruteForce,
+  diffWaysToComputeNaive,
+  diffWaysToComputeOptimal
+}

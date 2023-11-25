@@ -23,7 +23,15 @@
 // 1 <= nums.length <= 2500
 // -104 <= nums[i] <= 104
 
-export const lengthOfLIS = (nums: number[]): number => {
+const lengthOfLISBruteForce = (nums: number[]): number => {
+  return 0
+}
+
+const lengthOfLISNaive = (nums: number[]): number => {
+  return 0
+}
+
+const lengthOfLISOptimal = (nums: number[]): number => {
   return 0
 }
 
@@ -36,3 +44,10 @@ export const lengthOfLIS = (nums: number[]): number => {
 
 // const nums3 = [7, 7, 7, 7, 7, 7, 7]
 // console.log(lengthOfLIS(nums3)) // Output: 1
+
+
+export const lengthOfLIS = {
+  lengthOfLISBruteForce,
+  lengthOfLISNaive,
+  lengthOfLISOptimal
+}

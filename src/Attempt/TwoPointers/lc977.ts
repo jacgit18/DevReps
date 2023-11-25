@@ -18,7 +18,15 @@
 // -104 <= nums[i] <= 104
 // nums is sorted in non-decreasing order.
 
-export const sortedSquares = (arr: number[]): number[] => {
+const sortedSquaresBruteForce = (arr: number[]): number[] => {
+  return [0]
+}
+
+const sortedSquaresNaive = (arr: number[]): number[] => {
+  return [0]
+}
+
+const sortedSquaresOptimal = (arr: number[]): number[] => {
   return [0]
 }
 
@@ -27,3 +35,10 @@ export const sortedSquares = (arr: number[]): number[] => {
 
 // console.log(`Squares: ${sortedSquares([-2, -1, 0, 2, 3])}`)
 // console.log(`Squares: ${sortedSquares([-3, -1, 0, 1, 2])}`)
+
+
+export const sortedSquares = {
+  sortedSquaresBruteForce,
+  sortedSquaresNaive,
+  sortedSquaresOptimal
+}

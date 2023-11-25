@@ -25,7 +25,15 @@
 // -5000 <= nums[i] <= 5000
 // nums is sorted and rotated between 1 and n times.
 
-export const findMinTwo = (nums: number[]): number => {
+const findMinTwoBruteForce = (nums: number[]): number => {
+  return 0
+}
+
+const findMinTwoNaive = (nums: number[]): number => {
+  return 0
+}
+
+const findMinTwoOptimal = (nums: number[]): number => {
   return 0
 }
 
@@ -38,3 +46,10 @@ export const findMinTwo = (nums: number[]): number => {
 
 // const nums3 = [11, 13, 15, 17]
 // console.log(findMinTwo(nums3)) // Output: 11
+
+
+export const findMinTwo = {
+  findMinTwoBruteForce,
+  findMinTwoNaive,
+  findMinTwoOptimal
+}

@@ -17,8 +17,23 @@
 // 1 <= s.length, t.length <= 5 * 104
 // s and t consist of lowercase English letters.
 
-export const isAnagram = (s: string, t: string): boolean => {
+const isAnagram = (s: string, t: string): boolean => {
   return true
 }
 
+const isAnagram = (s: string, t: string): boolean => {
+  return true
+}
+
+const isAnagram = (s: string, t: string): boolean => {
+  return true
+}
+
+
+
+export const nextGreatestLetter = {
+  BruteForce,
+  Naive,
+  Optimal
+}
 // console.log(isAnagram("anagram", "nagaram")) // returns true

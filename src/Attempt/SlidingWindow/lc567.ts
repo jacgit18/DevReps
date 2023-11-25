@@ -18,7 +18,15 @@
 // 1 <= s1.length, s2.length <= 104
 // s1 and s2 consist of lowercase English letters.
 
-export const checkInclusion = (s1: string, s2: string): boolean => {
+const checkInclusionBruteForce = (s1: string, s2: string): boolean => {
+  return true
+}
+
+const checkInclusionNaive = (s1: string, s2: string): boolean => {
+  return true
+}
+
+const checkInclusionOptimal = (s1: string, s2: string): boolean => {
   return true
 }
 
@@ -28,3 +36,10 @@ export const checkInclusion = (s1: string, s2: string): boolean => {
 
 // console.log(checkInclusion(s1, s2)) // true
 // console.log(checkInclusion(s1, s3)) // false
+
+
+export const checkInclusion = {
+  checkInclusionBruteForce,
+  checkInclusionNaive,
+  checkInclusionOptimal
+}

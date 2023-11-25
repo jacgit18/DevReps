@@ -16,9 +16,18 @@
 // Output:
 //  true
 
-export const canAttendMeetings = (intervals: number[][]): boolean => {
+const canAttendMeetings = (intervals: number[][]): boolean => {
   return true
 }
+
+const canAttendMeetings = (intervals: number[][]): boolean => {
+  return true
+}
+
+const canAttendMeetings = (intervals: number[][]): boolean => {
+  return true
+}
+
 
 // // Example usage:
 // const example1 = canAttendMeetings([
@@ -34,3 +43,9 @@ export const canAttendMeetings = (intervals: number[][]): boolean => {
 //   [6, 9],
 // ])
 // console.log(example2) // Output: false (overlapping meetings)
+
+export const nextGreatestLetter = {
+  BruteForce,
+  Naive,
+  Optimal
+}

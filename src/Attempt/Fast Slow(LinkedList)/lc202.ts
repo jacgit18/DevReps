@@ -27,10 +27,25 @@
 // 1 <= n <= 231 - 1
 
 // fast slow pointer pattern is,nt just for linked list
-export const isHappy = (n: number): boolean => {
+const isHappy = (n: number): boolean => {
+  return true
+}
+
+const isHappy = (n: number): boolean => {
+  return true
+}
+
+const isHappy = (n: number): boolean => {
   return true
 }
 
 // Example usage:
 // console.log(isHappy(19)) // Output: true
 // console.log(isHappy(2)) // Output: false
+
+
+export const nextGreatestLetter = {
+  BruteForce,
+  Naive,
+  Optimal
+}

@@ -23,9 +23,24 @@
 // -3 * 104 <= nums[i] <= 3 * 104
 // Each element in the array appears twice except for one element which appears only once.
 
-export const singleNumber = (nums: number[]): number => {
+const singleNumber = (nums: number[]): number => {
   return 0
 }
+
+const singleNumber = (nums: number[]): number => {
+  return 0
+}
+
+const singleNumber = (nums: number[]): number => {
+  return 0
+}
+
+export const nextGreatestLetter = {
+  BruteForce,
+  Naive,
+  Optimal
+}
+
 
 // Example usage:
 // const nums1 = [2, 2, 1]

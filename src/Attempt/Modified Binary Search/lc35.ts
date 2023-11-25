@@ -24,7 +24,15 @@
 // nums contains distinct values sorted in ascending order.
 // -104 <= target <= 104
 
-export const searchInsert = (nums: number[], target: number): number => {
+const searchInsertBruteForce = (nums: number[], target: number): number => {
+  return 0
+}
+
+const searchInsertNaive = (nums: number[], target: number): number => {
+  return 0
+}
+
+const searchInsertOptimal = (nums: number[], target: number): number => {
   return 0
 }
 
@@ -37,3 +45,10 @@ export const searchInsert = (nums: number[], target: number): number => {
 
 // const example3 = searchInsert([1, 3, 5, 6], 7)
 // console.log(example3)
+
+
+export const searchInsert = {
+  searchInsertBruteForce,
+  searchInsertNaive,
+  searchInsertOptimal
+}

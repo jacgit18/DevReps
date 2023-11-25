@@ -1,7 +1,21 @@
 import { DoublyLinkedListNode } from "../../../src/util/DoubleLinkedListMaker"
 
-export const isDoublyCyclic = (head: DoublyLinkedListNode | null): boolean => {
+const isDoublyCyclic = (head: DoublyLinkedListNode | null): boolean => {
   return true
+}
+
+const isDoublyCyclic = (head: DoublyLinkedListNode | null): boolean => {
+  return true
+}
+
+const isDoublyCyclic = (head: DoublyLinkedListNode | null): boolean => {
+  return true
+}
+
+export const nextGreatestLetter = {
+  BruteForce,
+  Naive,
+  Optimal
 }
 
 // Example usage:

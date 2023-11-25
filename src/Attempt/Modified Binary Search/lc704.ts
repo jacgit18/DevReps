@@ -21,9 +21,19 @@
 // All the integers in nums are unique.
 // nums is sorted in ascending order.
 
-export const searchBin = (nums: number[], target: number): number => {
+const searchBinBruteForce = (nums: number[], target: number): number => {
   return 0
 }
+
+const searchBinNaive = (nums: number[], target: number): number => {
+  return 0
+}
+
+
+const searchBinOptimal = (nums: number[], target: number): number => {
+  return 0
+}
+
 
 // Example usage:
 // const nums1 = [-1, 0, 3, 5, 9, 12]
@@ -33,3 +43,10 @@ export const searchBin = (nums: number[], target: number): number => {
 // const nums2 = [-1, 0, 3, 5, 9, 12]
 // const target2 = 2
 // console.log(searchBin(nums2, target2)) // Output: -1
+
+
+export const searchBin = {
+  searchBinBruteForce,
+  searchBinNaive,
+  searchBinOptimal
+}

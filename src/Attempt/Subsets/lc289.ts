@@ -27,7 +27,10 @@
 // 1 <= m, n <= 25
 // board[i][j] is 0 or 1.
 
-export const gameOfLife = (board: number[][]): void => {}
+const gameOfLifeBruteForce = (board: number[][]): void => {}
+const gameOfLifeNaive = (board: number[][]): void => {}
+const gameOfLifeOptimal = (board: number[][]): void => {}
+
 
 // // Example usage:
 // const board1 = [
@@ -45,3 +48,10 @@ export const gameOfLife = (board: number[][]): void => {}
 // ]
 // gameOfLife(board2)
 // console.log(board2)
+
+
+export const gameOfLife = {
+    gameOfLifeBruteForce,
+    gameOfLifeNaive,
+    gameOfLifeOptimal
+  }

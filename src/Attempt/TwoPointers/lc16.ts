@@ -22,8 +22,22 @@
 // -1000 <= nums[i] <= 1000
 // -104 <= target <= 104
 
-export const threeSumClosest = (nums: number[], target: number): number => {
+const threeSumClosestBruteForce = (nums: number[], target: number): number => {
   return 0
+}
+
+const threeSumClosestNaive = (nums: number[], target: number): number => {
+  return 0
+}
+
+const threeSumClosestOptimal = (nums: number[], target: number): number => {
+  return 0
+}
+
+export const threeSumClosest = {
+  threeSumClosestBruteForce,
+  threeSumClosestNaive,
+  threeSumClosestOptimal
 }
 
 // Example usage:

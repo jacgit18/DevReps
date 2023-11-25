@@ -34,10 +34,17 @@
 // All the integers of nums are unique.
 // nums is sorted and rotated between 1 and n times.
 
-export const findMin = (nums: number[]): number => {
+const findMinBruteForce = (nums: number[]): number => {
   return 0
 }
 
+const findMinNaive = (nums: number[]): number => {
+  return 0
+}
+
+const findMinOptimal = (nums: number[]): number => {
+  return 0
+}
 // // Example usage:
 // const nums1 = [3, 4, 5, 1, 2]
 // console.log(findMin(nums1)) // Output: 1
@@ -47,3 +54,10 @@ export const findMin = (nums: number[]): number => {
 
 // const nums3 = [11, 13, 15, 17]
 // console.log(findMin(nums3)) // Output: 11
+
+
+export const findMin = {
+  findMinBruteForce,
+  findMinNaive,
+  findMinOptimal
+}

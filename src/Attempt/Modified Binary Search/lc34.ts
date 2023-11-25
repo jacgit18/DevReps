@@ -26,7 +26,15 @@
 // nums is a non-decreasing array.
 // -109 <= target <= 109
 
-export const searchRange = (nums: number[], target: number): number[] => {
+const searchRangeBruteForce = (nums: number[], target: number): number[] => {
+  return [0]
+}
+
+const searchRangeNaive = (nums: number[], target: number): number[] => {
+  return [0]
+}
+
+const searchRangeOptimal = (nums: number[], target: number): number[] => {
   return [0]
 }
 
@@ -39,3 +47,10 @@ export const searchRange = (nums: number[], target: number): number[] => {
 
 // const example3 = searchRange([], 0)
 // console.log(example3)
+
+
+export const searchRange = {
+  searchRangeBruteForce,
+  searchRangeNaive,
+  searchRangeOptimal
+}

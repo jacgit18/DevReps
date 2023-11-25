@@ -23,7 +23,15 @@
 // newInterval.length == 2
 // 0 <= start <= end <= 105
 
-export const insertInterval = (intervals: number[][], newInterval: number[]): number[][] => {
+const insertInterval = (intervals: number[][], newInterval: number[]): number[][] => {
+  return [[0]]
+}
+
+const insertInterval = (intervals: number[][], newInterval: number[]): number[][] => {
+  return [[0]]
+}
+
+const insertInterval = (intervals: number[][], newInterval: number[]): number[][] => {
   return [[0]]
 }
 
@@ -48,3 +56,10 @@ export const insertInterval = (intervals: number[][], newInterval: number[]): nu
 //   [4, 8],
 // )
 // console.log(example2) // Output: [[1, 2], [3, 10], [12, 16]]
+
+
+export const nextGreatestLetter = {
+  BruteForce,
+  Naive,
+  Optimal
+}

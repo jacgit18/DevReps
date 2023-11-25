@@ -21,8 +21,22 @@
 // 1 <= s.length <= 1000
 // s consists of lowercase English letters.
 
-export const countSubstrings = (s: string): number => {
+const countSubstrings = (s: string): number => {
   return 0
+}
+
+const countSubstrings = (s: string): number => {
+  return 0
+}
+
+const countSubstrings = (s: string): number => {
+  return 0
+}
+
+export const nextGreatestLetter = {
+  BruteForce,
+  Naive,
+  Optimal
 }
 
 // console.log(countSubstrings("abc"))

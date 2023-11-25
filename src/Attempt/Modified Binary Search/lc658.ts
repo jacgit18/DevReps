@@ -22,9 +22,18 @@
 // arr is sorted in ascending order.
 // -104 <= arr[i], x <= 104
 
-export const findClosestElements = (arr: number[], k: number, x: number): number[] => {
+const findClosestElementsBruteForce = (arr: number[], k: number, x: number): number[] => {
   return [0]
 }
+
+const findClosestElementsNaive = (arr: number[], k: number, x: number): number[] => {
+  return [0]
+}
+
+const findClosestElementsOptimal = (arr: number[], k: number, x: number): number[] => {
+  return [0]
+}
+
 
 // // Example usage:
 // const arr1 = [1, 2, 3, 4, 5]
@@ -36,3 +45,10 @@ export const findClosestElements = (arr: number[], k: number, x: number): number
 // const k2 = 4
 // const x2 = -1
 // console.log(findClosestElements(arr2, k2, x2)) // Output: [1, 2, 3, 4]
+
+
+export const findClosestElements = {
+  findClosestElementsBruteForce,
+  findClosestElementsNaive,
+  findClosestElementsOptimal
+}

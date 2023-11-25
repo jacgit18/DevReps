@@ -68,8 +68,22 @@
 
 import { LinkedListNode } from "../../../src/util/LinkedListMaker"
 
-export const hasCycle = (head: LinkedListNode | null): boolean => {
+const hasCycle = (head: LinkedListNode | null): boolean => {
   return true
+}
+
+const hasCycle = (head: LinkedListNode | null): boolean => {
+  return true
+}
+
+const hasCycle = (head: LinkedListNode | null): boolean => {
+  return true
+}
+
+export const nextGreatestLetter = {
+  BruteForce,
+  Naive,
+  Optimal
 }
 
 // Example usage:

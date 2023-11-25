@@ -32,8 +32,22 @@
 
 import { TreeNode } from "../../../src/util/BinaryTreeMaker"
 
-export const isValidSequence = (root: TreeNode | null, arr: number[]): boolean => {
+const isValidSequence = (root: TreeNode | null, arr: number[]): boolean => {
   return true
+}
+
+const isValidSequence = (root: TreeNode | null, arr: number[]): boolean => {
+  return true
+}
+
+const isValidSequence = (root: TreeNode | null, arr: number[]): boolean => {
+  return true
+}
+
+export const nextGreatestLetter = {
+  BruteForce,
+  Naive,
+  Optimal
 }
 
 // Example usage:

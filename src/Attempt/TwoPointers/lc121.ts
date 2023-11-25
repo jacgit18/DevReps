@@ -22,10 +22,24 @@
 // 1 <= prices.length <= 105
 // 0 <= prices[i] <= 104
 
-export const maxProfit = (prices: number[]): number => {
+const maxProfitBruteForce = (prices: number[]): number => {
   return 0
 }
 
+const maxProfitNaive = (prices: number[]): number => {
+  return 0
+}
+
+const maxProfitOptimal = (prices: number[]): number => {
+  return 0
+}
 // Example usage:
 // console.log(maxProfit([7, 1, 5, 3, 6, 4])) // Output: 5
 // console.log(maxProfit([7, 6, 4, 3, 1])) // Output: 0
+
+
+export const maxProfit = {
+  maxProfitBruteForce,
+  maxProfitNaive,
+  maxProfitOptimal
+}

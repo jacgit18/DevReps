@@ -25,7 +25,15 @@
 // 1 <= s.length, t.length <= 200
 // s and t only contain lowercase letters and '#' characters.
 
-export const backspaceCompare = (s: string, t: string): boolean => {
+const backspaceCompareBruteForce = (s: string, t: string): boolean => {
+  return true
+}
+
+const backspaceCompareNaive = (s: string, t: string): boolean => {
+  return true
+}
+
+const backspaceCompareOptimal = (s: string, t: string): boolean => {
   return true
 }
 
@@ -43,3 +51,9 @@ const fill: RegExp[] = new Array(26).fill(regex)
 
 // console.log(`c\bd\b`)
 // console.log(`ab\b\b`)
+
+export const backspaceCompare = {
+  backspaceCompareBruteForce,
+  backspaceCompareNaive,
+  backspaceCompareOptimal
+}

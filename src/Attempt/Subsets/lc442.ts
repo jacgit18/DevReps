@@ -24,7 +24,15 @@
 // 1 <= nums[i] <= n
 // Each element in nums appears once or twice.
 
-export const findDuplicatesCyclic = (nums: number[]): number[] => {
+const findDuplicatesCyclicBruteForce = (nums: number[]): number[] => {
+  return [0]
+}
+
+const findDuplicatesCyclicNaive = (nums: number[]): number[] => {
+  return [0]
+}
+
+const findDuplicatesCyclicOptimal = (nums: number[]): number[] => {
   return [0]
 }
 
@@ -37,3 +45,10 @@ export const findDuplicatesCyclic = (nums: number[]): number[] => {
 
 // const example3 = findDuplicatesCyclic([1])
 // console.log(example3)
+
+
+export const findDuplicatesCyclic = {
+  findDuplicatesCyclicBruteForce,
+  findDuplicatesCyclicNaive,
+  findDuplicatesCyclicOptimal
+}

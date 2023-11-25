@@ -25,7 +25,15 @@
 // 0 <= startj < endj <= 109
 // endj < startj+1
 
-export const intervalIntersection = (firstList: number[][], secondList: number[][]): number[][] => {
+const intervalIntersectionBruteForce = (firstList: number[][], secondList: number[][]): number[][] => {
+  return [[0]]
+}
+
+const intervalIntersectionNaive = (firstList: number[][], secondList: number[][]): number[][] => {
+  return [[0]]
+}
+
+const intervalIntersectionOptimal = (firstList: number[][], secondList: number[][]): number[][] => {
   return [[0]]
 }
 
@@ -45,3 +53,10 @@ export const intervalIntersection = (firstList: number[][], secondList: number[]
 
 // const result = intervalIntersection(firstList, secondList)
 // console.log(result)
+
+
+export const intervalIntersection = {
+  intervalIntersectionBruteForce,
+  intervalIntersectionNaive,
+  intervalIntersectionOptimal
+}

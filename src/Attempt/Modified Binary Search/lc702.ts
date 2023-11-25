@@ -34,7 +34,15 @@ interface ArrayReader {
   get(index: number): number
 }
 
-export const searchInArrayReader = (reader: ArrayReader, target: number): number => {
+const searchInArrayReaderBruteForce = (reader: ArrayReader, target: number): number => {
+  return 0
+}
+
+const searchInArrayReaderNaive = (reader: ArrayReader, target: number): number => {
+  return 0
+}
+
+const searchInArrayReaderOptimal = (reader: ArrayReader, target: number): number => {
   return 0
 }
 
@@ -56,3 +64,10 @@ const arrayReader: ArrayReader = {
 
 // const target2 = 2
 // console.log(searchInArrayReader(arrayReader, target2)) // Output: -1
+
+
+export const searchInArrayReader = {
+  searchInArrayReaderBruteForce,
+  searchInArrayReaderNaive,
+  searchInArrayReaderOptimal
+}

@@ -28,7 +28,15 @@
 // letters contains at least two different characters.
 // target is a lowercase English letter.
 
-export const nextGreatestLetter = (letters: string[], target: string): string => {
+const nextGreatestLetterBruteForce = (letters: string[], target: string): string => {
+  return " "
+}
+
+const nextGreatestLetterNaive = (letters: string[], target: string): string => {
+  return " "
+}
+
+const nextGreatestLetterOptimal = (letters: string[], target: string): string => {
   return " "
 }
 
@@ -44,3 +52,10 @@ export const nextGreatestLetter = (letters: string[], target: string): string =>
 // const letters3 = ["x", "x", "y", "y"]
 // const target3 = "z"
 // console.log(nextGreatestLetter(letters3, target3)) // Output: "x"
+
+
+export const nextGreatestLetter = {
+  nextGreatestLetterBruteForce,
+  nextGreatestLetterNaive,
+  nextGreatestLetterOptimal
+}

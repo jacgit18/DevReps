@@ -32,7 +32,15 @@
 // All elements of candidates are distinct.
 // 1 <= target <= 40
 
-export const combinationSum = (candidates: number[], target: number): number[][] => {
+const combinationSumBruteForce = (candidates: number[], target: number): number[][] => {
+  return [[0]]
+}
+
+const combinationSumNaive = (candidates: number[], target: number): number[][] => {
+  return [[0]]
+}
+
+const combinationSumOptimal = (candidates: number[], target: number): number[][] => {
   return [[0]]
 }
 
@@ -40,3 +48,9 @@ export const combinationSum = (candidates: number[], target: number): number[][]
 // console.log(combinationSum([2, 3, 6, 7], 7))
 // console.log(combinationSum([2, 3, 5], 8))
 // console.log(combinationSum([2], 1))
+
+export const combinationSum = {
+  combinationSumBruteForce,
+  combinationSumNaive,
+  combinationSumOptimal
+}

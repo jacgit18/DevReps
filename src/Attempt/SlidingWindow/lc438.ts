@@ -23,7 +23,15 @@
 // 1 <= s.length, p.length <= 3 * 104
 // s and p consist of lowercase English letters.
 
-export const findAnagrams = (s: string, p: string): number[] => {
+const findAnagramsBruteForce = (s: string, p: string): number[] => {
+  return [0]
+}
+
+const findAnagramsNaive = (s: string, p: string): number[] => {
+  return [0]
+}
+
+const findAnagramsOptimal = (s: string, p: string): number[] => {
   return [0]
 }
 
@@ -33,3 +41,10 @@ export const findAnagrams = (s: string, p: string): number[] => {
 
 // const example2 = findAnagrams("abab", "ab")
 // console.log(example2) // Output: [0, 1, 2]
+
+
+export const findAnagrams = {
+  findAnagramsBruteForce,
+  findAnagramsNaive,
+  findAnagramsOptimal
+}
