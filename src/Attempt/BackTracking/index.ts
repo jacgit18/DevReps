@@ -10,7 +10,7 @@ import { subsets } from "./lc78";
 import { letterCasePermutation } from "./lc784";
 import { subsetsWithDup } from "./lc90";
 
-export const OptimalSubsetBacktrackAttempt  = {
+export const AttemptBacktrack  = {
   sudoku: sudokuSolver,
   lc17: letterCombinations,
   lc39: combinationSum,

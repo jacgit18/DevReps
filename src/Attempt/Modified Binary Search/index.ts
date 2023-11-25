@@ -9,7 +9,7 @@ import { searchBin } from "./lc704";
 import { nextGreatestLetter } from "./lc744";
 import { search } from "./lc81";
 
-export const OptimalModifiedBinarySearchAttempt  = {
+export const AttemptModifiedBinarySearch  = {
   lc33: searchRanger,
   lc34: searchRange,
   lc35: searchInsert,

@@ -10,7 +10,7 @@ import { connect } from "./lc117";
 import { averageOfLevels } from "./lc637";
 
 
-export const OptimalBFSAttempt  = {
+export const AttemptBFS  = {
   lc100: isSameTree,
   lc101: isSymmetric,
   lc102: levelOrderTraversal,

@@ -1,6 +1,6 @@
 // import {lc} from "./lc"
 
-export const Optimal_KwayMergeAttempt  = {
+export const Attempt_KwayMerge  = {
   // lcNum: lc
 };
 

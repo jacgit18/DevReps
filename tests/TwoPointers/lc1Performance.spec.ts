@@ -1,6 +1,6 @@
 import { generateTestCases, TestCase } from "../../lib/genTest";
-import { OptimalTwoPointerAttempt } from "../../src/Attempt/TwoPointers";
-import { OptimalTwoPointerSolution } from "../../src/Solution/TwoPointers/index";
+import { AttemptTwoPointer } from "../../src/Attempt/TwoPointers";
+import { SolutionTwoPointer } from "../../src/Solution/TwoPointers/index";
 
 
 const runTestCases = () => {
@@ -26,9 +26,9 @@ const runTestCases = () => {
       ];
       
   
-      generateTestCases(OptimalTwoPointerAttempt.lc1.pair_with_target_sum_Naive, testCasePlaceholder, ' Attempt ');
-      generateTestCases(OptimalTwoPointerSolution.lc1.pair_with_target_sum_Two_Pointer, testCases, ' Solution ');
-      generateTestCases(OptimalTwoPointerSolution.lc1.pair_with_target_sum_map, testCases, 'Alt Solution ');
+      generateTestCases(AttemptTwoPointer.lc1.pair_with_target_sum_Naive, testCasePlaceholder, ' Attempt ');
+      generateTestCases(SolutionTwoPointer.lc1.pair_with_target_sum_Two_Pointer, testCases, ' Solution ');
+      generateTestCases(SolutionTwoPointer.lc1.pair_with_target_sum_map, testCases, 'Alt Solution ');
 
   
     

@@ -1,5 +1,5 @@
 import { mergeKLists } from "../K-way Merge Dynamic Programing/lc23"
 
-export const Optimal_KwayMerge_Solution = {
+export const Solution_KwayMerge = {
   lc23: mergeKLists,
 }

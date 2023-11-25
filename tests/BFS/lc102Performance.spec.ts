@@ -1,6 +1,6 @@
 import { generateTestCases, TestCase } from "../../lib/genTest";
-import { OptimalBFSAttempt } from "../../src/Attempt/BFS";
-import { OptimalBFS_Solution } from "../../src/Solution/BFS";
+import { AttemptBFS } from "../../src/Attempt/BFS";
+import { SolutionBFS } from "../../src/Solution/BFS";
 import { TreeNode } from "../../src/util/BinaryTreeMaker";
 
 const runTestCases = () => {
@@ -21,9 +21,9 @@ const runTestCases = () => {
 
   ];
 
-    generateTestCases(OptimalBFSAttempt.lc102.levelOrderTraversalNaive, testCasePlaceholder,' Attempt ');
-    generateTestCases(OptimalBFS_Solution.lc102.levelOrderTraversalIter, testCases,' Solution ');
-    generateTestCases(OptimalBFS_Solution.lc102.levelOrderTraversalRec, testCases,' Solution ');
+    generateTestCases(AttemptBFS.lc102.levelOrderTraversalNaive, testCasePlaceholder,' Attempt ');
+    generateTestCases(SolutionBFS.lc102.levelOrderTraversalIter, testCases,' Solution ');
+    generateTestCases(SolutionBFS.lc102.levelOrderTraversalRec, testCases,' Solution ');
 
 
   

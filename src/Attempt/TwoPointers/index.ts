@@ -15,7 +15,7 @@ import { sortColors } from "./lc75";
 import { backspaceCompare } from "./lc844";
 import { sortedSquares } from "./lc977";
 
-export const OptimalTwoPointerAttempt = {
+export const AttemptTwoPointer = {
   lc1: PairWithTargetSum,
   lc11: maxArea,
   lc15: threeSum,

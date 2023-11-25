@@ -1,6 +1,6 @@
 import { generateTestCases, TestCase } from "../../lib/genTest";
-import { OptimalDFSAttempt } from "../../src/Attempt/DFS";
-import { OptimalDFS_Solution } from "../../src/Solution/DFS";
+import { AttemptDFS } from "../../src/Attempt/DFS";
+import { SolutionDFS } from "../../src/Solution/DFS";
 import { TreeNode } from "../../src/util/BinaryTreeMaker";
 
 const runTestCases = () => {
@@ -27,8 +27,8 @@ const runTestCases = () => {
     { params: root2, paramsTwo: p2, expected: null },
   ];
 
-    generateTestCases(OptimalDFSAttempt.lc285.inorderSuccessorNaive, testCasePlaceholder,' Attempt ');
-    generateTestCases(OptimalDFS_Solution.lc285, testCases,' Solution ',);
+    generateTestCases(AttemptDFS.lc285.inorderSuccessorNaive, testCasePlaceholder,' Attempt ');
+    generateTestCases(SolutionDFS.lc285, testCases,' Solution ',);
 
 
   

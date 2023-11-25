@@ -1,6 +1,6 @@
 import { generateTestCases, TestCase } from "../../lib/genTest";
-import { OptimalBFSAttempt } from "../../src/Attempt/BFS";
-import { OptimalBFS_Solution } from "../../src/Solution/BFS";
+import { AttemptBFS } from "../../src/Attempt/BFS";
+import { SolutionBFS } from "../../src/Solution/BFS";
 import { TreeNode } from "../../src/util/BinaryTreeMaker";
 
 const runTestCases = () => {
@@ -16,8 +16,8 @@ const runTestCases = () => {
 
   ];
 
-    generateTestCases(OptimalBFSAttempt.lc100.isSameTreeNaive, testCases,' Attempt ');
-    generateTestCases(OptimalBFS_Solution.lc100, testCases,' Solution ',);
+    generateTestCases(AttemptBFS.lc100.isSameTreeNaive, testCases,' Attempt ');
+    generateTestCases(SolutionBFS.lc100, testCases,' Solution ',);
 
 
   

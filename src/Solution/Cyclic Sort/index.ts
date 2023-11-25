@@ -8,7 +8,7 @@ import { findDisappearedNumbers } from "../Cyclic Sort/lc448"
 import { findErrorNums } from "../Cyclic Sort/lc645"
 
 
-export const OptimalCycSortSolution = {
+export const SolutionCycSort = {
   sort: cyclic_sort,
   lc41: firstMissingPositive,
   lc268: find_missing_number,

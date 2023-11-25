@@ -1,5 +1,5 @@
 import { findMaxForm } from "./lc474";
 
-export const OptimalKnapSackAttempt  = {
+export const AttemptKnapSack  = {
   lc474: findMaxForm,
 };

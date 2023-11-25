@@ -7,7 +7,7 @@ import { findDisappearedNumbers } from "./lc448";
 import { findErrorNums } from "./lc645";
 
 
-export const OptimalCycSortAttempt  = {
+export const AttemptCycSort  = {
   lc41: firstMissingPositive,
   lc268: find_missing_number,
   lc287: findDuplicate,

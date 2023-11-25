@@ -1,6 +1,6 @@
 import { generateTestCases, TestCase } from "../../lib/genTest";
-import { OptimalSlidingWindowAttempt } from "../../src/Attempt/SlidingWindow/index";
-import { OptimalSlidingWindSolution } from "../../src/Solution/SlidingWindow";
+import { AttemptSlidingWindow } from "../../src/Attempt/SlidingWindow/index";
+import { SolutionSlidingWindow } from "../../src/Solution/SlidingWindow";
 
 
 
@@ -25,8 +25,8 @@ const runTestCases = () => {
   ];
 
 
-    generateTestCases(OptimalSlidingWindowAttempt.lc53.maxSubArrayNaive, testCasePlaceholder, ' Attempt ');
-    generateTestCases(OptimalSlidingWindSolution.lc53, testCases, " Solution ")
+    generateTestCases(AttemptSlidingWindow.lc53.maxSubArrayNaive, testCasePlaceholder, ' Attempt ');
+    generateTestCases(SolutionSlidingWindow.lc53, testCases, " Solution ")
 
 
 };

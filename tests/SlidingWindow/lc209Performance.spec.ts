@@ -1,6 +1,6 @@
 import { generateTestCases, TestCase } from "../../lib/genTest";
-import { OptimalSlidingWindowAttempt } from "../../src/Attempt/SlidingWindow/index";
-import { OptimalSlidingWindSolution } from "../../src/Solution/SlidingWindow/index";
+import { AttemptSlidingWindow } from "../../src/Attempt/SlidingWindow/index";
+import { SolutionSlidingWindow } from "../../src/Solution/SlidingWindow";
 
 
 const runTestCases = () => {
@@ -31,9 +31,9 @@ const runTestCases = () => {
       ];
       
   
-      generateTestCases(OptimalSlidingWindowAttempt.lc209.smallestSubarrayWithGivenSumNaive, testCasePlaceholder, ' Attempt ');
-      generateTestCases(OptimalSlidingWindSolution.lc209.smallestSubarraySlidingWindow, testCases, ' Solution ');
-      generateTestCases(OptimalSlidingWindSolution.lc209.smallest_subarray_with_given_sumAlt, testCases, 'Alt Solution ');
+      generateTestCases(AttemptSlidingWindow.lc209.smallestSubarrayWithGivenSumNaive, testCasePlaceholder, ' Attempt ');
+      generateTestCases(SolutionSlidingWindow.lc209.smallestSubarraySlidingWindow, testCases, ' Solution ');
+      generateTestCases(SolutionSlidingWindow.lc209.smallest_subarray_with_given_sumAlt, testCases, 'Alt Solution ');
 
   
     

@@ -12,7 +12,7 @@ import { distributeCandies } from "./lc575"
 import { countSubstrings } from "./lc647"
 import { nameMatch } from "./nameMatch"
 
-export const ExtraSolution = {
+export const SolutionExtra = {
   challengeFour: decompressString,
   flat: flattenObject,
   island: getNumberOfIslands,

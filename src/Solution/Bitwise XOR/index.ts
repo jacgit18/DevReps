@@ -1,6 +1,6 @@
 import { singleNumber } from "../Bitwise XOR/lc136"
 
 
-export const OptimalBitWiseXORSolution = {
+export const SolutionBitWiseXOR = {
   lc136: singleNumber,
 }

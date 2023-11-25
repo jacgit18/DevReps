@@ -19,7 +19,7 @@ import { backspaceCompare } from "../TwoPointers/lc844";
 import { sortedSquares } from "../TwoPointers/lc977";
 import { revString } from "./lc344";
 
-export const OptimalTwoPointerSolution = {
+export const SolutionTwoPointer = {
   lc1: pair_with_target_sum,
   lc11: maxArea,
   lc15: threeSum,

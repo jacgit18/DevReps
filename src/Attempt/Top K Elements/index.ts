@@ -1,7 +1,7 @@
 import { findKthLargest } from "./lc215";
 
 
-export const OptimalTop_K_ElementsAttempt  = {
+export const AttemptTop_K_Elements  = {
   lc215: findKthLargest,
 };
 

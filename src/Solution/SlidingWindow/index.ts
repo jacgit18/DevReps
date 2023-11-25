@@ -9,7 +9,7 @@ import { checkInclusion } from "./lc567";
 import { minWindow } from "./lc76";
 import { totalFruit } from "./lc904";
 
-export const OptimalSlidingWindSolution = {
+export const SolutionSlidingWindow = {
   lc3: lengthOfLongestSubstring,
   lc30: findSubstring,
   lc53: maxSubArray,

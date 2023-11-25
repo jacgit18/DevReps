@@ -6,7 +6,7 @@ import { leastInterval } from "./lc621";
 import { intervalIntersection } from "./lc986";
 
 
-export const MergeIntervalAttempt  = {
+export const AttemptMergeInterval  = {
   lc56: merge,
   lc57: insertInterval,
   lc252: canAttendMeetings,

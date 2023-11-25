@@ -1,6 +1,6 @@
 import { generateTestCases, TestCase } from "../../lib/genTest";
-import { OptimalTwoPointerAttempt } from "../../src/Attempt/TwoPointers";
-import { OptimalTwoPointerSolution } from "../../src/Solution/TwoPointers";
+import { AttemptTwoPointer } from "../../src/Attempt/TwoPointers";
+import { SolutionTwoPointer } from "../../src/Solution/TwoPointers/index";
 
 
 const runTestCases = () => {
@@ -20,8 +20,8 @@ const runTestCases = () => {
   ];
 
 
-    generateTestCases(OptimalTwoPointerAttempt.lc125.isPalindromeNaive, testCasePlaceholder,' Attempt ');
-    generateTestCases(OptimalTwoPointerSolution.lc125, testCases,' Solution ',);
+    generateTestCases(AttemptTwoPointer.lc125.isPalindromeNaive, testCasePlaceholder,' Attempt ');
+    generateTestCases(SolutionTwoPointer.lc125, testCases,' Solution ',);
 
 
   

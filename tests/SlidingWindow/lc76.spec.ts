@@ -1,6 +1,6 @@
 import { generateTestCases, TestCase } from "../../lib/genTest";
-import { OptimalSlidingWindowAttempt } from "../../src/Attempt/SlidingWindow/index";
-import { OptimalSlidingWindSolution } from "../../src/Solution/SlidingWindow";
+import { AttemptSlidingWindow } from "../../src/Attempt/SlidingWindow/index";
+import { SolutionSlidingWindow } from "../../src/Solution/SlidingWindow";
 
 const runTestCases = () => {
 
@@ -26,8 +26,8 @@ const runTestCases = () => {
  
 
 
-  generateTestCases(OptimalSlidingWindowAttempt.lc76.minWindowNaive, testCasePlaceholder, ' Attempt ');
-  generateTestCases(OptimalSlidingWindSolution.lc76, testCases, ' Solution ');
+  generateTestCases(AttemptSlidingWindow.lc76.minWindowNaive, testCasePlaceholder, ' Attempt ');
+  generateTestCases(SolutionSlidingWindow.lc76, testCases, ' Solution ');
 
 
 

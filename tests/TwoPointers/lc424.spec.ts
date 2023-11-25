@@ -1,6 +1,7 @@
 import { generateTestCases, TestCase } from "../../lib/genTest";
-import { OptimalTwoPointerAttempt } from "../../src/Attempt/TwoPointers";
-import { OptimalTwoPointerSolution } from "../../src/Solution/TwoPointers";
+import { AttemptTwoPointer } from "../../src/Attempt/TwoPointers";
+import { SolutionTwoPointer } from "../../src/Solution/TwoPointers/index";
+
 
 
 const runTestCases = () => {
@@ -17,8 +18,8 @@ const runTestCases = () => {
     { params: ["AABA", 0], expected: 2 },
   ];
 
-  generateTestCases(OptimalTwoPointerAttempt.lc424.characterReplacementNaive, testCasePlaceholder, 'Attempt');
-  generateTestCases(OptimalTwoPointerSolution.lc424, testCases, 'Solution');
+  generateTestCases(AttemptTwoPointer.lc424.characterReplacementNaive, testCasePlaceholder, 'Attempt');
+  generateTestCases(SolutionTwoPointer.lc424, testCases, 'Solution');
 };
 
 runTestCases();

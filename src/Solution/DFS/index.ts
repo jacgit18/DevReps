@@ -6,7 +6,7 @@ import { isValidSequence } from "../DFS/lc1430"
 import { inorderSuccessor } from "../DFS/lc285"
 import { pathSum } from "../DFS/lc437"
 
-export const OptimalDFS_Solution = {
+export const SolutionDFS = {
   lc112: hasPathSum,
   lc113: pathSumTwo,
   lc129: sumNumbers,

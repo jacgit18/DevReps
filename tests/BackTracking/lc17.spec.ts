@@ -1,6 +1,6 @@
 import { generateTestCases, TestCase } from "../../lib/genTest";
-import { OptimalSubsetBacktrackAttempt } from "../../src/Attempt/BackTracking";
-// import { OptimalSubsetBacktrackSolution } from "../../src/Solution/BackTracking";
+import { AttemptBacktrack } from "../../src/Attempt/BackTracking";
+// import { SolutionBacktrack } from "../../src/Solution/BackTracking";
 
 const runTestCases = () => {
     const testCases: TestCase[] = [
@@ -24,9 +24,9 @@ const runTestCases = () => {
       ];
 
  
-  generateTestCases(OptimalSubsetBacktrackAttempt.lc17.letterCombinationsNaive, testCases,' Attempt ');
+  generateTestCases(AttemptBacktrack.lc17.letterCombinationsNaive, testCases,' Attempt ');
 // figure out whats causing solution to hang
-//   generateTestCases(OptimalSubsetBacktrackSolution.lc17, testCases,' Solution ');
+  // generateTestCases(SolutionBacktrack.lc17, testCases,' Solution ');
 
 };
 

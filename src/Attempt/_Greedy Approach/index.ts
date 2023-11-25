@@ -1,6 +1,6 @@
 import { longestPalindrome } from "./lc409"
 
-export const GreedyApproachAttempt = {
+export const AttemptGreedyApproach = {
   lc409: longestPalindrome,
 }
 
