@@ -35,7 +35,7 @@ const firstMissingPositiveOptimal = (nums: number[]): number => {
   return 0
 }
 
-export const nextGreatestLetter = {
+export const firstMissingPositive = {
   firstMissingPositiveBruteForce,
   firstMissingPositiveNaive,
   firstMissingPositiveOptimal

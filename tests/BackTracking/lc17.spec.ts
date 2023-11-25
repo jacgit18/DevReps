@@ -1,6 +1,6 @@
 import { generateTestCases, TestCase } from "../../lib/genTest";
-import { OptimalSubsetBacktrackAttempt } from "../../src/Attempt/Subsets/index";
-
+import { OptimalSubsetBacktrackAttempt } from "../../src/Attempt/BackTracking";
+// import { OptimalSubsetBacktrackSolution } from "../../src/Solution/BackTracking";
 
 const runTestCases = () => {
     const testCases: TestCase[] = [

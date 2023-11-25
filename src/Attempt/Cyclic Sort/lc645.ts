@@ -30,7 +30,7 @@ const findErrorNumsOptimal = (nums: number[]): number[] => {
   return [0]
 }
 
-export const nextGreatestLetter = {
+export const findErrorNums = {
   findErrorNumsBruteForce,
   findErrorNumsNaive,
   findErrorNumsOptimal

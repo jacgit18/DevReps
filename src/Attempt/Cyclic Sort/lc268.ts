@@ -35,7 +35,7 @@ const find_missing_numberOptimal = (nums: number[]): number => {
   return 0
 }
 
-export const nextGreatestLetter = {
+export const find_missing_number = {
   find_missing_numberBruteForce,
   find_missing_numberNaive,
   find_missing_numberOptimal

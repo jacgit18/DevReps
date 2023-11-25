@@ -23,7 +23,7 @@
 import { LinkedListNode, createLinkedListFromArray } from "../../../src/util/LinkedListMaker"
 
 export const reverse = (head: LinkedListNode | null): LinkedListNode | null => {
-  if (head == null || head.val < 0) return null
+  if (head == null || head.value < 0) return null
   let current: LinkedListNode | null = head
   let previous: LinkedListNode | null = null
 
@@ -50,7 +50,7 @@ let linkedList = createLinkedListFromArray(array1)
 export let printFoward = (node: LinkedListNode | null) => {
   let current: LinkedListNode | null = node
   while (current !== null) {
-    console.log(current.val)
+    console.log(current.value)
     current = current.next // equivalent to i++ in a loop
   }
 }
@@ -58,7 +58,7 @@ export let printFoward = (node: LinkedListNode | null) => {
 export let printFowardRec = (node: LinkedListNode | null): LinkedListNode | null => {
   let current: LinkedListNode | null = node
   if (current !== null) {
-    console.log(current.val)
+    console.log(current.value)
     return printFowardRec(current.next)
   }
   return null // Ensure that you return null at the end of the function if the node is null
@@ -67,11 +67,11 @@ export let printFowardRec = (node: LinkedListNode | null): LinkedListNode | null
 export const printBackward = (node: LinkedListNode | null) => {
   if (node === null) return
   printBackward(node.next)
-  console.log(node.val)
+  console.log(node.value)
 }
 
 export const reverseNoComments = function (head: LinkedListNode | null): LinkedListNode | null {
-  if (head == null || head.val < 0) return null
+  if (head == null || head.value < 0) return null
   let current: LinkedListNode | null = head
   let previous: LinkedListNode | null = null
 

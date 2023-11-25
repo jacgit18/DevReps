@@ -1,7 +1,7 @@
 let calculations = 0
 
 // Top-down with closure
-export function fibonacciMaster(): (n: number) => number {
+function fibonacciMaster(): (n: number) => number {
   const cache: { [key: number]: number } = {}
 
   return function fib(n: number): number {
@@ -20,7 +20,7 @@ export function fibonacciMaster(): (n: number) => number {
 }
 
 // Bottom-up Iterative
-export function fibonacciMaster2(n: number): number {
+function fibonacciMaster2(n: number): number {
   const answer: number[] = [0, 1]
   for (let i = 2; i <= n; i++) {
     answer.push(answer[i - 2] + answer[i - 1])
@@ -29,7 +29,7 @@ export function fibonacciMaster2(n: number): number {
 }
 
 // Exponential time
-export function fibonacciRecursive(n: number): number {
+function fibonacciRecursive(n: number): number {
   if (n < 2) {
     return n
   }
@@ -37,7 +37,7 @@ export function fibonacciRecursive(n: number): number {
 }
 
 // Bottom-up dynamic programming (forward)
-export function fibBottomUpDPForward(n: number): number {
+function fibBottomUpDPForward(n: number): number {
   if (n === 0) {
     return 0
   }
@@ -57,7 +57,7 @@ export function fibBottomUpDPForward(n: number): number {
 }
 
 // Bottom-up dynamic programming (backward)
-export function fibBottomUpDPBackward(n: number): number {
+function fibBottomUpDPBackward(n: number): number {
   if (n === 0) {
     return 0
   }
@@ -77,5 +77,12 @@ export function fibBottomUpDPBackward(n: number): number {
   return dp[n]
 }
 
-// console.log(fibBottomUpDPForward(6))
-// console.log(fibBottomUpDPBackward(6))
+// Define the exported object
+export const fibs = {
+  fibonacciMaster,
+  fibonacciMaster2,
+  fibonacciRecursive,
+  fibBottomUpDPForward,
+  fibBottomUpDPBackward
+}
+

@@ -32,7 +32,7 @@ const findDuplicateOptimal = (nums: number[]): number => {
   return 0
 }
 
-export const nextGreatestLetter = {
+export const findDuplicate = {
   findDuplicateBruteForce,
   findDuplicateNaive,
   findDuplicateOptimal

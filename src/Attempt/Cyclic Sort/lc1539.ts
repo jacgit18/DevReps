@@ -32,7 +32,7 @@ const findKthPositiveOptimal = (arr: number[], k: number): number => {
   return 0
 }
 
-export const nextGreatestLetter = {
+export const findKthPositive = {
   findKthPositiveBruteForce,
   findKthPositiveNaive,
   findKthPositiveOptimal

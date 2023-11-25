@@ -27,7 +27,7 @@ const findDisappearedNumbersOptimal = (nums: number[]): number[] => {
   return [0]
 }
 
-export const nextGreatestLetter = {
+export const findDisappearedNumbers = {
   findDisappearedNumbersBruteForce,
   findDisappearedNumbersNaive,
   findDisappearedNumbersOptimal
