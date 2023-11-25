@@ -24,7 +24,7 @@
 // 1 <= nums[i] <= n
 // Each element in nums appears once or twice.
 
-export const findDuplicatesCyclic = (nums: number[]): number[] => {
+const findDuplicatesCyclic = (nums: number[]): number[] => {
   const duplicates: number[] = []
 
   for (let i = 0; i < nums.length; i++) {
@@ -44,16 +44,16 @@ export const findDuplicatesCyclic = (nums: number[]): number[] => {
 }
 
 // Example usage:
-const example1 = findDuplicatesCyclic([4, 3, 2, 7, 8, 2, 3, 1])
-console.log(example1)
+// const example1 = findDuplicatesCyclic([4, 3, 2, 7, 8, 2, 3, 1])
+// console.log(example1)
 
-const example2 = findDuplicatesCyclic([1, 1, 2])
-console.log(example2)
+// const example2 = findDuplicatesCyclic([1, 1, 2])
+// console.log(example2)
 
-const example3 = findDuplicatesCyclic([1])
-console.log(example3)
+// const example3 = findDuplicatesCyclic([1])
+// console.log(example3)
 
-export const findDuplicatesBackTrack = (nums: number[]): number[] => {
+const findDuplicatesBackTrack = (nums: number[]): number[] => {
   const duplicates: number[] = []
   const n = nums.length
 
@@ -99,3 +99,8 @@ export const findDuplicatesBackTrack = (nums: number[]): number[] => {
 
 //   const example3 = findDuplicatesBackTrack([1]);
 //   console.log(example3);
+
+export const findDuplicates = {
+  findDuplicatesCyclic,
+  findDuplicatesBackTrack
+}

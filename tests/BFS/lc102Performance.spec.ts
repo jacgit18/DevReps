@@ -22,8 +22,8 @@ const runTestCases = () => {
   ];
 
     generateTestCases(OptimalBFSAttempt.lc102.levelOrderTraversalNaive, testCasePlaceholder,' Attempt ');
-    generateTestCases(OptimalBFS_Solution.lc102Iter, testCases,' Solution ');
-    generateTestCases(OptimalBFS_Solution.lc102Rec, testCases,' Solution ');
+    generateTestCases(OptimalBFS_Solution.lc102.levelOrderTraversalIter, testCases,' Solution ');
+    generateTestCases(OptimalBFS_Solution.lc102.levelOrderTraversalRec, testCases,' Solution ');
 
 
   

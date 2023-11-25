@@ -23,7 +23,7 @@
 // 1 <= s.length, p.length <= 3 * 104
 // s and p consist of lowercase English letters.
 
-export const findAnagramsTwoPointer = (s: string, p: string): number[] => {
+const findAnagramsTwoPointer = (s: string, p: string): number[] => {
   const result: number[] = []
   const targetMap: Map<string, number> = new Map()
   const windowMap: Map<string, number> = new Map()
@@ -73,7 +73,7 @@ function mapsAreEqual(map1: Map<string, number>, map2: Map<string, number>): boo
   return true
 }
 
-export const findAnagrams = (s: string, p: string): number[] => {
+const findAnagramsAlt = (s: string, p: string): number[] => {
   const result: number[] = []
   const sMap: Record<string, number> = {}
   const pMap: Record<string, number> = {}
@@ -124,3 +124,9 @@ export const findAnagrams = (s: string, p: string): number[] => {
 // const s2 = "abab"
 // const p2 = "ab"
 // console.log(findAnagramsTwoPointer(s2, p2)) // Output: [0, 1, 2]
+
+
+export const findAnagrams = {
+  findAnagramsTwoPointer,
+  findAnagramsAlt
+}

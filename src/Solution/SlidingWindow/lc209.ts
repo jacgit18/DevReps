@@ -24,7 +24,7 @@
 // 1 <= nums.length <= 105
 // 1 <= nums[i] <= 104
 
-export const smallest_subarray_with_given_sumAlt = (target: number, nums: number[]): number => {
+const smallest_subarray_with_given_sumAlt = (target: number, nums: number[]): number => {
   let start = 0
   let end = 0
   let sum = nums[0]
@@ -55,7 +55,7 @@ export const smallest_subarray_with_given_sumAlt = (target: number, nums: number
   return minLength // Return the count of elements in the subarray
 }
 
-export const smallestSubarrayWithGivenSum = (s: number, arr: number[]): number => {
+const smallestSubarraySlidingWindow = (s: number, arr: number[]): number => {
   let winSum = 0
   let minLength = Infinity
   let windowSizeStart = 0
@@ -85,3 +85,10 @@ export const smallestSubarrayWithGivenSum = (s: number, arr: number[]): number =
 }
 
 // console.log(smallestSubarrayWithGivenSum(3, [4, 6, 6, 8]))
+
+
+export const smallestSubarrayWithGivenSum = {
+  smallestSubarraySlidingWindow,
+ smallest_subarray_with_given_sumAlt
+
+};

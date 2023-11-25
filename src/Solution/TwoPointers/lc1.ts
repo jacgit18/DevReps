@@ -25,7 +25,7 @@
 // -109 <= target <= 109
 // Only one valid answer exists.
 
-export const pair_with_target_sum_map = (nums: number[], target: number): number[] => {
+ const pair_with_target_sum_map = (nums: number[], target: number): number[] => {
   let map = new Map<number, number>()
 
   for (let i = 0; i < nums.length; i++) {
@@ -47,7 +47,7 @@ export const pair_with_target_sum_map = (nums: number[], target: number): number
 // console.log(pair_with_target_sum_map([1, 2, 3, 4, 6], 6))
 // console.timeEnd("Pair time map")
 
-export const pair_with_target_sum_Two_Pointer = (arr: number[], targetSum: number): number[] => {
+const pair_with_target_sum_Two_Pointer = (arr: number[], targetSum: number): number[] => {
   let left = 0,
     right = arr.length - 1
   // console.log(right)
@@ -76,3 +76,9 @@ export const pair_with_target_sum_Two_Pointer = (arr: number[], targetSum: numbe
 // console.log(`\n ------- Edge Case -------- `)
 // console.log(`Edge 1: [${pair_with_target_sum([], 6)}]`);
 // console.log(`Edge 1: [${pair_with_target_sum([3], 6)}]`);
+
+export const pair_with_target_sum = {
+  pair_with_target_sum_Two_Pointer,
+  pair_with_target_sum_map,
+
+};

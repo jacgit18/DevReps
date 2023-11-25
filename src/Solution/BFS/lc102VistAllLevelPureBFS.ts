@@ -21,7 +21,7 @@
 
 import { TreeNode } from "../../../src/util/BinaryTreeMaker"
 
-export const levelOrderTraversal = (root: TreeNode | null): number[][] => {
+const levelOrderTraversalIter = (root: TreeNode | null): number[][] => {
   if (!root) {
     return []
   }
@@ -52,7 +52,7 @@ export const levelOrderTraversal = (root: TreeNode | null): number[][] => {
   return result
 }
 
-export const levelOrderTraversalRec = (root: TreeNode | null): number[][] => {
+const levelOrderTraversalRec = (root: TreeNode | null): number[][] => {
   const result: number[][] = []
 
   const traverse = (node: TreeNode | null, level: number): void => {
@@ -84,3 +84,8 @@ export const levelOrderTraversalRec = (root: TreeNode | null): number[][] => {
 
 // console.log(levelOrderTraversal(tree)) // Output: [[3],[9,20],[15,7]]
 // console.log(levelOrderTraversalRec(tree)) // Output: [[3],[9,20],[15,7]]
+
+export const levelOrderTraversal = {
+  levelOrderTraversalIter,
+  levelOrderTraversalRec
+}

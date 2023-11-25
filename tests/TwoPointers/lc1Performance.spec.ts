@@ -27,8 +27,8 @@ const runTestCases = () => {
       
   
       generateTestCases(OptimalTwoPointerAttempt.lc1.pair_with_target_sum_Naive, testCasePlaceholder, ' Attempt ');
-      generateTestCases(OptimalTwoPointerSolution.lc1, testCases, ' Solution ');
-      generateTestCases(OptimalTwoPointerSolution.lc1Alt, testCases, 'Alt Solution ');
+      generateTestCases(OptimalTwoPointerSolution.lc1.pair_with_target_sum_Two_Pointer, testCases, ' Solution ');
+      generateTestCases(OptimalTwoPointerSolution.lc1.pair_with_target_sum_map, testCases, 'Alt Solution ');
 
   
     

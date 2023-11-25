@@ -2,7 +2,7 @@
 // you can dynamically import only the functions you need at runtime.
 // This can reduce the initial loading time.
 // const { pair_with_target_sum_Two_Pointer, pair_with_target_sum_map } = await import("./lc1");
-import { pair_with_target_sum_Two_Pointer, pair_with_target_sum_map } from "../TwoPointers/lc1";
+import { pair_with_target_sum } from "../TwoPointers/lc1";
 import { maxArea } from "../TwoPointers/lc11";
 import { maxProfit } from "../TwoPointers/lc121";
 import { isPalindrome } from "../TwoPointers/lc125";
@@ -20,8 +20,7 @@ import { sortedSquares } from "../TwoPointers/lc977";
 import { revString } from "./lc344";
 
 export const OptimalTwoPointerSolution = {
-  lc1: pair_with_target_sum_Two_Pointer,
-  lc1Alt: pair_with_target_sum_map,
+  lc1: pair_with_target_sum,
   lc11: maxArea,
   lc15: threeSum,
   lc16: threeSumClosest,
