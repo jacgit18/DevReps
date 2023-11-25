@@ -20,22 +20,22 @@
 // 1 <= k <= 1000
 // arr[i] < arr[j] for 1 <= i < j <= arr.length
 
-const findKthPositive = (arr: number[], k: number): number => {
+const findKthPositiveBruteForce = (arr: number[], k: number): number => {
   return 0
 }
 
-const findKthPositive = (arr: number[], k: number): number => {
+const findKthPositiveNaive = (arr: number[], k: number): number => {
   return 0
 }
 
-const findKthPositive = (arr: number[], k: number): number => {
+const findKthPositiveOptimal = (arr: number[], k: number): number => {
   return 0
 }
 
 export const nextGreatestLetter = {
-  BruteForce,
-  Naive,
-  Optimal
+  findKthPositiveBruteForce,
+  findKthPositiveNaive,
+  findKthPositiveOptimal
 }
 
 // Example usage:

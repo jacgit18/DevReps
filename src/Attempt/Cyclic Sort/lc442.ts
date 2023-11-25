@@ -22,22 +22,22 @@
 // 1 <= nums[i] <= n
 // Each element in nums appears once or twice.
 
-const findDuplicates = (nums: number[]): number[] => {
+const findDuplicatesBruteForce = (nums: number[]): number[] => {
   return [0]
 }
 
-const findDuplicates = (nums: number[]): number[] => {
+const findDuplicatesNaive = (nums: number[]): number[] => {
   return [0]
 }
 
-const findDuplicates = (nums: number[]): number[] => {
+const findDuplicatesOptimal = (nums: number[]): number[] => {
   return [0]
 }
 
 export const nextGreatestLetter = {
-  BruteForce,
-  Naive,
-  Optimal
+  findDuplicatesBruteForce,
+  findDuplicatesNaive,
+  findDuplicatesOptimal
 }
 
 

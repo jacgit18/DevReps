@@ -31,22 +31,22 @@
 
 import { TreeNode } from "../../../src/util/BinaryTreeMaker"
 
-const hasPathSum = (root: TreeNode | null, targetSum: number): boolean => {
+const hasPathSumBruteForce = (root: TreeNode | null, targetSum: number): boolean => {
   return true
 }
 
-const hasPathSum = (root: TreeNode | null, targetSum: number): boolean => {
+const hasPathSumNaive = (root: TreeNode | null, targetSum: number): boolean => {
   return true
 }
 
-const hasPathSum = (root: TreeNode | null, targetSum: number): boolean => {
+const hasPathSumOptimal = (root: TreeNode | null, targetSum: number): boolean => {
   return true
 }
 
-export const nextGreatestLetter = {
-  BruteForce,
-  Naive,
-  Optimal
+export const hasPathSum = {
+  hasPathSumBruteForce,
+  hasPathSumNaive,
+  hasPathSumOptimal
 }
 
 // Example usage:

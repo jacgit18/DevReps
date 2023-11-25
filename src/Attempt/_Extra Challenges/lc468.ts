@@ -31,23 +31,23 @@
 
 // queryIP consists only of English letters, digits and the characters '.' and ':'.
 
-const validIPAddress = (queryIP: string): string => {
+const validIPAddressBruteForce = (queryIP: string): string => {
   return " "
 }
 
-const validIPAddress = (queryIP: string): string => {
+const validIPAddressNaive = (queryIP: string): string => {
   return " "
 }
 
-const validIPAddress = (queryIP: string): string => {
+const validIPAddressOptimal = (queryIP: string): string => {
   return " "
 }
 
 
-export const nextGreatestLetter = {
-  BruteForce,
-  Naive,
-  Optimal
+export const validIPAddress = {
+  validIPAddressBruteForce,
+  validIPAddressNaive,
+  validIPAddressOptimal
 }
 
 // Example usage:

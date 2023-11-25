@@ -19,23 +19,23 @@
 // 1 <= s.length <= 2000
 // s consists of lowercase and/or uppercase English letters only.
 
-const longestPalindrome = (s: string): number => {
+const longestPalindromeBruteForce = (s: string): number => {
   return 0
 }
 
-const longestPalindrome = (s: string): number => {
+const longestPalindromeNaive = (s: string): number => {
   return 0
 }
 
-const longestPalindrome = (s: string): number => {
+const longestPalindromeOptimal = (s: string): number => {
   return 0
 }
 
 
-export const nextGreatestLetter = {
-  BruteForce,
-  Naive,
-  Optimal
+export const longestPalindrome = {
+  longestPalindromeBruteForce,
+  longestPalindromeNaive,
+  longestPalindromeOptimal
 }
 
 // Example usage:

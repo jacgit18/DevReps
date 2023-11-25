@@ -23,22 +23,22 @@
 // -3 * 104 <= nums[i] <= 3 * 104
 // Each element in the array appears twice except for one element which appears only once.
 
-const singleNumber = (nums: number[]): number => {
+const singleNumberBruteForce = (nums: number[]): number => {
   return 0
 }
 
-const singleNumber = (nums: number[]): number => {
+const singleNumberNaive = (nums: number[]): number => {
   return 0
 }
 
-const singleNumber = (nums: number[]): number => {
+const singleNumberOptimal = (nums: number[]): number => {
   return 0
 }
 
-export const nextGreatestLetter = {
-  BruteForce,
-  Naive,
-  Optimal
+export const singleNumber = {
+  singleNumberBruteForce,
+  singleNumberNaive,
+  singleNumberOptimal
 }
 
 

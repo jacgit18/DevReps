@@ -29,22 +29,22 @@
 // n is even.
 // -105 <= candyType[i] <= 105
 
-const distributeCandies = (candyType: number[]): number => {
+const distributeCandiesBruteForce = (candyType: number[]): number => {
   return 0
 }
 
-const distributeCandies = (candyType: number[]): number => {
+const distributeCandiesNaive = (candyType: number[]): number => {
   return 0
 }
 
-const distributeCandies = (candyType: number[]): number => {
+const distributeCandiesOptimal = (candyType: number[]): number => {
   return 0
 }
 
-export const nextGreatestLetter = {
-  BruteForce,
-  Naive,
-  Optimal
+export const distributeCandies = {
+  distributeCandiesBruteForce,
+  distributeCandiesNaive,
+  distributeCandiesOptimal
 }
 
 // Example usage:

@@ -25,15 +25,15 @@
 // strs[i] consists only of digits '0' and '1'.
 // 1 <= m, n <= 100
 
-const findMaxForm = (strs: string[], m: number, n: number): number => {
+const findMaxFormBruteForce = (strs: string[], m: number, n: number): number => {
   return 0
 }
 
-const findMaxForm = (strs: string[], m: number, n: number): number => {
+const findMaxFormNaive = (strs: string[], m: number, n: number): number => {
   return 0
 }
 
-const findMaxForm = (strs: string[], m: number, n: number): number => {
+const findMaxFormOptimal = (strs: string[], m: number, n: number): number => {
   return 0
 }
 
@@ -42,8 +42,8 @@ const findMaxForm = (strs: string[], m: number, n: number): number => {
 // console.log(findMaxForm(["10", "0", "1"], 1, 1)) // Output: 2
 
 
-export const nextGreatestLetter = {
-  BruteForce,
-  Naive,
-  Optimal
+export const findMaxForm = {
+  findMaxFormBruteForce,
+  findMaxFormNaive,
+  findMaxFormOptimal
 }

@@ -19,22 +19,22 @@
 // 0 <= strs[i].length <= 200
 // strs[i] consists of only lowercase English letters.
 
-const longestCommonPrefix = (strs: string[]): string => {
+const longestCommonPrefixBruteForce = (strs: string[]): string => {
   return " "
 }
 
-const longestCommonPrefix = (strs: string[]): string => {
+const longestCommonPrefixNaive = (strs: string[]): string => {
   return " "
 }
 
-const longestCommonPrefix = (strs: string[]): string => {
+const longestCommonPrefixOptimal = (strs: string[]): string => {
   return " "
 }
 
-export const nextGreatestLetter = {
-  BruteForce,
-  Naive,
-  Optimal
+export const longestCommonPrefix = {
+  longestCommonPrefixBruteForce,
+  longestCommonPrefixNaive,
+  longestCommonPrefixOptimal
 }
 
 // Example usage:

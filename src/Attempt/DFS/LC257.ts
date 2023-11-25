@@ -19,22 +19,22 @@
 
 import { TreeNode } from "../../../src/util/BinaryTreeMaker"
 
-const binaryTreePaths = (root: TreeNode | null): string[] => {
+const binaryTreePathsBruteForce = (root: TreeNode | null): string[] => {
   return [" "]
 }
 
-const binaryTreePaths = (root: TreeNode | null): string[] => {
+const binaryTreePathsNaive = (root: TreeNode | null): string[] => {
   return [" "]
 }
 
-const binaryTreePaths = (root: TreeNode | null): string[] => {
+const binaryTreePathsOptimal = (root: TreeNode | null): string[] => {
   return [" "]
 }
 
-export const nextGreatestLetter = {
-  BruteForce,
-  Naive,
-  Optimal
+export const binaryTreePaths = {
+  binaryTreePathsBruteForce,
+  binaryTreePathsNaive,
+  binaryTreePathsOptimal
 }
 
 // Example usage:

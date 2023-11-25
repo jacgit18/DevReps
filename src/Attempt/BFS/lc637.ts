@@ -19,26 +19,26 @@
 
 import { TreeNode } from "../../../src/util/BinaryTreeMaker"
 
-const averageOfLevels = (root: TreeNode | null): number[] => {
+const averageOfLevelsBruteForce = (root: TreeNode | null): number[] => {
   return [0]
 }
 
-const averageOfLevels = (root: TreeNode | null): number[] => {
+const averageOfLevelsNaive = (root: TreeNode | null): number[] => {
   return [0]
 }
 
-const averageOfLevels = (root: TreeNode | null): number[] => {
+const averageOfLevelsOptimal = (root: TreeNode | null): number[] => {
   return [0]
 }
 
-export const nextGreatestLetter = {
-  BruteForce,
-  Naive,
-  Optimal
+export const averageOfLevels = {
+  averageOfLevelsBruteForce,
+  averageOfLevelsNaive,
+  averageOfLevelsOptimal
 }
 
 // Example usage:
 const root = new TreeNode(3, new TreeNode(9), new TreeNode(20, new TreeNode(15), new TreeNode(7)))
 
-const averages = averageOfLevels(root)
+const averages = averageOfLevelsNaive(root)
 // averages will be [3, 14.5, 11]

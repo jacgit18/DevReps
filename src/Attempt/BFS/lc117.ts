@@ -45,22 +45,22 @@ class NodeDiff {
   }
 }
 
-const connect = (root: NodeDiff | null): NodeDiff | null => {
+const connectBruteForce = (root: NodeDiff | null): NodeDiff | null => {
   return null
 }
 
-const connect = (root: NodeDiff | null): NodeDiff | null => {
+const connectNaive = (root: NodeDiff | null): NodeDiff | null => {
   return null
 }
 
-const connect = (root: NodeDiff | null): NodeDiff | null => {
+const connectOptimal = (root: NodeDiff | null): NodeDiff | null => {
   return null
 }
 
-export const nextGreatestLetter = {
-  BruteForce,
-  Naive,
-  Optimal
+export const connect = {
+  connectBruteForce,
+  connectNaive,
+  connectOptimal
 }
 
 // Example usage:
@@ -70,6 +70,6 @@ const rootNEW = new NodeDiff(
   new NodeDiff(3, null, new NodeDiff(7)),
 )
 
-const connectedRoot = connect(rootNEW)
+const connectedRoot = connectNaive(rootNEW)
 
 // Access connected nodes through the 'next' pointers.

@@ -22,26 +22,26 @@
 // 0 <= strs[i].length <= 100
 // strs[i] consists of lowercase English letters.
 
-const groupAnagrams = (s: string[]): string[][] => {
+const groupAnagramsBruteForce = (s: string[]): string[][] => {
   return [[" "]]
 }
 
 
-const groupAnagrams = (s: string[]): string[][] => {
+const groupAnagramsNaive = (s: string[]): string[][] => {
   return [[" "]]
 }
 
 
-const groupAnagrams = (s: string[]): string[][] => {
+const groupAnagramsOptimal = (s: string[]): string[][] => {
   return [[" "]]
 }
 
 
 
-export const nextGreatestLetter = {
-  BruteForce,
-  Naive,
-  Optimal
+export const groupAnagrams = {
+  groupAnagramsBruteForce,
+  groupAnagramsNaive,
+  groupAnagramsOptimal
 }
 
 // [ [ 'eat', 'tea', 'ate' ], [ 'tan', 'nat' ], [ 'bat' ] ]

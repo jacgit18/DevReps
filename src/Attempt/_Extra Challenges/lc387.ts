@@ -20,24 +20,24 @@
 // 1 <= s.length <= 105
 // s consists of only lowercase English letters.
 
-const firstUniqChar = (s: string): number => {
+const firstUniqCharBruteForce = (s: string): number => {
   return 0
 }
 
 
-const firstUniqChar = (s: string): number => {
+const firstUniqCharNaive = (s: string): number => {
   return 0
 }
 
 
-const firstUniqChar = (s: string): number => {
+const firstUniqCharOptimal = (s: string): number => {
   return 0
 }
 
-export const nextGreatestLetter = {
-  BruteForce,
-  Naive,
-  Optimal
+export const firstUniqChar = {
+  firstUniqCharBruteForce,
+  firstUniqCharNaive,
+  firstUniqCharOptimal
 }
 
 // Example usage:

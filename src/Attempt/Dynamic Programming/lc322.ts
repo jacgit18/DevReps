@@ -26,25 +26,25 @@
 // 1 <= coins[i] <= 231 - 1
 // 0 <= amount <= 104
 
-const coinChange = (coins: number[], amount: number): number => {
+const coinChangeBruteForce = (coins: number[], amount: number): number => {
  return 0
 }
 
-const coinChange = (coins: number[], amount: number): number => {
+const coinChangeNaive = (coins: number[], amount: number): number => {
   return 0
  }
 
 
- const coinChange = (coins: number[], amount: number): number => {
+ const coinChangeOptimal = (coins: number[], amount: number): number => {
   return 0
  }
 
 
 
-export const nextGreatestLetter = {
-  BruteForce,
-  Naive,
-  Optimal
+export const coinChange = {
+  coinChangeBruteForce,
+  coinChangeNaive,
+  coinChangeOptimal
 }
 
 // Example usage:

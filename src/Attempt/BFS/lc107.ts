@@ -38,22 +38,22 @@ dfs vist each side completley before other side
 import { TreeNode } from "../../../src/util/BinaryTreeMaker"
 
 // depth tracking
-const levelOrderBottom = (root: TreeNode | null): number[][] => {
+const levelOrderBottomBruteForce = (root: TreeNode | null): number[][] => {
   return [[0]]
 }
 
-const levelOrderBottom = (root: TreeNode | null): number[][] => {
+const levelOrderBottomNaive = (root: TreeNode | null): number[][] => {
   return [[0]]
 }
 
-const levelOrderBottom = (root: TreeNode | null): number[][] => {
+const levelOrderBottomOptimal = (root: TreeNode | null): number[][] => {
   return [[0]]
 }
 
-export const nextGreatestLetter = {
-  BruteForce,
-  Naive,
-  Optimal
+export const levelOrderBottom = {
+  levelOrderBottomBruteForce,
+  levelOrderBottomNaive,
+  levelOrderBottomOptimal
 }
 
 let root = new TreeNode(12)

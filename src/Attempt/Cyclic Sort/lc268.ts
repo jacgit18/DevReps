@@ -23,22 +23,22 @@
 // 0 <= nums[i] <= n
 // All the numbers of nums are unique.
 
-const find_missing_number = (nums: number[]): number => {
+const find_missing_numberBruteForce = (nums: number[]): number => {
   return 0
 }
 
-const find_missing_number = (nums: number[]): number => {
+const find_missing_numberNaive = (nums: number[]): number => {
   return 0
 }
 
-const find_missing_number = (nums: number[]): number => {
+const find_missing_numberOptimal = (nums: number[]): number => {
   return 0
 }
 
 export const nextGreatestLetter = {
-  BruteForce,
-  Naive,
-  Optimal
+  find_missing_numberBruteForce,
+  find_missing_numberNaive,
+  find_missing_numberOptimal
 }
 
 // console.log(find_missing_number([3, 0, 1])) // 2

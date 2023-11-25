@@ -23,15 +23,15 @@
 // newInterval.length == 2
 // 0 <= start <= end <= 105
 
-const insertInterval = (intervals: number[][], newInterval: number[]): number[][] => {
+const insertIntervalBruteForce = (intervals: number[][], newInterval: number[]): number[][] => {
   return [[0]]
 }
 
-const insertInterval = (intervals: number[][], newInterval: number[]): number[][] => {
+const insertIntervalNaive = (intervals: number[][], newInterval: number[]): number[][] => {
   return [[0]]
 }
 
-const insertInterval = (intervals: number[][], newInterval: number[]): number[][] => {
+const insertIntervalOptimal = (intervals: number[][], newInterval: number[]): number[][] => {
   return [[0]]
 }
 
@@ -58,8 +58,8 @@ const insertInterval = (intervals: number[][], newInterval: number[]): number[][
 // console.log(example2) // Output: [[1, 2], [3, 10], [12, 16]]
 
 
-export const nextGreatestLetter = {
-  BruteForce,
-  Naive,
-  Optimal
+export const insertInterval = {
+  insertIntervalBruteForce,
+  insertIntervalNaive,
+  insertIntervalOptimal
 }

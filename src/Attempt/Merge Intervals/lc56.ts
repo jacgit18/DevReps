@@ -18,15 +18,15 @@
 // intervals[i].length == 2
 // 0 <= starti <= endi <= 104
 
-const merge = (intervals: number[][]): number[][] => {
+const mergeBruteForce = (intervals: number[][]): number[][] => {
   return [[0]]
 }
 
-const merge = (intervals: number[][]): number[][] => {
+const mergeNaive = (intervals: number[][]): number[][] => {
   return [[0]]
 }
 
-const merge = (intervals: number[][]): number[][] => {
+const mergeOptimal = (intervals: number[][]): number[][] => {
   return [[0]]
 }
 
@@ -45,8 +45,8 @@ const merge = (intervals: number[][]): number[][] => {
 // ])
 // console.log(example2) // Output: [[1, 5]]
 
-export const nextGreatestLetter = {
-  BruteForce,
-  Naive,
-  Optimal
+export const merge = {
+  mergeBruteForce,
+  mergeNaive,
+  mergeOptimal
 }

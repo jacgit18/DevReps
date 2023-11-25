@@ -15,22 +15,22 @@
 // 1 <= n <= 105
 // 1 <= nums[i] <= n
 
-const findDisappearedNumbers = (nums: number[]): number[] => {
+const findDisappearedNumbersBruteForce = (nums: number[]): number[] => {
   return [0]
 }
 
-const findDisappearedNumbers = (nums: number[]): number[] => {
+const findDisappearedNumbersNaive = (nums: number[]): number[] => {
   return [0]
 }
 
-const findDisappearedNumbers = (nums: number[]): number[] => {
+const findDisappearedNumbersOptimal = (nums: number[]): number[] => {
   return [0]
 }
 
 export const nextGreatestLetter = {
-  BruteForce,
-  Naive,
-  Optimal
+  findDisappearedNumbersBruteForce,
+  findDisappearedNumbersNaive,
+  findDisappearedNumbersOptimal
 }
 
 // Example usage:

@@ -19,22 +19,22 @@
 
 import { TreeNode } from "../../../src/util/BinaryTreeMaker"
 
-const maxDepth = (root: TreeNode | null): number => {
+const maxDepthBruteForce = (root: TreeNode | null): number => {
   return 0
 }
 
-const maxDepth = (root: TreeNode | null): number => {
+const maxDepthNaive = (root: TreeNode | null): number => {
   return 0
 }
 
-const maxDepth = (root: TreeNode | null): number => {
+const maxDepthOptimal = (root: TreeNode | null): number => {
   return 0
 }
 
-export const nextGreatestLetter = {
-  BruteForce,
-  Naive,
-  Optimal
+export const maxDepth = {
+  maxDepthBruteForce,
+  maxDepthNaive,
+  maxDepthOptimal
 }
 
 // Example usage:

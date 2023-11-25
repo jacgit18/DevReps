@@ -23,22 +23,22 @@
 // 1 <= nums.length <= 105
 // -231 <= nums[i] <= 231 - 1
 
-const firstMissingPositive = (nums: number[]): number => {
+const firstMissingPositiveBruteForce = (nums: number[]): number => {
   return 0
 }
 
-const firstMissingPositive = (nums: number[]): number => {
+const firstMissingPositiveNaive = (nums: number[]): number => {
   return 0
 }
 
-const firstMissingPositive = (nums: number[]): number => {
+const firstMissingPositiveOptimal = (nums: number[]): number => {
   return 0
 }
 
 export const nextGreatestLetter = {
-  BruteForce,
-  Naive,
-  Optimal
+  firstMissingPositiveBruteForce,
+  firstMissingPositiveNaive,
+  firstMissingPositiveOptimal
 }
 
 // Example usage:

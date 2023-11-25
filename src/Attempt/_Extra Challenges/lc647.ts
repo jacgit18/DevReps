@@ -21,22 +21,22 @@
 // 1 <= s.length <= 1000
 // s consists of lowercase English letters.
 
-const countSubstrings = (s: string): number => {
+const countSubstringsBruteForce = (s: string): number => {
   return 0
 }
 
-const countSubstrings = (s: string): number => {
+const countSubstringsNaive = (s: string): number => {
   return 0
 }
 
-const countSubstrings = (s: string): number => {
+const countSubstringsOptimal = (s: string): number => {
   return 0
 }
 
-export const nextGreatestLetter = {
-  BruteForce,
-  Naive,
-  Optimal
+export const countSubstrings = {
+  countSubstringsBruteForce,
+  countSubstringsNaive,
+  countSubstringsOptimal
 }
 
 // console.log(countSubstrings("abc"))

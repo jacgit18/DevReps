@@ -26,22 +26,22 @@
 // 1 <= s.length <= 104
 // s consists of parentheses only '()[]{}'.
 
-const isValid = (s: string): boolean => {
+const isValidBruteForce = (s: string): boolean => {
   return true
 }
 
-const isValid = (s: string): boolean => {
+const isValidNaive = (s: string): boolean => {
   return true
 }
 
-const isValid = (s: string): boolean => {
+const isValidOptimal = (s: string): boolean => {
   return true
 }
 
-export const nextGreatestLetter = {
-  BruteForce,
-  Naive,
-  Optimal
+export const isValid = {
+  isValidBruteForce,
+  isValidNaive,
+  isValidOptimal
 }
 
 // Example usage:

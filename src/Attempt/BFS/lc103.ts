@@ -21,22 +21,22 @@
 
 import { TreeNode } from "../../../src/util/BinaryTreeMaker"
 
-const zigzagLevelOrder = (root: TreeNode | null): number[][] => {
+const zigzagLevelOrderBruteForce = (root: TreeNode | null): number[][] => {
   return [[0]]
 }
 
-const zigzagLevelOrder = (root: TreeNode | null): number[][] => {
+const zigzagLevelOrderNaive = (root: TreeNode | null): number[][] => {
   return [[0]]
 }
 
-const zigzagLevelOrder = (root: TreeNode | null): number[][] => {
+const zigzagLevelOrderOptimal = (root: TreeNode | null): number[][] => {
   return [[0]]
 }
 
-export const nextGreatestLetter = {
-  BruteForce,
-  Naive,
-  Optimal
+export const zigzagLevelOrder = {
+  zigzagLevelOrderBruteForce,
+  zigzagLevelOrderNaive,
+  zigzagLevelOrderOptimal
 }
 
 // Example usage:
