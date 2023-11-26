@@ -11,8 +11,11 @@ import { groupAnagrams } from "./lc49"
 import { distributeCandies } from "./lc575"
 import { countSubstrings } from "./lc647"
 import { nameMatch } from "./nameMatch"
+import { solution } from "./Challenge2_0"
+
 
 export const SolutionExtra = {
+  challengeTwo: solution,
   challengeFour: decompressString,
   flat: flattenObject,
   island: getNumberOfIslands,

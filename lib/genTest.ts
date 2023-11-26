@@ -43,11 +43,11 @@ export const generateTestCases = (
           
           console.time(`${testName} Test case ${index + 1}`);
 
-          if (result instanceof TreeNode || result instanceof LinkedListNode) {
-            // If 'result' is a TreeNode, extract 'value' for comparison
-            expect(result?.value).toBe(expected); // Assuming 'result' is the received TreeNode object
+          if (result instanceof TreeNode) {
+            expect(result?.value).toBe(expected);
+          } else if (result instanceof LinkedListNode) {
+            expect(result).toStrictEqual(expected);
           } else {
-            // Default comparison if 'result' is not a TreeNode
             expect(result).toStrictEqual(expected);
           }
 

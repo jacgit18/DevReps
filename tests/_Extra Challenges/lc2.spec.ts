@@ -10,6 +10,9 @@ const runTestCases = () => {
   let list1 = createLinkedListFromArray([2, 4, 3])
   let list2 = createLinkedListFromArray([5, 6, 4])
 
+  const expectedLinkedList = createLinkedListFromArray([7, 0, 8]);
+
+
   const l1 = new LinkedListNode(2, new LinkedListNode(4, new LinkedListNode(3)));
   const l2 = new LinkedListNode(5, new LinkedListNode(6, new LinkedListNode(4)));
 
@@ -23,7 +26,7 @@ const runTestCases = () => {
 
 
   const testCases:  TestCase[]  = [
-    { params: list1, paramsTwo: list2, expected: [7,0,8] },
+    { params: list1, paramsTwo: list2, expected: expectedLinkedList },
 
   ];
 

@@ -59,6 +59,8 @@ export const addTwoNumbers = (l1: LinkedListNode | null, l2: LinkedListNode | nu
 const l1 = new LinkedListNode(2, new LinkedListNode(4, new LinkedListNode(3)));
 const l2 = new LinkedListNode(5, new LinkedListNode(6, new LinkedListNode(4)));
 
+
+
 // let result = addTwoNumbers(l1, l2);
 // let output = '';
 // while (result !== null) {

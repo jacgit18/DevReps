@@ -1,5 +1,5 @@
 import { lengthOfLastWord } from "./ChallengOne"
-import { solution } from "./Challenge2_0"
+import { attempt } from "./Challenge2_0"
 import { decompressString } from "./ChallengeFour"
 import { flattenObject } from "./FlattenaDictionary"
 import { getNumberOfIslands } from "./IslandCount"
@@ -17,7 +17,7 @@ import { nameMatch } from "./nameMatch"
 
 export const AttemptExtra = {
   challengeOne: lengthOfLastWord,
-  challengeTwo: solution,
+  challengeTwo: attempt,
   challengeFour: decompressString,
   flat: flattenObject,
   island: getNumberOfIslands,
