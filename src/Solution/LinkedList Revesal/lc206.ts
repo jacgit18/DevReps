@@ -22,7 +22,7 @@
 
 import { LinkedListNode, createLinkedListFromArray } from "../../../src/util/LinkedListMaker"
 
-export const reverse = (head: LinkedListNode | null): LinkedListNode | null => {
+ const reverseIter = (head: LinkedListNode | null): LinkedListNode | null => {
   if (head == null || head.value < 0) return null
   let current: LinkedListNode | null = head
   let previous: LinkedListNode | null = null
@@ -37,61 +37,7 @@ export const reverse = (head: LinkedListNode | null): LinkedListNode | null => {
   return previous
 }
 
-let head: LinkedListNode | null
-head = new LinkedListNode(2)
-head.next = new LinkedListNode(4)
-head.next.next = new LinkedListNode(6)
-head.next.next.next = new LinkedListNode(8)
-head.next.next.next.next = new LinkedListNode(10)
-
-let array1 = [1, 5, 7, 10]
-let linkedList = createLinkedListFromArray(array1)
-
-export let printFoward = (node: LinkedListNode | null) => {
-  let current: LinkedListNode | null = node
-  while (current !== null) {
-    console.log(current.value)
-    current = current.next // equivalent to i++ in a loop
-  }
-}
-
-export let printFowardRec = (node: LinkedListNode | null): LinkedListNode | null => {
-  let current: LinkedListNode | null = node
-  if (current !== null) {
-    console.log(current.value)
-    return printFowardRec(current.next)
-  }
-  return null // Ensure that you return null at the end of the function if the node is null
-}
-
-export const printBackward = (node: LinkedListNode | null) => {
-  if (node === null) return
-  printBackward(node.next)
-  console.log(node.value)
-}
-
-export const reverseNoComments = function (head: LinkedListNode | null): LinkedListNode | null {
-  if (head == null || head.value < 0) return null
-  let current: LinkedListNode | null = head
-  let previous: LinkedListNode | null = null
-
-  while (current !== null) {
-    let next: LinkedListNode | null = current.next
-    current.next = previous
-    previous = current
-    current = next
-  }
-  return previous
-}
-
-printFoward(linkedList)
-console.log()
-
-printFowardRec(linkedList)
-
-console.log()
-
-export const reverseREc = function (head: LinkedListNode | null): LinkedListNode | null {
+const reverseREc = function (head: LinkedListNode | null): LinkedListNode | null {
   if (!head) return null
 
   function reverse(currNode: LinkedListNode, prev: LinkedListNode | null): LinkedListNode | null {
@@ -103,18 +49,46 @@ export const reverseREc = function (head: LinkedListNode | null): LinkedListNode
   return reverse(head, null)
 }
 
-export const reverseList = function (
-  head: LinkedListNode | null,
-  prev: LinkedListNode | null = null,
-): LinkedListNode | null {
-  if (!head) {
-    return prev
+let head: LinkedListNode | null
+head = new LinkedListNode(2)
+head.next = new LinkedListNode(4)
+head.next.next = new LinkedListNode(6)
+head.next.next.next = new LinkedListNode(8)
+head.next.next.next.next = new LinkedListNode(10)
+
+let array1 = [1, 5, 7, 10]
+let linkedList = createLinkedListFromArray(array1)
+
+ const printFowardIter = (node: LinkedListNode | null) => {
+  let current: LinkedListNode | null = node
+  while (current !== null) {
+    console.log(current.value)
+    current = current.next // equivalent to i++ in a loop
   }
-  let current: LinkedListNode | null = head
-  let next: LinkedListNode | null = current.next
-  current.next = prev
-  prev = current
-  return reverseList(next, prev)
 }
 
-// console.log(reverseREc(linkedList))
+ const printFowardRec = (node: LinkedListNode | null): LinkedListNode | null => {
+  let current: LinkedListNode | null = node
+  if (current !== null) {
+    console.log(current.value)
+    return printFowardRec(current.next)
+  }
+  return null // Ensure that you return null at the end of the function if the node is null
+}
+
+ const printBackwardRec = (node: LinkedListNode | null) => {
+  if (node === null) return
+  printBackwardRec(node.next)
+  console.log(node.value)
+}
+
+
+
+
+export const reverseLinkedList = {
+  reverseIter,
+  reverseREc,
+  printFowardIter,
+  printFowardRec,
+  printBackwardRec,
+}

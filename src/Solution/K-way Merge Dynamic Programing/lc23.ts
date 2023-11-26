@@ -34,22 +34,25 @@
 // lists[i] is sorted in ascending order.
 // The sum of lists[i].length will not exceed 104.
 
-class ListNode {
-  val: number
-  next: ListNode | null
-  constructor(val?: number, next?: ListNode | null) {
-    this.val = val === undefined ? 0 : val
-    this.next = next === undefined ? null : next
-  }
-}
+// class ListNode {
+//   val: number
+//   next: ListNode | null
+//   constructor(val?: number, next?: ListNode | null) {
+//     this.val = val === undefined ? 0 : val
+//     this.next = next === undefined ? null : next
+//   }
+// }
 
-export const mergeKLists = (lists: Array<ListNode | null>): ListNode | null => {
-  const mergeTwoLists = (l1: ListNode | null, l2: ListNode | null): ListNode | null => {
-    const dummy = new ListNode()
+import { LinkedListNode } from "../../util/LinkedListMaker"
+
+
+export const mergeKLists = (lists: Array<LinkedListNode | null>): LinkedListNode | null => {
+  const mergeTwoLists = (l1: LinkedListNode | null, l2: LinkedListNode | null): LinkedListNode | null => {
+    const dummy = new LinkedListNode()
     let current = dummy
 
     while (l1 !== null && l2 !== null) {
-      if (l1.val < l2.val) {
+      if (l1.value < l2.value) {
         current.next = l1
         l1 = l1.next
       } else {
@@ -64,10 +67,10 @@ export const mergeKLists = (lists: Array<ListNode | null>): ListNode | null => {
   }
 
   const mergeKListsHelper = (
-    lists: Array<ListNode | null>,
+    lists: Array<LinkedListNode | null>,
     start: number,
     end: number,
-  ): ListNode | null => {
+  ): LinkedListNode | null => {
     if (start === end) {
       return lists[start]
     }

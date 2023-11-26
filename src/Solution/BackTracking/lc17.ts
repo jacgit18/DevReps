@@ -22,7 +22,7 @@
 // 0 <= digits.length <= 4
 // digits[i] is a digit in the range ['2', '9'].
 
-export const letterCombinationsBackTrack = (digits: string): string[] => {
+ const letterCombinationsBackTrack = (digits: string): string[] => {
   const digitToLetters: { [key: string]: string[] } = {
     "2": ["a", "b", "c"],
     "3": ["d", "e", "f"],
@@ -57,12 +57,8 @@ export const letterCombinationsBackTrack = (digits: string): string[] => {
   return result
 }
 
-// Example usage:
-// console.log(letterCombinationsBackTrack("23")) // Output: ["ad","ae","af","bd","be","bf","cd","ce","cf"]
-// console.log(letterCombinationsBackTrack("")) // Output: []
-// console.log(letterCombinationsBackTrack("2")) // Output: ["a","b","c"]
 
-export function letterCombinations(digits: string): string[] {
+ const letterCombinationsIter = (digits: string): string[] =>{
   if (digits.length === 0) {
     return []
   }
@@ -97,7 +93,9 @@ export function letterCombinations(digits: string): string[] {
   return queue
 }
 
-// Example usage:
-// console.log(letterCombinations("23")) // Output: ["ad","ae","af","bd","be","bf","cd","ce","cf"]
-// console.log(letterCombinations("")) // Output: []
-// console.log(letterCombinations("2")) // Output: ["a","b","c"]
+
+export const letterCombinations = {
+  letterCombinationsIter,
+  letterCombinationsBackTrack
+
+}

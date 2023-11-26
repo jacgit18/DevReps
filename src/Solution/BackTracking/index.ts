@@ -2,7 +2,7 @@
 import { robotPaths } from "./BacktrackMatrix"
 import { matrix } from "./MockIntMatrix"
 import { sudokuSolver } from "./SudokuSolverSolution"
-import { letterCombinationsBackTrack } from "./lc17"
+import { letterCombinations } from "./lc17"
 import { diffWaysToCompute } from "./lc241"
 import { gameOfLife } from "./lc289"
 import { combinationSum } from "./lc39"
@@ -17,7 +17,7 @@ export const SolutionBacktrack = {
   backtrackOne: matrix,
   backtrackTwo: robotPaths,
   sudoku: sudokuSolver,
-  lc17: letterCombinationsBackTrack,
+  lc17: letterCombinations,
   lc39: combinationSum,
   lc46: permute,
   lc78: subsets,

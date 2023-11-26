@@ -28,8 +28,7 @@ const runTestCases = () => {
 
  
   generateTestCases(AttemptBacktrack.lc17.letterCombinationsNaive, testCasePlaceholder,' Attempt ');
-// figure out whats causing solution to hang
-  generateTestCases(SolutionBacktrack.lc17, testCases,' Solution ');
+  generateTestCases(SolutionBacktrack.lc17.letterCombinationsBackTrack, testCases,' Solution ');
 
 };
 

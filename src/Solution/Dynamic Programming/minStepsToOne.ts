@@ -1,4 +1,4 @@
-export const minStepsToOne = (n: number): number => {
+const minStepsToOneBrute = (n: number): number => {
   if (n <= 0 || !Number.isInteger(n)) {
     throw new Error("Input must be a positive integer")
   }
@@ -103,3 +103,12 @@ export const minStepsToOneTab = (n: number): number => {
 // console.time("Tabulation: ")
 // console.log(minStepsToOneTab(5678))
 // console.timeEnd("Tabulation: ")
+
+
+
+export const minStepsToOne = {
+  minStepsToOneBrute,
+  minStepsToOneMemo,
+  minStepsToOneTab
+}
+
