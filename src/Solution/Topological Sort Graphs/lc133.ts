@@ -47,15 +47,17 @@
 // There are no repeated edges and no self-loops in the graph.
 // The Graph is connected and all nodes can be visited starting from the given node.
 
-class GraphNode {
-  val: number
-  neighbors: GraphNode[]
+// class GraphNode {
+//   val: number
+//   neighbors: GraphNode[]
 
-  constructor(val: number) {
-    this.val = val
-    this.neighbors = []
-  }
-}
+//   constructor(val: number) {
+//     this.val = val
+//     this.neighbors = []
+//   }
+// }
+
+import { GraphNode } from "../../util/GraphMaker"
 
 export const cloneGrapher = (node: GraphNode | null): GraphNode | null => {
   if (!node) return null
@@ -80,16 +82,3 @@ export const cloneGrapher = (node: GraphNode | null): GraphNode | null => {
   return dfs(node)
 }
 
-// Example usage:
-const node1 = new GraphNode(1)
-const node2 = new GraphNode(2)
-const node3 = new GraphNode(3)
-const node4 = new GraphNode(4)
-
-node1.neighbors = [node2, node4]
-node2.neighbors = [node1, node3]
-node3.neighbors = [node2, node4]
-node4.neighbors = [node1, node3]
-
-// const clonedGraph = cloneGrapher(node1)
-// console.log(clonedGraph)

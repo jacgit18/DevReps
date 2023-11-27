@@ -11,6 +11,7 @@ const runTestCases = () => {
 
   const testCases:  TestCase[]  = [
     { params: ["A man, a plan, a canal: Panama"], expected: true },
+    // { params: ["A man, a plan, a canal: Panama"], expected: SolutionTwoPointer.lc125(["A man, a plan, a canal: Panama"]) },
     { params: ["racecar"], expected: true },
     { params: ["hello"], expected: false },
     { params: ["Was it a car or a cat I saw?"], expected: true },

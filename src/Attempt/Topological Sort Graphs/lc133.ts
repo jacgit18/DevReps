@@ -69,20 +69,6 @@ const cloneGrapherOptimal = (node: GraphNode | null): GraphNode | null => {
   return null
 }
 
-// Example usage:
-const node1 = new GraphNode(1)
-const node2 = new GraphNode(2)
-const node3 = new GraphNode(3)
-const node4 = new GraphNode(4)
-
-node1.neighbors = [node2, node4]
-node2.neighbors = [node1, node3]
-node3.neighbors = [node2, node4]
-node4.neighbors = [node1, node3]
-
-// const clonedGraph = cloneGrapher(node1)
-// console.log(clonedGraph)
-
 
 export const cloneGrapher = {
   cloneGrapherBruteForce,
