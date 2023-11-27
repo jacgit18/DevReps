@@ -1,14 +1,16 @@
 import { generateTestCases, TestCase } from "../../lib/genTest";
 import { AttemptTopologicalSort } from "../../src/Attempt/Topological Sort Graphs";
 import { SolutionTopologicalSort } from "../../src/Solution/Topological Sort Graphs";
-import { GraphNode } from "../../src/util/GraphMaker";
+import { GraphVertex } from "../../src/util/GraphMaker";
 
 const runTestCases = () => {
 
-  let node1 = new GraphNode(1)
-  let node2 = new GraphNode(2)
-  let node3 = new GraphNode(3)
-  let node4 = new GraphNode(4)
+  // A vertex is a node in graph world
+
+  let node1 = new GraphVertex(1)
+  let node2 = new GraphVertex(2)
+  let node3 = new GraphVertex(3)
+  let node4 = new GraphVertex(4)
   
   node1.neighbors = [node2, node4];
   node4.neighbors = [node1, node2];
@@ -16,10 +18,10 @@ const runTestCases = () => {
   node3.neighbors = [node2, node4];
 
 
-  let nodeOne = new GraphNode(1)
-  let nodeTwo = new GraphNode(2)
-  let nodeThree = new GraphNode(3)
-  let nodeFour = new GraphNode(4)
+  let nodeOne = new GraphVertex(1)
+  let nodeTwo = new GraphVertex(2)
+  let nodeThree = new GraphVertex(3)
+  let nodeFour = new GraphVertex(4)
   
   nodeOne.neighbors = [nodeTwo, nodeFour];
   nodeFour.neighbors = [nodeOne, nodeTwo];

@@ -47,25 +47,18 @@
 // There are no repeated edges and no self-loops in the graph.
 // The Graph is connected and all nodes can be visited starting from the given node.
 
-class GraphNode {
-  val: number
-  neighbors: GraphNode[]
+import { GraphVertex } from "../../util/GraphMaker"
 
-  constructor(val: number) {
-    this.val = val
-    this.neighbors = []
-  }
-}
 
-const cloneGrapherBruteForce = (node: GraphNode | null): GraphNode | null => {
+const cloneGrapherBruteForce = (node: GraphVertex | null): GraphVertex | null => {
   return null
 }
 
-const cloneGrapherNaive = (node: GraphNode | null): GraphNode | null => {
+const cloneGrapherNaive = (node: GraphVertex | null): GraphVertex | null => {
   return null
 }
 
-const cloneGrapherOptimal = (node: GraphNode | null): GraphNode | null => {
+const cloneGrapherOptimal = (node: GraphVertex | null): GraphVertex | null => {
   return null
 }
 

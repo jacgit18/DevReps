@@ -1,6 +1,6 @@
-export class GraphNode {
+export class GraphVertex {
     val: number;
-    neighbors: GraphNode[];
+    neighbors: GraphVertex[];
   
     constructor(val: number) {
       this.val = val;
@@ -9,14 +9,14 @@ export class GraphNode {
   }
 
 export class Graph {
-    private nodes: Map<number, GraphNode>;
+    private nodes: Map<number, GraphVertex>;
   
     constructor() {
       this.nodes = new Map();
     }
   
     addNode(val: number): void {
-      this.nodes.set(val, new GraphNode(val));
+      this.nodes.set(val, new GraphVertex(val));
     }
   
     addEdge(val1: number, val2: number): void {

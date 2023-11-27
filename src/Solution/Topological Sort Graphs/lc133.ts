@@ -57,19 +57,19 @@
 //   }
 // }
 
-import { GraphNode } from "../../util/GraphMaker"
+import { GraphVertex } from "../../util/GraphMaker"
 
-export const cloneGrapher = (node: GraphNode | null): GraphNode | null => {
+export const cloneGrapher = (node: GraphVertex | null): GraphVertex | null => {
   if (!node) return null
 
   const visited = new Map()
 
-  const dfs = (originalNode: GraphNode): GraphNode => {
+  const dfs = (originalNode: GraphVertex): GraphVertex => {
     if (visited.has(originalNode.val)) {
       return visited.get(originalNode.val)
     }
 
-    const cloneNode = new GraphNode(originalNode.val)
+    const cloneNode = new GraphVertex(originalNode.val)
     visited.set(cloneNode.val, cloneNode)
 
     for (const neighbor of originalNode.neighbors) {

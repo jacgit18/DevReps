@@ -1,13 +1,13 @@
 import Benchmark from "benchmark";
 import { TreeNode } from "../src/util/BinaryTreeMaker";
-import { GraphNode } from "../src/util/GraphMaker";
+import { GraphVertex } from "../src/util/GraphMaker";
 import { LinkedListNode } from "../src/util/LinkedListMaker";
 
 export type TestCase = {
   params?: any | any[]; // Updated type for params
   paramsTwo?: any | any[]; // Updated type for paramsTwo
   paramsThree?: any | any[]; // Updated type for paramsThree
-  expected: number | string | boolean | any[] | any[][] | TreeNode | LinkedListNode | GraphNode | null;
+  expected: number | string | boolean | any[] | any[][] | TreeNode | LinkedListNode | GraphVertex | null;
   performance?: boolean; // Flag to indicate a performance test case
 };
 
@@ -48,7 +48,7 @@ export const generateTestCases = (
             expect(result?.value).toBe(expected);
           } else if (result instanceof LinkedListNode) {
             expect(result).toStrictEqual(expected);
-          } else if (result instanceof GraphNode) {
+          } else if (result instanceof GraphVertex) {
             expect(result).toStrictEqual(expected);
           } else {
             expect(result).toStrictEqual(expected);
