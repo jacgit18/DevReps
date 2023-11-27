@@ -1,41 +1,33 @@
 import { generateTestCases, TestCase } from "../../lib/genTest";
-import { AttemptExtra } from "../../src/Attempt/_Extra Challenges";
-import { SolutionExtra } from "../../src/Solution/_Extra Challenges";
-import { LinkedListNode, createLinkedListFromArray } from "../../src/util/LinkedListMaker";
+import { AttemptTop_K_Elements } from "../../src/Attempt/Top K Elements";
+import { SolutionTop_K_Elements } from "../../src/Solution/Top K Elements";
 
+// import { MinHeap } from "../../src/util/MinHeapMaker";
 
 const runTestCases = () => {
+  // Test cases
 
-  // ways to generate linked list
-  let list1 = createLinkedListFromArray([2, 4, 3])
-  let list2 = createLinkedListFromArray([5, 6, 4])
-
-  const expectedLinkedList = createLinkedListFromArray([7, 0, 8]);
-
-
-  const l1 = new LinkedListNode(2, new LinkedListNode(4, new LinkedListNode(3)));
-  const l2 = new LinkedListNode(5, new LinkedListNode(6, new LinkedListNode(4)));
-
-  let head: LinkedListNode | null = new LinkedListNode(2)
-  head.next = new LinkedListNode(4)
-  head.next.next = new LinkedListNode(3)
-
-  const testCasePlaceholder:  TestCase[]  = [
-    { params: list1, paramsTwo: list2, expected: null },
+  const testCasePlaceholder: TestCase[] = [
+    {
+      params: [[3, 2, 1, 5, 6, 4], 2],
+      expected: 0,
+    },
   ];
 
 
-  const testCases:  TestCase[]  = [
-    { params: list1, paramsTwo: list2, expected: expectedLinkedList },
-
+  const testCases: TestCase[] = [
+    {
+      params: [[3, 2, 1, 5, 6, 4], 2],
+      expected: 5,
+    },
+    {
+      params: [[3, 2, 3, 1, 2, 4, 5, 5, 6], 4],
+      expected: 4,
+    },
+    // Add more test cases here...
   ];
 
-    generateTestCases(AttemptExtra.lc2.addTwoNumbersNaive, testCasePlaceholder,' Attempt ');
-    generateTestCases(SolutionExtra.lc2, testCases,' Solution ',);
-
-
-  
-
-};
+  generateTestCases(AttemptTop_K_Elements.lc215.findKthLargestNaive, testCasePlaceholder,' Attempt ');
+  generateTestCases(SolutionTop_K_Elements.lc215, testCases,' Solution ',);};
 
 runTestCases();

@@ -41,12 +41,13 @@ const runTestCases = () => {
   // using your cloning function. This way, the test cases are more 
   // flexible and automatically adapt to changes in your cloning logic.
 
+  // let test = AttemptTopologicalSort.lc133.cloneGrapherNaive(nodeOne);
 
   const testCases: TestCase[] = [
     {
       params: node1,
       expected: nodeOne,
-      // expected: AttemptTopologicalSort.lc133.cloneGrapherNaive(nodeOne),
+      // expected: test,
     }
     // Add more test cases here
   ];
