@@ -1,5 +1,5 @@
+import { solution } from "./Challenge2_0"
 import { decompressString } from "./ChallengeFour"
-import { flattenObject } from "./FlattenaDictionary"
 import { getNumberOfIslands } from "./IslandCount"
 import { longestCommonPrefix } from "./lc14"
 import { addTwoNumbers } from "./lc2"
@@ -11,13 +11,11 @@ import { groupAnagrams } from "./lc49"
 import { distributeCandies } from "./lc575"
 import { countSubstrings } from "./lc647"
 import { nameMatch } from "./nameMatch"
-import { solution } from "./Challenge2_0"
 
 
 export const SolutionExtra = {
   challengeTwo: solution,
   challengeFour: decompressString,
-  flat: flattenObject,
   island: getNumberOfIslands,
   matchName: nameMatch,
   lc2: addTwoNumbers,
