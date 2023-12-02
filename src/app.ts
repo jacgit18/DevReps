@@ -1,11 +1,7 @@
-// import { OptimalSlidingWindSolution } from "./Solution/_Optimal/SlidingWindow";
-// import { ExtraSolution } from "./Solution/Extra Challenges";
-// import { AllAttempts } from "./Attempt"
-// import { AllSolution } from "./Solution"
-import { SolutionExtra } from "./Solution/_Extra Challenges";
+import { AllAttempts } from "./Attempt"
+import { AllSolution } from "./Solution"
 
 
-// // app.ts
 
 // import * as readlineSync from 'readline-sync'; // Import readline-sync for user input
 // import { combinedOptimalSolutionExports } from './Solution/_Optimal/Topological Sort Graphs/index';
@@ -81,5 +77,8 @@ import { SolutionExtra } from "./Solution/_Extra Challenges";
 //   const memoized: (n: number) => number = memoizeAddTo80()
 //   console.log(1, memoized(35))
 
-let test = SolutionExtra.lc20("()[]{}");
+// let test = SolutionExtra.lc20("()[]{}");
+let test = AllSolution.SolutionExtra;
+let test2 = AllAttempts.AttemptExtra;
 console.log(test)
+// console.log(test2)

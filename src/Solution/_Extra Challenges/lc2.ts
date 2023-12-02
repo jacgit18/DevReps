@@ -55,19 +55,5 @@ export const addTwoNumbers = (l1: LinkedListNode | null, l2: LinkedListNode | nu
   return dummyHead.next;
 }
 
-// Test cases
-const l1 = new LinkedListNode(2, new LinkedListNode(4, new LinkedListNode(3)));
-const l2 = new LinkedListNode(5, new LinkedListNode(6, new LinkedListNode(4)));
-
-
-
-// let result = addTwoNumbers(l1, l2);
-// let output = '';
-// while (result !== null) {
-//   output += `${result.value} -> `;
-//   result = result.next;
-// }
-// output += 'null';
-// console.log(output); // This will print the sum as a linked list
 
 

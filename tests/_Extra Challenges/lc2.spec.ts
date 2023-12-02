@@ -20,6 +20,18 @@ const runTestCases = () => {
   head.next = new LinkedListNode(4)
   head.next.next = new LinkedListNode(3)
 
+
+
+// let result = addTwoNumbers(l1, l2);
+// let output = '';
+// while (result !== null) {
+//   output += `${result.value} -> `;
+//   result = result.next;
+// }
+// output += 'null';
+// console.log(output); // This will print the sum as a linked list
+
+
   const testCasePlaceholder:  TestCase[]  = [
     { params: list1, paramsTwo: list2, expected: null },
   ];
