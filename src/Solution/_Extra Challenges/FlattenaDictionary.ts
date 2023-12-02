@@ -1,4 +1,6 @@
-const dict: FlattenObject = require("./dict")
+import FlattenObject  from "./dict.json";
+
+// const dict: FlattenObject;
 
 interface FlattenObject {
   [key: string]: number | string | boolean | FlattenObject | FlattenObject[]

@@ -2,6 +2,8 @@
 // import { ExtraSolution } from "./Solution/Extra Challenges";
 // import { AllAttempts } from "./Attempt"
 // import { AllSolution } from "./Solution"
+import { SolutionExtra } from "./Solution/_Extra Challenges";
+
 
 // // app.ts
 
@@ -62,19 +64,22 @@
 // console.log(ExtraSolution.lc14(["flower", "flow", "flight"]))
 
 
- function memoizeAddTo80() {
-    let cache: { [key: number]: number } = {}
-    return function (n: number): number {
-      if (n in cache) {
-        return cache[n]
-      } else {
-        console.log("long time")
-        const answer: number = n + 80
-        cache[n] = answer
-        return answer
-      }
-    }
-  }
+//  function memoizeAddTo80() {
+//     let cache: { [key: number]: number } = {}
+//     return function (n: number): number {
+//       if (n in cache) {
+//         return cache[n]
+//       } else {
+//         console.log("long time")
+//         const answer: number = n + 80
+//         cache[n] = answer
+//         return answer
+//       }
+//     }
+//   }
   
-  const memoized: (n: number) => number = memoizeAddTo80()
-  console.log(1, memoized(35))
+//   const memoized: (n: number) => number = memoizeAddTo80()
+//   console.log(1, memoized(35))
+
+let test = SolutionExtra.lc20("()[]{}");
+console.log(test)
