@@ -59,5 +59,5 @@ export class Graph {
   graph.createGraphFromArray(arrayGraph);
   
   // Print the graph
-  graph.printGraph();
+  // graph.printGraph();
   

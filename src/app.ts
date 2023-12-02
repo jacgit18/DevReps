@@ -1,15 +1,11 @@
 import { AllAttempts } from "./Attempt"
 import { AllSolution } from "./Solution"
-
-
-
-// import * as readlineSync from 'readline-sync'; // Import readline-sync for user input
-// import { combinedOptimalSolutionExports } from './Solution/_Optimal/Topological Sort Graphs/index';
+import { customLog } from "./util/logger";
+// readline-sync for user input
+// import * as readlineSync from 'readline-sync'; 
 
 
 // // Experiment
-
-
 // // Function to display a list of available coding challenges
 // const displayChallengeOptions = () => {
 //   console.log('Available Coding Challenges:');
@@ -31,8 +27,9 @@ import { AllSolution } from "./Solution"
 //   }
 // };
 
-// // Main function to prompt the user and run the selected coding challenge
-// const main = () => {
+// Main function to prompt the user and run the selected coding challenge
+const main = () => {
+
 //   displayChallengeOptions();
 //   const selectedChallengeIndex = readlineSync.questionInt('Enter the number of the coding challenge to run: ');
 
@@ -44,41 +41,20 @@ import { AllSolution } from "./Solution"
 //   } else {
 //     console.log('Invalid challenge number. Please choose a valid challenge.');
 //   }
-// };
-
-// // Run the main function
-// main();
-
-
-//  const app = ():any => {
-
-//     OptimalSlidingWindSolution.lc209( 7, [2,3,1,2,4,3])
-
-// }
-
-
-// console.log(ExtraSolution.lc14(["flower", "flow", "flight"]))
-
-
-//  function memoizeAddTo80() {
-//     let cache: { [key: number]: number } = {}
-//     return function (n: number): number {
-//       if (n in cache) {
-//         return cache[n]
-//       } else {
-//         console.log("long time")
-//         const answer: number = n + 80
-//         cache[n] = answer
-//         return answer
-//       }
-//     }
-//   }
-  
-//   const memoized: (n: number) => number = memoizeAddTo80()
-//   console.log(1, memoized(35))
 
 // let test = SolutionExtra.lc20("()[]{}");
-let test = AllSolution.SolutionExtra;
-let test2 = AllAttempts.AttemptExtra;
-console.log(test)
-// console.log(test2)
+    let test = AllSolution.SolutionExtra;
+    let test2 = AllAttempts.AttemptExtra;
+    customLog("log", "Challenge:", test, "Solution")
+    // console.log(test2)
+
+
+// Usage examples:
+// customLog("log", "Before:", "Hello", "After", "Additional Context")
+// customLog('info', 'Info:', 'Some Information', 'Details', 'More Context');
+// customLog('error', 'Error:', 'Something went wrong', 'Details', 'Error Context');
+
+
+};
+
+main();

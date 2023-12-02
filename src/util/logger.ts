@@ -1,16 +1,11 @@
 export const customLog = (
   type: "log" | "info" | "warn" | "error" | "table",
   pre: string = "",
-  arg: string = "",
+  arg: any = "",
   post: string = "",
   ...context: any[]
 ): void => {
   const logMessage = `${pre} ${arg} ${post}`
-
-  context.forEach((item, index) => {
-    console.log(`Context ${index + 1}:`)
-    console.log(item)
-  })
 
   switch (type) {
     case "log":
@@ -32,6 +27,10 @@ export const customLog = (
       console.log(logMessage) // Default to log if an invalid type is provided
       break
   }
+  context.forEach((item, index) => {
+    console.log(`Context ${index + 1}:`)
+    console.log(item)
+  })
 }
 
 // Usage examples:
