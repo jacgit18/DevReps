@@ -1,7 +1,7 @@
 export const customLog = (
   type: "log" | "info" | "warn" | "error" | "table",
   pre: string = "",
-  arg: any = "",
+  arg: any,
   post: string = "",
   ...context: any[]
 ): void => {

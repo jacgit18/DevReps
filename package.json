@@ -2,7 +2,13 @@
   "name": "coding-challenges",
   "version": "1.0.0",
   "description": "",
-  "keywords": ["typescript","node", "eslint", "prettier","jest" ],
+  "keywords": [
+    "typescript",
+    "node",
+    "eslint",
+    "prettier",
+    "jest"
+  ],
   "type": "commonjs",
   "types": "ts",
   "engines": {
@@ -41,6 +47,7 @@
     "@babel/preset-env": "^7.23.2",
     "@babel/preset-typescript": "^7.23.2",
     "@types/benchmark": "^2.1.5",
+    "@types/inquirer": "^9.0.7",
     "@types/jest": "^29.5.6",
     "@types/node": "^20.8.9",
     "@types/readline-sync": "^1.4.7",

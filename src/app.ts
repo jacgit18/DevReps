@@ -1,60 +1,88 @@
-import { AllAttempts } from "./Attempt"
-import { AllSolution } from "./Solution"
+import * as readlineSync from 'readline-sync';
+import { AllAttempts } from "./Attempt";
+import { AllSolution } from "./Solution";
 import { customLog } from "./util/logger";
-// readline-sync for user input
-// import * as readlineSync from 'readline-sync'; 
 
 
-// // Experiment
-// // Function to display a list of available coding challenges
-// const displayChallengeOptions = () => {
-//   console.log('Available Coding Challenges:');
-//   Object.keys(combinedOptimalSolutionExports.OptimalSlidingWindSolution).forEach((challenge, index) => {
-//     console.log(`${index + 1}. ${challenge}`);
-//   });
-// };
+// Experiment
+type ChallengeFunction = (...params: any[]) => any;
 
-// // Function to run the selected coding challenge
-// const runSelectedChallenge = (challengeName: string) => {
-//   const codingChallengeFunction = combinedOptimalSolutionExports.OptimalSlidingWindSolution.lc3
-// //   combinedOptimalSolutionExports.OptimalSlidingWindSolution[challengeName];
-//   if (codingChallengeFunction) {
-//     const input = readlineSync.question('Enter input for the coding challenge: ');
-//     const result = codingChallengeFunction(input);
-//     console.log(`Result of ${challengeName}: ${result}`);
-//   } else {
-//     console.log('Invalid challenge name. Please choose a valid challenge.');
-//   }
-// };
+interface ChallengeCategory {
+  [challenge: string]: ChallengeFunction;
+}
 
-// Main function to prompt the user and run the selected coding challenge
-const main = () => {
+interface AllSolutions {
+  [category: string]: ChallengeCategory;
+}
 
-//   displayChallengeOptions();
-//   const selectedChallengeIndex = readlineSync.questionInt('Enter the number of the coding challenge to run: ');
+async function promptForChallenge(allSolutions: AllSolutions) {
+  const categories = Object.keys(allSolutions);
+  const selectedCategory = await promptUser("Select a category", categories);
 
-//   const challengeNames = Object.keys(combinedOptimalSolutionExports.OptimalSlidingWindSolution);
-//   const selectedChallengeName = challengeNames[selectedChallengeIndex - 1];
+  const challengesInCategory = Object.keys(allSolutions[selectedCategory]);
+  const selectedChallenge = await promptUser("Select a challenge", challengesInCategory);
 
-//   if (selectedChallengeName) {
-//     runSelectedChallenge(selectedChallengeName);
-//   } else {
-//     console.log('Invalid challenge number. Please choose a valid challenge.');
-//   }
+  const challengeFunction = allSolutions[selectedCategory][selectedChallenge];
 
-// let test = SolutionExtra.lc20("()[]{}");
-    let test = AllSolution.SolutionExtra;
-    let test2 = AllAttempts.AttemptExtra;
-    customLog("log", "Challenge:", test, "Solution")
-    // console.log(test2)
+  const parameters = await promptUser("Enter challenge parameters (comma-separated)", []);
 
+  const paramArray = parameters.split(",").map(param => param.trim());
 
-// Usage examples:
-// customLog("log", "Before:", "Hello", "After", "Additional Context")
-// customLog('info', 'Info:', 'Some Information', 'Details', 'More Context');
-// customLog('error', 'Error:', 'Something went wrong', 'Details', 'Error Context');
+  try {
+    const result = await challengeFunction(...paramArray);
+    console.log("Challenge result:", result);
+  } catch (error) {
+    if (typeof error === 'object' && error !== null && 'message' in error) {
+      console.error("Error executing the challenge:", (error as Error).message);
+    } else {
+      console.error("Unknown error:", (error as Error).message);
+    }
+  }
+}
 
+async function promptUser(promptMessage: string, options: string[]): Promise<string> {
+  const userInput = readlineSync.keyInSelect(options, `${promptMessage} (use arrow keys to select)`);
+  
+  if (userInput === -1) {
+    console.error("Invalid input. Please try again.");
+    return await promptUser(promptMessage, options);
+  }
 
+  return options[userInput];
+}
+
+// Example usage with AllSolution import
+const allSolutions: AllSolutions = {
+  SolutionExtra: {
+    challengeTwo: (param: string) => {
+      // Replace this with the actual implementation of challengeTwo
+      return `Challenge Two executed with param: ${param}`;
+    },
+    // Add other challenges in SolutionExtra
+  },
+  // Add other solution categories
 };
 
-main();
+// Run the prompt
+// promptForChallenge(allSolutions);
+
+
+
+const main = () => {
+
+  // let test = SolutionExtra.lc20("()[]{}");
+      let test = AllSolution.SolutionExtra;
+      let test2 = AllAttempts.AttemptExtra;
+      customLog("log", "Challenge:", test, "Solution")
+      // console.log(test2)
+  
+  
+  // Usage examples:
+  // customLog("log", "Before:", "Hello", "After", "Additional Context")
+  // customLog('info', 'Info:', 'Some Information', 'Details', 'More Context');
+  // customLog('error', 'Error:', 'Something went wrong', 'Details', 'Error Context');
+  
+  
+  };
+  
+  main();
