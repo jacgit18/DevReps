@@ -16,7 +16,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: "18" # Adjust as needed
+          node-version: "20.90" # Update to the desired Node.js version
 
       - name: Install dependencies
         run: npm install # or yarn install
