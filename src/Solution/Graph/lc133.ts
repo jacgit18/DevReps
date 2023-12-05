@@ -57,6 +57,7 @@
 //   }
 // }
 
+// mv to to Graph not topilogical question
 import { GraphVertex } from "../../util/GraphMaker"
 
 export const cloneGrapher = (node: GraphVertex | null): GraphVertex | null => {

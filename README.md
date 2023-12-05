@@ -135,12 +135,12 @@ When tackling coding challenges, especially when implementing advanced patterns,
   - [] Path with Maximum Sum (hard): LC #124
 
 - Topological Sort (Graphs)
-  - [] Topological Sort (medium)
   - [] Tasks Scheduling (medium): LC #207
   - [] Tasks Scheduling Order (medium): LC #210
   - [] Alien Dictionary (hard): LC #269
-  - [] Reconstructing a Sequence (hard): LC #444
   - [] Minimum Height Trees (hard): LC #310
+  - [] Reconstructing a Sequence (hard): LC #444
+
 
 - Top K Elements(Priority queue and heaps)
   - [] Top 'K' Numbers (easy)
@@ -183,7 +183,8 @@ When tackling coding challenges, especially when implementing advanced patterns,
   - [] Maximize Capital (hard): LC #502
   - [] Next Interval (hard): LC #436
 
-
+- Graph
+    - [] Clone Graph (hard): LC #133
 
 - Other Dynamic Programming & Binary Search
   - [] Super Egg Drop(hard): LC #887
