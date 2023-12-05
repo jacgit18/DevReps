@@ -29,23 +29,27 @@
 // -109 <= target <= 109
 // Only one valid answer exists.
 
-export const pair_with_target_sum_BruteForce = (arr: number[], targetSum: number): number[] => {
+const pair_with_target_sum_BruteForce = (arr: number[], targetSum: number): number[] => {
+  return [0]
+}
+
+const pair_with_target_sum_NaiveImp = (arr: number[], targetSum: number): number[] => {
+  return [0]
+}
+
+const pair_with_target_sum_NaiveDec = (arr: number[], targetSum: number): number[] => {
   return [0]
 }
 
 
-export const pair_with_target_sum_Naive = (arr: number[], targetSum: number): number[] => {
-  return [0]
-}
-
-
-export const pair_with_target_sum_Optimal = (arr: number[], targetSum: number): number[] => {
+const pair_with_target_sum_Optimal = (arr: number[], targetSum: number): number[] => {
   return [0]
 }
 
 export const PairWithTargetSum = {
   pair_with_target_sum_BruteForce,
-  pair_with_target_sum_Naive,
+  pair_with_target_sum_NaiveImp,
+  pair_with_target_sum_NaiveDec,
   pair_with_target_sum_Optimal
 }
 

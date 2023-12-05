@@ -26,7 +26,7 @@ const runTestCases = () => {
       ];
       
   
-      generateTestCases(AttemptTwoPointer.lc1.pair_with_target_sum_Naive, testCasePlaceholder, ' Attempt ');
+      generateTestCases(AttemptTwoPointer.lc1.pair_with_target_sum_NaiveImp, testCasePlaceholder, ' Attempt ');
       generateTestCases(SolutionTwoPointer.lc1.pair_with_target_sum_Two_Pointer, testCases, ' Solution ');
       generateTestCases(SolutionTwoPointer.lc1.pair_with_target_sum_map, testCases, 'Alt Solution ');
 

@@ -12,6 +12,7 @@ Optimal approaches aim for the most efficient solution based on the problem. Whi
 
 When tackling coding challenges, especially when implementing advanced patterns, refrain from defaulting to a specific coding pattern in your approach. Take the time to analyze the problem thoroughly, considering various factors, as blindly choosing a pattern may limit your perspective and hinder a comprehensive solution. Like for example assuming every string or array question best approach is either a sliding window or two pointer this is lazy thinking and waste time.
 
+![](assets/AlgoFlow.png)
 
 
 ## Syllabus
