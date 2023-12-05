@@ -1,6 +1,6 @@
-import { generateTestCases, TestCase } from "../../../lib/genTest";
-import { AttemptModifiedBinarySearch } from "../../../src/Attempt/Modified Binary Search";
-import { SolutionModifiedBinarySearch } from "../../../src/Solution/Modified Binary Search";
+import { generateTestCases, TestCase } from "../../lib/genTest";
+import { AttemptModifiedBinarySearch } from "../../src/Attempt/Modified Binary Search";
+import { SolutionModifiedBinarySearch } from "../../src/Solution/Modified Binary Search";
 
 const runTestCases = () => {
   // Test cases

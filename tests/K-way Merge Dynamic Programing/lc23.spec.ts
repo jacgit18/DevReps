@@ -1,7 +1,7 @@
-import { generateTestCases, TestCase } from "../../../lib/genTest";
-import { AttemptExtra } from "../../../src/Attempt/_Extra Challenges";
-import { SolutionExtra } from "../../../src/Solution/_Extra Challenges";
-import { createLinkedListFromArray, LinkedListNode } from "../../../src/util/LinkedListMaker";
+import { generateTestCases, TestCase } from "../../lib/genTest";
+import { AttemptExtra } from "../../src/Attempt/_Extra Challenges";
+import { SolutionExtra } from "../../src/Solution/_Extra Challenges";
+import { createLinkedListFromArray, LinkedListNode } from "../../src/util/LinkedListMaker";
 
 
 const runTestCases = () => {
