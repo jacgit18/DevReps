@@ -105,7 +105,11 @@ const findKthLargestBruteForce = (nums: number[], k: number): number | undefined
   return 0
 }
 
-const findKthLargestNaive = (nums: number[], k: number): number | undefined => {
+const findKthLargestNaiveImp = (nums: number[], k: number): number | undefined => {
+  return 0
+}
+
+const findKthLargestNaiveDec = (nums: number[], k: number): number | undefined => {
   return 0
 }
 
@@ -120,6 +124,7 @@ const findKthLargestOptimal = (nums: number[], k: number): number | undefined =>
 
 export const findKthLargest = {
   findKthLargestBruteForce,
-  findKthLargestNaive,
+  findKthLargestNaiveImp,
+  findKthLargestNaiveDec,
   findKthLargestOptimal
 }

@@ -31,7 +31,7 @@ const runTestCases = () => {
       ];
       
   
-      generateTestCases(AttemptSlidingWindow.lc209.smallestSubarrayWithGivenSumNaive, testCasePlaceholder, ' Attempt ');
+      generateTestCases(AttemptSlidingWindow.lc209.smallestSubarrayWithGivenSumNaiveImp, testCasePlaceholder, ' Attempt ');
       generateTestCases(SolutionSlidingWindow.lc209.smallestSubarraySlidingWindow, testCases, ' Solution ');
       generateTestCases(SolutionSlidingWindow.lc209.smallest_subarray_with_given_sumAlt, testCases, 'Alt Solution ');
 

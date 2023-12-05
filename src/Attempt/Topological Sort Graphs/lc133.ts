@@ -54,7 +54,11 @@ const cloneGrapherBruteForce = (node: GraphVertex | null): GraphVertex | null =>
   return null
 }
 
-const cloneGrapherNaive = (node: GraphVertex | null): GraphVertex | null => {
+const cloneGrapherNaiveImp = (node: GraphVertex | null): GraphVertex | null => {
+  return null
+}
+
+const cloneGrapherNaiveDec = (node: GraphVertex | null): GraphVertex | null => {
   return null
 }
 
@@ -65,6 +69,7 @@ const cloneGrapherOptimal = (node: GraphVertex | null): GraphVertex | null => {
 
 export const cloneGrapher = {
   cloneGrapherBruteForce,
-  cloneGrapherNaive,
+  cloneGrapherNaiveImp,
+  cloneGrapherNaiveDec,
   cloneGrapherOptimal
 }

@@ -18,7 +18,7 @@ const runTestCases = () => {
     { params: ["AABA", 0], expected: 2 },
   ];
 
-  generateTestCases(AttemptTwoPointer.lc424.characterReplacementNaive, testCasePlaceholder, 'Attempt');
+  generateTestCases(AttemptTwoPointer.lc424.characterReplacementNaiveImp, testCasePlaceholder, 'Attempt');
   generateTestCases(SolutionTwoPointer.lc424, testCases, 'Solution');
 };
 

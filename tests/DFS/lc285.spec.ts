@@ -27,7 +27,7 @@ const runTestCases = () => {
     { params: root2, paramsTwo: p2, expected: null },
   ];
 
-    generateTestCases(AttemptDFS.lc285.inorderSuccessorNaive, testCasePlaceholder,' Attempt ');
+    generateTestCases(AttemptDFS.lc285.inorderSuccessorNaiveImp, testCasePlaceholder,' Attempt ');
     generateTestCases(SolutionDFS.lc285, testCases,' Solution ',);
 
 

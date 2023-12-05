@@ -30,7 +30,7 @@ const runTestCases = () => {
 
   ];
 
-    generateTestCases(AttemptExtra.lc2.addTwoNumbersNaive, testCases,' Attempt ');
+    generateTestCases(AttemptExtra.lc2.addTwoNumbersNaiveImp, testCases,' Attempt ');
     generateTestCases(SolutionExtra.lc2, testCases,' Solution ',);
 
 

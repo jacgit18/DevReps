@@ -26,7 +26,7 @@ const runTestCases = () => {
  
 
 
-  generateTestCases(AttemptSlidingWindow.lc76.minWindowNaive, testCasePlaceholder, ' Attempt ');
+  generateTestCases(AttemptSlidingWindow.lc76.minWindowNaiveImp, testCasePlaceholder, ' Attempt ');
   generateTestCases(SolutionSlidingWindow.lc76, testCases, ' Solution ');
 
 

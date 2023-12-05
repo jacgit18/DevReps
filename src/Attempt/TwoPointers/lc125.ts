@@ -30,7 +30,11 @@ const isPalindromeBruteForce = (s: string): boolean => {
   return true
 }
 
-const isPalindromeNaive = (s: string): boolean => {
+const isPalindromeNaiveImp = (s: string): boolean => {
+  return true
+}
+
+const isPalindromeNaiveDec = (s: string): boolean => {
   return true
 }
 
@@ -40,7 +44,8 @@ const pisPalindromeOptimal = (s: string): boolean => {
 
 export const isPalindrome = {
   isPalindromeBruteForce,
-  isPalindromeNaive,
+  isPalindromeNaiveImp,
+  isPalindromeNaiveDec,
   pisPalindromeOptimal
 }
 // Example usage:

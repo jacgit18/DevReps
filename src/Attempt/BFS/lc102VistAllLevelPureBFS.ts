@@ -25,7 +25,11 @@ import { TreeNode } from "../../../src/util/BinaryTreeMaker"
   return [[0]]
 }
 
-const levelOrderTraversalNaive = (root: TreeNode | null): number[][] => {
+const levelOrderTraversalNaiveImp = (root: TreeNode | null): number[][] => {
+  return [[0]]
+}
+
+const levelOrderTraversalNaiveDec = (root: TreeNode | null): number[][] => {
   return [[0]]
 }
 
@@ -45,6 +49,7 @@ tree.right.right = new TreeNode(7)
 
 export const levelOrderTraversal = {
   levelOrderTraversalBruteForce,
-  levelOrderTraversalNaive,
+  levelOrderTraversalNaiveImp,
+  levelOrderTraversalNaiveDec,
   levelOrderTraversalOptimal
 }

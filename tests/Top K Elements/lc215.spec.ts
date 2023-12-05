@@ -27,7 +27,7 @@ const runTestCases = () => {
     // Add more test cases here...
   ];
 
-  generateTestCases(AttemptTop_K_Elements.lc215.findKthLargestNaive, testCasePlaceholder,' Attempt ');
+  generateTestCases(AttemptTop_K_Elements.lc215.findKthLargestNaiveImp, testCasePlaceholder,' Attempt ');
   generateTestCases(SolutionTop_K_Elements.lc215, testCases,' Solution ',);};
 
 runTestCases();

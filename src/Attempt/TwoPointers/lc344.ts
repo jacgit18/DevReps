@@ -24,7 +24,12 @@ const reverseStringBruteForce = (s: string[]): string[] =>{
 }
 
 
-const reverseStringNaive = (s: string[]): string[] =>{
+const reverseStringNaiveImp = (s: string[]): string[] =>{
+  
+  return [" "]
+}
+
+const reverseStringNaiveDec = (s: string[]): string[] =>{
   
   return [" "]
 }
@@ -37,7 +42,8 @@ const reverseStringOptimal = (s: string[]): string[] =>{
 
 export const reverseString = {
   reverseStringBruteForce,
-  reverseStringNaive,
+  reverseStringNaiveImp,
+  reverseStringNaiveDec,
   reverseStringOptimal
 }
 

@@ -26,7 +26,7 @@ const runTestCases = () => {
     // Add more test cases here...
   ];
 
-  generateTestCases(AttemptModifiedBinarySearch.lc704.searchBinNaive, testCasePlaceholder,' Attempt ');
+  generateTestCases(AttemptModifiedBinarySearch.lc704.searchBinNaiveImp, testCasePlaceholder,' Attempt ');
   generateTestCases(SolutionModifiedBinarySearch.lc704.searchBinRec, testCases,' Solution ',);
 };
 

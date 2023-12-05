@@ -16,7 +16,7 @@ const runTestCases = () => {
 
   ];
 
-    generateTestCases(AttemptBFS.lc100.isSameTreeNaive, testCases,' Attempt ');
+    generateTestCases(AttemptBFS.lc100.isSameTreeNaiveImp, testCases,' Attempt ');
     generateTestCases(SolutionBFS.lc100, testCases,' Solution ',);
 
 

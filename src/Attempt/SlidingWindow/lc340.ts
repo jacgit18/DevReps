@@ -8,7 +8,11 @@
   return 0
 }
 
-const longest_substring_with_k_distinctNaive = (str: string, k: number): number => {
+const longest_substring_with_k_distinctNaiveImp = (str: string, k: number): number => {
+  return 0
+}
+
+const longest_substring_with_k_distinctNaiveDec = (str: string, k: number): number => {
   return 0
 }
 
@@ -18,7 +22,8 @@ const longest_substring_with_k_distinctOptimal = (str: string, k: number): numbe
 
 export const longest_substring_with_k_distinct = {
   longest_substring_with_k_distinctBruteForce,
-  longest_substring_with_k_distinctNaive,
+  longest_substring_with_k_distinctNaiveImp,
+  longest_substring_with_k_distinctNaiveDec,
   longest_substring_with_k_distinctOptimal
 }
 

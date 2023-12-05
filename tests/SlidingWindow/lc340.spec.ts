@@ -26,7 +26,7 @@ const runTestCases = () => {
   ];
 
 
-  generateTestCases(AttemptSlidingWindow.lc340.longest_substring_with_k_distinctNaive, testCasePlaceholder, ' Attempt ');
+  generateTestCases(AttemptSlidingWindow.lc340.longest_substring_with_k_distinctNaiveImp, testCasePlaceholder, ' Attempt ');
   generateTestCases(SolutionSlidingWindow.lc340, testCases, ' Solution ');
 
 

@@ -25,7 +25,12 @@ const searchBinBruteForce = (nums: number[], target: number): number => {
   return 0
 }
 
-const searchBinNaive = (nums: number[], target: number): number => {
+const searchBinNaiveImp = (nums: number[], target: number): number => {
+  return 0
+}
+
+
+const searchBinNaiveDec = (nums: number[], target: number): number => {
   return 0
 }
 
@@ -47,6 +52,7 @@ const searchBinOptimal = (nums: number[], target: number): number => {
 
 export const searchBin = {
   searchBinBruteForce,
-  searchBinNaive,
+  searchBinNaiveImp,
+  searchBinNaiveDec,
   searchBinOptimal
 }

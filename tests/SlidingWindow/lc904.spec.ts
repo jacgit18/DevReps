@@ -24,7 +24,7 @@ const runTestCases = () => {
   ];
 
 
-  generateTestCases(AttemptSlidingWindow.lc904.totalFruitNaive, testCasePlaceholder, ' Attempt ');
+  generateTestCases(AttemptSlidingWindow.lc904.totalFruitNaiveImp, testCasePlaceholder, ' Attempt ');
   generateTestCases(SolutionSlidingWindow.lc904, testCases, ' Solution ');
 
 

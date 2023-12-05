@@ -42,7 +42,7 @@ const runTestCases = () => {
 
   ];
 
-    generateTestCases(AttemptExtra.lc2.addTwoNumbersNaive, testCasePlaceholder,' Attempt ');
+    generateTestCases(AttemptExtra.lc2.addTwoNumbersNaiveImp, testCasePlaceholder,' Attempt ');
     generateTestCases(SolutionExtra.lc2, testCases,' Solution ',);
 
 

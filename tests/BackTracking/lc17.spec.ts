@@ -27,7 +27,7 @@ const runTestCases = () => {
       ];
 
  
-  generateTestCases(AttemptBacktrack.lc17.letterCombinationsNaive, testCasePlaceholder,' Attempt ');
+  generateTestCases(AttemptBacktrack.lc17.letterCombinationsNaiveImp, testCasePlaceholder,' Attempt ');
   generateTestCases(SolutionBacktrack.lc17.letterCombinationsBackTrack, testCases,' Solution ');
 
 };

@@ -38,7 +38,14 @@ import { LinkedListNode, createLinkedListFromArray } from "../../util/LinkedList
 }
 
 
- const addTwoNumbersNaive = (
+ const addTwoNumbersNaiveImp = (
+  current1: LinkedListNode | null,
+  current2: LinkedListNode | null,
+): LinkedListNode | null => {
+  return null
+}
+
+const addTwoNumbersNaiveDec = (
   current1: LinkedListNode | null,
   current2: LinkedListNode | null,
 ): LinkedListNode | null => {
@@ -55,7 +62,8 @@ import { LinkedListNode, createLinkedListFromArray } from "../../util/LinkedList
 
 export const addTwoNumbers = {
   addTwoNumbersBruteForce,
-  addTwoNumbersNaive,
+  addTwoNumbersNaiveImp,
+  addTwoNumbersNaiveDec,
   addTwoNumbersOptimal
 }
 

@@ -25,7 +25,11 @@ import { TreeNode } from "../../../src/util/BinaryTreeMaker"
   return null
 }
 
-const inorderSuccessorNaive = (root: TreeNode | null, p: TreeNode | null): TreeNode | null => {
+const inorderSuccessorNaiveImp = (root: TreeNode | null, p: TreeNode | null): TreeNode | null => {
+  return null
+}
+
+const inorderSuccessorNaiveDec = (root: TreeNode | null, p: TreeNode | null): TreeNode | null => {
   return null
 }
 
@@ -35,7 +39,8 @@ const inorderSuccessorOptimal = (root: TreeNode | null, p: TreeNode | null): Tre
 
 export const inorderSuccessor = {
   inorderSuccessorBruteForce,
-  inorderSuccessorNaive,
+  inorderSuccessorNaiveImp,
+  inorderSuccessorNaiveDec,
   inorderSuccessorOptimal
 }
 

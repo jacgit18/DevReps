@@ -28,7 +28,11 @@
   return 0
 }
 
-const lengthOfLongestSubstringNaive = (s: string): number => {
+const lengthOfLongestSubstringNaiveImp = (s: string): number => {
+  return 0
+}
+
+const lengthOfLongestSubstringNaiveDec = (s: string): number => {
   return 0
 }
 
@@ -40,6 +44,7 @@ const lengthOfLongestSubstringOptimal = (s: string): number => {
 
 export const lengthOfLongestSubstring = {
   lengthOfLongestSubstringBruteForce,
-  lengthOfLongestSubstringNaive,
+  lengthOfLongestSubstringNaiveImp,
+  lengthOfLongestSubstringNaiveDec,
   lengthOfLongestSubstringOptimal
 }

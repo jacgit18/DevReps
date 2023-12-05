@@ -21,7 +21,7 @@ const runTestCases = () => {
   ];
 
 
-    generateTestCases(AttemptTwoPointer.lc344.reverseStringNaive, testCasePlaceholder,' Attempt ');
+    generateTestCases(AttemptTwoPointer.lc344.reverseStringNaiveImp, testCasePlaceholder,' Attempt ');
     generateTestCases(SolutionTwoPointer.lc344.reverseStringTwoPointer, testCases,' Solution ',);
 
 

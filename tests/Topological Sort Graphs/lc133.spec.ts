@@ -52,7 +52,7 @@ const runTestCases = () => {
     // Add more test cases here
   ];
 
-  generateTestCases(AttemptTopologicalSort.lc133.cloneGrapherNaive, testCasePlaceholder, ' Attempt ');
+  generateTestCases(AttemptTopologicalSort.lc133.cloneGrapherNaiveImp, testCasePlaceholder, ' Attempt ');
   generateTestCases(SolutionTopologicalSort.lc133, testCases, ' Solution ');
 };
 

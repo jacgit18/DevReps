@@ -26,7 +26,11 @@ const characterReplacementBruteForce = (s: string, k: number): number => {
   return 0
 }
 
-const characterReplacementNaive = (s: string, k: number): number => {
+const characterReplacementNaiveImp = (s: string, k: number): number => {
+  return 0
+}
+
+const characterReplacementNaiveDec = (s: string, k: number): number => {
   return 0
 }
 
@@ -36,7 +40,8 @@ const characterReplacementOptimal = (s: string, k: number): number => {
 
 export const characterReplacement = {
   characterReplacementBruteForce,
-  characterReplacementNaive,
+  characterReplacementNaiveImp,
+  characterReplacementNaiveDec,
   characterReplacementOptimal
 }
 

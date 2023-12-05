@@ -21,7 +21,7 @@ const runTestCases = () => {
   ];
 
 
-    generateTestCases(AttemptTwoPointer.lc125.isPalindromeNaive, testCasePlaceholder,' Attempt ');
+    generateTestCases(AttemptTwoPointer.lc125.isPalindromeNaiveImp, testCasePlaceholder,' Attempt ');
     generateTestCases(SolutionTwoPointer.lc125, testCases,' Solution ',);
 
 

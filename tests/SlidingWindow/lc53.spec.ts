@@ -25,7 +25,7 @@ const runTestCases = () => {
   ];
 
 
-    generateTestCases(AttemptSlidingWindow.lc53.maxSubArrayNaive, testCasePlaceholder, ' Attempt ');
+    generateTestCases(AttemptSlidingWindow.lc53.maxSubArrayNaiveImp, testCasePlaceholder, ' Attempt ');
     generateTestCases(SolutionSlidingWindow.lc53, testCases, " Solution ")
 
 

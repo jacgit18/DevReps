@@ -18,7 +18,7 @@ const runTestCases = () => {
     { params: ["dvdf"], expected: 3 },
   ];
 
-    generateTestCases(AttemptSlidingWindow.lc3.lengthOfLongestSubstringNaive, testCasePlaceholder, ' Attempt ');
+    generateTestCases(AttemptSlidingWindow.lc3.lengthOfLongestSubstringNaiveImp, testCasePlaceholder, ' Attempt ');
     generateTestCases(SolutionSlidingWindow.lc3, testCases, ' Solution ');
 
   

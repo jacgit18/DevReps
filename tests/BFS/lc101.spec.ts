@@ -19,7 +19,7 @@ const runTestCases = () => {
 
   ];
 
-    generateTestCases(AttemptBFS.lc101.isSymmetricNaive, testCases,' Attempt ');
+    generateTestCases(AttemptBFS.lc101.isSymmetricNaiveImp, testCases,' Attempt ');
     generateTestCases(SolutionBFS.lc101, testCases,' Solution ',);
 
 

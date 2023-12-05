@@ -21,7 +21,7 @@ const runTestCases = () => {
 
   ];
 
-    generateTestCases(AttemptBFS.lc102.levelOrderTraversalNaive, testCasePlaceholder,' Attempt ');
+    generateTestCases(AttemptBFS.lc102.levelOrderTraversalNaiveImp, testCasePlaceholder,' Attempt ');
     generateTestCases(SolutionBFS.lc102.levelOrderTraversalIter, testCases,' Solution ');
     generateTestCases(SolutionBFS.lc102.levelOrderTraversalRec, testCases,' Solution ');
 

@@ -36,7 +36,11 @@
   return 0
 }
 
-const totalFruitNaive = (fruits: number[]): number => {
+const totalFruitNaiveImp = (fruits: number[]): number => {
+  return 0
+}
+
+const totalFruitNaiveDec = (fruits: number[]): number => {
   return 0
 }
 
@@ -47,7 +51,8 @@ const totalFruitOptimal = (fruits: number[]): number => {
 
 export const totalFruit = {
   totalFruitBruteForce,
-  totalFruitNaive,
+  totalFruitNaiveImp,
+  totalFruitNaiveDec,
   totalFruitOptimal
 }
 

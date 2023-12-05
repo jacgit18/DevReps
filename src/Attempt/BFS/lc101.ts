@@ -21,7 +21,11 @@ const isSymmetricBruteForce = (root: TreeNode | null): boolean => {
   return true
 }
 
-const isSymmetricNaive = (root: TreeNode | null): boolean => {
+const isSymmetricNaiveImp = (root: TreeNode | null): boolean => {
+  return true
+}
+
+const isSymmetricNaiveDec = (root: TreeNode | null): boolean => {
   return true
 }
 
@@ -51,5 +55,7 @@ tree2.right.right = new TreeNode(3)
 
 export const isSymmetric = {
   isSymmetricBruteForce,
-  isSymmetricNaive,
-  isSymmetricOptimal}
+  isSymmetricNaiveImp,
+  isSymmetricNaiveDec,
+  isSymmetricOptimal
+}
