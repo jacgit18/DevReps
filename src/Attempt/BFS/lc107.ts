@@ -42,7 +42,11 @@ const levelOrderBottomBruteForce = (root: TreeNode | null): number[][] => {
   return [[0]]
 }
 
-const levelOrderBottomNaive = (root: TreeNode | null): number[][] => {
+const levelOrderBottomNaiveImp = (root: TreeNode | null): number[][] => {
+  return [[0]]
+}
+
+const levelOrderBottomNaiveDec = (root: TreeNode | null): number[][] => {
   return [[0]]
 }
 
@@ -52,7 +56,8 @@ const levelOrderBottomOptimal = (root: TreeNode | null): number[][] => {
 
 export const levelOrderBottom = {
   levelOrderBottomBruteForce,
-  levelOrderBottomNaive,
+  levelOrderBottomNaiveImp,
+  levelOrderBottomNaiveDec,
   levelOrderBottomOptimal
 }
 

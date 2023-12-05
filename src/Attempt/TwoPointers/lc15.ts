@@ -34,7 +34,11 @@ const threeSumBruteForce = (nums: number[]): number[][] => {
   return [[0]]
 }
 
-const threeSumNaive = (nums: number[]): number[][] => {
+const threeSumNaiveImp = (nums: number[]): number[][] => {
+  return [[0]]
+}
+
+const threeSumNaiveDec = (nums: number[]): number[][] => {
   return [[0]]
 }
 
@@ -45,7 +49,8 @@ const threeSumOptimal = (nums: number[]): number[][] => {
 
 export const threeSum = {
   threeSumBruteForce,
-  threeSumNaive,
+  threeSumNaiveImp,
+  threeSumNaiveDec,
   threeSumOptimal
 }
 // Example usage:

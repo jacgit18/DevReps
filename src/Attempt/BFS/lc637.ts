@@ -23,7 +23,11 @@ const averageOfLevelsBruteForce = (root: TreeNode | null): number[] => {
   return [0]
 }
 
-const averageOfLevelsNaive = (root: TreeNode | null): number[] => {
+const averageOfLevelsNaiveImp = (root: TreeNode | null): number[] => {
+  return [0]
+}
+
+const averageOfLevelsNaiveDec = (root: TreeNode | null): number[] => {
   return [0]
 }
 
@@ -33,12 +37,13 @@ const averageOfLevelsOptimal = (root: TreeNode | null): number[] => {
 
 export const averageOfLevels = {
   averageOfLevelsBruteForce,
-  averageOfLevelsNaive,
+  averageOfLevelsNaiveImp,
+  averageOfLevelsNaiveDec,
   averageOfLevelsOptimal
 }
 
 // Example usage:
 const root = new TreeNode(3, new TreeNode(9), new TreeNode(20, new TreeNode(15), new TreeNode(7)))
 
-const averages = averageOfLevelsNaive(root)
+const averages = averageOfLevelsNaiveImp(root)
 // averages will be [3, 14.5, 11]

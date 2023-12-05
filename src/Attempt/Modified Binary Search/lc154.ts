@@ -29,7 +29,11 @@ const findMinTwoBruteForce = (nums: number[]): number => {
   return 0
 }
 
-const findMinTwoNaive = (nums: number[]): number => {
+const findMinTwoNaiveImp = (nums: number[]): number => {
+  return 0
+}
+
+const findMinTwoNaiveDec = (nums: number[]): number => {
   return 0
 }
 
@@ -50,6 +54,7 @@ const findMinTwoOptimal = (nums: number[]): number => {
 
 export const findMinTwo = {
   findMinTwoBruteForce,
-  findMinTwoNaive,
+  findMinTwoNaiveImp,
+  findMinTwoNaiveDec,
   findMinTwoOptimal
 }

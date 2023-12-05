@@ -25,7 +25,11 @@ const robBruteForce = (nums: number[]): number => {
   return 0
 }
 
-const robNaive = (nums: number[]): number => {
+const robNaiveImp = (nums: number[]): number => {
+  return 0
+}
+
+const robNaiveDec = (nums: number[]): number => {
   return 0
 }
 
@@ -36,6 +40,7 @@ const robOptimal = (nums: number[]): number => {
 
 export const rob = {
   robBruteForce,
-  robNaive,
+  robNaiveImp,
+  robNaiveDec,
   robOptimal
 }

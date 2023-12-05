@@ -35,7 +35,11 @@ const hasPathSumBruteForce = (root: TreeNode | null, targetSum: number): boolean
   return true
 }
 
-const hasPathSumNaive = (root: TreeNode | null, targetSum: number): boolean => {
+const hasPathSumNaiveImp = (root: TreeNode | null, targetSum: number): boolean => {
+  return true
+}
+
+const hasPathSumNaiveDec = (root: TreeNode | null, targetSum: number): boolean => {
   return true
 }
 
@@ -45,7 +49,8 @@ const hasPathSumOptimal = (root: TreeNode | null, targetSum: number): boolean =>
 
 export const hasPathSum = {
   hasPathSumBruteForce,
-  hasPathSumNaive,
+  hasPathSumNaiveImp,
+  hasPathSumNaiveDec,
   hasPathSumOptimal
 }
 

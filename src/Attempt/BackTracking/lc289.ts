@@ -28,7 +28,8 @@
 // board[i][j] is 0 or 1.
 
 const gameOfLifeBruteForce = (board: number[][]): void => {}
-const gameOfLifeNaive = (board: number[][]): void => {}
+const gameOfLifeNaiveImp = (board: number[][]): void => {}
+const gameOfLifeNaiveDec = (board: number[][]): void => {}
 const gameOfLifeOptimal = (board: number[][]): void => {}
 
 
@@ -52,6 +53,7 @@ const gameOfLifeOptimal = (board: number[][]): void => {}
 
 export const gameOfLife = {
     gameOfLifeBruteForce,
-    gameOfLifeNaive,
+    gameOfLifeNaiveImp,
+    gameOfLifeNaiveDec,
     gameOfLifeOptimal
   }

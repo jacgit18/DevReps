@@ -24,7 +24,11 @@ const findKthPositiveBruteForce = (arr: number[], k: number): number => {
   return 0
 }
 
-const findKthPositiveNaive = (arr: number[], k: number): number => {
+const findKthPositiveNaiveImp = (arr: number[], k: number): number => {
+  return 0
+}
+
+const findKthPositiveNaiveDec = (arr: number[], k: number): number => {
   return 0
 }
 
@@ -34,7 +38,8 @@ const findKthPositiveOptimal = (arr: number[], k: number): number => {
 
 export const findKthPositive = {
   findKthPositiveBruteForce,
-  findKthPositiveNaive,
+  findKthPositiveNaiveImp,
+  findKthPositiveNaiveDec,
   findKthPositiveOptimal
 }
 

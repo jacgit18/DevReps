@@ -27,7 +27,11 @@ const searchBruteForce = (nums: number[], target: number): boolean => {
   return true
 }
 
-const searchNaive = (nums: number[], target: number): boolean => {
+const searchNaiveImp = (nums: number[], target: number): boolean => {
+  return true
+}
+
+const searchNaiveDec = (nums: number[], target: number): boolean => {
   return true
 }
 
@@ -47,6 +51,7 @@ const searchOptimal = (nums: number[], target: number): boolean => {
 
 export const search = {
   searchBruteForce,
-  searchNaive,
+  searchNaiveImp,
+  searchNaiveDec,
   searchOptimal
 }

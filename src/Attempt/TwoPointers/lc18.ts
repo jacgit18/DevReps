@@ -25,7 +25,11 @@ const fourSumBruteForce = (nums: number[], target: number): number[][] => {
   return [[0]]
 }
 
-const fourSumNaive = (nums: number[], target: number): number[][] => {
+const fourSumNaiveImp = (nums: number[], target: number): number[][] => {
+  return [[0]]
+}
+
+const fourSumNaiveDec = (nums: number[], target: number): number[][] => {
   return [[0]]
 }
 
@@ -35,7 +39,8 @@ const fourSumOptimal = (nums: number[], target: number): number[][] => {
 
 export const fourSum = {
   fourSumBruteForce,
-  fourSumNaive,
+  fourSumNaiveImp,
+  fourSumNaiveDec,
   fourSumOptimal
 }
 

@@ -27,7 +27,11 @@ const firstMissingPositiveBruteForce = (nums: number[]): number => {
   return 0
 }
 
-const firstMissingPositiveNaive = (nums: number[]): number => {
+const firstMissingPositiveNaiveImp = (nums: number[]): number => {
+  return 0
+}
+
+const firstMissingPositiveNaiveDec = (nums: number[]): number => {
   return 0
 }
 
@@ -37,7 +41,8 @@ const firstMissingPositiveOptimal = (nums: number[]): number => {
 
 export const firstMissingPositive = {
   firstMissingPositiveBruteForce,
-  firstMissingPositiveNaive,
+  firstMissingPositiveNaiveImp,
+  firstMissingPositiveNaiveDec,
   firstMissingPositiveOptimal
 }
 

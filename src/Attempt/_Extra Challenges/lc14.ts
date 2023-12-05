@@ -23,7 +23,11 @@ const longestCommonPrefixBruteForce = (strs: string[]): string => {
   return " "
 }
 
-const longestCommonPrefixNaive = (strs: string[]): string => {
+const longestCommonPrefixNaiveImp = (strs: string[]): string => {
+  return " "
+}
+
+const longestCommonPrefixNaiveDec = (strs: string[]): string => {
   return " "
 }
 
@@ -33,7 +37,8 @@ const longestCommonPrefixOptimal = (strs: string[]): string => {
 
 export const longestCommonPrefix = {
   longestCommonPrefixBruteForce,
-  longestCommonPrefixNaive,
+  longestCommonPrefixNaiveImp,
+  longestCommonPrefixNaiveDec,
   longestCommonPrefixOptimal
 }
 

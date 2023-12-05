@@ -27,7 +27,11 @@ const insertIntervalBruteForce = (intervals: number[][], newInterval: number[]):
   return [[0]]
 }
 
-const insertIntervalNaive = (intervals: number[][], newInterval: number[]): number[][] => {
+const insertIntervalNaiveImp = (intervals: number[][], newInterval: number[]): number[][] => {
+  return [[0]]
+}
+
+const insertIntervalNaiveDec = (intervals: number[][], newInterval: number[]): number[][] => {
   return [[0]]
 }
 
@@ -60,6 +64,7 @@ const insertIntervalOptimal = (intervals: number[][], newInterval: number[]): nu
 
 export const insertInterval = {
   insertIntervalBruteForce,
-  insertIntervalNaive,
+  insertIntervalNaiveImp,
+  insertIntervalNaiveDec,
   insertIntervalOptimal
 }

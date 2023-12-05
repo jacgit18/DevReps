@@ -1,10 +1,12 @@
 const lcBruteForce = ():void =>{}
-const lcNaive = ():void =>{}
+const lcNaiveImp = ():void =>{}
+const lcNaiveDec = ():void =>{}
 const lcOptimal = ():void =>{}
 
 
 export const lc = {
     lcBruteForce,
-    lcNaive,
+    lcNaiveImp,
+    lcNaiveDec,
     lcOptimal
   }

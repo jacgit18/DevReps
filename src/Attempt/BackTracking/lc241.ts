@@ -31,7 +31,11 @@ const diffWaysToComputeBruteForce = (expression: string): number[] => {
   return [0]
 }
 
-const diffWaysToComputeNaive = (expression: string): number[] => {
+const diffWaysToComputeNaiveImp = (expression: string): number[] => {
+  return [0]
+}
+
+const diffWaysToComputeNaiveDec = (expression: string): number[] => {
   return [0]
 }
 
@@ -49,6 +53,7 @@ const diffWaysToComputeOptimal = (expression: string): number[] => {
 
 export const diffWaysToCompute = {
   diffWaysToComputeBruteForce,
-  diffWaysToComputeNaive,
+  diffWaysToComputeNaiveImp,
+  diffWaysToComputeNaiveDec,
   diffWaysToComputeOptimal
 }

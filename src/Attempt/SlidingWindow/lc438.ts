@@ -27,7 +27,11 @@ const findAnagramsBruteForce = (s: string, p: string): number[] => {
   return [0]
 }
 
-const findAnagramsNaive = (s: string, p: string): number[] => {
+const findAnagramsNaiveImp = (s: string, p: string): number[] => {
+  return [0]
+}
+
+const findAnagramsNaiveDec = (s: string, p: string): number[] => {
   return [0]
 }
 
@@ -45,6 +49,7 @@ const findAnagramsOptimal = (s: string, p: string): number[] => {
 
 export const findAnagrams = {
   findAnagramsBruteForce,
-  findAnagramsNaive,
+  findAnagramsNaiveImp,
+  findAnagramsNaiveDec,
   findAnagramsOptimal
 }

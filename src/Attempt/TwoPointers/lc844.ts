@@ -29,7 +29,11 @@ const backspaceCompareBruteForce = (s: string, t: string): boolean => {
   return true
 }
 
-const backspaceCompareNaive = (s: string, t: string): boolean => {
+const backspaceCompareNaiveImp = (s: string, t: string): boolean => {
+  return true
+}
+
+const backspaceCompareNaiveDec = (s: string, t: string): boolean => {
   return true
 }
 
@@ -54,6 +58,7 @@ const fill: RegExp[] = new Array(26).fill(regex)
 
 export const backspaceCompare = {
   backspaceCompareBruteForce,
-  backspaceCompareNaive,
+  backspaceCompareNaiveImp,
+  backspaceCompareNaiveDec,
   backspaceCompareOptimal
 }

@@ -27,10 +27,14 @@ const groupAnagramsBruteForce = (s: string[]): string[][] => {
 }
 
 
-const groupAnagramsNaive = (s: string[]): string[][] => {
+const groupAnagramsNaiveImp = (s: string[]): string[][] => {
   return [[" "]]
 }
 
+
+const groupAnagramsNaiveDec = (s: string[]): string[][] => {
+  return [[" "]]
+}
 
 const groupAnagramsOptimal = (s: string[]): string[][] => {
   return [[" "]]
@@ -40,7 +44,8 @@ const groupAnagramsOptimal = (s: string[]): string[][] => {
 
 export const groupAnagrams = {
   groupAnagramsBruteForce,
-  groupAnagramsNaive,
+  groupAnagramsNaiveImp,
+  groupAnagramsNaiveDec,
   groupAnagramsOptimal
 }
 

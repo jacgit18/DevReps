@@ -21,7 +21,11 @@ const letterCasePermutationBruteForce = (s: string): string[] => {
   return [" "]
 }
 
-const letterCasePermutationNaive = (s: string): string[] => {
+const letterCasePermutationNaiveImp = (s: string): string[] => {
+  return [" "]
+}
+
+const letterCasePermutationNaiveDec = (s: string): string[] => {
   return [" "]
 }
 
@@ -38,6 +42,7 @@ const letterCasePermutationOptimal = (s: string): string[] => {
 
 export const letterCasePermutation = {
   letterCasePermutationBruteForce,
-  letterCasePermutationNaive,
+  letterCasePermutationNaiveImp,
+  letterCasePermutationNaiveDec,
   letterCasePermutationOptimal
 }

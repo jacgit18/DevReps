@@ -30,7 +30,11 @@ const searchRangeBruteForce = (nums: number[], target: number): number[] => {
   return [0]
 }
 
-const searchRangeNaive = (nums: number[], target: number): number[] => {
+const searchRangeNaiveImp = (nums: number[], target: number): number[] => {
+  return [0]
+}
+
+const searchRangeNaiveDec = (nums: number[], target: number): number[] => {
   return [0]
 }
 
@@ -51,6 +55,7 @@ const searchRangeOptimal = (nums: number[], target: number): number[] => {
 
 export const searchRange = {
   searchRangeBruteForce,
-  searchRangeNaive,
+  searchRangeNaiveImp,
+  searchRangeNaiveDec,
   searchRangeOptimal
 }

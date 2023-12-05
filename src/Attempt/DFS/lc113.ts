@@ -44,7 +44,11 @@ const pathSumTwoBruteForce = (root: TreeNode | null, targetSum: number): number[
   return [[0]]
 }
 
-const pathSumTwoNaive = (root: TreeNode | null, targetSum: number): number[][] => {
+const pathSumTwoNaiveImp = (root: TreeNode | null, targetSum: number): number[][] => {
+  return [[0]]
+}
+
+const pathSumTwoNaiveDec = (root: TreeNode | null, targetSum: number): number[][] => {
   return [[0]]
 }
 
@@ -54,7 +58,8 @@ const pathSumTwoOptimal = (root: TreeNode | null, targetSum: number): number[][]
 
 export const pathSumTwo = {
   pathSumTwoBruteForce,
-  pathSumTwoNaive,
+  pathSumTwoNaiveImp,
+  pathSumTwoNaiveDec,
   pathSumTwoOptimal
 }
 

@@ -30,7 +30,11 @@ const searchRangerBruteForce = (nums: number[], target: number): number[] => {
   return [0]
 }
 
-const searchRangerNaive = (nums: number[], target: number): number[] => {
+const searchRangerNaiveImp = (nums: number[], target: number): number[] => {
+  return [0]
+}
+
+const searchRangerNaiveDec = (nums: number[], target: number): number[] => {
   return [0]
 }
 
@@ -51,6 +55,7 @@ const searchRangerOptimal = (nums: number[], target: number): number[] => {
 
 export const searchRanger = {
   searchRangerBruteForce,
-  searchRangerNaive,
+  searchRangerNaiveImp,
+  searchRangerNaiveDec,
   searchRangerOptimal
 }

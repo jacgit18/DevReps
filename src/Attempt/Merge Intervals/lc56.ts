@@ -22,7 +22,11 @@ const mergeBruteForce = (intervals: number[][]): number[][] => {
   return [[0]]
 }
 
-const mergeNaive = (intervals: number[][]): number[][] => {
+const mergeNaiveImp = (intervals: number[][]): number[][] => {
+  return [[0]]
+}
+
+const mergeNaiveDec = (intervals: number[][]): number[][] => {
   return [[0]]
 }
 
@@ -47,6 +51,7 @@ const mergeOptimal = (intervals: number[][]): number[][] => {
 
 export const merge = {
   mergeBruteForce,
-  mergeNaive,
+  mergeNaiveImp,
+  mergeNaiveDec,
   mergeOptimal
 }

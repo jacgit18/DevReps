@@ -22,7 +22,11 @@ const checkInclusionBruteForce = (s1: string, s2: string): boolean => {
   return true
 }
 
-const checkInclusionNaive = (s1: string, s2: string): boolean => {
+const checkInclusionNaiveImp = (s1: string, s2: string): boolean => {
+  return true
+}
+
+const checkInclusionNaiveDec = (s1: string, s2: string): boolean => {
   return true
 }
 
@@ -40,6 +44,7 @@ const checkInclusionOptimal = (s1: string, s2: string): boolean => {
 
 export const checkInclusion = {
   checkInclusionBruteForce,
-  checkInclusionNaive,
+  checkInclusionNaiveImp,
+  checkInclusionNaiveDec,
   checkInclusionOptimal
 }

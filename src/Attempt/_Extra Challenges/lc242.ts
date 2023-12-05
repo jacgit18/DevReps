@@ -21,7 +21,11 @@ const isAnagramBruteForce = (s: string, t: string): boolean => {
   return true
 }
 
-const isAnagramNaive = (s: string, t: string): boolean => {
+const isAnagramNaiveImp = (s: string, t: string): boolean => {
+  return true
+}
+
+const isAnagramNaiveDec = (s: string, t: string): boolean => {
   return true
 }
 
@@ -33,7 +37,8 @@ const isAnagramOptimal = (s: string, t: string): boolean => {
 
 export const isAnagram = {
   isAnagramBruteForce,
-  isAnagramNaive,
+  isAnagramNaiveImp,
+  isAnagramNaiveDec,
   isAnagramOptimal
 }
 // console.log(isAnagram("anagram", "nagaram")) // returns true

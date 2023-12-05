@@ -27,7 +27,11 @@ const lengthOfLISBruteForce = (nums: number[]): number => {
   return 0
 }
 
-const lengthOfLISNaive = (nums: number[]): number => {
+const lengthOfLISNaiveImp = (nums: number[]): number => {
+  return 0
+}
+
+const lengthOfLISNaiveDec = (nums: number[]): number => {
   return 0
 }
 
@@ -48,6 +52,7 @@ const lengthOfLISOptimal = (nums: number[]): number => {
 
 export const lengthOfLIS = {
   lengthOfLISBruteForce,
-  lengthOfLISNaive,
+  lengthOfLISNaiveImp,
+  lengthOfLISNaiveDec,
   lengthOfLISOptimal
 }

@@ -23,7 +23,11 @@ const numSubarrayProductLessThanKBruteForce = (nums: number[], k: number): numbe
   return 0
 }
 
-const numSubarrayProductLessThanKNaive = (nums: number[], k: number): number => {
+const numSubarrayProductLessThanKNaiveImp = (nums: number[], k: number): number => {
+  return 0
+}
+
+const numSubarrayProductLessThanKNaiveDec = (nums: number[], k: number): number => {
   return 0
 }
 
@@ -36,6 +40,7 @@ const numSubarrayProductLessThanKOptimal = (nums: number[], k: number): number =
 
 export const numSubarrayProductLessThanK = {
   numSubarrayProductLessThanKBruteForce,
-  numSubarrayProductLessThanKNaive,
+  numSubarrayProductLessThanKNaiveImp,
+  numSubarrayProductLessThanKNaiveDec,
   numSubarrayProductLessThanKOptimal
 }

@@ -29,7 +29,11 @@ const findMaxFormBruteForce = (strs: string[], m: number, n: number): number => 
   return 0
 }
 
-const findMaxFormNaive = (strs: string[], m: number, n: number): number => {
+const findMaxFormNaiveImp = (strs: string[], m: number, n: number): number => {
+  return 0
+}
+
+const findMaxFormNaiveDec = (strs: string[], m: number, n: number): number => {
   return 0
 }
 
@@ -44,6 +48,7 @@ const findMaxFormOptimal = (strs: string[], m: number, n: number): number => {
 
 export const findMaxForm = {
   findMaxFormBruteForce,
-  findMaxFormNaive,
+  findMaxFormNaiveImp,
+  findMaxFormNaiveDec,
   findMaxFormOptimal
 }

@@ -14,7 +14,12 @@ const minMeetingRoomsBruteForce = (intervals: number[][]): number => {
   return 0
 }
 
-const minMeetingRoomsNaive = (intervals: number[][]): number => {
+const minMeetingRoomsNaiveImp = (intervals: number[][]): number => {
+  return 0
+}
+
+
+const minMeetingRoomsNaiveDec = (intervals: number[][]): number => {
   return 0
 }
 
@@ -38,6 +43,7 @@ const minMeetingRoomsOptimal = (intervals: number[][]): number => {
 
 export const minMeetingRooms = {
   minMeetingRoomsBruteForce,
-  minMeetingRoomsNaive,
+  minMeetingRoomsNaiveImp,
+  minMeetingRoomsNaiveDec,
   minMeetingRoomsOptimal
 }

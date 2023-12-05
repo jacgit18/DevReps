@@ -30,7 +30,11 @@ const isValidBruteForce = (s: string): boolean => {
   return true
 }
 
-const isValidNaive = (s: string): boolean => {
+const isValidNaiveImp = (s: string): boolean => {
+  return true
+}
+
+const isValidNaiveDec = (s: string): boolean => {
   return true
 }
 
@@ -40,7 +44,8 @@ const isValidOptimal = (s: string): boolean => {
 
 export const isValid = {
   isValidBruteForce,
-  isValidNaive,
+  isValidNaiveImp,
+  isValidNaiveDec,
   isValidOptimal
 }
 

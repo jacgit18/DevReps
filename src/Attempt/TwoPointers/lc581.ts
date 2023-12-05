@@ -27,7 +27,11 @@ const findUnsortedSubarrayBruteForce = (nums: number[]): number => {
   return 0
 }
 
-const findUnsortedSubarrayNaive = (nums: number[]): number => {
+const findUnsortedSubarrayNaiveImp = (nums: number[]): number => {
+  return 0
+}
+
+const findUnsortedSubarrayNaiveDec = (nums: number[]): number => {
   return 0
 }
 
@@ -41,6 +45,7 @@ const findUnsortedSubarrayOptimal = (nums: number[]): number => {
 
 export const findUnsortedSubarray = {
   findUnsortedSubarrayBruteForce,
-  findUnsortedSubarrayNaive,
+  findUnsortedSubarrayNaiveImp,
+  findUnsortedSubarrayNaiveDec,
   findUnsortedSubarrayOptimal
 }

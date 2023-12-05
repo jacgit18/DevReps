@@ -28,7 +28,11 @@ const searchInsertBruteForce = (nums: number[], target: number): number => {
   return 0
 }
 
-const searchInsertNaive = (nums: number[], target: number): number => {
+const searchInsertNaiveImp = (nums: number[], target: number): number => {
+  return 0
+}
+
+const searchInsertNaiveDec = (nums: number[], target: number): number => {
   return 0
 }
 
@@ -49,6 +53,7 @@ const searchInsertOptimal = (nums: number[], target: number): number => {
 
 export const searchInsert = {
   searchInsertBruteForce,
-  searchInsertNaive,
+  searchInsertNaiveImp,
+  searchInsertNaiveDec,
   searchInsertOptimal
 }

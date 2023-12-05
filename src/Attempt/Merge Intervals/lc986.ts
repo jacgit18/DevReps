@@ -29,7 +29,11 @@ const intervalIntersectionBruteForce = (firstList: number[][], secondList: numbe
   return [[0]]
 }
 
-const intervalIntersectionNaive = (firstList: number[][], secondList: number[][]): number[][] => {
+const intervalIntersectionNaiveImp = (firstList: number[][], secondList: number[][]): number[][] => {
+  return [[0]]
+}
+
+const intervalIntersectionNaiveDec = (firstList: number[][], secondList: number[][]): number[][] => {
   return [[0]]
 }
 
@@ -57,6 +61,7 @@ const intervalIntersectionOptimal = (firstList: number[][], secondList: number[]
 
 export const intervalIntersection = {
   intervalIntersectionBruteForce,
-  intervalIntersectionNaive,
+  intervalIntersectionNaiveImp,
+  intervalIntersectionNaiveDec,
   intervalIntersectionOptimal
 }

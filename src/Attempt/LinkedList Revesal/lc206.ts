@@ -39,7 +39,14 @@ const reverseListBruteForce = function (
   return null
 }
 
-const reverseListNaive = function (
+const reverseListNaiveImp = function (
+  head: LinkedListNode | null,
+  prev: LinkedListNode | null = null,
+): LinkedListNode | null {
+  return null
+}
+
+const reverseListNaiveDec = function (
   head: LinkedListNode | null,
   prev: LinkedListNode | null = null,
 ): LinkedListNode | null {
@@ -56,6 +63,7 @@ const reverseListOptimal = function (
 
 export const reverseList = {
   reverseListBruteForce,
-  reverseListNaive,
+  reverseListNaiveImp,
+  reverseListNaiveDec,
   reverseListOptimal
 }

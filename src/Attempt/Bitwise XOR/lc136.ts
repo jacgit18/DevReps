@@ -27,7 +27,11 @@ const singleNumberBruteForce = (nums: number[]): number => {
   return 0
 }
 
-const singleNumberNaive = (nums: number[]): number => {
+const singleNumberNaiveImp = (nums: number[]): number => {
+  return 0
+}
+
+const singleNumberNaiveDec = (nums: number[]): number => {
   return 0
 }
 
@@ -37,7 +41,8 @@ const singleNumberOptimal = (nums: number[]): number => {
 
 export const singleNumber = {
   singleNumberBruteForce,
-  singleNumberNaive,
+  singleNumberNaiveImp,
+  singleNumberNaiveDec,
   singleNumberOptimal
 }
 

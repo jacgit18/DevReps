@@ -23,7 +23,11 @@ const maxDepthBruteForce = (root: TreeNode | null): number => {
   return 0
 }
 
-const maxDepthNaive = (root: TreeNode | null): number => {
+const maxDepthNaiveImp = (root: TreeNode | null): number => {
+  return 0
+}
+
+const maxDepthNaiveDec = (root: TreeNode | null): number => {
   return 0
 }
 
@@ -33,7 +37,8 @@ const maxDepthOptimal = (root: TreeNode | null): number => {
 
 export const maxDepth = {
   maxDepthBruteForce,
-  maxDepthNaive,
+  maxDepthNaiveImp,
+  maxDepthNaiveDec,
   maxDepthOptimal
 }
 

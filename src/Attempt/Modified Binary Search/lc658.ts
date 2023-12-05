@@ -26,7 +26,11 @@ const findClosestElementsBruteForce = (arr: number[], k: number, x: number): num
   return [0]
 }
 
-const findClosestElementsNaive = (arr: number[], k: number, x: number): number[] => {
+const findClosestElementsNaiveImp = (arr: number[], k: number, x: number): number[] => {
+  return [0]
+}
+
+const findClosestElementsNaiveDec = (arr: number[], k: number, x: number): number[] => {
   return [0]
 }
 
@@ -49,6 +53,7 @@ const findClosestElementsOptimal = (arr: number[], k: number, x: number): number
 
 export const findClosestElements = {
   findClosestElementsBruteForce,
-  findClosestElementsNaive,
+  findClosestElementsNaiveImp,
+  findClosestElementsNaiveDec,
   findClosestElementsOptimal
 }

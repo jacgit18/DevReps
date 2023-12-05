@@ -25,7 +25,11 @@ const pathSumBruteForce = (root: TreeNode | null, targetSum: number): number => 
   return 0
 }
 
-const pathSumNaive = (root: TreeNode | null, targetSum: number): number => {
+const pathSumNaiveImp = (root: TreeNode | null, targetSum: number): number => {
+  return 0
+}
+
+const pathSumNaiveDec = (root: TreeNode | null, targetSum: number): number => {
   return 0
 }
 
@@ -35,7 +39,8 @@ const pathSumOptimal = (root: TreeNode | null, targetSum: number): number => {
 
 export const pathSum = {
   pathSumBruteForce,
-  pathSumNaive,
+  pathSumNaiveImp,
+  pathSumNaiveDec,
   pathSumOptimal
 }
 

@@ -25,7 +25,11 @@ const zigzagLevelOrderBruteForce = (root: TreeNode | null): number[][] => {
   return [[0]]
 }
 
-const zigzagLevelOrderNaive = (root: TreeNode | null): number[][] => {
+const zigzagLevelOrderNaiveImp = (root: TreeNode | null): number[][] => {
+  return [[0]]
+}
+
+const zigzagLevelOrderNaiveDec = (root: TreeNode | null): number[][] => {
   return [[0]]
 }
 
@@ -35,7 +39,8 @@ const zigzagLevelOrderOptimal = (root: TreeNode | null): number[][] => {
 
 export const zigzagLevelOrder = {
   zigzagLevelOrderBruteForce,
-  zigzagLevelOrderNaive,
+  zigzagLevelOrderNaiveImp,
+  zigzagLevelOrderNaiveDec,
   zigzagLevelOrderOptimal
 }
 

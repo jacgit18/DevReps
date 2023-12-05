@@ -72,7 +72,11 @@ const hasCycleBruteForce = (head: LinkedListNode | null): boolean => {
   return true
 }
 
-const hasCycleNaive = (head: LinkedListNode | null): boolean => {
+const hasCycleNaiveImp = (head: LinkedListNode | null): boolean => {
+  return true
+}
+
+const hasCycleNaiveDec = (head: LinkedListNode | null): boolean => {
   return true
 }
 
@@ -82,7 +86,8 @@ const hasCycleOptimal = (head: LinkedListNode | null): boolean => {
 
 export const hasCycle = {
   hasCycleBruteForce,
-  hasCycleNaive,
+  hasCycleNaiveImp,
+  hasCycleNaiveDec,
   hasCycleOptimal
 }
 

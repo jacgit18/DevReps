@@ -50,7 +50,11 @@ const sumNumbersBruteForce = (root: TreeNode | null): number => {
   return 0
 }
 
-const sumNumbersNaive = (root: TreeNode | null): number => {
+const sumNumbersNaiveImp = (root: TreeNode | null): number => {
+  return 0
+}
+
+const sumNumbersNaiveDec = (root: TreeNode | null): number => {
   return 0
 }
 
@@ -60,7 +64,8 @@ const sumNumbersOptimal = (root: TreeNode | null): number => {
 
 export const sumNumbers = {
   sumNumbersBruteForce,
-  sumNumbersNaive,
+  sumNumbersNaiveImp,
+  sumNumbersNaiveDec,
   sumNumbersOptimal
 }
 

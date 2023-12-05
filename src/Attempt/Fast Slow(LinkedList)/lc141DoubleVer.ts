@@ -4,9 +4,14 @@ const isDoublyCyclicBruteForce = (head: DoublyLinkedListNode | null): boolean =>
   return true
 }
 
-const isDoublyCyclicNaive = (head: DoublyLinkedListNode | null): boolean => {
+const isDoublyCyclicNaiveImp = (head: DoublyLinkedListNode | null): boolean => {
   return true
 }
+
+const isDoublyCyclicNaiveDec = (head: DoublyLinkedListNode | null): boolean => {
+  return true
+}
+
 
 const isDoublyCyclicOptimal = (head: DoublyLinkedListNode | null): boolean => {
   return true
@@ -14,7 +19,8 @@ const isDoublyCyclicOptimal = (head: DoublyLinkedListNode | null): boolean => {
 
 export const isDoublyCyclic = {
   isDoublyCyclicBruteForce,
-  isDoublyCyclicNaive,
+  isDoublyCyclicNaiveImp,
+  isDoublyCyclicNaiveDec,
   isDoublyCyclicOptimal
 }
 

@@ -27,7 +27,15 @@ const reverse_sub_listBruteForce = (
   return null
 }
 
-const reverse_sub_listNaive = (
+const reverse_sub_listNaiveImp = (
+  head: LinkedListNode | null,
+  p: number,
+  q: number,
+): LinkedListNode | null => {
+  return null
+}
+
+const reverse_sub_listNaiveDec = (
   head: LinkedListNode | null,
   p: number,
   q: number,
@@ -51,6 +59,7 @@ head.next.next.next.next = new LinkedListNode(5)
 
 export const reverse_sub_list = {
   reverse_sub_listBruteForce,
-  reverse_sub_listNaive,
+  reverse_sub_listNaiveImp,
+  reverse_sub_listNaiveDec,
   reverse_sub_listOptimal
 }

@@ -29,7 +29,11 @@ const sudokuSolverBruteForce = (board: number[][]): number[][] => {
   return [[0]]
 }
 
-const sudokuSolverNaive = (board: number[][]): number[][] => {
+const sudokuSolverNaiveImp = (board: number[][]): number[][] => {
+  return [[0]]
+}
+
+const sudokuSolverNaiveDec = (board: number[][]): number[][] => {
   return [[0]]
 }
 
@@ -54,6 +58,7 @@ const inputBoard = [
 
 export const sudokuSolver = {
   sudokuSolverBruteForce,
-  sudokuSolverNaive,
+  sudokuSolverNaiveImp,
+  sudokuSolverNaiveDec,
   sudokuSolverOptimal
 }

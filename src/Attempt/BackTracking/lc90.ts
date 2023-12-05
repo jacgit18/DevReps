@@ -23,7 +23,11 @@ const subsetsWithDupBruteForce = (nums: number[]): number[][] => {
   return [[0]]
 }
 
-const subsetsWithDupNaive = (nums: number[]): number[][] => {
+const subsetsWithDupNaiveImp = (nums: number[]): number[][] => {
+  return [[0]]
+}
+
+const subsetsWithDupNaiveDec = (nums: number[]): number[][] => {
   return [[0]]
 }
 
@@ -41,6 +45,7 @@ const subsetsWithDupOptimal = (nums: number[]): number[][] => {
 
 export const subsetsWithDup = {
   subsetsWithDupBruteForce,
-  subsetsWithDupNaive,
+  subsetsWithDupNaiveImp,
+  subsetsWithDupNaiveDec,
   subsetsWithDupOptimal
 }

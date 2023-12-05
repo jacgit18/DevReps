@@ -49,7 +49,11 @@ const connectBruteForce = (root: NodeDiff | null): NodeDiff | null => {
   return null
 }
 
-const connectNaive = (root: NodeDiff | null): NodeDiff | null => {
+const connectNaiveImp = (root: NodeDiff | null): NodeDiff | null => {
+  return null
+}
+
+const connectNaiveDec = (root: NodeDiff | null): NodeDiff | null => {
   return null
 }
 
@@ -59,7 +63,8 @@ const connectOptimal = (root: NodeDiff | null): NodeDiff | null => {
 
 export const connect = {
   connectBruteForce,
-  connectNaive,
+  connectNaiveImp,
+  connectNaiveDec,
   connectOptimal
 }
 
@@ -70,6 +75,6 @@ const rootNEW = new NodeDiff(
   new NodeDiff(3, null, new NodeDiff(7)),
 )
 
-const connectedRoot = connectNaive(rootNEW)
+const connectedRoot = connectNaiveImp(rootNEW)
 
 // Access connected nodes through the 'next' pointers.

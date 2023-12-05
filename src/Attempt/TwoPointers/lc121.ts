@@ -26,7 +26,11 @@ const maxProfitBruteForce = (prices: number[]): number => {
   return 0
 }
 
-const maxProfitNaive = (prices: number[]): number => {
+const maxProfitNaiveImp = (prices: number[]): number => {
+  return 0
+}
+
+const maxProfitNaiveDec = (prices: number[]): number => {
   return 0
 }
 
@@ -40,6 +44,7 @@ const maxProfitOptimal = (prices: number[]): number => {
 
 export const maxProfit = {
   maxProfitBruteForce,
-  maxProfitNaive,
+  maxProfitNaiveImp,
+  maxProfitNaiveDec,
   maxProfitOptimal
 }

@@ -33,7 +33,11 @@ const distributeCandiesBruteForce = (candyType: number[]): number => {
   return 0
 }
 
-const distributeCandiesNaive = (candyType: number[]): number => {
+const distributeCandiesNaiveImp = (candyType: number[]): number => {
+  return 0
+}
+
+const distributeCandiesNaiveDec = (candyType: number[]): number => {
   return 0
 }
 
@@ -43,7 +47,8 @@ const distributeCandiesOptimal = (candyType: number[]): number => {
 
 export const distributeCandies = {
   distributeCandiesBruteForce,
-  distributeCandiesNaive,
+  distributeCandiesNaiveImp,
+  distributeCandiesNaiveDec,
   distributeCandiesOptimal
 }
 

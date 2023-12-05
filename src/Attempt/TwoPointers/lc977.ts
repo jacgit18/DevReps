@@ -22,7 +22,11 @@ const sortedSquaresBruteForce = (arr: number[]): number[] => {
   return [0]
 }
 
-const sortedSquaresNaive = (arr: number[]): number[] => {
+const sortedSquaresNaiveImp = (arr: number[]): number[] => {
+  return [0]
+}
+
+const sortedSquaresNaiveDec = (arr: number[]): number[] => {
   return [0]
 }
 
@@ -39,6 +43,7 @@ const sortedSquaresOptimal = (arr: number[]): number[] => {
 
 export const sortedSquares = {
   sortedSquaresBruteForce,
-  sortedSquaresNaive,
+  sortedSquaresNaiveImp,
+  sortedSquaresNaiveDec,
   sortedSquaresOptimal
 }

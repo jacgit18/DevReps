@@ -32,7 +32,11 @@ const nextGreatestLetterBruteForce = (letters: string[], target: string): string
   return " "
 }
 
-const nextGreatestLetterNaive = (letters: string[], target: string): string => {
+const nextGreatestLetterNaiveImp = (letters: string[], target: string): string => {
+  return " "
+}
+
+const nextGreatestLetterNaiveDec = (letters: string[], target: string): string => {
   return " "
 }
 
@@ -56,6 +60,7 @@ const nextGreatestLetterOptimal = (letters: string[], target: string): string =>
 
 export const nextGreatestLetter = {
   nextGreatestLetterBruteForce,
-  nextGreatestLetterNaive,
+  nextGreatestLetterNaiveImp,
+  nextGreatestLetterNaiveDec,
   nextGreatestLetterOptimal
 }

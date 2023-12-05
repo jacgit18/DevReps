@@ -26,7 +26,11 @@ const findDuplicatesBruteForce = (nums: number[]): number[] => {
   return [0]
 }
 
-const findDuplicatesNaive = (nums: number[]): number[] => {
+const findDuplicatesNaiveImp = (nums: number[]): number[] => {
+  return [0]
+}
+
+const findDuplicatesNaiveDec = (nums: number[]): number[] => {
   return [0]
 }
 
@@ -36,7 +40,8 @@ const findDuplicatesOptimal = (nums: number[]): number[] => {
 
 export const findDuplicates = {
   findDuplicatesBruteForce,
-  findDuplicatesNaive,
+  findDuplicatesNaiveImp,
+  findDuplicatesNaiveDec,
   findDuplicatesOptimal
 }
 

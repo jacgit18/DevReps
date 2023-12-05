@@ -36,7 +36,11 @@ const combinationSumBruteForce = (candidates: number[], target: number): number[
   return [[0]]
 }
 
-const combinationSumNaive = (candidates: number[], target: number): number[][] => {
+const combinationSumNaiveImp = (candidates: number[], target: number): number[][] => {
+  return [[0]]
+}
+
+const combinationSumNaiveDec = (candidates: number[], target: number): number[][] => {
   return [[0]]
 }
 
@@ -51,6 +55,7 @@ const combinationSumOptimal = (candidates: number[], target: number): number[][]
 
 export const combinationSum = {
   combinationSumBruteForce,
-  combinationSumNaive,
+  combinationSumNaiveImp,
+  combinationSumNaiveDec,
   combinationSumOptimal
 }

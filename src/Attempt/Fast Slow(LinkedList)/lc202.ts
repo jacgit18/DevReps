@@ -31,7 +31,11 @@ const isHappyBruteForce = (n: number): boolean => {
   return true
 }
 
-const isHappyNaive = (n: number): boolean => {
+const isHappyNaiveImp = (n: number): boolean => {
+  return true
+}
+
+const isHappyNaiveDec = (n: number): boolean => {
   return true
 }
 
@@ -46,6 +50,7 @@ const isHappyOptimal = (n: number): boolean => {
 
 export const isHappy = {
   isHappyBruteForce,
-  isHappyNaive,
+  isHappyNaiveImp,
+  isHappyNaiveDec,
   isHappyOptimal
 }

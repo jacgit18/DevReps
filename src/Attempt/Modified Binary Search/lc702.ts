@@ -38,7 +38,11 @@ const searchInArrayReaderBruteForce = (reader: ArrayReader, target: number): num
   return 0
 }
 
-const searchInArrayReaderNaive = (reader: ArrayReader, target: number): number => {
+const searchInArrayReaderNaiveImp = (reader: ArrayReader, target: number): number => {
+  return 0
+}
+
+const searchInArrayReaderNaiveDec = (reader: ArrayReader, target: number): number => {
   return 0
 }
 
@@ -68,6 +72,7 @@ const arrayReader: ArrayReader = {
 
 export const searchInArrayReader = {
   searchInArrayReaderBruteForce,
-  searchInArrayReaderNaive,
+  searchInArrayReaderNaiveImp,
+  searchInArrayReaderNaiveDec,
   searchInArrayReaderOptimal
 }

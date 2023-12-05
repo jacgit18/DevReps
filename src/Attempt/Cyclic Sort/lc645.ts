@@ -23,7 +23,11 @@ const findErrorNumsBruteForce = (nums: number[]): number[] => {
   return [0]
 }
 
-const findErrorNumsNaive = (nums: number[]): number[] => {
+const findErrorNumsNaiveImp = (nums: number[]): number[] => {
+  return [0]
+}
+
+const findErrorNumsNaiveDec = (nums: number[]): number[] => {
   return [0]
 }
 
@@ -33,7 +37,8 @@ const findErrorNumsOptimal = (nums: number[]): number[] => {
 
 export const findErrorNums = {
   findErrorNumsBruteForce,
-  findErrorNumsNaive,
+  findErrorNumsNaiveImp,
+  findErrorNumsNaiveDec,
   findErrorNumsOptimal
 }
 

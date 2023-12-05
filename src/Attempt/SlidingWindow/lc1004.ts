@@ -24,7 +24,11 @@ const longestOnesBruteForce = (nums: number[], k: number): number => {
   return 0
 }
 
-const longestOnesNaive = (nums: number[], k: number): number => {
+const longestOnesNaiveImp = (nums: number[], k: number): number => {
+  return 0
+}
+
+const longestOnesNaiveDec = (nums: number[], k: number): number => {
   return 0
 }
 
@@ -43,6 +47,7 @@ const longestOnesOptimal = (nums: number[], k: number): number => {
 
 export const longestOnes = {
   longestOnesBruteForce,
-  longestOnesNaive,
+  longestOnesNaiveImp,
+  longestOnesNaiveDec,
   longestOnesOptimal
 }

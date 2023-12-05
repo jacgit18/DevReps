@@ -43,7 +43,11 @@ const removeDuplicatesBruteForce = (nums: number[]): number => {
   return 0
 }
 
-const removeDuplicatesNaive = (nums: number[]): number => {
+const removeDuplicatesNaiveImp = (nums: number[]): number => {
+  return 0
+}
+
+const removeDuplicatesNaiveDec = (nums: number[]): number => {
   return 0
 }
 
@@ -53,7 +57,8 @@ const removeDuplicatesOptimal = (nums: number[]): number => {
 
 export const removeDuplicates = {
   removeDuplicatesBruteForce,
-  removeDuplicatesNaive,
+  removeDuplicatesNaiveImp,
+  removeDuplicatesNaiveDec,
   removeDuplicatesOptimal
 }
 

@@ -25,7 +25,11 @@ const permuteBruteForce = (nums: number[]): number[][] => {
   return [[0]]
 }
 
-const permuteNaive = (nums: number[]): number[][] => {
+const permuteNaiveImp = (nums: number[]): number[][] => {
+  return [[0]]
+}
+
+const permuteNaiveDec = (nums: number[]): number[][] => {
   return [[0]]
 }
 
@@ -45,6 +49,7 @@ const permuteOptimal = (nums: number[]): number[][] => {
 
 export const permute = {
   permuteBruteForce,
-  permuteNaive,
+  permuteNaiveImp,
+  permuteNaiveDec,
   permuteOptimal
 }

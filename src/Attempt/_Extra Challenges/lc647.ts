@@ -25,7 +25,11 @@ const countSubstringsBruteForce = (s: string): number => {
   return 0
 }
 
-const countSubstringsNaive = (s: string): number => {
+const countSubstringsNaiveImp = (s: string): number => {
+  return 0
+}
+
+const countSubstringsNaiveDec = (s: string): number => {
   return 0
 }
 
@@ -35,7 +39,8 @@ const countSubstringsOptimal = (s: string): number => {
 
 export const countSubstrings = {
   countSubstringsBruteForce,
-  countSubstringsNaive,
+  countSubstringsNaiveImp,
+  countSubstringsNaiveDec,
   countSubstringsOptimal
 }
 

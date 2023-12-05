@@ -39,7 +39,11 @@ const leastIntervalBruteForce = (tasks: string[], n: number): number => {
   return 0
 }
 
-const leastIntervalNaive = (tasks: string[], n: number): number => {
+const leastIntervalNaiveImp = (tasks: string[], n: number): number => {
+  return 0
+}
+
+const leastIntervalNaiveDec = (tasks: string[], n: number): number => {
   return 0
 }
 
@@ -60,6 +64,7 @@ const leastIntervalOptimal = (tasks: string[], n: number): number => {
 
 export const leastInterval = {
   leastIntervalBruteForce,
-  leastIntervalNaive,
+  leastIntervalNaiveImp,
+  leastIntervalNaiveDec,
   leastIntervalOptimal
 }

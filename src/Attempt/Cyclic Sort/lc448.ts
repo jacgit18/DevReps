@@ -19,7 +19,11 @@ const findDisappearedNumbersBruteForce = (nums: number[]): number[] => {
   return [0]
 }
 
-const findDisappearedNumbersNaive = (nums: number[]): number[] => {
+const findDisappearedNumbersNaiveImp = (nums: number[]): number[] => {
+  return [0]
+}
+
+const findDisappearedNumbersNaiveDec = (nums: number[]): number[] => {
   return [0]
 }
 
@@ -29,7 +33,8 @@ const findDisappearedNumbersOptimal = (nums: number[]): number[] => {
 
 export const findDisappearedNumbers = {
   findDisappearedNumbersBruteForce,
-  findDisappearedNumbersNaive,
+  findDisappearedNumbersNaiveImp,
+  findDisappearedNumbersNaiveDec,
   findDisappearedNumbersOptimal
 }
 

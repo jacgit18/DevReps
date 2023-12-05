@@ -36,7 +36,11 @@ const isValidSequenceBruteForce = (root: TreeNode | null, arr: number[]): boolea
   return true
 }
 
-const isValidSequenceNaive = (root: TreeNode | null, arr: number[]): boolean => {
+const isValidSequenceNaiveImp = (root: TreeNode | null, arr: number[]): boolean => {
+  return true
+}
+
+const isValidSequenceNaiveDec = (root: TreeNode | null, arr: number[]): boolean => {
   return true
 }
 
@@ -46,7 +50,8 @@ const isValidSequenceOptimal = (root: TreeNode | null, arr: number[]): boolean =
 
 export const isValidSequence = {
   isValidSequenceBruteForce,
-  isValidSequenceNaive,
+  isValidSequenceNaiveImp,
+  isValidSequenceNaiveDec,
   isValidSequenceOptimal
 }
 

@@ -23,7 +23,11 @@ const binaryTreePathsBruteForce = (root: TreeNode | null): string[] => {
   return [" "]
 }
 
-const binaryTreePathsNaive = (root: TreeNode | null): string[] => {
+const binaryTreePathsNaiveImp = (root: TreeNode | null): string[] => {
+  return [" "]
+}
+
+const binaryTreePathsNaiveDec = (root: TreeNode | null): string[] => {
   return [" "]
 }
 
@@ -33,7 +37,8 @@ const binaryTreePathsOptimal = (root: TreeNode | null): string[] => {
 
 export const binaryTreePaths = {
   binaryTreePathsBruteForce,
-  binaryTreePathsNaive,
+  binaryTreePathsNaiveImp,
+  binaryTreePathsNaiveDec,
   binaryTreePathsOptimal
 }
 

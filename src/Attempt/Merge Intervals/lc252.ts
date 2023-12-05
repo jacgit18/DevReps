@@ -20,7 +20,11 @@ const canAttendMeetingsBruteForce = (intervals: number[][]): boolean => {
   return true
 }
 
-const canAttendMeetingsNaive = (intervals: number[][]): boolean => {
+const canAttendMeetingsNaiveImp = (intervals: number[][]): boolean => {
+  return true
+}
+
+const canAttendMeetingsNaiveDec = (intervals: number[][]): boolean => {
   return true
 }
 
@@ -46,6 +50,7 @@ const canAttendMeetingsOptimal = (intervals: number[][]): boolean => {
 
 export const canAttendMeetings = {
   canAttendMeetingsBruteForce,
-  canAttendMeetingsNaive,
+  canAttendMeetingsNaiveImp,
+  canAttendMeetingsNaiveDec,
   canAttendMeetingsOptimal
 }

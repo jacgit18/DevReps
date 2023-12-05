@@ -22,7 +22,11 @@ const threeSumSmallerBruteForce = (nums: number[], target: number): number => {
   return 0
 }
 
-const threeSumSmallerNaive = (nums: number[], target: number): number => {
+const threeSumSmallerNaiveImp = (nums: number[], target: number): number => {
+  return 0
+}
+
+const threeSumSmallerNaiveDec = (nums: number[], target: number): number => {
   return 0
 }
 
@@ -47,6 +51,7 @@ const threeSumSmallerOptimal = (nums: number[], target: number): number => {
 
 export const threeSumSmaller = {
   threeSumSmallerBruteForce,
-  threeSumSmallerNaive,
+  threeSumSmallerNaiveImp,
+  threeSumSmallerNaiveDec,
   threeSumSmallerOptimal
 }

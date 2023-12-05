@@ -27,7 +27,11 @@ const find_missing_numberBruteForce = (nums: number[]): number => {
   return 0
 }
 
-const find_missing_numberNaive = (nums: number[]): number => {
+const find_missing_numberNaiveImp = (nums: number[]): number => {
+  return 0
+}
+
+const find_missing_numberNaiveDec = (nums: number[]): number => {
   return 0
 }
 
@@ -37,7 +41,8 @@ const find_missing_numberOptimal = (nums: number[]): number => {
 
 export const find_missing_number = {
   find_missing_numberBruteForce,
-  find_missing_numberNaive,
+  find_missing_numberNaiveImp,
+  find_missing_numberNaiveDec,
   find_missing_numberOptimal
 }
 

@@ -26,7 +26,11 @@ const threeSumClosestBruteForce = (nums: number[], target: number): number => {
   return 0
 }
 
-const threeSumClosestNaive = (nums: number[], target: number): number => {
+const threeSumClosestNaiveImp = (nums: number[], target: number): number => {
+  return 0
+}
+
+const threeSumClosestNaiveDec = (nums: number[], target: number): number => {
   return 0
 }
 
@@ -36,7 +40,8 @@ const threeSumClosestOptimal = (nums: number[], target: number): number => {
 
 export const threeSumClosest = {
   threeSumClosestBruteForce,
-  threeSumClosestNaive,
+  threeSumClosestNaiveImp,
+  threeSumClosestNaiveDec,
   threeSumClosestOptimal
 }
 

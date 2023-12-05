@@ -27,7 +27,9 @@
  */
 const sortColorsBruteForce = (nums: number[]): void => {}
 
-const sortColorsNaive = (nums: number[]): void => {}
+const sortColorsNaiveImp = (nums: number[]): void => {}
+
+const sortColorsNaiveDec = (nums: number[]): void => {}
 
 const sortColorsOptimal = (nums: number[]): void => {}
 
@@ -43,6 +45,7 @@ const sortColorsOptimal = (nums: number[]): void => {}
 
 export const sortColors = {
     sortColorsBruteForce,
-    sortColorsNaive,
+    sortColorsNaiveImp,
+    sortColorsNaiveDec,
     sortColorsOptimal
   }

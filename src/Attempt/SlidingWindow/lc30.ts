@@ -42,7 +42,12 @@ const findSubstringBruteForce = (s: string, words: string[]): number[] => {
   return [0]
 }
 
-const findSubstringNaive = (s: string, words: string[]): number[] => {
+const findSubstringNaiveImp = (s: string, words: string[]): number[] => {
+  return [0]
+}
+
+
+const findSubstringNaiveDec = (s: string, words: string[]): number[] => {
   return [0]
 }
 
@@ -57,6 +62,7 @@ const findSubstringOptimal = (s: string, words: string[]): number[] => {
 
 export const findSubstring = {
   findSubstringBruteForce,
-  findSubstringNaive,
+  findSubstringNaiveImp,
+  findSubstringNaiveDec,
   findSubstringOptimal
 }
