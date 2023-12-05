@@ -1,6 +1,6 @@
 import { cloneGrapher } from "./lc133"
 
 // 
-export const AttemptTopologicalSort = {
+export const SolutionGraph = {
   lc133: cloneGrapher,
 }

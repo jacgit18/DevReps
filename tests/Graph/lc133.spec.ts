@@ -1,6 +1,6 @@
 import { generateTestCases, TestCase } from "../../lib/genTest";
-import { AttemptTopologicalSort } from "../../src/Attempt/Topological Sort Graphs";
-import { SolutionTopologicalSort } from "../../src/Solution/Topological Sort Graphs";
+import { AttemptGraph } from "../../src/Attempt/Graph";
+import { SolutionGraph } from "../../src/Solution/Graph";
 import { GraphVertex } from "../../src/util/GraphMaker";
 
 const runTestCases = () => {
@@ -52,8 +52,8 @@ const runTestCases = () => {
     // Add more test cases here
   ];
 
-  generateTestCases(AttemptTopologicalSort.lc133.cloneGrapherNaiveImp, testCasePlaceholder, ' Attempt ');
-  generateTestCases(SolutionTopologicalSort.lc133, testCases, ' Solution ');
+  generateTestCases(AttemptGraph.lc133.cloneGrapherNaiveImp, testCasePlaceholder, ' Attempt ');
+  generateTestCases(SolutionGraph.lc133, testCases, ' Solution ');
 };
 
 runTestCases();
