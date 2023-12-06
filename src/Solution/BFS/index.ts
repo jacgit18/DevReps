@@ -7,6 +7,8 @@ import { RecursiveBFSFunc } from "../BFS/lc107";
 import { minDepth } from "../BFS/lc111";
 import { connect } from "../BFS/lc117";
 import { averageOfLevels } from "../BFS/lc637";
+import { connectOne } from "./lc116";
+import { rightSideView } from "./lc199";
 
 
 export const SolutionBFS = {
@@ -17,6 +19,8 @@ export const SolutionBFS = {
   lc104: maxDepth,
   lc107: RecursiveBFSFunc,
   lc111: minDepth,
+  lc116: connectOne,
   lc117: connect,
+  lc199: rightSideView,
   lc637: averageOfLevels,
 }
