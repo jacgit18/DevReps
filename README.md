@@ -140,9 +140,7 @@ When tackling coding challenges, especially when implementing advanced patterns,
 - Topological Sort (Graphs)
   - [] Tasks Scheduling (medium): LC #207
   - [] Tasks Scheduling Order (medium): LC #210
-  - [] Alien Dictionary (hard): LC #269
   - [] Minimum Height Trees (hard): LC #310
-  - [] Reconstructing a Sequence (hard): LC #444
 
 
 - Top K Elements(Priority queue and heaps)
