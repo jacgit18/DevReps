@@ -4,7 +4,7 @@ import { merge } from "./lc56";
 import { insertInterval } from "./lc57";
 import { leastInterval } from "./lc621";
 import { intervalIntersection } from "./lc986";
-
+import { employeeFreeTime } from "./lc759";
 
 export const AttemptMergeInterval  = {
   lc56: merge,
@@ -12,5 +12,6 @@ export const AttemptMergeInterval  = {
   lc252: canAttendMeetings,
   lc253: minMeetingRooms,
   lc621: leastInterval,
+  lc759: employeeFreeTime,
   lc986: intervalIntersection,
 };
