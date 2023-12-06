@@ -19,8 +19,8 @@ When tackling coding challenges, especially when implementing advanced patterns,
 
 - Two Pointers(Typically Associated with Arrays & Strings, Linked List)
   - [] Pair with Target Sum (easy): LC #1
-  - [] Triplet Sum Close to Target (medium): LC #16
   - [] Triplet Sum to Zero (medium): LC #15
+  - [] Triplet Sum Close to Target (medium): LC #16
   - [] Quadruple Sum to Target (medium): LC #18
   - [] Remove Duplicates (easy): LC #26
   - [] Dutch National Flag Problem (medium): LC #75
@@ -46,93 +46,100 @@ When tackling coding challenges, especially when implementing advanced patterns,
 - Merge Intervals(2 dimensional array)
   - [] Merge Intervals (medium): LC #56
   - [] Insert Interval (medium): LC #57
-  - [] Intervals Intersection (medium): LC #986
   - [] Conflicting Appointments (medium): LC #252
   - [] Minimum Meeting Rooms (hard): LC #253
   - [] Maximum CPU Load(Task Scheduler) (hard): LC proably #621
   - [] Employee Free Time (hard): LC #759
+  - [] Intervals Intersection (medium): LC #986
+
 
 - Subsets/Backtracking(2 dimensional array)
+  - [] Balanced Parentheses (hard): LC #22
+  - [] Permutations (medium): LC #46
   - [] Subsets (easy): LC #78
   - [] Subsets With Duplicates (easy): LC #90
-  - [] Permutations (medium): LC #46
-  - [] String Permutations by changing case (medium): LC #784
-  - [] Balanced Parentheses (hard): LC #22
-  - [] Unique Generalized Abbreviations (hard): LC #320
-  - [] Evaluate Expression (hard): LC #241
   - [] Structurally Unique Binary Search Trees (hard): LC #95(Binary Tree)
   - [] Count of Structurally Unique Binary Search Trees (hard): LC #96(Binary Tree)
+  - [] Evaluate Expression (hard): LC #241
+  - [] Unique Generalized Abbreviations (hard): LC #320
+  - [] String Permutations by changing case (medium): LC #784
+
+
 
 - Modified Binary Search(Associated with Sorted Arrays & Binary Search Tree)
-  - [] Order-agnostic Binary Search (easy): LC #704
-  - [] Ceiling of a Number (easy): LC #35
-  - [] Next Letter (medium): LC #744
-  - [] Number Range (medium): LC #34
-  - [] Search in a Sorted Infinite Array (medium): LC #702
-  - [] Minimum Difference Element (medium): LC #658 (k == 1)
   - [] Search Bitonic Array (medium): LC #
   - [] Search in Rotated Array (medium): LC #33
+  - [] Number Range (medium): LC #34
+  - [] Ceiling of a Number (easy): LC #35
   - [] Search in Rotated Array II (medium): LC #81
   - [] Find Minimum in Rotated Sorted Array (medium): LC #153
   - [] Find Minimum in Rotated Sorted Array II (medium): LC #154
+  - [] Minimum Difference Element (medium): LC #658 (k == 1)
+  - [] Search in a Sorted Infinite Array (medium): LC #702
+  - [] Order-agnostic Binary Search (easy): LC #704
+  - [] Next Letter (medium): LC #744
+
 
 - Cyclic Sort(Associated with Arrays in range of numbers)
   - [] Cyclic Sort (easy)
+  - [] Find the Smallest Missing Positive Number (medium): LC #41
   - [] Find the Missing Number (easy): LC #268
-  - [] Find All Numbers Disappeared in an Array (easy): LC #448
   - [] Find the Duplicate Number (easy): LC #287
   - [] Find all Duplicate Numbers (easy): LC #442
+  - [] Find All Numbers Disappeared in an Array (easy): LC #448
   - [] Find the Corrupt Pair (easy): LC #645
-  - [] Find the Smallest Missing Positive Number (medium): LC #41
   - [] Find the First K Missing Positive Numbers (hard): LC proably #1539
 
 - Fast & Slow Pointers(Linked List & Arrays)
   - [] LinkedList Cycle (easy): LC #141
-  - [] Happy Number (medium): LC #202
   - [] Start of LinkedList Cycle (medium): LC #142
-  - [] Middle of the LinkedList (easy): LC #876
-  - [] Palindrome LinkedList (medium): LC #234
   - [] Rearrange a LinkedList (medium): LC #143
+  - [] Happy Number (medium): LC #202
+  - [] Palindrome LinkedList (medium): LC #234
   - [] Cycle in a Circular Array (hard): LC #457
+  - [] Middle of the LinkedList (easy): LC #876
+
 
 - In Place Reversal of a LL
-  - [] Reverse a LinkedList (easy): LC #206
-  - [] Reverse a Sub-list (medium): LC #92
   - [] Reverse every K-element Sub-list( Reverse Nodes in k-Group) (hard): LC #25
   - [] Rotate a LinkedList (medium): LC #61
+  - [] Reverse a Sub-list (medium): LC #92
+  - [] Reverse a LinkedList (easy): LC #206
+
 
 - Doubly-Linked List(PERSONAl Review)
   - [] LRU Cache (medium): LC #146
+  - [] Convert Binary Search Tree to Sorted Doubly Linked List(medium): LC #426
+  - [] Flatten a Multilevel Doubly Linked List (medium): LC #430
   - [] All O`one Data Structure (Hard): LC #432
   - [] LFU Cache (Hard): LC #460
   - [] Max Stack (easy): LC #716
-  - [] Convert Binary Search Tree to Sorted Doubly Linked List(medium): LC #426
-  - [] Flatten a Multilevel Doubly Linked List (medium): LC #430
   - [] Design Browser History (medium): LC #1472
 
 - Trees: BFS(Also Graph)
+  - [] Level Order Successor (easy): LC #
   - [] Same Tree(easy) LC #100
   - [] Symmetric Tree (easy): LC #101
   - [] Binary Tree Level Order Traversal (easy): LC #102
-  - [] Minimum Depth of a Binary Tree (easy): LC #111
-  - [] Maximum Depth of a Binary Tree (easy): LC #104
-  - [] Level Averages in a Binary Tree (easy): LC #637
-  - [] Reverse Level Order Traversal II (easy): LC #107
   - [] Zigzag Traversal (medium): LC #103
-  - [] Level Order Successor (easy): LC #
-  - [] Connect Level Order Siblings (medium): LC #117
+  - [] Maximum Depth of a Binary Tree (easy): LC #104
+  - [] Reverse Level Order Traversal II (easy): LC #107
+  - [] Minimum Depth of a Binary Tree (easy): LC #111
   - [] Connect All Level Order Siblings (medium): LC maybe #116
+  - [] Connect Level Order Siblings (medium): LC #117
   - [] Right View of a Binary Tree (easy): LC #199
+  - [] Level Averages in a Binary Tree (easy): LC #637
 
 - Trees: DFS(Also Graph)
   - [] Binary Tree Path Sum (easy): LC #112
   - [] Path Sum II (medium): LC #113
-  - [] Binary Tree Paths (medium): LC #257
+  - [] Path with Maximum Sum (hard): LC #124
   - [] Sum of Path Numbers (medium): LC #129
-  - [] Path With Given Sequence (medium): LC #1430
+  - [] Binary Tree Paths (medium): LC #257
   - [] Count Paths for a Sum (medium): LC #437
   - [] Tree Diameter (medium): LC #543
-  - [] Path with Maximum Sum (hard): LC #124
+  - [] Path With Given Sequence (medium): LC #1430
+
 
 - Topological Sort (Graphs)
   - [] Tasks Scheduling (medium): LC #207
@@ -144,65 +151,67 @@ When tackling coding challenges, especially when implementing advanced patterns,
 
 - Top K Elements(Priority queue and heaps)
   - [] Top 'K' Numbers (easy)
-  - [] Kth Smallest Number (easy): LC #215
-  - [] 'K' Closest Points to the Origin (easy): LC #973
-  - [] Connect Ropes (easy): LC #1167
-  - [] Top 'K' Frequent Numbers (medium): LC #347
-  - [] Frequency Sort (medium): LC #451
-  - [] Kth Largest Number in a Stream (medium): LC #703
-  - [] 'K' Closest Numbers (medium): LC #658
   - [] Maximum Distinct Elements (medium)
   - [] Sum of Elements (medium)
-  - [] Rearrange String (hard): LC #767(Greedy)
+  - [] Kth Smallest Number (easy): LC #215
+  - [] Top 'K' Frequent Numbers (medium): LC #347
   - [] Rearrange String K Distance Apart (hard): LC #358
+  - [] Frequency Sort (medium): LC #451
   - [] Scheduling Tasks (hard): LC #621(Greedy)
+  - [] 'K' Closest Numbers (medium): LC #658
+  - [] Kth Largest Number in a Stream (medium): LC #703
+  - [] Rearrange String (hard): LC #767(Greedy)
   - [] Frequency Stack (hard): LC #895
+  - [] 'K' Closest Points to the Origin (easy): LC #973
+  - [] Connect Ropes (easy): LC #1167
+ 
 
 - K-way Merge(Priority queue, and merging sorted arrays)
-  - [] Merge K Sorted Lists (Hard): LC #23
   - [] Kth Smallest Number in M Sorted Lists (Medium)
+  - [] Merge K Sorted Lists (Hard): LC #23
+  - [] Problem K Pairs with Largest Sums (Hard): LC #373
   - [] Kth Smallest Number in a Sorted Matrix (Hard): LC #378
   - [] Smallest Number Range (Hard): LC #632
-  - [] Problem K Pairs with Largest Sums (Hard): LC #373
 
 - Knapsack (Dynamic Programming and 2d array)
   - [] 0/1 Knapsack (medium)
-  - [] Equal Subset Sum Partition (medium): LC #416
   - [] Subset Sum (medium)
   - [] Minimum Subset Sum Difference (hard)
   - [] Count of Subset Sum (hard)
-  - [] Target Sum (hard): LC #494
   - [] Coin Change (medium): LC #322
+  - [] Equal Subset Sum Partition (medium): LC #416
+  - [] Target Sum (hard): LC #494
   - [] Coin Change 2 (medium): LC #518
   - [] Minimum Cost For Tickets (medium): LC #983
-
-
-- Heaps
-  - [] Find the Median of a Number Stream (medium): LC #295
-  - [] Sliding Window Median (hard): LC #480
-  - [] Maximize Capital (hard): LC #502
-  - [] Next Interval (hard): LC #436
-
-- Graph
-    - [] Clone Graph (hard): LC #133
-
-- Other Dynamic Programming & Binary Search
-  - [] Super Egg Drop(hard): LC #887
-  - [] Distribute Candies to People(easy): LC #1103
-  - [] Search a 2D Matrix(medium): LC #74
-  - [] Maximum Alternating Subsequence Sum(medium): LC #1911
-  - [] House Robber(medium): LC #198
-  - [] Climbing Stairs(easy): LC #70
-  - [] Longest Palindromic Subsequence(medium): LC #516
-  - [] Palindromic Substrings(medium): LC #647
-  - [] Longest Palindromic Substring(medium): LC #5
-  - [] Distinct Subsequences(hard): LC #115
-  - [] Edit Distance(hard): LC #72
-  - [] Longest Increasing Subsequence(medium): LC #300
-  - [] Longest Common Subsequence(medium): LC #1143
 
 - Bitwise XOR
   - [] Single Number (easy): LC #136
   - [] Two Single Numbers (medium): LC #260
   - [] Complement of Base 10 Number (medium): LC #476
   - [] Problem Statement (hard): LC #832
+
+- Heaps
+  - [] Find the Median of a Number Stream (medium): LC #295
+  - [] Next Interval (hard): LC #436
+  - [] Sliding Window Median (hard): LC #480
+  - [] Maximize Capital (hard): LC #502
+
+- Graph
+    - [] Clone Graph (hard): LC #133
+
+- Other Dynamic Programming & Binary Search
+  - [] Longest Palindromic Substring(medium): LC #5
+  - [] Climbing Stairs(easy): LC #70
+  - [] Edit Distance(hard): LC #72
+  - [] Search a 2D Matrix(medium): LC #74
+  - [] Distinct Subsequences(hard): LC #115
+  - [] House Robber(medium): LC #198
+  - [] Longest Increasing Subsequence(medium): LC #300
+  - [] Longest Palindromic Subsequence(medium): LC #516
+  - [] Palindromic Substrings(medium): LC #647
+  - [] Super Egg Drop(hard): LC #887
+  - [] Distribute Candies to People(easy): LC #1103
+  - [] Longest Common Subsequence(medium): LC #1143
+  - [] Maximum Alternating Subsequence Sum(medium): LC #1911
+
+
