@@ -67,7 +67,6 @@ When tackling coding challenges, especially when implementing advanced patterns,
 
 
 - Modified Binary Search(Associated with Sorted Arrays & Binary Search Tree)
-  - [] Search Bitonic Array (medium): LC #
   - [] Search in Rotated Array (medium): LC #33
   - [] Number Range (medium): LC #34
   - [] Ceiling of a Number (easy): LC #35
@@ -117,7 +116,7 @@ When tackling coding challenges, especially when implementing advanced patterns,
   - [] Design Browser History (medium): LC #1472
 
 - Trees: BFS(Also Graph)
-  - [] Level Order Successor (easy): LC #
+  - [] Level Order Successor (easy)
   - [] Same Tree(easy) LC #100
   - [] Symmetric Tree (easy): LC #101
   - [] Binary Tree Level Order Traversal (easy): LC #102
@@ -150,9 +149,6 @@ When tackling coding challenges, especially when implementing advanced patterns,
 
 
 - Top K Elements(Priority queue and heaps)
-  - [] Top 'K' Numbers (easy)
-  - [] Maximum Distinct Elements (medium)
-  - [] Sum of Elements (medium)
   - [] Kth Smallest Number (easy): LC #215
   - [] Top 'K' Frequent Numbers (medium): LC #347
   - [] Rearrange String K Distance Apart (hard): LC #358
@@ -167,17 +163,18 @@ When tackling coding challenges, especially when implementing advanced patterns,
  
 
 - K-way Merge(Priority queue, and merging sorted arrays)
-  - [] Kth Smallest Number in M Sorted Lists (Medium)
   - [] Merge K Sorted Lists (Hard): LC #23
   - [] Problem K Pairs with Largest Sums (Hard): LC #373
   - [] Kth Smallest Number in a Sorted Matrix (Hard): LC #378
   - [] Smallest Number Range (Hard): LC #632
+
 
 - Knapsack (Dynamic Programming and 2d array)
   - [] 0/1 Knapsack (medium)
   - [] Subset Sum (medium)
   - [] Minimum Subset Sum Difference (hard)
   - [] Count of Subset Sum (hard)
+
   - [] Coin Change (medium): LC #322
   - [] Equal Subset Sum Partition (medium): LC #416
   - [] Target Sum (hard): LC #494
@@ -197,7 +194,7 @@ When tackling coding challenges, especially when implementing advanced patterns,
   - [] Maximize Capital (hard): LC #502
 
 - Graph
-    - [] Clone Graph (hard): LC #133
+  - [] Clone Graph (hard): LC #133
 
 - Other Dynamic Programming & Binary Search
   - [] Longest Palindromic Substring(medium): LC #5
