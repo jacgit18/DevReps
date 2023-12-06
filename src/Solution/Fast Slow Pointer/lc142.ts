@@ -35,6 +35,8 @@
 // -105 <= Node.val <= 105
 // pos is -1 or a valid index in the linked-list.
 
-export const detectCycle = (head: ListNode | null): ListNode | null =>{
+import { LinkedListNode } from "../../util/LinkedListMaker";
+
+export const detectCycle = (head: LinkedListNode | null): LinkedListNode | null =>{
     return null
 };

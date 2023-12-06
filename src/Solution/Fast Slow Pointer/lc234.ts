@@ -22,7 +22,9 @@
 // The number of nodes in the list is in the range [1, 105].
 // 0 <= Node.val <= 9
 
+import { LinkedListNode } from "../../util/LinkedListMaker";
 
-export const isPalindrome = (head: ListNode | null): boolean =>{
+
+export const isPalindrome = (head: LinkedListNode | null): boolean =>{
     return true
 };

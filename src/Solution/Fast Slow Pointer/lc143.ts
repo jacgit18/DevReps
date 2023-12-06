@@ -26,6 +26,9 @@
 // The number of nodes in the list is in the range [1, 5 * 104].
 // 1 <= Node.val <= 1000
 
-export const reorderList = (head: ListNode | null): void =>{
+import { LinkedListNode } from "../../util/LinkedListMaker";
+
+
+export const reorderList = (head: LinkedListNode | null): void =>{
     
 };
