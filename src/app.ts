@@ -1,7 +1,6 @@
 import * as readlineSync from 'readline-sync';
 import { AllAttempts } from "./Attempt";
 import { AllSolution } from "./Solution";
-import { customLog } from "./util/logger";
 
 
 // Experiment
@@ -73,7 +72,7 @@ const main = () => {
   // let test = SolutionExtra.lc20("()[]{}");
       let test = AllSolution.SolutionExtra;
       let test2 = AllAttempts.AttemptExtra;
-      customLog("log", "Challenge:", test, "Solution")
+      // customLog("log", "Challenge:", test, "Solution")
       // console.log(test2)
   
   
@@ -82,6 +81,28 @@ const main = () => {
   // customLog('info', 'Info:', 'Some Information', 'Details', 'More Context');
   // customLog('error', 'Error:', 'Something went wrong', 'Details', 'Error Context');
   
+  // fast: 2.348s
+  console.time('fast')
+  let output = ''
+  
+  for (let i=0;i<=1000000;i++){
+      output+=`${i}\n`
+  }
+  
+  console.log(output) // one long string
+  console.timeEnd('fast')
+
+
+  // slow: 10.575s
+  // console.time('slow')
+  
+  // for (let i=0;i<=1000000;i++){
+  //   console.log(i)
+  // }
+  
+  // console.timeEnd('slow')
+
+
   
   };
   

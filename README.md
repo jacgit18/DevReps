@@ -116,7 +116,6 @@ When tackling coding challenges, especially when implementing advanced patterns,
   - [] Design Browser History (medium): LC #1472
 
 - Trees: BFS(Also Graph)
-  - [] Level Order Successor (easy)
   - [] Same Tree(easy) LC #100
   - [] Symmetric Tree (easy): LC #101
   - [] Binary Tree Level Order Traversal (easy): LC #102
