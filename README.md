@@ -108,11 +108,9 @@ When tackling coding challenges, especially when implementing advanced patterns,
 
 - Doubly-Linked List(PERSONAl Review)
   - [] LRU Cache (medium): LC #146
-  - [] Convert Binary Search Tree to Sorted Doubly Linked List(medium): LC #426
   - [] Flatten a Multilevel Doubly Linked List (medium): LC #430
   - [] All O`one Data Structure (Hard): LC #432
   - [] LFU Cache (Hard): LC #460
-  - [] Max Stack (easy): LC #716
   - [] Design Browser History (medium): LC #1472
 
 - Trees: BFS(Also Graph)
@@ -169,11 +167,6 @@ When tackling coding challenges, especially when implementing advanced patterns,
 
 
 - Knapsack (Dynamic Programming and 2d array)
-  - [] 0/1 Knapsack (medium)
-  - [] Subset Sum (medium)
-  - [] Minimum Subset Sum Difference (hard)
-  - [] Count of Subset Sum (hard)
-
   - [] Coin Change (medium): LC #322
   - [] Equal Subset Sum Partition (medium): LC #416
   - [] Target Sum (hard): LC #494
