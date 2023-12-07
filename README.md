@@ -195,6 +195,11 @@ When tackling coding challenges, especially when implementing advanced patterns,
 
 - Graph
   - [] Clone Graph (hard): LC #133
+  - [] Reconstruct Itinerary (hard): LC #332
+  - [] Network Delay Time (medium): LC #743
+  - [] Cracking the Safe (hard): LC #753
+
+
 
 
 - Other Dynamic Programming & Binary Search
