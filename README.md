@@ -79,6 +79,16 @@ When tackling coding challenges, especially when implementing advanced patterns,
   - [] Next Letter (medium): LC #744
 
 
+- Greedy
+  - [] Container With Most Water (medium): LC #11 	
+  - [] Wildcard Matching (hard): LC #44
+  - [] Jump Game II	(medium): LC #45
+  - [] Jump Game (medium): LC #55
+  - [] Best Time to Buy and Sell Stock II (medium): LC #122
+  - [] Gas Station (medium): LC #134
+  - [] Longest Palindrome (easy): LC #409
+
+
 - Cyclic Sort(Associated with Arrays in range of numbers)
   - [] Cyclic Sort (easy)
   - [] Find the Smallest Missing Positive Number (medium): LC #41
@@ -185,6 +195,7 @@ When tackling coding challenges, especially when implementing advanced patterns,
 
 - Graph
   - [] Clone Graph (hard): LC #133
+
 
 - Other Dynamic Programming & Binary Search
   - [] Longest Palindromic Substring(medium): LC #5
