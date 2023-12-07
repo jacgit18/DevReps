@@ -1,6 +1,6 @@
-import { lengthOfLastWord } from "./ChallengOne"
-import { attempt } from "./Challenge2_0"
-import { decompressString } from "./ChallengeFour"
+import { attempt } from "./Challenge1_0"
+import { decompressString } from "./ChallengeTwo"
+import { SUPPLIER_PRODUCT } from "./challengeThree"
 import { flattenObject } from "./FlattenaDictionary"
 import { getNumberOfIslands } from "./IslandCount"
 import { longestCommonPrefix } from "./lc14"
@@ -16,9 +16,9 @@ import { nameMatch } from "./nameMatch"
 
 
 export const AttemptExtra = {
-  challengeOne: lengthOfLastWord,
-  challengeTwo: attempt,
-  challengeFour: decompressString,
+  challengeOne: attempt,
+  challengeTwo: decompressString,
+  challengeThree: SUPPLIER_PRODUCT,
   flat: flattenObject,
   island: getNumberOfIslands,
   matchName: nameMatch,

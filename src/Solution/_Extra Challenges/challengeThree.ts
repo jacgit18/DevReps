@@ -39,11 +39,68 @@
 // - A document file (text, Word, PDF, or any format that we can likely open) describing the database schema, if you
 // use tables.
 
+// Class to represent a Supplier Product
+class SupplierProduct {
+    supplierId: string;
+    productId: string;
+    quantity: number;
 
+    constructor(supplierId: string, productId: string, quantity: number) {
+        this.supplierId = supplierId;
+        this.productId = productId;
+        this.quantity = quantity;
+    }
+}
+
+// Class to represent a generic Supplier File
+abstract class SupplierFileProcessor {
+    abstract processFile(filePath: string): SupplierProduct[];
+}
+
+// Class to process CSV files
+class CsvFileProcessor extends SupplierFileProcessor {
+    processFile(filePath: string): SupplierProduct[] {
+        // Implementation to read and parse CSV file
+        // Extract product ID and quantity information
+        // Return a list of SupplierProduct objects
+        return [];
+    }
+}
+
+// Class to process Tab-Delimited files
+class TabDelimitedFileProcessor extends SupplierFileProcessor {
+    processFile(filePath: string): SupplierProduct[] {
+        // Implementation to read and parse Tab-Delimited file
+        // Extract product ID and quantity information
+        // Return a list of SupplierProduct objects
+        return [];
+    }
+}
+
+// Class to process Excel files
+class ExcelFileProcessor extends SupplierFileProcessor {
+    processFile(filePath: string): SupplierProduct[] {
+        // Implementation to read and parse Excel file
+        // Extract product ID and quantity information
+        // Return a list of SupplierProduct objects
+        return [];
+    }
+}
 
 // Database table representation
 export class SUPPLIER_PRODUCT {
-   
+    SUPPLIER_ID: string;
+    PRODUCT_ID: string;
+    QUANTITY: number;
+
+    // Add other necessary fields if needed
+    // ...
+
+    constructor(supplierId: string, productId: string, quantity: number) {
+        this.SUPPLIER_ID = supplierId;
+        this.PRODUCT_ID = productId;
+        this.QUANTITY = quantity;
+    }
 }
 
 // Assumptions:
