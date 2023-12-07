@@ -24,6 +24,6 @@
 // arr is sorted in ascending order.
 // -104 <= arr[i], x <= 104
 
-function findClosestElements(arr: number[], k: number, x: number): number[] {
+export const  findClosestElements = (arr: number[], k: number, x: number): number[] =>{
     return [0]
 };

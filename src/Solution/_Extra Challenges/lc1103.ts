@@ -36,7 +36,7 @@
 // 1 <= candies <= 10^9
 // 1 <= num_people <= 1000
 
-export const distributeCandies = (candies: number, num_people: number): number[] =>{
+export const distributeCandiesTwo = (candies: number, num_people: number): number[] =>{
     return [0]
     
 };

@@ -32,6 +32,6 @@
 // All the pairs (ui, vi) are unique. (i.e., no multiple edges.)
 
 
-function networkDelayTime(times: number[][], n: number, k: number): number {
+export const networkDelayTime = (times: number[][], n: number, k: number): number =>{
 return 0
 };

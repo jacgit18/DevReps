@@ -36,7 +36,7 @@
 // At most 2 * 104 calls will be made to push and pop.
 // It is guaranteed that there will be at least one element in the stack before calling pop.
 
-class FreqStack {
+export class FreqStack {
     constructor() {
         
     }

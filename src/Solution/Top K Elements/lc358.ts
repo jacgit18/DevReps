@@ -42,7 +42,7 @@ class MaxHeap {
     }
   }
   
-  function rearrangeString(s: string, k: number): string {
+  export const rearrangeString = (s: string, k: number): string =>{
     const charCountMap: Map<string, number> = new Map();
   
     for (const char of s) {

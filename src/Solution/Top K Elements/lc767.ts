@@ -20,6 +20,6 @@
 // 1 <= s.length <= 500
 // s consists of lowercase English letters.
 
-function reorganizeString(s: string): string {
+export const  reorganizeString = (s: string): string =>{
     return " "
 };

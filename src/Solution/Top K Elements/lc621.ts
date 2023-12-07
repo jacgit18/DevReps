@@ -40,6 +40,6 @@
 // tasks[i] is upper-case English letter.
 // The integer n is in the range [0, 100].
 
-function leastInterval(tasks: string[], n: number): number {
+export const  leastInterval = (tasks: string[], n: number): number =>{
     return 0
 };

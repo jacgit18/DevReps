@@ -29,6 +29,6 @@
 // 1 <= k <= points.length <= 104
 // -104 <= xi, yi <= 104
 
-function kClosest(points: number[][], k: number): number[][] {
+export const  kClosest = (points: number[][], k: number): number[][] =>{
     return [[0]]
 };

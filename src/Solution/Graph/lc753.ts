@@ -38,6 +38,6 @@
 // 1 <= kn <= 4096
 
 
-function crackSafe(n: number, k: number): string {
+export const crackSafe = (n: number, k: number): string =>{
     return " "
 };

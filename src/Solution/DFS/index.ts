@@ -1,11 +1,11 @@
-import { binaryTreePaths } from "../DFS/LC257"
-import { hasPathSum } from "../DFS/lc112"
-import { pathSumTwo } from "../DFS/lc113"
-import { sumNumbers } from "../DFS/lc129"
-import { isValidSequence } from "../DFS/lc1430"
-import { inorderSuccessor } from "../DFS/lc285"
-import { pathSum } from "../DFS/lc437"
+import { binaryTreePaths } from "./LC257"
+import { hasPathSum } from "./lc112"
+import { pathSumTwo } from "./lc113"
 import { maxPathSum } from "./lc124"
+import { sumNumbers } from "./lc129"
+import { isValidSequence } from "./lc1430"
+import { inorderSuccessor } from "./lc285"
+import { pathSum } from "./lc437"
 import { diameterOfBinaryTree } from "./lc543"
 
 

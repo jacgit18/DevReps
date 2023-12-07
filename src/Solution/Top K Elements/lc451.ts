@@ -31,6 +31,6 @@
 // 1 <= s.length <= 5 * 105
 // s consists of uppercase and lowercase English letters and digits.
 
-function frequencySort(s: string): string {
+export const  frequencySort = (s: string): string =>{
     return " "
 };

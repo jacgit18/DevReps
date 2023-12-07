@@ -1,11 +1,11 @@
-import { rob } from "../Dynamic Programming/lc198"
-import { coinChange } from "../Dynamic Programming/lc322"
-import { longestPalindrome } from "../Dynamic Programming/lc5"
 import { minStepsToOne } from "../../CodeSnippetsToReview/DP/minStepsToOne"
+import { rob } from "./lc198"
+import { coinChange } from "./lc322"
+import { longestPalindrome } from "./lc5"
 
 export const SolutionDynamicPro = {
-  lc322: coinChange,
-  lc198: rob,
   lc5: longestPalindrome,
+  lc198: rob,
+  lc322: coinChange,
   dynamicApproach: minStepsToOne
 }

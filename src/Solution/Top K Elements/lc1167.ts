@@ -85,7 +85,7 @@ class MinHeap {
     }
   }
   
-  function connectSticks(sticks: number[]): number {
+  export const  connectSticks = (sticks: number[]): number =>{
     const minHeap = new MinHeap();
   
     for (const stick of sticks) {

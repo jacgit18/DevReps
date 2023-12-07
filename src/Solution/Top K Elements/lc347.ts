@@ -23,6 +23,6 @@
 
 // Follow up: Your algorithm's time complexity must be better than O(n log n), where n is the array's size.
 
-function topKFrequent(nums: number[], k: number): number[] {
+export const  topKFrequent = (nums: number[], k: number): number[] =>{
     return [0]
 };

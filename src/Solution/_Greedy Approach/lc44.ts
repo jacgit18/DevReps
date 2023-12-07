@@ -32,6 +32,7 @@
 // s contains only lowercase English letters.
 // p contains only lowercase English letters, '?' or '*'.
 
-function isMatch(s: string, p: string): boolean {
+
+export const isMatch = (s: string, p: string): boolean =>{
     return true
 };

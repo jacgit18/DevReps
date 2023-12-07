@@ -32,6 +32,6 @@
 // fromi != toi
 
 
-function findItinerary(tickets: string[][]): string[] {
+export const findItinerary = (tickets: string[][]): string[] =>{
     return [" "]
 };
