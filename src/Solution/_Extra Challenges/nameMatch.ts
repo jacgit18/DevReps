@@ -124,4 +124,4 @@ function testRun(): void {
   console.log("Test run finished")
 }
 
-// testRun()
+testRun()
