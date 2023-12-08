@@ -37,5 +37,22 @@
 // 1 <= num_people <= 1000
 
 export const distributeCandiesTwo = (candies: number, num_people: number): number[] =>{
+        const distribution: number[] = new Array(num_people).fill(0);
+        let candiesGiven = 1;
     
-};
+        while (candies > 0) {
+            for (let i = 0; i < num_people && candies > 0; i++) {
+                const candiesToGive = Math.min(candiesGiven, candies);
+                distribution[i] += candiesToGive;
+                candies -= candiesToGive;
+                candiesGiven++;
+            }
+        }
+    
+        return distribution;
+    }
+    
+    // Example usage:
+    // console.log(distributeCandiesTwo(7, 4)); // Output: [1,2,3,1]
+    // console.log(distributeCandiesTwo(10, 3)); // Output: [5,2,3]
+    

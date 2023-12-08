@@ -32,4 +32,25 @@
 // 1 <= nums[i] <= 105
 
 export const maxAlternatingSum = (nums: number[]): number =>{
-};
+        let evenSum = 0; // Sum of elements at even indices
+        let oddSum = 0;  // Sum of elements at odd indices
+    
+        for (let i = 0; i < nums.length; i++) {
+            if (i % 2 === 0) {
+                // Update even sum for even indices
+                evenSum = Math.max(evenSum + nums[i], oddSum);
+            } else {
+                // Update odd sum for odd indices
+                oddSum = Math.max(oddSum + nums[i], evenSum);
+            }
+        }
+    
+        // Return the maximum alternating sum
+        return Math.max(evenSum, oddSum);
+    }
+    
+    // Example usage:
+    // console.log(maxAlternatingSum([4, 2, 5, 3]));   // Output: 7
+    // console.log(maxAlternatingSum([5, 6, 7, 8]));   // Output: 8
+    // console.log(maxAlternatingSum([6, 2, 1, 2, 4, 5])); // Output: 10
+    

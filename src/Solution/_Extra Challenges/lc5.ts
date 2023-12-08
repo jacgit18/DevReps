@@ -1,8 +1,4 @@
-// Given a string s, return the longest 
-// palindromic
- 
-// substring
-//  in s.
+// Given a string s, return the longest palindromic substring in s.
 
  
 
@@ -26,5 +22,36 @@
 
 
 export const longestPalindrome = (s: string): string =>{
-
-};
+        if (s.length <= 1) {
+            return s;
+        }
+    
+        let start = 0;
+        let maxLength = 1;
+    
+        function expandAroundCenter(left: number, right: number): number {
+            while (left >= 0 && right < s.length && s[left] === s[right]) {
+                left--;
+                right++;
+            }
+            return right - left - 1;
+        }
+    
+        for (let i = 0; i < s.length; i++) {
+            const len1 = expandAroundCenter(i, i);
+            const len2 = expandAroundCenter(i, i + 1);
+            const currentMaxLength = Math.max(len1, len2);
+    
+            if (currentMaxLength > maxLength) {
+                maxLength = currentMaxLength;
+                start = i - Math.floor((currentMaxLength - 1) / 2);
+            }
+        }
+    
+        return s.substring(start, start + maxLength);
+    }
+    
+    // Example usage:
+    // console.log(longestPalindrome("babad")); // Output: "bab" or "aba"
+    // console.log(longestPalindrome("cbbd"));  // Output: "bb"
+    

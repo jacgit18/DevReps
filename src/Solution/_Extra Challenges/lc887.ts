@@ -36,6 +36,27 @@
 
 
 export const superEggDrop = (k: number, n: number): number =>{
-
+        const dp: number[][] = new Array(k + 1).fill([]).map(() => new Array(n + 1).fill(0));
     
-};
+        for (let i = 1; i <= n; i++) {
+            dp[1][i] = i;
+        }
+    
+        for (let i = 2; i <= k; i++) {
+            let x = 1;
+            for (let j = 1; j <= n; j++) {
+                while (x < j && Math.max(dp[i - 1][x - 1], dp[i][j - x]) > Math.max(dp[i - 1][x], dp[i][j - x - 1])) {
+                    x++;
+                }
+                dp[i][j] = 1 + Math.max(dp[i - 1][x - 1], dp[i][j - x]);
+            }
+        }
+    
+        return dp[k][n];
+    }
+    
+    // Example usage:
+    // console.log(superEggDrop(1, 2));   // Output: 2
+    // console.log(superEggDrop(2, 6));   // Output: 3
+    // console.log(superEggDrop(3, 14));  // Output: 4
+    
