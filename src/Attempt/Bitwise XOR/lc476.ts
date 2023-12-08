@@ -23,25 +23,25 @@
 // 1 <= num < 231
  
 
- const findComplemenBruteForce = (num: number): number =>{
+ const findComplementBruteForce = (num: number): number =>{
     return 0
 };
 
-const findComplemenNaiveImp = (num: number): number =>{
+const findComplementNaiveImp = (num: number): number =>{
     return 0
 };
 
-const findComplemenNaiveDec = (num: number): number =>{
+const findComplementNaiveDec = (num: number): number =>{
     return 0
 };
 
-const findComplemenOptimal = (num: number): number =>{
+const findComplementOptimal = (num: number): number =>{
     return 0
 };
 
-export const findComplemen = {
-    findComplemenBruteForce,
-    findComplemenNaiveImp,
-    findComplemenNaiveDec,
-    findComplemenOptimal
+export const findComplement = {
+    findComplementBruteForce,
+    findComplementNaiveImp,
+    findComplementNaiveDec,
+    findComplementOptimal
     }
