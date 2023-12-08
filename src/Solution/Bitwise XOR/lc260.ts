@@ -28,5 +28,4 @@
 // Each integer in nums will appear twice, only two integers will appear once.
 
 export const singleNumberThree = (nums: number[]): number[] =>{
-  return [0]
 };

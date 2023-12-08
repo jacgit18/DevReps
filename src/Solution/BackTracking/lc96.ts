@@ -19,5 +19,4 @@
 // 1 <= n <= 19
 
 export const numTrees =(n: number): number =>{
-    return 0 
 };

@@ -27,6 +27,5 @@
 // -104 <= nums[i] <= 104
 
 export const lengthOfLIS = (nums: number[]): number =>{
-    return 0
     
 };

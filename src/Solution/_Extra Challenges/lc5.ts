@@ -27,5 +27,4 @@
 
 export const longestPalindrome = (s: string): string =>{
 
-    return " "
 };

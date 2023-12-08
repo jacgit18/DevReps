@@ -38,7 +38,6 @@ export class KthLargest {
     }
 
     add(val: number): number {
-        return 0
     }
 }
 

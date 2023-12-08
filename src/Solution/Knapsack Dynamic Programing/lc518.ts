@@ -39,6 +39,5 @@
 
 
 export const change = (amount: number, coins: number[]): number =>{
-    return 0
     
 };

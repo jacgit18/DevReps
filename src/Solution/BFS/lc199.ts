@@ -27,5 +27,4 @@
 import { TreeNode } from "../../util/BinaryTreeMaker";
 
 export const rightSideView = (root: TreeNode | null): number[] =>{
-    return [0]
 };

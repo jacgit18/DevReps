@@ -36,5 +36,4 @@
 // The start point of each interval is unique.
 
 export const findRightInterval = (intervals: number[][]): number[] =>{
-    return [0]
 };

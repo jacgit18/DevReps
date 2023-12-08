@@ -18,5 +18,4 @@
 // 1 <= n <= 8
 
 export const generateParenthesis =(n: number): string[] =>{
-    return [" "]
 };

@@ -29,6 +29,5 @@
 // -104 <= matrix[i][j], target <= 104
 
 export const searchMatrix = (matrix: number[][], target: number): boolean =>{
-    return true
     
 };

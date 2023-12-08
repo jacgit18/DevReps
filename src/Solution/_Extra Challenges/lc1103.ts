@@ -37,6 +37,5 @@
 // 1 <= num_people <= 1000
 
 export const distributeCandiesTwo = (candies: number, num_people: number): number[] =>{
-    return [0]
     
 };

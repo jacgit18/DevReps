@@ -33,6 +33,5 @@
 // 1 <= k <= 104
 
 export const kSmallestPairs = (nums1: number[], nums2: number[], k: number): number[][] =>{
-    return [[0]]
     
 };

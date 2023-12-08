@@ -46,7 +46,6 @@ export class FreqStack {
     }
 
     pop(): number {
-        return 0
     }
 }
 

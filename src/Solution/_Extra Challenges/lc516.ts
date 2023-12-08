@@ -23,5 +23,4 @@
 // s consists only of lowercase English letters.
 
 export const longestPalindromeSubseq = (s: string): number =>{
-return 0    
 };

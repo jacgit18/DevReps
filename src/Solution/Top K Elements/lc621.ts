@@ -41,5 +41,4 @@
 // The integer n is in the range [0, 100].
 
 export const  leastInterval = (tasks: string[], n: number): number =>{
-    return 0
 };

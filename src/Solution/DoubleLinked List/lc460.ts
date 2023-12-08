@@ -57,7 +57,7 @@ export class LFUCache {
     }
 
     get(key: number): number {
-        return 0
+
     }
 
     put(key: number, value: number): void {

@@ -38,5 +38,4 @@
 
 
 export const findMaximizedCapital = (k: number, w: number, profits: number[], capital: number[]): number =>{
-    return 0
 };

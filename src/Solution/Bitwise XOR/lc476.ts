@@ -24,5 +24,4 @@
  
 
 export const findComplemen = (num: number): number =>{
-    return 0
 };

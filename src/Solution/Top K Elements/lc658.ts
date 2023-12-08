@@ -25,5 +25,4 @@
 // -104 <= arr[i], x <= 104
 
 export const  findClosestElements = (arr: number[], k: number, x: number): number[] =>{
-    return [0]
 };

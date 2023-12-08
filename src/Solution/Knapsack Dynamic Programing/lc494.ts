@@ -32,5 +32,4 @@
 // -1000 <= target <= 1000
 
 export const findTargetSumWays = (nums: number[], target: number): number =>{
-    return 0
 };

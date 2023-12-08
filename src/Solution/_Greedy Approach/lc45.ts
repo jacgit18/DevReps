@@ -27,5 +27,4 @@
 // It's guaranteed that you can reach nums[n - 1].
 
 export const jump =(nums: number[]): number =>{
-    return 0
 };

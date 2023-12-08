@@ -21,5 +21,4 @@
 // 1 <= nums[i] <= 100
 
 export const canPartition = (nums: number[]): boolean =>{
-    return true
 };

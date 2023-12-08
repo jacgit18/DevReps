@@ -27,6 +27,5 @@
 // 1 <= n <= 45
 
 export const climbStairs = (n: number): number =>{
-    return 0
     
 };

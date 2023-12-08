@@ -22,5 +22,4 @@ import { TreeNode } from "../../util/BinaryTreeMaker";
 
 
 export const generateTrees = (n: number): Array<TreeNode | null> =>{
-    return [null]
 };

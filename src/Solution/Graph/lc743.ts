@@ -33,5 +33,4 @@
 
 
 export const networkDelayTime = (times: number[][], n: number, k: number): number =>{
-return 0
 };

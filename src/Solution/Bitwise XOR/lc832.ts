@@ -31,5 +31,4 @@
 // images[i][j] is either 0 or 1.
 
 export const flipAndInvertImage = (image: number[][]): number[][] =>{
-    return [[0]]
 };

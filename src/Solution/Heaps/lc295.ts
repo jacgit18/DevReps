@@ -48,7 +48,6 @@ export class MedianFinder {
     }
 
     findMedian(): number {
-        return 0
     }
 }
 

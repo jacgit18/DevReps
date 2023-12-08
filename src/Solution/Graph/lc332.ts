@@ -33,5 +33,4 @@
 
 
 export const findItinerary = (tickets: string[][]): string[] =>{
-    return [" "]
 };

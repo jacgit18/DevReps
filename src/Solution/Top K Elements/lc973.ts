@@ -30,5 +30,4 @@
 // -104 <= xi, yi <= 104
 
 export const  kClosest = (points: number[][], k: number): number[][] =>{
-    return [[0]]
 };

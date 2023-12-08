@@ -52,7 +52,7 @@ export class AllOne {
     }
 
     getMaxKey(): string {
-        return " "
+        
     }
 
     getMinKey(): string {

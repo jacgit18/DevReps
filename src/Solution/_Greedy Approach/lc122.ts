@@ -34,6 +34,5 @@
 // 0 <= prices[i] <= 104
 
 export const maxProfit = (prices: number[]): number =>{
-    return 0
     
 };

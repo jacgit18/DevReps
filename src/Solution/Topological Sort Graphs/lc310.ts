@@ -32,5 +32,4 @@
 // The given input is guaranteed to be a tree and there will be no repeated edges.
 
 export const findMinHeightTrees = (n: number, edges: number[][]): number[] =>{
-    return [0]
 };

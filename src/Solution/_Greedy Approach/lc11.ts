@@ -30,5 +30,4 @@
 
 
 export const maxArea = (height: number[]): number =>{
-    return 0
 };

@@ -27,6 +27,5 @@
 import { TreeNode } from "../../util/BinaryTreeMaker";
 
 export const diameterOfBinaryTree = (root: TreeNode | null): number =>{
-    return 0
     
 };

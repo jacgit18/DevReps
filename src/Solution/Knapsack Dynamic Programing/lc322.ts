@@ -31,5 +31,4 @@
 
 
 export const coinChange = (coins: number[], amount: number): number =>{
-    return 0
 };

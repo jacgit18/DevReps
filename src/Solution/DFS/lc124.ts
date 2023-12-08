@@ -30,5 +30,4 @@ import { TreeNode } from "../../util/BinaryTreeMaker";
 
 
 export const maxPathSum = (root: TreeNode | null): number =>{
-    return 0
 };

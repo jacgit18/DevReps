@@ -26,5 +26,4 @@ import { LinkedListNode } from "../../util/LinkedListMaker";
 
 
 export const isPalindrome = (head: LinkedListNode | null): boolean =>{
-    return true
 };

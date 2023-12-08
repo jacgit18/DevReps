@@ -21,5 +21,4 @@
 // s consists of lowercase English letters.
 
 export const  reorganizeString = (s: string): string =>{
-    return " "
 };

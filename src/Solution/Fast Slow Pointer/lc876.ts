@@ -28,5 +28,4 @@ import { LinkedListNode } from "../../util/LinkedListMaker";
 
 export const middleNode =(head: LinkedListNode | null): LinkedListNode | null =>{
     
-    return null
 };

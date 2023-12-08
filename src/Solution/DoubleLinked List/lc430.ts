@@ -64,5 +64,4 @@ import { DoublyLinkedListNode } from "../../util/DoubleLinkedListMaker";
 
 
 export const flatten = (head: DoublyLinkedListNode | null): DoublyLinkedListNode | null =>{
-return null
 };

@@ -23,5 +23,4 @@
 // 0 <= nums[i] <= 105
 
 export const canJump = (nums: number[]): boolean =>{
-    return true
 };

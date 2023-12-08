@@ -47,5 +47,4 @@
 // nums[i] != 0
 
 export const circularArrayLoop = (nums: number[]): boolean =>{
-    return true
 };

@@ -39,5 +39,4 @@
 
 
 export const crackSafe = (n: number, k: number): string =>{
-    return " "
 };

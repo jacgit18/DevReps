@@ -40,5 +40,4 @@
 
 
 export const canCompleteCircuit = (gas: number[], cost: number[]): number =>{
-    return 0
 };

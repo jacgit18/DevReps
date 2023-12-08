@@ -38,5 +38,4 @@
 
 
 export const connectOne =(root: Node | null): Node | null =>{
-    return null
 };

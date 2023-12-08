@@ -26,5 +26,4 @@
 
 
 export const rob = (nums: number[]): number =>{
-    return 0
 };

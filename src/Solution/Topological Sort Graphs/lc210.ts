@@ -35,6 +35,5 @@
 
 
 export const  findOrder = (numCourses: number, prerequisites: number[][]): number[] =>{
-    return [0]
 
 };

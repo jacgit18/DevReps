@@ -36,5 +36,6 @@
 
 
 export const superEggDrop = (k: number, n: number): number =>{
-    return 0
+
+    
 };

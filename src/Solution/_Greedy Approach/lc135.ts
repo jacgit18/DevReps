@@ -29,5 +29,4 @@
 // 0 <= ratings[i] <= 2 * 104
 
 export const candy = (ratings: number[]): number =>{
-    return 0
 };

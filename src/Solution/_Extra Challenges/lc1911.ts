@@ -32,5 +32,4 @@
 // 1 <= nums[i] <= 105
 
 export const maxAlternatingSum = (nums: number[]): number =>{
-return 0
 };

@@ -42,5 +42,4 @@
 
 
 export const mincostTickets = (days: number[], costs: number[]): number =>{
-return 0    
 };

@@ -38,5 +38,4 @@
 import { LinkedListNode } from "../../util/LinkedListMaker";
 
 export const detectCycle = (head: LinkedListNode | null): LinkedListNode | null =>{
-    return null
 };
