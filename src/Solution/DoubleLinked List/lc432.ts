@@ -37,29 +37,127 @@
 // It is guaranteed that for each call to dec, key is existing in the data structure.
 // At most 5 * 104 calls will be made to inc, dec, getMaxKey, and getMinKey.
 
+class Node {
+    count: number;
+    keys: Set<string>;
+    prev: Node | null;
+    next: Node | null;
+
+    constructor(count: number) {
+        this.count = count;
+        this.keys = new Set();
+        this.prev = null;
+        this.next = null;
+    }
+}
 
 export class AllOne {
+    head: Node;
+    tail: Node;
+    keyCountMap: Map<string, number>;
+    countNodeMap: Map<number, Node>;
+
     constructor() {
-        
+        this.head = new Node(-1);
+        this.tail = new Node(-1);
+        this.head.next = this.tail;
+        this.tail.prev = this.head;
+        this.keyCountMap = new Map();
+        this.countNodeMap = new Map();
+    }
+
+    private addNodeAfter(current: Node, newNode: Node): void {
+        if (current.next) {
+            newNode.next = current.next;
+            current.next.prev = newNode;
+        }
+        newNode.prev = current;
+        current.next = newNode;
+    }
+
+    private removeNode(node: Node): void {
+        if (node.prev && node.next) {
+            node.prev.next = node.next;
+            node.next.prev = node.prev;
+        }
     }
 
     inc(key: string): void {
-        
+        const currentCount = this.keyCountMap.get(key) || 0;
+        const newCount = currentCount + 1;
+
+        // Update keyCountMap
+        this.keyCountMap.set(key, newCount);
+
+        // Update countNodeMap
+        if (!this.countNodeMap.has(newCount)) {
+            const newNode = new Node(newCount);
+            this.countNodeMap.set(newCount, newNode);
+            this.addNodeAfter(this.head, newNode);
+        }
+        this.countNodeMap.get(newCount)?.keys.add(key);
+
+        // Remove key from the previous count in countNodeMap
+        if (currentCount > 0) {
+            const prevNode = this.countNodeMap.get(currentCount);
+            prevNode?.keys.delete(key);
+            if (prevNode?.keys.size === 0) {
+                this.removeNode(prevNode);
+                this.countNodeMap.delete(currentCount);
+            }
+        }
     }
 
     dec(key: string): void {
-        
+        const currentCount = this.keyCountMap.get(key) || 0;
+        if (currentCount === 0) return;
+
+        const newCount = currentCount - 1;
+
+        // Update keyCountMap
+        if (newCount === 0) {
+            this.keyCountMap.delete(key);
+        } else {
+            this.keyCountMap.set(key, newCount);
+        }
+
+        // Update countNodeMap
+        const currentNode = this.countNodeMap.get(currentCount);
+        currentNode?.keys.delete(key);
+        if (currentNode?.keys.size === 0) {
+            this.removeNode(currentNode);
+            this.countNodeMap.delete(currentCount);
+        }
+
+        if (newCount > 0) {
+            if (!this.countNodeMap.has(newCount)) {
+                const newNode = new Node(newCount);
+                this.countNodeMap.set(newCount, newNode);
+                this.addNodeAfter(currentNode?.prev || this.head, newNode);
+            }
+            this.countNodeMap.get(newCount)?.keys.add(key);
+        }
     }
 
     getMaxKey(): string {
-        
+        const maxNode = this.head.next;
+        return maxNode && maxNode !== this.tail
+            ? maxNode.keys.size > 0
+                ? maxNode.keys.values().next().value
+                : ""
+            : "";
     }
 
     getMinKey(): string {
-        return " "
-
+        const minNode = this.tail.prev;
+        return minNode && minNode !== this.head
+            ? minNode.keys.size > 0
+                ? minNode.keys.values().next().value
+                : ""
+            : "";
     }
 }
+
 
 /**
  * Your AllOne object will be instantiated and called as such:

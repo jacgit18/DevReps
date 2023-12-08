@@ -60,8 +60,64 @@
 
 // [1,2,3,4,5,6,null,null,null,7,8,9,10,null,null,11,12]
 
-import { DoublyLinkedListNode } from "../../util/DoubleLinkedListMaker";
 
 
-export const flatten = (head: DoublyLinkedListNode | null): DoublyLinkedListNode | null =>{
-};
+class Node {
+    val: number;
+    prev: Node | null;
+    next: Node | null;
+    child: Node | null;
+
+    constructor(val: number, prev?: Node | null, next?: Node | null, child?: Node | null) {
+        this.val = val;
+        this.prev = prev || null;
+        this.next = next || null;
+        this.child = child || null;
+    }
+}
+
+    
+    export const flatten = (head: Node | null): Node | null =>{
+        if (!head) {
+            return null;
+        }
+    
+        let current: Node | null = head;
+    
+        while (current) {
+            if (current.child) {
+                const next = current.next;
+    
+                current.next = current.child;
+                current.child.prev = current;
+                current.child = null;
+    
+                let lastChild: Node | null = current.next;
+                while (lastChild.next) {
+                    lastChild = lastChild.next;
+                }
+    
+                lastChild.next = next;
+    
+                if (next) {
+                    next.prev = lastChild;
+                }
+            }
+    
+            current = current.next;
+        }
+    
+        return head;
+    }
+    
+    // Example usage:
+    const head1 = new Node(1, null, null, new Node(7, null, null, new Node(11, null, null, new Node(12))));
+    head1.next = new Node(2, head1);
+    head1.next.next = new Node(3, head1.next);
+    head1.next.next.next = new Node(4, head1.next.next);
+    head1.next.next.next.next = new Node(5, head1.next.next.next);
+    head1.next.next.next.next.next = new Node(6, head1.next.next.next.next);
+    
+    const flattenedHead1 = flatten(head1);
+    console.log(flattenedHead1);
+    

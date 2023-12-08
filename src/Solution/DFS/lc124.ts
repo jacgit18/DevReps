@@ -29,5 +29,45 @@
 import { TreeNode } from "../../util/BinaryTreeMaker";
 
 
+  
+class Result {
+    maxPathSum: number;
+
+    constructor(maxPathSum: number) {
+        this.maxPathSum = maxPathSum;
+    }
+}
+
+
 export const maxPathSum = (root: TreeNode | null): number =>{
-};
+        const result = new Result(Number.MIN_SAFE_INTEGER);
+        dfs(root, result);
+        return result.maxPathSum;
+    }
+    
+    function dfs(node: TreeNode | null, result: Result): number {
+        if (!node) {
+            return 0;
+        }
+    
+        // Calculate the maximum path sum for the left and right subtrees
+        const leftMax = Math.max(0, dfs(node.left, result));
+        const rightMax = Math.max(0, dfs(node.right, result));
+    
+        // Calculate the maximum path sum that includes the current node
+        const currentMax = node.value + leftMax + rightMax;
+    
+        // Update the result with the maximum path sum encountered so far
+        result.maxPathSum = Math.max(result.maxPathSum, currentMax);
+    
+        // Return the maximum path sum for the subtree rooted at the current node
+        return node.value + Math.max(leftMax, rightMax);
+    }
+    
+    // Example usage:
+    // const root1 = new TreeNode(1, new TreeNode(2), new TreeNode(3));
+    // console.log(maxPathSum(root1));  // Output: 6
+    
+    // const root2 = new TreeNode(-10, new TreeNode(9), new TreeNode(20, new TreeNode(15), new TreeNode(7)));
+    // console.log(maxPathSum(root2));  // Output: 42
+    
