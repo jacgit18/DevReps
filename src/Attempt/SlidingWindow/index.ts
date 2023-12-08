@@ -17,7 +17,6 @@ export const AttemptSlidingWindow = {
   lc209: smallestSubarrayWithGivenSum,
   lc340: longest_substring_with_k_distinct,
   lc438: findAnagrams,
-  lc438Alt: findAnagrams,
   ls567: checkInclusion,
   lc904: totalFruit,
   lc1004: longestOnes,

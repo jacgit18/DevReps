@@ -24,19 +24,19 @@
 // 1 <= nums[i] <= n
 // Each element in nums appears once or twice.
 
-const findDuplicatesCyclicBruteForce = (nums: number[]): number[] => {
+const findDuplicatesBruteForce = (nums: number[]): number[] => {
   return [0]
 }
 
-const findDuplicatesCyclicNaiveImp = (nums: number[]): number[] => {
+const findDuplicatesNaiveImp = (nums: number[]): number[] => {
   return [0]
 }
 
-const findDuplicatesCyclicNaiveDec = (nums: number[]): number[] => {
+const findDuplicatesNaiveDec = (nums: number[]): number[] => {
   return [0]
 }
 
-const findDuplicatesCyclicOptimal = (nums: number[]): number[] => {
+const findDuplicatesOptimal = (nums: number[]): number[] => {
   return [0]
 }
 
@@ -51,9 +51,9 @@ const findDuplicatesCyclicOptimal = (nums: number[]): number[] => {
 // console.log(example3)
 
 
-export const findDuplicatesCyclic = {
-  findDuplicatesCyclicBruteForce,
-  findDuplicatesCyclicNaiveImp,
-  findDuplicatesCyclicNaiveDec,
-  findDuplicatesCyclicOptimal
+export const findDuplicates = {
+  findDuplicatesBruteForce,
+  findDuplicatesNaiveImp,
+  findDuplicatesNaiveDec,
+  findDuplicatesOptimal
 }

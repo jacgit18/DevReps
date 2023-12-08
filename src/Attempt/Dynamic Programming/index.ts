@@ -3,8 +3,8 @@ import { coinChange } from "./lc322";
 import { longestPalindrome } from "./lc5";
 
 export const AttemptDynamic  = {
-  lc322: coinChange,
-  lc198: rob,
   lc5: longestPalindrome,
+  lc198: rob,
+  lc322: coinChange,
 };
 
