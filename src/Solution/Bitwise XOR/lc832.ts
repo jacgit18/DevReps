@@ -31,4 +31,27 @@
 // images[i][j] is either 0 or 1.
 
 export const flipAndInvertImage = (image: number[][]): number[][] =>{
-};
+        const n = image.length;
+    
+        for (let i = 0; i < n; i++) {
+            // Step 1: Flip the image horizontally
+            image[i].reverse();
+    
+            // Step 2: Invert the image using XOR pattern
+            for (let j = 0; j < n; j++) {
+                image[i][j] ^= 1;
+            }
+        }
+    
+        return image;
+    }
+    
+    // Example usage:
+    // const image1 = [[1, 1, 0], [1, 0, 1], [0, 0, 0]];
+    // console.log(flipAndInvertImage(image1));
+    // Output: [[1, 0, 0], [0, 1, 0], [1, 1, 1]]
+    
+    // const image2 = [[1, 1, 0, 0], [1, 0, 0, 1], [0, 1, 1, 1], [1, 0, 1, 0]];
+    // console.log(flipAndInvertImage(image2));
+    // Output: [[1, 1, 0, 0], [0, 1, 1, 0], [0, 0, 0, 1], [1, 0, 1, 0]]
+    

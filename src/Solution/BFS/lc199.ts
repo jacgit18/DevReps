@@ -27,4 +27,43 @@
 import { TreeNode } from "../../util/BinaryTreeMaker";
 
 export const rightSideView = (root: TreeNode | null): number[] =>{
-};
+        const result: number[] = [];
+    
+        if (!root) {
+            return result;
+        }
+    
+        let currentLevel: TreeNode[] = [root];
+    
+        while (currentLevel.length > 0) {
+            result.push(currentLevel[currentLevel.length - 1].value);
+            const nextLevel: TreeNode[] = [];
+    
+            for (const node of currentLevel) {
+                if (node.left) {
+                    nextLevel.push(node.left);
+                }
+                if (node.right) {
+                    nextLevel.push(node.right);
+                }
+            }
+    
+            currentLevel = nextLevel;
+        }
+    
+        return result;
+    }
+    
+    // Example usage:
+    // const root1 = new TreeNode(1,
+    //     new TreeNode(2, null, new TreeNode(5)),
+    //     new TreeNode(3, null, new TreeNode(4))
+    // );
+    // console.log(rightSideView(root1));  // Output: [1, 3, 4]
+    
+    // const root2 = new TreeNode(1, null, new TreeNode(3));
+    // console.log(rightSideView(root2));  // Output: [1, 3]
+    
+    // const root3 = null;
+    // console.log(rightSideView(root3));  // Output: []
+    

@@ -1,5 +1,6 @@
 // You are given a perfect binary tree where all leaves are on the same level, and every parent has two children. The binary tree has the following definition:
 
+
 // struct Node {
 //   int val;
 //   Node *left;
@@ -37,5 +38,58 @@
 // The recursive approach is fine. You may assume implicit stack space does not count as extra space for this problem.
 
 
+
+class Node {
+    val: number;
+    left: Node | null;
+    right: Node | null;
+    next: Node | null;
+
+    constructor(val: number, left?: Node | null, right?: Node | null, next?: Node | null) {
+        this.val = val;
+        this.left = left || null;
+        this.right = right || null;
+        this.next = next || null;
+    }
+}
+
+    
 export const connectOne =(root: Node | null): Node | null =>{
-};
+
+        if (!root) {
+            return null;
+        }
+    
+        let levelStart = root;
+    
+        while (levelStart.left) {
+            let current: Node | null = levelStart;
+    
+            while (current) {
+                current.left!.next = current.right;
+    
+                if (current.next) {
+                    current.right!.next = current.next.left;
+                }
+    
+                current = current.next;
+            }
+    
+            levelStart = levelStart.left;
+        }
+    
+        return root;
+    }
+    
+    // Example usage:
+    // const root = new Node(1,
+    //     new Node(2, new Node(4), new Node(5)),
+    //     new Node(3, new Node(6), new Node(7))
+    // );
+    
+    // connectOne(root);
+    
+    // // The next pointers are populated. You can access them like this:
+    // console.log(root.left?.next?.val); // Output: 3
+    // console.log(root.left?.left?.next?.val); // Output: 5
+    

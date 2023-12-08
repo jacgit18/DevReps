@@ -23,5 +23,27 @@
 // 1 <= num < 231
  
 
-export const findComplemen = (num: number): number =>{
-};
+export const findComplement = (num: number): number =>{
+        if (num === 0) {
+            return 1; // Special case for num = 0, as its complement is 1.
+        }
+    
+        // Step 1: Find the length of the binary representation
+        let length = 0;
+        let temp = num;
+        while (temp > 0) {
+            length++;
+            temp >>= 1; // Right shift to remove the rightmost bit
+        }
+    
+        // Step 2: Create a bitmask with all bits set to 1 up to the length
+        const bitmask = (1 << length) - 1;
+    
+        // Step 3: XOR the given number with the bitmask
+        return num ^ bitmask;
+    }
+    
+    // Example usage:
+    console.log(findComplement(5));  // Output: 2
+    console.log(findComplement(1));  // Output: 0
+    

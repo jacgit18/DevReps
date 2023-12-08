@@ -23,4 +23,22 @@
 // 0 <= nums[i] <= 105
 
 export const canJump = (nums: number[]): boolean =>{
-};
+        const n = nums.length;
+        let lastReachable = n - 1;
+    
+        for (let i = n - 2; i >= 0; i--) {
+            if (i + nums[i] >= lastReachable) {
+                lastReachable = i;
+            }
+        }
+    
+        return lastReachable === 0;
+    }
+    
+    // Example usage:
+    // const nums1 = [2, 3, 1, 1, 4];
+    // console.log(canJump(nums1));  // Output: true
+    
+    // const nums2 = [3, 2, 1, 0, 4];
+    // console.log(canJump(nums2));  // Output: false
+    

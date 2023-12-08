@@ -34,4 +34,37 @@
 
 
 export const isMatch = (s: string, p: string): boolean =>{
-};
+        let sPointer = 0;
+        let pPointer = 0;
+        let match = 0;
+        let starIndex = -1;
+    
+        while (sPointer < s.length) {
+            if (pPointer < p.length && (p[pPointer] === s[sPointer] || p[pPointer] === '?')) {
+                sPointer++;
+                pPointer++;
+            } else if (pPointer < p.length && p[pPointer] === '*') {
+                starIndex = pPointer;
+                match = sPointer;
+                pPointer++;
+            } else if (starIndex !== -1) {
+                pPointer = starIndex + 1;
+                match++;
+                sPointer = match;
+            } else {
+                return false;
+            }
+        }
+    
+        while (pPointer < p.length && p[pPointer] === '*') {
+            pPointer++;
+        }
+    
+        return pPointer === p.length;
+    }
+    
+    // Example usage:
+    // console.log(isMatch("aa", "a"));     // Output: false
+    // console.log(isMatch("aa", "*"));     // Output: true
+    // console.log(isMatch("cb", "?a"));    // Output: false
+    

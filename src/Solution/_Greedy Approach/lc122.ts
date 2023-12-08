@@ -34,5 +34,25 @@
 // 0 <= prices[i] <= 104
 
 export const maxProfit = (prices: number[]): number =>{
+        let maxProfit = 0;
     
-};
+        for (let i = 1; i < prices.length; i++) {
+            if (prices[i] > prices[i - 1]) {
+                // If the current price is higher than the previous day, buy and sell on the same day.
+                maxProfit += prices[i] - prices[i - 1];
+            }
+        }
+    
+        return maxProfit;
+    }
+    
+    // Example usage:
+    // const prices1 = [7, 1, 5, 3, 6, 4];
+    // console.log(maxProfit(prices1));  // Output: 7
+    
+    // const prices2 = [1, 2, 3, 4, 5];
+    // console.log(maxProfit(prices2));  // Output: 4
+    
+    // const prices3 = [7, 6, 4, 3, 1];
+    // console.log(maxProfit(prices3));  // Output: 0
+    
