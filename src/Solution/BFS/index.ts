@@ -22,5 +22,5 @@ export const SolutionBFS = {
   lc116: connectOne,
   lc117: connect,
   lc199: rightSideView,
-  lc637: averageOfLevels,
+  lc637: averageOfLevels
 }
