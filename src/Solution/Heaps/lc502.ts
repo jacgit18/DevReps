@@ -37,88 +37,7 @@
 // 0 <= capital[i] <= 109
 
 
-class MaxHeap {
-    private heap: number[] = [];
-  
-    constructor() {}
-  
-    size(): number {
-      return this.heap.length;
-    }
-  
-    push(value: number): void {
-      this.heap.push(value);
-      this.heapifyUp();
-    }
-  
-    pop(): number | undefined {
-      if (this.heap.length === 0) {
-        return undefined;
-      }
-  
-      const poppedValue = this.heap[0];
-      const lastValue = this.heap.pop()!;
-  
-      if (this.heap.length > 0) {
-        this.heap[0] = lastValue;
-        this.heapifyDown();
-      }
-  
-      return poppedValue;
-    }
-  
-    private heapifyUp(): void {
-      let currentIndex = this.heap.length - 1;
-  
-      while (currentIndex > 0) {
-        const parentIndex = Math.floor((currentIndex - 1) / 2);
-  
-        if (this.heap[currentIndex] > this.heap[parentIndex]) {
-          [this.heap[currentIndex], this.heap[parentIndex]] = [
-            this.heap[parentIndex],
-            this.heap[currentIndex],
-          ];
-          currentIndex = parentIndex;
-        } else {
-          break;
-        }
-      }
-    }
-  
-    private heapifyDown(): void {
-      let currentIndex = 0;
-  
-      while (true) {
-        const leftChildIndex = 2 * currentIndex + 1;
-        const rightChildIndex = 2 * currentIndex + 2;
-        let largestIndex = currentIndex;
-  
-        if (
-          leftChildIndex < this.heap.length &&
-          this.heap[leftChildIndex] > this.heap[largestIndex]
-        ) {
-          largestIndex = leftChildIndex;
-        }
-  
-        if (
-          rightChildIndex < this.heap.length &&
-          this.heap[rightChildIndex] > this.heap[largestIndex]
-        ) {
-          largestIndex = rightChildIndex;
-        }
-  
-        if (largestIndex !== currentIndex) {
-          [this.heap[currentIndex], this.heap[largestIndex]] = [
-            this.heap[largestIndex],
-            this.heap[currentIndex],
-          ];
-          currentIndex = largestIndex;
-        } else {
-          break;
-        }
-      }
-    }
-  }
+import { MaxHeap } from "../../util/MaxHeapMakers";
   
   export const findMaximizedCapital = (
     k: number,
@@ -141,7 +60,7 @@ class MaxHeap {
     for (let i = 0; i < k; i++) {
       while (projects.length > 0 && projects[0][0] <= availableCapital) {
         const [capital, profit] = projects.shift()!;
-        maxProfitHeap.push(profit);
+        maxProfitHeap.add(profit);
       }
   
       if (maxProfitHeap.size() === 0) {

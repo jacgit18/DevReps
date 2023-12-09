@@ -21,26 +21,7 @@
 // Explanation: The same letters are at least distance 2 from each other.
 
 
-class MaxHeap {
-    heap: [number, string][];
-  
-    constructor() {
-      this.heap = [];
-    }
-  
-    push(char: string, count: number) {
-      this.heap.push([count, char]);
-      this.heap.sort((a, b) => b[0] - a[0]);
-    }
-  
-    pop(): [number, string] | undefined {
-      return this.heap.shift();
-    }
-  
-    isEmpty(): boolean {
-      return this.heap.length === 0;
-    }
-  }
+import { MaxHeap } from "../../util/MaxHeapMakers";
   
   export const rearrangeString = (s: string, k: number): string =>{
     const charCountMap: Map<string, number> = new Map();
@@ -51,7 +32,7 @@ class MaxHeap {
   
     const maxHeap = new MaxHeap();
     charCountMap.forEach((count, char) => {
-      maxHeap.push(char, count);
+      maxHeap.add(char, count);
     });
   
     const result: string[] = [];
@@ -66,7 +47,7 @@ class MaxHeap {
           if (!next) return ""; // Not enough characters to satisfy distance k
           result.push(next[1]);
           next[0]--;
-          if (next[0] > 0) maxHeap.push(next[1], next[0]);
+          if (next[0] > 0) maxHeap.add(next[1], next[0]);
         }
       }
     }

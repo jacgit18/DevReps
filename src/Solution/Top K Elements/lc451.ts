@@ -31,91 +31,8 @@
 // 1 <= s.length <= 5 * 105
 // s consists of uppercase and lowercase English letters and digits.
 
+import { MaxHeap } from "../../util/MaxHeapMakers";
 
-
-class MaxHeap {
-    heap: [string, number][] = [];
-  
-    push(val: [string, number]) {
-      this.heap.push(val);
-      this.heapifyUp();
-    }
-  
-    pop(): [string, number] {
-      if (this.isEmpty()) {
-        throw new Error('Heap is empty');
-      }
-  
-      const top = this.heap[0];
-      const last = this.heap.pop() as [string, number];
-  
-      if (this.heap.length > 0) {
-        this.heap[0] = last;
-        this.heapifyDown();
-      }
-  
-      return top;
-    }
-  
-    size(): number {
-      return this.heap.length;
-    }
-  
-    private heapifyUp() {
-      let currentIdx = this.heap.length - 1;
-  
-      while (currentIdx > 0) {
-        const parentIdx = Math.floor((currentIdx - 1) / 2);
-  
-        if (this.heap[currentIdx][1] > this.heap[parentIdx][1]) {
-          this.swap(currentIdx, parentIdx);
-          currentIdx = parentIdx;
-        } else {
-          break;
-        }
-      }
-    }
-  
-    private heapifyDown() {
-      let currentIdx = 0;
-  
-      while (true) {
-        const leftChildIdx = 2 * currentIdx + 1;
-        const rightChildIdx = 2 * currentIdx + 2;
-        let largestChildIdx = currentIdx;
-  
-        if (
-          leftChildIdx < this.heap.length &&
-          this.heap[leftChildIdx][1] > this.heap[largestChildIdx][1]
-        ) {
-          largestChildIdx = leftChildIdx;
-        }
-  
-        if (
-          rightChildIdx < this.heap.length &&
-          this.heap[rightChildIdx][1] > this.heap[largestChildIdx][1]
-        ) {
-          largestChildIdx = rightChildIdx;
-        }
-  
-        if (largestChildIdx !== currentIdx) {
-          this.swap(currentIdx, largestChildIdx);
-          currentIdx = largestChildIdx;
-        } else {
-          break;
-        }
-      }
-    }
-  
-    private swap(i: number, j: number) {
-      [this.heap[i], this.heap[j]] = [this.heap[j], this.heap[i]];
-    }
-  
-    private isEmpty(): boolean {
-      return this.heap.length === 0;
-    }
-  }
-  
   export const frequencySort = (s: string): string => {
     const frequencyMap: Record<string, number> = {};
     for (const char of s) {
@@ -126,7 +43,7 @@ class MaxHeap {
   
     for (const char in frequencyMap) {
       if (frequencyMap.hasOwnProperty(char)) {
-        maxHeap.push([char, frequencyMap[char]]);
+        maxHeap.add([char, frequencyMap[char]]);
       }
     }
   

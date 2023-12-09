@@ -33,20 +33,37 @@ export class MinHeap {
      this.heapifyUp()
    }
  
-   pop(): number | undefined {
-     if (this.heap.length === 0) return undefined
+  //  pop(): number | undefined {
+  //    if (this.heap.length === 0) return undefined
  
-     const poppedValue = this.heap[0]
+  //    const poppedValue = this.heap[0]
  
-     if (this.heap.length === 1) {
-       this.heap.pop()
-     } else {
-       this.heap[0] = this.heap.pop()!
-       this.heapifyDown()
-     }
+  //    if (this.heap.length === 1) {
+  //      this.heap.pop()
+  //    } else {
+  //      this.heap[0] = this.heap.pop()!
+  //      this.heapifyDown()
+  //    }
  
-     return poppedValue
-   }
+  //    return poppedValue
+  //  }
+
+  pop(): number {
+    if (this.isEmpty()) {
+      throw new Error('Heap is empty');
+    }
+
+    const top = this.heap[0];
+    const last = this.heap.pop() as number;
+
+    if (this.heap.length > 0) {
+      this.heap[0] = last;
+      this.heapifyDown();
+    }
+
+    return top;
+  }
+
  // bubbleDown
     heapifyDown(): void {
      let current = 0
@@ -76,6 +93,10 @@ export class MinHeap {
    peek(): number | undefined {
      return this.heap.length > 0 ? this.heap[0] : undefined
    }
+
+   private isEmpty(): boolean {
+    return this.heap.length === 0;
+  }
  
    size(): number {
      return this.heap.length

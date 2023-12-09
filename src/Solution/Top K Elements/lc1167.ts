@@ -22,74 +22,13 @@
 // 1 <= sticks.length <= 10^4
 // 1 <= sticks[i] <= 10^4
 
-
-class MinHeap {
-    heap: number[];
-  
-    constructor() {
-      this.heap = [];
-    }
-  
-    push(value: number) {
-      this.heap.push(value);
-      this.heapifyUp();
-    }
-  
-    pop(): number | undefined {
-      if (this.heap.length === 0) return undefined;
-      if (this.heap.length === 1) return this.heap.pop();
-  
-      const root = this.heap[0];
-      this.heap[0] = this.heap.pop()!;
-      this.heapifyDown();
-      return root;
-    }
-  
-    heapifyUp() {
-      let current = this.heap.length - 1;
-  
-      while (current > 0) {
-        const parent = Math.floor((current - 1) / 2);
-        if (this.heap[parent] <= this.heap[current]) break;
-  
-        [this.heap[parent], this.heap[current]] = [this.heap[current], this.heap[parent]];
-        current = parent;
-      }
-    }
-  
-    heapifyDown() {
-      let current = 0;
-  
-      while (true) {
-        const leftChild = 2 * current + 1;
-        const rightChild = 2 * current + 2;
-        let smallest = current;
-  
-        if (leftChild < this.heap.length && this.heap[leftChild] < this.heap[smallest]) {
-          smallest = leftChild;
-        }
-  
-        if (rightChild < this.heap.length && this.heap[rightChild] < this.heap[smallest]) {
-          smallest = rightChild;
-        }
-  
-        if (smallest === current) break;
-  
-        [this.heap[current], this.heap[smallest]] = [this.heap[smallest], this.heap[current]];
-        current = smallest;
-      }
-    }
-  
-    isEmpty(): boolean {
-      return this.heap.length === 0;
-    }
-  }
+import { MinHeap } from "../../util/MinHeapMaker";
   
   export const  connectSticks = (sticks: number[]): number =>{
     const minHeap = new MinHeap();
   
     for (const stick of sticks) {
-      minHeap.push(stick);
+      minHeap.add(stick);
     }
   
     let totalCost = 0;
@@ -99,7 +38,7 @@ class MinHeap {
       const y = minHeap.pop()!;
       const cost = x + y;
       totalCost += cost;
-      minHeap.push(cost);
+      minHeap.add(cost);
     }
   
     return totalCost;

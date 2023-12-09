@@ -1,5 +1,5 @@
 export class MaxHeap {
-    heap: number[];
+    heap: any[];
   
     constructor() {
       this.heap = [];
@@ -27,12 +27,12 @@ export class MaxHeap {
       }
     }
   
-    add(value: number): void {
-      this.heap.push(value);
+    add(value: any, paramTwo?: any): void {
+      this.heap.push(value, paramTwo);
       this.heapifyUp();
     }
   
-    pop(): number | undefined {
+    pop(): any | undefined {
       if (this.heap.length === 0) return undefined;
   
       const poppedValue = this.heap[0];
@@ -75,6 +75,10 @@ export class MaxHeap {
   
     peek(): number | undefined {
       return this.heap.length > 0 ? this.heap[0] : undefined;
+    }
+
+    isEmpty(): boolean {
+      return this.heap.length === 0;
     }
   
     size(): number {
