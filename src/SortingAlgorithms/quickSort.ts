@@ -1,6 +1,5 @@
-const numbersToSort: number[] = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0]
 
-export function quickSort(array: number[], left: number, right: number): number[] {
+export const quickSort = (array: number[], left: number, right: number): number[] =>{
   const len: number = array.length
   let pivot: number
   let partitionIndex: number
@@ -35,6 +34,9 @@ function swap(array: number[], firstIndex: number, secondIndex: number): void {
   array[firstIndex] = array[secondIndex]
   array[secondIndex] = temp
 }
+
+
+// const numbersToSort: number[] = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0]
 
 // // Select first and last index as 2nd and 3rd parameters
 // console.time("quick")

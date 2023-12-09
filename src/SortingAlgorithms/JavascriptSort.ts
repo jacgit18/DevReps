@@ -23,4 +23,15 @@ proder.sort((a: Product, b: Product): number => {
   return a.price - b.price
 })
 
+
+// Array.sort() 
+
+// .sort(a,b) .sort(compareFunc) .sort(inlineCompFunc)
+
+// < 0    sort a before b:  a(1) - b(2) = -1 lower value placed first
+
+// > 0    sort b before a:  b(2) - a(1) = 1 higher value placed first
+
+// === 0  keep original order of a and b
+
 // console.log(proder)

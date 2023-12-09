@@ -1,6 +1,10 @@
 ![](assets/Brain-Training-Mind-Lifter.gif)
 
-# Dev Mental Gym
+
+Dev Logic Gym is a purpose-built project dedicated to refining coding skills, strengthening problem-solving capabilities, and fostering logical thinking. This project serves as a centralized hub for coding challenges, providing a streamlined location for users to practice, learn, and track their progress.
+
+## Algorithm Approach Types
+![](assets/AlgoFlow.png)
 
 The most straightforward approach is typically the Brute Force approach, which involves trying all possible combinations to find the minimum solution.
 
@@ -11,9 +15,6 @@ Greedy algorithms make locally optimal choices at each stage, offering simplicit
 Optimal approaches aim for the most efficient solution based on the problem. While certain algorithm patterns may seem optimal, it depends on the specific problem at hand.
 
 When tackling coding challenges, especially when implementing advanced patterns, refrain from defaulting to a specific coding pattern in your approach. Take the time to analyze the problem thoroughly, considering various factors, as blindly choosing a pattern may limit your perspective and hinder a comprehensive solution. Like for example assuming every string or array question best approach is either a sliding window or two pointer this is lazy thinking and waste time.
-
-![](assets/AlgoFlow.png)
-
 
 ## Syllabus
 
@@ -45,7 +46,7 @@ When tackling coding challenges, especially when implementing advanced patterns,
   - [ ] Max Consecutive Ones III (hard): LC #1004
 
 
-#### Backtracking/Subset(2 dimensional array)
+#### Backtracking(2 dimensional array and Subsets)
   - [ ] Balanced Parentheses (hard): LC #22
   - [ ] Permutations (medium): LC #46
   - [ ] Subsets (easy): LC #78

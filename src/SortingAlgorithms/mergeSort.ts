@@ -1,6 +1,5 @@
-const numbersortMerge: number[] = [99, 44, 6, 2, 1, 5, 63, 87, 283]
 
-export function mergeSort(array: number[]): number[] {
+export const mergeSort = (array: number[]): number[] =>{
   if (array.length === 1) {
     return array
   }
@@ -28,6 +27,8 @@ function mergeHelper(left: number[], right: number[]): number[] {
   }
   return result.concat(left.slice(leftIndex)).concat(right.slice(rightIndex))
 }
+
+// const numbersortMerge: number[] = [99, 44, 6, 2, 1, 5, 63, 87, 283]
 
 // console.time("mergeHelper")
 // console.log(mergeSort(numbersortMerge))

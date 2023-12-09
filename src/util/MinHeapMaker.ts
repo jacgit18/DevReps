@@ -12,6 +12,7 @@ export class MinHeap {
      this.heap[j] = temp
    }
  
+   // bubbleUp
     heapifyUp(): void {
      let current = this.heap.length - 1
  
@@ -46,7 +47,7 @@ export class MinHeap {
  
      return poppedValue
    }
- 
+ // bubbleDown
     heapifyDown(): void {
      let current = 0
  

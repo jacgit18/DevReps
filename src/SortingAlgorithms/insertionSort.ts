@@ -1,6 +1,5 @@
-const numbersToSortNow: number[] = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0]
 
-function insertionSorter(array: number[]): void {
+export const insertionSorter = (array: number[]): void =>{
   const length: number = array.length
   for (let i: number = 0; i < length; i++) {
     if (array[i] < array[0]) {
@@ -21,6 +20,9 @@ function insertionSorter(array: number[]): void {
     }
   }
 }
+
+
+// const numbersToSortNow: number[] = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0]
 
 // insertionSorter(numbersToSortNow)
 // console.log(numbersToSortNow)

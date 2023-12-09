@@ -10,7 +10,7 @@ function findMax(arr: number[]): number {
 }
 
 // Radix Sort function
-function radixSorter(arr: number[]): number[] {
+export const radixSorter = (arr: number[]): number[] =>{
   const max = findMax(arr)
   const maxLength = max.toString().length
 
