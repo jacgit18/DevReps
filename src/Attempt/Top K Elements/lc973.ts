@@ -29,7 +29,11 @@
 // 1 <= k <= points.length <= 104
 // -104 <= xi, yi <= 104
 
- const  kClosestBruteForce = (points: number[][], k: number): number[][] =>{
+
+// import { MaxHeap } from "../../util/MaxHeapMakers";
+
+
+const  kClosestBruteForce = (points: number[][], k: number): number[][] =>{
     return [[0]]
 };
 

@@ -20,52 +20,31 @@
 // Output: "abacabcd"
 // Explanation: The same letters are at least distance 2 from each other.
 
+// import { MaxHeap } from "../../util/MaxHeapMakers";
 
-class MaxHeap {
-    heap: [number, string][];
+
   
-    constructor() {
-      this.heap = [];
-    }
-  
-    push(char: string, count: number) {
-      this.heap.push([count, char]);
-      this.heap.sort((a, b) => b[0] - a[0]);
-    }
-  
-    pop(): [number, string] | undefined {
-      return this.heap.shift();
-    }
-  
-    isEmpty(): boolean {
-      return this.heap.length === 0;
-    }
+const rearrangeStringBruteForce = (s: string, k: number): string =>{
+
+    return " ";
   }
-  
-   const rearrangeStringBruteForce = (s: string, k: number): string =>{
+
+
+const rearrangeStringNaiveImp = (s: string, k: number): string =>{
  
   
     return " ";
   }
 
-   
-  const rearrangeStringNaiveImp = (s: string, k: number): string =>{
- 
-  
+
+const rearrangeStringNaiveDec = (s: string, k: number): string =>{
+
     return " ";
   }
 
-   
-  const rearrangeStringNaiveDec = (s: string, k: number): string =>{
- 
-  
-    return " ";
-  }
 
-   
   const rearrangeStringOptimal = (s: string, k: number): string =>{
- 
-  
+
     return " ";
   }
   

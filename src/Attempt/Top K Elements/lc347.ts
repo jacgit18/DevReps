@@ -23,7 +23,11 @@
 
 // Follow up: Your algorithm's time complexity must be better than O(n log n), where n is the array's size.
 
- const  topKFrequentBruteForce = (nums: number[], k: number): number[] =>{
+
+// import { MinHeap } from "../../util/MinHeapMaker";
+
+
+const  topKFrequentBruteForce = (nums: number[], k: number): number[] =>{
     return [0]
 };
 
