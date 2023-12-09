@@ -26,22 +26,22 @@
 // The number of nodes in the list is in the range [1, 5 * 104].
 // 1 <= Node.val <= 1000
 
-import { LinkedListNode } from "../../util/LinkedListMaker";
+import { ListNode } from "../../util/LinkedListMaker";
 
 
- const reorderListBruteForce = (head: LinkedListNode | null): void =>{
+ const reorderListBruteForce = (head: ListNode | null): void =>{
     
 };
 
-const reorderListNaiveImp = (head: LinkedListNode | null): void =>{
+const reorderListNaiveImp = (head: ListNode | null): void =>{
     
 };
 
-const reorderListNaiveDec = (head: LinkedListNode | null): void =>{
+const reorderListNaiveDec = (head: ListNode | null): void =>{
     
 };
 
-const reorderListOptimal = (head: LinkedListNode | null): void =>{
+const reorderListOptimal = (head: ListNode | null): void =>{
     
 };
 

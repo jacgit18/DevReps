@@ -17,19 +17,19 @@
 // -500 <= Node.val <= 500
 // 1 <= left <= right <= n
 
-import { LinkedListNode } from "../../../src/util/LinkedListMaker"
+import { ListNode } from "../../../src/util/LinkedListMaker"
 
 export const reverse_sub_list = (
-  head: LinkedListNode | null,
+  head: ListNode | null,
   p: number,
   q: number,
-): LinkedListNode | null => {
+): ListNode | null => {
   if (p === q) {
     return head
   }
 
-  let current: LinkedListNode | null = head
-  let previous: LinkedListNode | null = null
+  let current: ListNode | null = head
+  let previous: ListNode | null = null
 
   let i = 0
   while (current !== null && i < p - 1) {
@@ -38,10 +38,10 @@ export const reverse_sub_list = (
     i += 1
   }
 
-  const last_node_of_first_part: LinkedListNode | null = previous
+  const last_node_of_first_part: ListNode | null = previous
 
-  const last_node_of_sub_list: LinkedListNode | null = current
-  let next: LinkedListNode | null = null
+  const last_node_of_sub_list: ListNode | null = current
+  let next: ListNode | null = null
   i = 0
 
   while (current !== null && i < q - p + 1) {
@@ -65,8 +65,8 @@ export const reverse_sub_list = (
   return head
 }
 
-let head: LinkedListNode | null = new LinkedListNode(1)
-head.next = new LinkedListNode(2)
-head.next.next = new LinkedListNode(3)
-head.next.next.next = new LinkedListNode(4)
-head.next.next.next.next = new LinkedListNode(5)
+let head: ListNode | null = new ListNode(1)
+head.next = new ListNode(2)
+head.next.next = new ListNode(3)
+head.next.next.next = new ListNode(4)
+head.next.next.next.next = new ListNode(5)

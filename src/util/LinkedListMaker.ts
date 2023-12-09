@@ -1,22 +1,22 @@
-export class LinkedListNode {
+export class ListNode {
   value: number
-  next: LinkedListNode | null
-  constructor(value?: number, next?: LinkedListNode | null) {
+  next: ListNode | null
+  constructor(value?: number, next?: ListNode | null) {
     this.value = value ?? 0
     this.next = next ?? null
   }
 }
 
-export function createLinkedListFromArray(arr: any[]): LinkedListNode | null {
+export function createLinkedListFromArray(arr: any[]): ListNode | null {
   if (arr.length === 0) {
     return null
   }
 
-  const head = new LinkedListNode(arr[0])
+  const head = new ListNode(arr[0])
   let current = head
 
   for (let i = 1; i < arr.length; i++) {
-    const newNode = new LinkedListNode(arr[i])
+    const newNode = new ListNode(arr[i])
     current.next = newNode
     current = newNode
   }

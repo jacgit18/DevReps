@@ -24,15 +24,15 @@
 // The number of nodes in the list is in the range [1, 100].
 // 1 <= Node.val <= 100
 
-import { LinkedListNode } from "../../util/LinkedListMaker";
+import { ListNode } from "../../util/LinkedListMaker";
 
-export const middleNode =(head: LinkedListNode | null): LinkedListNode | null =>{
+export const middleNode =(head: ListNode | null): ListNode | null =>{
         if (!head) {
             return null; // Empty list
         }
     
-        let slow: LinkedListNode | null = head;
-        let fast: LinkedListNode | null = head;
+        let slow: ListNode | null = head;
+        let fast: ListNode | null = head;
     
         // Move the fast pointer two steps at a time, and the slow pointer one step at a time
         while (fast && fast.next) {

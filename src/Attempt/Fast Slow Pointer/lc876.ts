@@ -24,25 +24,25 @@
 // The number of nodes in the list is in the range [1, 100].
 // 1 <= Node.val <= 100
 
-import { LinkedListNode } from "../../util/LinkedListMaker";
+import { ListNode } from "../../util/LinkedListMaker";
 
- const middleNodeBruteForce =(head: LinkedListNode | null): LinkedListNode | null =>{
+ const middleNodeBruteForce =(head: ListNode | null): ListNode | null =>{
     
     return null
 };
 
-const middleNodeNaiveImp =(head: LinkedListNode | null): LinkedListNode | null =>{
+const middleNodeNaiveImp =(head: ListNode | null): ListNode | null =>{
     
     return null
 };
 
 
-const middleNodeNaiveDec =(head: LinkedListNode | null): LinkedListNode | null =>{
+const middleNodeNaiveDec =(head: ListNode | null): ListNode | null =>{
     
     return null
 };
 
-const middleNodeOptimal =(head: LinkedListNode | null): LinkedListNode | null =>{
+const middleNodeOptimal =(head: ListNode | null): ListNode | null =>{
     
     return null
 };

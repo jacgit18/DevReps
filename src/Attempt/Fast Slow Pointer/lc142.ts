@@ -35,21 +35,21 @@
 // -105 <= Node.val <= 105
 // pos is -1 or a valid index in the linked-list.
 
-import { LinkedListNode } from "../../util/LinkedListMaker";
+import { ListNode } from "../../util/LinkedListMaker";
 
- const detectCycleBruteForce = (head: LinkedListNode | null): LinkedListNode | null =>{
+ const detectCycleBruteForce = (head: ListNode | null): ListNode | null =>{
     return null
 };
 
-const detectCycleNaiveImp = (head: LinkedListNode | null): LinkedListNode | null =>{
+const detectCycleNaiveImp = (head: ListNode | null): ListNode | null =>{
     return null
 };
 
-const detectCycleNaiveDec = (head: LinkedListNode | null): LinkedListNode | null =>{
+const detectCycleNaiveDec = (head: ListNode | null): ListNode | null =>{
     return null
 };
 
-const detectCycleOptimal = (head: LinkedListNode | null): LinkedListNode | null =>{
+const detectCycleOptimal = (head: ListNode | null): ListNode | null =>{
     return null
 };
 

@@ -43,12 +43,12 @@
 //   }
 // }
 
-import { LinkedListNode } from "../../util/LinkedListMaker"
+import { ListNode } from "../../util/LinkedListMaker"
 
 
-export const mergeKLists = (lists: Array<LinkedListNode | null>): LinkedListNode | null => {
-  const mergeTwoLists = (l1: LinkedListNode | null, l2: LinkedListNode | null): LinkedListNode | null => {
-    const dummy = new LinkedListNode()
+export const mergeKLists = (lists: Array<ListNode | null>): ListNode | null => {
+  const mergeTwoLists = (l1: ListNode | null, l2: ListNode | null): ListNode | null => {
+    const dummy = new ListNode()
     let current = dummy
 
     while (l1 !== null && l2 !== null) {
@@ -67,10 +67,10 @@ export const mergeKLists = (lists: Array<LinkedListNode | null>): LinkedListNode
   }
 
   const mergeKListsHelper = (
-    lists: Array<LinkedListNode | null>,
+    lists: Array<ListNode | null>,
     start: number,
     end: number,
-  ): LinkedListNode | null => {
+  ): ListNode | null => {
     if (start === end) {
       return lists[start]
     }

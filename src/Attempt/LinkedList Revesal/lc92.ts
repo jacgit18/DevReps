@@ -17,45 +17,45 @@
 // -500 <= Node.val <= 500
 // 1 <= left <= right <= n
 
-import { LinkedListNode } from "../../../src/util/LinkedListMaker"
+import { ListNode } from "../../../src/util/LinkedListMaker"
 
 const reverse_sub_listBruteForce = (
-  head: LinkedListNode | null,
+  head: ListNode | null,
   p: number,
   q: number,
-): LinkedListNode | null => {
+): ListNode | null => {
   return null
 }
 
 const reverse_sub_listNaiveImp = (
-  head: LinkedListNode | null,
+  head: ListNode | null,
   p: number,
   q: number,
-): LinkedListNode | null => {
+): ListNode | null => {
   return null
 }
 
 const reverse_sub_listNaiveDec = (
-  head: LinkedListNode | null,
+  head: ListNode | null,
   p: number,
   q: number,
-): LinkedListNode | null => {
+): ListNode | null => {
   return null
 }
 
 const reverse_sub_listOptimal = (
-  head: LinkedListNode | null,
+  head: ListNode | null,
   p: number,
   q: number,
-): LinkedListNode | null => {
+): ListNode | null => {
   return null
 }
 
-let head: LinkedListNode | null = new LinkedListNode(1)
-head.next = new LinkedListNode(2)
-head.next.next = new LinkedListNode(3)
-head.next.next.next = new LinkedListNode(4)
-head.next.next.next.next = new LinkedListNode(5)
+let head: ListNode | null = new ListNode(1)
+head.next = new ListNode(2)
+head.next.next = new ListNode(3)
+head.next.next.next = new ListNode(4)
+head.next.next.next.next = new ListNode(5)
 
 export const reverse_sub_list = {
   reverse_sub_listBruteForce,

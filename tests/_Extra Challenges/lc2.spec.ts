@@ -1,7 +1,7 @@
 import { generateTestCases, TestCase } from "../../lib/genTest";
 import { AttemptExtra } from "../../src/Attempt/_Extra Challenges";
 import { SolutionExtra } from "../../src/Solution/_Extra Challenges";
-import { LinkedListNode, createLinkedListFromArray } from "../../src/util/LinkedListMaker";
+import { createLinkedListFromArray, ListNode } from "../../src/util/LinkedListMaker";
 
 
 const runTestCases = () => {
@@ -13,12 +13,12 @@ const runTestCases = () => {
   const expectedLinkedList = createLinkedListFromArray([7, 0, 8]);
 
 
-  const l1 = new LinkedListNode(2, new LinkedListNode(4, new LinkedListNode(3)));
-  const l2 = new LinkedListNode(5, new LinkedListNode(6, new LinkedListNode(4)));
+  const l1 = new ListNode(2, new ListNode(4, new ListNode(3)));
+  const l2 = new ListNode(5, new ListNode(6, new ListNode(4)));
 
-  let head: LinkedListNode | null = new LinkedListNode(2)
-  head.next = new LinkedListNode(4)
-  head.next.next = new LinkedListNode(3)
+  let head: ListNode | null = new ListNode(2)
+  head.next = new ListNode(4)
+  head.next.next = new ListNode(3)
 
 
 

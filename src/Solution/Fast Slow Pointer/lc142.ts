@@ -35,16 +35,16 @@
 // -105 <= Node.val <= 105
 // pos is -1 or a valid index in the linked-list.
 
-import { LinkedListNode } from "../../util/LinkedListMaker";
+import { ListNode } from "../../util/LinkedListMaker";
 
-export const detectCycle = (head: LinkedListNode | null): LinkedListNode | null =>{
+export const detectCycle = (head: ListNode | null): ListNode | null =>{
         if (!head || !head.next) {
             return null; // No cycle if there are fewer than two nodes
         }
     
-        let slow: LinkedListNode | null = head; // Initialize as null
+        let slow: ListNode | null = head; // Initialize as null
     
-        let fast: LinkedListNode | null = head;
+        let fast: ListNode | null = head;
     
         // Detect cycle
         while (fast && fast.next) {

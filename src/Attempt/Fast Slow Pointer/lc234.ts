@@ -22,23 +22,23 @@
 // The number of nodes in the list is in the range [1, 105].
 // 0 <= Node.val <= 9
 
-import { LinkedListNode } from "../../util/LinkedListMaker";
+import { ListNode } from "../../util/LinkedListMaker";
 
 
- const isPalindromeBruteForce = (head: LinkedListNode | null): boolean =>{
+ const isPalindromeBruteForce = (head: ListNode | null): boolean =>{
     return true
 };
 
-const isPalindromeNaiveImp = (head: LinkedListNode | null): boolean =>{
+const isPalindromeNaiveImp = (head: ListNode | null): boolean =>{
     return true
 };
 
 
-const isPalindromeNaiveDec = (head: LinkedListNode | null): boolean =>{
+const isPalindromeNaiveDec = (head: ListNode | null): boolean =>{
     return true
 };
 
-const isPalindromeOptimal = (head: LinkedListNode | null): boolean =>{
+const isPalindromeOptimal = (head: ListNode | null): boolean =>{
     return true
 };
 

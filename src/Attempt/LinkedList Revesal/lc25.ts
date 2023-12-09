@@ -25,14 +25,8 @@
 // 1 <= k <= n <= 5000
 // 0 <= Node.val <= 1000
 
-class ListNode {
-    val: number;
-    next: ListNode | null;
-    constructor(val?: number, next?: ListNode | null) {
-      this.val = val === undefined ? 0 : val;
-      this.next = next === undefined ? null : next;
-    }
-  }
+import { ListNode } from "../../../src/util/LinkedListMaker";
+
   
    const reverseKGroupBruteForce = (head: ListNode | null, k: number): ListNode | null =>{
   

@@ -31,9 +31,9 @@
 //     }
 //   }
 
-import { LinkedListNode } from "../../util/LinkedListMaker";
+import { ListNode } from "../../util/LinkedListMaker";
   
-  export const rotateRight = (head: LinkedListNode | null, k: number): LinkedListNode | null =>{
+  export const rotateRight = (head: ListNode | null, k: number): ListNode | null =>{
     if (!head || k === 0) {
       return head;
     }

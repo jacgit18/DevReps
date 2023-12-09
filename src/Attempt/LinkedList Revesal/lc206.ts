@@ -20,43 +20,43 @@
 // The number of nodes in the list is the range [0, 5000].
 // -5000 <= Node.val <= 5000
 
-import { LinkedListNode, createLinkedListFromArray } from "../../../src/util/LinkedListMaker"
+import { ListNode, createLinkedListFromArray } from "../../../src/util/LinkedListMaker"
 
-let head: LinkedListNode | null
-head = new LinkedListNode(2)
-head.next = new LinkedListNode(4)
-head.next.next = new LinkedListNode(6)
-head.next.next.next = new LinkedListNode(8)
-head.next.next.next.next = new LinkedListNode(10)
+let head: ListNode | null
+head = new ListNode(2)
+head.next = new ListNode(4)
+head.next.next = new ListNode(6)
+head.next.next.next = new ListNode(8)
+head.next.next.next.next = new ListNode(10)
 
 let array1 = [1, 5, 7, 10]
 let linkedList = createLinkedListFromArray(array1)
 
 const reverseListBruteForce = function (
-  head: LinkedListNode | null,
-  prev: LinkedListNode | null = null,
-): LinkedListNode | null {
+  head: ListNode | null,
+  prev: ListNode | null = null,
+): ListNode | null {
   return null
 }
 
 const reverseListNaiveImp = function (
-  head: LinkedListNode | null,
-  prev: LinkedListNode | null = null,
-): LinkedListNode | null {
+  head: ListNode | null,
+  prev: ListNode | null = null,
+): ListNode | null {
   return null
 }
 
 const reverseListNaiveDec = function (
-  head: LinkedListNode | null,
-  prev: LinkedListNode | null = null,
-): LinkedListNode | null {
+  head: ListNode | null,
+  prev: ListNode | null = null,
+): ListNode | null {
   return null
 }
 
 const reverseListOptimal = function (
-  head: LinkedListNode | null,
-  prev: LinkedListNode | null = null,
-): LinkedListNode | null {
+  head: ListNode | null,
+  prev: ListNode | null = null,
+): ListNode | null {
   return null
 }
 

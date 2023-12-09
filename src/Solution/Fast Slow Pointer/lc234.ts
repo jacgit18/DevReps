@@ -22,17 +22,17 @@
 // The number of nodes in the list is in the range [1, 105].
 // 0 <= Node.val <= 9
 
-import { LinkedListNode } from "../../util/LinkedListMaker";
+import { ListNode } from "../../util/LinkedListMaker";
 
 
-export const isPalindrome = (head: LinkedListNode | null): boolean =>{
+export const isPalindrome = (head: ListNode | null): boolean =>{
         if (!head || !head.next) {
             return true; // An empty list or a single-node list is a palindrome
         }
     
         // Step 1: Find the middle of the linked list
-        let slow: LinkedListNode | null = head;
-        let fast: LinkedListNode | null = head;
+        let slow: ListNode | null = head;
+        let fast: ListNode | null = head;
     
         while (fast && fast.next) {
             slow = slow!.next;
@@ -40,19 +40,19 @@ export const isPalindrome = (head: LinkedListNode | null): boolean =>{
         }
     
         // Step 2: Reverse the second half of the linked list
-        let prev: LinkedListNode | null = null;
-        let current: LinkedListNode | null = slow;
+        let prev: ListNode | null = null;
+        let current: ListNode | null = slow;
     
         while (current) {
-            const nextNode: LinkedListNode | null = current.next;
+            const nextNode: ListNode | null = current.next;
             current.next = prev;
             prev = current;
             current = nextNode;
         }
     
         // Step 3: Compare the first half with the reversed second half
-        let firstHalf: LinkedListNode | null = head;
-        let secondHalf: LinkedListNode | null = prev;
+        let firstHalf: ListNode | null = head;
+        let secondHalf: ListNode | null = prev;
     
         while (secondHalf) {
             if (firstHalf!.value !== secondHalf.value) {

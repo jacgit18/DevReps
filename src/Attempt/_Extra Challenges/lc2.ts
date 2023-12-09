@@ -26,37 +26,37 @@
 // 0 <= Node.val <= 9
 // It is guaranteed that the list represents a number that does not have leading zeros.
 
-import { LinkedListNode, createLinkedListFromArray } from "../../util/LinkedListMaker"
+import { ListNode } from "../../util/LinkedListMaker"
 
 
 
  const addTwoNumbersBruteForce = (
-  current1: LinkedListNode | null,
-  current2: LinkedListNode | null,
-): LinkedListNode | null => {
+  current1: ListNode | null,
+  current2: ListNode | null,
+): ListNode | null => {
   return null
 }
 
 
  const addTwoNumbersNaiveImp = (
-  current1: LinkedListNode | null,
-  current2: LinkedListNode | null,
-): LinkedListNode | null => {
+  current1: ListNode | null,
+  current2: ListNode | null,
+): ListNode | null => {
   return null
 }
 
 const addTwoNumbersNaiveDec = (
-  current1: LinkedListNode | null,
-  current2: LinkedListNode | null,
-): LinkedListNode | null => {
+  current1: ListNode | null,
+  current2: ListNode | null,
+): ListNode | null => {
   return null
 }
 
 
  const addTwoNumbersOptimal = (
-  current1: LinkedListNode | null,
-  current2: LinkedListNode | null,
-): LinkedListNode | null => {
+  current1: ListNode | null,
+  current2: ListNode | null,
+): ListNode | null => {
   return null
 }
 

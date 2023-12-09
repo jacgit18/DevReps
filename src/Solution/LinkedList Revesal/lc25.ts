@@ -26,11 +26,11 @@
 // 0 <= Node.val <= 1000
 
 
-  import { LinkedListNode } from "../../../src/util/LinkedListMaker";
+  import { ListNode } from "../../../src/util/LinkedListMaker";
 
   
-  export const reverseKGroup = (head: LinkedListNode | null, k: number): LinkedListNode | null =>{
-    const getLength = (node: LinkedListNode | null): number => {
+  export const reverseKGroup = (head: ListNode | null, k: number): ListNode | null =>{
+    const getLength = (node: ListNode | null): number => {
       let length = 0;
       while (node) {
         length++;
@@ -39,7 +39,7 @@
       return length;
     };
   
-    const reverse = (start: LinkedListNode, end: LinkedListNode | null): LinkedListNode => {
+    const reverse = (start: ListNode, end: ListNode | null): ListNode => {
       let prev = null;
       let current = start;
       while (current !== end) {
@@ -52,13 +52,13 @@
     };
   
     const length = getLength(head);
-    const dummy = new LinkedListNode(0);
+    const dummy = new ListNode(0);
     dummy.next = head;
     let prevGroupEnd = dummy;
   
     for (let i = 0; i < Math.floor(length / k); i++) {
       const groupStart = prevGroupEnd.next;
-      let groupEnd: LinkedListNode | null = prevGroupEnd.next;
+      let groupEnd: ListNode | null = prevGroupEnd.next;
   
       for (let j = 0; j < k; j++) {
         if (!groupEnd) {
@@ -83,11 +83,11 @@
   }
   
   // Example usage:
-  const head1 = new LinkedListNode(1, new LinkedListNode(2, new LinkedListNode(3, new LinkedListNode(4, new LinkedListNode(5)))));
+  const head1 = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5)))));
   const k1 = 2;
   console.log(reverseKGroup(head1, k1));
   
-  const head2 = new LinkedListNode(1, new LinkedListNode(2, new LinkedListNode(3, new LinkedListNode(4, new LinkedListNode(5)))));
+  const head2 = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5)))));
   const k2 = 3;
   console.log(reverseKGroup(head2, k2));
   

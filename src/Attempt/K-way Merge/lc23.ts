@@ -44,23 +44,23 @@
 // }
 
 
-import { LinkedListNode } from "../../util/LinkedListMaker";
+import { ListNode } from "../../util/LinkedListMaker";
 
 
- const mergeKListsBruteForce = (lists: Array<LinkedListNode | null>): LinkedListNode | null => {
+ const mergeKListsBruteForce = (lists: Array<ListNode | null>): ListNode | null => {
     return null
 };
 
-const mergeKListsNaiveImp = (lists: Array<LinkedListNode | null>): LinkedListNode | null => {
+const mergeKListsNaiveImp = (lists: Array<ListNode | null>): ListNode | null => {
   return null
 
 };
 
-const mergeKListsNaiveDec = (lists: Array<LinkedListNode | null>): LinkedListNode | null => {
+const mergeKListsNaiveDec = (lists: Array<ListNode | null>): ListNode | null => {
   return null
 };
 
-const mergeKListsOptimal = (lists: Array<LinkedListNode | null>): LinkedListNode | null => {
+const mergeKListsOptimal = (lists: Array<ListNode | null>): ListNode | null => {
   return null
 
 };

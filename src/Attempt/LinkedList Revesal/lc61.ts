@@ -31,25 +31,25 @@
 //     }
 //   }
 
-import { LinkedListNode } from "../../util/LinkedListMaker";
+import { ListNode } from "../../util/LinkedListMaker";
   
-   const rotateRightBruteForce = (head: LinkedListNode | null, k: number): LinkedListNode | null =>{
+   const rotateRightBruteForce = (head: ListNode | null, k: number): ListNode | null =>{
  
     return null;
   }
 
-  const rotateRightNaiveImp = (head: LinkedListNode | null, k: number): LinkedListNode | null =>{
+  const rotateRightNaiveImp = (head: ListNode | null, k: number): ListNode | null =>{
  
     return null;
   }
 
 
-  const rotateRightNaiveDec = (head: LinkedListNode | null, k: number): LinkedListNode | null =>{
+  const rotateRightNaiveDec = (head: ListNode | null, k: number): ListNode | null =>{
  
     return null;
   }
 
-  const rotateRightOptimal = (head: LinkedListNode | null, k: number): LinkedListNode | null =>{
+  const rotateRightOptimal = (head: ListNode | null, k: number): ListNode | null =>{
  
     return null;
   }
