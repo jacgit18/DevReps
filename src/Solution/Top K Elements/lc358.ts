@@ -56,7 +56,7 @@ import { MaxHeap } from "../../util/MaxHeapMakers";
   }
   
   // Example usage:
-  console.log(rearrangeString("aabbcc", 3)); // Output: "abcabc"
-  console.log(rearrangeString("aaabc", 3)); // Output: ""
-  console.log(rearrangeString("aaadbbcc", 2)); // Output: "abacabcd"
+  // console.log(rearrangeString("aabbcc", 3)); // Output: "abcabc"
+  // console.log(rearrangeString("aaabc", 3)); // Output: ""
+  // console.log(rearrangeString("aaadbbcc", 2)); // Output: "abacabcd"
   

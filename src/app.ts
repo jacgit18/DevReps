@@ -80,19 +80,21 @@ const main = () => {
   // customLog("log", "Before:", "Hello", "After", "Additional Context")
   // customLog('info', 'Info:', 'Some Information', 'Details', 'More Context');
   // customLog('error', 'Error:', 'Something went wrong', 'Details', 'Error Context');
-  
-  // fast: 2.348s
-  console.time('fast')
-  let output = ''
-  
-  for (let i=0;i<=1000000;i++){
-      output+=`${i}\n`
-  }
-  
-  console.log(output) // one long string
-  console.timeEnd('fast')
 
 
+  // fast: 2.348s quicker way to console log 
+  // console.time('fast')
+  // let output = ''
+  
+  // for (let i=0;i<=1000000;i++){
+  //     output+=`${i}\n`
+  // }
+  
+  // console.log(output) // one long string
+  // console.timeEnd('fast')
+
+
+  
   // slow: 10.575s
   // console.time('slow')
   
