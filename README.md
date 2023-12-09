@@ -43,15 +43,6 @@ When tackling coding challenges, especially when implementing advanced patterns,
   - [] Fruits into Baskets (medium): LC #904
   - [] Max Consecutive Ones III (hard): LC #1004
 
-- Merge Intervals(2 dimensional array)
-  - [] Merge Intervals (medium): LC #56
-  - [] Insert Interval (medium): LC #57
-  - [] Conflicting Appointments (medium): LC #252
-  - [] Minimum Meeting Rooms (hard): LC #253
-  - [] Maximum CPU Load(Task Scheduler) (hard): LC proably #621
-  - [] Employee Free Time (hard): LC #759
-  - [] Intervals Intersection (medium): LC #986
-
 
 - Subsets/Backtracking(2 dimensional array)
   - [] Balanced Parentheses (hard): LC #22
@@ -63,7 +54,6 @@ When tackling coding challenges, especially when implementing advanced patterns,
   - [] Evaluate Expression (hard): LC #241
   - [] Unique Generalized Abbreviations (hard): LC #320
   - [] String Permutations by changing case (medium): LC #784
-
 
 
 - Modified Binary Search(Associated with Sorted Arrays & Binary Search Tree)
@@ -78,26 +68,6 @@ When tackling coding challenges, especially when implementing advanced patterns,
   - [] Order-agnostic Binary Search (easy): LC #704
   - [] Next Letter (medium): LC #744
 
-
-- Greedy
-  - [] Container With Most Water (medium): LC #11 	
-  - [] Wildcard Matching (hard): LC #44
-  - [] Jump Game II	(medium): LC #45
-  - [] Jump Game (medium): LC #55
-  - [] Best Time to Buy and Sell Stock II (medium): LC #122
-  - [] Gas Station (medium): LC #134
-  - [] Longest Palindrome (easy): LC #409
-
-
-- Cyclic Sort(Associated with Arrays in range of numbers)
-  - [] Cyclic Sort (easy)
-  - [] Find the Smallest Missing Positive Number (medium): LC #41
-  - [] Find the Missing Number (easy): LC #268
-  - [] Find the Duplicate Number (easy): LC #287
-  - [] Find all Duplicate Numbers (easy): LC #442
-  - [] Find All Numbers Disappeared in an Array (easy): LC #448
-  - [] Find the Corrupt Pair (easy): LC #645
-  - [] Find the First K Missing Positive Numbers (hard): LC proably #1539
 
 - Fast & Slow Pointers(Linked List & Arrays)
   - [] LinkedList Cycle (easy): LC #141
@@ -147,6 +117,77 @@ When tackling coding challenges, especially when implementing advanced patterns,
   - [] Path With Given Sequence (medium): LC #1430
 
 
+- Knapsack (Dynamic Programming and 2d array)
+>[!note]
+> knapsack utilizes Dynamic problem also known as Tabulation(bottom-up) or Memoization(top-down)
+  - [] Longest Palindromic Substring(medium): LC #5 
+      (uses bottom up or top down)
+  - [] House Robber(medium): LC #198
+      (uses bottom up or top down)
+  - [] Coin Change (medium): LC #322
+  - [] Equal Subset Sum Partition (medium): LC #416
+  - [] Target Sum (hard): LC #494
+  - [] Coin Change 2 (medium): LC #518
+  - [] Minimum Cost For Tickets (medium): LC #983
+
+- Heaps
+  - [] Find the Median of a Number Stream (medium): LC #295
+  - [] Next Interval (hard): LC #436
+  - [] Sliding Window Median (hard): LC #480
+  - [] Maximize Capital (hard): LC #502
+
+- Graph
+  - [] Clone Graph (hard): LC #133
+  - [] Reconstruct Itinerary (hard): LC #332
+  - [] Network Delay Time (medium): LC #743
+  - [] Cracking the Safe (hard): LC #753
+
+- Bitwise XOR
+  - [] Single Number (easy): LC #136
+  - [] Two Single Numbers (medium): LC #260
+  - [] Complement of Base 10 Number (medium): LC #476
+  - [] Problem Statement (hard): LC #832
+  
+- Greedy Algorithm/Approach
+  - [] Container With Most Water (medium): LC #11 	
+  - [] Wildcard Matching (hard): LC #44
+  - [] Jump Game II	(medium): LC #45
+  - [] Jump Game (medium): LC #55
+  - [] Best Time to Buy and Sell Stock II (medium): LC #122
+  - [] Gas Station (medium): LC #134
+  - [] Longest Palindrome (easy): LC #409
+
+## Merge Patterns
+- Merge Intervals(2 dimensional array)
+  - [] Merge Intervals (medium): LC #56
+  - [] Insert Interval (medium): LC #57
+  - [] Conflicting Appointments (medium): LC #252
+  - [] Minimum Meeting Rooms (hard): LC #253
+  - [] Maximum CPU Load(Task Scheduler) (hard): LC proably #621
+  - [] Employee Free Time (hard): LC #759
+  - [] Intervals Intersection (medium): LC #986
+
+- K-way Merge(Priority queue, and merging sorted arrays)
+  - [] Merge K Sorted Lists (Hard): LC #23
+  - [] Problem K Pairs with Largest Sums (Hard): LC #373
+  - [] Kth Smallest Number in a Sorted Matrix (Hard): LC #378
+  - [] Smallest Number Range (Hard): LC #632
+
+
+
+## Sort Patterns
+
+- Cyclic Sort(Associated with Arrays in range of numbers)
+  - [] Cyclic Sort (easy)
+  - [] Find the Smallest Missing Positive Number (medium): LC #41
+  - [] Find the Missing Number (easy): LC #268
+  - [] Find the Duplicate Number (easy): LC #287
+  - [] Find all Duplicate Numbers (easy): LC #442
+  - [] Find All Numbers Disappeared in an Array (easy): LC #448
+  - [] Find the Corrupt Pair (easy): LC #645
+  - [] Find the First K Missing Positive Numbers (hard): LC proably #1539
+
+
 - Topological Sort (Graphs)
   - [] Tasks Scheduling (medium): LC #207
   - [] Tasks Scheduling Order (medium): LC #210
@@ -167,48 +208,8 @@ When tackling coding challenges, especially when implementing advanced patterns,
   - [] Connect Ropes (easy): LC #1167
  
 
-- K-way Merge(Priority queue, and merging sorted arrays)
-  - [] Merge K Sorted Lists (Hard): LC #23
-  - [] Problem K Pairs with Largest Sums (Hard): LC #373
-  - [] Kth Smallest Number in a Sorted Matrix (Hard): LC #378
-  - [] Smallest Number Range (Hard): LC #632
 
-
-- Knapsack (Dynamic Programming and 2d array)
->[!note]
-> knapsack utilizes Dynamic problem also known as Tabulation(bottom-up) or Memoization(top-down)
-  - [] Longest Palindromic Substring(medium): LC #5 
-      (uses bottom up or top down)
-  - [] House Robber(medium): LC #198
-      (uses bottom up or top down)
-  - [] Coin Change (medium): LC #322
-  - [] Equal Subset Sum Partition (medium): LC #416
-  - [] Target Sum (hard): LC #494
-  - [] Coin Change 2 (medium): LC #518
-  - [] Minimum Cost For Tickets (medium): LC #983
-
-- Bitwise XOR
-  - [] Single Number (easy): LC #136
-  - [] Two Single Numbers (medium): LC #260
-  - [] Complement of Base 10 Number (medium): LC #476
-  - [] Problem Statement (hard): LC #832
-
-- Heaps
-  - [] Find the Median of a Number Stream (medium): LC #295
-  - [] Next Interval (hard): LC #436
-  - [] Sliding Window Median (hard): LC #480
-  - [] Maximize Capital (hard): LC #502
-
-- Graph
-  - [] Clone Graph (hard): LC #133
-  - [] Reconstruct Itinerary (hard): LC #332
-  - [] Network Delay Time (medium): LC #743
-  - [] Cracking the Safe (hard): LC #753
-
-
-
-
-- Extra Problems to Add
+## Extra Problems
   - [] Climbing Stairs(easy): LC #70
   - [] Edit Distance(hard): LC #72
   - [] Search a 2D Matrix(medium): LC #74
