@@ -1,49 +1,38 @@
-// You are given an array prices where prices[i] is the price of a given stock on the ith day.
+import { generateTestCases, TestCase } from "../../lib/genTest";
+import { AttemptTwoPointer } from "../../src/Attempt/TwoPointers";
+import { SolutionTwoPointer } from "../../src/Solution/TwoPointers/index";
 
-// You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.
 
-// Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
+const runTestCases = () => {
 
-// Example 1:
+    const testCasePlaceholder: TestCase[] = [
+      { params: [1, 2, 3, 4, 6], paramsTwo: 6, expected: [0]},
 
-// Input: prices = [7,1,5,3,6,4]
-// Output: 5
-// Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
-// Note that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.
 
-// Example 2:
+      // Add more test cases here
+    ];
+    
+    
+  
+    const testCases: TestCase[] = [
+        { params: [1, 2, 3, 4, 6], paramsTwo: 6, expected: [1, 3], performance: true },
+        // Fix failing Soulution 
+        // { params: [2,7,11,15], paramsTwo: 9, expected: [0, 1]},
+        // { params: [3, 2, 4], paramsTwo: 6, expected: [1, 2]},
+        // { params: [3,3], paramsTwo: 6, expected: [0, 1]},
 
-// Input: prices = [7,6,4,3,1]
-// Output: 0
-// Explanation: In this case, no transactions are done and the max profit = 0.
 
-// Constraints:
+        // Add more test cases here
+      ];
+      
+  
+      generateTestCases(AttemptTwoPointer.lc1.pair_with_target_sum_NaiveImp, testCasePlaceholder, ' Attempt ');
+      generateTestCases(SolutionTwoPointer.lc1.pair_with_target_sum_Two_Pointer, testCases, ' Solution ');
+      generateTestCases(SolutionTwoPointer.lc1.pair_with_target_sum_map, testCases, 'Alt Solution ');
 
-// 1 <= prices.length <= 105
-// 0 <= prices[i] <= 104
-
-//      -6 <-  -1 0 1 2 3 4 5
-
-export const maxProfit = (prices: number[]): number => {
-  let maxProfit = 0
-  let minPrice = prices[0]
-
-  for (let i = 1; i < prices.length; i++) {
-    const currentPrice = prices[i]
-    const potentialProfit = currentPrice - minPrice
-
-    if (potentialProfit > maxProfit) {
-      maxProfit = potentialProfit
-    }
-
-    if (currentPrice < minPrice) {
-      minPrice = currentPrice
-    }
-  }
-
-  return maxProfit
-}
-
-// Example usage:
-// console.log(maxProfit([7, 1, 5, 3, 6, 4])) // Output: 5
-// console.log(maxProfit([7, 6, 4, 3, 1])) // Output: 0
+  
+    
+    };
+    
+    runTestCases();
+    
