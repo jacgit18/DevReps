@@ -1,5 +1,5 @@
 // Subset/Backtracking pattern
-import { sudokuSolver } from "./SudokuSolverSolution";
+import { sudokuSolver } from "./SudokuSolver";
 import { letterCombinations } from "./lc17";
 import { generateParenthesis } from "./lc22";
 import { diffWaysToCompute } from "./lc241";

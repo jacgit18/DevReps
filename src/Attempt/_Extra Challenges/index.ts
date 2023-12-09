@@ -1,30 +1,28 @@
 import { attempt } from "./Challenge1_0"
 import { decompressString } from "./ChallengeTwo"
-import { SUPPLIER_PRODUCT } from "./challengeThree"
 import { flattenObject } from "./FlattenaDictionary"
 import { getNumberOfIslands } from "./IslandCount"
+import { SUPPLIER_PRODUCT } from "./challengeThree"
+import { distributeCandiesTwo } from "./lc1103"
+import { longestCommonSubsequence } from "./lc1143"
+import { numDistinct } from "./lc115"
 import { longestCommonPrefix } from "./lc14"
+import { maxAlternatingSum } from "./lc1911"
+import { rob } from "./lc198"
 import { addTwoNumbers } from "./lc2"
 import { isValid } from "./lc20"
 import { isAnagram } from "./lc242"
 import { firstUniqChar } from "./lc387"
 import { validIPAddress } from "./lc468"
 import { groupAnagrams } from "./lc49"
+import { longestPalindromeSubseq } from "./lc516"
 import { distributeCandies } from "./lc575"
 import { countSubstrings } from "./lc647"
-import { nameMatch } from "./nameMatch"
-import { longestPalindrome } from "./lc5"
 import { climbStairs } from "./lc70"
 import { minDistance } from "./lc72"
 import { searchMatrix } from "./lc74"
-import { numDistinct } from "./lc115"
-import { rob } from "./lc198"
-import { lengthOfLIS } from "./lc300"
-import { longestPalindromeSubseq } from "./lc516"
 import { superEggDrop } from "./lc887"
-import { distributeCandiesTwo } from "./lc1103"
-import { longestCommonSubsequence } from "./lc1143"
-import { maxAlternatingSum } from "./lc1911"
+import { nameMatch } from "./nameMatch"
 
 
 export const AttemptExtra = {
@@ -35,7 +33,6 @@ export const AttemptExtra = {
   island: getNumberOfIslands,
   matchName: nameMatch,
   lc2: addTwoNumbers,
-  lc5: longestPalindrome,
   lc14: longestCommonPrefix,
   lc20: isValid,
   lc49: groupAnagrams,
@@ -45,7 +42,6 @@ export const AttemptExtra = {
   lc115: numDistinct,
   lc198: rob,
   lc242: isAnagram,
-  lc300: lengthOfLIS,
   lc387: firstUniqChar,
   lc468: validIPAddress,
   lc516: longestPalindromeSubseq,

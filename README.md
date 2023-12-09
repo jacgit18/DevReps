@@ -65,6 +65,7 @@ When tackling coding challenges, especially when implementing advanced patterns,
   - [ ] Search in Rotated Array II (medium): LC #81
   - [ ] Find Minimum in Rotated Sorted Array (medium): LC #153
   - [ ] Find Minimum in Rotated Sorted Array II (medium): LC #154
+  - [ ] Longest Increasing Subsequence(medium): LC #300
   - [ ] Minimum Difference Element (medium): LC #658 (k == 1)
   - [ ] Search in a Sorted Infinite Array (medium): LC #702
   - [ ] Order-agnostic Binary Search (easy): LC #704
@@ -231,7 +232,6 @@ When tackling coding challenges, especially when implementing advanced patterns,
   - [ ] Search a 2D Matrix(medium): LC #74
   - [ ] Distinct Subsequences(hard): LC #115
   - [ ] Valid Anagram (easy): LC #242
-  - [ ] Longest Increasing Subsequence(medium): LC #300
   - [ ] First Unique Character in a String (easy): LC #387
   - [ ] Validate IP Address (medium): LC #468
   - [ ] Longest Palindromic Subsequence(medium): LC #516

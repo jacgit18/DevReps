@@ -13,11 +13,9 @@ import { rob } from "./lc198"
 import { addTwoNumbers } from "./lc2"
 import { isValid } from "./lc20"
 import { isAnagram } from "./lc242"
-import { lengthOfLIS } from "./lc300"
 import { firstUniqChar } from "./lc387"
 import { validIPAddress } from "./lc468"
 import { groupAnagrams } from "./lc49"
-import { longestPalindrome } from "./lc5"
 import { longestPalindromeSubseq } from "./lc516"
 import { distributeCandies } from "./lc575"
 import { countSubstrings } from "./lc647"
@@ -36,7 +34,6 @@ export const SolutionExtra = {
   island: getNumberOfIslands,
   matchName: nameMatch,
   lc2: addTwoNumbers,
-  lc5: longestPalindrome,
   lc14: longestCommonPrefix,
   lc20: isValid,
   lc49: groupAnagrams,
@@ -46,7 +43,6 @@ export const SolutionExtra = {
   lc115: numDistinct,
   lc198: rob,
   lc242: isAnagram,
-  lc300: lengthOfLIS,
   lc387: firstUniqChar,
   lc468: validIPAddress,
   lc516: longestPalindromeSubseq,

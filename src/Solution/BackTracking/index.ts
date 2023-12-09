@@ -1,7 +1,7 @@
 // Subset/Backtracking pattern
 import { robotPaths } from "./BacktrackMatrix"
 import { matrix } from "./MockIntMatrix"
-import { sudokuSolver } from "./SudokuSolverSolution"
+import { sudokuSolver } from "./SudokuSolver"
 import { letterCombinations } from "./lc17"
 import { generateParenthesis } from "./lc22"
 import { diffWaysToCompute } from "./lc241"
