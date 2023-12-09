@@ -17,8 +17,7 @@ When tackling coding challenges, especially when implementing advanced patterns,
 
 ## Syllabus
 
-#### Two Pointers
-*(Typically Associated with Arrays & Strings, Linked List)*
+#### Two Pointers(Typically Associated with Arrays & Strings, Linked List)
   - [] Pair with Target Sum (easy): LC #1
   - [] Triplet Sum to Zero (medium): LC #15
   - [] Triplet Sum Close to Target (medium): LC #16
@@ -32,8 +31,7 @@ When tackling coding challenges, especially when implementing advanced patterns,
   - [] Comparing Strings containing Backspaces (medium): LC #844
   - [] Squaring a Sorted Array (easy): LC #977
 
-#### Sliding Window
-(Associated with Sorted Arrays)
+#### Sliding Window(Associated with Sorted Arrays)
   - [] No-repeat Substring (hard): LC #3
   - [] Words Concatenation (hard): LC #30
   - [] Maximum Sum Subarray of Size K (easy) LC #53
