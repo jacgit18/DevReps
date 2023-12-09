@@ -6,7 +6,7 @@ Dev Logic Gym is a purpose-built project dedicated to refining coding skills, st
 ## Algorithm Approach Types
 ![](assets/AlgoFlow.png)
 
-The most straightforward approach is typically the Brute Force approach, which involves trying all possible combinations to find the minimum solution.
+The Brute Force approach, often considered the most straightforward method, involves systematically examining each element in a given context. For instance, when tackling an array traversal problem, employing the Brute Force approach entails visiting each element based on the specific requirements of the problem at hand.
 
 The Naïve approach is an improvement over Brute Force, providing a better guess that is often more optimal, but it may still have room for further optimization or some times your best guess can end up being the most optimal choice.
 
