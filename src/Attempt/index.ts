@@ -4,11 +4,10 @@ import { AttemptBitWiseXOR } from "./Bitwise XOR"
 import { AttemptCycSort } from "./Cyclic Sort"
 import { AttemptDFS } from "./DFS"
 import { AttemptDoublyLinkedList } from "./DoubleLinked List"
-import { AttemptDynamic } from "./Dynamic Programming"
 import { AttemptFastSlowPointers } from "./Fast Slow Pointer"
 import { AttemptGraph } from "./Graph"
 import { AttemptHeaps } from "./Heaps"
-import { Attempt_KwayMerge } from "./K-way Merge Dynamic Programing"
+import { Attempt_KwayMerge } from "./K-way Merge"
 import { AttemptKnapSack } from "./Knapsack Dynamic Programing"
 import { AttemptRevLinkedList } from "./LinkedList Revesal"
 import { AttemptMergeInterval } from "./Merge Intervals"
@@ -27,7 +26,6 @@ export const AllAttempts = {
   AttemptBitWiseXOR,
   AttemptCycSort,
   AttemptDFS,
-  AttemptDynamic,
   AttemptFastSlowPointers,
   AttemptKnapSack,
   AttemptModifiedBinarySearch,

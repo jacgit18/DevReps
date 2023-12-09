@@ -4,11 +4,10 @@ import { SolutionBitWiseXOR } from "./Bitwise XOR"
 import { SolutionCycSort } from "./Cyclic Sort"
 import { SolutionDFS } from "./DFS"
 import { SolutionDoublyLinkedList } from "./DoubleLinked List"
-import { SolutionDynamicPro } from "./Dynamic Programming"
 import { SolutionFastSlowPointer } from "./Fast Slow Pointer"
 import { SolutionGraph } from "./Graph"
 import { SolutionHeaps } from "./Heaps"
-import { Solution_KwayMerge } from "./K-way Merge Dynamic Programing"
+import { Solution_KwayMerge } from "./K-way Merge"
 import { SolutionKnapSack } from "./Knapsack Dynamic Programing"
 import { SolutionRevLinkedList } from "./LinkedList Revesal"
 import { SolutionMergeInterval } from "./Merge Intervals"
@@ -27,7 +26,6 @@ export const AllSolution = {
   SolutionBitWiseXOR,
   SolutionCycSort,
   SolutionDFS,
-  SolutionDynamicPro,
   SolutionFastSlowPointer,
   SolutionKnapSack,
   SolutionModifiedBinarySearch,

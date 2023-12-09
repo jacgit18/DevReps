@@ -30,25 +30,30 @@
 // 0 <= amount <= 104
 
 
- const coinChangeBruteForce = (coins: number[], amount: number): number =>{
-    return 0
-};
 
-const coinChangeNaiveImp = (coins: number[], amount: number): number =>{
+const coinChangeBruteForce = (coins: number[], amount: number): number => {
     return 0
-};
-
-const coinChangeNaiveDec = (coins: number[], amount: number): number =>{
+  };
+  
+const coinChangeNaiveImp = (coins: number[], amount: number): number => {
     return 0
-};
+  };
 
-const coinChangeOptimal = (coins: number[], amount: number): number =>{
+ const coinChangeNaiveDec = (coins: number[], amount: number): number => {
     return 0
-};
+  };
 
-export const coinChange = {
+
+  const coinChangeOptimal = (coins: number[], amount: number): number => {
+    return 0
+  };
+
+
+  export const coinChange = {
     coinChangeBruteForce,
     coinChangeNaiveImp,
     coinChangeNaiveDec,
     coinChangeOptimal
     }
+
+  

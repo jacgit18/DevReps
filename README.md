@@ -175,6 +175,12 @@ When tackling coding challenges, especially when implementing advanced patterns,
 
 
 - Knapsack (Dynamic Programming and 2d array)
+>[!note]
+> knapsack utilizes Dynamic problem also known as Tabulation(bottom-up) or Memoization(top-down)
+  - [] Longest Palindromic Substring(medium): LC #5 
+      (uses bottom up or top down)
+  - [] House Robber(medium): LC #198
+      (uses bottom up or top down)
   - [] Coin Change (medium): LC #322
   - [] Equal Subset Sum Partition (medium): LC #416
   - [] Target Sum (hard): LC #494
@@ -202,13 +208,11 @@ When tackling coding challenges, especially when implementing advanced patterns,
 
 
 
-- Other Dynamic Programming & Binary Search
-  - [] Longest Palindromic Substring(medium): LC #5
+- Extra Problems to Add
   - [] Climbing Stairs(easy): LC #70
   - [] Edit Distance(hard): LC #72
   - [] Search a 2D Matrix(medium): LC #74
   - [] Distinct Subsequences(hard): LC #115
-  - [] House Robber(medium): LC #198
   - [] Longest Increasing Subsequence(medium): LC #300
   - [] Longest Palindromic Subsequence(medium): LC #516
   - [] Palindromic Substrings(medium): LC #647

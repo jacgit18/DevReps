@@ -51,7 +51,7 @@ export const coinChange = (coins: number[], amount: number): number => {
   };
   
   // Example usage:
-  console.log(coinChange([1, 2, 5], 11)); // Output: 3
-  console.log(coinChange([2], 3)); // Output: -1
-  console.log(coinChange([1], 0)); // Output: 0
+  // console.log(coinChange([1, 2, 5], 11)); // Output: 3
+  // console.log(coinChange([2], 3)); // Output: -1
+  // console.log(coinChange([1], 0)); // Output: 0
   
