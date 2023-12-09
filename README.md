@@ -10,7 +10,7 @@ The Brute Force approach, often considered the most straightforward method, invo
 
 The Naïve approach is an improvement over Brute Force, providing a better guess that is often more optimal, but it may still have room for further optimization or some times your best guess can end up being the most optimal choice.
 
-Greedy algorithms make locally optimal choices at each stage, offering simplicity and speed in coding. However, they may not guarantee an overall optimal solution, especially in complex scenarios.
+Greedy algorithms/approach makes locally optimal choices at each stage, offering simplicity and speed in coding. However, they may not guarantee an overall optimal solution, especially in complex scenarios.
 
 Optimal approaches aim for the most efficient solution based on the problem. While certain algorithm patterns may seem optimal, it depends on the specific problem at hand.
 
