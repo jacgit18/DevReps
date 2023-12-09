@@ -1,4 +1,5 @@
 import { findMin } from "./lc153";
+import { findMinTwo } from "./lc154";
 import { lengthOfLIS } from "./lc300";
 import { searchRanger } from "./lc33";
 import { searchRange } from "./lc34";
@@ -15,6 +16,7 @@ export const AttemptModifiedBinarySearch  = {
   lc35: searchInsert,
   lc81: search,
   lc153: findMin,
+  lc154: findMinTwo,
   lc300: lengthOfLIS,
   lc658: findClosestElements,
   lc702: searchInArrayReader,
