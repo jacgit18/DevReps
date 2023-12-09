@@ -17,7 +17,8 @@ When tackling coding challenges, especially when implementing advanced patterns,
 
 ## Syllabus
 
-- Two Pointers(Typically Associated with Arrays & Strings, Linked List)
+#### Two Pointers
+*(Typically Associated with Arrays & Strings, Linked List)*
   - [] Pair with Target Sum (easy): LC #1
   - [] Triplet Sum to Zero (medium): LC #15
   - [] Triplet Sum Close to Target (medium): LC #16
@@ -31,7 +32,8 @@ When tackling coding challenges, especially when implementing advanced patterns,
   - [] Comparing Strings containing Backspaces (medium): LC #844
   - [] Squaring a Sorted Array (easy): LC #977
 
-- Sliding Window(Associated with Sorted Arrays)
+#### Sliding Window
+(Associated with Sorted Arrays)
   - [] No-repeat Substring (hard): LC #3
   - [] Words Concatenation (hard): LC #30
   - [] Maximum Sum Subarray of Size K (easy) LC #53
@@ -44,7 +46,7 @@ When tackling coding challenges, especially when implementing advanced patterns,
   - [] Max Consecutive Ones III (hard): LC #1004
 
 
-- Subsets/Backtracking(2 dimensional array)
+#### Subsets/Backtracking(2 dimensional array)
   - [] Balanced Parentheses (hard): LC #22
   - [] Permutations (medium): LC #46
   - [] Subsets (easy): LC #78
@@ -56,7 +58,7 @@ When tackling coding challenges, especially when implementing advanced patterns,
   - [] String Permutations by changing case (medium): LC #784
 
 
-- Modified Binary Search(Associated with Sorted Arrays & Binary Search Tree)
+#### Modified Binary Search(Associated with Sorted Arrays & Binary Search Tree)
   - [] Search in Rotated Array (medium): LC #33
   - [] Number Range (medium): LC #34
   - [] Ceiling of a Number (easy): LC #35
@@ -69,7 +71,7 @@ When tackling coding challenges, especially when implementing advanced patterns,
   - [] Next Letter (medium): LC #744
 
 
-- Fast & Slow Pointers(Linked List & Arrays)
+#### Fast & Slow Pointers(Linked List & Arrays)
   - [] LinkedList Cycle (easy): LC #141
   - [] Start of LinkedList Cycle (medium): LC #142
   - [] Rearrange a LinkedList (medium): LC #143
@@ -79,21 +81,21 @@ When tackling coding challenges, especially when implementing advanced patterns,
   - [] Middle of the LinkedList (easy): LC #876
 
 
-- In Place Reversal of a LL
+#### In Place Reversal of a LL
   - [] Reverse every K-element Sub-list( Reverse Nodes in k-Group) (hard): LC #25
   - [] Rotate a LinkedList (medium): LC #61
   - [] Reverse a Sub-list (medium): LC #92
   - [] Reverse a LinkedList (easy): LC #206
 
 
-- Doubly-Linked List(PERSONAl Review)
+#### Doubly-Linked List(PERSONAl Review)
   - [] LRU Cache (medium): LC #146
   - [] Flatten a Multilevel Doubly Linked List (medium): LC #430
   - [] All O`one Data Structure (Hard): LC #432
   - [] LFU Cache (Hard): LC #460
   - [] Design Browser History (medium): LC #1472
 
-- Trees: BFS(Also Graph)
+#### Trees: BFS(Also Graph)
   - [] Same Tree(easy) LC #100
   - [] Symmetric Tree (easy): LC #101
   - [] Binary Tree Level Order Traversal (easy): LC #102
@@ -106,7 +108,7 @@ When tackling coding challenges, especially when implementing advanced patterns,
   - [] Right View of a Binary Tree (easy): LC #199
   - [] Level Averages in a Binary Tree (easy): LC #637
 
-- Trees: DFS(Also Graph)
+#### Trees: DFS(Also Graph)
   - [] Binary Tree Path Sum (easy): LC #112
   - [] Path Sum II (medium): LC #113
   - [] Path with Maximum Sum (hard): LC #124
@@ -117,7 +119,7 @@ When tackling coding challenges, especially when implementing advanced patterns,
   - [] Path With Given Sequence (medium): LC #1430
 
 
-- Knapsack (Dynamic Programming and 2d array)
+#### Knapsack
 >[!note]
 > knapsack utilizes Dynamic problem also known as Tabulation(bottom-up) or Memoization(top-down)
   - [] Longest Palindromic Substring(medium): LC #5 
@@ -130,25 +132,25 @@ When tackling coding challenges, especially when implementing advanced patterns,
   - [] Coin Change 2 (medium): LC #518
   - [] Minimum Cost For Tickets (medium): LC #983
 
-- Heaps
+#### Heaps
   - [] Find the Median of a Number Stream (medium): LC #295
   - [] Next Interval (hard): LC #436
   - [] Sliding Window Median (hard): LC #480
   - [] Maximize Capital (hard): LC #502
 
-- Graph
+#### Graph
   - [] Clone Graph (hard): LC #133
   - [] Reconstruct Itinerary (hard): LC #332
   - [] Network Delay Time (medium): LC #743
   - [] Cracking the Safe (hard): LC #753
 
-- Bitwise XOR
+#### Bitwise XOR
   - [] Single Number (easy): LC #136
   - [] Two Single Numbers (medium): LC #260
   - [] Complement of Base 10 Number (medium): LC #476
   - [] Problem Statement (hard): LC #832
   
-- Greedy Algorithm/Approach
+#### Greedy Algorithm/Approach
   - [] Container With Most Water (medium): LC #11 	
   - [] Wildcard Matching (hard): LC #44
   - [] Jump Game II	(medium): LC #45
@@ -157,7 +159,7 @@ When tackling coding challenges, especially when implementing advanced patterns,
   - [] Gas Station (medium): LC #134
   - [] Longest Palindrome (easy): LC #409
 
-## Merge Patterns
+### Merge Patterns
 - Merge Intervals(2 dimensional array)
   - [] Merge Intervals (medium): LC #56
   - [] Insert Interval (medium): LC #57
@@ -175,7 +177,7 @@ When tackling coding challenges, especially when implementing advanced patterns,
 
 
 
-## Sort Patterns
+### Sort Patterns
 
 - Cyclic Sort(Associated with Arrays in range of numbers)
   - [] Cyclic Sort (easy)
@@ -209,7 +211,7 @@ When tackling coding challenges, especially when implementing advanced patterns,
  
 
 
-## Extra Problems
+### Extra Problems
   - [] Climbing Stairs(easy): LC #70
   - [] Edit Distance(hard): LC #72
   - [] Search a 2D Matrix(medium): LC #74
