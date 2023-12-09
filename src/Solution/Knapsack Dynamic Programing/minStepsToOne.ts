@@ -27,7 +27,7 @@ const minStepsToOneBrute = (n: number): number => {
   return res
 }
 
-export const minStepsToOneMemo = (n: number): number => {
+const minStepsToOneMemo = (n: number): number => {
   if (n <= 0 || !Number.isInteger(n)) {
     throw new Error("Input must be a positive integer")
   }
@@ -64,7 +64,7 @@ export const minStepsToOneMemo = (n: number): number => {
   return res
 }
 
-export const minStepsToOneTab = (n: number): number => {
+const minStepsToOneTab = (n: number): number => {
   if (n <= 0 || !Number.isInteger(n)) {
     throw new Error("Input must be a positive integer")
   }

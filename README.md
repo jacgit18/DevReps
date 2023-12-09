@@ -17,6 +17,7 @@ When tackling coding challenges, especially when implementing advanced patterns,
 
 ## Syllabus
 
+### Patterns
 #### Two Pointers(Typically Associated with Arrays & Strings, Linked List)
   - [] Pair with Target Sum (easy): LC #1
   - [] Triplet Sum to Zero (medium): LC #15
@@ -44,7 +45,7 @@ When tackling coding challenges, especially when implementing advanced patterns,
   - [] Max Consecutive Ones III (hard): LC #1004
 
 
-#### Subsets/Backtracking(2 dimensional array)
+#### Backtracking/Subset(2 dimensional array)
   - [] Balanced Parentheses (hard): LC #22
   - [] Permutations (medium): LC #46
   - [] Subsets (easy): LC #78
@@ -79,21 +80,14 @@ When tackling coding challenges, especially when implementing advanced patterns,
   - [] Middle of the LinkedList (easy): LC #876
 
 
-#### In Place Reversal of a LL
+#### In Place Reversal of a Linked List
   - [] Reverse every K-element Sub-list( Reverse Nodes in k-Group) (hard): LC #25
   - [] Rotate a LinkedList (medium): LC #61
   - [] Reverse a Sub-list (medium): LC #92
   - [] Reverse a LinkedList (easy): LC #206
 
 
-#### Doubly-Linked List(PERSONAl Review)
-  - [] LRU Cache (medium): LC #146
-  - [] Flatten a Multilevel Doubly Linked List (medium): LC #430
-  - [] All O`one Data Structure (Hard): LC #432
-  - [] LFU Cache (Hard): LC #460
-  - [] Design Browser History (medium): LC #1472
-
-#### Trees: BFS(Also Graph)
+#### BFS(Trees & Graph)
   - [] Same Tree(easy) LC #100
   - [] Symmetric Tree (easy): LC #101
   - [] Binary Tree Level Order Traversal (easy): LC #102
@@ -106,7 +100,7 @@ When tackling coding challenges, especially when implementing advanced patterns,
   - [] Right View of a Binary Tree (easy): LC #199
   - [] Level Averages in a Binary Tree (easy): LC #637
 
-#### Trees: DFS(Also Graph)
+#### DFS(Trees & Graph)
   - [] Binary Tree Path Sum (easy): LC #112
   - [] Path Sum II (medium): LC #113
   - [] Path with Maximum Sum (hard): LC #124
@@ -120,7 +114,7 @@ When tackling coding challenges, especially when implementing advanced patterns,
 #### Knapsack
 >[!note]
 > knapsack utilizes Dynamic problem also known as Tabulation(bottom-up) or Memoization(top-down)
-  - [] Longest Palindromic Substring(medium): LC #5 
+  - [] Longest Palindromic Substring(medium): LC #5
       (uses bottom up or top down)
   - [] House Robber(medium): LC #198
       (uses bottom up or top down)
@@ -129,6 +123,31 @@ When tackling coding challenges, especially when implementing advanced patterns,
   - [] Target Sum (hard): LC #494
   - [] Coin Change 2 (medium): LC #518
   - [] Minimum Cost For Tickets (medium): LC #983
+
+#### Greedy Algorithm/Approach
+  - [] Container With Most Water (medium): LC #11
+  - [] Wildcard Matching (hard): LC #44
+  - [] Jump Game II	(medium): LC #45
+  - [] Jump Game (medium): LC #55
+  - [] Best Time to Buy and Sell Stock II (medium): LC #122
+  - [] Gas Station (medium): LC #134
+  - [] Longest Palindrome (easy): LC #409
+
+#### Bitwise XOR
+  - [] Single Number (easy): LC #136
+  - [] Two Single Numbers (medium): LC #260
+  - [] Complement of Base 10 Number (medium): LC #476
+  - [] Problem Statement (hard): LC #832
+
+
+### Advanced Data Structures
+#### Doubly-Linked List(PERSONAl Review)
+  - [] LRU Cache (medium): LC #146
+  - [] Flatten a Multilevel Doubly Linked List (medium): LC #430
+  - [] All O`one Data Structure (Hard): LC #432
+  - [] LFU Cache (Hard): LC #460
+  - [] Design Browser History (medium): LC #1472
+
 
 #### Heaps
   - [] Find the Median of a Number Stream (medium): LC #295
@@ -142,20 +161,7 @@ When tackling coding challenges, especially when implementing advanced patterns,
   - [] Network Delay Time (medium): LC #743
   - [] Cracking the Safe (hard): LC #753
 
-#### Bitwise XOR
-  - [] Single Number (easy): LC #136
-  - [] Two Single Numbers (medium): LC #260
-  - [] Complement of Base 10 Number (medium): LC #476
-  - [] Problem Statement (hard): LC #832
-  
-#### Greedy Algorithm/Approach
-  - [] Container With Most Water (medium): LC #11 	
-  - [] Wildcard Matching (hard): LC #44
-  - [] Jump Game II	(medium): LC #45
-  - [] Jump Game (medium): LC #55
-  - [] Best Time to Buy and Sell Stock II (medium): LC #122
-  - [] Gas Station (medium): LC #134
-  - [] Longest Palindrome (easy): LC #409
+
 
 ### Merge Patterns
 #### Merge Intervals(2 dimensional array)
@@ -206,16 +212,29 @@ When tackling coding challenges, especially when implementing advanced patterns,
   - [] Frequency Stack (hard): LC #895
   - [] 'K' Closest Points to the Origin (easy): LC #973
   - [] Connect Ropes (easy): LC #1167
+  
+  - [ ] Whiteboard Heap Removal
+    - Easiest Implementation Using Arrays
+    - Insertion and Bubbling Up Operations
+    - Removing Elements (Bubble Down)
  
 
 
 ### Extra Problems
+  - [] Add Two Numbers (medium): LC #2
+  - [] Longest Common Prefix (easy): LC #14
+  - [] Valid Parentheses (easy): LC #20
+  - [] Group Anagrams (medium): LC #49
   - [] Climbing Stairs(easy): LC #70
   - [] Edit Distance(hard): LC #72
   - [] Search a 2D Matrix(medium): LC #74
   - [] Distinct Subsequences(hard): LC #115
+  - [] Valid Anagram (easy): LC #242
   - [] Longest Increasing Subsequence(medium): LC #300
+  - [] First Unique Character in a String (easy): LC #387
+  - [] Validate IP Address (medium): LC #468
   - [] Longest Palindromic Subsequence(medium): LC #516
+  - [] Distribute Candies (easy): LC #575
   - [] Palindromic Substrings(medium): LC #647
   - [] Super Egg Drop(hard): LC #887
   - [] Distribute Candies to People(easy): LC #1103

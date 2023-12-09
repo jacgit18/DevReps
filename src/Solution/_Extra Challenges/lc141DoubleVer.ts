@@ -1,4 +1,4 @@
-import { DoublyLinkedListNode } from "../util/DoubleLinkedListMaker"
+import { DoublyLinkedListNode } from "../../util/DoubleLinkedListMaker"
 
 export const isDoublyCyclic = (head: DoublyLinkedListNode | null): boolean => {
   if (!head || (!head.next && !head.prev)) {

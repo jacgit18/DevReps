@@ -7,6 +7,7 @@ import { distributeCandiesTwo } from "./lc1103"
 import { longestCommonSubsequence } from "./lc1143"
 import { numDistinct } from "./lc115"
 import { longestCommonPrefix } from "./lc14"
+import { isDoublyCyclic } from "./lc141DoubleVer"
 import { maxAlternatingSum } from "./lc1911"
 import { rob } from "./lc198"
 import { addTwoNumbers } from "./lc2"
@@ -27,6 +28,7 @@ import { superEggDrop } from "./lc887"
 import { nameMatch } from "./nameMatch"
 
 export const SolutionExtra = {
+  altLC141: isDoublyCyclic,
   challengeOne: solution,
   challengeTwo: decompressString,
   challengeThree: SUPPLIER_PRODUCT,

@@ -1,7 +1,7 @@
 let calculations = 0
 
 // Top-down with closure
-function fibonacciMaster(): (n: number) => number {
+const fibonacciMaster = (): (n: number) => number =>{
   const cache: { [key: number]: number } = {}
 
   return function fib(n: number): number {
@@ -20,7 +20,7 @@ function fibonacciMaster(): (n: number) => number {
 }
 
 // Bottom-up Iterative
-function fibonacciMaster2(n: number): number {
+const fibonacciMaster2 = (n: number): number =>{
   const answer: number[] = [0, 1]
   for (let i = 2; i <= n; i++) {
     answer.push(answer[i - 2] + answer[i - 1])
@@ -29,7 +29,7 @@ function fibonacciMaster2(n: number): number {
 }
 
 // Exponential time
-function fibonacciRecursive(n: number): number {
+const fibonacciRecursive = (n: number): number =>{
   if (n < 2) {
     return n
   }
@@ -37,7 +37,7 @@ function fibonacciRecursive(n: number): number {
 }
 
 // Bottom-up dynamic programming (forward)
-function fibBottomUpDPForward(n: number): number {
+const fibBottomUpDPForward = (n: number): number =>{
   if (n === 0) {
     return 0
   }
@@ -57,7 +57,7 @@ function fibBottomUpDPForward(n: number): number {
 }
 
 // Bottom-up dynamic programming (backward)
-function fibBottomUpDPBackward(n: number): number {
+const fibBottomUpDPBackward = (n: number): number =>{
   if (n === 0) {
     return 0
   }
