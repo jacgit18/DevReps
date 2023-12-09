@@ -60,21 +60,8 @@
 
 // [1,2,3,4,5,6,null,null,null,7,8,9,10,null,null,11,12]
 
+import { Node } from "../../util/DoubleLinkedListMaker";
 
-
-class Node {
-    val: number;
-    prev: Node | null;
-    next: Node | null;
-    child: Node | null;
-
-    constructor(val: number, prev?: Node | null, next?: Node | null, child?: Node | null) {
-        this.val = val;
-        this.prev = prev || null;
-        this.next = next || null;
-        this.child = child || null;
-    }
-}
 
     
     export const flatten = (head: Node | null): Node | null =>{

@@ -32,6 +32,23 @@ export function createDoublyLinkedListFromArray(arr: any[]): DoublyLinkedListNod
   return head
 }
 
+export class Node {
+  val: number;
+  prev: Node | null;
+  next: Node | null;
+  child: Node | null;
+
+  constructor(val: number, prev?: Node | null, next?: Node | null, child?: Node | null) {
+      this.val = val;
+      this.prev = prev || null;
+      this.next = next || null;
+      this.child = child || null;
+  }
+}
+
+
+
+
 // Example usage:
 // const arrayToDoublyLinkedList = createDoublyLinkedListFromArray([1, 2, 3, 4, 5])
 // console.log(arrayToDoublyLinkedList)

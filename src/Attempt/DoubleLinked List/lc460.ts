@@ -51,6 +51,11 @@
 // At most 2 * 105 calls will be made to get and put.
 
 
+class Node {
+    constructor(public freq: number, public keys: Set<number>, public prev: Node | null = null, public next: Node | null = null) {}
+}
+
+
 export class LFUCache {
     constructor(capacity: number) {
         

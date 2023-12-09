@@ -60,22 +60,22 @@
 
 // [1,2,3,4,5,6,null,null,null,7,8,9,10,null,null,11,12]
 
-import { DoublyLinkedListNode } from "../../util/DoubleLinkedListMaker";
+import { Node } from "../../util/DoubleLinkedListMaker";
 
 
-const flattenBruteForce = (head: DoublyLinkedListNode | null): DoublyLinkedListNode | null =>{
+const flattenBruteForce = (head: Node | null): Node | null =>{
 return null
 };
 
-const flattenNaiveImp = (head: DoublyLinkedListNode | null): DoublyLinkedListNode | null =>{
+const flattenNaiveImp = (head: Node | null): Node | null =>{
     return null
     };
 
-const flattenNaiveDec = (head: DoublyLinkedListNode | null): DoublyLinkedListNode | null =>{
+const flattenNaiveDec = (head: Node | null): Node | null =>{
     return null
     };
 
-const flattenOptimal = (head: DoublyLinkedListNode | null): DoublyLinkedListNode | null =>{
+const flattenOptimal = (head: Node | null): Node | null =>{
     return null
     };
 

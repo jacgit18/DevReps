@@ -37,6 +37,21 @@
 // 0 <= value <= 105
 // At most 2 * 105 calls will be made to get and put.
 
+class ListNode {
+    key: number;
+    value: number;
+    prev: ListNode | null;
+    next: ListNode | null;
+
+    constructor(key: number, value: number) {
+        this.key = key;
+        this.value = value;
+        this.prev = null;
+        this.next = null;
+    }
+}
+
+
 
 export class LRUCache {
     constructor(capacity: number) {

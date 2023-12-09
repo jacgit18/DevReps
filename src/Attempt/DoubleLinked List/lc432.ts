@@ -38,6 +38,21 @@
 // At most 5 * 104 calls will be made to inc, dec, getMaxKey, and getMinKey.
 
 
+class Node {
+    count: number;
+    keys: Set<string>;
+    prev: Node | null;
+    next: Node | null;
+
+    constructor(count: number) {
+        this.count = count;
+        this.keys = new Set();
+        this.prev = null;
+        this.next = null;
+    }
+}
+
+
 export class AllOne {
     constructor() {
         
