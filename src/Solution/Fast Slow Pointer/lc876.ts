@@ -27,5 +27,19 @@
 import { LinkedListNode } from "../../util/LinkedListMaker";
 
 export const middleNode =(head: LinkedListNode | null): LinkedListNode | null =>{
+        if (!head) {
+            return null; // Empty list
+        }
     
-};
+        let slow: LinkedListNode | null = head;
+        let fast: LinkedListNode | null = head;
+    
+        // Move the fast pointer two steps at a time, and the slow pointer one step at a time
+        while (fast && fast.next) {
+            slow = slow!.next;
+            fast = fast.next.next;
+        }
+    
+        return slow; // Slow pointer is now at the middle node
+    };
+      

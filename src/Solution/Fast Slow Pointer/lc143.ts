@@ -26,9 +26,48 @@
 // The number of nodes in the list is in the range [1, 5 * 104].
 // 1 <= Node.val <= 1000
 
-// import { LinkedListNode } from "../../util/LinkedListMaker";
+import { LinkedListNode } from "../../util/LinkedListMaker";
 
 
 export const reorderList = (head: LinkedListNode | null): void =>{
-    
+    if (!head || !head.next) {
+        return;
+    }
+
+    // Step 1: Find the middle of the linked list
+    let slow: LinkedListNode | null = head;
+    let fast: LinkedListNode | null = head;
+
+    while (fast && fast.next) {
+        slow = slow!.next;
+        fast = fast.next.next;
+    }
+
+    // Step 2: Reverse the second half of the linked list
+    let prev: LinkedListNode | null = null;
+    let current: LinkedListNode | null = slow;
+
+    while (current) {
+        const nextNode: LinkedListNode | null = current.next;
+        current.next = prev;
+        prev = current;
+        current = nextNode;
+    }
+
+    // Step 3: Merge the first half and the reversed second half
+    let firstHalf: LinkedListNode | null = head;
+    let secondHalf: LinkedListNode | null = prev;
+
+    while (secondHalf && secondHalf.next) {
+        const temp1: LinkedListNode | null = firstHalf!.next;
+        const temp2: LinkedListNode | null = secondHalf.next;
+
+        if (temp1 && temp2) {
+            firstHalf!.next = secondHalf;
+            secondHalf.next = temp1;
+
+            firstHalf = temp1;
+            secondHalf = temp2;
+        }
+    }
 };

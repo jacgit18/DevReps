@@ -33,5 +33,30 @@
 // 1 <= k <= 104
 
 export const kSmallestPairs = (nums1: number[], nums2: number[], k: number): number[][] =>{
+        const result: number[][] = [];
     
-};
+        if (!nums1.length || !nums2.length || k <= 0) {
+            return result;
+        }
+    
+        // Priority queue to store pairs based on their sum
+        const minHeap: [number, number, number][] = [];
+    
+        for (let i = 0; i < Math.min(nums1.length, k); i++) {
+            minHeap.push([nums1[i] + nums2[0], i, 0]);
+        }
+    
+        while (k > 0 && minHeap.length > 0) {
+            const [sum, i, j] = minHeap.shift()!;
+            result.push([nums1[i], nums2[j]]);
+    
+            if (j + 1 < nums2.length) {
+                minHeap.push([nums1[i] + nums2[j + 1], i, j + 1]);
+            }
+    
+            k--;
+        }
+    
+        return result;
+    };
+    

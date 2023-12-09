@@ -38,4 +38,36 @@
 import { LinkedListNode } from "../../util/LinkedListMaker";
 
 export const detectCycle = (head: LinkedListNode | null): LinkedListNode | null =>{
-};
+        if (!head || !head.next) {
+            return null; // No cycle if there are fewer than two nodes
+        }
+    
+        let slow: LinkedListNode | null = head; // Initialize as null
+    
+        let fast: LinkedListNode | null = head;
+    
+        // Detect cycle
+        while (fast && fast.next) {
+            slow = slow!.next; // Non-null assertion since we've already checked for null
+            fast = fast.next.next;
+    
+            if (slow === fast) {
+                // Cycle detected
+                break;
+            }
+        }
+    
+        if (!fast || !fast.next) {
+            return null; // No cycle if fast or fast.next is null
+        }
+    
+        // Reset one pointer to the head and move at the same speed until they meet again
+        slow = head;
+        while (slow !== fast) {
+            slow = slow!.next; // Non-null assertion since we've already checked for null
+            fast = fast!.next; // Non-null assertion since we've already checked for null
+        }
+    
+        return slow; // Meeting point is the start of the cycle
+    };
+    

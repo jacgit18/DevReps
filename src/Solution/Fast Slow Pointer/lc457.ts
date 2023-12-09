@@ -47,4 +47,43 @@
 // nums[i] != 0
 
 export const circularArrayLoop = (nums: number[]): boolean =>{
-};
+        const n = nums.length;
+    
+        const getIndex = (i: number): number => {
+            return (i + nums[i] + n) % n;
+        };
+    
+        for (let i = 0; i < n; i++) {
+            if (nums[i] === 0) {
+                continue; // Skip already processed elements
+            }
+    
+            let slow = i;
+            let fast = i;
+    
+            // Check the direction of the cycle
+            while (nums[slow] * nums[getIndex(fast)] > 0 &&
+                   nums[slow] * nums[getIndex(getIndex(fast))] > 0) {
+                slow = getIndex(slow);
+                fast = getIndex(getIndex(fast));
+    
+                if (slow === fast) {
+                    if (slow === getIndex(slow)) {
+                        break; // Cycle has only one element, not a valid cycle
+                    }
+                    return true; // Valid cycle found
+                }
+            }
+    
+            // Mark the current cycle as invalid
+            let temp = i;
+            while (nums[temp] * nums[getIndex(temp)] > 0) {
+                const nextTemp = getIndex(temp);
+                nums[temp] = 0;
+                temp = nextTemp;
+            }
+        }
+    
+        return false; // No valid cycle found
+    };
+    
