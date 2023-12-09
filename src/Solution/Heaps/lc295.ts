@@ -39,17 +39,89 @@
 // If 99% of all integer numbers from the stream are in the range [0, 100], how would you optimize your solution?
 
 export class MedianFinder {
-    constructor() {
-        
-    }
-
+    private maxHeap: number[] = []; // Max heap for the left half
+    private minHeap: number[] = []; // Min heap for the right half
+  
+    constructor() {}
+  
     addNum(num: number): void {
-        
+      if (this.maxHeap.length === 0 || num <= -this.maxHeap[0]) {
+        // Add to the max heap (left half)
+        this.maxHeap.push(-num);
+        this.heapifyMax();
+      } else {
+        // Add to the min heap (right half)
+        this.minHeap.push(num);
+        this.heapifyMin();
+      }
+  
+      // Balance the heaps
+      this.balanceHeaps();
     }
-
+  
     findMedian(): number {
+      if (this.maxHeap.length > this.minHeap.length) {
+        return -this.maxHeap[0];
+      } else {
+        return (-this.maxHeap[0] + this.minHeap[0]) / 2;
+      }
     }
-}
+  
+    private heapifyMax(): void {
+      let i = this.maxHeap.length - 1;
+      while (i > 0) {
+        const parent = Math.floor((i - 1) / 2);
+        if (this.maxHeap[i] > this.maxHeap[parent]) {
+          [this.maxHeap[i], this.maxHeap[parent]] = [
+            this.maxHeap[parent],
+            this.maxHeap[i],
+          ];
+          i = parent;
+        } else {
+          break;
+        }
+      }
+    }
+  
+    private heapifyMin(): void {
+      let i = this.minHeap.length - 1;
+      while (i > 0) {
+        const parent = Math.floor((i - 1) / 2);
+        if (this.minHeap[i] < this.minHeap[parent]) {
+          [this.minHeap[i], this.minHeap[parent]] = [
+            this.minHeap[parent],
+            this.minHeap[i],
+          ];
+          i = parent;
+        } else {
+          break;
+        }
+      }
+    }
+  
+    private balanceHeaps(): void {
+      if (this.maxHeap.length > this.minHeap.length + 1) {
+        this.minHeap.push(-this.maxHeap[0]);
+        this.heapifyMin();
+        this.maxHeap[0] = -this.maxHeap.pop()!;
+        this.heapifyMax();
+      } else if (this.minHeap.length > this.maxHeap.length) {
+        this.maxHeap.push(-this.minHeap[0]);
+        this.heapifyMax();
+        this.minHeap[0] = this.minHeap.pop()!;
+        this.heapifyMin();
+      }
+    }
+  }
+  
+  // Example usage:
+//   const obj = new MedianFinder();
+//   obj.addNum(1);
+//   obj.addNum(2);
+//   console.log(obj.findMedian()); // Output: 1.5
+//   obj.addNum(3);
+//   console.log(obj.findMedian()); // Output: 2.0
+  
 
 /**
  * Your MedianFinder object will be instantiated and called as such:

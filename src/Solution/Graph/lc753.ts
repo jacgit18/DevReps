@@ -39,4 +39,31 @@
 
 
 export const crackSafe = (n: number, k: number): string =>{
-};
+        const totalDigits = Math.pow(k, n);
+      
+        // Initialize the result with a string of n zeroes
+        let result = '0'.repeat(n);
+      
+        const seen = new Set<string>();
+      
+        for (let i = 0; i < totalDigits; i++) {
+          const current = result.slice(-n + 1);
+      
+          for (let j = k - 1; j >= 0; j--) {
+            const next = current + j.toString();
+      
+            if (!seen.has(next)) {
+              seen.add(next);
+              result += j.toString();
+              break;
+            }
+          }
+        }
+      
+        return result;
+      };
+      
+      // Example usage:
+    //   console.log(crackSafe(1, 2)); // Output: "10"
+    //   console.log(crackSafe(2, 2)); // Output: "01100"
+      

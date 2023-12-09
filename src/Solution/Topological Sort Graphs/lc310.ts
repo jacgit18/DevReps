@@ -31,5 +31,58 @@
 // All the pairs (ai, bi) are distinct.
 // The given input is guaranteed to be a tree and there will be no repeated edges.
 
-export const findMinHeightTrees = (n: number, edges: number[][]): number[] =>{
-};
+export const findMinHeightTrees = (n: number, edges: number[][]): number[] => {
+    if (n === 1) {
+      return [0];
+    }
+  
+    const adjList: number[][] = Array.from({ length: n }, () => []);
+    const degrees: number[] = new Array(n).fill(0);
+  
+    // Build the adjacency list and calculate degrees
+    for (const [a, b] of edges) {
+      adjList[a].push(b);
+      adjList[b].push(a);
+      degrees[a]++;
+      degrees[b]++;
+    }
+  
+    const leaves: number[] = [];
+  
+    // Find initial leaves
+    for (let i = 0; i < n; i++) {
+      if (degrees[i] === 1) {
+        leaves.push(i);
+      }
+    }
+  
+    while (n > 2) {
+      const newLeaves: number[] = [];
+  
+      for (const leaf of leaves) {
+        for (const neighbor of adjList[leaf]) {
+          degrees[neighbor]--;
+          if (degrees[neighbor] === 1) {
+            newLeaves.push(neighbor);
+          }
+        }
+        degrees[leaf] = 0; // Mark the current leaf as removed
+        n--;
+      }
+  
+      leaves.length = 0;
+      leaves.push(...newLeaves);
+    }
+  
+    return leaves;
+  };
+  
+  // Example usage:
+//   const n1 = 4;
+//   const edges1 = [[1, 0], [1, 2], [1, 3]];
+//   console.log(findMinHeightTrees(n1, edges1)); // Output: [1]
+  
+//   const n2 = 6;
+//   const edges2 = [[3, 0], [3, 1], [3, 2], [3, 4], [5, 4]];
+//   console.log(findMinHeightTrees(n2, edges2)); // Output: [3, 4]
+  

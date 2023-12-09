@@ -41,5 +41,28 @@
 // 1 <= costs[i] <= 1000
 
 
-export const mincostTickets = (days: number[], costs: number[]): number =>{
-};
+
+
+export const mincostTickets = (days: number[], costs: number[]): number => {
+    const maxDay = days[days.length - 1];
+    const dp: number[] = new Array(maxDay + 1).fill(0);
+  
+    for (let i = 1; i <= maxDay; i++) {
+      if (!days.includes(i)) {
+        dp[i] = dp[i - 1]; // If not traveling on day i, the cost is the same as the previous day
+      } else {
+        dp[i] = Math.min(
+          dp[Math.max(0, i - 1)] + costs[0], // 1-day pass
+          dp[Math.max(0, i - 7)] + costs[1], // 7-day pass
+          dp[Math.max(0, i - 30)] + costs[2] // 30-day pass
+        );
+      }
+    }
+  
+    return dp[maxDay];
+  };
+  
+  // Example usage:
+//   console.log(mincostTickets([1, 4, 6, 7, 8, 20], [2, 7, 15])); // Output: 11
+//   console.log(mincostTickets([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 30, 31], [2, 7, 15])); // Output: 17
+  

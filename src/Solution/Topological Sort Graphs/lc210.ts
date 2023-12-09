@@ -34,6 +34,62 @@
 // All the pairs [ai, bi] are distinct.
 
 
-export const  findOrder = (numCourses: number, prerequisites: number[][]): number[] =>{
-
-};
+export const findOrder = (numCourses: number, prerequisites: number[][]): number[] => {
+    const inDegree: number[] = new Array(numCourses).fill(0);
+    const graph: { [key: number]: number[] } = {};
+  
+    // Build the graph and calculate in-degrees
+    for (const [course, prereq] of prerequisites) {
+      if (!graph.hasOwnProperty(prereq)) {
+        graph[prereq] = [];
+      }
+      graph[prereq].push(course);
+      inDegree[course]++;
+    }
+  
+    // Initialize a queue with courses having in-degree zero
+    const queue: number[] = [];
+    for (let i = 0; i < numCourses; i++) {
+      if (inDegree[i] === 0) {
+        queue.push(i);
+      }
+    }
+  
+    const result: number[] = [];
+  
+    // Perform topological sort
+    while (queue.length > 0) {
+      const currentCourse = queue.shift()!;
+      result.push(currentCourse);
+  
+      if (graph[currentCourse]) {
+        for (const nextCourse of graph[currentCourse]) {
+          inDegree[nextCourse]--;
+          if (inDegree[nextCourse] === 0) {
+            queue.push(nextCourse);
+          }
+        }
+      }
+    }
+  
+    // Check if all courses can be finished (no cycles in the graph)
+    if (result.length === numCourses) {
+      return result;
+    } else {
+      return [];
+    }
+  };
+  
+  // Example usage:
+//   const numCourses1 = 2;
+//   const prerequisites1 = [[1, 0]];
+//   console.log(findOrder(numCourses1, prerequisites1)); // Output: [0, 1]
+  
+//   const numCourses2 = 4;
+//   const prerequisites2 = [[1, 0], [2, 0], [3, 1], [3, 2]];
+//   console.log(findOrder(numCourses2, prerequisites2)); // Output: [0, 1, 2, 3]
+  
+//   const numCourses3 = 1;
+//   const prerequisites3 = [];
+//   console.log(findOrder(numCourses3, prerequisites3)); // Output: [0]
+  

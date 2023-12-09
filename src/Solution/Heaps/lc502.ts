@@ -37,5 +37,133 @@
 // 0 <= capital[i] <= 109
 
 
-export const findMaximizedCapital = (k: number, w: number, profits: number[], capital: number[]): number =>{
-};
+class MaxHeap {
+    private heap: number[] = [];
+  
+    constructor() {}
+  
+    size(): number {
+      return this.heap.length;
+    }
+  
+    push(value: number): void {
+      this.heap.push(value);
+      this.heapifyUp();
+    }
+  
+    pop(): number | undefined {
+      if (this.heap.length === 0) {
+        return undefined;
+      }
+  
+      const poppedValue = this.heap[0];
+      const lastValue = this.heap.pop()!;
+  
+      if (this.heap.length > 0) {
+        this.heap[0] = lastValue;
+        this.heapifyDown();
+      }
+  
+      return poppedValue;
+    }
+  
+    private heapifyUp(): void {
+      let currentIndex = this.heap.length - 1;
+  
+      while (currentIndex > 0) {
+        const parentIndex = Math.floor((currentIndex - 1) / 2);
+  
+        if (this.heap[currentIndex] > this.heap[parentIndex]) {
+          [this.heap[currentIndex], this.heap[parentIndex]] = [
+            this.heap[parentIndex],
+            this.heap[currentIndex],
+          ];
+          currentIndex = parentIndex;
+        } else {
+          break;
+        }
+      }
+    }
+  
+    private heapifyDown(): void {
+      let currentIndex = 0;
+  
+      while (true) {
+        const leftChildIndex = 2 * currentIndex + 1;
+        const rightChildIndex = 2 * currentIndex + 2;
+        let largestIndex = currentIndex;
+  
+        if (
+          leftChildIndex < this.heap.length &&
+          this.heap[leftChildIndex] > this.heap[largestIndex]
+        ) {
+          largestIndex = leftChildIndex;
+        }
+  
+        if (
+          rightChildIndex < this.heap.length &&
+          this.heap[rightChildIndex] > this.heap[largestIndex]
+        ) {
+          largestIndex = rightChildIndex;
+        }
+  
+        if (largestIndex !== currentIndex) {
+          [this.heap[currentIndex], this.heap[largestIndex]] = [
+            this.heap[largestIndex],
+            this.heap[currentIndex],
+          ];
+          currentIndex = largestIndex;
+        } else {
+          break;
+        }
+      }
+    }
+  }
+  
+  export const findMaximizedCapital = (
+    k: number,
+    w: number,
+    profits: number[],
+    capital: number[]
+  ): number => {
+    const projects: [number, number][] = [];
+    const maxProfitHeap = new MaxHeap();
+    const minCapitalHeap = new MaxHeap();
+  
+    for (let i = 0; i < profits.length; i++) {
+      projects.push([capital[i], profits[i]]);
+    }
+  
+    projects.sort((a, b) => a[0] - b[0]);
+  
+    let availableCapital = w;
+  
+    for (let i = 0; i < k; i++) {
+      while (projects.length > 0 && projects[0][0] <= availableCapital) {
+        const [capital, profit] = projects.shift()!;
+        maxProfitHeap.push(profit);
+      }
+  
+      if (maxProfitHeap.size() === 0) {
+        break;
+      }
+  
+      availableCapital += maxProfitHeap.pop()!;
+    }
+  
+    return availableCapital;
+  };
+  
+  // Example usage:
+  const k1 = 2,
+    w1 = 0,
+    profits1 = [1, 2, 3],
+    capital1 = [0, 1, 1];
+  console.log(findMaximizedCapital(k1, w1, profits1, capital1)); // Output: 4
+  
+  const k2 = 3,
+    w2 = 0,
+    profits2 = [1, 2, 3],
+    capital2 = [0, 1, 2];
+  console.log(findMaximizedCapital(k2, w2, profits2, capital2)); // Output: 6
+  
