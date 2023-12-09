@@ -158,7 +158,7 @@ When tackling coding challenges, especially when implementing advanced patterns,
   - [] Longest Palindrome (easy): LC #409
 
 ### Merge Patterns
-- Merge Intervals(2 dimensional array)
+#### Merge Intervals(2 dimensional array)
   - [] Merge Intervals (medium): LC #56
   - [] Insert Interval (medium): LC #57
   - [] Conflicting Appointments (medium): LC #252
@@ -167,7 +167,7 @@ When tackling coding challenges, especially when implementing advanced patterns,
   - [] Employee Free Time (hard): LC #759
   - [] Intervals Intersection (medium): LC #986
 
-- K-way Merge(Priority queue, and merging sorted arrays)
+#### K-way Merge(Priority queue, and merging sorted arrays)
   - [] Merge K Sorted Lists (Hard): LC #23
   - [] Problem K Pairs with Largest Sums (Hard): LC #373
   - [] Kth Smallest Number in a Sorted Matrix (Hard): LC #378
@@ -177,7 +177,7 @@ When tackling coding challenges, especially when implementing advanced patterns,
 
 ### Sort Patterns
 
-- Cyclic Sort(Associated with Arrays in range of numbers)
+#### Cyclic Sort(Associated with Arrays in range of numbers)
   - [] Cyclic Sort (easy)
   - [] Find the Smallest Missing Positive Number (medium): LC #41
   - [] Find the Missing Number (easy): LC #268
@@ -188,13 +188,13 @@ When tackling coding challenges, especially when implementing advanced patterns,
   - [] Find the First K Missing Positive Numbers (hard): LC proably #1539
 
 
-- Topological Sort (Graphs)
+#### Topological Sort (Graphs)
   - [] Tasks Scheduling (medium): LC #207
   - [] Tasks Scheduling Order (medium): LC #210
   - [] Minimum Height Trees (hard): LC #310
 
 
-- Top K Elements(Priority queue and heaps)
+#### Top K Elements(Priority queue and heaps)
   - [] Kth Smallest Number (easy): LC #215
   - [] Top 'K' Frequent Numbers (medium): LC #347
   - [] Rearrange String K Distance Apart (hard): LC #358
