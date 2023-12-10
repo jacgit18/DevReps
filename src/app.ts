@@ -77,7 +77,14 @@ const main = () => {
   // customLog('info', 'Info:', 'Some Information', 'Details', 'More Context');
   // customLog('error', 'Error:', 'Something went wrong', 'Details', 'Error Context');
 
-  FastLogger(AllSolution)
+  // FastLogger(AllSolution)
+  // console.log(AllSolution)
+  // console.log(AllAttempts)
+
+  // console.log(AllSolution.SolutionTwoPointer.lc1.pair_with_target_sum_Two_Pointer([6,8,9,16],17))
+  // console.log(AllAttempts.AttemptTwoPointer.lc1.pair_with_target_sum_NaiveDec([6,8,9],8))
+
+
 }
 
 main()

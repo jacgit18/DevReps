@@ -15,6 +15,21 @@ const runTestCases = () => {
   ];
 
 
+  const testCasesTofix: TestCase[] = [
+    {
+      params: [3, 2, 1, 5, 6, 4],
+      paramsTwo: 2,
+      expected: 5,
+    },
+    {
+      params: [3, 2, 3, 1, 2, 4, 5, 5, 6],
+      paramsTwo: 4,
+      expected: 4,
+    },
+    // Add more test cases here...
+  ];
+
+
   const testCases: TestCase[] = [
     {
       params: [[3, 2, 1, 5, 6, 4], 2],

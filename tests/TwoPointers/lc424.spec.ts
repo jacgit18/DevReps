@@ -18,7 +18,13 @@ const runTestCases = () => {
     { params: ["AABA", 0], expected: 2 },
   ];
 
-  generateTestCases(AttemptTwoPointer.lc424.characterReplacementNaiveImp, testCasePlaceholder, 'Attempt');
+
+  generateTestCases(AttemptTwoPointer.lc424.characterReplacementBruteForce, testCasePlaceholder,' BruteForce Code Attempt ');
+  // generateTestCases(AttemptTwoPointer.lc424.characterReplacementNaiveDec, testCasePlaceholder,' Naive Declaritive Code Attempt ');
+  generateTestCases(AttemptTwoPointer.lc424.characterReplacementNaiveImp, testCasePlaceholder,' Naive Imperative Code Attempt ');
+  // generateTestCases(AttemptTwoPointer.lc424.characterReplacementOptimal, testCasePlaceholder,' Optimal Code Attempt ');
+
+
   generateTestCases(SolutionTwoPointer.lc424, testCases, 'Solution');
 };
 

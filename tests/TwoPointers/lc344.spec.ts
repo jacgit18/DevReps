@@ -9,6 +9,10 @@ const runTestCases = () => {
     { params: [["h","e","l","l","o"]], expected: [" "] },
   ];
 
+  const testCasePerformance:  TestCase[]  = [
+    { params: [["h","e","l","l","o"]], expected: ["o","l","l","e","h"], performance: true },
+  ];
+
   const testCases:  TestCase[]  = [
     { params: [["h","e","l","l","o"]], expected: ["o","l","l","e","h"] },
     { params: [["H","a","n","n","a","h"]], expected: ["h","a","n","n","a","H"] },
@@ -21,7 +25,11 @@ const runTestCases = () => {
   ];
 
 
-    generateTestCases(AttemptTwoPointer.lc344.reverseStringNaiveImp, testCasePlaceholder,' Attempt ');
+    generateTestCases(AttemptTwoPointer.lc344.reverseStringBruteForce, testCasePlaceholder,' BruteForce Code Attempt ');
+    // generateTestCases(AttemptTwoPointer.lc344.reverseStringNaiveDec, testCasePlaceholder,' Naive Declaritive Code Attempt ');
+    generateTestCases(AttemptTwoPointer.lc344.reverseStringNaiveImp, testCasePlaceholder,' Naive Imperative Code Attempt ');
+    // generateTestCases(AttemptTwoPointer.lc344.reverseStringOptimal, testCasePlaceholder,' Optimal Code Attempt ');
+
     generateTestCases(SolutionTwoPointer.lc344.reverseStringTwoPointer, testCases,' Solution ',);
 
 

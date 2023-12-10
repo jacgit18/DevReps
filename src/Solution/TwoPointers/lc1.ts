@@ -44,7 +44,7 @@ const pair_with_target_sum_map = (nums: number[], target: number): number[] => {
 }
 
 // console.time("Pair time map")
-// console.log(pair_with_target_sum_map([1, 2, 3, 4, 6], 6))
+console.log(pair_with_target_sum_map([1, 2, 3, 4, 6], 6))
 // console.timeEnd("Pair time map")
 
 const pair_with_target_sum_Two_Pointer = (arr: number[], targetSum: number): number[] => {
