@@ -1,6 +1,6 @@
 import { generateTestCases, TestCase } from "../../lib/genTest";
-import { AttemptExtra } from "../../src/Attempt/_Extra Challenges";
-import { SolutionExtra } from "../../src/Solution/_Extra Challenges";
+import { AttemptRevLinkedList } from "../../src/Attempt/LinkedList Revesal";
+import { SolutionRevLinkedList } from "../../src/Solution/LinkedList Revesal";
 import { createLinkedListFromArray, ListNode } from "../../src/util/LinkedListMaker";
 
 
@@ -42,8 +42,8 @@ const runTestCases = () => {
 
   ];
 
-    generateTestCases(AttemptExtra.lc2.addTwoNumbersNaiveImp, testCasePlaceholder,' Attempt ');
-    generateTestCases(SolutionExtra.lc2, testCases,' Solution ',);
+    generateTestCases(AttemptRevLinkedList.lc2.addTwoNumbersNaiveImp, testCasePlaceholder,' Attempt ');
+    generateTestCases(SolutionRevLinkedList.lc2, testCases,' Solution ',);
 
 
   

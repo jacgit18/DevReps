@@ -83,6 +83,7 @@ When tackling coding challenges, especially when implementing advanced patterns,
 
 
 #### In Place Reversal of a Linked List
+  - [ ] Add Two Numbers (medium): LC #2
   - [ ] Reverse every K-element Sub-list( Reverse Nodes in k-Group) (hard): LC #25
   - [ ] Rotate a LinkedList (medium): LC #61
   - [ ] Reverse a Sub-list (medium): LC #92
@@ -223,7 +224,6 @@ When tackling coding challenges, especially when implementing advanced patterns,
 
 
 ### Extra Problems
-  - [ ] Add Two Numbers (medium): LC #2
   - [ ] Longest Common Prefix (easy): LC #14
   - [ ] Valid Parentheses (easy): LC #20
   - [ ] Group Anagrams (medium): LC #49

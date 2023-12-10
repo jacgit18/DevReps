@@ -9,7 +9,6 @@ import { numDistinct } from "./lc115"
 import { longestCommonPrefix } from "./lc14"
 import { maxAlternatingSum } from "./lc1911"
 import { rob } from "./lc198"
-import { addTwoNumbers } from "./lc2"
 import { isValid } from "./lc20"
 import { isAnagram } from "./lc242"
 import { firstUniqChar } from "./lc387"
@@ -32,7 +31,6 @@ export const AttemptExtra = {
   flat: flattenObject,
   island: getNumberOfIslands,
   matchName: nameMatch,
-  lc2: addTwoNumbers,
   lc14: longestCommonPrefix,
   lc20: isValid,
   lc49: groupAnagrams,

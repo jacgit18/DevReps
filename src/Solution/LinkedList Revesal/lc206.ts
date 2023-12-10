@@ -22,7 +22,7 @@
 
 import { ListNode, createLinkedListFromArray } from "../../../src/util/LinkedListMaker"
 
- const reverseIter = (head: ListNode | null): ListNode | null => {
+ const reverseListIter = (head: ListNode | null): ListNode | null => {
   if (head == null || head.value < 0) return null
   let current: ListNode | null = head
   let previous: ListNode | null = null
@@ -37,7 +37,7 @@ import { ListNode, createLinkedListFromArray } from "../../../src/util/LinkedLis
   return previous
 }
 
-const reverseREc = function (head: ListNode | null): ListNode | null {
+const reverseListRec = (head: ListNode | null): ListNode | null =>{
   if (!head) return null
 
   function reverse(currNode: ListNode, prev: ListNode | null): ListNode | null {
@@ -85,9 +85,9 @@ let linkedList = createLinkedListFromArray(array1)
 
 
 
-export const reverseLinkedList = {
-  reverseIter,
-  reverseREc,
+export const reverseList = {
+  reverseListIter,
+  reverseListRec,
   printFowardIter,
   printFowardRec,
   printBackwardRec,

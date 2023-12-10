@@ -52,7 +52,11 @@
 
 
 class Node {
-    constructor(public freq: number, public keys: Set<number>, public prev: Node | null = null, public next: Node | null = null) {}
+    constructor(
+        public freq: number, 
+        public keys: Set<number>, 
+        public prev: Node | null = null, 
+        public next: Node | null = null) {}
 }
 
 export class LFUCache {
