@@ -33,6 +33,24 @@ export const customLog = (
   })
 }
 
+export const FastLogger = (output: any = ''): void =>{
+//  fast: 2.348s quicker way to console log 
+  console.time('fast')
+  for (let i=0;i<=1000000;i++){
+      output+=`${i}\n`
+  }
+  console.log(output) // one long string
+  console.timeEnd('fast')
+
+  // slow: 10.575s
+  // console.time('slow')
+  // for (let i=0;i<=1000000;i++){
+  //   console.log(i)
+  // }
+  // console.timeEnd('slow')
+
+}
+
 // Usage examples:
 // customLog("log", "Before:", "Hello", "After", "Additional Context")
 // customLog('info', 'Info:', 'Some Information', 'Details', 'More Context');

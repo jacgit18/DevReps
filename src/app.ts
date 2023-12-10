@@ -82,27 +82,7 @@ const main = () => {
   // customLog('error', 'Error:', 'Something went wrong', 'Details', 'Error Context');
 
 
-  // fast: 2.348s quicker way to console log 
-  // console.time('fast')
-  // let output = ''
-  
-  // for (let i=0;i<=1000000;i++){
-  //     output+=`${i}\n`
-  // }
-  
-  // console.log(output) // one long string
-  // console.timeEnd('fast')
-
-
-  
-  // slow: 10.575s
-  // console.time('slow')
-  
-  // for (let i=0;i<=1000000;i++){
-  //   console.log(i)
-  // }
-  
-  // console.timeEnd('slow')
+  // FastLogger(" ")
 
 
   
