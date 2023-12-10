@@ -31,7 +31,7 @@ function max_heapify(array: number[], index: number, length: number): void {
   }
 }
 
-export const heap_sort = (array: number[]): number[] =>{
+export const heap_sort = (array: number[]): number[] => {
   const length: number = array.length
   for (let i: number = Math.floor(length / 2) - 1; i >= 0; i--) {
     max_heapify(array, i, length) // Build the max heap

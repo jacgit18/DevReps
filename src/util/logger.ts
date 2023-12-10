@@ -33,45 +33,38 @@ export const customLog = (
   })
 }
 
+export const FastLogger = (output: any = ""): void => {
+  console.time("fast")
 
+  if (typeof output === "object" && output !== null) {
+    // If output is an object, concatenate its property values
+    const values = Object.keys(output)
+    console.log(values)
+  } else {
+    console.log(output)
+  }
 
-export const FastLogger = (output: any = ''): void =>{
-    console.time('fast');
-  
-    if (typeof output === 'object' && output !== null) {
-      // If output is an object, concatenate its property values
-      const values = Object.keys(output);
-      console.log(values);
-    } else {
-      console.log(output);
-    }
-  
-    console.timeEnd('fast');
-  };
-  
-  
-  export const SlowLogger = (output: any = ''): void =>{
-    // slow: 10.575s
-    console.time('slow')
-    for (let i=0;i<=1000000;i++){
-      console.log(i)
-    }
-    console.timeEnd('slow')
-  };
-  
-  
-  export const FastLoggerSpeedTest = (output: any = ''): void =>{
-    //  fast: 2.348s quicker way to console log
-      console.time('fast')
-      for (let i=0;i<=1000000;i++){
-          output+=`${i}\n`
-      }
-      console.log(output) // one long string
-      console.timeEnd('fast')
-    
-    }
+  console.timeEnd("fast")
+}
 
+export const SlowLogger = (output: any = ""): void => {
+  // slow: 10.575s
+  console.time("slow")
+  for (let i = 0; i <= 1000000; i++) {
+    console.log(i)
+  }
+  console.timeEnd("slow")
+}
 
+export const FastLoggerSpeedTest = (output: any = ""): void => {
+  //  fast: 2.348s quicker way to console log
+  console.time("fast")
+  for (let i = 0; i <= 1000000; i++) {
+    output += `${i}\n`
+  }
+  console.log(output) // one long string
+  console.timeEnd("fast")
+}
 
 // Usage examples:
 // customLog("log", "Before:", "Hello", "After", "Additional Context")

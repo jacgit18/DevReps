@@ -4,10 +4,7 @@
 
 // You may return the answer in any order. The answer is guaranteed to be unique (except for the order that it is in).
 
- 
-
 // Example 1:
-
 
 // Input: points = [[1,3],[-2,2]], k = 1
 // Output: [[-2,2]]
@@ -22,36 +19,33 @@
 // Input: points = [[3,3],[5,-1],[-2,4]], k = 2
 // Output: [[3,3],[-2,4]]
 // Explanation: The answer [[-2,4],[3,3]] would also be accepted.
- 
 
 // Constraints:
 
 // 1 <= k <= points.length <= 104
 // -104 <= xi, yi <= 104
 
-
 // import { MaxHeap } from "../../util/MaxHeapMakers";
 
+const kClosestBruteForce = (points: number[][], k: number): number[][] => {
+  return [[0]]
+}
 
-const  kClosestBruteForce = (points: number[][], k: number): number[][] =>{
-    return [[0]]
-};
+const kClosestNaiveImp = (points: number[][], k: number): number[][] => {
+  return [[0]]
+}
 
-const  kClosestNaiveImp = (points: number[][], k: number): number[][] =>{
-    return [[0]]
-};
+const kClosestNaiveDec = (points: number[][], k: number): number[][] => {
+  return [[0]]
+}
 
-const  kClosestNaiveDec = (points: number[][], k: number): number[][] =>{
-    return [[0]]
-};
-
-const  kClosestOptimal = (points: number[][], k: number): number[][] =>{
-    return [[0]]
-};
+const kClosestOptimal = (points: number[][], k: number): number[][] => {
+  return [[0]]
+}
 
 export const kClosest = {
-    kClosestBruteForce,
-    kClosestNaiveImp,
-    kClosestNaiveDec,
-    kClosestOptimal
-    }
+  kClosestBruteForce,
+  kClosestNaiveImp,
+  kClosestNaiveDec,
+  kClosestOptimal,
+}

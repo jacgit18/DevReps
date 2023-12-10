@@ -104,11 +104,8 @@ const minStepsToOneTab = (n: number): number => {
 // console.log(minStepsToOneTab(5678))
 // console.timeEnd("Tabulation: ")
 
-
-
 export const minStepsToOne = {
   minStepsToOneBrute,
   minStepsToOneMemo,
-  minStepsToOneTab
+  minStepsToOneTab,
 }
-

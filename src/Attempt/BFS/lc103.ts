@@ -41,7 +41,7 @@ export const zigzagLevelOrder = {
   zigzagLevelOrderBruteForce,
   zigzagLevelOrderNaiveImp,
   zigzagLevelOrderNaiveDec,
-  zigzagLevelOrderOptimal
+  zigzagLevelOrderOptimal,
 }
 
 // Example usage:

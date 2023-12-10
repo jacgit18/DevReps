@@ -39,5 +39,5 @@ export const AllSolution = {
   SolutionMergeInterval,
   SolutionGraph,
   SolutionHeaps,
-  SolutionDoublyLinkedList
+  SolutionDoublyLinkedList,
 }

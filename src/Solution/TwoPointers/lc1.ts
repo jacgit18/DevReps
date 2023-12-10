@@ -25,7 +25,7 @@
 // -109 <= target <= 109
 // Only one valid answer exists.
 
- const pair_with_target_sum_map = (nums: number[], target: number): number[] => {
+const pair_with_target_sum_map = (nums: number[], target: number): number[] => {
   let map = new Map<number, number>()
 
   for (let i = 0; i < nums.length; i++) {
@@ -80,5 +80,4 @@ const pair_with_target_sum_Two_Pointer = (arr: number[], targetSum: number): num
 export const pair_with_target_sum = {
   pair_with_target_sum_Two_Pointer,
   pair_with_target_sum_map,
-
-};
+}

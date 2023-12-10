@@ -4,10 +4,7 @@
 
 // Return the head of the flattened list. The nodes in the list must have all of their child pointers set to null.
 
- 
-
 // Example 1:
-
 
 // Input: head = [1,2,3,4,5,6,null,null,null,7,8,9,10,null,null,11,12]
 // Output: [1,2,3,7,8,11,12,9,10,4,5,6]
@@ -15,7 +12,6 @@
 // After flattening the multilevel linked list it becomes:
 
 // Example 2:
-
 
 // Input: head = [1,2,null,3]
 // Output: [1,3,2]
@@ -27,13 +23,11 @@
 // Input: head = []
 // Output: []
 // Explanation: There could be empty list in the input.
- 
 
 // Constraints:
 
 // The number of Nodes will not exceed 1000.
 // 1 <= Node.val <= 105
- 
 
 // How the multilevel linked list is represented in test cases:
 
@@ -60,51 +54,53 @@
 
 // [1,2,3,4,5,6,null,null,null,7,8,9,10,null,null,11,12]
 
-import { Node } from "../../util/DoubleLinkedListMaker";
+import { Node } from "../../util/DoubleLinkedListMaker"
 
+export const flatten = (head: Node | null): Node | null => {
+  if (!head) {
+    return null
+  }
 
-    
-    export const flatten = (head: Node | null): Node | null =>{
-        if (!head) {
-            return null;
-        }
-    
-        let current: Node | null = head;
-    
-        while (current) {
-            if (current.child) {
-                const next = current.next;
-    
-                current.next = current.child;
-                current.child.prev = current;
-                current.child = null;
-    
-                let lastChild: Node | null = current.next;
-                while (lastChild.next) {
-                    lastChild = lastChild.next;
-                }
-    
-                lastChild.next = next;
-    
-                if (next) {
-                    next.prev = lastChild;
-                }
-            }
-    
-            current = current.next;
-        }
-    
-        return head;
+  let current: Node | null = head
+
+  while (current) {
+    if (current.child) {
+      const next = current.next
+
+      current.next = current.child
+      current.child.prev = current
+      current.child = null
+
+      let lastChild: Node | null = current.next
+      while (lastChild.next) {
+        lastChild = lastChild.next
+      }
+
+      lastChild.next = next
+
+      if (next) {
+        next.prev = lastChild
+      }
     }
-    
-    // Example usage:
-    const head1 = new Node(1, null, null, new Node(7, null, null, new Node(11, null, null, new Node(12))));
-    head1.next = new Node(2, head1);
-    head1.next.next = new Node(3, head1.next);
-    head1.next.next.next = new Node(4, head1.next.next);
-    head1.next.next.next.next = new Node(5, head1.next.next.next);
-    head1.next.next.next.next.next = new Node(6, head1.next.next.next.next);
-    
-    // const flattenedHead1 = flatten(head1);
-    // console.log(flattenedHead1);
-    
+
+    current = current.next
+  }
+
+  return head
+}
+
+// Example usage:
+const head1 = new Node(
+  1,
+  null,
+  null,
+  new Node(7, null, null, new Node(11, null, null, new Node(12))),
+)
+head1.next = new Node(2, head1)
+head1.next.next = new Node(3, head1.next)
+head1.next.next.next = new Node(4, head1.next.next)
+head1.next.next.next.next = new Node(5, head1.next.next.next)
+head1.next.next.next.next.next = new Node(6, head1.next.next.next.next)
+
+// const flattenedHead1 = flatten(head1);
+// console.log(flattenedHead1);

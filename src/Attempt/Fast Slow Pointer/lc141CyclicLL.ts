@@ -88,7 +88,7 @@ export const hasCycle = {
   hasCycleBruteForce,
   hasCycleNaiveImp,
   hasCycleNaiveDec,
-  hasCycleOptimal
+  hasCycleOptimal,
 }
 
 // Example usage:

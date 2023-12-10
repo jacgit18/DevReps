@@ -27,27 +27,15 @@ const reverse_sub_listBruteForce = (
   return null
 }
 
-const reverse_sub_listNaiveImp = (
-  head: ListNode | null,
-  p: number,
-  q: number,
-): ListNode | null => {
+const reverse_sub_listNaiveImp = (head: ListNode | null, p: number, q: number): ListNode | null => {
   return null
 }
 
-const reverse_sub_listNaiveDec = (
-  head: ListNode | null,
-  p: number,
-  q: number,
-): ListNode | null => {
+const reverse_sub_listNaiveDec = (head: ListNode | null, p: number, q: number): ListNode | null => {
   return null
 }
 
-const reverse_sub_listOptimal = (
-  head: ListNode | null,
-  p: number,
-  q: number,
-): ListNode | null => {
+const reverse_sub_listOptimal = (head: ListNode | null, p: number, q: number): ListNode | null => {
   return null
 }
 
@@ -61,5 +49,5 @@ export const reverse_sub_list = {
   reverse_sub_listBruteForce,
   reverse_sub_listNaiveImp,
   reverse_sub_listNaiveDec,
-  reverse_sub_listOptimal
+  reverse_sub_listOptimal,
 }

@@ -60,5 +60,5 @@ export const backspaceCompare = {
   backspaceCompareBruteForce,
   backspaceCompareNaiveImp,
   backspaceCompareNaiveDec,
-  backspaceCompareOptimal
+  backspaceCompareOptimal,
 }

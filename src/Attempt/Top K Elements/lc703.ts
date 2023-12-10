@@ -4,7 +4,6 @@
 
 // KthLargest(int k, int[] nums) Initializes the object with the integer k and the stream of integers nums.
 // int add(int val) Appends the integer val to the stream and returns the element representing the kth largest element in the stream.
- 
 
 // Example 1:
 
@@ -21,7 +20,6 @@
 // kthLargest.add(10);  // return 5
 // kthLargest.add(9);   // return 8
 // kthLargest.add(4);   // return 8
- 
 
 // Constraints:
 
@@ -34,15 +32,12 @@
 
 // import { MinHeap } from "../../util/MinHeapMaker";
 
-
 export class KthLargest {
-    constructor(k: number, nums: number[]) {
-        
-    }
+  constructor(k: number, nums: number[]) {}
 
-    add(val: number): number {
-        return 0
-    }
+  add(val: number): number {
+    return 0
+  }
 }
 
 /**

@@ -6,21 +6,16 @@
 
 // Notice that you may not slant the container.
 
- 
-
 // Example 1:
-
 
 // Input: height = [1,8,6,2,5,4,8,3,7]
 // Output: 49
 // Explanation: The above vertical lines are represented by array [1,8,6,2,5,4,8,3,7]. In this case, the max area of water (blue section) the container can contain is 49.
 
-
 // Example 2:
 
 // Input: height = [1,1]
 // Output: 1
- 
 
 // Constraints:
 
@@ -28,27 +23,25 @@
 // 2 <= n <= 105
 // 0 <= height[i] <= 104
 
+const maxAreaBruteForce = (height: number[]): number => {
+  return 0
+}
 
- const maxAreaBruteForce = (height: number[]): number =>{
-    return 0
-};
+const maxAreaNaiveImp = (height: number[]): number => {
+  return 0
+}
 
-const maxAreaNaiveImp = (height: number[]): number =>{
-    return 0
-};
+const maxAreaNaiveDec = (height: number[]): number => {
+  return 0
+}
 
-const maxAreaNaiveDec = (height: number[]): number =>{
-    return 0
-};
-
-const maxAreaOptimal = (height: number[]): number =>{
-    return 0
-};
-
+const maxAreaOptimal = (height: number[]): number => {
+  return 0
+}
 
 export const maxArea = {
-    maxAreaBruteForce,
-    maxAreaNaiveImp,
-    maxAreaNaiveDec,
-    maxAreaOptimal
-    }
+  maxAreaBruteForce,
+  maxAreaNaiveImp,
+  maxAreaNaiveDec,
+  maxAreaOptimal,
+}

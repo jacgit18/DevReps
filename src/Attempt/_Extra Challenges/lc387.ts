@@ -24,16 +24,13 @@ const firstUniqCharBruteForce = (s: string): number => {
   return 0
 }
 
-
 const firstUniqCharNaiveImp = (s: string): number => {
   return 0
 }
 
-
 const firstUniqCharNaiveDec = (s: string): number => {
   return 0
 }
-
 
 const firstUniqCharOptimal = (s: string): number => {
   return 0
@@ -43,7 +40,7 @@ export const firstUniqChar = {
   firstUniqCharBruteForce,
   firstUniqCharNaiveImp,
   firstUniqCharNaiveDec,
-  firstUniqCharOptimal
+  firstUniqCharOptimal,
 }
 
 // Example usage:

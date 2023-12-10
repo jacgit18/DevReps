@@ -46,7 +46,6 @@ const findSubstringNaiveImp = (s: string, words: string[]): number[] => {
   return [0]
 }
 
-
 const findSubstringNaiveDec = (s: string, words: string[]): number[] => {
   return [0]
 }
@@ -59,10 +58,9 @@ const findSubstringOptimal = (s: string, words: string[]): number[] => {
 // console.log(findSubstring("wordgoodgoodgoodbestword",  ["word","good","best","word"])) // []
 // console.log(findSubstring("barfoofoobarthefoobarman", ["bar","foo","the"])) // [6,9,12]
 
-
 export const findSubstring = {
   findSubstringBruteForce,
   findSubstringNaiveImp,
   findSubstringNaiveDec,
-  findSubstringOptimal
+  findSubstringOptimal,
 }

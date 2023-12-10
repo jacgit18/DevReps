@@ -43,7 +43,7 @@ export const find_missing_number = {
   find_missing_numberBruteForce,
   find_missing_numberNaiveImp,
   find_missing_numberNaiveDec,
-  find_missing_numberOptimal
+  find_missing_numberOptimal,
 }
 
 // console.log(find_missing_number([3, 0, 1])) // 2

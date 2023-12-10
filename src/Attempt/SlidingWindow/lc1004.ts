@@ -49,5 +49,5 @@ export const longestOnes = {
   longestOnesBruteForce,
   longestOnesNaiveImp,
   longestOnesNaiveDec,
-  longestOnesOptimal
+  longestOnesOptimal,
 }

@@ -12,13 +12,11 @@
 // There are a total of three employees, and all common
 // free time intervals would be [-inf, 1], [3, 4], [10, inf].
 // We discard any intervals that contain inf as they aren't finite.
- 
 
 // Example 2:
 
 // Input: schedule = [[[1,3],[6,7]],[[2,4]],[[2,5],[9,12]]]
 // Output: [[5,6],[7,9]]
- 
 
 // (Even though we are representing Intervals in the form [x, y], the objects inside are Intervals, not lists or arrays. For example, schedule[0][0].start = 1, schedule[0][0].end = 2, and schedule[0][0][0] is not defined.)
 
@@ -30,39 +28,30 @@
 // 0 <= schedule[i].start < schedule[i].end <= 10^8.
 // NOTE: input types have been changed on June 17, 2019. Please reset to default code definition to get new method signature.
 
-
 class Interval {
-    start: number;
-    end: number;
+  start: number
+  end: number
 
-    constructor(start: number, end: number) {
-        this.start = start;
-        this.end = end;
-    }
+  constructor(start: number, end: number) {
+    this.start = start
+    this.end = end
+  }
 }
 
- const employeeFreeTimeBruteForce = (schedule: Interval[][]): Interval[] =>{
-
-
-    return [];
+const employeeFreeTimeBruteForce = (schedule: Interval[][]): Interval[] => {
+  return []
 }
 
-const employeeFreeTimeNaiveImp = (schedule: Interval[][]): Interval[] =>{
-
-
-    return [];
+const employeeFreeTimeNaiveImp = (schedule: Interval[][]): Interval[] => {
+  return []
 }
 
-const employeeFreeTimeNaiveDec = (schedule: Interval[][]): Interval[] =>{
-
-
-    return [];
+const employeeFreeTimeNaiveDec = (schedule: Interval[][]): Interval[] => {
+  return []
 }
 
-const employeeFreeTimeOptimal = (schedule: Interval[][]): Interval[] =>{
-
-
-    return [];
+const employeeFreeTimeOptimal = (schedule: Interval[][]): Interval[] => {
+  return []
 }
 
 // Example usage:
@@ -72,10 +61,9 @@ const employeeFreeTimeOptimal = (schedule: Interval[][]): Interval[] =>{
 // const schedule2: Interval[][] = [[[1, 3], [6, 7]], [[2, 4]], [[2, 5], [9, 12]]];
 // console.log(employeeFreeTime(schedule2));
 
-
 export const employeeFreeTime = {
-    employeeFreeTimeBruteForce,
-    employeeFreeTimeNaiveImp,
-    employeeFreeTimeNaiveDec,
-    employeeFreeTimeOptimal
-  }
+  employeeFreeTimeBruteForce,
+  employeeFreeTimeNaiveImp,
+  employeeFreeTimeNaiveDec,
+  employeeFreeTimeOptimal,
+}

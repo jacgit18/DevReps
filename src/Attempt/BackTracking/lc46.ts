@@ -51,5 +51,5 @@ export const permute = {
   permuteBruteForce,
   permuteNaiveImp,
   permuteNaiveDec,
-  permuteOptimal
+  permuteOptimal,
 }

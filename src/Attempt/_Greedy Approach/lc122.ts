@@ -4,8 +4,6 @@
 
 // Find and return the maximum profit you can achieve.
 
- 
-
 // Example 1:
 
 // Input: prices = [7,1,5,3,6,4]
@@ -26,36 +24,31 @@
 // Input: prices = [7,6,4,3,1]
 // Output: 0
 // Explanation: There is no way to make a positive profit, so we never buy the stock to achieve the maximum profit of 0.
- 
 
 // Constraints:
 
 // 1 <= prices.length <= 3 * 104
 // 0 <= prices[i] <= 104
 
- const maxProfitBruteForce = (prices: number[]): number =>{
-    return 0
-    
-};
+const maxProfitBruteForce = (prices: number[]): number => {
+  return 0
+}
 
-const maxProfitNaiveImp = (prices: number[]): number =>{
-    return 0
-};
+const maxProfitNaiveImp = (prices: number[]): number => {
+  return 0
+}
 
-const maxProfitNaiveDec = (prices: number[]): number =>{
-    return 0
-    
-};
+const maxProfitNaiveDec = (prices: number[]): number => {
+  return 0
+}
 
-const maxProfitOptimal = (prices: number[]): number =>{
-    return 0
-    
-};
+const maxProfitOptimal = (prices: number[]): number => {
+  return 0
+}
 
 export const maxProfit = {
-    maxProfitBruteForce,
-    maxProfitNaiveImp,
-    maxProfitNaiveDec,
-    maxProfitOptimal
-    }
-    
+  maxProfitBruteForce,
+  maxProfitNaiveImp,
+  maxProfitNaiveDec,
+  maxProfitOptimal,
+}

@@ -9,5 +9,5 @@ export const SolutionRevLinkedList = {
   lc25: reverseKGroup,
   lc61: rotateRight,
   lc92: reverse_sub_list,
-  lc206: reverseList
+  lc206: reverseList,
 }

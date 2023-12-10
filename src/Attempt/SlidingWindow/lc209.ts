@@ -28,7 +28,6 @@ const smallestSubarrayWithGivenSumBruteForce = (s: number, arr: number[]): numbe
   return 0
 }
 
-
 const smallestSubarrayWithGivenSumNaiveImp = (s: number, arr: number[]): number => {
   return 0
 }
@@ -43,10 +42,9 @@ const smallestSubarrayWithGivenSumOptimal = (s: number, arr: number[]): number =
 
 // console.log(smallestSubarrayWithGivenSum(3, [4, 6, 6, 8]))
 
-
 export const smallestSubarrayWithGivenSum = {
   smallestSubarrayWithGivenSumBruteForce,
   smallestSubarrayWithGivenSumNaiveImp,
   smallestSubarrayWithGivenSumNaiveDec,
-  smallestSubarrayWithGivenSumOptimal
+  smallestSubarrayWithGivenSumOptimal,
 }

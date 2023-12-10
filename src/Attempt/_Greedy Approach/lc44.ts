@@ -4,14 +4,11 @@
 // '*' Matches any sequence of characters (including the empty sequence).
 // The matching should cover the entire input string (not partial).
 
- 
-
 // Example 1:
 
 // Input: s = "aa", p = "a"
 // Output: false
 // Explanation: "a" does not match the entire string "aa".
-
 
 // Example 2:
 
@@ -24,7 +21,6 @@
 // Input: s = "cb", p = "?a"
 // Output: false
 // Explanation: '?' matches 'c', but the second letter is 'a', which does not match 'b'.
- 
 
 // Constraints:
 
@@ -32,27 +28,25 @@
 // s contains only lowercase English letters.
 // p contains only lowercase English letters, '?' or '*'.
 
+const isMatchBruteForce = (s: string, p: string): boolean => {
+  return true
+}
 
- const isMatchBruteForce = (s: string, p: string): boolean =>{
-    return true
-};
+const isMatchNaiveImp = (s: string, p: string): boolean => {
+  return true
+}
 
-const isMatchNaiveImp = (s: string, p: string): boolean =>{
-    return true
-};
+const isMatchNaiveDec = (s: string, p: string): boolean => {
+  return true
+}
 
-const isMatchNaiveDec = (s: string, p: string): boolean =>{
-    return true
-};
-
-const isMatchOptimal = (s: string, p: string): boolean =>{
-    return true
-};
-
+const isMatchOptimal = (s: string, p: string): boolean => {
+  return true
+}
 
 export const isMatch = {
-    isMatchBruteForce,
-    isMatchNaiveImp,
-    isMatchNaiveDec,
-    isMatchOptimal
-    }
+  isMatchBruteForce,
+  isMatchNaiveImp,
+  isMatchNaiveDec,
+  isMatchOptimal,
+}

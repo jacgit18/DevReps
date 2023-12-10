@@ -1,7 +1,5 @@
 // Given an integer array nums, return true if you can partition the array into two subsets such that the sum of the elements in both subsets is equal or false otherwise.
 
- 
-
 // Example 1:
 
 // Input: nums = [1,5,11,5]
@@ -13,32 +11,31 @@
 // Input: nums = [1,2,3,5]
 // Output: false
 // Explanation: The array cannot be partitioned into equal sum subsets.
- 
 
 // Constraints:
 
 // 1 <= nums.length <= 200
 // 1 <= nums[i] <= 100
 
- const canPartitionBruteForce = (nums: number[]): boolean =>{
-    return true
-};
+const canPartitionBruteForce = (nums: number[]): boolean => {
+  return true
+}
 
-const canPartitionNaiveImp = (nums: number[]): boolean =>{
-    return true
-};
+const canPartitionNaiveImp = (nums: number[]): boolean => {
+  return true
+}
 
-const canPartitionNaiveDec = (nums: number[]): boolean =>{
-    return true
-};
+const canPartitionNaiveDec = (nums: number[]): boolean => {
+  return true
+}
 
-const canPartitionOptimal = (nums: number[]): boolean =>{
-    return true
-};
+const canPartitionOptimal = (nums: number[]): boolean => {
+  return true
+}
 
 export const canPartition = {
-    canPartitionBruteForce,
-    canPartitionNaiveImp,
-    canPartitionNaiveDec,
-    canPartitionOptimal
-    }
+  canPartitionBruteForce,
+  canPartitionNaiveImp,
+  canPartitionNaiveDec,
+  canPartitionOptimal,
+}

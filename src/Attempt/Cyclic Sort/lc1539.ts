@@ -40,7 +40,7 @@ export const findKthPositive = {
   findKthPositiveBruteForce,
   findKthPositiveNaiveImp,
   findKthPositiveNaiveDec,
-  findKthPositiveOptimal
+  findKthPositiveOptimal,
 }
 
 // Example usage:

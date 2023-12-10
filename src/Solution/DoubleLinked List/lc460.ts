@@ -11,8 +11,6 @@
 
 // The functions get and put must each run in O(1) average time complexity.
 
- 
-
 // Example 1:
 
 // Input
@@ -41,7 +39,6 @@
 //                  // cache=[3,4], cnt(4)=1, cnt(3)=3
 // lfu.get(4);      // return 4
 //                  // cache=[4,3], cnt(4)=2, cnt(3)=3
- 
 
 // Constraints:
 
@@ -50,98 +47,98 @@
 // 0 <= value <= 109
 // At most 2 * 105 calls will be made to get and put.
 
-
 class Node {
-    constructor(
-        public freq: number, 
-        public keys: Set<number>, 
-        public prev: Node | null = null, 
-        public next: Node | null = null) {}
+  constructor(
+    public freq: number,
+    public keys: Set<number>,
+    public prev: Node | null = null,
+    public next: Node | null = null,
+  ) {}
 }
 
 export class LFUCache {
-    private capacity: number;
-    private keyMap: Map<number, number>;
-    private nodeMap: Map<number, Node>;
-    private head: Node;
+  private capacity: number
+  private keyMap: Map<number, number>
+  private nodeMap: Map<number, Node>
+  private head: Node
 
-    constructor(capacity: number) {
-        this.capacity = capacity;
-        this.keyMap = new Map();
-        this.nodeMap = new Map();
-        this.head = new Node(0, new Set());
+  constructor(capacity: number) {
+    this.capacity = capacity
+    this.keyMap = new Map()
+    this.nodeMap = new Map()
+    this.head = new Node(0, new Set())
+  }
+
+  private addNodeAfter(node: Node, freq: number): Node {
+    const newNode = new Node(freq, new Set(), node, node.next)
+    if (node.next) {
+      node.next.prev = newNode
+    }
+    node.next = newNode
+    return newNode
+  }
+
+  private removeNode(node: Node): void {
+    if (node.prev) {
+      node.prev.next = node.next
+    }
+    if (node.next) {
+      node.next.prev = node.prev
+    }
+  }
+
+  private updateFrequency(key: number): void {
+    const oldNode = this.nodeMap.get(key)
+    if (oldNode) {
+      oldNode.keys.delete(key)
+      if (oldNode.next && oldNode.next.freq === oldNode.freq + 1) {
+        oldNode.next.keys.add(key)
+      } else {
+        const newNode = this.addNodeAfter(oldNode, oldNode.freq + 1)
+        newNode.keys.add(key)
+      }
+      if (oldNode.keys.size === 0) {
+        this.removeNode(oldNode)
+      }
+      this.nodeMap.set(key, oldNode.next || oldNode)
+    }
+  }
+
+  get(key: number): number {
+    if (this.capacity === 0 || !this.keyMap.has(key)) {
+      return -1
     }
 
-    private addNodeAfter(node: Node, freq: number): Node {
-        const newNode = new Node(freq, new Set(), node, node.next);
-        if (node.next) {
-            node.next.prev = newNode;
-        }
-        node.next = newNode;
-        return newNode;
+    this.updateFrequency(key)
+    return this.keyMap.get(key) || -1
+  }
+
+  put(key: number, value: number): void {
+    if (this.capacity === 0) {
+      return
     }
 
-    private removeNode(node: Node): void {
-        if (node.prev) {
-            node.prev.next = node.next;
+    if (!this.keyMap.has(key)) {
+      if (this.keyMap.size === this.capacity) {
+        const leastFreqNode = this.head.next
+        if (leastFreqNode) {
+          const leastFreqKey = leastFreqNode.keys.values().next().value
+          leastFreqNode.keys.delete(leastFreqKey)
+          if (leastFreqNode.keys.size === 0) {
+            this.removeNode(leastFreqNode)
+          }
+          this.keyMap.delete(leastFreqKey)
+          this.nodeMap.delete(leastFreqKey)
         }
-        if (node.next) {
-            node.next.prev = node.prev;
-        }
+      }
+      const firstNode = this.head.next || this.addNodeAfter(this.head, 0)
+      firstNode.keys.add(key)
+      this.nodeMap.set(key, firstNode)
     }
 
-    private updateFrequency(key: number): void {
-        const oldNode = this.nodeMap.get(key);
-        if (oldNode) {
-            oldNode.keys.delete(key);
-            if (oldNode.next && oldNode.next.freq === oldNode.freq + 1) {
-                oldNode.next.keys.add(key);
-            } else {
-                const newNode = this.addNodeAfter(oldNode, oldNode.freq + 1);
-                newNode.keys.add(key);
-            }
-            if (oldNode.keys.size === 0) {
-                this.removeNode(oldNode);
-            }
-            this.nodeMap.set(key, oldNode.next || oldNode);
-        }
-    }
-
-    get(key: number): number {
-        if (this.capacity === 0 || !this.keyMap.has(key)) {
-            return -1;
-        }
-
-        this.updateFrequency(key);
-        return this.keyMap.get(key) || -1;
-    }
-
-    put(key: number, value: number): void {
-        if (this.capacity === 0) {
-            return;
-        }
-
-        if (!this.keyMap.has(key)) {
-            if (this.keyMap.size === this.capacity) {
-                const leastFreqNode = this.head.next;
-                if (leastFreqNode) {
-                    const leastFreqKey = leastFreqNode.keys.values().next().value;
-                    leastFreqNode.keys.delete(leastFreqKey);
-                    if (leastFreqNode.keys.size === 0) {
-                        this.removeNode(leastFreqNode);
-                    }
-                    this.keyMap.delete(leastFreqKey);
-                    this.nodeMap.delete(leastFreqKey);
-                }
-            }
-            const firstNode = this.head.next || this.addNodeAfter(this.head, 0);
-            firstNode.keys.add(key);
-            this.nodeMap.set(key, firstNode);
-        }
-
-        this.keyMap.set(key, value);
-        this.updateFrequency(key);
-    }
+    this.keyMap.set(key, value)
+    this.updateFrequency(key)
+  }
 }
 
 /**

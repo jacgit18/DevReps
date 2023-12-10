@@ -9,10 +9,6 @@ import { reorganizeString } from "./lc767"
 import { FreqStack } from "./lc895"
 import { kClosest } from "./lc973"
 
-
-
-
-
 export const SolutionTop_K_Elements = {
   lc215: findKthLargest,
   lc347: topKFrequent,
@@ -24,7 +20,5 @@ export const SolutionTop_K_Elements = {
   lc767: reorganizeString,
   lc895: FreqStack,
   lc973: kClosest,
-  lc1167: connectSticks
-
-
+  lc1167: connectSticks,
 }

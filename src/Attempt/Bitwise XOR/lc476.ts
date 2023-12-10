@@ -3,8 +3,6 @@
 // For example, The integer 5 is "101" in binary and its complement is "010" which is the integer 2.
 // Given an integer num, return its complement.
 
- 
-
 // Example 1:
 
 // Input: num = 5
@@ -16,32 +14,30 @@
 // Input: num = 1
 // Output: 0
 // Explanation: The binary representation of 1 is 1 (no leading zero bits), and its complement is 0. So you need to output 0.
- 
 
 // Constraints:
 
 // 1 <= num < 231
- 
 
- const findComplementBruteForce = (num: number): number =>{
-    return 0
-};
+const findComplementBruteForce = (num: number): number => {
+  return 0
+}
 
-const findComplementNaiveImp = (num: number): number =>{
-    return 0
-};
+const findComplementNaiveImp = (num: number): number => {
+  return 0
+}
 
-const findComplementNaiveDec = (num: number): number =>{
-    return 0
-};
+const findComplementNaiveDec = (num: number): number => {
+  return 0
+}
 
-const findComplementOptimal = (num: number): number =>{
-    return 0
-};
+const findComplementOptimal = (num: number): number => {
+  return 0
+}
 
 export const findComplement = {
-    findComplementBruteForce,
-    findComplementNaiveImp,
-    findComplementNaiveDec,
-    findComplementOptimal
-    }
+  findComplementBruteForce,
+  findComplementNaiveImp,
+  findComplementNaiveDec,
+  findComplementOptimal,
+}

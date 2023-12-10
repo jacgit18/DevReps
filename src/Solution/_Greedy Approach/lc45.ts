@@ -6,8 +6,6 @@
 // i + j < n
 // Return the minimum number of jumps to reach nums[n - 1]. The test cases are generated such that you can reach nums[n - 1].
 
- 
-
 // Example 1:
 
 // Input: nums = [2,3,1,1,4]
@@ -18,7 +16,6 @@
 
 // Input: nums = [2,3,0,1,4]
 // Output: 2
- 
 
 // Constraints:
 
@@ -26,32 +23,31 @@
 // 0 <= nums[i] <= 1000
 // It's guaranteed that you can reach nums[n - 1].
 
-export const jump =(nums: number[]): number =>{
-        const n = nums.length;
-        let jumps = 0;
-        let currentEnd = 0;
-        let farthest = 0;
-    
-        for (let i = 0; i < n - 1; i++) {
-            farthest = Math.max(farthest, i + nums[i]);
-    
-            if (i === currentEnd) {
-                jumps++;
-                currentEnd = farthest;
-    
-                if (currentEnd >= n - 1) {
-                    break;
-                }
-            }
-        }
-    
-        return jumps;
+export const jump = (nums: number[]): number => {
+  const n = nums.length
+  let jumps = 0
+  let currentEnd = 0
+  let farthest = 0
+
+  for (let i = 0; i < n - 1; i++) {
+    farthest = Math.max(farthest, i + nums[i])
+
+    if (i === currentEnd) {
+      jumps++
+      currentEnd = farthest
+
+      if (currentEnd >= n - 1) {
+        break
+      }
     }
-    
-    // Example usage:
-    // const nums1 = [2, 3, 1, 1, 4];
-    // console.log(jump(nums1));  // Output: 2
-    
-    // const nums2 = [2, 3, 0, 1, 4];
-    // console.log(jump(nums2));  // Output: 2
-    
+  }
+
+  return jumps
+}
+
+// Example usage:
+// const nums1 = [2, 3, 1, 1, 4];
+// console.log(jump(nums1));  // Output: 2
+
+// const nums2 = [2, 3, 0, 1, 4];
+// console.log(jump(nums2));  // Output: 2

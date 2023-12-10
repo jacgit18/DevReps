@@ -11,7 +11,7 @@ function insertionSort(arr: number[]): number[] {
   return arr
 }
 
-export const bucketSort = (arr: number[]): number[] =>{
+export const bucketSort = (arr: number[]): number[] => {
   const bucketSize = 5 // Set the size of each bucket
   const max = Math.max(...arr)
   const min = Math.min(...arr)

@@ -38,7 +38,6 @@ const findClosestElementsOptimal = (arr: number[], k: number, x: number): number
   return [0]
 }
 
-
 // // Example usage:
 // const arr1 = [1, 2, 3, 4, 5]
 // const k1 = 4
@@ -50,10 +49,9 @@ const findClosestElementsOptimal = (arr: number[], k: number, x: number): number
 // const x2 = -1
 // console.log(findClosestElements(arr2, k2, x2)) // Output: [1, 2, 3, 4]
 
-
 export const findClosestElements = {
   findClosestElementsBruteForce,
   findClosestElementsNaiveImp,
   findClosestElementsNaiveDec,
-  findClosestElementsOptimal
+  findClosestElementsOptimal,
 }

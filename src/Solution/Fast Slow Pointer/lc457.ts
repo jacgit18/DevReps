@@ -11,10 +11,7 @@
 // k > 1
 // Return true if there is a cycle in nums, or false otherwise.
 
- 
-
 // Example 1:
-
 
 // Input: nums = [2,-1,1,2,2]
 // Output: true
@@ -23,22 +20,18 @@
 
 // Example 2:
 
-
 // Input: nums = [-1,-2,-3,-4,-5,6]
 // Output: false
 // Explanation: The graph shows how the indices are connected. White nodes are jumping forward, while red is jumping backward.
 // The only cycle is of size 1, so we return false.
 
-
 // Example 3:
-
 
 // Input: nums = [1,-1,5,1,4]
 // Output: true
 // Explanation: The graph shows how the indices are connected. White nodes are jumping forward, while red is jumping backward.
 // We can see the cycle 0 --> 1 --> 0 --> ..., and while it is of size > 1, it has a node jumping forward and a node jumping backward, so it is not a cycle.
 // We can see the cycle 3 --> 4 --> 3 --> ..., and all of its nodes are white (jumping in the same direction).
- 
 
 // Constraints:
 
@@ -46,44 +39,45 @@
 // -1000 <= nums[i] <= 1000
 // nums[i] != 0
 
-export const circularArrayLoop = (nums: number[]): boolean =>{
-        const n = nums.length;
-    
-        const getIndex = (i: number): number => {
-            return (i + nums[i] + n) % n;
-        };
-    
-        for (let i = 0; i < n; i++) {
-            if (nums[i] === 0) {
-                continue; // Skip already processed elements
-            }
-    
-            let slow = i;
-            let fast = i;
-    
-            // Check the direction of the cycle
-            while (nums[slow] * nums[getIndex(fast)] > 0 &&
-                   nums[slow] * nums[getIndex(getIndex(fast))] > 0) {
-                slow = getIndex(slow);
-                fast = getIndex(getIndex(fast));
-    
-                if (slow === fast) {
-                    if (slow === getIndex(slow)) {
-                        break; // Cycle has only one element, not a valid cycle
-                    }
-                    return true; // Valid cycle found
-                }
-            }
-    
-            // Mark the current cycle as invalid
-            let temp = i;
-            while (nums[temp] * nums[getIndex(temp)] > 0) {
-                const nextTemp = getIndex(temp);
-                nums[temp] = 0;
-                temp = nextTemp;
-            }
+export const circularArrayLoop = (nums: number[]): boolean => {
+  const n = nums.length
+
+  const getIndex = (i: number): number => {
+    return (i + nums[i] + n) % n
+  }
+
+  for (let i = 0; i < n; i++) {
+    if (nums[i] === 0) {
+      continue // Skip already processed elements
+    }
+
+    let slow = i
+    let fast = i
+
+    // Check the direction of the cycle
+    while (
+      nums[slow] * nums[getIndex(fast)] > 0 &&
+      nums[slow] * nums[getIndex(getIndex(fast))] > 0
+    ) {
+      slow = getIndex(slow)
+      fast = getIndex(getIndex(fast))
+
+      if (slow === fast) {
+        if (slow === getIndex(slow)) {
+          break // Cycle has only one element, not a valid cycle
         }
-    
-        return false; // No valid cycle found
-    };
-    
+        return true // Valid cycle found
+      }
+    }
+
+    // Mark the current cycle as invalid
+    let temp = i
+    while (nums[temp] * nums[getIndex(temp)] > 0) {
+      const nextTemp = getIndex(temp)
+      nums[temp] = 0
+      temp = nextTemp
+    }
+  }
+
+  return false // No valid cycle found
+}

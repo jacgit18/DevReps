@@ -48,10 +48,9 @@ const searchOptimal = (nums: number[], target: number): boolean => {
 // const target2 = 3
 // console.log(search(nums2, target2)) // Output: false
 
-
 export const search = {
   searchBruteForce,
   searchNaiveImp,
   searchNaiveDec,
-  searchOptimal
+  searchOptimal,
 }

@@ -19,11 +19,7 @@
 
 import { ListNode } from "../../../src/util/LinkedListMaker"
 
-export const reverse_sub_list = (
-  head: ListNode | null,
-  p: number,
-  q: number,
-): ListNode | null => {
+export const reverse_sub_list = (head: ListNode | null, p: number, q: number): ListNode | null => {
   if (p === q) {
     return head
   }

@@ -39,7 +39,7 @@ export const maxDepth = {
   maxDepthBruteForce,
   maxDepthNaiveImp,
   maxDepthNaiveDec,
-  maxDepthOptimal
+  maxDepthOptimal,
 }
 
 // Example usage:

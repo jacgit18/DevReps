@@ -23,7 +23,6 @@ import { searchMatrix } from "./lc74"
 import { superEggDrop } from "./lc887"
 import { nameMatch } from "./nameMatch"
 
-
 export const AttemptExtra = {
   challengeOne: attempt,
   challengeTwo: decompressString,
@@ -48,7 +47,5 @@ export const AttemptExtra = {
   lc887: superEggDrop,
   lc1103: distributeCandiesTwo,
   lc1143: longestCommonSubsequence,
-  lc1911: maxAlternatingSum
-
+  lc1911: maxAlternatingSum,
 }
-

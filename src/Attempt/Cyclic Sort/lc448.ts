@@ -35,7 +35,7 @@ export const findDisappearedNumbers = {
   findDisappearedNumbersBruteForce,
   findDisappearedNumbersNaiveImp,
   findDisappearedNumbersNaiveDec,
-  findDisappearedNumbersOptimal
+  findDisappearedNumbersOptimal,
 }
 
 // Example usage:

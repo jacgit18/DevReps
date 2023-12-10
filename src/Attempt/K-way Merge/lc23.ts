@@ -43,31 +43,27 @@
 //   }
 // }
 
+import { ListNode } from "../../util/LinkedListMaker"
 
-import { ListNode } from "../../util/LinkedListMaker";
-
-
- const mergeKListsBruteForce = (lists: Array<ListNode | null>): ListNode | null => {
-    return null
-};
+const mergeKListsBruteForce = (lists: Array<ListNode | null>): ListNode | null => {
+  return null
+}
 
 const mergeKListsNaiveImp = (lists: Array<ListNode | null>): ListNode | null => {
   return null
-
-};
+}
 
 const mergeKListsNaiveDec = (lists: Array<ListNode | null>): ListNode | null => {
   return null
-};
+}
 
 const mergeKListsOptimal = (lists: Array<ListNode | null>): ListNode | null => {
   return null
-
-};
+}
 
 export const mergeKLists = {
   mergeKListsBruteForce,
   mergeKListsNaiveImp,
   mergeKListsNaiveDec,
-  mergeKListsOptimal
-  }
+  mergeKListsOptimal,
+}

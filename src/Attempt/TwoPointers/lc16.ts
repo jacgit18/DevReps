@@ -42,7 +42,7 @@ export const threeSumClosest = {
   threeSumClosestBruteForce,
   threeSumClosestNaiveImp,
   threeSumClosestNaiveDec,
-  threeSumClosestOptimal
+  threeSumClosestOptimal,
 }
 
 // Example usage:

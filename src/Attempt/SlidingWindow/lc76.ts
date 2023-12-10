@@ -34,7 +34,6 @@ const minWindowBruteForce = (s: string, t: string): string => {
   return " "
 }
 
-
 const minWindowNaiveImp = (s: string, t: string): string => {
   return " "
 }
@@ -59,10 +58,9 @@ const minWindowOptimal = (s: string, t: string): string => {
 // const t3 = "aa"
 // console.log(minWindow(s3, t3)) // Output: ""
 
-
 export const minWindow = {
   minWindowBruteForce,
   minWindowNaiveImp,
   minWindowNaiveDec,
-  minWindowOptimal
+  minWindowOptimal,
 }

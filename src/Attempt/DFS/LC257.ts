@@ -39,7 +39,7 @@ export const binaryTreePaths = {
   binaryTreePathsBruteForce,
   binaryTreePathsNaiveImp,
   binaryTreePathsNaiveDec,
-  binaryTreePathsOptimal
+  binaryTreePathsOptimal,
 }
 
 // Example usage:

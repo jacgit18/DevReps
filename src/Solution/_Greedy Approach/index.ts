@@ -15,5 +15,5 @@ export const SolutionGreedyApproach = {
   lc122: maxProfit,
   lc134: canCompleteCircuit,
   lc135: candy,
-  lc409: longestPalindrome
+  lc409: longestPalindrome,
 }

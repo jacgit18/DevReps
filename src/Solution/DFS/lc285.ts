@@ -19,31 +19,29 @@
 // If the given node has no in-order successor in the tree, return null.
 // It's guaranteed that the values of the tree are unique.
 
-import { TreeNode } from "../../../src/util/BinaryTreeMaker";
+import { TreeNode } from "../../../src/util/BinaryTreeMaker"
 
 export const inorderSuccessor = (root: TreeNode | null, p: TreeNode | null): TreeNode | null => {
-  if (!root || !p) return null;
-  
-  let successor: TreeNode | null = null;
-  let current: TreeNode | null = root;
-  
-  while (current) {
-      if (current.value > p.value) {
-          successor = current;
-          current = current.left;
-      } else {
-          current = current.right;
-      }
-  }
-  
-  return successor;
-};
+  if (!root || !p) return null
 
+  let successor: TreeNode | null = null
+  let current: TreeNode | null = root
+
+  while (current) {
+    if (current.value > p.value) {
+      successor = current
+      current = current.left
+    } else {
+      current = current.right
+    }
+  }
+
+  return successor
+}
 
 // Example usage:
 // const root1 = new TreeNode(2, new TreeNode(1), new TreeNode(3))
 // const p1 = new TreeNode(1)
-
 
 // // Alt Manual way to assign nodes in tree
 // const root2 = new TreeNode(5);
@@ -56,6 +54,3 @@ export const inorderSuccessor = (root: TreeNode | null, p: TreeNode | null): Tre
 
 // console.log(inorderSuccessor(root1, p1)) // Output: 2
 // console.log(inorderSuccessor(root2, p2)) // Output: null
-
-
-

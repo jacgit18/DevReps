@@ -4,10 +4,7 @@
 
 // The length of a path between two nodes is represented by the number of edges between them.
 
- 
-
 // Example 1:
-
 
 // Input: root = [1,2,3,4,5]
 // Output: 3
@@ -17,41 +14,33 @@
 
 // Input: root = [1,2]
 // Output: 1
- 
 
 // Constraints:
 
 // The number of nodes in the tree is in the range [1, 104].
 // -100 <= Node.val <= 100
 
-import { TreeNode } from "../../util/BinaryTreeMaker";
+import { TreeNode } from "../../util/BinaryTreeMaker"
 
- const diameterOfBinaryTreeBruteForce = (root: TreeNode | null): number =>{
-    return 0
-    
-};
+const diameterOfBinaryTreeBruteForce = (root: TreeNode | null): number => {
+  return 0
+}
 
+const diameterOfBinaryTreeNaiveImp = (root: TreeNode | null): number => {
+  return 0
+}
 
-const diameterOfBinaryTreeNaiveImp = (root: TreeNode | null): number =>{
-    return 0
-    
-};
+const diameterOfBinaryTreeNaiveDec = (root: TreeNode | null): number => {
+  return 0
+}
 
-
-const diameterOfBinaryTreeNaiveDec = (root: TreeNode | null): number =>{
-    return 0
-    
-};
-
-
-const diameterOfBinaryTreeOptimal = (root: TreeNode | null): number =>{
-    return 0
-    
-};
+const diameterOfBinaryTreeOptimal = (root: TreeNode | null): number => {
+  return 0
+}
 
 export const diameterOfBinaryTree = {
-    diameterOfBinaryTreeBruteForce,
-    diameterOfBinaryTreeNaiveImp,
-    diameterOfBinaryTreeNaiveDec,
-    diameterOfBinaryTreeOptimal
-    }
+  diameterOfBinaryTreeBruteForce,
+  diameterOfBinaryTreeNaiveImp,
+  diameterOfBinaryTreeNaiveDec,
+  diameterOfBinaryTreeOptimal,
+}

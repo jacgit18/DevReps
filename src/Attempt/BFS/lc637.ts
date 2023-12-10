@@ -39,7 +39,7 @@ export const averageOfLevels = {
   averageOfLevelsBruteForce,
   averageOfLevelsNaiveImp,
   averageOfLevelsNaiveDec,
-  averageOfLevelsOptimal
+  averageOfLevelsOptimal,
 }
 
 // Example usage:

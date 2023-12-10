@@ -10,8 +10,6 @@
 // For example, if we get a 7-day pass on day 2, then we can travel for 7 days: 2, 3, 4, 5, 6, 7, and 8.
 // Return the minimum number of dollars you need to travel every day in the given list of days.
 
- 
-
 // Example 1:
 
 // Input: days = [1,4,6,7,8,20], costs = [2,7,15]
@@ -30,7 +28,6 @@
 // On day 1, you bought a 30-day pass for costs[2] = $15 which covered days 1, 2, ..., 30.
 // On day 31, you bought a 1-day pass for costs[0] = $2 which covered day 31.
 // In total, you spent $17 and covered all the days of your travel.
- 
 
 // Constraints:
 
@@ -40,29 +37,25 @@
 // costs.length == 3
 // 1 <= costs[i] <= 1000
 
-
-
-
 export const mincostTickets = (days: number[], costs: number[]): number => {
-    const maxDay = days[days.length - 1];
-    const dp: number[] = new Array(maxDay + 1).fill(0);
-  
-    for (let i = 1; i <= maxDay; i++) {
-      if (!days.includes(i)) {
-        dp[i] = dp[i - 1]; // If not traveling on day i, the cost is the same as the previous day
-      } else {
-        dp[i] = Math.min(
-          dp[Math.max(0, i - 1)] + costs[0], // 1-day pass
-          dp[Math.max(0, i - 7)] + costs[1], // 7-day pass
-          dp[Math.max(0, i - 30)] + costs[2] // 30-day pass
-        );
-      }
+  const maxDay = days[days.length - 1]
+  const dp: number[] = new Array(maxDay + 1).fill(0)
+
+  for (let i = 1; i <= maxDay; i++) {
+    if (!days.includes(i)) {
+      dp[i] = dp[i - 1] // If not traveling on day i, the cost is the same as the previous day
+    } else {
+      dp[i] = Math.min(
+        dp[Math.max(0, i - 1)] + costs[0], // 1-day pass
+        dp[Math.max(0, i - 7)] + costs[1], // 7-day pass
+        dp[Math.max(0, i - 30)] + costs[2], // 30-day pass
+      )
     }
-  
-    return dp[maxDay];
-  };
-  
-  // Example usage:
+  }
+
+  return dp[maxDay]
+}
+
+// Example usage:
 //   console.log(mincostTickets([1, 4, 6, 7, 8, 20], [2, 7, 15])); // Output: 11
 //   console.log(mincostTickets([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 30, 31], [2, 7, 15])); // Output: 17
-  

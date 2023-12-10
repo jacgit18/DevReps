@@ -33,12 +33,10 @@ const isAnagramOptimal = (s: string, t: string): boolean => {
   return true
 }
 
-
-
 export const isAnagram = {
   isAnagramBruteForce,
   isAnagramNaiveImp,
   isAnagramNaiveDec,
-  isAnagramOptimal
+  isAnagramOptimal,
 }
 // console.log(isAnagram("anagram", "nagaram")) // returns true

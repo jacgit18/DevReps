@@ -37,10 +37,9 @@ const numSubarrayProductLessThanKOptimal = (nums: number[], k: number): number =
 // console.log(numSubarrayProductLessThanK([10, 5, 2, 6], 100))
 // console.log(numSubarrayProductLessThanK([1, 2, 3], 0))
 
-
 export const numSubarrayProductLessThanK = {
   numSubarrayProductLessThanKBruteForce,
   numSubarrayProductLessThanKNaiveImp,
   numSubarrayProductLessThanKNaiveDec,
-  numSubarrayProductLessThanKOptimal
+  numSubarrayProductLessThanKOptimal,
 }

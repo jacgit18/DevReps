@@ -57,10 +57,9 @@ const nextGreatestLetterOptimal = (letters: string[], target: string): string =>
 // const target3 = "z"
 // console.log(nextGreatestLetter(letters3, target3)) // Output: "x"
 
-
 export const nextGreatestLetter = {
   nextGreatestLetterBruteForce,
   nextGreatestLetterNaiveImp,
   nextGreatestLetterNaiveDec,
-  nextGreatestLetterOptimal
+  nextGreatestLetterOptimal,
 }

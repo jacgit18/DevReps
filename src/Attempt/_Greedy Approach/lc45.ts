@@ -6,8 +6,6 @@
 // i + j < n
 // Return the minimum number of jumps to reach nums[n - 1]. The test cases are generated such that you can reach nums[n - 1].
 
- 
-
 // Example 1:
 
 // Input: nums = [2,3,1,1,4]
@@ -18,7 +16,6 @@
 
 // Input: nums = [2,3,0,1,4]
 // Output: 2
- 
 
 // Constraints:
 
@@ -26,25 +23,25 @@
 // 0 <= nums[i] <= 1000
 // It's guaranteed that you can reach nums[n - 1].
 
- const jumpBruteForce =(nums: number[]): number =>{
-    return 0
-};
+const jumpBruteForce = (nums: number[]): number => {
+  return 0
+}
 
-const jumpNaiveImp =(nums: number[]): number =>{
-    return 0
-};
+const jumpNaiveImp = (nums: number[]): number => {
+  return 0
+}
 
-const jumpNaiveDec =(nums: number[]): number =>{
-    return 0
-};
+const jumpNaiveDec = (nums: number[]): number => {
+  return 0
+}
 
-const jumpOptimal =(nums: number[]): number =>{
-    return 0
-};
+const jumpOptimal = (nums: number[]): number => {
+  return 0
+}
 
 export const jump = {
-    jumpBruteForce,
-    jumpNaiveImp,
-    jumpNaiveDec,
-    jumpOptimal
-    }
+  jumpBruteForce,
+  jumpNaiveImp,
+  jumpNaiveDec,
+  jumpOptimal,
+}

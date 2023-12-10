@@ -6,7 +6,6 @@
 // To invert an image means that each 0 is replaced by 1, and each 1 is replaced by 0.
 
 // For example, inverting [0,1,1] results in [1,0,0].
- 
 
 // Example 1:
 
@@ -21,7 +20,6 @@
 // Output: [[1,1,0,0],[0,1,1,0],[0,0,0,1],[1,0,1,0]]
 // Explanation: First reverse each row: [[0,0,1,1],[1,0,0,1],[1,1,1,0],[0,1,0,1]].
 // Then invert the image: [[1,1,0,0],[0,1,1,0],[0,0,0,1],[1,0,1,0]]
- 
 
 // Constraints:
 
@@ -30,26 +28,25 @@
 // 1 <= n <= 20
 // images[i][j] is either 0 or 1.
 
- const flipAndInvertImageBruteForce = (image: number[][]): number[][] =>{
-    return [[0]]
-};
+const flipAndInvertImageBruteForce = (image: number[][]): number[][] => {
+  return [[0]]
+}
 
-const flipAndInvertImageNaiveImp = (image: number[][]): number[][] =>{
-    return [[0]]
-};
+const flipAndInvertImageNaiveImp = (image: number[][]): number[][] => {
+  return [[0]]
+}
 
-const flipAndInvertImageNaiveDec = (image: number[][]): number[][] =>{
-    return [[0]]
-};
+const flipAndInvertImageNaiveDec = (image: number[][]): number[][] => {
+  return [[0]]
+}
 
-const flipAndInvertImageOptimal = (image: number[][]): number[][] =>{
-    return [[0]]
-};
-
+const flipAndInvertImageOptimal = (image: number[][]): number[][] => {
+  return [[0]]
+}
 
 export const flipAndInvertImage = {
-    flipAndInvertImageBruteForce,
-    flipAndInvertImageNaiveImp,
-    flipAndInvertImageNaiveDec,
-    flipAndInvertImageOptimal
-    }
+  flipAndInvertImageBruteForce,
+  flipAndInvertImageNaiveImp,
+  flipAndInvertImageNaiveDec,
+  flipAndInvertImageOptimal,
+}

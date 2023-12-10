@@ -57,5 +57,5 @@ export const combinationSum = {
   combinationSumBruteForce,
   combinationSumNaiveImp,
   combinationSumNaiveDec,
-  combinationSumOptimal
+  combinationSumOptimal,
 }

@@ -10,10 +10,7 @@
 
 // Initially, all next pointers are set to NULL.
 
- 
-
 // Example 1:
-
 
 // Input: root = [1,2,3,4,5,6,7]
 // Output: [1,#,2,3,#,4,5,6,7,#]
@@ -23,39 +20,36 @@
 
 // Input: root = []
 // Output: []
- 
 
 // Constraints:
 
 // The number of nodes in the tree is in the range [0, 212 - 1].
 // -1000 <= Node.val <= 1000
- 
 
 // Follow-up:
 
 // You may only use constant extra space.
 // The recursive approach is fine. You may assume implicit stack space does not count as extra space for this problem.
 
+const connectOneBruteForce = (root: Node | null): Node | null => {
+  return null
+}
 
- const connectOneBruteForce =(root: Node | null): Node | null =>{
-    return null
-};
+const connectOneNaiveImp = (root: Node | null): Node | null => {
+  return null
+}
 
-const connectOneNaiveImp =(root: Node | null): Node | null =>{
-    return null
-};
+const connectOneNaiveDec = (root: Node | null): Node | null => {
+  return null
+}
 
-const connectOneNaiveDec =(root: Node | null): Node | null =>{
-    return null
-};
-
-const connectOneOptimal =(root: Node | null): Node | null =>{
-    return null
-};
+const connectOneOptimal = (root: Node | null): Node | null => {
+  return null
+}
 
 export const connectOne = {
-    connectOneBruteForce,
-    connectOneNaiveImp,
-    connectOneNaiveDec,
-    connectOneOptimal
-    }
+  connectOneBruteForce,
+  connectOneNaiveImp,
+  connectOneNaiveDec,
+  connectOneOptimal,
+}

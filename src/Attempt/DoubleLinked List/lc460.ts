@@ -11,8 +11,6 @@
 
 // The functions get and put must each run in O(1) average time complexity.
 
- 
-
 // Example 1:
 
 // Input
@@ -41,7 +39,6 @@
 //                  // cache=[3,4], cnt(4)=1, cnt(3)=3
 // lfu.get(4);      // return 4
 //                  // cache=[4,3], cnt(4)=2, cnt(3)=3
- 
 
 // Constraints:
 
@@ -50,24 +47,23 @@
 // 0 <= value <= 109
 // At most 2 * 105 calls will be made to get and put.
 
-
 class Node {
-    constructor(public freq: number, public keys: Set<number>, public prev: Node | null = null, public next: Node | null = null) {}
+  constructor(
+    public freq: number,
+    public keys: Set<number>,
+    public prev: Node | null = null,
+    public next: Node | null = null,
+  ) {}
 }
 
-
 export class LFUCache {
-    constructor(capacity: number) {
-        
-    }
+  constructor(capacity: number) {}
 
-    get(key: number): number {
-        return 0
-    }
+  get(key: number): number {
+    return 0
+  }
 
-    put(key: number, value: number): void {
-        
-    }
+  put(key: number, value: number): void {}
 }
 
 /**

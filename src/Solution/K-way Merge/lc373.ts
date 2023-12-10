@@ -4,8 +4,6 @@
 
 // Return the k pairs (u1, v1), (u2, v2), ..., (uk, vk) with the smallest sums.
 
- 
-
 // Example 1:
 
 // Input: nums1 = [1,7,11], nums2 = [2,4,6], k = 3
@@ -23,7 +21,6 @@
 // Input: nums1 = [1,2], nums2 = [3], k = 3
 // Output: [[1,3],[2,3]]
 // Explanation: All possible pairs are returned from the sequence: [1,3],[2,3]
- 
 
 // Constraints:
 
@@ -32,31 +29,30 @@
 // nums1 and nums2 both are sorted in non-decreasing order.
 // 1 <= k <= 104
 
-export const kSmallestPairs = (nums1: number[], nums2: number[], k: number): number[][] =>{
-        const result: number[][] = [];
-    
-        if (!nums1.length || !nums2.length || k <= 0) {
-            return result;
-        }
-    
-        // Priority queue to store pairs based on their sum
-        const minHeap: [number, number, number][] = [];
-    
-        for (let i = 0; i < Math.min(nums1.length, k); i++) {
-            minHeap.push([nums1[i] + nums2[0], i, 0]);
-        }
-    
-        while (k > 0 && minHeap.length > 0) {
-            const [sum, i, j] = minHeap.shift()!;
-            result.push([nums1[i], nums2[j]]);
-    
-            if (j + 1 < nums2.length) {
-                minHeap.push([nums1[i] + nums2[j + 1], i, j + 1]);
-            }
-    
-            k--;
-        }
-    
-        return result;
-    };
-    
+export const kSmallestPairs = (nums1: number[], nums2: number[], k: number): number[][] => {
+  const result: number[][] = []
+
+  if (!nums1.length || !nums2.length || k <= 0) {
+    return result
+  }
+
+  // Priority queue to store pairs based on their sum
+  const minHeap: [number, number, number][] = []
+
+  for (let i = 0; i < Math.min(nums1.length, k); i++) {
+    minHeap.push([nums1[i] + nums2[0], i, 0])
+  }
+
+  while (k > 0 && minHeap.length > 0) {
+    const [sum, i, j] = minHeap.shift()!
+    result.push([nums1[i], nums2[j]])
+
+    if (j + 1 < nums2.length) {
+      minHeap.push([nums1[i] + nums2[j + 1], i, j + 1])
+    }
+
+    k--
+  }
+
+  return result
+}

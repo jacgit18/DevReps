@@ -29,7 +29,6 @@ const maxSubArrayBruteForce = (nums: number[]): number => {
   return 0
 }
 
-
 const maxSubArrayNaiveImp = (nums: number[]): number => {
   return 0
 }
@@ -38,15 +37,13 @@ const maxSubArrayNaiveDec = (nums: number[]): number => {
   return 0
 }
 
-
 const maxSubArrayOptimal = (nums: number[]): number => {
   return 0
 }
-
 
 export const maxSubArray = {
   maxSubArrayBruteForce,
   maxSubArrayNaiveImp,
   maxSubArrayNaiveDec,
-  maxSubArrayOptimal
+  maxSubArrayOptimal,
 }

@@ -4,8 +4,6 @@
 
 // Return the minimum cost of connecting all the given sticks into one stick in this way.
 
- 
-
 // Example 1:
 
 // Input: sticks = [2,4,3]
@@ -15,36 +13,34 @@
 
 // Input: sticks = [1,8,3,5]
 // Output: 30
- 
 
 // Constraints:
 
 // 1 <= sticks.length <= 10^4
 // 1 <= sticks[i] <= 10^4
 
-import { MinHeap } from "../../util/MinHeapMaker";
-  
-  export const  connectSticks = (sticks: number[]): number =>{
-    const minHeap = new MinHeap();
-  
-    for (const stick of sticks) {
-      minHeap.add(stick);
-    }
-  
-    let totalCost = 0;
-  
-    while (minHeap.heap.length > 1) {
-      const x = minHeap.pop()!;
-      const y = minHeap.pop()!;
-      const cost = x + y;
-      totalCost += cost;
-      minHeap.add(cost);
-    }
-  
-    return totalCost;
+import { MinHeap } from "../../util/MinHeapMaker"
+
+export const connectSticks = (sticks: number[]): number => {
+  const minHeap = new MinHeap()
+
+  for (const stick of sticks) {
+    minHeap.add(stick)
   }
-  
-  // Example usage:
-  // console.log(connectSticks([2, 4, 3])); // Output: 14
-  // console.log(connectSticks([1, 8, 3, 5])); // Output: 30
-  
+
+  let totalCost = 0
+
+  while (minHeap.heap.length > 1) {
+    const x = minHeap.pop()!
+    const y = minHeap.pop()!
+    const cost = x + y
+    totalCost += cost
+    minHeap.add(cost)
+  }
+
+  return totalCost
+}
+
+// Example usage:
+// console.log(connectSticks([2, 4, 3])); // Output: 14
+// console.log(connectSticks([1, 8, 3, 5])); // Output: 30

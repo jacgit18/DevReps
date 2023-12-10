@@ -46,7 +46,7 @@ export const isValid = {
   isValidBruteForce,
   isValidNaiveImp,
   isValidNaiveDec,
-  isValidOptimal
+  isValidOptimal,
 }
 
 // Example usage:

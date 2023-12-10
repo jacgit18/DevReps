@@ -41,7 +41,7 @@ export const fourSum = {
   fourSumBruteForce,
   fourSumNaiveImp,
   fourSumNaiveDec,
-  fourSumOptimal
+  fourSumOptimal,
 }
 
 // Example usage:

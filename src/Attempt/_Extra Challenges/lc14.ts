@@ -39,7 +39,7 @@ export const longestCommonPrefix = {
   longestCommonPrefixBruteForce,
   longestCommonPrefixNaiveImp,
   longestCommonPrefixNaiveDec,
-  longestCommonPrefixOptimal
+  longestCommonPrefixOptimal,
 }
 
 // Example usage:

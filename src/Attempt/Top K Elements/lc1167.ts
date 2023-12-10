@@ -4,8 +4,6 @@
 
 // Return the minimum cost of connecting all the given sticks into one stick in this way.
 
- 
-
 // Example 1:
 
 // Input: sticks = [2,4,3]
@@ -15,51 +13,37 @@
 
 // Input: sticks = [1,8,3,5]
 // Output: 30
- 
 
 // Constraints:
 
 // 1 <= sticks.length <= 10^4
 // 1 <= sticks[i] <= 10^4
 
-
 // import { MinHeap } from "../../util/MinHeapMaker";
 
+const connectSticksBruteForce = (sticks: number[]): number => {
+  return 0
+}
 
-const  connectSticksBruteForce = (sticks: number[]): number =>{
+const connectSticksNaiveImp = (sticks: number[]): number => {
+  return 0
+}
 
-  return 0;
-  }
-  
-  const  connectSticksNaiveImp = (sticks: number[]): number =>{
-   
-  
-    return 0;
-  }
+const connectSticksNaiveDec = (sticks: number[]): number => {
+  return 0
+}
 
-  const  connectSticksNaiveDec = (sticks: number[]): number =>{
-   
-  
-    return 0;
-  }
-  
-  const  connectSticksOptimal = (sticks: number[]): number =>{
-   
-  
-    return 0;
-  }
+const connectSticksOptimal = (sticks: number[]): number => {
+  return 0
+}
 
+// Example usage:
+// console.log(connectSticks([2, 4, 3])); // Output: 14
+// console.log(connectSticks([1, 8, 3, 5])); // Output: 30
 
-
-  // Example usage:
-  // console.log(connectSticks([2, 4, 3])); // Output: 14
-  // console.log(connectSticks([1, 8, 3, 5])); // Output: 30
-  
-
-
-  export const connectSticks = {
-    connectSticksBruteForce,
-    connectSticksNaiveImp,
-    connectSticksNaiveDec,
-    connectSticksOptimal
-    }
+export const connectSticks = {
+  connectSticksBruteForce,
+  connectSticksNaiveImp,
+  connectSticksNaiveDec,
+  connectSticksOptimal,
+}

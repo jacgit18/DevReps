@@ -8,8 +8,6 @@
 
 // The answer is guaranteed to fit in a 32-bit signed integer.
 
- 
-
 // Example 1:
 
 // Input: k = 2, w = 0, profits = [1,2,3], capital = [0,1,1]
@@ -24,7 +22,6 @@
 
 // Input: k = 3, w = 0, profits = [1,2,3], capital = [0,1,2]
 // Output: 6
- 
 
 // Constraints:
 
@@ -38,32 +35,45 @@
 
 // import { MaxHeap } from "../../util/MaxHeapMakers";
 
+const findMaximizedCapitalBruteForce = (
+  k: number,
+  w: number,
+  profits: number[],
+  capital: number[],
+): number => {
+  return 0
+}
 
+const findMaximizedCapitalNaiveImp = (
+  k: number,
+  w: number,
+  profits: number[],
+  capital: number[],
+): number => {
+  return 0
+}
 
- const findMaximizedCapitalBruteForce = (k: number, w: number, profits: number[], capital: number[]): number =>{
-    return 0
-};
+const findMaximizedCapitalNaiveDec = (
+  k: number,
+  w: number,
+  profits: number[],
+  capital: number[],
+): number => {
+  return 0
+}
 
-
-
-const findMaximizedCapitalNaiveImp = (k: number, w: number, profits: number[], capital: number[]): number =>{
-    return 0
-};
-
-
-const findMaximizedCapitalNaiveDec = (k: number, w: number, profits: number[], capital: number[]): number =>{
-    return 0
-};
-
-
-
-const findMaximizedCapitalOptimal = (k: number, w: number, profits: number[], capital: number[]): number =>{
-    return 0
-};
+const findMaximizedCapitalOptimal = (
+  k: number,
+  w: number,
+  profits: number[],
+  capital: number[],
+): number => {
+  return 0
+}
 
 export const findMaximizedCapital = {
-    findMaximizedCapitalBruteForce,
-    findMaximizedCapitalNaiveImp,
-    findMaximizedCapitalNaiveDec,
-    findMaximizedCapitalOptimal
-    }
+  findMaximizedCapitalBruteForce,
+  findMaximizedCapitalNaiveImp,
+  findMaximizedCapitalNaiveDec,
+  findMaximizedCapitalOptimal,
+}

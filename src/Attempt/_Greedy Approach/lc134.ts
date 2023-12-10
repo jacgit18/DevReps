@@ -4,8 +4,6 @@
 
 // Given two integer arrays gas and cost, return the starting gas station's index if you can travel around the circuit once in the clockwise direction, otherwise return -1. If there exists a solution, it is guaranteed to be unique
 
- 
-
 // Example 1:
 
 // Input: gas = [1,2,3,4,5], cost = [3,4,5,1,2]
@@ -30,7 +28,6 @@
 // Travel to station 1. Your tank = 3 - 3 + 3 = 3
 // You cannot travel back to station 2, as it requires 4 unit of gas but you only have 3.
 // Therefore, you can't travel around the circuit once no matter where you start.
- 
 
 // Constraints:
 
@@ -38,26 +35,25 @@
 // 1 <= n <= 105
 // 0 <= gas[i], cost[i] <= 104
 
+const canCompleteCircuitBruteForce = (gas: number[], cost: number[]): number => {
+  return 0
+}
 
- const canCompleteCircuitBruteForce = (gas: number[], cost: number[]): number =>{
-    return 0
-};
+const canCompleteCircuitNaiveImp = (gas: number[], cost: number[]): number => {
+  return 0
+}
 
-const canCompleteCircuitNaiveImp = (gas: number[], cost: number[]): number =>{
-    return 0
-};
+const canCompleteCircuitNaiveDec = (gas: number[], cost: number[]): number => {
+  return 0
+}
 
-const canCompleteCircuitNaiveDec = (gas: number[], cost: number[]): number =>{
-    return 0
-};
-
-const canCompleteCircuitOptimal = (gas: number[], cost: number[]): number =>{
-    return 0
-};
+const canCompleteCircuitOptimal = (gas: number[], cost: number[]): number => {
+  return 0
+}
 
 export const canCompleteCircuit = {
-    canCompleteCircuitBruteForce,
-    canCompleteCircuitNaiveImp,
-    canCompleteCircuitNaiveDec,
-    canCompleteCircuitOptimal
-    }
+  canCompleteCircuitBruteForce,
+  canCompleteCircuitNaiveImp,
+  canCompleteCircuitNaiveDec,
+  canCompleteCircuitOptimal,
+}

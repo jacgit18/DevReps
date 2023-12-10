@@ -1,4 +1,4 @@
-import FlattenObject  from "./dict.json";
+import FlattenObject from "./dict.json"
 
 interface FlattenObject {
   [key: string]: number | string | boolean | FlattenObject | FlattenObject[]

@@ -22,7 +22,7 @@
 // 0 <= digits.length <= 4
 // digits[i] is a digit in the range ['2', '9'].
 
- const letterCombinationsBruteForce = (digits: string): string[] => {
+const letterCombinationsBruteForce = (digits: string): string[] => {
   const digitToLetters: { [key: string]: string[] } = {
     "2": ["a", "b", "c"],
     "3": ["d", "e", "f"],
@@ -51,7 +51,6 @@ const letterCombinationsNaiveImp = (digits: string): string[] => {
 
   return [" "]
 }
-
 
 const letterCombinationsNaiveDec = (digits: string): string[] => {
   const digitToLetters: { [key: string]: string[] } = {
@@ -88,10 +87,9 @@ const letterCombinationsOptimal = (digits: string): string[] => {
 // console.log(letterCombinations("")) // Output: []
 // console.log(letterCombinations("2")) // Output: ["a","b","c"]
 
-
 export const letterCombinations = {
   letterCombinationsBruteForce,
   letterCombinationsNaiveImp,
   letterCombinationsNaiveDec,
-  letterCombinationsOptimal
+  letterCombinationsOptimal,
 }

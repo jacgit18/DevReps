@@ -49,10 +49,9 @@ const lengthOfLISOptimal = (nums: number[]): number => {
 // const nums3 = [7, 7, 7, 7, 7, 7, 7]
 // console.log(lengthOfLIS(nums3)) // Output: 1
 
-
 export const lengthOfLIS = {
   lengthOfLISBruteForce,
   lengthOfLISNaiveImp,
   lengthOfLISNaiveDec,
-  lengthOfLISOptimal
+  lengthOfLISOptimal,
 }

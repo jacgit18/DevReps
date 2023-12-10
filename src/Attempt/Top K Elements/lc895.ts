@@ -6,7 +6,6 @@
 // void push(int val) pushes an integer val onto the top of the stack.
 // int pop() removes and returns the most frequent element in the stack.
 // If there is a tie for the most frequent element, the element closest to the stack's top is removed and returned.
- 
 
 // Example 1:
 
@@ -28,7 +27,6 @@
 // freqStack.pop();   // return 7, as 5 and 7 is the most frequent, but 7 is closest to the top. The stack becomes [5,7,5,4].
 // freqStack.pop();   // return 5, as 5 is the most frequent. The stack becomes [5,7,4].
 // freqStack.pop();   // return 4, as 4, 5 and 7 is the most frequent, but 4 is closest to the top. The stack becomes [5,7].
- 
 
 // Constraints:
 
@@ -37,17 +35,13 @@
 // It is guaranteed that there will be at least one element in the stack before calling pop.
 
 export class FreqStack {
-    constructor() {
-        
-    }
+  constructor() {}
 
-    push(val: number): void {
-        
-    }
+  push(val: number): void {}
 
-    pop(): number {
-        return 0
-    }
+  pop(): number {
+    return 0
+  }
 }
 
 /**

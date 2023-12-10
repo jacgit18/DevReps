@@ -45,10 +45,9 @@ const findMaxFormOptimal = (strs: string[], m: number, n: number): number => {
 // console.log(findMaxForm(["10", "0001", "111001", "1", "0"], 5, 3)) // Output: 4
 // console.log(findMaxForm(["10", "0", "1"], 1, 1)) // Output: 2
 
-
 export const findMaxForm = {
   findMaxFormBruteForce,
   findMaxFormNaiveImp,
   findMaxFormNaiveDec,
-  findMaxFormOptimal
+  findMaxFormOptimal,
 }

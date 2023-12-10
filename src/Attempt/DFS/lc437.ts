@@ -41,7 +41,7 @@ export const pathSum = {
   pathSumBruteForce,
   pathSumNaiveImp,
   pathSumNaiveDec,
-  pathSumOptimal
+  pathSumOptimal,
 }
 
 // Example usage:

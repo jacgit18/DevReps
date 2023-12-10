@@ -39,7 +39,7 @@ export const findErrorNums = {
   findErrorNumsBruteForce,
   findErrorNumsNaiveImp,
   findErrorNumsNaiveDec,
-  findErrorNumsOptimal
+  findErrorNumsOptimal,
 }
 
 // Example usage:

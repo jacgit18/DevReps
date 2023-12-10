@@ -6,7 +6,6 @@
 // void visit(string url) Visits url from the current page. It clears up all the forward history.
 // string back(int steps) Move steps back in history. If you can only return x steps in the history and steps > x, you will return only x steps. Return the current url after moving back in history at most steps.
 // string forward(int steps) Move steps forward in history. If you can only forward x steps in the history and steps > x, you will forward only x steps. Return the current url after forwarding in history at most steps.
- 
 
 // Example:
 
@@ -28,7 +27,6 @@
 // browserHistory.forward(2);                // You are in "linkedin.com", you cannot move forward any steps.
 // browserHistory.back(2);                   // You are in "linkedin.com", move back two steps to "facebook.com" then to "google.com". return "google.com"
 // browserHistory.back(7);                   // You are in "google.com", you can move back only one step to "leetcode.com". return "leetcode.com"
- 
 
 // Constraints:
 
@@ -39,30 +37,30 @@
 // At most 5000 calls will be made to visit, back, and forward.
 
 export class BrowserHistory {
-    private history: string[];
-    private currentIdx: number;
+  private history: string[]
+  private currentIdx: number
 
-    constructor(homepage: string) {
-        this.history = [homepage];
-        this.currentIdx = 0;
-    }
+  constructor(homepage: string) {
+    this.history = [homepage]
+    this.currentIdx = 0
+  }
 
-    visit(url: string): void {
-        // When visiting a new URL, clear forward history
-        this.history = this.history.slice(0, this.currentIdx + 1);
-        this.history.push(url);
-        this.currentIdx++;
-    }
+  visit(url: string): void {
+    // When visiting a new URL, clear forward history
+    this.history = this.history.slice(0, this.currentIdx + 1)
+    this.history.push(url)
+    this.currentIdx++
+  }
 
-    back(steps: number): string {
-        this.currentIdx = Math.max(0, this.currentIdx - steps);
-        return this.history[this.currentIdx];
-    }
+  back(steps: number): string {
+    this.currentIdx = Math.max(0, this.currentIdx - steps)
+    return this.history[this.currentIdx]
+  }
 
-    forward(steps: number): string {
-        this.currentIdx = Math.min(this.history.length - 1, this.currentIdx + steps);
-        return this.history[this.currentIdx];
-    }
+  forward(steps: number): string {
+    this.currentIdx = Math.min(this.history.length - 1, this.currentIdx + steps)
+    return this.history[this.currentIdx]
+  }
 }
 
 // const browserHistory = new BrowserHistory("leetcode.com");
@@ -76,7 +74,6 @@ export class BrowserHistory {
 // console.log(browserHistory.forward(2));   // Output: "linkedin.com" (cannot move forward)
 // console.log(browserHistory.back(2));      // Output: "google.com"
 // console.log(browserHistory.back(7));      // Output: "leetcode.com"
-
 
 /**
  * Your BrowserHistory object will be instantiated and called as such:

@@ -5,8 +5,6 @@
 
 // A subsequence of an array is a new array generated from the original array by deleting some elements (possibly none) without changing the remaining elements' relative order. For example, [2,7,4] is a subsequence of [4,2,3,7,2,1,4] (the underlined elements), while [2,4,2] is not.
 
- 
-
 // Example 1:
 
 // Input: nums = [4,2,5,3]
@@ -24,35 +22,31 @@
 // Input: nums = [6,2,1,2,4,5]
 // Output: 10
 // Explanation: It is optimal to choose the subsequence [6,1,5] with alternating sum (6 + 5) - 1 = 10.
- 
 
 // Constraints:
 
 // 1 <= nums.length <= 105
 // 1 <= nums[i] <= 105
 
- const maxAlternatingSumBruteForce = (nums: number[]): number =>{
-return 0
-};
+const maxAlternatingSumBruteForce = (nums: number[]): number => {
+  return 0
+}
 
-const maxAlternatingSumNaiveImp = (nums: number[]): number =>{
-    return 0
-    };
+const maxAlternatingSumNaiveImp = (nums: number[]): number => {
+  return 0
+}
 
-    
-const maxAlternatingSumNaiveDec = (nums: number[]): number =>{
-return 0
-};
-        
+const maxAlternatingSumNaiveDec = (nums: number[]): number => {
+  return 0
+}
 
-const maxAlternatingSumOptimal = (nums: number[]): number =>{
-return 0
-};
-        
+const maxAlternatingSumOptimal = (nums: number[]): number => {
+  return 0
+}
 
 export const maxAlternatingSum = {
-    maxAlternatingSumBruteForce,
-    maxAlternatingSumNaiveImp,
-    maxAlternatingSumNaiveDec,
-    maxAlternatingSumOptimal
-  }
+  maxAlternatingSumBruteForce,
+  maxAlternatingSumNaiveImp,
+  maxAlternatingSumNaiveDec,
+  maxAlternatingSumOptimal,
+}

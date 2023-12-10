@@ -40,7 +40,7 @@ export const findDuplicate = {
   findDuplicateBruteForce,
   findDuplicateNaiveImp,
   findDuplicateNaiveDec,
-  findDuplicateOptimal
+  findDuplicateOptimal,
 }
 
 // Example usage:

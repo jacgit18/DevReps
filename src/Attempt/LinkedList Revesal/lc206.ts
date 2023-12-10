@@ -60,10 +60,9 @@ const reverseListOptimal = function (
   return null
 }
 
-
 export const reverseList = {
   reverseListBruteForce,
   reverseListNaiveImp,
   reverseListNaiveDec,
-  reverseListOptimal
+  reverseListOptimal,
 }

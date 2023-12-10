@@ -4,7 +4,6 @@
 
 // |a - x| < |b - x|, or
 // |a - x| == |b - x| and a < b
- 
 
 // Example 1:
 
@@ -15,7 +14,6 @@
 
 // Input: arr = [1,2,3,4,5], k = 4, x = -1
 // Output: [1,2,3,4]
- 
 
 // Constraints:
 
@@ -24,33 +22,31 @@
 // arr is sorted in ascending order.
 // -104 <= arr[i], x <= 104
 
-
 export const findClosestElements = (arr: number[], k: number, x: number): number[] => {
-    let left = 0;
-    let right = arr.length - 1;
-  
-    while (right - left + 1 > k) {
-      const leftDiff = Math.abs(arr[left] - x);
-      const rightDiff = Math.abs(arr[right] - x);
-  
-      if (leftDiff > rightDiff) {
-        left++;
-      } else {
-        right--;
-      }
+  let left = 0
+  let right = arr.length - 1
+
+  while (right - left + 1 > k) {
+    const leftDiff = Math.abs(arr[left] - x)
+    const rightDiff = Math.abs(arr[right] - x)
+
+    if (leftDiff > rightDiff) {
+      left++
+    } else {
+      right--
     }
-  
-    return arr.slice(left, right + 1);
-  };
-  
-  // Example usage:
+  }
+
+  return arr.slice(left, right + 1)
+}
+
+// Example usage:
 //   const arr1 = [1, 2, 3, 4, 5];
 //   const k1 = 4;
 //   const x1 = 3;
 //   console.log(findClosestElements(arr1, k1, x1)); // Output: [1, 2, 3, 4]
-  
+
 //   const arr2 = [1, 2, 3, 4, 5];
 //   const k2 = 4;
 //   const x2 = -1;
 //   console.log(findClosestElements(arr2, k2, x2)); // Output: [1, 2, 3, 4]
-  

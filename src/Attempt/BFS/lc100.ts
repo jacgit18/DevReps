@@ -24,10 +24,9 @@
 
 import { TreeNode } from "../../../src/util/BinaryTreeMaker"
 
- const isSameTreeBruteForce = (p: TreeNode | null, q: TreeNode | null): boolean => {
+const isSameTreeBruteForce = (p: TreeNode | null, q: TreeNode | null): boolean => {
   return true
 }
-
 
 const isSameTreeNaiveImp = (p: TreeNode | null, q: TreeNode | null): boolean => {
   return true
@@ -37,7 +36,6 @@ const isSameTreeNaiveDec = (p: TreeNode | null, q: TreeNode | null): boolean => 
   return true
 }
 
-
 const isSameTreeOptimal = (p: TreeNode | null, q: TreeNode | null): boolean => {
   return true
 }
@@ -46,5 +44,5 @@ export const isSameTree = {
   isSameTreeBruteForce,
   isSameTreeNaiveImp,
   isSameTreeNaiveDec,
-  isSameTreeOptimal
+  isSameTreeOptimal,
 }

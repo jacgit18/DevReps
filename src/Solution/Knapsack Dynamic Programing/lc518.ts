@@ -6,8 +6,6 @@
 
 // The answer is guaranteed to fit into a signed 32-bit integer.
 
- 
-
 // Example 1:
 
 // Input: amount = 5, coins = [1,2,5]
@@ -28,7 +26,6 @@
 
 // Input: amount = 10, coins = [10]
 // Output: 1
- 
 
 // Constraints:
 
@@ -37,23 +34,20 @@
 // All the values of coins are unique.
 // 0 <= amount <= 5000
 
-
-
 export const change = (amount: number, coins: number[]): number => {
-    const dp: number[] = new Array(amount + 1).fill(0);
-    dp[0] = 1; // There is one way to make up the amount 0
-  
-    for (const coin of coins) {
-      for (let i = coin; i <= amount; i++) {
-        dp[i] += dp[i - coin];
-      }
+  const dp: number[] = new Array(amount + 1).fill(0)
+  dp[0] = 1 // There is one way to make up the amount 0
+
+  for (const coin of coins) {
+    for (let i = coin; i <= amount; i++) {
+      dp[i] += dp[i - coin]
     }
-  
-    return dp[amount];
-  };
-  
-  // Example usage:
+  }
+
+  return dp[amount]
+}
+
+// Example usage:
 //   console.log(change(5, [1, 2, 5])); // Output: 4
 //   console.log(change(3, [2])); // Output: 0
 //   console.log(change(10, [10])); // Output: 1
-  

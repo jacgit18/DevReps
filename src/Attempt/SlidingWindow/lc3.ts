@@ -24,7 +24,7 @@
 // 0 <= s.length <= 5 * 104
 // s consists of English letters, digits, symbols and spaces.
 
- const lengthOfLongestSubstringBruteForce = (s: string): number => {
+const lengthOfLongestSubstringBruteForce = (s: string): number => {
   return 0
 }
 
@@ -40,11 +40,9 @@ const lengthOfLongestSubstringOptimal = (s: string): number => {
   return 0
 }
 
-
-
 export const lengthOfLongestSubstring = {
   lengthOfLongestSubstringBruteForce,
   lengthOfLongestSubstringNaiveImp,
   lengthOfLongestSubstringNaiveDec,
-  lengthOfLongestSubstringOptimal
+  lengthOfLongestSubstringOptimal,
 }

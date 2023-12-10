@@ -2,8 +2,6 @@
 
 // Return any possible rearrangement of s or return "" if not possible.
 
- 
-
 // Example 1:
 
 // Input: s = "aab"
@@ -13,7 +11,6 @@
 
 // Input: s = "aaab"
 // Output: ""
- 
 
 // Constraints:
 
@@ -22,31 +19,25 @@
 
 // import { MaxHeap } from "../../util/MaxHeapMakers";
 
+const reorganizeStringBruteForce = (s: string): string => {
+  return " "
+}
 
+const reorganizeStringNaiveImp = (s: string): string => {
+  return " "
+}
 
- const  reorganizeStringBruteForce = (s: string): string =>{
-    return " "
-};
+const reorganizeStringNaiveDec = (s: string): string => {
+  return " "
+}
 
-const  reorganizeStringNaiveImp = (s: string): string =>{
-    return " "
-};
-
-
-const  reorganizeStringNaiveDec = (s: string): string =>{
-    return " "
-};
-
-
-const  reorganizeStringOptimal = (s: string): string =>{
-    return " "
-};
-
-
+const reorganizeStringOptimal = (s: string): string => {
+  return " "
+}
 
 export const reorganizeString = {
-    reorganizeStringBruteForce,
-    reorganizeStringNaiveImp,
-    reorganizeStringNaiveDec,
-    reorganizeStringOptimal
-    }
+  reorganizeStringBruteForce,
+  reorganizeStringNaiveImp,
+  reorganizeStringNaiveDec,
+  reorganizeStringOptimal,
+}

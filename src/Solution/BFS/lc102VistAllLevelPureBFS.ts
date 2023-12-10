@@ -87,5 +87,5 @@ const levelOrderTraversalRec = (root: TreeNode | null): number[][] => {
 
 export const levelOrderTraversal = {
   levelOrderTraversalIter,
-  levelOrderTraversalRec
+  levelOrderTraversalRec,
 }

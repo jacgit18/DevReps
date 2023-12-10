@@ -7,7 +7,6 @@
 // MedianFinder() initializes the MedianFinder object.
 // void addNum(int num) adds the integer num from the data stream to the data structure.
 // double findMedian() returns the median of all elements so far. Answers within 10-5 of the actual answer will be accepted.
- 
 
 // Example 1:
 
@@ -24,14 +23,12 @@
 // medianFinder.findMedian(); // return 1.5 (i.e., (1 + 2) / 2)
 // medianFinder.addNum(3);    // arr[1, 2, 3]
 // medianFinder.findMedian(); // return 2.0
- 
 
 // Constraints:
 
 // -105 <= num <= 105
 // There will be at least one element in the data structure before calling findMedian.
 // At most 5 * 104 calls will be made to addNum and findMedian.
- 
 
 // Follow up:
 
@@ -39,17 +36,13 @@
 // If 99% of all integer numbers from the stream are in the range [0, 100], how would you optimize your solution?
 
 export class MedianFinder {
-    constructor() {
-        
-    }
+  constructor() {}
 
-    addNum(num: number): void {
-        
-    }
+  addNum(num: number): void {}
 
-    findMedian(): number {
-        return 0
-    }
+  findMedian(): number {
+    return 0
+  }
 }
 
 /**
@@ -58,7 +51,6 @@ export class MedianFinder {
  * obj.addNum(num)
  * var param_2 = obj.findMedian()
  */
-
 
 // export const MedianFinder = {
 //     MedianFinderBruteForce,

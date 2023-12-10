@@ -4,13 +4,11 @@
 
 // Return the least number of units of times that the CPU will take to finish all the given tasks.
 
- 
-
 // Example 1:
 
 // Input: tasks = ["A","A","A","B","B","B"], n = 2
 // Output: 8
-// Explanation: 
+// Explanation:
 // A -> B -> idle -> A -> B -> idle -> A -> B
 // There is at least 2 units of time between any two same tasks.
 
@@ -29,10 +27,9 @@
 
 // Input: tasks = ["A","A","A","A","A","A","B","C","D","E","F","G"], n = 2
 // Output: 16
-// Explanation: 
+// Explanation:
 // One possible solution is
 // A -> B -> C -> A -> D -> E -> A -> F -> G -> A -> idle -> idle -> A -> idle -> idle -> A
- 
 
 // Constraints:
 
@@ -40,55 +37,54 @@
 // tasks[i] is upper-case English letter.
 // The integer n is in the range [0, 100].
 
-import { MaxHeap } from "../../util/MaxHeapMakers";
-  
-  export const leastInterval = (tasks: string[], n: number): number => {
-    const taskFrequency: Record<string, number> = {};
-    for (const task of tasks) {
-      taskFrequency[task] = (taskFrequency[task] || 0) + 1;
+import { MaxHeap } from "../../util/MaxHeapMakers"
+
+export const leastInterval = (tasks: string[], n: number): number => {
+  const taskFrequency: Record<string, number> = {}
+  for (const task of tasks) {
+    taskFrequency[task] = (taskFrequency[task] || 0) + 1
+  }
+
+  const maxHeap = new MaxHeap()
+
+  for (const task in taskFrequency) {
+    if (taskFrequency.hasOwnProperty(task)) {
+      maxHeap.add(taskFrequency[task])
     }
-  
-    const maxHeap = new MaxHeap();
-  
-    for (const task in taskFrequency) {
-      if (taskFrequency.hasOwnProperty(task)) {
-        maxHeap.add(taskFrequency[task]);
+  }
+
+  let totalTime = 0
+
+  while (maxHeap.size() > 0) {
+    const tempTasks: number[] = []
+
+    for (let i = 0; i <= n; i++) {
+      if (maxHeap.size() > 0) {
+        tempTasks.push(maxHeap.pop() - 1)
       }
     }
-  
-    let totalTime = 0;
-  
-    while (maxHeap.size() > 0) {
-      const tempTasks: number[] = [];
-  
-      for (let i = 0; i <= n; i++) {
-        if (maxHeap.size() > 0) {
-          tempTasks.push(maxHeap.pop() - 1);
-        }
+
+    for (const task of tempTasks) {
+      if (task > 0) {
+        maxHeap.add(task)
       }
-  
-      for (const task of tempTasks) {
-        if (task > 0) {
-          maxHeap.add(task);
-        }
-      }
-  
-      totalTime += maxHeap.size() > 0 ? n + 1 : tempTasks.length;
     }
-  
-    return totalTime;
-  };
-  
-  // Example usage:
+
+    totalTime += maxHeap.size() > 0 ? n + 1 : tempTasks.length
+  }
+
+  return totalTime
+}
+
+// Example usage:
 //   const tasks1 = ["A", "A", "A", "B", "B", "B"];
 //   const n1 = 2;
 //   console.log(leastInterval(tasks1, n1)); // Output: 8
-  
+
 //   const tasks2 = ["A", "A", "A", "B", "B", "B"];
 //   const n2 = 0;
 //   console.log(leastInterval(tasks2, n2)); // Output: 6
-  
+
 //   const tasks3 = ["A", "A", "A", "A", "A", "A", "B", "C", "D", "E", "F", "G"];
 //   const n3 = 2;
 //   console.log(leastInterval(tasks3, n3)); // Output: 16
-  

@@ -4,8 +4,6 @@
 
 // You may assume that you have an infinite number of each kind of coin.
 
- 
-
 // Example 1:
 
 // Input: coins = [1,2,5], amount = 11
@@ -21,7 +19,6 @@
 
 // Input: coins = [1], amount = 0
 // Output: 0
- 
 
 // Constraints:
 
@@ -29,31 +26,25 @@
 // 1 <= coins[i] <= 231 - 1
 // 0 <= amount <= 104
 
-
-
 const coinChangeBruteForce = (coins: number[], amount: number): number => {
-    return 0
-  };
-  
+  return 0
+}
+
 const coinChangeNaiveImp = (coins: number[], amount: number): number => {
-    return 0
-  };
+  return 0
+}
 
- const coinChangeNaiveDec = (coins: number[], amount: number): number => {
-    return 0
-  };
+const coinChangeNaiveDec = (coins: number[], amount: number): number => {
+  return 0
+}
 
+const coinChangeOptimal = (coins: number[], amount: number): number => {
+  return 0
+}
 
-  const coinChangeOptimal = (coins: number[], amount: number): number => {
-    return 0
-  };
-
-
-  export const coinChange = {
-    coinChangeBruteForce,
-    coinChangeNaiveImp,
-    coinChangeNaiveDec,
-    coinChangeOptimal
-    }
-
-  
+export const coinChange = {
+  coinChangeBruteForce,
+  coinChangeNaiveImp,
+  coinChangeNaiveDec,
+  coinChangeOptimal,
+}

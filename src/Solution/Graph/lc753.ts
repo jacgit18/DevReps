@@ -11,8 +11,6 @@
 // After typing 5, the most recent 3 digits is "345", which is correct and the safe unlocks.
 // Return any string of minimum length that will unlock the safe at some point of entering it.
 
- 
-
 // Example 1:
 
 // Input: n = 1, k = 2
@@ -29,7 +27,6 @@
 // - "10" is typed in starting from the 3rd digit.
 // - "11" is typed in starting from the 2nd digit.
 // Thus "01100" will unlock the safe. "10011", and "11001" would also unlock the safe.
- 
 
 // Constraints:
 
@@ -37,33 +34,31 @@
 // 1 <= k <= 10
 // 1 <= kn <= 4096
 
+export const crackSafe = (n: number, k: number): string => {
+  const totalDigits = Math.pow(k, n)
 
-export const crackSafe = (n: number, k: number): string =>{
-        const totalDigits = Math.pow(k, n);
-      
-        // Initialize the result with a string of n zeroes
-        let result = '0'.repeat(n);
-      
-        const seen = new Set<string>();
-      
-        for (let i = 0; i < totalDigits; i++) {
-          const current = result.slice(-n + 1);
-      
-          for (let j = k - 1; j >= 0; j--) {
-            const next = current + j.toString();
-      
-            if (!seen.has(next)) {
-              seen.add(next);
-              result += j.toString();
-              break;
-            }
-          }
-        }
-      
-        return result;
-      };
-      
-      // Example usage:
-    //   console.log(crackSafe(1, 2)); // Output: "10"
-    //   console.log(crackSafe(2, 2)); // Output: "01100"
-      
+  // Initialize the result with a string of n zeroes
+  let result = "0".repeat(n)
+
+  const seen = new Set<string>()
+
+  for (let i = 0; i < totalDigits; i++) {
+    const current = result.slice(-n + 1)
+
+    for (let j = k - 1; j >= 0; j--) {
+      const next = current + j.toString()
+
+      if (!seen.has(next)) {
+        seen.add(next)
+        result += j.toString()
+        break
+      }
+    }
+  }
+
+  return result
+}
+
+// Example usage:
+//   console.log(crackSafe(1, 2)); // Output: "10"
+//   console.log(crackSafe(2, 2)); // Output: "01100"

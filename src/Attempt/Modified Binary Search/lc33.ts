@@ -52,10 +52,9 @@ const searchRangerOptimal = (nums: number[], target: number): number[] => {
 // const example3 = searchRanger([], 0)
 // console.log(example3)
 
-
 export const searchRanger = {
   searchRangerBruteForce,
   searchRangerNaiveImp,
   searchRangerNaiveDec,
-  searchRangerOptimal
+  searchRangerOptimal,
 }

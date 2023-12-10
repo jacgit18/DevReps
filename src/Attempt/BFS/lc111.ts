@@ -41,7 +41,7 @@ export const minDepth = {
   minDepthBruteForce,
   minDepthNaiveImp,
   minDepthNaiveDec,
-  minDepthOptimal
+  minDepthOptimal,
 }
 
 // Example usage:

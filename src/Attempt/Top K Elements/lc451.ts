@@ -2,8 +2,6 @@
 
 // Return the sorted string. If there are multiple answers, return any of them.
 
- 
-
 // Example 1:
 
 // Input: s = "tree"
@@ -24,7 +22,6 @@
 // Output: "bbAa"
 // Explanation: "bbaA" is also a valid answer, but "Aabb" is incorrect.
 // Note that 'A' and 'a' are treated as two different characters.
- 
 
 // Constraints:
 
@@ -33,27 +30,25 @@
 
 // import { MaxHeap } from "../../util/MaxHeapMakers";
 
+const frequencySortBruteForce = (s: string): string => {
+  return " "
+}
 
- const  frequencySortBruteForce = (s: string): string =>{
-    return " "
-};
+const frequencySortNaiveImp = (s: string): string => {
+  return " "
+}
 
-const  frequencySortNaiveImp = (s: string): string =>{
-    return " "
-};
+const frequencySortNaiveDec = (s: string): string => {
+  return " "
+}
 
-const  frequencySortNaiveDec = (s: string): string =>{
-    return " "
-};
-
-const  frequencySortOptimal = (s: string): string =>{
-    return " "
-};
-
+const frequencySortOptimal = (s: string): string => {
+  return " "
+}
 
 export const frequencySort = {
-    frequencySortBruteForce,
-    frequencySortNaiveImp,
-    frequencySortNaiveDec,
-    frequencySortOptimal
-    }
+  frequencySortBruteForce,
+  frequencySortNaiveImp,
+  frequencySortNaiveDec,
+  frequencySortOptimal,
+}

@@ -16,7 +16,6 @@ import { subsetsWithDup } from "./lc90"
 import { generateTrees } from "./lc95"
 import { numTrees } from "./lc96"
 
-
 export const SolutionBacktrack = {
   backtrackOne: matrix,
   backtrackTwo: robotPaths,
@@ -33,5 +32,5 @@ export const SolutionBacktrack = {
   lc289: gameOfLife,
   lc320: generateAbbreviations,
   lc442: findDuplicates,
-  lc784: letterCasePermutation
+  lc784: letterCasePermutation,
 }

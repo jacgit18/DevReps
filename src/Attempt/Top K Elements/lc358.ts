@@ -22,41 +22,30 @@
 
 // import { MaxHeap } from "../../util/MaxHeapMakers";
 
+const rearrangeStringBruteForce = (s: string, k: number): string => {
+  return " "
+}
 
-  
-const rearrangeStringBruteForce = (s: string, k: number): string =>{
+const rearrangeStringNaiveImp = (s: string, k: number): string => {
+  return " "
+}
 
-    return " ";
-  }
+const rearrangeStringNaiveDec = (s: string, k: number): string => {
+  return " "
+}
 
+const rearrangeStringOptimal = (s: string, k: number): string => {
+  return " "
+}
 
-const rearrangeStringNaiveImp = (s: string, k: number): string =>{
- 
-  
-    return " ";
-  }
+// Example usage:
+// console.log(rearrangeString("aabbcc", 3)); // Output: "abcabc"
+// console.log(rearrangeString("aaabc", 3)); // Output: ""
+// console.log(rearrangeString("aaadbbcc", 2)); // Output: "abacabcd"
 
-
-const rearrangeStringNaiveDec = (s: string, k: number): string =>{
-
-    return " ";
-  }
-
-
-  const rearrangeStringOptimal = (s: string, k: number): string =>{
-
-    return " ";
-  }
-  
-  // Example usage:
-  // console.log(rearrangeString("aabbcc", 3)); // Output: "abcabc"
-  // console.log(rearrangeString("aaabc", 3)); // Output: ""
-  // console.log(rearrangeString("aaadbbcc", 2)); // Output: "abacabcd"
-  
-
-  export const rearrangeString = {
-    rearrangeStringBruteForce,
-    rearrangeStringNaiveImp,
-    rearrangeStringNaiveDec,
-    rearrangeStringOptimal
-    }
+export const rearrangeString = {
+  rearrangeStringBruteForce,
+  rearrangeStringNaiveImp,
+  rearrangeStringNaiveDec,
+  rearrangeStringOptimal,
+}

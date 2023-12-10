@@ -4,10 +4,7 @@
 
 // You may return the answer in any order. The answer is guaranteed to be unique (except for the order that it is in).
 
- 
-
 // Example 1:
-
 
 // Input: points = [[1,3],[-2,2]], k = 1
 // Output: [[-2,2]]
@@ -22,34 +19,32 @@
 // Input: points = [[3,3],[5,-1],[-2,4]], k = 2
 // Output: [[3,3],[-2,4]]
 // Explanation: The answer [[-2,4],[3,3]] would also be accepted.
- 
 
 // Constraints:
 
 // 1 <= k <= points.length <= 104
 // -104 <= xi, yi <= 104
 
-import { MaxHeap } from "../../util/MaxHeapMakers";
-  
-  export const kClosest = (points: number[][], k: number): number[][] => {
-    const maxHeap = new MaxHeap();
-  
-    for (const point of points) {
-      maxHeap.add(point as [number, number]);
-      if (maxHeap.size() > k) {
-        maxHeap.pop();
-      }
+import { MaxHeap } from "../../util/MaxHeapMakers"
+
+export const kClosest = (points: number[][], k: number): number[][] => {
+  const maxHeap = new MaxHeap()
+
+  for (const point of points) {
+    maxHeap.add(point as [number, number])
+    if (maxHeap.size() > k) {
+      maxHeap.pop()
     }
-  
-    return maxHeap.heap;
-  };
-  
-  // Example usage:
+  }
+
+  return maxHeap.heap
+}
+
+// Example usage:
 //   const points1 = [[1, 3], [-2, 2]];
 //   const k1 = 1;
 //   console.log(kClosest(points1, k1)); // Output: [[-2, 2]]
-  
+
 //   const points2 = [[3, 3], [5, -1], [-2, 4]];
 //   const k2 = 2;
 //   console.log(kClosest(points2, k2)); // Output: [[3, 3], [-2, 4]]
-  

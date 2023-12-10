@@ -4,13 +4,11 @@
 
 // Return the least number of units of times that the CPU will take to finish all the given tasks.
 
- 
-
 // Example 1:
 
 // Input: tasks = ["A","A","A","B","B","B"], n = 2
 // Output: 8
-// Explanation: 
+// Explanation:
 // A -> B -> idle -> A -> B -> idle -> A -> B
 // There is at least 2 units of time between any two same tasks.
 
@@ -29,10 +27,9 @@
 
 // Input: tasks = ["A","A","A","A","A","A","B","C","D","E","F","G"], n = 2
 // Output: 16
-// Explanation: 
+// Explanation:
 // One possible solution is
 // A -> B -> C -> A -> D -> E -> A -> F -> G -> A -> idle -> idle -> A -> idle -> idle -> A
- 
 
 // Constraints:
 
@@ -42,26 +39,25 @@
 
 // import { MaxHeap } from "../../util/MaxHeapMakers";
 
+const leastIntervalBruteForce = (tasks: string[], n: number): number => {
+  return 0
+}
 
- const  leastIntervalBruteForce = (tasks: string[], n: number): number =>{
-    return 0
-};
+const leastIntervalNaiveImp = (tasks: string[], n: number): number => {
+  return 0
+}
 
-const  leastIntervalNaiveImp = (tasks: string[], n: number): number =>{
-    return 0
-};
+const leastIntervalNaiveDec = (tasks: string[], n: number): number => {
+  return 0
+}
 
-const  leastIntervalNaiveDec = (tasks: string[], n: number): number =>{
-    return 0
-};
-
-const  leastIntervalOptimal = (tasks: string[], n: number): number =>{
-    return 0
-};
+const leastIntervalOptimal = (tasks: string[], n: number): number => {
+  return 0
+}
 
 export const leastInterval = {
-    leastIntervalBruteForce,
-    leastIntervalNaiveImp,
-    leastIntervalNaiveDec,
-    leastIntervalOptimal
-    }
+  leastIntervalBruteForce,
+  leastIntervalNaiveImp,
+  leastIntervalNaiveDec,
+  leastIntervalOptimal,
+}

@@ -2,8 +2,6 @@
 
 // Given an integer array nums representing the amount of money of each house, return the maximum amount of money you can rob tonight without alerting the police.
 
- 
-
 // Example 1:
 
 // Input: nums = [1,2,3,1]
@@ -17,34 +15,31 @@
 // Output: 12
 // Explanation: Rob house 1 (money = 2), rob house 3 (money = 9) and rob house 5 (money = 1).
 // Total amount you can rob = 2 + 9 + 1 = 12.
- 
 
 // Constraints:
 
 // 1 <= nums.length <= 100
 // 0 <= nums[i] <= 400
 
+const robBruteForce = (nums: number[]): number => {
+  return 0
+}
 
- const robBruteForce = (nums: number[]): number =>{
-    return 0
-};
+const robNaiveImp = (nums: number[]): number => {
+  return 0
+}
 
-const robNaiveImp = (nums: number[]): number =>{
-    return 0
-};
+const robNaiveDec = (nums: number[]): number => {
+  return 0
+}
 
-const robNaiveDec = (nums: number[]): number =>{
-    return 0
-};
-
-const robOptimal = (nums: number[]): number =>{
-    return 0
-};
-
+const robOptimal = (nums: number[]): number => {
+  return 0
+}
 
 export const rob = {
-    robBruteForce,
-    robNaiveImp,
-    robNaiveDec,
-    robOptimal
-  }
+  robBruteForce,
+  robNaiveImp,
+  robNaiveDec,
+  robOptimal,
+}

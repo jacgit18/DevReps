@@ -7,7 +7,6 @@ import { findDuplicates } from "./lc442"
 import { findDisappearedNumbers } from "./lc448"
 import { findErrorNums } from "./lc645"
 
-
 export const SolutionCycSort = {
   sort: cyclic_sort,
   lc41: firstMissingPositive,

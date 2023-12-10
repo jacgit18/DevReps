@@ -2,8 +2,6 @@
 
 // Return true if you can reach the last index, or false otherwise.
 
- 
-
 // Example 1:
 
 // Input: nums = [2,3,1,1,4]
@@ -15,32 +13,31 @@
 // Input: nums = [3,2,1,0,4]
 // Output: false
 // Explanation: You will always arrive at index 3 no matter what. Its maximum jump length is 0, which makes it impossible to reach the last index.
- 
 
 // Constraints:
 
 // 1 <= nums.length <= 104
 // 0 <= nums[i] <= 105
 
- const canJumpBruteForce = (nums: number[]): boolean =>{
-    return true
-};
+const canJumpBruteForce = (nums: number[]): boolean => {
+  return true
+}
 
-const canJumpNaiveImp = (nums: number[]): boolean =>{
-    return true
-};
+const canJumpNaiveImp = (nums: number[]): boolean => {
+  return true
+}
 
-const canJumpNaiveDec = (nums: number[]): boolean =>{
-    return true
-};
+const canJumpNaiveDec = (nums: number[]): boolean => {
+  return true
+}
 
-const canJumpOptimal = (nums: number[]): boolean =>{
-    return true
-};
+const canJumpOptimal = (nums: number[]): boolean => {
+  return true
+}
 
 export const canJump = {
-    canJumpBruteForce,
-    canJumpNaiveImp,
-    canJumpNaiveDec,
-    canJumpOptimal
-    }
+  canJumpBruteForce,
+  canJumpNaiveImp,
+  canJumpNaiveDec,
+  canJumpOptimal,
+}

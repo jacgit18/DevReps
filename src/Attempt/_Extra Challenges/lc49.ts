@@ -26,11 +26,9 @@ const groupAnagramsBruteForce = (s: string[]): string[][] => {
   return [[" "]]
 }
 
-
 const groupAnagramsNaiveImp = (s: string[]): string[][] => {
   return [[" "]]
 }
-
 
 const groupAnagramsNaiveDec = (s: string[]): string[][] => {
   return [[" "]]
@@ -40,13 +38,11 @@ const groupAnagramsOptimal = (s: string[]): string[][] => {
   return [[" "]]
 }
 
-
-
 export const groupAnagrams = {
   groupAnagramsBruteForce,
   groupAnagramsNaiveImp,
   groupAnagramsNaiveDec,
-  groupAnagramsOptimal
+  groupAnagramsOptimal,
 }
 
 // [ [ 'eat', 'tea', 'ate' ], [ 'tan', 'nat' ], [ 'bat' ] ]

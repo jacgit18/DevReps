@@ -4,10 +4,7 @@
 
 // Do not modify the linked list.
 
- 
-
 // Example 1:
-
 
 // Input: head = [3,2,0,-4], pos = 1
 // Output: tail connects to node index 1
@@ -15,19 +12,15 @@
 
 // Example 2:
 
-
 // Input: head = [1,2], pos = 0
 // Output: tail connects to node index 0
 // Explanation: There is a cycle in the linked list, where tail connects to the first node.
 
-
 // Example 3:
-
 
 // Input: head = [1], pos = -1
 // Output: no cycle
 // Explanation: There is no cycle in the linked list.
- 
 
 // Constraints:
 
@@ -35,28 +28,27 @@
 // -105 <= Node.val <= 105
 // pos is -1 or a valid index in the linked-list.
 
-import { ListNode } from "../../util/LinkedListMaker";
+import { ListNode } from "../../util/LinkedListMaker"
 
- const detectCycleBruteForce = (head: ListNode | null): ListNode | null =>{
-    return null
-};
+const detectCycleBruteForce = (head: ListNode | null): ListNode | null => {
+  return null
+}
 
-const detectCycleNaiveImp = (head: ListNode | null): ListNode | null =>{
-    return null
-};
+const detectCycleNaiveImp = (head: ListNode | null): ListNode | null => {
+  return null
+}
 
-const detectCycleNaiveDec = (head: ListNode | null): ListNode | null =>{
-    return null
-};
+const detectCycleNaiveDec = (head: ListNode | null): ListNode | null => {
+  return null
+}
 
-const detectCycleOptimal = (head: ListNode | null): ListNode | null =>{
-    return null
-};
-
+const detectCycleOptimal = (head: ListNode | null): ListNode | null => {
+  return null
+}
 
 export const detectCycle = {
-    detectCycleBruteForce,
-    detectCycleNaiveImp,
-    detectCycleNaiveDec,
-    detectCycleOptimal
-    }
+  detectCycleBruteForce,
+  detectCycleNaiveImp,
+  detectCycleNaiveDec,
+  detectCycleOptimal,
+}

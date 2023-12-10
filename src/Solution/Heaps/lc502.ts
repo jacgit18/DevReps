@@ -8,8 +8,6 @@
 
 // The answer is guaranteed to fit in a 32-bit signed integer.
 
- 
-
 // Example 1:
 
 // Input: k = 2, w = 0, profits = [1,2,3], capital = [0,1,1]
@@ -24,7 +22,6 @@
 
 // Input: k = 3, w = 0, profits = [1,2,3], capital = [0,1,2]
 // Output: 6
- 
 
 // Constraints:
 
@@ -36,53 +33,51 @@
 // 0 <= profits[i] <= 104
 // 0 <= capital[i] <= 109
 
+import { MaxHeap } from "../../util/MaxHeapMakers"
 
-import { MaxHeap } from "../../util/MaxHeapMakers";
-  
-  export const findMaximizedCapital = (
-    k: number,
-    w: number,
-    profits: number[],
-    capital: number[]
-  ): number => {
-    const projects: [number, number][] = [];
-    const maxProfitHeap = new MaxHeap();
-    const minCapitalHeap = new MaxHeap();
-  
-    for (let i = 0; i < profits.length; i++) {
-      projects.push([capital[i], profits[i]]);
+export const findMaximizedCapital = (
+  k: number,
+  w: number,
+  profits: number[],
+  capital: number[],
+): number => {
+  const projects: [number, number][] = []
+  const maxProfitHeap = new MaxHeap()
+  const minCapitalHeap = new MaxHeap()
+
+  for (let i = 0; i < profits.length; i++) {
+    projects.push([capital[i], profits[i]])
+  }
+
+  projects.sort((a, b) => a[0] - b[0])
+
+  let availableCapital = w
+
+  for (let i = 0; i < k; i++) {
+    while (projects.length > 0 && projects[0][0] <= availableCapital) {
+      const [capital, profit] = projects.shift()!
+      maxProfitHeap.add(profit)
     }
-  
-    projects.sort((a, b) => a[0] - b[0]);
-  
-    let availableCapital = w;
-  
-    for (let i = 0; i < k; i++) {
-      while (projects.length > 0 && projects[0][0] <= availableCapital) {
-        const [capital, profit] = projects.shift()!;
-        maxProfitHeap.add(profit);
-      }
-  
-      if (maxProfitHeap.size() === 0) {
-        break;
-      }
-  
-      availableCapital += maxProfitHeap.pop()!;
+
+    if (maxProfitHeap.size() === 0) {
+      break
     }
-  
-    return availableCapital;
-  };
-  
-  // Example usage:
-  const k1 = 2,
-    w1 = 0,
-    profits1 = [1, 2, 3],
-    capital1 = [0, 1, 1];
-  // console.log(findMaximizedCapital(k1, w1, profits1, capital1)); // Output: 4
-  
-  const k2 = 3,
-    w2 = 0,
-    profits2 = [1, 2, 3],
-    capital2 = [0, 1, 2];
-  // console.log(findMaximizedCapital(k2, w2, profits2, capital2)); // Output: 6
-  
+
+    availableCapital += maxProfitHeap.pop()!
+  }
+
+  return availableCapital
+}
+
+// Example usage:
+const k1 = 2,
+  w1 = 0,
+  profits1 = [1, 2, 3],
+  capital1 = [0, 1, 1]
+// console.log(findMaximizedCapital(k1, w1, profits1, capital1)); // Output: 4
+
+const k2 = 3,
+  w2 = 0,
+  profits2 = [1, 2, 3],
+  capital2 = [0, 1, 2]
+// console.log(findMaximizedCapital(k2, w2, profits2, capital2)); // Output: 6

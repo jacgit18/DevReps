@@ -65,7 +65,7 @@ export const connect = {
   connectBruteForce,
   connectNaiveImp,
   connectNaiveDec,
-  connectOptimal
+  connectOptimal,
 }
 
 // Example usage:

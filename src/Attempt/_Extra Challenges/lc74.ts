@@ -6,20 +6,15 @@
 
 // You must write a solution in O(log(m * n)) time complexity.
 
- 
-
 // Example 1:
-
 
 // Input: matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 3
 // Output: true
 
 // Example 2:
 
-
 // Input: matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 13
 // Output: false
- 
 
 // Constraints:
 
@@ -28,29 +23,25 @@
 // 1 <= m, n <= 100
 // -104 <= matrix[i][j], target <= 104
 
- const searchMatrixBruteForce = (matrix: number[][], target: number): boolean =>{
-    return true
-    
-};
+const searchMatrixBruteForce = (matrix: number[][], target: number): boolean => {
+  return true
+}
 
-const searchMatrixNaiveImp = (matrix: number[][], target: number): boolean =>{
-    return true
-    
-};
+const searchMatrixNaiveImp = (matrix: number[][], target: number): boolean => {
+  return true
+}
 
-const searchMatrixNaiveDec = (matrix: number[][], target: number): boolean =>{
-    return true
-    
-};
+const searchMatrixNaiveDec = (matrix: number[][], target: number): boolean => {
+  return true
+}
 
-const searchMatrixOptimal = (matrix: number[][], target: number): boolean =>{
-    return true
-    
-};
+const searchMatrixOptimal = (matrix: number[][], target: number): boolean => {
+  return true
+}
 
 export const searchMatrix = {
-    searchMatrixBruteForce,
-    searchMatrixNaiveImp,
-    searchMatrixNaiveDec,
-    searchMatrixOptimal
-  }
+  searchMatrixBruteForce,
+  searchMatrixNaiveImp,
+  searchMatrixNaiveDec,
+  searchMatrixOptimal,
+}

@@ -43,9 +43,8 @@ export const singleNumber = {
   singleNumberBruteForce,
   singleNumberNaiveImp,
   singleNumberNaiveDec,
-  singleNumberOptimal
+  singleNumberOptimal,
 }
-
 
 // Example usage:
 // const nums1 = [2, 2, 1]

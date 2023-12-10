@@ -2,8 +2,6 @@
 
 // The test cases are generated so that the answer fits on a 32-bit signed integer.
 
- 
-
 // Example 1:
 
 // Input: s = "rabbbit", t = "rabbit"
@@ -25,39 +23,31 @@
 // babgbag
 // babgbag
 // babgbag
- 
 
 // Constraints:
 
 // 1 <= s.length, t.length <= 1000
 // s and t consist of English letters.
 
+const numDistinctBruteForce = (s: string, t: string): number => {
+  return 0
+}
 
- const numDistinctBruteForce = (s: string, t: string): number =>{
-    return 0
-    
-};
+const numDistinctNaiveImp = (s: string, t: string): number => {
+  return 0
+}
 
-const numDistinctNaiveImp = (s: string, t: string): number =>{
-    return 0
-    
-};
+const numDistinctNaiveDec = (s: string, t: string): number => {
+  return 0
+}
 
-
-const numDistinctNaiveDec = (s: string, t: string): number =>{
-    return 0
-    
-};
-
-const numDistinctOptimal = (s: string, t: string): number =>{
-    return 0
-    
-};
-
+const numDistinctOptimal = (s: string, t: string): number => {
+  return 0
+}
 
 export const numDistinct = {
-    numDistinctBruteForce,
-    numDistinctNaiveImp,
-    numDistinctNaiveDec,
-    numDistinctOptimal
-  }
+  numDistinctBruteForce,
+  numDistinctNaiveImp,
+  numDistinctNaiveDec,
+  numDistinctOptimal,
+}

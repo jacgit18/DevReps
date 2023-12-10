@@ -22,7 +22,7 @@
 
 import { ListNode, createLinkedListFromArray } from "../../../src/util/LinkedListMaker"
 
- const reverseListIter = (head: ListNode | null): ListNode | null => {
+const reverseListIter = (head: ListNode | null): ListNode | null => {
   if (head == null || head.value < 0) return null
   let current: ListNode | null = head
   let previous: ListNode | null = null
@@ -37,7 +37,7 @@ import { ListNode, createLinkedListFromArray } from "../../../src/util/LinkedLis
   return previous
 }
 
-const reverseListRec = (head: ListNode | null): ListNode | null =>{
+const reverseListRec = (head: ListNode | null): ListNode | null => {
   if (!head) return null
 
   function reverse(currNode: ListNode, prev: ListNode | null): ListNode | null {
@@ -59,7 +59,7 @@ head.next.next.next.next = new ListNode(10)
 let array1 = [1, 5, 7, 10]
 let linkedList = createLinkedListFromArray(array1)
 
- const printFowardIter = (node: ListNode | null) => {
+const printFowardIter = (node: ListNode | null) => {
   let current: ListNode | null = node
   while (current !== null) {
     console.log(current.value)
@@ -67,7 +67,7 @@ let linkedList = createLinkedListFromArray(array1)
   }
 }
 
- const printFowardRec = (node: ListNode | null): ListNode | null => {
+const printFowardRec = (node: ListNode | null): ListNode | null => {
   let current: ListNode | null = node
   if (current !== null) {
     console.log(current.value)
@@ -76,14 +76,11 @@ let linkedList = createLinkedListFromArray(array1)
   return null // Ensure that you return null at the end of the function if the node is null
 }
 
- const printBackwardRec = (node: ListNode | null) => {
+const printBackwardRec = (node: ListNode | null) => {
   if (node === null) return
   printBackwardRec(node.next)
   console.log(node.value)
 }
-
-
-
 
 export const reverseList = {
   reverseListIter,

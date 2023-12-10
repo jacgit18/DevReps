@@ -9,8 +9,6 @@
 // getMinKey() Returns one of the keys with the minimum count. If no element exists, return an empty string "".
 // Note that each function must run in O(1) average time complexity.
 
- 
-
 // Example 1:
 
 // Input
@@ -28,7 +26,6 @@
 // allOne.inc("leet");
 // allOne.getMaxKey(); // return "hello"
 // allOne.getMinKey(); // return "leet"
- 
 
 // Constraints:
 
@@ -37,43 +34,34 @@
 // It is guaranteed that for each call to dec, key is existing in the data structure.
 // At most 5 * 104 calls will be made to inc, dec, getMaxKey, and getMinKey.
 
-
 class Node {
-    count: number;
-    keys: Set<string>;
-    prev: Node | null;
-    next: Node | null;
+  count: number
+  keys: Set<string>
+  prev: Node | null
+  next: Node | null
 
-    constructor(count: number) {
-        this.count = count;
-        this.keys = new Set();
-        this.prev = null;
-        this.next = null;
-    }
+  constructor(count: number) {
+    this.count = count
+    this.keys = new Set()
+    this.prev = null
+    this.next = null
+  }
 }
 
-
 export class AllOne {
-    constructor() {
-        
-    }
+  constructor() {}
 
-    inc(key: string): void {
-        
-    }
+  inc(key: string): void {}
 
-    dec(key: string): void {
-        
-    }
+  dec(key: string): void {}
 
-    getMaxKey(): string {
-        return " "
-    }
+  getMaxKey(): string {
+    return " "
+  }
 
-    getMinKey(): string {
-        return " "
-
-    }
+  getMinKey(): string {
+    return " "
+  }
 }
 
 /**
@@ -84,7 +72,6 @@ export class AllOne {
  * var param_3 = obj.getMaxKey()
  * var param_4 = obj.getMinKey()
  */
-
 
 // export const AllOne = {
 //     AllOneBruteForce,

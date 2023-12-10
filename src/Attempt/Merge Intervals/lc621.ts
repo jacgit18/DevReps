@@ -61,10 +61,9 @@ const leastIntervalOptimal = (tasks: string[], n: number): number => {
 // const example3 = leastInterval(["A", "A", "A", "A", "A", "A", "B", "C", "D", "E", "F", "G"], 2)
 // console.log(example3) // Output: 16
 
-
 export const leastInterval = {
   leastIntervalBruteForce,
   leastIntervalNaiveImp,
   leastIntervalNaiveDec,
-  leastIntervalOptimal
+  leastIntervalOptimal,
 }

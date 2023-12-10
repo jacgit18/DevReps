@@ -46,10 +46,9 @@ const findAnagramsOptimal = (s: string, p: string): number[] => {
 // const example2 = findAnagrams("abab", "ab")
 // console.log(example2) // Output: [0, 1, 2]
 
-
 export const findAnagrams = {
   findAnagramsBruteForce,
   findAnagramsNaiveImp,
   findAnagramsNaiveDec,
-  findAnagramsOptimal
+  findAnagramsOptimal,
 }

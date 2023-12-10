@@ -4,8 +4,6 @@
 
 // Find and return the maximum profit you can achieve.
 
- 
-
 // Example 1:
 
 // Input: prices = [7,1,5,3,6,4]
@@ -26,33 +24,31 @@
 // Input: prices = [7,6,4,3,1]
 // Output: 0
 // Explanation: There is no way to make a positive profit, so we never buy the stock to achieve the maximum profit of 0.
- 
 
 // Constraints:
 
 // 1 <= prices.length <= 3 * 104
 // 0 <= prices[i] <= 104
 
-export const maxProfit = (prices: number[]): number =>{
-        let maxProfit = 0;
-    
-        for (let i = 1; i < prices.length; i++) {
-            if (prices[i] > prices[i - 1]) {
-                // If the current price is higher than the previous day, buy and sell on the same day.
-                maxProfit += prices[i] - prices[i - 1];
-            }
-        }
-    
-        return maxProfit;
+export const maxProfit = (prices: number[]): number => {
+  let maxProfit = 0
+
+  for (let i = 1; i < prices.length; i++) {
+    if (prices[i] > prices[i - 1]) {
+      // If the current price is higher than the previous day, buy and sell on the same day.
+      maxProfit += prices[i] - prices[i - 1]
     }
-    
-    // Example usage:
-    // const prices1 = [7, 1, 5, 3, 6, 4];
-    // console.log(maxProfit(prices1));  // Output: 7
-    
-    // const prices2 = [1, 2, 3, 4, 5];
-    // console.log(maxProfit(prices2));  // Output: 4
-    
-    // const prices3 = [7, 6, 4, 3, 1];
-    // console.log(maxProfit(prices3));  // Output: 0
-    
+  }
+
+  return maxProfit
+}
+
+// Example usage:
+// const prices1 = [7, 1, 5, 3, 6, 4];
+// console.log(maxProfit(prices1));  // Output: 7
+
+// const prices2 = [1, 2, 3, 4, 5];
+// console.log(maxProfit(prices2));  // Output: 4
+
+// const prices3 = [7, 6, 4, 3, 1];
+// console.log(maxProfit(prices3));  // Output: 0

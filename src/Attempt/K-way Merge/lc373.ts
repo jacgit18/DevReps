@@ -4,8 +4,6 @@
 
 // Return the k pairs (u1, v1), (u2, v2), ..., (uk, vk) with the smallest sums.
 
- 
-
 // Example 1:
 
 // Input: nums1 = [1,7,11], nums2 = [2,4,6], k = 3
@@ -23,7 +21,6 @@
 // Input: nums1 = [1,2], nums2 = [3], k = 3
 // Output: [[1,3],[2,3]]
 // Explanation: All possible pairs are returned from the sequence: [1,3],[2,3]
- 
 
 // Constraints:
 
@@ -32,32 +29,25 @@
 // nums1 and nums2 both are sorted in non-decreasing order.
 // 1 <= k <= 104
 
- const kSmallestPairsBruteForce = (nums1: number[], nums2: number[], k: number): number[][] =>{
-    return [[0]]
-    
-};
+const kSmallestPairsBruteForce = (nums1: number[], nums2: number[], k: number): number[][] => {
+  return [[0]]
+}
 
-const kSmallestPairsNaiveImp = (nums1: number[], nums2: number[], k: number): number[][] =>{
-    return [[0]]
-    
-};
+const kSmallestPairsNaiveImp = (nums1: number[], nums2: number[], k: number): number[][] => {
+  return [[0]]
+}
 
+const kSmallestPairsNaiveDec = (nums1: number[], nums2: number[], k: number): number[][] => {
+  return [[0]]
+}
 
-const kSmallestPairsNaiveDec = (nums1: number[], nums2: number[], k: number): number[][] =>{
-    return [[0]]
-    
-};
-
-
-const kSmallestPairsOptimal = (nums1: number[], nums2: number[], k: number): number[][] =>{
-    return [[0]]
-    
-};
-
+const kSmallestPairsOptimal = (nums1: number[], nums2: number[], k: number): number[][] => {
+  return [[0]]
+}
 
 export const kSmallestPairs = {
-    kSmallestPairsBruteForce,
-    kSmallestPairsNaiveImp,
-    kSmallestPairsNaiveDec,
-    kSmallestPairsOptimal
-    }
+  kSmallestPairsBruteForce,
+  kSmallestPairsNaiveImp,
+  kSmallestPairsNaiveDec,
+  kSmallestPairsOptimal,
+}

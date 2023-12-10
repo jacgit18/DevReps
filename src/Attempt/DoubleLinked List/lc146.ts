@@ -7,8 +7,6 @@
 // void put(int key, int value) Update the value of the key if the key exists. Otherwise, add the key-value pair to the cache. If the number of keys exceeds the capacity from this operation, evict the least recently used key.
 // The functions get and put must each run in O(1) average time complexity.
 
- 
-
 // Example 1:
 
 // Input
@@ -28,7 +26,6 @@
 // lRUCache.get(1);    // return -1 (not found)
 // lRUCache.get(3);    // return 3
 // lRUCache.get(4);    // return 4
- 
 
 // Constraints:
 
@@ -38,33 +35,27 @@
 // At most 2 * 105 calls will be made to get and put.
 
 class ListNode {
-    key: number;
-    value: number;
-    prev: ListNode | null;
-    next: ListNode | null;
+  key: number
+  value: number
+  prev: ListNode | null
+  next: ListNode | null
 
-    constructor(key: number, value: number) {
-        this.key = key;
-        this.value = value;
-        this.prev = null;
-        this.next = null;
-    }
+  constructor(key: number, value: number) {
+    this.key = key
+    this.value = value
+    this.prev = null
+    this.next = null
+  }
 }
 
-
-
 export class LRUCache {
-    constructor(capacity: number) {
-        
-    }
+  constructor(capacity: number) {}
 
-    get(key: number): number {
-        return 0
-    }
+  get(key: number): number {
+    return 0
+  }
 
-    put(key: number, value: number): void {
-        
-    }
+  put(key: number, value: number): void {}
 }
 
 /**
@@ -73,7 +64,6 @@ export class LRUCache {
  * var param_1 = obj.get(key)
  * obj.put(key,value)
  */
-
 
 // export const LRUCache = {
 //     LRUCacheBruteForce,

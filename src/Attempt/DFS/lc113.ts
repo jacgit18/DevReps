@@ -60,7 +60,7 @@ export const pathSumTwo = {
   pathSumTwoBruteForce,
   pathSumTwoNaiveImp,
   pathSumTwoNaiveDec,
-  pathSumTwoOptimal
+  pathSumTwoOptimal,
 }
 
 // Example usage:

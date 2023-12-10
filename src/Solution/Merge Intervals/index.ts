@@ -6,7 +6,6 @@ import { leastInterval } from "./lc621"
 import { employeeFreeTime } from "./lc759"
 import { intervalIntersection } from "./lc986"
 
-
 export const SolutionMergeInterval = {
   lc56: merge,
   lc57: insertInterval,

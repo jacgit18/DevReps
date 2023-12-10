@@ -42,6 +42,5 @@ export const characterReplacement = {
   characterReplacementBruteForce,
   characterReplacementNaiveImp,
   characterReplacementNaiveDec,
-  characterReplacementOptimal
+  characterReplacementOptimal,
 }
-

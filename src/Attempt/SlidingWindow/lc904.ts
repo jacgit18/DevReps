@@ -32,7 +32,7 @@
 // 1 <= fruits.length <= 105
 // 0 <= fruits[i] < fruits.length
 
- const totalFruitBruteForce = (fruits: number[]): number => {
+const totalFruitBruteForce = (fruits: number[]): number => {
   return 0
 }
 
@@ -48,12 +48,11 @@ const totalFruitOptimal = (fruits: number[]): number => {
   return 0
 }
 
-
 export const totalFruit = {
   totalFruitBruteForce,
   totalFruitNaiveImp,
   totalFruitNaiveDec,
-  totalFruitOptimal
+  totalFruitOptimal,
 }
 
 // Example usage:

@@ -1,5 +1,4 @@
-
-export const selectionSort = (array: number[]): number[] =>{
+export const selectionSort = (array: number[]): number[] => {
   const length: number = array.length
   for (let i: number = 0; i < length; i++) {
     // Set the current index as the minimum

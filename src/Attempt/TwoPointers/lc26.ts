@@ -59,7 +59,7 @@ export const removeDuplicates = {
   removeDuplicatesBruteForce,
   removeDuplicatesNaiveImp,
   removeDuplicatesNaiveDec,
-  removeDuplicatesOptimal
+  removeDuplicatesOptimal,
 }
 
 // Example usage:

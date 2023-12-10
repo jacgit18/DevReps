@@ -4,8 +4,6 @@
 
 // You must find a solution with a memory complexity better than O(n2).
 
- 
-
 // Example 1:
 
 // Input: matrix = [[1,5,9],[10,11,13],[12,13,15]], k = 8
@@ -15,7 +13,6 @@
 
 // Input: matrix = [[-5]], k = 1
 // Output: -5
- 
 
 // Constraints:
 
@@ -24,43 +21,31 @@
 // -109 <= matrix[i][j] <= 109
 // All the rows and columns of matrix are guaranteed to be sorted in non-decreasing order.
 // 1 <= k <= n2
- 
 
 // Follow up:
 
 // Could you solve the problem with a constant memory (i.e., O(1) memory complexity)?
 // Could you solve the problem in O(n) time complexity? The solution may be too advanced for an interview but you may find reading this paper fun.
 
+const kthSmallestBruteForce = (matrix: number[][], k: number): number => {
+  return 0
+}
 
- const kthSmallestBruteForce = (matrix: number[][], k: number): number =>{
+const kthSmallestNaiveImp = (matrix: number[][], k: number): number => {
+  return 0
+}
 
-    return 0
-    
-};
+const kthSmallestNaiveDec = (matrix: number[][], k: number): number => {
+  return 0
+}
 
-
-const kthSmallestNaiveImp = (matrix: number[][], k: number): number =>{
-
-    return 0
-    
-};
-
-const kthSmallestNaiveDec = (matrix: number[][], k: number): number =>{
-
-    return 0
-    
-};
-
-
-const kthSmallestOptimal = (matrix: number[][], k: number): number =>{
-
-    return 0
-    
-};
+const kthSmallestOptimal = (matrix: number[][], k: number): number => {
+  return 0
+}
 
 export const kthSmallest = {
-    kthSmallestBruteForce,
-    kthSmallestNaiveImp,
-    kthSmallestNaiveDec,
-    kthSmallestOptimal
-    }
+  kthSmallestBruteForce,
+  kthSmallestNaiveImp,
+  kthSmallestNaiveDec,
+  kthSmallestOptimal,
+}

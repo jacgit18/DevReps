@@ -39,12 +39,8 @@
 // - A document file (text, Word, PDF, or any format that we can likely open) describing the database schema, if you
 // use tables.
 
-
-
 // Database table representation
-export class SUPPLIER_PRODUCT {
-   
-}
+export class SUPPLIER_PRODUCT {}
 
 // Assumptions:
 // - Database connection details, error handling, and other non-core functionalities are not detailed here for simplicity.

@@ -47,5 +47,5 @@ export const findUnsortedSubarray = {
   findUnsortedSubarrayBruteForce,
   findUnsortedSubarrayNaiveImp,
   findUnsortedSubarrayNaiveDec,
-  findUnsortedSubarrayOptimal
+  findUnsortedSubarrayOptimal,
 }

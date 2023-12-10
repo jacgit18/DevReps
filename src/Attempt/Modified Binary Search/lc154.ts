@@ -51,10 +51,9 @@ const findMinTwoOptimal = (nums: number[]): number => {
 // const nums3 = [11, 13, 15, 17]
 // console.log(findMinTwo(nums3)) // Output: 11
 
-
 export const findMinTwo = {
   findMinTwoBruteForce,
   findMinTwoNaiveImp,
   findMinTwoNaiveDec,
-  findMinTwoOptimal
+  findMinTwoOptimal,
 }

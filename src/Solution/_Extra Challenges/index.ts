@@ -49,7 +49,5 @@ export const SolutionExtra = {
   lc887: superEggDrop,
   lc1103: distributeCandiesTwo,
   lc1143: longestCommonSubsequence,
-  lc1911: maxAlternatingSum
-
+  lc1911: maxAlternatingSum,
 }
-

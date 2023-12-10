@@ -6,13 +6,11 @@
 
 // Return the minimum number of moves that you need to determine with certainty what the value of f is.
 
- 
-
 // Example 1:
 
 // Input: k = 1, n = 2
 // Output: 2
-// Explanation: 
+// Explanation:
 // Drop the egg from floor 1. If it breaks, we know that f = 0.
 // Otherwise, drop the egg from floor 2. If it breaks, we know that f = 1.
 // If it does not break, then we know f = 2.
@@ -27,36 +25,36 @@
 
 // Input: k = 3, n = 14
 // Output: 4
- 
 
 // Constraints:
 
 // 1 <= k <= 100
 // 1 <= n <= 104
 
+export const superEggDrop = (k: number, n: number): number => {
+  const dp: number[][] = new Array(k + 1).fill([]).map(() => new Array(n + 1).fill(0))
 
-export const superEggDrop = (k: number, n: number): number =>{
-        const dp: number[][] = new Array(k + 1).fill([]).map(() => new Array(n + 1).fill(0));
-    
-        for (let i = 1; i <= n; i++) {
-            dp[1][i] = i;
-        }
-    
-        for (let i = 2; i <= k; i++) {
-            let x = 1;
-            for (let j = 1; j <= n; j++) {
-                while (x < j && Math.max(dp[i - 1][x - 1], dp[i][j - x]) > Math.max(dp[i - 1][x], dp[i][j - x - 1])) {
-                    x++;
-                }
-                dp[i][j] = 1 + Math.max(dp[i - 1][x - 1], dp[i][j - x]);
-            }
-        }
-    
-        return dp[k][n];
+  for (let i = 1; i <= n; i++) {
+    dp[1][i] = i
+  }
+
+  for (let i = 2; i <= k; i++) {
+    let x = 1
+    for (let j = 1; j <= n; j++) {
+      while (
+        x < j &&
+        Math.max(dp[i - 1][x - 1], dp[i][j - x]) > Math.max(dp[i - 1][x], dp[i][j - x - 1])
+      ) {
+        x++
+      }
+      dp[i][j] = 1 + Math.max(dp[i - 1][x - 1], dp[i][j - x])
     }
-    
-    // Example usage:
-    // console.log(superEggDrop(1, 2));   // Output: 2
-    // console.log(superEggDrop(2, 6));   // Output: 3
-    // console.log(superEggDrop(3, 14));  // Output: 4
-    
+  }
+
+  return dp[k][n]
+}
+
+// Example usage:
+// console.log(superEggDrop(1, 2));   // Output: 2
+// console.log(superEggDrop(2, 6));   // Output: 3
+// console.log(superEggDrop(3, 14));  // Output: 4

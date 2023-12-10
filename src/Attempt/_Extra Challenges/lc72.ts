@@ -5,13 +5,12 @@
 // Insert a character
 // Delete a character
 // Replace a character
- 
 
 // Example 1:
 
 // Input: word1 = "horse", word2 = "ros"
 // Output: 3
-// Explanation: 
+// Explanation:
 // horse -> rorse (replace 'h' with 'r')
 // rorse -> rose (remove 'r')
 // rose -> ros (remove 'e')
@@ -20,45 +19,37 @@
 
 // Input: word1 = "intention", word2 = "execution"
 // Output: 5
-// Explanation: 
+// Explanation:
 // intention -> inention (remove 't')
 // inention -> enention (replace 'i' with 'e')
 // enention -> exention (replace 'n' with 'x')
 // exention -> exection (replace 'n' with 'c')
 // exection -> execution (insert 'u')
- 
 
 // Constraints:
 
 // 0 <= word1.length, word2.length <= 500
 // word1 and word2 consist of lowercase English letters.
 
- const minDistanceBruteForce = (word1: string, word2: string): number =>{
-    return 0
-    
-};
+const minDistanceBruteForce = (word1: string, word2: string): number => {
+  return 0
+}
 
+const minDistanceNaiveImp = (word1: string, word2: string): number => {
+  return 0
+}
 
-const minDistanceNaiveImp = (word1: string, word2: string): number =>{
-    return 0
-    
-};
+const minDistanceNaiveDec = (word1: string, word2: string): number => {
+  return 0
+}
 
-
-const minDistanceNaiveDec = (word1: string, word2: string): number =>{
-    return 0
-    
-};
-
-
-const minDistanceOptimal = (word1: string, word2: string): number =>{
-    return 0
-    
-};
+const minDistanceOptimal = (word1: string, word2: string): number => {
+  return 0
+}
 
 export const minDistance = {
-    minDistanceBruteForce,
-    minDistanceNaiveImp,
-    minDistanceNaiveDec,
-    minDistanceOptimal
-  }
+  minDistanceBruteForce,
+  minDistanceNaiveImp,
+  minDistanceNaiveDec,
+  minDistanceOptimal,
+}

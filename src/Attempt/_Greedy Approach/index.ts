@@ -17,4 +17,3 @@ export const AttemptGreedyApproach = {
   lc135: candy,
   lc409: longestPalindrome,
 }
-

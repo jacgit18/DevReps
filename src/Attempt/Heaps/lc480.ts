@@ -6,13 +6,11 @@
 
 // Return the median array for each window in the original array. Answers within 10-5 of the actual value will be accepted.
 
- 
-
 // Example 1:
 
 // Input: nums = [1,3,-1,-3,5,3,6,7], k = 3
 // Output: [1.00000,-1.00000,-1.00000,3.00000,5.00000,6.00000]
-// Explanation: 
+// Explanation:
 // Window position                Median
 // ---------------                -----
 // [1  3  -1] -3  5  3  6  7        1
@@ -26,34 +24,31 @@
 
 // Input: nums = [1,2,3,4,2,3,1,4,2], k = 3
 // Output: [2.00000,3.00000,3.00000,3.00000,2.00000,3.00000,2.00000]
- 
 
 // Constraints:
 
 // 1 <= k <= nums.length <= 105
 // -231 <= nums[i] <= 231 - 1
 
+const medianSlidingWindowBruteForce = (nums: number[], k: number): number[] => {
+  return [0]
+}
 
- const medianSlidingWindowBruteForce = (nums: number[], k: number): number[] =>{
-    return [0]
-};
+const medianSlidingWindowNaiveImp = (nums: number[], k: number): number[] => {
+  return [0]
+}
 
-const medianSlidingWindowNaiveImp = (nums: number[], k: number): number[] =>{
-    return [0]
-};
+const medianSlidingWindowNaiveDec = (nums: number[], k: number): number[] => {
+  return [0]
+}
 
-
-const medianSlidingWindowNaiveDec = (nums: number[], k: number): number[] =>{
-    return [0]
-};
-
-const medianSlidingWindowOptimal = (nums: number[], k: number): number[] =>{
-    return [0]
-};
+const medianSlidingWindowOptimal = (nums: number[], k: number): number[] => {
+  return [0]
+}
 
 export const medianSlidingWindow = {
-    medianSlidingWindowBruteForce,
-    medianSlidingWindowNaiveImp,
-    medianSlidingWindowNaiveDec,
-    medianSlidingWindowOptimal
-    }
+  medianSlidingWindowBruteForce,
+  medianSlidingWindowNaiveImp,
+  medianSlidingWindowNaiveDec,
+  medianSlidingWindowOptimal,
+}

@@ -66,7 +66,7 @@ export const sumNumbers = {
   sumNumbersBruteForce,
   sumNumbersNaiveImp,
   sumNumbersNaiveDec,
-  sumNumbersOptimal
+  sumNumbersOptimal,
 }
 
 // Example usage:

@@ -5,8 +5,6 @@
 // For example, if nums = [2, 1], you can add a '+' before 2 and a '-' before 1 and concatenate them to build the expression "+2-1".
 // Return the number of different expressions that you can build, which evaluates to target.
 
- 
-
 // Example 1:
 
 // Input: nums = [1,1,1,1,1], target = 3
@@ -22,7 +20,6 @@
 
 // Input: nums = [1], target = 1
 // Output: 1
- 
 
 // Constraints:
 
@@ -31,26 +28,25 @@
 // 0 <= sum(nums[i]) <= 1000
 // -1000 <= target <= 1000
 
- const findTargetSumWaysBruteForce = (nums: number[], target: number): number =>{
-    return 0
-};
+const findTargetSumWaysBruteForce = (nums: number[], target: number): number => {
+  return 0
+}
 
-const findTargetSumWaysNaiveImp = (nums: number[], target: number): number =>{
-    return 0
-};
+const findTargetSumWaysNaiveImp = (nums: number[], target: number): number => {
+  return 0
+}
 
-const findTargetSumWaysNaiveDec = (nums: number[], target: number): number =>{
-    return 0
-};
+const findTargetSumWaysNaiveDec = (nums: number[], target: number): number => {
+  return 0
+}
 
-const findTargetSumWaysOptimal = (nums: number[], target: number): number =>{
-    return 0
-};
-
+const findTargetSumWaysOptimal = (nums: number[], target: number): number => {
+  return 0
+}
 
 export const findTargetSumWays = {
-    findTargetSumWaysBruteForce,
-    findTargetSumWaysNaiveImp,
-    findTargetSumWaysNaiveDec,
-    findTargetSumWaysOptimal
-    }
+  findTargetSumWaysBruteForce,
+  findTargetSumWaysNaiveImp,
+  findTargetSumWaysNaiveDec,
+  findTargetSumWaysOptimal,
+}

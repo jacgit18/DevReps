@@ -43,7 +43,7 @@ export const firstMissingPositive = {
   firstMissingPositiveBruteForce,
   firstMissingPositiveNaiveImp,
   firstMissingPositiveNaiveDec,
-  firstMissingPositiveOptimal
+  firstMissingPositiveOptimal,
 }
 
 // Example usage:

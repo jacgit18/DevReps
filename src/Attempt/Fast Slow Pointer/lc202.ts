@@ -47,10 +47,9 @@ const isHappyOptimal = (n: number): boolean => {
 // console.log(isHappy(19)) // Output: true
 // console.log(isHappy(2)) // Output: false
 
-
 export const isHappy = {
   isHappyBruteForce,
   isHappyNaiveImp,
   isHappyNaiveDec,
-  isHappyOptimal
+  isHappyOptimal,
 }

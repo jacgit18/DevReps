@@ -51,7 +51,7 @@ export const hasPathSum = {
   hasPathSumBruteForce,
   hasPathSumNaiveImp,
   hasPathSumNaiveDec,
-  hasPathSumOptimal
+  hasPathSumOptimal,
 }
 
 // Example usage:

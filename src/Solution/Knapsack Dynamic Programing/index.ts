@@ -22,6 +22,4 @@ export const SolutionKnapSack = {
   dynamicMinStep: minStepsToOne,
   fibonacci: fibs,
   memTopDown: memoizeAddTo80,
-  
-
 }

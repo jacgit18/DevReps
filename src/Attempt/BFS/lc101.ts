@@ -52,10 +52,9 @@ tree2.right.right = new TreeNode(3)
 
 // console.log(isSymmetric(tree2)) // Output: false
 
-
 export const isSymmetric = {
   isSymmetricBruteForce,
   isSymmetricNaiveImp,
   isSymmetricNaiveDec,
-  isSymmetricOptimal
+  isSymmetricOptimal,
 }

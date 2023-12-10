@@ -21,8 +21,6 @@
 
 // import { MinHeap } from "../../util/MinHeapMaker";
 
-
-
 const findKthLargestBruteForce = (nums: number[], k: number): number | undefined => {
   return 0
 }
@@ -43,10 +41,9 @@ const findKthLargestOptimal = (nums: number[], k: number): number | undefined =>
 // console.log(findKthLargest([3, 2, 1, 5, 6, 4], 2)) // Output: 5
 // console.log(findKthLargest([3, 2, 3, 1, 2, 4, 5, 5, 6], 4)) // Output: 4
 
-
 export const findKthLargest = {
   findKthLargestBruteForce,
   findKthLargestNaiveImp,
   findKthLargestNaiveDec,
-  findKthLargestOptimal
+  findKthLargestOptimal,
 }

@@ -41,10 +41,9 @@ const checkInclusionOptimal = (s1: string, s2: string): boolean => {
 // console.log(checkInclusion(s1, s2)) // true
 // console.log(checkInclusion(s1, s3)) // false
 
-
 export const checkInclusion = {
   checkInclusionBruteForce,
   checkInclusionNaiveImp,
   checkInclusionNaiveDec,
-  checkInclusionOptimal
+  checkInclusionOptimal,
 }

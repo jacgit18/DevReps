@@ -7,5 +7,5 @@ export const AttemptGraph = {
   lc133: cloneGrapher,
   lc332: findItinerary,
   lc743: networkDelayTime,
-  lc753: crackSafe
+  lc753: crackSafe,
 }

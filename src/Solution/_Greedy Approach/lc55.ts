@@ -2,8 +2,6 @@
 
 // Return true if you can reach the last index, or false otherwise.
 
- 
-
 // Example 1:
 
 // Input: nums = [2,3,1,1,4]
@@ -15,30 +13,28 @@
 // Input: nums = [3,2,1,0,4]
 // Output: false
 // Explanation: You will always arrive at index 3 no matter what. Its maximum jump length is 0, which makes it impossible to reach the last index.
- 
 
 // Constraints:
 
 // 1 <= nums.length <= 104
 // 0 <= nums[i] <= 105
 
-export const canJump = (nums: number[]): boolean =>{
-        const n = nums.length;
-        let lastReachable = n - 1;
-    
-        for (let i = n - 2; i >= 0; i--) {
-            if (i + nums[i] >= lastReachable) {
-                lastReachable = i;
-            }
-        }
-    
-        return lastReachable === 0;
+export const canJump = (nums: number[]): boolean => {
+  const n = nums.length
+  let lastReachable = n - 1
+
+  for (let i = n - 2; i >= 0; i--) {
+    if (i + nums[i] >= lastReachable) {
+      lastReachable = i
     }
-    
-    // Example usage:
-    // const nums1 = [2, 3, 1, 1, 4];
-    // console.log(canJump(nums1));  // Output: true
-    
-    // const nums2 = [3, 2, 1, 0, 4];
-    // console.log(canJump(nums2));  // Output: false
-    
+  }
+
+  return lastReachable === 0
+}
+
+// Example usage:
+// const nums1 = [2, 3, 1, 1, 4];
+// console.log(canJump(nums1));  // Output: true
+
+// const nums2 = [3, 2, 1, 0, 4];
+// console.log(canJump(nums2));  // Output: false

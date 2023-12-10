@@ -39,5 +39,5 @@ export const AllAttempts = {
   AttemptMergeInterval,
   AttemptGraph,
   AttemptHeaps,
-  AttemptDoublyLinkedList
+  AttemptDoublyLinkedList,
 }

@@ -1,8 +1,5 @@
-
-
 // good problem made me think
 export const attempt = (queries: string[][]): string[] => {
-  
   return [" "]
 }
 

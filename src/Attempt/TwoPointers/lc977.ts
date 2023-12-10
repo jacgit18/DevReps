@@ -40,10 +40,9 @@ const sortedSquaresOptimal = (arr: number[]): number[] => {
 // console.log(`Squares: ${sortedSquares([-2, -1, 0, 2, 3])}`)
 // console.log(`Squares: ${sortedSquares([-3, -1, 0, 1, 2])}`)
 
-
 export const sortedSquares = {
   sortedSquaresBruteForce,
   sortedSquaresNaiveImp,
   sortedSquaresNaiveDec,
-  sortedSquaresOptimal
+  sortedSquaresOptimal,
 }

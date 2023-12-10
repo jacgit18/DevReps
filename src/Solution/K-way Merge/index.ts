@@ -7,6 +7,5 @@ export const Solution_KwayMerge = {
   lc23: mergeKLists,
   lc373: kSmallestPairs,
   lc378: kthSmallest,
-  lc632: smallestRange
-
+  lc632: smallestRange,
 }

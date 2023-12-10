@@ -125,8 +125,7 @@ const findAnagramsAlt = (s: string, p: string): number[] => {
 // const p2 = "ab"
 // console.log(findAnagramsTwoPointer(s2, p2)) // Output: [0, 1, 2]
 
-
 export const findAnagrams = {
   findAnagramsTwoPointer,
-  findAnagramsAlt
+  findAnagramsAlt,
 }

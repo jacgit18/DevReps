@@ -53,5 +53,5 @@ export const threeSumSmaller = {
   threeSumSmallerBruteForce,
   threeSumSmallerNaiveImp,
   threeSumSmallerNaiveDec,
-  threeSumSmallerOptimal
+  threeSumSmallerOptimal,
 }

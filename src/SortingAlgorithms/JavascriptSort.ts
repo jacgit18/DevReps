@@ -23,8 +23,7 @@ proder.sort((a: Product, b: Product): number => {
   return a.price - b.price
 })
 
-
-// Array.sort() 
+// Array.sort()
 
 // .sort(a,b) .sort(compareFunc) .sort(inlineCompFunc)
 

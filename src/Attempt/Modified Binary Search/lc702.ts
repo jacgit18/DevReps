@@ -69,10 +69,9 @@ const arrayReader: ArrayReader = {
 // const target2 = 2
 // console.log(searchInArrayReader(arrayReader, target2)) // Output: -1
 
-
 export const searchInArrayReader = {
   searchInArrayReaderBruteForce,
   searchInArrayReaderNaiveImp,
   searchInArrayReaderNaiveDec,
-  searchInArrayReaderOptimal
+  searchInArrayReaderOptimal,
 }

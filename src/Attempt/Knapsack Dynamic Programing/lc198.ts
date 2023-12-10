@@ -37,10 +37,9 @@ const robOptimal = (nums: number[]): number => {
   return 0
 }
 
-
 export const rob = {
   robBruteForce,
   robNaiveImp,
   robNaiveDec,
-  robOptimal
+  robOptimal,
 }

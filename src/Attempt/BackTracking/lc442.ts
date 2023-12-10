@@ -50,10 +50,9 @@ const findDuplicatesOptimal = (nums: number[]): number[] => {
 // const example3 = findDuplicatesCyclic([1])
 // console.log(example3)
 
-
 export const findDuplicates = {
   findDuplicatesBruteForce,
   findDuplicatesNaiveImp,
   findDuplicatesNaiveDec,
-  findDuplicatesOptimal
+  findDuplicatesOptimal,
 }

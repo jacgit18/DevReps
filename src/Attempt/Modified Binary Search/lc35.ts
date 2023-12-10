@@ -50,10 +50,9 @@ const searchInsertOptimal = (nums: number[], target: number): number => {
 // const example3 = searchInsert([1, 3, 5, 6], 7)
 // console.log(example3)
 
-
 export const searchInsert = {
   searchInsertBruteForce,
   searchInsertNaiveImp,
   searchInsertNaiveDec,
-  searchInsertOptimal
+  searchInsertOptimal,
 }

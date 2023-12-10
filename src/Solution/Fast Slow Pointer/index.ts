@@ -13,5 +13,5 @@ export const SolutionFastSlowPointer = {
   lc202: isHappy,
   lc234: isPalindrome,
   lc457: circularArrayLoop,
-  lc876: middleNode
+  lc876: middleNode,
 }

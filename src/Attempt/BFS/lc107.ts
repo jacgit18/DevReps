@@ -58,7 +58,7 @@ export const levelOrderBottom = {
   levelOrderBottomBruteForce,
   levelOrderBottomNaiveImp,
   levelOrderBottomNaiveDec,
-  levelOrderBottomOptimal
+  levelOrderBottomOptimal,
 }
 
 let root = new TreeNode(12)

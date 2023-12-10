@@ -32,7 +32,6 @@ const gameOfLifeNaiveImp = (board: number[][]): void => {}
 const gameOfLifeNaiveDec = (board: number[][]): void => {}
 const gameOfLifeOptimal = (board: number[][]): void => {}
 
-
 // // Example usage:
 // const board1 = [
 //   [0, 1, 0],
@@ -50,10 +49,9 @@ const gameOfLifeOptimal = (board: number[][]): void => {}
 // gameOfLife(board2)
 // console.log(board2)
 
-
 export const gameOfLife = {
-    gameOfLifeBruteForce,
-    gameOfLifeNaiveImp,
-    gameOfLifeNaiveDec,
-    gameOfLifeOptimal
-  }
+  gameOfLifeBruteForce,
+  gameOfLifeNaiveImp,
+  gameOfLifeNaiveDec,
+  gameOfLifeOptimal,
+}

@@ -4,8 +4,6 @@
 
 // Return an array of right interval indices for each interval i. If no right interval exists for interval i, then put -1 at index i.
 
- 
-
 // Example 1:
 
 // Input: intervals = [[1,2]]
@@ -26,7 +24,6 @@
 // Output: [-1,2,-1]
 // Explanation: There is no right interval for [1,4] and [3,4].
 // The right interval for [2,3] is [3,4] since start2 = 3 is the smallest start that is >= end1 = 3.
- 
 
 // Constraints:
 
@@ -35,28 +32,25 @@
 // -106 <= starti <= endi <= 106
 // The start point of each interval is unique.
 
-const findRightIntervalBruteForce = (intervals: number[][]): number[] =>{
-    return [0]
-};
+const findRightIntervalBruteForce = (intervals: number[][]): number[] => {
+  return [0]
+}
 
+const findRightIntervalNaiveImp = (intervals: number[][]): number[] => {
+  return [0]
+}
 
-const findRightIntervalNaiveImp = (intervals: number[][]): number[] =>{
-    return [0]
-};
+const findRightIntervalNaiveDec = (intervals: number[][]): number[] => {
+  return [0]
+}
 
-
-const findRightIntervalNaiveDec = (intervals: number[][]): number[] =>{
-    return [0]
-};
-
-
-const findRightIntervalOptimal = (intervals: number[][]): number[] =>{
-    return [0]
-};
+const findRightIntervalOptimal = (intervals: number[][]): number[] => {
+  return [0]
+}
 
 export const findRightInterval = {
-    findRightIntervalBruteForce,
-    findRightIntervalNaiveImp,
-    findRightIntervalNaiveDec,
-    findRightIntervalOptimal
-    }
+  findRightIntervalBruteForce,
+  findRightIntervalNaiveImp,
+  findRightIntervalNaiveDec,
+  findRightIntervalOptimal,
+}

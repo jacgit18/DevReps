@@ -35,7 +35,6 @@ const maxAreaNaiveDec = (height: number[]): number => {
   return 0
 }
 
-
 const maxAreaOptimal = (height: number[]): number => {
   return 0
 }
@@ -44,7 +43,7 @@ export const maxArea = {
   maxAreaBruteForce,
   maxAreaNaiveImp,
   maxAreaNaiveDec,
-  maxAreaOptimal
+  maxAreaOptimal,
 }
 
 // console.log(maxArea([1, 8, 6, 2, 5, 4, 8, 3, 7]))

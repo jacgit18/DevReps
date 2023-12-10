@@ -53,5 +53,5 @@ export const merge = {
   mergeBruteForce,
   mergeNaiveImp,
   mergeNaiveDec,
-  mergeOptimal
+  mergeOptimal,
 }

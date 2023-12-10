@@ -50,10 +50,9 @@ const diffWaysToComputeOptimal = (expression: string): number[] => {
 // const example2 = diffWaysToCompute("2*3-4*5")
 // console.log(example2)
 
-
 export const diffWaysToCompute = {
   diffWaysToComputeBruteForce,
   diffWaysToComputeNaiveImp,
   diffWaysToComputeNaiveDec,
-  diffWaysToComputeOptimal
+  diffWaysToComputeOptimal,
 }

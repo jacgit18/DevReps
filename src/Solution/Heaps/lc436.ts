@@ -4,8 +4,6 @@
 
 // Return an array of right interval indices for each interval i. If no right interval exists for interval i, then put -1 at index i.
 
- 
-
 // Example 1:
 
 // Input: intervals = [[1,2]]
@@ -26,7 +24,6 @@
 // Output: [-1,2,-1]
 // Explanation: There is no right interval for [1,4] and [3,4].
 // The right interval for [2,3] is [3,4] since start2 = 3 is the smallest start that is >= end1 = 3.
- 
 
 // Constraints:
 
@@ -35,45 +32,44 @@
 // -106 <= starti <= endi <= 106
 // The start point of each interval is unique.
 
-export const findRightInterval = (intervals: number[][]): number[] =>{
-        const n = intervals.length;
-        const result: number[] = [];
-      
-        // Create an array of [start, index] pairs
-        const startIndices = intervals.map((interval, index) => [interval[0], index]);
-      
-        // Sort the start indices array based on start values
-        startIndices.sort((a, b) => a[0] - b[0]);
-      
-        for (const [end, index] of intervals) {
-          // Use binary search to find the right interval
-          let low = 0;
-          let high = n - 1;
-          let rightIndex = -1;
-      
-          while (low <= high) {
-            const mid = Math.floor((low + high) / 2);
-            if (startIndices[mid][0] >= end) {
-              rightIndex = startIndices[mid][1];
-              high = mid - 1;
-            } else {
-              low = mid + 1;
-            }
-          }
-      
-          result.push(rightIndex);
-        }
-      
-        return result;
-      };
-      
-      // Example usage:
-    //   const intervals1 = [[1, 2]];
-    //   console.log(findRightInterval(intervals1)); // Output: [-1]
-      
-    //   const intervals2 = [[3, 4], [2, 3], [1, 2]];
-    //   console.log(findRightInterval(intervals2)); // Output: [-1, 0, 1]
-      
-    //   const intervals3 = [[1, 4], [2, 3], [3, 4]];
-    //   console.log(findRightInterval(intervals3)); // Output: [-1, 2, -1]
-      
+export const findRightInterval = (intervals: number[][]): number[] => {
+  const n = intervals.length
+  const result: number[] = []
+
+  // Create an array of [start, index] pairs
+  const startIndices = intervals.map((interval, index) => [interval[0], index])
+
+  // Sort the start indices array based on start values
+  startIndices.sort((a, b) => a[0] - b[0])
+
+  for (const [end, index] of intervals) {
+    // Use binary search to find the right interval
+    let low = 0
+    let high = n - 1
+    let rightIndex = -1
+
+    while (low <= high) {
+      const mid = Math.floor((low + high) / 2)
+      if (startIndices[mid][0] >= end) {
+        rightIndex = startIndices[mid][1]
+        high = mid - 1
+      } else {
+        low = mid + 1
+      }
+    }
+
+    result.push(rightIndex)
+  }
+
+  return result
+}
+
+// Example usage:
+//   const intervals1 = [[1, 2]];
+//   console.log(findRightInterval(intervals1)); // Output: [-1]
+
+//   const intervals2 = [[3, 4], [2, 3], [1, 2]];
+//   console.log(findRightInterval(intervals2)); // Output: [-1, 0, 1]
+
+//   const intervals3 = [[1, 4], [2, 3], [3, 4]];
+//   console.log(findRightInterval(intervals3)); // Output: [-1, 2, -1]

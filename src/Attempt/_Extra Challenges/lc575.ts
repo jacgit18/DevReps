@@ -49,7 +49,7 @@ export const distributeCandies = {
   distributeCandiesBruteForce,
   distributeCandiesNaiveImp,
   distributeCandiesNaiveDec,
-  distributeCandiesOptimal
+  distributeCandiesOptimal,
 }
 
 // Example usage:

@@ -29,10 +29,7 @@
 // This question gives you the chance to practice with strings, recursion, algorithm, compilers, automata, and loops. It’s also an opportunity to work on coding with better efficiency.
 
 export const decompressString = (s: string): string => {
- 
-
   return " "
-
 }
 
 // Example usage:

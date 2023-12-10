@@ -49,7 +49,6 @@
 
 import { GraphVertex } from "../../util/GraphMaker"
 
-
 const cloneGrapherBruteForce = (node: GraphVertex | null): GraphVertex | null => {
   return null
 }
@@ -66,10 +65,9 @@ const cloneGrapherOptimal = (node: GraphVertex | null): GraphVertex | null => {
   return null
 }
 
-
 export const cloneGrapher = {
   cloneGrapherBruteForce,
   cloneGrapherNaiveImp,
   cloneGrapherNaiveDec,
-  cloneGrapherOptimal
+  cloneGrapherOptimal,
 }

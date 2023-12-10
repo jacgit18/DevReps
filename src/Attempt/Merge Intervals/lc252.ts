@@ -32,7 +32,6 @@ const canAttendMeetingsOptimal = (intervals: number[][]): boolean => {
   return true
 }
 
-
 // // Example usage:
 // const example1 = canAttendMeetings([
 //   [1, 3],
@@ -52,5 +51,5 @@ export const canAttendMeetings = {
   canAttendMeetingsBruteForce,
   canAttendMeetingsNaiveImp,
   canAttendMeetingsNaiveDec,
-  canAttendMeetingsOptimal
+  canAttendMeetingsOptimal,
 }

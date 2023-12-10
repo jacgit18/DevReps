@@ -7,8 +7,6 @@
 // void put(int key, int value) Update the value of the key if the key exists. Otherwise, add the key-value pair to the cache. If the number of keys exceeds the capacity from this operation, evict the least recently used key.
 // The functions get and put must each run in O(1) average time complexity.
 
- 
-
 // Example 1:
 
 // Input
@@ -28,7 +26,6 @@
 // lRUCache.get(1);    // return -1 (not found)
 // lRUCache.get(3);    // return 3
 // lRUCache.get(4);    // return 4
- 
 
 // Constraints:
 
@@ -38,94 +35,94 @@
 // At most 2 * 105 calls will be made to get and put.
 
 class ListNode {
-    key: number;
-    value: number;
-    prev: ListNode | null;
-    next: ListNode | null;
+  key: number
+  value: number
+  prev: ListNode | null
+  next: ListNode | null
 
-    constructor(key: number, value: number) {
-        this.key = key;
-        this.value = value;
-        this.prev = null;
-        this.next = null;
-    }
+  constructor(key: number, value: number) {
+    this.key = key
+    this.value = value
+    this.prev = null
+    this.next = null
+  }
 }
 
 export class LRUCache {
-    capacity: number;
-    cache: Map<number, ListNode>;
-    head: ListNode | null;
-    tail: ListNode | null;
+  capacity: number
+  cache: Map<number, ListNode>
+  head: ListNode | null
+  tail: ListNode | null
 
-    constructor(capacity: number) {
-        this.capacity = capacity;
-        this.cache = new Map();
-        this.head = null;
-        this.tail = null;
+  constructor(capacity: number) {
+    this.capacity = capacity
+    this.cache = new Map()
+    this.head = null
+    this.tail = null
+  }
+
+  private moveToHead(node: ListNode): void {
+    if (node === this.head) {
+      return
     }
 
-    private moveToHead(node: ListNode): void {
-        if (node === this.head) {
-            return;
-        }
-
-        if (node.prev) {
-            node.prev.next = node.next;
-        }
-
-        if (node.next) {
-            node.next.prev = node.prev;
-        }
-
-        if (node === this.tail) {
-            this.tail = node.prev;
-        }
-
-        if (this.head) {
-            node.next = this.head;
-            this.head.prev = node;
-        }
-
-        this.head = node;
-        node.prev = null;
+    if (node.prev) {
+      node.prev.next = node.next
     }
 
-    get(key: number): number {
-        if (this.cache.has(key)) {
-            const node = this.cache.get(key)!;
-            this.moveToHead(node);
-            return node.value;
-        }
-
-        return -1;
+    if (node.next) {
+      node.next.prev = node.prev
     }
 
-    put(key: number, value: number): void {
-        if (this.cache.has(key)) {
-            const node = this.cache.get(key)!;
-            node.value = value;
-            this.moveToHead(node);
-        } else {
-            const newNode = new ListNode(key, value);
-
-            if (this.cache.size >= this.capacity) {
-                if (this.tail) {
-                    this.cache.delete(this.tail.key);
-                    this.tail = this.tail.prev;
-                    if (this.tail) {
-                        this.tail.next = null;
-                    }
-                }
-            }
-
-            this.cache.set(key, newNode);
-            this.moveToHead(newNode);
-
-            if (!this.tail) {
-                this.tail = newNode;
-            }
-        }
+    if (node === this.tail) {
+      this.tail = node.prev
     }
+
+    if (this.head) {
+      node.next = this.head
+      this.head.prev = node
+    }
+
+    this.head = node
+    node.prev = null
+  }
+
+  get(key: number): number {
+    if (this.cache.has(key)) {
+      const node = this.cache.get(key)!
+      this.moveToHead(node)
+      return node.value
+    }
+
+    return -1
+  }
+
+  put(key: number, value: number): void {
+    if (this.cache.has(key)) {
+      const node = this.cache.get(key)!
+      node.value = value
+      this.moveToHead(node)
+    } else {
+      const newNode = new ListNode(key, value)
+
+      if (this.cache.size >= this.capacity) {
+        if (this.tail) {
+          this.cache.delete(this.tail.key)
+          this.tail = this.tail.prev
+          if (this.tail) {
+            this.tail.next = null
+          }
+        }
+      }
+
+      this.cache.set(key, newNode)
+      this.moveToHead(newNode)
+
+      if (!this.tail) {
+        this.tail = newNode
+      }
+    }
+  }
 }
 
 // Example usage:

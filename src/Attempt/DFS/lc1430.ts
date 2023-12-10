@@ -52,7 +52,7 @@ export const isValidSequence = {
   isValidSequenceBruteForce,
   isValidSequenceNaiveImp,
   isValidSequenceNaiveDec,
-  isValidSequenceOptimal
+  isValidSequenceOptimal,
 }
 
 // Example usage:

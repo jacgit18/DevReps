@@ -45,7 +45,6 @@
 
 import { ListNode } from "../../util/LinkedListMaker"
 
-
 export const mergeKLists = (lists: Array<ListNode | null>): ListNode | null => {
   const mergeTwoLists = (l1: ListNode | null, l2: ListNode | null): ListNode | null => {
     const dummy = new ListNode()

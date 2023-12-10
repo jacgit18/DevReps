@@ -35,12 +35,11 @@ const longestPalindromeOptimal = (s: string): number => {
   return 0
 }
 
-
 export const longestPalindrome = {
   longestPalindromeBruteForce,
   longestPalindromeNaiveImp,
   longestPalindromeNaiveDec,
-  longestPalindromeOptimal
+  longestPalindromeOptimal,
 }
 
 // Example usage:

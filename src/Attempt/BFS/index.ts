@@ -1,18 +1,17 @@
 // BFS
-import { isSameTree } from "./lc100";
-import { isSymmetric } from "./lc101";
-import { levelOrderTraversal } from "./lc102VistAllLevelPureBFS";
-import { zigzagLevelOrder } from "./lc103";
-import { maxDepth } from "./lc104";
-import { levelOrderBottom } from "./lc107";
-import { minDepth } from "./lc111";
-import { connectOne } from "./lc116";
-import { connect } from "./lc117";
-import { rightSideView } from "./lc199";
-import { averageOfLevels } from "./lc637";
+import { isSameTree } from "./lc100"
+import { isSymmetric } from "./lc101"
+import { levelOrderTraversal } from "./lc102VistAllLevelPureBFS"
+import { zigzagLevelOrder } from "./lc103"
+import { maxDepth } from "./lc104"
+import { levelOrderBottom } from "./lc107"
+import { minDepth } from "./lc111"
+import { connectOne } from "./lc116"
+import { connect } from "./lc117"
+import { rightSideView } from "./lc199"
+import { averageOfLevels } from "./lc637"
 
-
-export const AttemptBFS  = {
+export const AttemptBFS = {
   lc100: isSameTree,
   lc101: isSymmetric,
   lc102: levelOrderTraversal,
@@ -23,7 +22,5 @@ export const AttemptBFS  = {
   lc116: connectOne,
   lc117: connect,
   lc199: rightSideView,
-  lc637: averageOfLevels
-};
-
-
+  lc637: averageOfLevels,
+}

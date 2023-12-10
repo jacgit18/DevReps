@@ -3,8 +3,6 @@
 // For example, the pair [0, 1], indicates that to take course 0 you have to first take course 1.
 // Return the ordering of courses you should take to finish all courses. If there are many valid answers, return any of them. If it is impossible to finish all courses, return an empty array.
 
- 
-
 // Example 1:
 
 // Input: numCourses = 2, prerequisites = [[1,0]]
@@ -22,7 +20,6 @@
 
 // Input: numCourses = 1, prerequisites = []
 // Output: [0]
- 
 
 // Constraints:
 
@@ -33,31 +30,25 @@
 // ai != bi
 // All the pairs [ai, bi] are distinct.
 
+const findOrderBruteForce = (numCourses: number, prerequisites: number[][]): number[] => {
+  return [0]
+}
 
- const  findOrderBruteForce = (numCourses: number, prerequisites: number[][]): number[] =>{
-    return [0]
+const findOrderNaiveImp = (numCourses: number, prerequisites: number[][]): number[] => {
+  return [0]
+}
 
-};
+const findOrderNaiveDec = (numCourses: number, prerequisites: number[][]): number[] => {
+  return [0]
+}
 
-const  findOrderNaiveImp = (numCourses: number, prerequisites: number[][]): number[] =>{
-    return [0]
-
-};
-
-
-const  findOrderNaiveDec = (numCourses: number, prerequisites: number[][]): number[] =>{
-    return [0]
-
-};
-
-const  findOrderOptimal = (numCourses: number, prerequisites: number[][]): number[] =>{
-    return [0]
-
-};
+const findOrderOptimal = (numCourses: number, prerequisites: number[][]): number[] => {
+  return [0]
+}
 
 export const findOrder = {
-    findOrderBruteForce,
-    findOrderNaiveImp,
-    findOrderNaiveDec,
-    findOrderOptimal
-    }
+  findOrderBruteForce,
+  findOrderNaiveImp,
+  findOrderNaiveDec,
+  findOrderOptimal,
+}

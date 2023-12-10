@@ -6,8 +6,6 @@
 
 // The answer is guaranteed to fit into a signed 32-bit integer.
 
- 
-
 // Example 1:
 
 // Input: amount = 5, coins = [1,2,5]
@@ -28,7 +26,6 @@
 
 // Input: amount = 10, coins = [10]
 // Output: 1
- 
 
 // Constraints:
 
@@ -37,31 +34,25 @@
 // All the values of coins are unique.
 // 0 <= amount <= 5000
 
+const changeBruteForce = (amount: number, coins: number[]): number => {
+  return 0
+}
 
- const changeBruteForce = (amount: number, coins: number[]): number =>{
-    return 0
-    
-};
+const changeNaiveImp = (amount: number, coins: number[]): number => {
+  return 0
+}
 
-const changeNaiveImp = (amount: number, coins: number[]): number =>{
-    return 0
-    
-};
+const changeNaiveDec = (amount: number, coins: number[]): number => {
+  return 0
+}
 
-
-const changeNaiveDec = (amount: number, coins: number[]): number =>{
-    return 0
-    
-};
-
-const changeOptimal = (amount: number, coins: number[]): number =>{
-    return 0
-    
-};
+const changeOptimal = (amount: number, coins: number[]): number => {
+  return 0
+}
 
 export const change = {
-    changeBruteForce,
-    changeNaiveImp,
-    changeNaiveDec,
-    changeOptimal
-    }
+  changeBruteForce,
+  changeNaiveImp,
+  changeNaiveDec,
+  changeOptimal,
+}

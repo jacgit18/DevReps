@@ -2,8 +2,6 @@
 
 // You must write an algorithm that runs in linear runtime complexity and uses only constant extra space.
 
- 
-
 // Example 1:
 
 // Input: nums = [1,2,1,3,2,5]
@@ -19,7 +17,6 @@
 
 // Input: nums = [0,1]
 // Output: [1,0]
- 
 
 // Constraints:
 
@@ -27,26 +24,25 @@
 // -231 <= nums[i] <= 231 - 1
 // Each integer in nums will appear twice, only two integers will appear once.
 
- const singleNumberThreeBruteForce = (nums: number[]): number[] =>{
+const singleNumberThreeBruteForce = (nums: number[]): number[] => {
   return [0]
-};
+}
 
-const singleNumberThreeNaiveImp = (nums: number[]): number[] =>{
+const singleNumberThreeNaiveImp = (nums: number[]): number[] => {
   return [0]
-};
+}
 
-const singleNumberThreeNaiveDec = (nums: number[]): number[] =>{
+const singleNumberThreeNaiveDec = (nums: number[]): number[] => {
   return [0]
-};
+}
 
-const singleNumberThreeOptimal = (nums: number[]): number[] =>{
+const singleNumberThreeOptimal = (nums: number[]): number[] => {
   return [0]
-};
-
+}
 
 export const singleNumberThree = {
   singleNumberThreeBruteForce,
   singleNumberThreeNaiveImp,
   singleNumberThreeNaiveDec,
-  singleNumberThreeOptimal
-  }
+  singleNumberThreeOptimal,
+}

@@ -4,7 +4,6 @@
 
 // |a - x| < |b - x|, or
 // |a - x| == |b - x| and a < b
- 
 
 // Example 1:
 
@@ -15,7 +14,6 @@
 
 // Input: arr = [1,2,3,4,5], k = 4, x = -1
 // Output: [1,2,3,4]
- 
 
 // Constraints:
 
@@ -24,26 +22,25 @@
 // arr is sorted in ascending order.
 // -104 <= arr[i], x <= 104
 
- const  findClosestElementsBruteForce = (arr: number[], k: number, x: number): number[] =>{
-    return [0]
-};
+const findClosestElementsBruteForce = (arr: number[], k: number, x: number): number[] => {
+  return [0]
+}
 
-const  findClosestElementsNaiveImp = (arr: number[], k: number, x: number): number[] =>{
-    return [0]
-};
+const findClosestElementsNaiveImp = (arr: number[], k: number, x: number): number[] => {
+  return [0]
+}
 
-const  findClosestElementsNaiveDec = (arr: number[], k: number, x: number): number[] =>{
-    return [0]
-};
+const findClosestElementsNaiveDec = (arr: number[], k: number, x: number): number[] => {
+  return [0]
+}
 
-const  findClosestElementsOptimal = (arr: number[], k: number, x: number): number[] =>{
-    return [0]
-};
-
+const findClosestElementsOptimal = (arr: number[], k: number, x: number): number[] => {
+  return [0]
+}
 
 export const findClosestElements = {
-    findClosestElementsBruteForce,
-    findClosestElementsNaiveImp,
-    findClosestElementsNaiveDec,
-    findClosestElementsOptimal
-    }
+  findClosestElementsBruteForce,
+  findClosestElementsNaiveImp,
+  findClosestElementsNaiveDec,
+  findClosestElementsOptimal,
+}

@@ -41,7 +41,7 @@ export const countSubstrings = {
   countSubstringsBruteForce,
   countSubstringsNaiveImp,
   countSubstringsNaiveDec,
-  countSubstringsOptimal
+  countSubstringsOptimal,
 }
 
 // console.log(countSubstrings("abc"))

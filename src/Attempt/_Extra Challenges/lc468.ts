@@ -47,12 +47,11 @@ const validIPAddressOptimal = (queryIP: string): string => {
   return " "
 }
 
-
 export const validIPAddress = {
   validIPAddressBruteForce,
   validIPAddressNaiveImp,
   validIPAddressNaiveDec,
-  validIPAddressOptimal
+  validIPAddressOptimal,
 }
 
 // Example usage:

@@ -1,6 +1,6 @@
-// Given an array of integers nums and an integer target, 
+// Given an array of integers nums and an integer target,
 // return indices of the two numbers such that they add up to target.
-// You may assume that each input would have exactly one solution, 
+// You may assume that each input would have exactly one solution,
 // and you may not use the same element twice.
 
 // You can return the answer in any order.
@@ -15,7 +15,6 @@
 
 // Input: nums = [3,2,4], target = 6
 // Output: [1,2]
-
 
 // Example 3:
 
@@ -41,7 +40,6 @@ const pair_with_target_sum_NaiveDec = (arr: number[], targetSum: number): number
   return [0]
 }
 
-
 const pair_with_target_sum_Optimal = (arr: number[], targetSum: number): number[] => {
   return [0]
 }
@@ -50,6 +48,5 @@ export const PairWithTargetSum = {
   pair_with_target_sum_BruteForce,
   pair_with_target_sum_NaiveImp,
   pair_with_target_sum_NaiveDec,
-  pair_with_target_sum_Optimal
+  pair_with_target_sum_Optimal,
 }
-

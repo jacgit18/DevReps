@@ -6,10 +6,7 @@
 
 // The height of a rooted tree is the number of edges on the longest downward path between the root and a leaf.
 
- 
-
 // Example 1:
-
 
 // Input: n = 4, edges = [[1,0],[1,2],[1,3]]
 // Output: [1]
@@ -17,10 +14,8 @@
 
 // Example 2:
 
-
 // Input: n = 6, edges = [[3,0],[3,1],[3,2],[3,4],[5,4]]
 // Output: [3,4]
- 
 
 // Constraints:
 
@@ -31,29 +26,25 @@
 // All the pairs (ai, bi) are distinct.
 // The given input is guaranteed to be a tree and there will be no repeated edges.
 
- const findMinHeightTreesBruteForce = (n: number, edges: number[][]): number[] =>{
-    return [0]
-};
+const findMinHeightTreesBruteForce = (n: number, edges: number[][]): number[] => {
+  return [0]
+}
 
+const findMinHeightTreesNaiveImp = (n: number, edges: number[][]): number[] => {
+  return [0]
+}
 
-const findMinHeightTreesNaiveImp = (n: number, edges: number[][]): number[] =>{
-    return [0]
-};
+const findMinHeightTreesNaiveDec = (n: number, edges: number[][]): number[] => {
+  return [0]
+}
 
-const findMinHeightTreesNaiveDec = (n: number, edges: number[][]): number[] =>{
-    return [0]
-};
-
-
-const findMinHeightTreesOptimal = (n: number, edges: number[][]): number[] =>{
-    return [0]
-};
-
-
+const findMinHeightTreesOptimal = (n: number, edges: number[][]): number[] => {
+  return [0]
+}
 
 export const findMinHeightTrees = {
-    findMinHeightTreesBruteForce,
-    findMinHeightTreesNaiveImp,
-    findMinHeightTreesNaiveDec,
-    findMinHeightTreesOptimal
-    }
+  findMinHeightTreesBruteForce,
+  findMinHeightTreesNaiveImp,
+  findMinHeightTreesNaiveDec,
+  findMinHeightTreesOptimal,
+}

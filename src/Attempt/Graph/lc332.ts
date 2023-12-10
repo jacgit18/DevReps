@@ -5,22 +5,16 @@
 // For example, the itinerary ["JFK", "LGA"] has a smaller lexical order than ["JFK", "LGB"].
 // You may assume all tickets form at least one valid itinerary. You must use all the tickets once and only once.
 
- 
-
 // Example 1:
-
 
 // Input: tickets = [["MUC","LHR"],["JFK","MUC"],["SFO","SJC"],["LHR","SFO"]]
 // Output: ["JFK","MUC","LHR","SFO","SJC"]
 
-
 // Example 2:
-
 
 // Input: tickets = [["JFK","SFO"],["JFK","ATL"],["SFO","ATL"],["ATL","JFK"],["ATL","SFO"]]
 // Output: ["JFK","ATL","JFK","SFO","ATL","SFO"]
 // Explanation: Another possible reconstruction is ["JFK","SFO","ATL","JFK","ATL","SFO"] but it is larger in lexical order.
- 
 
 // Constraints:
 
@@ -31,28 +25,25 @@
 // fromi and toi consist of uppercase English letters.
 // fromi != toi
 
+const findItineraryBruteForce = (tickets: string[][]): string[] => {
+  return [" "]
+}
 
- const findItineraryBruteForce = (tickets: string[][]): string[] =>{
-    return [" "]
-};
+const findItineraryNaiveImp = (tickets: string[][]): string[] => {
+  return [" "]
+}
 
-const findItineraryNaiveImp = (tickets: string[][]): string[] =>{
-    return [" "]
-};
+const findItineraryNaiveDec = (tickets: string[][]): string[] => {
+  return [" "]
+}
 
-
-const findItineraryNaiveDec = (tickets: string[][]): string[] =>{
-    return [" "]
-};
-
-const findItineraryOptimal = (tickets: string[][]): string[] =>{
-    return [" "]
-};
-
+const findItineraryOptimal = (tickets: string[][]): string[] => {
+  return [" "]
+}
 
 export const findItinerary = {
-    findItineraryBruteForce,
-    findItineraryNaiveImp,
-    findItineraryNaiveDec,
-    findItineraryOptimal
-    }
+  findItineraryBruteForce,
+  findItineraryNaiveImp,
+  findItineraryNaiveDec,
+  findItineraryOptimal,
+}

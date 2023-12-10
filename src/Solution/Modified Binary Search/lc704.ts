@@ -40,7 +40,7 @@ export const searchBinIter = (nums: number[], target: number): number => {
   return -1 // Target not found
 }
 
- const searchBinRec = (nums: number[], target: number): number => {
+const searchBinRec = (nums: number[], target: number): number => {
   let startIndex = 0
   let endIndex = nums.length - 1
 
@@ -71,7 +71,6 @@ export const searchBinIter = (nums: number[], target: number): number => {
   return recursiveSearch(nums, target, startIndex, endIndex)
 }
 
-
 // Example usage:
 // const nums1 = [-1, 0, 3, 5, 9, 12]
 // const target1 = 9
@@ -84,5 +83,4 @@ export const searchBinIter = (nums: number[], target: number): number => {
 export const searchBin = {
   searchBinIter,
   searchBinRec,
-  
 }

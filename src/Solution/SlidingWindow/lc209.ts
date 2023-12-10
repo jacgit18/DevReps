@@ -86,9 +86,7 @@ const smallestSubarraySlidingWindow = (s: number, arr: number[]): number => {
 
 // console.log(smallestSubarrayWithGivenSum(3, [4, 6, 6, 8]))
 
-
 export const smallestSubarrayWithGivenSum = {
- smallestSubarraySlidingWindow,
- smallest_subarray_with_given_sumAlt
-
-};
+  smallestSubarraySlidingWindow,
+  smallest_subarray_with_given_sumAlt,
+}

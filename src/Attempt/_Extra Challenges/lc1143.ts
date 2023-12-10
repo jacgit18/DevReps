@@ -5,12 +5,10 @@
 // For example, "ace" is a subsequence of "abcde".
 // A common subsequence of two strings is a subsequence that is common to both strings.
 
- 
-
 // Example 1:
 
-// Input: text1 = "abcde", text2 = "ace" 
-// Output: 3  
+// Input: text1 = "abcde", text2 = "ace"
+// Output: 3
 // Explanation: The longest common subsequence is "ace" and its length is 3.
 
 // Example 2:
@@ -24,33 +22,31 @@
 // Input: text1 = "abc", text2 = "def"
 // Output: 0
 // Explanation: There is no such common subsequence, so the result is 0.
- 
 
 // Constraints:
 
 // 1 <= text1.length, text2.length <= 1000
 // text1 and text2 consist of only lowercase English characters.
 
+const longestCommonSubsequenceBruteForce = (text1: string, text2: string): number => {
+  return 0
+}
 
- const longestCommonSubsequenceBruteForce = (text1: string, text2: string): number =>{
-    return 0
-};
+const longestCommonSubsequenceNaiveImp = (text1: string, text2: string): number => {
+  return 0
+}
 
-const longestCommonSubsequenceNaiveImp = (text1: string, text2: string): number =>{
-    return 0
-};
+const longestCommonSubsequenceNaiveDec = (text1: string, text2: string): number => {
+  return 0
+}
 
-const longestCommonSubsequenceNaiveDec = (text1: string, text2: string): number =>{
-    return 0
-};
-
-const longestCommonSubsequenceOptimal = (text1: string, text2: string): number =>{
-    return 0
-};
+const longestCommonSubsequenceOptimal = (text1: string, text2: string): number => {
+  return 0
+}
 
 export const longestCommonSubsequence = {
-    longestCommonSubsequenceBruteForce,
-    longestCommonSubsequenceNaiveImp,
-    longestCommonSubsequenceNaiveDec,
-    longestCommonSubsequenceOptimal
-  }
+  longestCommonSubsequenceBruteForce,
+  longestCommonSubsequenceNaiveImp,
+  longestCommonSubsequenceNaiveDec,
+  longestCommonSubsequenceOptimal,
+}

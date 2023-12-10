@@ -11,8 +11,6 @@
 // After typing 5, the most recent 3 digits is "345", which is correct and the safe unlocks.
 // Return any string of minimum length that will unlock the safe at some point of entering it.
 
- 
-
 // Example 1:
 
 // Input: n = 1, k = 2
@@ -29,7 +27,6 @@
 // - "10" is typed in starting from the 3rd digit.
 // - "11" is typed in starting from the 2nd digit.
 // Thus "01100" will unlock the safe. "10011", and "11001" would also unlock the safe.
- 
 
 // Constraints:
 
@@ -37,28 +34,25 @@
 // 1 <= k <= 10
 // 1 <= kn <= 4096
 
+const crackSafeBruteForce = (n: number, k: number): string => {
+  return " "
+}
 
- const crackSafeBruteForce = (n: number, k: number): string =>{
-    return " "
-};
+const crackSafeNaiveImp = (n: number, k: number): string => {
+  return " "
+}
 
+const crackSafeNaiveDec = (n: number, k: number): string => {
+  return " "
+}
 
-const crackSafeNaiveImp = (n: number, k: number): string =>{
-    return " "
-};
-
-const crackSafeNaiveDec = (n: number, k: number): string =>{
-    return " "
-};
-
-
-const crackSafeOptimal = (n: number, k: number): string =>{
-    return " "
-};
+const crackSafeOptimal = (n: number, k: number): string => {
+  return " "
+}
 
 export const crackSafe = {
-    crackSafeBruteForce,
-    crackSafeNaiveImp,
-    crackSafeNaiveDec,
-    crackSafeOptimal
-    }
+  crackSafeBruteForce,
+  crackSafeNaiveImp,
+  crackSafeNaiveDec,
+  crackSafeOptimal,
+}

@@ -1,4 +1,4 @@
-import FlattenObject  from "./dict.json";
+import FlattenObject from "./dict.json"
 
 // const dict: FlattenObject;
 

@@ -4,7 +4,6 @@
 
 // KthLargest(int k, int[] nums) Initializes the object with the integer k and the stream of integers nums.
 // int add(int val) Appends the integer val to the stream and returns the element representing the kth largest element in the stream.
- 
 
 // Example 1:
 
@@ -21,7 +20,6 @@
 // kthLargest.add(10);  // return 5
 // kthLargest.add(9);   // return 8
 // kthLargest.add(4);   // return 8
- 
 
 // Constraints:
 
@@ -32,41 +30,39 @@
 // At most 104 calls will be made to add.
 // It is guaranteed that there will be at least k elements in the array when you search for the kth element.
 
+import { MinHeap } from "../../util/MinHeapMaker"
 
-import { MinHeap } from "../../util/MinHeapMaker";
+export class KthLargest {
+  k: number
+  minHeap: MinHeap
 
-  export class KthLargest {
-    k: number;
-    minHeap: MinHeap;
-  
-    constructor(k: number, nums: number[]) {
-      this.k = k;
-      this.minHeap = new MinHeap();
-  
-      for (const num of nums) {
-        this.add(num);
-      }
-    }
-  
-    add(val: number): number {
-      this.minHeap.add(val);
-  
-      if (this.minHeap.size() > this.k) {
-        this.minHeap.pop();
-      }
-  
-      return this.minHeap.size() > 0 ? this.minHeap.heap[0] : 0;
+  constructor(k: number, nums: number[]) {
+    this.k = k
+    this.minHeap = new MinHeap()
+
+    for (const num of nums) {
+      this.add(num)
     }
   }
-  
-  // Example usage:
+
+  add(val: number): number {
+    this.minHeap.add(val)
+
+    if (this.minHeap.size() > this.k) {
+      this.minHeap.pop()
+    }
+
+    return this.minHeap.size() > 0 ? this.minHeap.heap[0] : 0
+  }
+}
+
+// Example usage:
 //   const kthLargest = new KthLargest(3, [4, 5, 8, 2]);
 //   console.log(kthLargest.add(3)); // Output: 4
 //   console.log(kthLargest.add(5)); // Output: 5
 //   console.log(kthLargest.add(10)); // Output: 5
 //   console.log(kthLargest.add(9)); // Output: 8
 //   console.log(kthLargest.add(4)); // Output: 8
-  
 
 /**
  * Your KthLargest object will be instantiated and called as such:

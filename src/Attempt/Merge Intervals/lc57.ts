@@ -61,10 +61,9 @@ const insertIntervalOptimal = (intervals: number[][], newInterval: number[]): nu
 // )
 // console.log(example2) // Output: [[1, 2], [3, 10], [12, 16]]
 
-
 export const insertInterval = {
   insertIntervalBruteForce,
   insertIntervalNaiveImp,
   insertIntervalNaiveDec,
-  insertIntervalOptimal
+  insertIntervalOptimal,
 }

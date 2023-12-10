@@ -44,5 +44,5 @@ export const letterCasePermutation = {
   letterCasePermutationBruteForce,
   letterCasePermutationNaiveImp,
   letterCasePermutationNaiveDec,
-  letterCasePermutationOptimal
+  letterCasePermutationOptimal,
 }

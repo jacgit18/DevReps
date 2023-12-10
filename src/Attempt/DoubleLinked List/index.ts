@@ -9,5 +9,5 @@ export const AttemptDoublyLinkedList = {
   lc430: flatten,
   lc432: AllOne,
   lc460: LFUCache,
-  lc1472: BrowserHistory
+  lc1472: BrowserHistory,
 }

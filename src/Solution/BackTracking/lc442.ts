@@ -102,5 +102,5 @@ const findDuplicatesBackTrack = (nums: number[]): number[] => {
 
 export const findDuplicates = {
   findDuplicatesCyclic,
-  findDuplicatesBackTrack
+  findDuplicatesBackTrack,
 }

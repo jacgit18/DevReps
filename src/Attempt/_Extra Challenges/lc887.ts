@@ -6,13 +6,11 @@
 
 // Return the minimum number of moves that you need to determine with certainty what the value of f is.
 
- 
-
 // Example 1:
 
 // Input: k = 1, n = 2
 // Output: 2
-// Explanation: 
+// Explanation:
 // Drop the egg from floor 1. If it breaks, we know that f = 0.
 // Otherwise, drop the egg from floor 2. If it breaks, we know that f = 1.
 // If it does not break, then we know f = 2.
@@ -27,37 +25,31 @@
 
 // Input: k = 3, n = 14
 // Output: 4
- 
 
 // Constraints:
 
 // 1 <= k <= 100
 // 1 <= n <= 104
 
+const superEggDropBruteForce = (k: number, n: number): number => {
+  return 0
+}
 
- const superEggDropBruteForce = (k: number, n: number): number =>{
-    return 0
-};
+const superEggDropNaiveImp = (k: number, n: number): number => {
+  return 0
+}
 
+const superEggDropNaiveDec = (k: number, n: number): number => {
+  return 0
+}
 
-const superEggDropNaiveImp = (k: number, n: number): number =>{
-    return 0
-};
-
-
-const superEggDropNaiveDec = (k: number, n: number): number =>{
-    return 0
-};
-
-
-const superEggDropOptimal = (k: number, n: number): number =>{
-    return 0
-};
-
+const superEggDropOptimal = (k: number, n: number): number => {
+  return 0
+}
 
 export const superEggDrop = {
-    superEggDropBruteForce,
-    superEggDropNaiveImp,
-    superEggDropNaiveDec,
-    superEggDropOptimal
-  }
+  superEggDropBruteForce,
+  superEggDropNaiveImp,
+  superEggDropNaiveDec,
+  superEggDropOptimal,
+}

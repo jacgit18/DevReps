@@ -2,10 +2,7 @@
 
 // We will send a signal from a given node k. Return the minimum time it takes for all the n nodes to receive the signal. If it is impossible for all the n nodes to receive the signal, return -1.
 
- 
-
 // Example 1:
-
 
 // Input: times = [[2,1,1],[2,3,1],[3,4,1]], n = 4, k = 2
 // Output: 2
@@ -19,7 +16,6 @@
 
 // Input: times = [[1,2,1]], n = 2, k = 2
 // Output: -1
- 
 
 // Constraints:
 
@@ -31,29 +27,25 @@
 // 0 <= wi <= 100
 // All the pairs (ui, vi) are unique. (i.e., no multiple edges.)
 
+const networkDelayTimeBruteForce = (times: number[][], n: number, k: number): number => {
+  return 0
+}
 
- const networkDelayTimeBruteForce = (times: number[][], n: number, k: number): number =>{
-return 0
-};
+const networkDelayTimeNaiveImp = (times: number[][], n: number, k: number): number => {
+  return 0
+}
 
-const networkDelayTimeNaiveImp = (times: number[][], n: number, k: number): number =>{
-    return 0
-    };
+const networkDelayTimeNaiveDec = (times: number[][], n: number, k: number): number => {
+  return 0
+}
 
-    
-const networkDelayTimeNaiveDec = (times: number[][], n: number, k: number): number =>{
-return 0
-};
-
-
-const networkDelayTimeOptimal = (times: number[][], n: number, k: number): number =>{
-    return 0
-    };
-    
+const networkDelayTimeOptimal = (times: number[][], n: number, k: number): number => {
+  return 0
+}
 
 export const networkDelayTime = {
-    networkDelayTimeBruteForce,
-    networkDelayTimeNaiveImp,
-    networkDelayTimeNaiveDec,
-    networkDelayTimeOptimal
-    }
+  networkDelayTimeBruteForce,
+  networkDelayTimeNaiveImp,
+  networkDelayTimeNaiveDec,
+  networkDelayTimeOptimal,
+}

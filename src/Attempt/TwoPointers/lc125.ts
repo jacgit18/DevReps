@@ -46,7 +46,7 @@ export const isPalindrome = {
   isPalindromeBruteForce,
   isPalindromeNaiveImp,
   isPalindromeNaiveDec,
-  pisPalindromeOptimal
+  pisPalindromeOptimal,
 }
 // Example usage:
 // const example1 = "A man, a plan, a canal: Panama"

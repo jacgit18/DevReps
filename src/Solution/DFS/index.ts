@@ -8,7 +8,6 @@ import { inorderSuccessor } from "./lc285"
 import { pathSum } from "./lc437"
 import { diameterOfBinaryTree } from "./lc543"
 
-
 export const SolutionDFS = {
   lc112: hasPathSum,
   lc113: pathSumTwo,

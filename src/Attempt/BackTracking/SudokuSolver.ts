@@ -55,10 +55,9 @@ const inputBoard = [
 
 // console.log("Edge case one", sudokuSolver(inputBoard))
 
-
 export const sudokuSolver = {
   sudokuSolverBruteForce,
   sudokuSolverNaiveImp,
   sudokuSolverNaiveDec,
-  sudokuSolverOptimal
+  sudokuSolverOptimal,
 }

@@ -8,8 +8,6 @@
 
 // Return an array (of length num_people and sum candies) that represents the final distribution of candies.
 
- 
-
 // Example 1:
 
 // Input: candies = 7, num_people = 4
@@ -24,42 +22,36 @@
 
 // Input: candies = 10, num_people = 3
 // Output: [5,2,3]
-// Explanation: 
+// Explanation:
 // On the first turn, ans[0] += 1, and the array is [1,0,0].
 // On the second turn, ans[1] += 2, and the array is [1,2,0].
 // On the third turn, ans[2] += 3, and the array is [1,2,3].
 // On the fourth turn, ans[0] += 4, and the final array is [5,2,3].
- 
 
 // Constraints:
 
 // 1 <= candies <= 10^9
 // 1 <= num_people <= 1000
 
- const distributeCandiesTwoBruteForce = (candies: number, num_people: number): number[] =>{
-    return [0]
-    
-};
+const distributeCandiesTwoBruteForce = (candies: number, num_people: number): number[] => {
+  return [0]
+}
 
-const distributeCandiesTwoNaiveImp = (candies: number, num_people: number): number[] =>{
-    return [0]
-    
-};
+const distributeCandiesTwoNaiveImp = (candies: number, num_people: number): number[] => {
+  return [0]
+}
 
-const distributeCandiesTwoNaiveDec = (candies: number, num_people: number): number[] =>{
-    return [0]
-    
-};
+const distributeCandiesTwoNaiveDec = (candies: number, num_people: number): number[] => {
+  return [0]
+}
 
-const distributeCandiesTwoOptimal = (candies: number, num_people: number): number[] =>{
-    return [0]
-    
-};
-
+const distributeCandiesTwoOptimal = (candies: number, num_people: number): number[] => {
+  return [0]
+}
 
 export const distributeCandiesTwo = {
-    distributeCandiesTwoBruteForce,
-    distributeCandiesTwoNaiveImp,
-    distributeCandiesTwoNaiveDec,
-    distributeCandiesTwoOptimal
-  }
+  distributeCandiesTwoBruteForce,
+  distributeCandiesTwoNaiveImp,
+  distributeCandiesTwoNaiveDec,
+  distributeCandiesTwoOptimal,
+}

@@ -42,10 +42,9 @@ const subsetsWithDupOptimal = (nums: number[]): number[][] => {
 // const example2 = subsetsWithDup([0])
 // console.log(example2)
 
-
 export const subsetsWithDup = {
   subsetsWithDupBruteForce,
   subsetsWithDupNaiveImp,
   subsetsWithDupNaiveDec,
-  subsetsWithDupOptimal
+  subsetsWithDupOptimal,
 }

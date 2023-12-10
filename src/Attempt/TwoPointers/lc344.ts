@@ -17,26 +17,19 @@
 // 1 <= s.length <= 105
 // s[i] is a printable ascii character.
 
-
-const reverseStringBruteForce = (s: string[]): string[] =>{
-  
+const reverseStringBruteForce = (s: string[]): string[] => {
   return [" "]
 }
 
-
-const reverseStringNaiveImp = (s: string[]): string[] =>{
-  
+const reverseStringNaiveImp = (s: string[]): string[] => {
   return [" "]
 }
 
-const reverseStringNaiveDec = (s: string[]): string[] =>{
-  
+const reverseStringNaiveDec = (s: string[]): string[] => {
   return [" "]
 }
 
-
-const reverseStringOptimal = (s: string[]): string[] =>{
-  
+const reverseStringOptimal = (s: string[]): string[] => {
   return [" "]
 }
 
@@ -44,8 +37,5 @@ export const reverseString = {
   reverseStringBruteForce,
   reverseStringNaiveImp,
   reverseStringNaiveDec,
-  reverseStringOptimal
+  reverseStringOptimal,
 }
-
-
-

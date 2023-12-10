@@ -24,36 +24,31 @@
 // 0 <= Node.val <= 9
 // It is guaranteed that the list represents a number that does not have leading zeros.
 
-import { ListNode } from "../../util/LinkedListMaker";
+import { ListNode } from "../../util/LinkedListMaker"
 
+export const addTwoNumbers = (l1: ListNode | null, l2: ListNode | null): ListNode | null => {
+  const dummyHead: ListNode = new ListNode(0)
+  let p: ListNode | null = l1
+  let q: ListNode | null = l2
+  let current: ListNode | null = dummyHead
+  let carry: number = 0
 
-
-export const addTwoNumbers = (l1: ListNode | null, l2: ListNode | null): ListNode | null =>{
-  const dummyHead: ListNode = new ListNode(0);
-  let p: ListNode | null = l1;
-  let q: ListNode | null = l2;
-  let current: ListNode | null = dummyHead;
-  let carry: number = 0;
-  
   while (p !== null || q !== null) {
-      const x: number = p ? p.value : 0;
-      const y: number = q ? q.value : 0;
-      const sum: number = x + y + carry;
-      carry = Math.floor(sum / 10);
-      
-      current.next = new ListNode(sum % 10);
-      current = current.next;
-      
-      if (p) p = p.next;
-      if (q) q = q.next;
+    const x: number = p ? p.value : 0
+    const y: number = q ? q.value : 0
+    const sum: number = x + y + carry
+    carry = Math.floor(sum / 10)
+
+    current.next = new ListNode(sum % 10)
+    current = current.next
+
+    if (p) p = p.next
+    if (q) q = q.next
   }
-  
+
   if (carry > 0) {
-      current.next = new ListNode(carry);
+    current.next = new ListNode(carry)
   }
-  
-  return dummyHead.next;
+
+  return dummyHead.next
 }
-
-
-
