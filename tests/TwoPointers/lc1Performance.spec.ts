@@ -7,15 +7,16 @@ const runTestCases = () => {
 
     const testCasePlaceholder: TestCase[] = [
       { params: [1, 2, 3, 4, 6], paramsTwo: 6, expected: [0]},
-
-
-      // Add more test cases here
     ];
     
+
+    const testCasePerformance: TestCase[] = [
+      { params: [1, 2, 3, 4, 6], paramsTwo: 6, expected: [1,3], performance: true},
+    ];
     
   
     const testCases: TestCase[] = [
-        { params: [1, 2, 3, 4, 6], paramsTwo: 6, expected: [1, 3], performance: true },
+        { params: [1, 2, 3, 4, 6], paramsTwo: 6, expected: [1, 3]},
         // Fix failing Soulution 
         // { params: [2,7,11,15], paramsTwo: 9, expected: [0, 1]},
         // { params: [3, 2, 4], paramsTwo: 6, expected: [1, 2]},
@@ -25,8 +26,11 @@ const runTestCases = () => {
         // Add more test cases here
       ];
       
-  
-      generateTestCases(AttemptTwoPointer.lc1.pair_with_target_sum_NaiveImp, testCasePlaceholder, ' Attempt ');
+      generateTestCases(AttemptTwoPointer.lc1.pair_with_target_sum_BruteForce, testCasePlaceholder, ' BruteForce Code Attempt ');
+      // generateTestCases(AttemptTwoPointer.lc1.pair_with_target_sum_NaiveImp, testCasePlaceholder, ' Naive Imperative Code Attempt ');
+      // generateTestCases(AttemptTwoPointer.lc1.pair_with_target_sum_NaiveDec, testCasePlaceholder, ' Naive Declaritive Code Attempt ');
+      // generateTestCases(AttemptTwoPointer.lc1.pair_with_target_sum_Optimal, testCasePlaceholder, ' Optimal Code Attempt ');
+
       generateTestCases(SolutionTwoPointer.lc1.pair_with_target_sum_Two_Pointer, testCases, ' Solution ');
       generateTestCases(SolutionTwoPointer.lc1.pair_with_target_sum_map, testCases, 'Alt Solution ');
 
