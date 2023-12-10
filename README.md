@@ -3,6 +3,11 @@
 
 Dev Logic Gym is a purpose-built project dedicated to refining coding skills, strengthening problem-solving capabilities, and fostering logical thinking. This project serves as a centralized hub for coding challenges, providing a streamlined location for users to practice, learn, and track their progress.
 
+```bash
+# Shows project folder structure excluding these directories
+tree -I 'node_modules|build|coverage'
+```
+
 ## Algorithm Approach Types
 ![](assets/AlgoFlow.png)
 
