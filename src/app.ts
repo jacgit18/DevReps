@@ -1,6 +1,7 @@
 import * as readlineSync from 'readline-sync';
 import { AllAttempts } from "./Attempt";
 import { AllSolution } from "./Solution";
+import { FastLogger } from './util/logger';
 
 
 // Experiment
@@ -82,7 +83,7 @@ const main = () => {
   // customLog('error', 'Error:', 'Something went wrong', 'Details', 'Error Context');
 
 
-  // FastLogger(" ")
+  FastLogger(AllSolution)
 
 
   
