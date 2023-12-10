@@ -45,6 +45,6 @@ import { MinHeap } from "../../util/MinHeapMaker";
   }
   
   // Example usage:
-  console.log(connectSticks([2, 4, 3])); // Output: 14
-  console.log(connectSticks([1, 8, 3, 5])); // Output: 30
+  // console.log(connectSticks([2, 4, 3])); // Output: 14
+  // console.log(connectSticks([1, 8, 3, 5])); // Output: 30
   

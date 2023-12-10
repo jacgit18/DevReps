@@ -88,7 +88,7 @@ const smallestSubarraySlidingWindow = (s: number, arr: number[]): number => {
 
 
 export const smallestSubarrayWithGivenSum = {
-  smallestSubarraySlidingWindow,
+ smallestSubarraySlidingWindow,
  smallest_subarray_with_given_sumAlt
 
 };

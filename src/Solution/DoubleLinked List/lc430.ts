@@ -105,6 +105,6 @@ import { Node } from "../../util/DoubleLinkedListMaker";
     head1.next.next.next.next = new Node(5, head1.next.next.next);
     head1.next.next.next.next.next = new Node(6, head1.next.next.next.next);
     
-    const flattenedHead1 = flatten(head1);
-    console.log(flattenedHead1);
+    // const flattenedHead1 = flatten(head1);
+    // console.log(flattenedHead1);
     

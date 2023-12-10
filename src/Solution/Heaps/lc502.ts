@@ -78,11 +78,11 @@ import { MaxHeap } from "../../util/MaxHeapMakers";
     w1 = 0,
     profits1 = [1, 2, 3],
     capital1 = [0, 1, 1];
-  console.log(findMaximizedCapital(k1, w1, profits1, capital1)); // Output: 4
+  // console.log(findMaximizedCapital(k1, w1, profits1, capital1)); // Output: 4
   
   const k2 = 3,
     w2 = 0,
     profits2 = [1, 2, 3],
     capital2 = [0, 1, 2];
-  console.log(findMaximizedCapital(k2, w2, profits2, capital2)); // Output: 6
+  // console.log(findMaximizedCapital(k2, w2, profits2, capital2)); // Output: 6
   

@@ -85,9 +85,9 @@
   // Example usage:
   const head1 = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5)))));
   const k1 = 2;
-  console.log(reverseKGroup(head1, k1));
+  // console.log(reverseKGroup(head1, k1));
   
   const head2 = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5)))));
   const k2 = 3;
-  console.log(reverseKGroup(head2, k2));
+  // console.log(reverseKGroup(head2, k2));
   

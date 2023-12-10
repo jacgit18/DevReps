@@ -44,6 +44,6 @@ export const findComplement = (num: number): number =>{
     }
     
     // Example usage:
-    console.log(findComplement(5));  // Output: 2
-    console.log(findComplement(1));  // Output: 0
+    // console.log(findComplement(5));  // Output: 2
+    // console.log(findComplement(1));  // Output: 0
     
