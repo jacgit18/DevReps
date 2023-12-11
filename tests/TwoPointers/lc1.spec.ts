@@ -43,7 +43,8 @@ const runTestCases = () => {
       // generateTestCases(AttemptTwoPointer.lc1.twoSumNaiveImp, testCasePerformance, ' Naive Imperative Code Attempt ');
       // generateTestCases(AttemptTwoPointer.lc1.twoSumOptimal, testCasePerformance, ' Optimal Code Attempt ');
 
-      generateTestCases(SolutionTwoPointer.lc1, testCases, ' Solution ');
+      generateTestCases(SolutionTwoPointer.lc1.twoSumTwoPointer, testCases, ' Solution ');
+      generateTestCases(SolutionTwoPointer.lc1.twoSumAlt, testCases, ' Alt Solution ');
 
   
     

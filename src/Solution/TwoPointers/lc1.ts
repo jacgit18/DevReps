@@ -27,12 +27,12 @@
 
 
  /**
- * not two pointer 
  * @param nums: number[]
  * @param target: number
  * @return number[]
  */
-export const twoSum = (nums: number[], target: number): number[] => {
+
+ const twoSumAlt = (nums: number[], target: number): number[] => {
   const memo: any = {};
 
   for (let i = 0; i < nums.length; i++) {
@@ -46,11 +46,42 @@ export const twoSum = (nums: number[], target: number): number[] => {
   return [-1, -1];
 }
 
-console.log(twoSum([2, 7, 11, 15], 9));
-// console.time("Pair time map")
-console.log(twoSum([1, 2, 3, 4, 6], 6))
-// console.timeEnd("Pair time map")
+const twoSumTwoPointer = (nums: number[], target: number): number[] => {
+    // Create an array of tuples to store the original indices along with the numbers
+    const indexedNums = nums.map((num, index) => [num, index]);
+
+    // Sort the array of tuples based on the numbers
+    indexedNums.sort((a, b) => a[0] - b[0]);
+
+    let left = 0;
+    let right = indexedNums.length - 1;
+
+    while (left < right) {
+        const currentSum = indexedNums[left][0] + indexedNums[right][0];
+
+        if (currentSum === target) {
+            return [indexedNums[left][1], indexedNums[right][1]];
+        } else if (currentSum < target) {
+            left++;
+        } else {
+            right--;
+        }
+    }
+
+    // No solution found, return an empty array or throw an error based on your requirements.
+    return [];
+}
 
 
+
+// console.log(twoSum([2, 7, 11, 15], 9));
+// // console.time("Pair time map")
+// console.log(twoSum([1, 2, 3, 4, 6], 6))
+// // console.timeEnd("Pair time map")
+
+export const twoSum = {
+    twoSumTwoPointer,
+    twoSumAlt
+}
 
 
