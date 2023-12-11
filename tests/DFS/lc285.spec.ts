@@ -21,13 +21,24 @@ const runTestCases = () => {
   const testCasePlaceholder:  TestCase[]  = [
     { params: root1, paramsTwo: p1, expected: null },
   ];
+
+
+  const testCasePerformance:  TestCase[]  = [
+    { params: root1, paramsTwo: p1, expected: 2, performance: true },
+  ];
   
   const testCases:  TestCase[]  = [
     { params: root1, paramsTwo: p1, expected: 2 },
     { params: root2, paramsTwo: p2, expected: null },
   ];
 
-    generateTestCases(AttemptDFS.lc285.inorderSuccessorNaiveImp, testCasePlaceholder,' Attempt ');
+
+    generateTestCases(AttemptDFS.lc285.inorderSuccessorBruteForce, testCasePlaceholder, ' BruteForce Code Attempt ');
+    generateTestCases(AttemptDFS.lc285.inorderSuccessorNaiveDec, testCasePlaceholder,' Naive Declaritive Code Attempt ');
+  
+    // generateTestCases(AttemptDFS.lc285.inorderSuccessorNaiveImp, testCasePerformance,  ' Naive Imperative Code Attempt ');
+    // generateTestCases(AttemptDFS.lc285.inorderSuccessorNaiveDec, testCasePerformance, ' Optimal Code Attempt ');
+
     generateTestCases(SolutionDFS.lc285, testCases,' Solution ',);
 
 

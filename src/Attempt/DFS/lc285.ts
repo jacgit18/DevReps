@@ -45,11 +45,11 @@ export const inorderSuccessor = {
 }
 
 // Example usage:
-const root1 = new TreeNode(2, new TreeNode(1), new TreeNode(3))
-const p1 = new TreeNode(1)
+// const root1 = new TreeNode(2, new TreeNode(1), new TreeNode(3))
+// const p1 = new TreeNode(1)
 
-const root2 = new TreeNode(5, new TreeNode(3, new TreeNode(2), new TreeNode(4)), new TreeNode(6))
-const p2 = new TreeNode(6)
+// const root2 = new TreeNode(5, new TreeNode(3, new TreeNode(2), new TreeNode(4)), new TreeNode(6))
+// const p2 = new TreeNode(6)
 
 // console.log(inorderSuccessor(root1, p1)) // Output: 2
 // console.log(inorderSuccessor(root2, p2)) // Output: null

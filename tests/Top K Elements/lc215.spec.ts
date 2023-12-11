@@ -32,8 +32,8 @@ const runTestCases = () => {
   generateTestCases(AttemptTop_K_Elements.lc215.findKthLargestBruteForce, testCasePlaceholder, ' BruteForce Code Attempt ');
   generateTestCases(AttemptTop_K_Elements.lc215.findKthLargestNaiveDec, testCasePlaceholder,' Naive Declaritive Code Attempt ');
 
-  generateTestCases(AttemptTop_K_Elements.lc215.findKthLargestNaiveImp, testCasePerformance,  ' Naive Imperative Code Attempt ');
-  generateTestCases(AttemptTop_K_Elements.lc215.findKthLargestOptimal, testCasePerformance, ' Optimal Code Attempt ');
+  // generateTestCases(AttemptTop_K_Elements.lc215.findKthLargestNaiveImp, testCasePerformance,  ' Naive Imperative Code Attempt ');
+  // generateTestCases(AttemptTop_K_Elements.lc215.findKthLargestOptimal, testCasePerformance, ' Optimal Code Attempt ');
 
   generateTestCases(SolutionTop_K_Elements.lc215, testCases,' Solution ',);};
 

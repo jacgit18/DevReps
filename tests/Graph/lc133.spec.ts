@@ -56,8 +56,8 @@ const runTestCases = () => {
   generateTestCases(AttemptGraph.lc133.cloneGrapherBruteForce, testCasePlaceholder, ' BruteForce Code Attempt ');
   generateTestCases(AttemptGraph.lc133.cloneGrapherNaiveDec, testCasePlaceholder, ' Naive Declaritive Code Attempt ');
 
-  generateTestCases(AttemptGraph.lc133.cloneGrapherNaiveImp, testCasePerformance, ' Naive Imperative Code Attempt ');
-  generateTestCases(AttemptGraph.lc133.cloneGrapherOptimal, testCasePerformance, ' Optimal Code Attempt ');
+  // generateTestCases(AttemptGraph.lc133.cloneGrapherNaiveImp, testCasePerformance, ' Naive Imperative Code Attempt ');
+  // generateTestCases(AttemptGraph.lc133.cloneGrapherOptimal, testCasePerformance, ' Optimal Code Attempt ');
 
   generateTestCases(SolutionGraph.lc133, testCases, ' Solution ');
 };

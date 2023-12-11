@@ -58,8 +58,8 @@ const runTestCases = () => {
     generateTestCases(AttemptRevLinkedList.lc2.addTwoNumbersBruteForce, testCasePlaceholder,' BruteForce Code Attempt ');
     generateTestCases(AttemptRevLinkedList.lc2.addTwoNumbersNaiveDec, testCasePlaceholder,' Naive Declaritive Code Attempt ');
 
-    generateTestCases(AttemptRevLinkedList.lc2.addTwoNumbersNaiveImp, testCasePerformance,' Naive Imperative Code Attempt ');
-    generateTestCases(AttemptRevLinkedList.lc2.addTwoNumbersOptimal, testCasePerformance,' Optimal Code Attempt ');
+    // generateTestCases(AttemptRevLinkedList.lc2.addTwoNumbersNaiveImp, testCasePerformance,' Naive Imperative Code Attempt ');
+    // generateTestCases(AttemptRevLinkedList.lc2.addTwoNumbersOptimal, testCasePerformance,' Optimal Code Attempt ');
 
     generateTestCases(SolutionRevLinkedList.lc2, testCases,' Solution ',);
 
