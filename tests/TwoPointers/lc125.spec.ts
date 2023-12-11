@@ -29,9 +29,10 @@ const runTestCases = () => {
 
 
     generateTestCases(AttemptTwoPointer.lc125.isPalindromeBruteForce, testCasePlaceholder,' BruteForce Code Attempt ');
-    // generateTestCases(AttemptTwoPointer.lc125.isPalindromeNaiveDec, testCasePlaceholder,' Naive Declaritive Code Attempt ');
-    generateTestCases(AttemptTwoPointer.lc125.isPalindromeNaiveImp, testCasePlaceholder,' Naive Imperative Code Attempt ');
-    // generateTestCases(AttemptTwoPointer.lc125.pisPalindromeOptimal, testCasePlaceholder,' Optimal Code Attempt ');
+    generateTestCases(AttemptTwoPointer.lc125.isPalindromeNaiveDec, testCasePlaceholder,' Naive Declaritive Code Attempt ');
+    
+    // generateTestCases(AttemptTwoPointer.lc125.isPalindromeNaiveImp, testCasePerformance,' Naive Imperative Code Attempt ');
+    // generateTestCases(AttemptTwoPointer.lc125.isPalindromeOptimal, testCasePerformance,' Optimal Code Attempt ');
 
 
     generateTestCases(SolutionTwoPointer.lc125, testCases,' Solution ',);

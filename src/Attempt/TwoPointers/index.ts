@@ -1,4 +1,4 @@
-import { PairWithTargetSum } from "./lc1"
+import { twoSum } from "./lc1"
 import { maxArea } from "./lc11"
 import { maxProfit } from "./lc121"
 import { isPalindrome } from "./lc125"
@@ -16,7 +16,7 @@ import { backspaceCompare } from "./lc844"
 import { sortedSquares } from "./lc977"
 
 export const AttemptTwoPointer = {
-  lc1: PairWithTargetSum,
+  lc1: twoSum,
   lc11: maxArea,
   lc15: threeSum,
   lc16: threeSumClosest,

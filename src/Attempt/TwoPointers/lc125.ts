@@ -38,7 +38,7 @@ const isPalindromeNaiveDec = (s: string): boolean => {
   return true
 }
 
-const pisPalindromeOptimal = (s: string): boolean => {
+const isPalindromeOptimal = (s: string): boolean => {
   return true
 }
 
@@ -46,7 +46,7 @@ export const isPalindrome = {
   isPalindromeBruteForce,
   isPalindromeNaiveImp,
   isPalindromeNaiveDec,
-  pisPalindromeOptimal,
+  isPalindromeOptimal,
 }
 // Example usage:
 // const example1 = "A man, a plan, a canal: Panama"

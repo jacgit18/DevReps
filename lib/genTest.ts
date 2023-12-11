@@ -61,7 +61,7 @@ export const generateTestCases = (
   });
 };
 
-class BenchmarkHelper {
+export class BenchmarkHelper {
   static benchmarkFunction(func: (...args: any[]) => any, ...input: any[]) {
     const suite = new Benchmark.Suite();
     suite.add("Function", () => {
@@ -74,4 +74,3 @@ class BenchmarkHelper {
   }
 }
 
-export default BenchmarkHelper;

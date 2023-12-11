@@ -25,59 +25,32 @@
 // -109 <= target <= 109
 // Only one valid answer exists.
 
-const pair_with_target_sum_map = (nums: number[], target: number): number[] => {
-  let map = new Map<number, number>()
+
+ /**
+ * not two pointer 
+ * @param nums: number[]
+ * @param target: number
+ * @return number[]
+ */
+export const twoSum = (nums: number[], target: number): number[] => {
+  const memo: any = {};
 
   for (let i = 0; i < nums.length; i++) {
-    // console.log(map)
-
-    let complement = target - nums[i]
-    if (map.has(complement)) {
-      map.set(nums[i], i)
-
-      return [map.get(complement)!, i]
-    }
-    map.set(nums[i], i)
+      const diff = target - nums[i];
+      if (diff in memo) {
+          return [memo[diff], i];
+      } else {
+          memo[nums[i]] = i;
+      }
   }
-
-  return [-1, -1]
+  return [-1, -1];
 }
 
+console.log(twoSum([2, 7, 11, 15], 9));
 // console.time("Pair time map")
-console.log(pair_with_target_sum_map([1, 2, 3, 4, 6], 6))
+console.log(twoSum([1, 2, 3, 4, 6], 6))
 // console.timeEnd("Pair time map")
 
-const pair_with_target_sum_Two_Pointer = (arr: number[], targetSum: number): number[] => {
-  let left = 0,
-    right = arr.length - 1
-  // console.log(right)
-  while (left < right) {
-    const currentSum = arr[left] + arr[right]
-    if (currentSum === targetSum) {
-      return [left, right]
-    }
 
-    if (targetSum > currentSum) {
-      left += 1 // we need a pair with a bigger sum
-    } else {
-      right -= 1 // we need a pair with a smaller sum
-    }
-  }
 
-  return [-1, -1]
-}
 
-// console.time("Pair time")
-// console.log(pair_with_target_sum_Two_Pointer([1, 2, 3, 4, 6], 6))
-// console.timeEnd("Pair time")
-
-// console.log(pair_with_target_sum([2, 5, 9, 11], 11));
-
-// console.log(`\n ------- Edge Case -------- `)
-// console.log(`Edge 1: [${pair_with_target_sum([], 6)}]`);
-// console.log(`Edge 1: [${pair_with_target_sum([3], 6)}]`);
-
-export const pair_with_target_sum = {
-  pair_with_target_sum_Two_Pointer,
-  pair_with_target_sum_map,
-}

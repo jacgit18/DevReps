@@ -9,6 +9,10 @@ const runTestCases = () => {
     { params:[[0]], expected: 0 },
   ];
 
+  const testCasePerformance: TestCase[]  = [
+    { params:[[-2, 1, -3, 4, -1, 2, 1, -5, 4]], expected: 6, performance: true},
+  ];
+
   const testCases: TestCase[]  = [
     { params:[[-2, 1, -3, 4, -1, 2, 1, -5, 4]], expected: 6},
     { params:[[1]], expected: 1},
@@ -18,14 +22,14 @@ const runTestCases = () => {
     { params: [[0]], expected: 0 }, // Single element with value 0
     { params: [[0, 0, 0, 0, 0]], expected: 0 }, // All elements are 0
     { params: [[-1, -2, -3, 0, -2, -1, -4]], expected: 0 }, // All negative numbers with a zero in between
-
-    // Failling case 
-    // { params: [[-1, 2, -1, 3, -5, 2, 4, -3, 2, 1, -4, 2, 5, -4]], expected: 11 }, // Generic case
-
   ];
 
-
-    generateTestCases(AttemptSlidingWindow.lc53.maxSubArrayNaiveImp, testCasePlaceholder, ' Attempt ');
+    generateTestCases(AttemptSlidingWindow.lc53.maxSubArrayBruteForce, testCasePlaceholder, ' BruteForce Code Attempt ');
+    generateTestCases(AttemptSlidingWindow.lc53.maxSubArrayNaiveDec, testCasePlaceholder, ' Naive Declaritive Code Attempt ');
+  
+    // generateTestCases(AttemptSlidingWindow.lc53.maxSubArrayNaiveImp, testCasePerformance, ' Naive Imperative Code Attempt ');
+    // generateTestCases(AttemptSlidingWindow.lc53.maxSubArrayOptimal, testCasePerformance, ' Optimal Code Attempt ');
+  
     generateTestCases(SolutionSlidingWindow.lc53, testCases, " Solution ")
 
 
