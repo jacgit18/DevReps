@@ -25,12 +25,12 @@ const runTestCases = () => {
       // Add more test cases here
     ];
 
-
+    // why wrapping in array fixes behaviour
     const testCasesWeridBehavior: TestCase[] = [
-      { params: [1, 2, 3, 4, 6], paramsTwo: 6, expected: [1, 3]},
-      { params: [2, 7, 11, 15], paramsTwo: 9, expected: [0, 1]},
-      { params: [3, 2, 4], paramsTwo: 6, expected: [1, 2]},
-      { params: [3, 3], paramsTwo: 6, expected: [0, 1]},
+      { params: [[1, 2, 3, 4, 6]], paramsTwo: 6, expected: [1, 3]},
+      { params: [[2, 7, 11, 15]], paramsTwo: 9, expected: [0, 1]},
+      { params: [[3, 2, 4]], paramsTwo: 6, expected: [1, 2]},
+      { params: [[3, 3]], paramsTwo: 6, expected: [0, 1]},
     ];
 
 
@@ -44,7 +44,7 @@ const runTestCases = () => {
       // generateTestCases(SolutionTwoPointer.lc1.twoSumTwoPointer, testCasePerformance, ' Solution ');
       // generateTestCases(SolutionTwoPointer.lc1.twoSumAlt, testCasePerformance, ' Alt Solution ');
 
-      generateTestCases(SolutionTwoPointer.lc1.twoSumTwoPointer, testCases, ' Solution ');
+      generateTestCases(SolutionTwoPointer.lc1.twoSumTwoPointer, testCasesWeridBehavior, ' Solution ');
 
     };
     
