@@ -1,34 +1,61 @@
 import { generateTestCases, TestCase } from "../../lib/genTest";
-import { AttemptTwoPointer } from "../../src/Attempt/TwoPointers";
-import { SolutionTwoPointer } from "../../src/Solution/TwoPointers/index";
-
+import { AttemptHeaps } from "../../src/Attempt/Heaps";
+import { SolutionHeaps } from "../../src/Solution/Heaps";
 
 const runTestCases = () => {
 
-    const testCasePlaceholder: TestCase[] = [
-      { params: [1, 2, 3, 4, 6], paramsTwo: 6, expected: [0]},
-
-
-      // Add more test cases here
+   
+  const testCasePlaceholder: TestCase[]  = [
+    {
+      params: 2,
+      paramsTwo: 0,
+      paramsThree: [1, 2, 3],
+      paramsFour: [0, 1, 1],
+      expected: 0,
+    },
     ];
-    
-    
   
-    const testCases: TestCase[] = [
-        { params: [1, 2, 3, 4, 6], paramsTwo: 6, expected: [1, 3], performance: true },
-        // Fix failing Soulution 
-        // { params: [2,7,11,15], paramsTwo: 9, expected: [0, 1]},
-        // { params: [3, 2, 4], paramsTwo: 6, expected: [1, 2]},
-        // { params: [3,3], paramsTwo: 6, expected: [0, 1]},
 
+  const testCasePerformance:  TestCase[]  = [
+    {
+      params: 2,
+      paramsTwo: 0,
+      paramsThree: [1, 2, 3],
+      paramsFour: [0, 1, 1],
+      expected: 4,
+      performance: true
+    },
+  ];
 
-        // Add more test cases here
-      ];
+  const testCases:  TestCase[]  = [
+    // Test Case 1
+    {
+      params: 2,
+      paramsTwo: 0,
+      paramsThree: [1, 2, 3],
+      paramsFour: [0, 1, 1],
+      expected: 4,
+    },
+    // Test Case 2
+    {
+      params: 3,
+      paramsTwo: 0,
+      paramsThree: [1, 2, 3],
+      paramsFour: [0, 1, 2],
+      expected: 4,
+    },
+    // Add more test cases as needed
+  ];
+    
       
+   
+      generateTestCases(AttemptHeaps.lc502.findMaximizedCapitalBruteForce, testCasePlaceholder, ' BruteForce Code Attempt ');
+      generateTestCases(AttemptHeaps.lc502.findMaximizedCapitalNaiveDec, testCasePlaceholder, ' Naive Declaritive Code Attempt ');
+    
+      generateTestCases(AttemptHeaps.lc502.findMaximizedCapitalNaiveImp, testCasePerformance, ' Naive Imperative Code Attempt ');
+      generateTestCases(AttemptHeaps.lc502.findMaximizedCapitalOptimal, testCasePerformance, ' Optimal Code Attempt ');
   
-      generateTestCases(AttemptTwoPointer.lc1.pair_with_target_sum_NaiveImp, testCasePlaceholder, ' Attempt ');
-      generateTestCases(SolutionTwoPointer.lc1.pair_with_target_sum_Two_Pointer, testCases, ' Solution ');
-      generateTestCases(SolutionTwoPointer.lc1.pair_with_target_sum_map, testCases, 'Alt Solution ');
+      generateTestCases(SolutionHeaps.lc502, testCases,' Solution ',);
 
   
     

@@ -1,13 +1,16 @@
 import Benchmark from "benchmark";
 import { TreeNode } from "../src/util/BinaryTreeMaker";
+import { Node } from "../src/util/DoubleLinkedListMaker";
 import { GraphVertex } from "../src/util/GraphMaker";
 import { ListNode } from "../src/util/LinkedListMaker";
+
 
 export type TestCase = {
   params?: any | any[]; // Updated type for params
   paramsTwo?: any | any[]; // Updated type for paramsTwo
   paramsThree?: any | any[]; // Updated type for paramsThree
-  expected: number | string | boolean | any[] | any[][] | TreeNode | ListNode | GraphVertex | null;
+  paramsFour?: any | any[]; // Updated type for paramsThree
+  expected: number | string | boolean | any[] | any[][] | TreeNode | ListNode | GraphVertex | Node | null;
   performance?: boolean; // Flag to indicate a performance test case
 };
 
@@ -21,23 +24,23 @@ export const generateTestCases = (
   describe(testName, () => {
     let fun: TestFunction;
     testCases.forEach((testCase, index) => {
-      const { params, paramsTwo, paramsThree, expected, performance } = testCase;
+      const { params, paramsTwo, paramsThree, paramsFour, expected, performance } = testCase;
 
       beforeEach(() => {
         fun = lcFunction;
       });
 
       if (performance) {
-        it(`should perform well for input: "${params}, ${paramsTwo}, ${paramsThree}"`, () => {
-          const combinedParams = [params, paramsTwo, paramsThree].map(param =>
+        it(`should perform well for input: "${params}, ${paramsTwo}, ${paramsThree}, ${paramsFour}"`, () => {
+          const combinedParams = [params, paramsTwo, paramsThree, paramsFour].map(param =>
             Array.isArray(param) ? param : [param]
           );
           BenchmarkHelper.benchmarkFunction(fun, ...combinedParams.flat());
         });
       } else {
-        it(`should return ${expected} for input: "${params}, ${paramsTwo}, ${paramsThree}"`, () => {
+        it(`should return ${expected} for input: "${params}, ${paramsTwo}, ${paramsThree},  ${paramsFour}"`, () => {
           const result = fun(
-            ...( [params, paramsTwo, paramsThree].map(param =>
+            ...( [params, paramsTwo, paramsThree, paramsFour].map(param =>
               Array.isArray(param) ? param : [param]
             ).flat() )
           );
@@ -47,6 +50,8 @@ export const generateTestCases = (
           if (result instanceof TreeNode) {
             expect(result?.value).toBe(expected);
           } else if (result instanceof ListNode) {
+            expect(result).toStrictEqual(expected);
+          } else if (result instanceof Node) {
             expect(result).toStrictEqual(expected);
           } else if (result instanceof GraphVertex) {
             expect(result).toStrictEqual(expected);

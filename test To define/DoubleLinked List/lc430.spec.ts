@@ -1,34 +1,64 @@
 import { generateTestCases, TestCase } from "../../lib/genTest";
-import { AttemptTwoPointer } from "../../src/Attempt/TwoPointers";
-import { SolutionTwoPointer } from "../../src/Solution/TwoPointers/index";
+import { AttemptDoublyLinkedList } from "../../src/Attempt/DoubleLinked List";
+import { SolutionDoublyLinkedList } from "../../src/Solution/DoubleLinked List";
+import { Node } from "../../src/util/DoubleLinkedListMaker";
 
 
 const runTestCases = () => {
 
-    const testCasePlaceholder: TestCase[] = [
-      { params: [1, 2, 3, 4, 6], paramsTwo: 6, expected: [0]},
-
-
-      // Add more test cases here
+  const testCasePlaceholder: TestCase[]  = [
+    {
+      params: [
+        new Node(1, null, new Node(2, null, new Node(3, null, new Node(4, null, new Node(5, null, new Node(6)))))),
+      ],
+      expected: null,
+      performance: true
+    },
     ];
-    
-    
   
-    const testCases: TestCase[] = [
-        { params: [1, 2, 3, 4, 6], paramsTwo: 6, expected: [1, 3], performance: true },
-        // Fix failing Soulution 
-        // { params: [2,7,11,15], paramsTwo: 9, expected: [0, 1]},
-        // { params: [3, 2, 4], paramsTwo: 6, expected: [1, 2]},
-        // { params: [3,3], paramsTwo: 6, expected: [0, 1]},
 
+  const testCasePerformance:  TestCase[]  = [
+    {
+      params: [
+        new Node(1, null, new Node(2, null, new Node(3, null, new Node(4, null, new Node(5, null, new Node(6)))))),
+      ],
+      expected: new Node(1, null, new Node(2, null, new Node(3, null, new Node(7, null, new Node(8, null, new Node(11, null, new Node(12))))))),
+      performance: true
+    },
+  ];
 
-        // Add more test cases here
-      ];
-      
+  const testCases:  TestCase[]  = [
+    // Test Case 1
+    {
+      params: [
+        new Node(1, null, new Node(2, null, new Node(3, null, new Node(4, null, new Node(5, null, new Node(6)))))),
+      ],
+      expected: new Node(1, null, new Node(2, null, new Node(3, null, new Node(7, null, new Node(8, null, new Node(11, null, new Node(12))))))),
+    },
+    // Test Case 2
+    {
+      params: [
+        new Node(1, null, new Node(2, null, new Node(3))),
+      ],
+      expected: new Node(1, null, new Node(3, null, new Node(2))),
+    },
+    // Test Case 3
+    {
+      params: [
+        null,
+      ],
+      expected: null,
+    },
+    // Add more test cases as needed
+  ];
   
-      generateTestCases(AttemptTwoPointer.lc1.pair_with_target_sum_NaiveImp, testCasePlaceholder, ' Attempt ');
-      generateTestCases(SolutionTwoPointer.lc1.pair_with_target_sum_Two_Pointer, testCases, ' Solution ');
-      generateTestCases(SolutionTwoPointer.lc1.pair_with_target_sum_map, testCases, 'Alt Solution ');
+  generateTestCases(AttemptDoublyLinkedList.lc430.flattenBruteForce, testCasePlaceholder, ' BruteForce Code Attempt ');
+  generateTestCases(AttemptDoublyLinkedList.lc430.flattenNaiveDec, testCasePlaceholder, ' Naive Declaritive Code Attempt ');
+  
+  generateTestCases(AttemptDoublyLinkedList.lc430.flattenNaiveImp, testCasePerformance, ' Naive Imperative Code Attempt ');
+  generateTestCases(AttemptDoublyLinkedList.lc430.flattenOptimal, testCasePerformance, ' Optimal Code Attempt ');
+
+  generateTestCases(SolutionDoublyLinkedList.lc430, testCases,' Solution ',);
 
   
     
