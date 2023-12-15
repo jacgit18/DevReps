@@ -21,6 +21,35 @@ Optimal approaches aim for the most efficient solution based on the problem. Whi
 
 When tackling coding challenges, especially when implementing advanced patterns, refrain from defaulting to a specific coding pattern in your approach. Take the time to analyze the problem thoroughly, considering various factors, as blindly choosing a pattern may limit your perspective and hinder a comprehensive solution. Like for example assuming every string or array question best approach is either a sliding window or two pointer this is lazy thinking and waste time.
 
+## Coding Regimine
+
+1. **Focus on One Problem:**  
+- Identify problem area.
+- Pick one problem something simple like an array question or something.
+- Read problems and break them down to understand don't solve practice doing until you feel comfortable then revisit and solve 
+  
+2. **Bruteforce Solution:**  
+- Come up with a Bruteforce solution to gain insight into the problem's dynamics.  
+  
+3. **Naive Solution:**  
+- Develop a naive solution, distinct from the Bruteforce approach.  
+- Space out attempts, allowing time for fresh perspectives.
+- The Naive solution can be done Imperatively or Declarative consider doing both ways to see if you can do it.
+- Lastly consider runtime complexity and data structures brainstorming thinking about their application in terms of access, searching, insertion, and deletion.  
+
+  
+4. **Optimal Solution & Grokking Algorithm Patterns:** 
+    >Consider Pair Programming here or in earlier approaches
+- Develop a Optimal approach
+- Consider experiment with looping iteratively and recursively.  
+- Delve into advanced algorithm patterns for solution. 
+- Think about what patterns can be used for the problem which can be solved with many different patterns depending on the problem itself.
+- Keep in mind that one pattern may be more Optimal then the other.
+- Also think about Sorting algorithms, create helper functions for code modularity also naming convention. 
+
+
+
+
 ## Syllabus
 
 ### Patterns
