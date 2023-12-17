@@ -28,9 +28,11 @@ When tackling coding challenges, especially when implementing advanced patterns,
 >Look on Glassdoor, and then checking Reddit and Quora you can also check their employees on LinkedIn and see if you have any mutual connections you can try to connect to find out about the type of interview question
 
 1. **Focus on One Problem:**
-    - Identify problem area.
-    - Pick one problem something simple like an array question or something.
-    - Read problems and break them down to understand don't solve practice doing until you feel comfortable then revisit and solve 
+    	- Identify problem area.
+      - Pick one problem something simple like an array question or something.
+      - Read problems and break them down to understand, don't solve practice doing this until you feel comfortable then revisit and solve. 
+      - Keep in mind when to change  Approach
+      - ***Consider Pair Programming when you get to Optimal approach level or Naive approach or once you fill that you have enough repetition***
   
 2. **Bruteforce Solution:**
     - Come up with a Bruteforce solution to gain insight into the problem's dynamics.
@@ -53,6 +55,10 @@ When tackling coding challenges, especially when implementing advanced patterns,
     - Keep in mind that one pattern may be more Optimal then the other.
     - Create helper functions for code modularity also implement naming convention.
 
+## Problem Solving Template Tablet Version
+>Use Microsoft whiteboard and draw on to top of image
+
+![](assets/Whiteboard.png)
 
 
 
