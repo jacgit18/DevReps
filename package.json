@@ -31,6 +31,7 @@
     "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write",
     "pre-push": "npm test",
     "test": "jest --watchAll",
+    "testExp": "npm run build && export FOR_TESTING=y && jest",
     "test:coverage": "jest --coverage",
     "dev2": "npm run prettier-format && npm run lint && nodemon"
   },

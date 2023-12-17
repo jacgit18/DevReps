@@ -16,6 +16,10 @@ export type TestCase = {
 
 type TestFunction = (...params: any[]) => any;
 
+// This code arch makes it harder to run test by test name pattern like this 
+// npm run test -t " BruteForce Code Attempt "
+
+
 export const generateTestCases = (
   lcFunction: TestFunction,
   testCases: TestCase[],
