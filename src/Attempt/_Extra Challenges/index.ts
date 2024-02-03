@@ -3,6 +3,7 @@ import { decompressString } from "./ChallengeTwo"
 import { flattenObject } from "./FlattenaDictionary"
 import { getNumberOfIslands } from "./IslandCount"
 import { SUPPLIER_PRODUCT } from "./challengeThree"
+import { numPairsDivisibleBy60 } from "./lc1010"
 import { distributeCandiesTwo } from "./lc1103"
 import { longestCommonSubsequence } from "./lc1143"
 import { numDistinct } from "./lc115"
@@ -45,6 +46,7 @@ export const AttemptExtra = {
   lc575: distributeCandies,
   lc647: countSubstrings,
   lc887: superEggDrop,
+  lc1010: numPairsDivisibleBy60,
   lc1103: distributeCandiesTwo,
   lc1143: longestCommonSubsequence,
   lc1911: maxAlternatingSum,
