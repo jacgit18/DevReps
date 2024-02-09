@@ -16,6 +16,7 @@ import { firstUniqChar } from "./lc387"
 import { validIPAddress } from "./lc468"
 import { groupAnagrams } from "./lc49"
 import { longestPalindromeSubseq } from "./lc516"
+import { spiralOrder } from "./lc54"
 import { distributeCandies } from "./lc575"
 import { countSubstrings } from "./lc647"
 import { climbStairs } from "./lc70"
@@ -34,6 +35,7 @@ export const AttemptExtra = {
   lc14: longestCommonPrefix,
   lc20: isValid,
   lc49: groupAnagrams,
+  lc54: spiralOrder,
   lc70: climbStairs,
   lc72: minDistance,
   lc74: searchMatrix,
