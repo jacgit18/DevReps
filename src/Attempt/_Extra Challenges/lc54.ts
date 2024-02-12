@@ -38,106 +38,99 @@
 
 
 
+  function spiralOrderRecursive(matrix: number[][]): number[] {
+    if(matrix.length === 0){ //if matrix is empty
+        return[]
+      }
 
-const spiralOrderBruteForce = (matrix: number[][]): number[] => {
-    return [0]
-  }
-  
-  const spiralOrderNaiveImp = (matrix: number[][]): number[] => {
-    const result = [];
-
-    let top = 0,
-        bottom = matrix.length - 1,
-        left = 0,
-        right = matrix[0].length - 1;
-  
-    while (top <= bottom && left <= right) {
-        // Traverse top row
-        for (let i = left; i <= right; i++) {
-            result.push(matrix[top][i]);
+      let result:number[] = []
+      // set indices to track traversal
+      let left = 0
+      let right = matrix[0].length-1
+      let top = 0
+      let bottom = matrix.length-1
+    
+    
+      const recursiveTraverse = 
+      (top: number, bottom: number, left: number, right: number) =>{
+        //break statement for inner recursive call
+        if(left > right || top > bottom) 
+          return
+    
+        // 1st iterate left to right 
+        // use: left, right, top 
+        // matrix is rowxcol  
+        for(let i = left; i <= right; i++){
+          result.push(matrix[top][i])
+        //   console.log(matrix[top][i])
         }
         top++;
-  
-        // Traverse right column
-        for (let i = top; i <= bottom; i++) {
-            result.push(matrix[i][right]);
+    
+        // 2nd iterate top to bottom
+        // use: top bottom and right for column access
+        for(let i= top; i <= bottom; i++){
+          // [right][i] or [i][right]
+          result.push(matrix[i][right])
+        //   console.log(matrix[i][right])
         }
         right--;
-  
-        // Traverse bottom row
-        if (top <= bottom) {
-            for (let i = right; i >= left; i--) {
-                result.push(matrix[bottom][i]);
-            }
-            bottom--;
+    
+        /**
+         * 3rd iteration: what are these values #? 
+          left=0 , 
+          right= decremented to 1, 
+          top= incremented 1, 
+          bottom = 2
+         */
+        if(top <= bottom){ //check if we've reached the last row = bottom
+          // iterate bottom right to left
+          for(let i= right; i >= left; i--){
+            // similar to first loop: left to right
+            // we were pushing from left to right: i++
+            // now were pushing right to left: i-- 
+
+            result.push(matrix[bottom][i])
+            // console.log(matrix[bottom][i])
+          }
+          bottom--;
+    
         }
-  
-        // Traverse left column
-        if (left <= right) {
-            for (let i = bottom; i >= top; i--) {
-                result.push(matrix[i][left]);
-            }
-            left++;
+        /**
+         [1,2,3],
+         [4,5,6],
+         [7,8,9]
+    
+         * 4th iteration: what are these values #? 
+          left=0, 
+          right= decremented to 1, 
+          top= incremented to 1, 
+          bottom = decremented to 1
+         */
+        // spiral moves left to right
+        if(left <= right){
+          // traverse bottom left to top left 
+          for(let i= bottom; i >= top; i--){
+            result.push(matrix[i][left])
+        //     console.log('top ', top, '\n')
+        //     console.log('bottom ', bottom, '\n')
+        //     console.log(matrix[i][left])
+          }
+          left++;
         }
-    }
-  
-    return result;
-  }
-  
-  const spiralOrderNaiveDec = (matrix: number[][]): number[] => {
-    return [0]
-  }
-
-  function spiralOrderRecursive(matrix: number[][]): number[] {
-    const result: number[] = [];
-
-    function spiralTraversal(top: number, bottom: number, left: number, right: number): void {
-        // Traverse top row
-        for (let i = left; i <= right; i++) {
-            result.push(matrix[top][i]);
-        }
-
-        // Traverse right column
-        for (let i = top + 1; i <= bottom; i++) {
-            result.push(matrix[i][right]);
-        }
-
-        // Traverse bottom row
-        if (top < bottom) {
-            for (let i = right - 1; i >= left; i--) {
-                result.push(matrix[bottom][i]);
-            }
-        }
-
-        // Traverse left column
-        if (left < right) {
-            for (let i = bottom - 1; i > top; i--) {
-                result.push(matrix[i][left]);
-            }
-        }
-
-        // Move to the inner layer
-        if (top + 1 <= bottom - 1 && left + 1 <= right - 1) {
-            spiralTraversal(top + 1, bottom - 1, left + 1, right - 1);
-        }
-    }
-
-    if (matrix.length === 0) {
-        return result;
-    }
-
-    spiralTraversal(0, matrix.length - 1, 0, matrix[0].length - 1);
+    
+        recursiveTraverse(top, bottom, left, right)
+    
+      }
+    
+    recursiveTraverse(top, bottom, left, right)
+    
     return result
   }
-  
-  const spiralOrderOptimal = (matrix: number[][]): number[] => {
-    return [0]
-  }
-  
+
+// console.log(spiralOrderRecursive([[1,2,3],[4,5,6],[7,8,9]]))
+console.log(spiralOrderRecursive([[1,2,3,4],[5,6,7,8],[9,10,11,12]]))
+
   export const spiralOrder = {
-    spiralOrderBruteForce,
-    spiralOrderNaiveImp,
-    spiralOrderNaiveDec,
     spiralOrderRecursive,
-    spiralOrderOptimal
+
   }
