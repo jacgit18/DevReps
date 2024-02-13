@@ -30,8 +30,38 @@ const searchRangerBruteForce = (nums: number[], target: number): number[] => {
   return [0]
 }
 
-const searchRangerNaiveImp = (nums: number[], target: number): number[] => {
-  return [0]
+const searchRangerNaiveImp = (nums: number[], target: number): number  => {
+  let left = 0;
+  let right = nums.length - 1;
+
+  while (left <= right) {
+      const mid = Math.floor((left + right) / 2);
+      // console.log(nums[mid])
+
+      if (nums[mid] === target) {
+          return mid; // Element found, return its index.
+      }
+
+      // Check which half of the array is sorted and adjust pointers accordingly.
+      if (nums[left] <= nums[mid]) {
+          // Left half is sorted.
+          if (target >= nums[left] && target < nums[mid]) {
+              right = mid - 1; // Target is in the left half.
+          } else {
+              left = mid + 1; // Target is in the right half.
+          }
+      } else {
+          // Right half is sorted.
+          if (target <= nums[right] && target > nums[mid] ) {
+              left = mid + 1; // Target is in the right half.
+          } else {
+              right = mid - 1; // Target is in the left half.
+          }
+      }
+  }
+
+  return -1; // Element not found.
+
 }
 
 const searchRangerNaiveDec = (nums: number[], target: number): number[] => {
@@ -43,14 +73,14 @@ const searchRangerOptimal = (nums: number[], target: number): number[] => {
 }
 
 // Example usage:
-// const example1 = searchRanger([5, 7, 7, 8, 8, 10], 8)
-// console.log(example1)
+const example1 = searchRangerNaiveImp([4,5,6,7,0,1,2], 0) //  4
+console.log(example1)
 
-// const example2 = searchRanger([5, 7, 7, 8, 8, 10], 6)
-// console.log(example2)
+const example2 = searchRangerNaiveImp([4,5,6,7,0,1,2], 3) // -1
+console.log(example2)
 
-// const example3 = searchRanger([], 0)
-// console.log(example3)
+const example3 = searchRangerNaiveImp([1], 0) // -1
+console.log(example3)
 
 export const searchRanger = {
   searchRangerBruteForce,
