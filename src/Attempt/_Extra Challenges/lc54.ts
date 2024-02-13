@@ -54,8 +54,13 @@
       const recursiveTraverse = 
       (top: number, bottom: number, left: number, right: number) =>{
         //break statement for inner recursive call
-        if(left > right || top > bottom) 
+        if(left > right || top > bottom) {
+           console.log(top) // 2
+        console.log(bottom) // 1
+        console.log(left) // 1
+        console.log(right) // 0
           return
+        }
     
         // 1st iterate left to right 
         // use: left, right, top 
@@ -71,9 +76,10 @@
         for(let i= top; i <= bottom; i++){
           // [right][i] or [i][right]
           result.push(matrix[i][right])
-        //   console.log(matrix[i][right])
+          // console.log(matrix[i][right])
         }
         right--;
+        
     
         /**
          * 3rd iteration: what are these values #? 
@@ -113,11 +119,13 @@
             result.push(matrix[i][left])
         //     console.log('top ', top, '\n')
         //     console.log('bottom ', bottom, '\n')
-        //     console.log(matrix[i][left])
+            // console.log(matrix[i][left])
           }
           left++;
         }
     
+       
+
         recursiveTraverse(top, bottom, left, right)
     
       }
@@ -127,8 +135,8 @@
     return result
   }
 
-// console.log(spiralOrderRecursive([[1,2,3],[4,5,6],[7,8,9]]))
-console.log(spiralOrderRecursive([[1,2,3,4],[5,6,7,8],[9,10,11,12]]))
+console.log(spiralOrderRecursive([[1,2,3],[4,5,6],[7,8,9]]))
+// console.log(spiralOrderRecursive([[1,2,3,4],[5,6,7,8],[9,10,11,12]]))
 
   export const spiralOrder = {
     spiralOrderRecursive,
