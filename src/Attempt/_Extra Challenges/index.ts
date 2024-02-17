@@ -8,11 +8,13 @@ import { distributeCandiesTwo } from "./lc1103"
 import { longestCommonSubsequence } from "./lc1143"
 import { numDistinct } from "./lc115"
 import { longestCommonPrefix } from "./lc14"
+import { reverseWords } from "./lc151"
 import { maxAlternatingSum } from "./lc1911"
 import { rob } from "./lc198"
 import { isValid } from "./lc20"
 import { isAnagram } from "./lc242"
 import { firstUniqChar } from "./lc387"
+import { combinationSum } from "./lc39"
 import { validIPAddress } from "./lc468"
 import { groupAnagrams } from "./lc49"
 import { longestPalindromeSubseq } from "./lc516"
@@ -20,6 +22,7 @@ import { spiralOrder } from "./lc54"
 import { distributeCandies } from "./lc575"
 import { countSubstrings } from "./lc647"
 import { climbStairs } from "./lc70"
+import { simplifyPath } from "./lc71"
 import { minDistance } from "./lc72"
 import { searchMatrix } from "./lc74"
 import { superEggDrop } from "./lc887"
@@ -34,12 +37,15 @@ export const AttemptExtra = {
   matchName: nameMatch,
   lc14: longestCommonPrefix,
   lc20: isValid,
+  lc39: combinationSum,
   lc49: groupAnagrams,
   lc54: spiralOrder,
   lc70: climbStairs,
+  lc71: simplifyPath,
   lc72: minDistance,
   lc74: searchMatrix,
   lc115: numDistinct,
+  lc151: reverseWords,
   lc198: rob,
   lc242: isAnagram,
   lc387: firstUniqChar,
