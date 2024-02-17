@@ -5,6 +5,7 @@ import { generateParenthesis } from "./lc22"
 import { diffWaysToCompute } from "./lc241"
 import { gameOfLife } from "./lc289"
 import { generateAbbreviations } from "./lc320"
+import { solveSudoku } from "./lc37"
 import { combinationSum } from "./lc39"
 import { findDuplicates } from "./lc442"
 import { permute } from "./lc46"
@@ -18,6 +19,7 @@ export const AttemptBacktrack = {
   sudoku: sudokuSolver,
   lc17: letterCombinations,
   lc22: generateParenthesis,
+  lc37: solveSudoku,
   lc39: combinationSum,
   lc46: permute,
   lc78: subsets,
