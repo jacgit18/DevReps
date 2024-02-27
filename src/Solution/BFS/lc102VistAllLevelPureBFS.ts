@@ -55,10 +55,15 @@ const levelOrderTraversalIter = (root: TreeNode | null): number[][] => {
 const levelOrderTraversalRec = (root: TreeNode | null): number[][] => {
   const result: number[][] = []
 
+
   const traverse = (node: TreeNode | null, level: number): void => {
     if (!node) {
       return
     }
+
+    // console.log(!node.left?.left)
+    console.log(result.length <= level)
+
 
     if (result.length <= level) {
       result.push([])
@@ -76,14 +81,14 @@ const levelOrderTraversalRec = (root: TreeNode | null): number[][] => {
 }
 
 // Example usage:
-// const tree = new TreeNode(3)
-// tree.left = new TreeNode(9)
-// tree.right = new TreeNode(20)
-// tree.right.left = new TreeNode(15)
-// tree.right.right = new TreeNode(7)
+const tree = new TreeNode(3)
+tree.left = new TreeNode(9)
+tree.right = new TreeNode(20)
+tree.right.left = new TreeNode(15)
+tree.right.right = new TreeNode(7)
 
 // console.log(levelOrderTraversal(tree)) // Output: [[3],[9,20],[15,7]]
-// console.log(levelOrderTraversalRec(tree)) // Output: [[3],[9,20],[15,7]]
+console.log(levelOrderTraversalRec(tree)) // Output: [[3],[9,20],[15,7]]
 
 export const levelOrderTraversal = {
   levelOrderTraversalIter,
