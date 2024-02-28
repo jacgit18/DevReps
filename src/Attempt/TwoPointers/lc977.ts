@@ -18,36 +18,53 @@
 // -104 <= nums[i] <= 104
 // nums is sorted in non-decreasing order.
 
-const sortedSquaresBruteForce = (nums: number[]): number[] => {
+const BruteForce = (nums: number[]): number[] => {
   return [0]
 }
+
+const numSquare = (nums: number[]): number[] => {
+    // square array values in place mutation
+  //   for (let i = 0; i < nums.length; i++) {
+  //     nums[i] = Math.pow(nums[i], 2);
+  // }
+
+  // return nums
+  return nums.map(num => Math.pow(num, 2));
+}
+
+
 
 const TwoPointer = (nums: number[]): number[] => {
 
     // check for empty array
     if (nums.length === 0) return [];
-
-    // square array values in place mutation
-    for (let i = 0; i < nums.length; i++) {
-        nums[i] = Math.pow(nums[i], 2);
-    }
+  
+    nums = numSquare(nums)
 
      // inplace sort array in non-decreasing order using Two-Pointer
     let left = 0;
     let right = nums.length - 1;
 
-    const result = new Array(nums.length); // array of same size undefined values
-    let index = nums.length - 1;
+    // array of same size undefined values
+    // const result = new Array(nums.length);
+    const result = [];
+
+    // let index = nums.length - 1;
 
 
     while (left <= right) {
         if (nums[left] > nums[right]) {
-            result[index] = nums[left];
-            --index
+            // result[index] = nums[left];
+            // --index
+            result.unshift(nums[left])
+            // [nums[left], nums[right]] = [nums[right], nums[left]]
             left++
         } else {
-            result[index] = nums[right];
-            --index
+            // result[index] = nums[right];
+            result.unshift(nums[right])
+            // --index
+            // [nums[right], nums[left]] = [nums[left], nums[right]]
+
             --right
         }
     }
@@ -55,15 +72,31 @@ const TwoPointer = (nums: number[]): number[] => {
     return result;
 };
 
-const sortedSquaresNaiveImp = (nums: number[]): number[] => {
+
+const TwoPointerAlt = (nums: number[]): number[] => {
+  nums = nums.map(num => Math.pow(num, 2));
+
+  let left = 0;
+  let right = nums.length - 1;
+
+  while (left < right) {
+      if (nums[left] > nums[right]) {
+          [nums[left], nums[right]] = [nums[right], nums[left]];
+      }
+      right--; // Decrement right separately
+  }
+  return nums;
+};
+
+const NaiveImp = (nums: number[]): number[] => {
   return [0]
 }
 
-const sortedSquaresNaiveDec = (nums: number[]): number[] => {
+const NaiveDec = (nums: number[]): number[] => {
   return [0]
 }
 
-const sortedSquaresOptimal = (nums: number[]): number[] => {
+const Optimal = (nums: number[]): number[] => {
   return [0]
 }
 
@@ -74,11 +107,12 @@ const sortedSquaresOptimal = (nums: number[]): number[] => {
 // console.log(`Squares: ${sortedSquares([-3, -1, 0, 1, 2])}`)
 
 export const sortedSquares = {
-  sortedSquaresBruteForce,
+  BruteForce,
   TwoPointer,
-  sortedSquaresNaiveImp,
-  sortedSquaresNaiveDec,
-  sortedSquaresOptimal,
+  TwoPointerAlt,
+  NaiveImp,
+  NaiveDec,
+  Optimal,
 }
 
 console.log(sortedSquares.TwoPointer([-4,-1,0,3,10])) // [0,1,9,16,100]
