@@ -18,19 +18,52 @@
 // -104 <= nums[i] <= 104
 // nums is sorted in non-decreasing order.
 
-const sortedSquaresBruteForce = (arr: number[]): number[] => {
+const sortedSquaresBruteForce = (nums: number[]): number[] => {
   return [0]
 }
 
-const sortedSquaresNaiveImp = (arr: number[]): number[] => {
+const TwoPointer = (nums: number[]): number[] => {
+
+    // check for empty array
+    if (nums.length === 0) return [];
+
+    // square array values in place mutation
+    for (let i = 0; i < nums.length; i++) {
+        nums[i] = Math.pow(nums[i], 2);
+    }
+
+     // inplace sort array in non-decreasing order using Two-Pointer
+    let left = 0;
+    let right = nums.length - 1;
+
+    const result = new Array(nums.length); // array of same size undefined values
+    let index = nums.length - 1;
+
+
+    while (left <= right) {
+        if (nums[left] > nums[right]) {
+            result[index] = nums[left];
+            --index
+            left++
+        } else {
+            result[index] = nums[right];
+            --index
+            --right
+        }
+    }
+
+    return result;
+};
+
+const sortedSquaresNaiveImp = (nums: number[]): number[] => {
   return [0]
 }
 
-const sortedSquaresNaiveDec = (arr: number[]): number[] => {
+const sortedSquaresNaiveDec = (nums: number[]): number[] => {
   return [0]
 }
 
-const sortedSquaresOptimal = (arr: number[]): number[] => {
+const sortedSquaresOptimal = (nums: number[]): number[] => {
   return [0]
 }
 
@@ -42,7 +75,11 @@ const sortedSquaresOptimal = (arr: number[]): number[] => {
 
 export const sortedSquares = {
   sortedSquaresBruteForce,
+  TwoPointer,
   sortedSquaresNaiveImp,
   sortedSquaresNaiveDec,
   sortedSquaresOptimal,
 }
+
+console.log(sortedSquares.TwoPointer([-4,-1,0,3,10])) // [0,1,9,16,100]
+console.log(sortedSquares.TwoPointer([-7,-3,2,3,11])) // [4,9,9,49,121]

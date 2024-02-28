@@ -28,7 +28,12 @@
 // -109 <= target <= 109
 // Only one valid answer exists.
 
-const twoSumBruteForce = (arr: number[], targetSum: number): number[] => {
+const BruteForce = (arr: number[], targetSum: number): number[] => {
+  return [0]
+}
+
+const TwoPointer = (arr: number[], targetSum: number): number[] => {
+
   return [0]
 }
 
@@ -45,8 +50,11 @@ const twoSumOptimal = (arr: number[], targetSum: number): number[] => {
 }
 
 export const twoSum = {
-  twoSumBruteForce,
+  BruteForce,
+  TwoPointer,
   twoSumNaiveImp,
   twoSumNaiveDec,
   twoSumOptimal
 }
+
+console.log(twoSum.TwoPointer([1], 1))
