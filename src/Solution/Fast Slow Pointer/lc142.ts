@@ -39,6 +39,9 @@ export const detectCycle = (head: ListNode | null): ListNode | null => {
 
   let fast: ListNode | null = head
 
+  // console.log(fast)
+
+
   // Detect cycle
   while (fast && fast.next) {
     slow = slow!.next // Non-null assertion since we've already checked for null
@@ -50,16 +53,51 @@ export const detectCycle = (head: ListNode | null): ListNode | null => {
     }
   }
 
+  // fast value is updated from last loop either cyclic or not cyclic
   if (!fast || !fast.next) {
     return null // No cycle if fast or fast.next is null
   }
 
   // Reset one pointer to the head and move at the same speed until they meet again
   slow = head
+  console.log(slow) // next value is also two but coming from 3
+  console.log(fast)
+  // next value is 2 which is the second node and the node after 4
+
   while (slow !== fast) {
     slow = slow!.next // Non-null assertion since we've already checked for null
     fast = fast!.next // Non-null assertion since we've already checked for null
+
   }
+  
 
   return slow // Meeting point is the start of the cycle
 }
+
+
+
+// // Example usage:
+const example1 = new ListNode(3)
+example1.next = new ListNode(2)
+example1.next.next = new ListNode(0)
+example1.next.next.next = new ListNode(-4)
+example1.next.next.next.next = example1.next // creating a cycle
+
+detectCycle(example1) // Output: linkList type
+
+const example2 = new ListNode(1)
+example2.next = new ListNode(2)
+example2.next.next = example2 // creating a cycle
+
+// console.log(detectCycle(example2)) // Output: true
+
+const example3 = new ListNode(1)
+
+// console.log(detectCycle(example3)) // Output: false
+
+// actual linked list
+const example4 = new ListNode(3)
+example4.next = new ListNode(2)
+example4.next.next = new ListNode(0)
+example4.next.next.next = new ListNode(-4)
+// console.log(detectCycle(example4)) // Output: false

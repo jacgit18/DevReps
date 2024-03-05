@@ -89,3 +89,51 @@ export const reverseList = {
   printFowardRec,
   printBackwardRec,
 }
+
+const listToString = (head: ListNode | null): string => {
+  let result = "";
+  let current = head;
+
+  while (current !== null) {
+    result += `${current.value} > `;
+    current = current.next;
+  }
+
+  result += "null";
+  return result;
+};
+
+export const reverseListRecursive = (
+  head: ListNode | null,
+  prev: ListNode | null = null
+): ListNode | null => {
+  if (head === null) {
+    console.log("Reached the end. Returning previous node: ", listToString(prev));
+
+    return prev;
+  }
+
+  // console.log(head)
+
+
+
+
+  const nextTemp: ListNode | null = head.next;
+  console.log("\nPointer Change:");
+  console.log(`Before Reversal: ${listToString(prev)} < ${head?.value} > ${listToString(nextTemp)}`);
+  console.log(`   head: ${head?.value}`);
+  console.log(`   prev: ${prev?.value}`);
+  console.log(`   next: ${nextTemp?.value}`);
+  head.next = prev;
+  console.log(`After Reversal:  ${listToString(head)} < ${prev?.value} > ${listToString(nextTemp)}`);
+  console.log(`   head: ${head?.next?.value}`);
+  console.log(`   prev: ${head?.value}`);
+  console.log(`   next: ${nextTemp?.value}`);
+ 
+
+  return reverseListRecursive(nextTemp, head);
+};
+
+let array2 = [1, 2, 3, 4, 5]
+let linkedList2 = createLinkedListFromArray(array2)
+console.log(reverseListRecursive(linkedList2))
