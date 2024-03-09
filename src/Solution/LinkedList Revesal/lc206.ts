@@ -136,4 +136,28 @@ export const reverseListRecursive = (
 
 let array2 = [1, 2, 3, 4, 5]
 let linkedList2 = createLinkedListFromArray(array2)
-console.log(reverseListRecursive(linkedList2))
+// console.log(reverseListRecursive(linkedList2))
+
+
+function reverseLinkedList(head: ListNode | null) {
+  // Create a dummy node to simplify edge cases
+  const dummy = new ListNode();
+
+  // Traverse the original list
+  while (head !== null) {
+      // Temporarily store the next node in the original list
+      const nextNode = head.next;
+
+      // Move the current node to the beginning of the reversed list
+      head.next = dummy.next;
+      dummy.next = head;
+
+      // Move to the next node in the original list
+      head = nextNode;
+  }
+
+  // The reversed list is stored in dummy.next
+  return dummy.next;
+}
+
+console.log(reverseLinkedList(linkedList2))
