@@ -140,24 +140,26 @@ let linkedList2 = createLinkedListFromArray(array2)
 
 
 function reverseLinkedList(head: ListNode | null) {
-  // Create a dummy node to simplify edge cases
-  const dummy = new ListNode();
+  let prev: ListNode | null = null;
+  let current = head;
 
-  // Traverse the original list
-  while (head !== null) {
-      // Temporarily store the next node in the original list
-      const nextNode = head.next;
+  while (current !== null) {
+    console.log(`Before reversal: ${listToString(head)}`);
 
-      // Move the current node to the beginning of the reversed list
-      head.next = dummy.next;
-      dummy.next = head;
+    // Temporarily store the next node
+    let nextTemp = current.next;
 
-      // Move to the next node in the original list
-      head = nextNode;
+    // Reverse the current node's pointer
+    current.next = prev;
+
+    // Move pointers one position ahead.
+    prev = current;
+    current = nextTemp;
+
+    console.log(`After reversal: ${listToString(prev)}`);
   }
 
-  // The reversed list is stored in dummy.next
-  return dummy.next;
+  return prev; // prev is the new head of the reversed list
 }
 
-console.log(reverseLinkedList(linkedList2))
+// console.log(reverseLinkedList(linkedList2))
